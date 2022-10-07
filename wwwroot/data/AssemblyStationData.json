@@ -1,0 +1,503 @@
+{
+    "AssemblyStation": 
+    {
+        "MaterialPallet":
+        {
+            "name": "Material Pallet",
+            "category": "",
+            "description": "A material pallet.",
+            "damageType": "",
+            "damageInfo": [ "" ],
+            "ammoUsed": "",
+            "bmatCost": 25,
+            "cmatCost": 0,
+            "pcmatCost": 0,
+            "steelCost": 0,
+            "assmatCost": [ 0, 0, 0, 0, 0 ],
+            "baseVehicle": "",
+            "productionTime": 5
+        },
+        "TruckArmoured":
+        {
+            "name": "Dunne Leatherback 2a",
+            "category": "Truck",
+            "description": "A heavy, reinforced Dunne transport. Fitted with a heavier frame, the Leatherback is capable of enduring more punishment at the cost of initial acceleration.",
+            "damageType": "",
+            "damageInfo": [ "" ],
+            "ammoUsed": "",
+            "bmatCost": 0,
+            "cmatCost": 10,
+            "pcmatCost": 0,
+            "steelCost": 0,
+            "assmatCost": [ 0, 0, 0, 0, 0 ],
+            "baseVehicle": "Dunne Transport (Truck)",
+            "productionTime": 300
+        },
+        "TruckTracked":
+        {
+            "name": "Dunne Landrunner 12c",
+            "category": "Truck",
+            "description": "This standard Truck is fitted with rugged off-road treads, allowing for more efficient movement on rough terrain and conditions at the expense of maximum speed.",
+            "damageType": "",
+            "damageInfo": [ "" ],
+            "ammoUsed": "",
+            "bmatCost": 0,
+            "cmatCost": 10,
+            "pcmatCost": 0,
+            "steelCost": 0,
+            "assmatCost": [ 0, 0, 0, 0, 0 ],
+            "baseVehicle": "Dunne Transport (Truck)",
+            "productionTime": 300
+        },
+        "SmallGaugeEngine":
+        {
+            "name": "BMS Mineseeker",
+            "category": "Small Train Locomotive",
+            "description": "The Mineseeker is the Bassett Motor Society's mechanized mule. This small 0-4-0 locomotive can haul tonnes of weight over short distances with little overhead. Ideal for a mining operation or short-range supply chains.",
+            "damageType": "",
+            "damageInfo": [ "" ],
+            "ammoUsed": "",
+            "bmatCost": 0,
+            "cmatCost": 125,
+            "pcmatCost": 0,
+            "steelCost": 0,
+            "assmatCost": [ 10, 20, 0, 0, 0 ],
+            "baseVehicle": "",
+            "productionTime": 900
+        },
+        "SmallGaugeResource":
+        {
+            "name": "BMS Railtruck",
+            "category": "Small Container Car",
+            "description": "A small gauge container car for transporting raw materials.",
+            "damageType": "",
+            "damageInfo": [ "" ],
+            "ammoUsed": "",
+            "bmatCost": 0,
+            "cmatCost": 35,
+            "pcmatCost": 0,
+            "steelCost": 0,
+            "assmatCost": [ 15, 5, 0, 0, 0 ],
+            "baseVehicle": "",
+            "productionTime": 300
+        },
+        "SmallGaugeFlatbed":
+        {
+            "name": "BMS Linerunner",
+            "category": "Small Flatbed Car",
+            "description": "A low profile flatbed car for transporting large resources and munitions over short distances on small gauge tracks.",
+            "damageType": "",
+            "damageInfo": [ "" ],
+            "ammoUsed": "",
+            "bmatCost": 0,
+            "cmatCost": 0,
+            "pcmatCost": 0,
+            "steelCost": 0,
+            "assmatCost": [ 0, 0, 0, 0, 0 ],
+            "baseVehicle": "",
+            "productionTime": 0
+        }
+    },
+    "AssemblyStationMotorPool": 
+    {
+        "ACBonesaw":
+        {
+            "name": "O'Brien V. 113 Gravekeeper",
+            "category": "Armoured Car",
+            "description": "A slight variation of the V.110, the Gravekeeper comes fitted with an embedded Bonesaw launcher, transforming the humble armoured car into an effective indirect anti-armour vechicle.",
+            "damageType": "Armour Piercing",
+            "damageInfo": [ "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles", "Additional 100% chance to penetrate armoured vehicles" ],
+            "ammoUsed": "ARC/RPG",
+            "bmatCost": 0,
+            "cmatCost": 0,
+            "pcmatCost": 10,
+            "steelCost": 0,
+            "assmatCost": [ 10, 0, 0, 0, 0 ],
+            "baseVehicle": "O'Brien V. 110 (Armoured Car)",
+            "productionTime": 300
+        },
+        "ACTracked":
+        {
+            "name": "O'Brien V. 121 Highlander",
+            "category": "Armoured Car",
+            "description": "Fitted with all-terrain treads, the Highlander brings significant all-terrain mobility and performs especially well in snowy and mountainous enviroments.",
+            "damageType": "",
+            "damageInfo": [ "" ],
+            "ammoUsed": "7.92mm",
+            "bmatCost": 0,
+            "cmatCost": 5,
+            "pcmatCost": 0,
+            "steelCost": 0,
+            "assmatCost": [ 5, 0, 0, 0, 0 ],
+            "baseVehicle": "O'Brien V. 110 (Armoured Car)",
+            "productionTime": 300
+        },
+        "ACFlame":
+        {
+            "name": "O'Brien V. 130 Wild Jack",
+            "category": "Armoured Car",
+            "description": "While the Noble Firebrand Mk. XVII is a deadly flamethrower tank, a more efficient means of employing flame weapons was needed. Enter the Wild Jack. Named for the fiery idols mady by children for Dead Harvest, the Wild Jack is a variation of the Highlander.",
+            "damageType": "",
+            "damageInfo": [ "" ],
+            "ammoUsed": "Flame Ammo",
+            "bmatCost": 0,
+            "cmatCost": 0,
+            "pcmatCost": 10,
+            "steelCost": 0,
+            "assmatCost": [ 10, 0, 0, 0, 0 ],
+            "baseVehicle": "O'Brien V. 110 (Armoured Car)",
+            "productionTime": 300
+        },
+        "ACHeavy":
+        {
+            "name": "O'Brien V. 101 Freeman",
+            "category": "Armoured Car",
+            "description": "This early O'Brien variant, the V.101 Freeman is fitted with a 360 degree ballistics cannon turret at the expense of top speed.",
+            "damageType": "",
+            "damageInfo": [ "" ],
+            "ammoUsed": "40mm",
+            "bmatCost": 0,
+            "cmatCost": 15,
+            "pcmatCost": 0,
+            "steelCost": 0,
+            "assmatCost": [ 15, 0, 0, 0, 0 ],
+            "baseVehicle": "O'Brien V. 110 (Armoured Car)",
+            "productionTime": 300
+        },
+        "LightUtilitySpitfire":
+        {
+            "name": "Drummond Spitfire 100d",
+            "category": "Light Utility Vehicle",
+            "description": "This LMG-mounted Light Utility Vechicle provides a heavy-duty weapons platform with superior speed. Perfectly suited for supporting flanking infantry or an armoured assault.",
+            "damageType": "",
+            "damageInfo": [ "" ],
+            "ammoUsed": "7.92mm",
+            "bmatCost": 0,
+            "cmatCost": 3,
+            "pcmatCost": 0,
+            "steelCost": 0,
+            "assmatCost": [ 0, 10, 0, 0, 0 ],
+            "baseVehicle": "Drummond 100a (Light Utility Vehicle)",
+            "productionTime": 150
+        },
+        "LightUtilityDuckJeep":
+        {
+            "name": "Drummond Loscann 55c",
+            "category": "Light Utility Vehicle",
+            "description": "This amphibious Light Utility Vechicle has been heavily modified to cross rivers and lakes with ease. Venturing out into the open sea is ill-advised, however.",
+            "damageType": "",
+            "damageInfo": [ "" ],
+            "ammoUsed": "",
+            "bmatCost": 0,
+            "cmatCost": 3,
+            "pcmatCost": 0,
+            "steelCost": 0,
+            "assmatCost": [ 0, 5, 0, 0, 0 ],
+            "baseVehicle": "Drummond 100a (Light Utility Vehicle)",
+            "productionTime": 150
+        }
+    },
+    "AssemblyStationRocket":
+    {
+        "HalfTrackRocket":
+        {
+            "name": "Niska-Rycker Mk. IX Skycaller",
+            "category": "Half-Track",
+            "description": "A first of its kind, the Skycaller is a variation of the Niska Motor Carriage with a Rycker designed rocket battery fited in the rear bed. This unique armoured vehicle quickly fires rockets over long distances with ease, and can be rearmed and relocated at the drop of a hat. The Skycaller is the deadly result of combined Nevish and Caoivish engineering.",
+            "damageType": "",
+            "damageInfo": [ "" ],
+            "ammoUsed": "4C-Fire Rocket",
+            "bmatCost": 0,
+            "cmatCost": 0,
+            "pcmatCost": 10,
+            "steelCost": 0,
+            "assmatCost": [ 10, 0, 8, 0, 0 ],
+            "baseVehicle": "Niska Mk. I Gun Motor Carriage (Half-Track)",
+            "productionTime": 300
+        },
+        "FieldRocketLauncher":
+        {
+            "name": "Rycker 4/3-F Wasp Nest",
+            "category": "Field Launcher",
+            "description": "Lyle Rycker first built a prototype of the Wasp Nest as a test for his rack mounted rocket batteries that would eventually find their way onto armoured vehicles. Capable of firing twelve compact rockets in quick succession, the Wasp Nest became a quick favourite of the Warden infantry testing it, so an official design was requisitioned.",
+            "damageType": "",
+            "damageInfo": [ "" ],
+            "ammoUsed": "4C-Fire Rocket",
+            "bmatCost": 0,
+            "cmatCost": 0,
+            "pcmatCost": 20,
+            "steelCost": 0,
+            "assmatCost": [ 0, 15, 0, 3, 0 ],
+            "baseVehicle": "",
+            "productionTime": 600
+        },
+        "HalfTrackAntiTank":
+        {
+            "name": "Niska Mk. II Blinder",
+            "category": "Half-Track",
+            "description": "Fitted with a heavy-duty anti-tank gun, the Blinder is capable of punching through all but the most tempered of alloys.",
+            "damageType": "",
+            "damageInfo": [ "" ],
+            "ammoUsed": "68mm",
+            "bmatCost": 0,
+            "cmatCost": 0,
+            "pcmatCost": 5,
+            "steelCost": 0,
+            "assmatCost": [ 0, 10, 0, 3, 0 ],
+            "baseVehicle": "Niska Mk. I Gun Motor Carriage (Half-Track)",
+            "productionTime": 300
+        }
+    },
+    "AssemblyStationField":
+    {
+        "Harvester":
+        {
+            "name": "BMS - Scrap Hauler",
+            "category": "Harvester",
+            "description": "The Scrap Hauler, designed by the Bassett Motor Society is a heavy-duty piece of machinery designed to reduce scrap metal and other materials into usable, raw resources. Scrap Haulers are often used to extract battlefield resources following skirmishes.",
+            "damageType": "",
+            "damageInfo": [ "" ],
+            "ammoUsed": "",
+            "bmatCost": 0,
+            "cmatCost": 0,
+            "pcmatCost": 90,
+            "steelCost": 0,
+            "assmatCost": [ 0, 0, 0, 25, 0 ],
+            "baseVehicle": "",
+            "productionTime": 900
+        },
+        "ScoutTankGallant":
+        {
+            "name": "King Gallant Mk. II",
+            "category": "Scout Tank",
+            "description": "A heavily armoured variant of the King Spire, the Gallant Mk. II boasts a weighty 30mm cannon at the cost of top speed.",
+            "damageType": "",
+            "damageInfo": [ "" ],
+            "ammoUsed": "30mm",
+            "bmatCost": 0,
+            "cmatCost": 0,
+            "pcmatCost": 5,
+            "steelCost": 0,
+            "assmatCost": [ 0, 0, 5, 0, 0 ],
+            "baseVehicle": "King Spire Mk. I (Scout Tank)",
+            "productionTime": 300
+        },
+        "FieldAntiTankHeavy":
+        {
+            "name": "Balfour Rampart 68mm",
+            "category": "",
+            "description": "",
+            "damageType": "",
+            "damageInfo": [ "" ],
+            "ammoUsed": "",
+            "bmatCost": 0,
+            "cmatCost": 0,
+            "pcmatCost": 0,
+            "steelCost": 0,
+            "assmatCost": [ 0, 0, 0, 0, 0 ],
+            "baseVehicle": "",
+            "productionTime": 0
+        }
+    },
+    "AssemblyStationTank":
+    {
+        "TankDestroyerFlame":
+        {
+            "name": "Noble Firebrand Mk. XVII",
+            "category": "Destroyer Tank",
+            "description": "In response to the Legion embarking on aggressive northern offensives, the Firebrand is designed to conflagrate and eradicate their garrisons with ease. Built using the aggressive frame of the Widow, the Firebrand is a pure force of nature when paired with a secondary armoured escort.",
+            "damageType": "",
+            "damageInfo": [ "" ],
+            "ammoUsed": "Flame Ammo",
+            "bmatCost": 0,
+            "cmatCost": 0,
+            "pcmatCost": 10,
+            "steelCost": 0,
+            "assmatCost": [ 10, 0, 15, 0, 0 ],
+            "baseVehicle": "Noble Widow MK. XIV (Destroyer Tank)",
+            "productionTime": 420
+        },
+        "LightTankUpgraded":
+        {
+            "name": "Devitt Ironhide MK. IV",
+            "category": "Light Tank",
+            "description": "The Ironhide Light Mk. IV",
+            "damageType": "",
+            "damageInfo": [ "" ],
+            "ammoUsed": "40mm",
+            "bmatCost": 0,
+            "cmatCost": 0,
+            "pcmatCost": 8,
+            "steelCost": 0,
+            "assmatCost": [ 0, 20, 5, 0, 0 ],
+            "baseVehicle": "Devitt Mk. III (Light Tank)",
+            "productionTime": 300
+        },
+        "LightTankMortar":
+        {
+            "name": "Devitt-Caine Mk. IV MMR",
+            "category": "Light Tank",
+            "description": "A modified Devitt fitted with a specializes Cain mortar turret at the expense of top speed.",
+            "damageType": "",
+            "damageInfo": [ "" ],
+            "ammoUsed": "Mortar Shell, Mortar Shrapnel Shell, Mortar Flare Shell",
+            "bmatCost": 0,
+            "cmatCost": 0,
+            "pcmatCost": 3,
+            "steelCost": 0,
+            "assmatCost": [ 20, 0, 0, 3, 0 ],
+            "baseVehicle": "Devitt Mk. III (Light Tank)",
+            "productionTime": 300
+        },
+        "AssaultTankChieftan":
+        {
+            "name": "Silverhand Chieftan - Mk. VI",
+            "category": "Assault Tank",
+            "description": "The Chieftan assault tank is fitted with asymmetrical armaments, including a 250mm mortar cannon and a twin-barreled 12.7mm turret.",
+            "damageType": "Demolition",
+            "damageInfo": [ "Turret (Center): Equipped with a high velocity barrel that deals 20% extra damage per shot", "Can ruin structures that have been severly damaged by artillery" ],
+            "ammoUsed": "12.7mm, 250mm",
+            "bmatCost": 0,
+            "cmatCost": 0,
+            "pcmatCost": 5,
+            "steelCost": 0,
+            "assmatCost": [ 10, 0, 0, 8, 0 ],
+            "baseVehicle": "",
+            "productionTime": 0
+        },
+        "CruiserTankHighwayman":
+        {
+            "name": "Gallagher Highwayman Mk. III",
+            "category": "Cruiser Tank",
+            "description": "Colm Gallagher's engineers desginged a variation on the Outlaw that features an independently rotating MG turret sitting atop the main armament of twin anti-tank cannons. What it lack in raw firepower compared to its older sibling, the Highwayman more than makes up for it with versatility.",
+            "damageType": "",
+            "damageInfo": [ "Engine can be boosted for increased top speed", "Turret (Front): Equipped with a low velocity barrel that deals 50% less damage per shot" ],
+            "ammoUsed": "20mm, 12.7mm",
+            "bmatCost": 0,
+            "cmatCost": 0,
+            "pcmatCost": 5,
+            "steelCost": 0,
+            "assmatCost": [ 0, 10, 5, 0, 0 ],
+            "baseVehicle": "Gallagher Outlaw Mk. II (Cruiser Tank)",
+            "productionTime": 420
+        },
+        "EmplacedAntiTankHeavy":
+        {
+            "name": "Huber Starbreaker 94.5mm",
+            "category": "",
+            "description": "Built to compliment other free-standing artillery pieces, the emplaced Huber Starbreaker launches 94.5mm shells over very long distances. A necessary tool for infantry to knock back armoured Colonial advances.",
+            "damageType": "",
+            "damageInfo": [ "Gunner (Left): Equipped with a high velocity barrel that deals 50% extra damage per shot." ],
+            "ammoUsed": "94.5mm",
+            "bmatCost": 0,
+            "cmatCost": 0,
+            "pcmatCost": 135,
+            "steelCost": 0,
+            "assmatCost": [ 10, 0, 0, 15, 0 ],
+            "baseVehicle": "",
+            "productionTime": 600
+        }
+    },
+    "AssemblyStationWeapons": 
+    {
+        "FieldCannonSuper":
+        {
+            "name": "Balfour Stockade 75mm",
+            "category": "Field Gun",
+            "description": "This robust field cannon not only allows infantry to fire heavy 75mm shells with ease, but it provides state-of-the-art curved blast shielding for maximum protection from crossfire.",
+            "damageType": "",
+            "damageInfo": [ "" ],
+            "ammoUsed": "75mm",
+            "bmatCost": 0,
+            "cmatCost": 0,
+            "pcmatCost": 0,
+            "steelCost": 0,
+            "assmatCost": [ 0, 0, 0, 0, 0 ],
+            "baseVehicle": "",
+            "productionTime": 0
+        },
+        "CruiserTankThornfall":
+        {
+            "name": "Gallagher Thornfall Mk. VI",
+            "category": "Cruiser Tank",
+            "description": "Armed with a rack of Bonesaw mortar launchers, the Thornfall is designed to launch an indirect mechanized assault on enemy armour. This unique vehicle supports an allied assault and cannot withstand large amounts of punishment.",
+            "damageType": "Armour Piercing",
+            "damageInfo": [ "Engine can be boosted for increased top speed", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles", "Additional 100% chance to penetrate armoured vehicles" ],
+            "ammoUsed": "ARC/RPG, 12.7mm",
+            "bmatCost": 0,
+            "cmatCost": 0,
+            "pcmatCost": 0,
+            "steelCost": 0,
+            "assmatCost": [ 0, 0, 0, 0, 0 ],
+            "baseVehicle": "",
+            "productionTime": 0
+        }
+    },
+    "AssemblyLarge": 
+    {
+        "WideGaugeTrain":
+        {
+            "name": "BMS Black Bolt",
+            "category": "",
+            "description": "",
+            "damageType": "",
+            "damageInfo": [ "" ],
+            "ammoUsed": "",
+            "bmatCost": 0,
+            "cmatCost": 0,
+            "pcmatCost": 0,
+            "steelCost": 0,
+            "assmatCost": [ 0, 0, 0, 0, 0 ],
+            "baseVehicle": "",
+            "productionTime": 0
+        },
+        "WideGaugeCoal":
+        {
+            "name": "BMS Rockhold",
+            "category": "",
+            "description": "",
+            "damageType": "",
+            "damageInfo": [ "" ],
+            "ammoUsed": "",
+            "bmatCost": 0,
+            "cmatCost": 0,
+            "pcmatCost": 0,
+            "steelCost": 0,
+            "assmatCost": [ 0, 0, 0, 0, 0 ],
+            "baseVehicle": "",
+            "productionTime": 0
+        },
+        "WideGaugeInfantry":
+        {
+            "name": "BMS Holdout",
+            "category": "",
+            "description": "",
+            "damageType": "",
+            "damageInfo": [ "" ],
+            "ammoUsed": "",
+            "bmatCost": 0,
+            "cmatCost": 0,
+            "pcmatCost": 0,
+            "steelCost": 0,
+            "assmatCost": [ 0, 0, 0, 0, 0 ],
+            "baseVehicle": "",
+            "productionTime": 0
+        },
+        "WideGaugeFlatbed":
+        {
+            "name": "BMS Longrider",
+            "category": "",
+            "description": "",
+            "damageType": "",
+            "damageInfo": [ "" ],
+            "ammoUsed": "",
+            "bmatCost": 0,
+            "cmatCost": 0,
+            "pcmatCost": 0,
+            "steelCost": 0,
+            "assmatCost": [ 0, 0, 0, 0, 0 ],
+            "baseVehicle": "",
+            "productionTime": 0
+        }
+    }
+}

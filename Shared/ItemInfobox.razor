@@ -1,0 +1,56 @@
+﻿@using FoxholeLogiSheet.Data
+
+<div class="item-infobox d-@(Visibility ? "block" : "none")" style="left: @(MouseX+20)px; top: @(Math.Ceiling(MouseY/1.5)+5)px">
+	<div class="infobox-header">
+		<p>@Item.Name</p>
+	</div>
+	<div class="item-info">
+		<p class="item-category">@Item.Category</p>
+		<p class="item-description">@Item.Description</p>
+		@if(Item.DamageType != "") 
+		{
+			<p class="item-damagetype">Deals @Item.DamageType damage</p>
+		}
+		@foreach(string info in Item.DamageInfo!) 
+		{
+			<p class="item-damageinfo">@info</p>
+		}
+		<p class="item-ammoused">@Item.AmmoUsed</p>
+		<p class="item-cratesize">Produces a crate of @(Item.CrateSize)x @(Item.Name)(s)</p>
+		<div class="item-costs">
+			<div class="@(Item.BmatCost > 0 ? "" : "d-none")">
+				<img src="icons/ProductionIcons/MaterialBasic.png" /> 
+				<span>@(Item.BmatCost * (SelectedCategory == "Vehicles" || SelectedCategory == "Shippables" ? Item.CrateSize : 1)) - Basic Materials</span>
+			</div>
+			<div class="@(Item.RmatCost > 0 ? "" : "d-none")">
+				<img src="icons/ProductionIcons/MaterialRefined.png" /> 
+				<span>@(Item.RmatCost * (SelectedCategory == "Vehicles" || SelectedCategory == "Shippables" ? Item.CrateSize : 1)) - Refined Materials</span>
+			</div>
+			<div class="@(Item.EmatCost > 0 ? "" : "d-none")">
+				<img src="icons/ProductionIcons/MaterialExplosive.png" /> 
+				<span>@(Item.EmatCost * (SelectedCategory == "Vehicles" || SelectedCategory == "Shippables" ? Item.CrateSize : 1)) - Explosive Materials</span>
+			</div>
+			<div class="@(Item.HematCost > 0 ? "" : "d-none")">
+				<img src="icons/ProductionIcons/MaterialHeavyExplosive.png" /> 
+				<span>@(Item.HematCost * (SelectedCategory == "Vehicles" || SelectedCategory == "Shippables" ? Item.CrateSize : 1)) - Heavy Explosive Materials</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+@code {
+	[Parameter]
+	public ProductionItem Item { get; set; } = new();
+
+	[Parameter]
+	public string SelectedCategory { get; set; } = "SmallArms";
+
+	[Parameter]
+	public bool Visibility { get; set; } = false;
+
+	[Parameter]
+	public double MouseX { get; set; } = 0;
+
+	[Parameter]
+	public double MouseY { get; set; } = 0;
+}

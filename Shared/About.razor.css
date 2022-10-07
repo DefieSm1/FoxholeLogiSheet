@@ -1,0 +1,40 @@
+﻿.about-container {
+    margin-top: auto;
+    width: 100vw;
+    height: 100vh;
+    top: 0vh;
+    background-color: #00000060;
+    position: fixed;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-infobox {
+    background-color: rgba(0, 0, 0, 0.95);
+    color: rgb(230, 230, 230);
+    z-index: 3;
+}
+
+    .about-infobox > h1 {
+        padding: 18px;
+        background-color: #7F7F7F;
+        text-align: center;
+    }
+
+    .about-infobox > p {
+        padding: 4px 18px;
+        font-size: 1.2rem;
+    }
+
+.about-trademark, .about-trademark > * {
+    text-align: center;
+    font-style: italic;
+    color: #E5BA82;
+}
+
+.about-background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}

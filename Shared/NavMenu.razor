@@ -1,0 +1,27 @@
+﻿<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <h1 class="navbar-brand">Foxhole Logi Sheet</h1>
+    </div>
+</div>
+
+<div class="">
+    <nav class="navbar flex-row">
+        <div class="nav-item px-1">
+            <NavLink class="nav-link link-light" href="" Match="NavLinkMatch.All">
+                <span class="oi oi-calculator" aria-hidden="true"></span><span class="nav-link-text">Calculator</span>
+            </NavLink>
+        </div>
+        <div class="nav-item px-1">
+            <NavLink class="nav-link link-light" Match="NavLinkMatch.All" @onclick="(() => ShowAbout = !ShowAbout)">
+                <span class="oi oi-info" aria-hidden="true"></span><span class="nav-link-text">About</span>
+            </NavLink>
+        </div>
+        <span class="nav-item nav-link-text px-1" style="color: whitesmoke; font-size: 18px; margin-left: 8px;"><i>More to come!</i></span>
+    </nav>
+</div>
+
+<About @bind-Display=ShowAbout></About>
+
+@code {
+    public bool ShowAbout { get; set; } = false;
+}
