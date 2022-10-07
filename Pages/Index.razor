@@ -60,33 +60,61 @@
                     <div class="output-item-count">@SelectedItems[CategoryNames.IndexOf(category)].Count()</div>
                 </div>
                 <div class="output-bottom">
-                    @if(GetQueuePrice(category, "Bmat") > 0) 
+                    @if(GetQueuePrice("Bmat", category) > 0) 
                     {
                         <div style="background-image: url(icons/ProductionIcons/MaterialBasic.png)">
-                            @(PriceInCrates ? Math.Ceiling(GetQueuePrice(category, "Bmat") / (PriceInCrates ? 100 : 1)) + " crates" : GetQueuePrice(category, "Bmat") + " units")
+                            @(PriceInCrates ? Math.Ceiling(GetQueuePrice("Bmat", category) / (PriceInCrates ? 100 : 1)) + " crates" : GetQueuePrice("Bmat", category) + " units")
                         </div>
                     }
-                    @if (GetQueuePrice(category, "Rmat") > 0)
+                    @if (GetQueuePrice("Rmat", category) > 0)
                     {
                         <div style="background-image: url(icons/ProductionIcons/MaterialRefined.png)">
-                            @(PriceInCrates ? Math.Ceiling(GetQueuePrice(category, "Rmat") / (PriceInCrates ? 20 : 1)) + " crates" : GetQueuePrice(category, "Rmat") + " units")
+                            @(PriceInCrates ? Math.Ceiling(GetQueuePrice("Rmat", category) / (PriceInCrates ? 20 : 1)) + " crates" : GetQueuePrice("Rmat", category) + " units")
                         </div>
                     }
-                    @if(GetQueuePrice(category, "Emat") > 0) 
+                    @if (GetQueuePrice("Emat", category) > 0)
                     {
                         <div style="background-image: url(icons/ProductionIcons/MaterialExplosive.png)">
-                            @(PriceInCrates ? Math.Ceiling(GetQueuePrice(category, "Emat") / (PriceInCrates ? 20 : 1)) + " crates" : GetQueuePrice(category, "Emat") + " units")
+                             @(PriceInCrates ? Math.Ceiling(GetQueuePrice("Emat", category) / (PriceInCrates ? 20 : 1)) + " crates" : GetQueuePrice("Emat", category) + " units")
                         </div>
                     }
-                    @if (GetQueuePrice(category, "Hemat") > 0) 
+                     @if (GetQueuePrice("Hemat", category) > 0)
                     {
                         <div style="background-image: url(icons/ProductionIcons/MaterialHeavyExplosive.png)">
-                            @(PriceInCrates ? Math.Ceiling(GetQueuePrice(category, "Hemat") / (PriceInCrates ? 20 : 1)) + " crates" : GetQueuePrice(category, "Hemat") + " units")
+                             @(PriceInCrates ? Math.Ceiling(GetQueuePrice("Hemat", category) / (PriceInCrates ? 20 : 1)) + " crates" : GetQueuePrice("Hemat", category) + " units")
                         </div>
                     }
                 </div>
             </div>
         }
+    </div>
+    <div class="output-sum-background">
+        <div class="output-sum">
+            @if (GetQueuePrice("Bmat") > 0)
+            {
+                <div style="background-image: url(icons/ProductionIcons/MaterialBasic.png)">
+                    @(PriceInCrates ? Math.Ceiling(GetQueuePrice("Bmat") / (PriceInCrates ? 100 : 1)) + " crates" : GetQueuePrice("Bmat") + " units")
+                </div>
+            }
+            @if (GetQueuePrice("Rmat") > 0)
+            {
+                <div style="background-image: url(icons/ProductionIcons/MaterialRefined.png)">
+                    @(PriceInCrates ? Math.Ceiling(GetQueuePrice("Rmat") / (PriceInCrates ? 20 : 1)) + " crates" : GetQueuePrice("Rmat") + " units")
+                </div>
+            }
+            @if (GetQueuePrice("Emat") > 0)
+            {
+                <div style="background-image: url(icons/ProductionIcons/MaterialExplosive.png)">
+                    @(PriceInCrates ? Math.Ceiling(GetQueuePrice("Emat") / (PriceInCrates ? 20 : 1)) + " crates" : GetQueuePrice("Emat") + " units")
+                </div>
+            }
+            @if (GetQueuePrice("Hemat") > 0)
+            {
+                <div style="background-image: url(icons/ProductionIcons/MaterialHeavyExplosive.png)">
+                    @(PriceInCrates ? Math.Ceiling(GetQueuePrice("Hemat") / (PriceInCrates ? 20 : 1)) + " crates" : GetQueuePrice("Hemat") + " units")
+                </div>
+            }
+        </div>
     </div>
 </div>
 </div>
@@ -213,35 +241,44 @@
             SelectedItems.Add(new List<string>());
     }
 
-    public double GetQueuePrice(string itemCategory, string materialKey)
+    public double GetQueuePrice(string materialKey, string itemCategory = "all")
     {
         bool isVehicleOrShippable = (itemCategory == "Vehicles" || itemCategory == "Shippables");
         double currentDiscount = 0;
         double queuePrice = 0;
         ProductionItem itemInfo = new();
 
-        foreach (var item in SelectedItems[CategoryNames.IndexOf(itemCategory)].Select((value, index) => new { index, value }))
+        if(itemCategory == "all") 
         {
-            currentDiscount = ProductionMode == "MPF" ? 1 - 0.1 * Math.Min(item.index + 1, 5) : 1;
-            itemInfo = GetCategoryData(itemCategory)[item.value];
-
-            switch (materialKey)
+            foreach(string category in CategoryNames) {
+                queuePrice += GetQueuePrice(materialKey, category);
+            }
+        }
+        else
+        {
+            foreach (var item in SelectedItems[CategoryNames.IndexOf(itemCategory)].Select((value, index) => new { index, value }))
             {
-                case "Bmat":
-                    queuePrice += Math.Floor(itemInfo.BmatCost * currentDiscount) * (isVehicleOrShippable ? 3 : 1);
-                    break;
-                case "Rmat":
-                    queuePrice += Math.Floor(itemInfo.RmatCost * currentDiscount) * (isVehicleOrShippable ? 3 : 1);
-                    break;
-                case "Emat":
-                    queuePrice += Math.Floor(itemInfo.EmatCost * currentDiscount) * (isVehicleOrShippable ? 3 : 1);
-                    break;
-                case "Hemat":
-                    queuePrice += Math.Floor(itemInfo.HematCost * currentDiscount) * (isVehicleOrShippable ? 3 : 1);
-                    break;
-                default:
-                    queuePrice += 0;
-                    break;
+                currentDiscount = ProductionMode == "MPF" ? 1 - 0.1 * Math.Min(item.index + 1, 5) : 1;
+                itemInfo = GetCategoryData(itemCategory)[item.value];
+
+                switch (materialKey)
+                {
+                    case "Bmat":
+                        queuePrice += Math.Floor(itemInfo.BmatCost * currentDiscount) * (isVehicleOrShippable ? 3 : 1);
+                        break;
+                    case "Rmat":
+                        queuePrice += Math.Floor(itemInfo.RmatCost * currentDiscount) * (isVehicleOrShippable ? 3 : 1);
+                        break;
+                    case "Emat":
+                        queuePrice += Math.Floor(itemInfo.EmatCost * currentDiscount) * (isVehicleOrShippable ? 3 : 1);
+                        break;
+                    case "Hemat":
+                        queuePrice += Math.Floor(itemInfo.HematCost * currentDiscount) * (isVehicleOrShippable ? 3 : 1);
+                        break;
+                    default:
+                        queuePrice += 0;
+                        break;
+                }
             }
         }
         return queuePrice;

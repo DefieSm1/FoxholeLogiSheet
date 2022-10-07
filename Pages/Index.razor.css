@@ -135,8 +135,9 @@
 
 .output-categories {
     width: 100%;
-    height: 670px;
+    height: 624px;
     padding: 6px;
+    padding-bottom: 0;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 4px;
@@ -211,7 +212,34 @@
         background-repeat: no-repeat;
         background-size: 15%;
         background-position: 5px; 
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+.output-sum-background {
+    height: 50px;
+    display: flex;
+    padding: 6px;
+}
+
+.output-sum {
+    display: flex;
+    flex-direction: row;
+    background-color: #414241;
+    height: 38px;
+    width: 100%;
+}
+
+    .output-sum > * {
+        width: 25%;
+        margin: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-size: 15%;
+        background-position: 5px;
+        background-color: rgba(0, 0, 0, 0.3);
     }
 
 *::-webkit-scrollbar {
