@@ -209,7 +209,12 @@
     }
 
     public bool CheckIfDisabled(string itemCategory, string itemKey) {
-        if (ProductionMode == "MPF" && SelectedItems[CategoryNames.IndexOf(itemCategory)].Count() != 0)
+        if (SelectedItems[CategoryNames.IndexOf(itemCategory)].Count() == (itemCategory == "Vehicles" || itemCategory == "Shippables" ? 5 : 9) && ProductionMode == "MPF")
+        {
+            InfoboxVisibility = false;
+            return true;
+        }
+        else if (SelectedItems[CategoryNames.IndexOf(itemCategory)].Count() != 0 && ProductionMode == "MPF")
             return !(SelectedItems[CategoryNames.IndexOf(itemCategory)].Contains(itemKey));
         else
             return false;
