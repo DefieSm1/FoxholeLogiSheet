@@ -16,7 +16,10 @@
 			<p class="item-damageinfo">@info</p>
 		}
 		<p class="item-ammoused">@Item.AmmoUsed</p>
-		<p class="item-cratesize">Produces a crate of @(Item.CrateSize)x @(Item.Name)(s)</p>
+		@if(Item.CrateSize != 0) 
+		{
+			<p class="item-cratesize">Produces a crate of @(Item.CrateSize)x @(Item.Name)(s)</p>
+		}
 		<div class="item-costs">
 			<div class="@(Item.BmatCost > 0 ? "" : "d-none")">
 				<img src="icons/ProductionIcons/MaterialBasic.png" /> 
@@ -34,6 +37,25 @@
 				<img src="icons/ProductionIcons/MaterialHeavyExplosive.png" /> 
 				<span>@(Item.HematCost * (SelectedCategory == "Vehicles" || SelectedCategory == "Shippables" ? Item.CrateSize : 1)) - Heavy Explosive Materials</span>
 			</div>
+			<div class="@(Item.CmatCost > 0 ? "" : "d-none")">
+				<img src="icons/ProductionIcons/Facility/MaterialConstruction.png" /> 
+				<span>@(Item.CmatCost) - Construction Materials</span>
+			</div>
+			<div class="@(Item.PCmatCost > 0 ? "" : "d-none")">
+				<img src="icons/ProductionIcons/Facility/MaterialProcessedConstruction.png" /> 
+				<span>@(Item.PCmatCost) - Processed Construction Materials</span>
+			</div>
+			<div class="@(Item.SteelCost > 0 ? "" : "d-none")">
+				<img src="icons/ProductionIcons/Facility/MaterialSteel.png" /> 
+				<span>@(Item.SteelCost) - Steel Construction Materials</span>
+			</div>
+			@for(int i = 0; i < Item.AssmatCost.Count(); i++)
+			{
+				<div class="@(Item.AssmatCost[i] > 0 ? "" : "d-none")">
+					<img src="icons/ProductionIcons/Facility/AssemblyMaterialsT@(i+1).png" />
+					<span>@(Item.AssmatCost[i]) - Assembly Materials @ToRoman(i + 1)</span>
+				</div>
+			}
 		</div>
 	</div>
 </div>
@@ -53,4 +75,24 @@
 
 	[Parameter]
 	public double MouseY { get; set; } = 0;
+
+	public static string ToRoman(int number)
+	{
+		if ((number < 0) || (number > 3999)) throw new ArgumentOutOfRangeException("insert value betwheen 1 and 3999");
+		if (number < 1) return string.Empty;
+		if (number >= 1000) return "M" + ToRoman(number - 1000);
+		if (number >= 900) return "CM" + ToRoman(number - 900);
+		if (number >= 500) return "D" + ToRoman(number - 500);
+		if (number >= 400) return "CD" + ToRoman(number - 400);
+		if (number >= 100) return "C" + ToRoman(number - 100);
+		if (number >= 90) return "XC" + ToRoman(number - 90);
+		if (number >= 50) return "L" + ToRoman(number - 50);
+		if (number >= 40) return "XL" + ToRoman(number - 40);
+		if (number >= 10) return "X" + ToRoman(number - 10);
+		if (number >= 9) return "IX" + ToRoman(number - 9);
+		if (number >= 5) return "V" + ToRoman(number - 5);
+		if (number >= 4) return "IV" + ToRoman(number - 4);
+		if (number >= 1) return "I" + ToRoman(number - 1);
+		throw new ArgumentOutOfRangeException("o h  n o");
+	}
 }

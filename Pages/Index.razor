@@ -1,139 +1,153 @@
 ﻿@page "/"
+@page "/factory"
 
 <PageTitle>@ProductionMode Calculator</PageTitle>
 
 @inject HttpClient Http
+@inject NavigationManager NavManager
 @using FoxholeLogiSheet.Data
 
 <h1 class="production-header">@ProductionMode Calculator</h1>
 <div class="d-inline-flex text-light production-container">
-<div class="production-select">
-    <div class="d-inline-flex grid-header">
-        <div class="grid-header-text"><p>PRODUCTION</p></div>
-        <button class="btn text-light" @onclick="() => ToggleProductionMode()">Switch to @(ProductionMode == "Factory" ? "MPF" : "Factory") mode</button>
-    </div>
-    <div class="d-inline-flex category-selector">
-        @foreach (string category in CategoryNames)
-        {
-            if ((CannotFactory.Contains(category) && ProductionMode == "Factory") || (CannotMPF.Contains(category) && ProductionMode == "MPF"))
-                continue;
-            <button class="btn category-button @(category == SelectedCategory ? "category-selected" : "")"
-            @onclick="() => SelectedCategory = category" style="background-image: url(icons/ProductionIcons/@(category).png)"></button>
-        }
-    </div>
-    <div class="category-grid-background">
-        <div class="category-grid">
-        @foreach (var item in GetCategoryData(SelectedCategory)) 
-        {
-            if (!item.Value.CanMPF && ProductionMode == "MPF")
-                continue;
-            <button class="btn production-item" style="background-image: url(icons/ProductionIcons/@(GetProductionBuilding(SelectedCategory))/@(item.Key).png)"
-            @onmouseover="() => { HoveredItem = item.Value; InfoboxVisibility = true; }" @onmousemove="(e) => { MouseX = e.PageX; MouseY = e.PageY; }" @onmouseout="() => { HoveredItem = item.Value; InfoboxVisibility = false; }" 
-            disabled=@CheckIfDisabled(SelectedCategory, item.Key)
-            @onclick="() => SelectedItems[CategoryNames.IndexOf(SelectedCategory)].Add(item.Key)"></button>
-        }
+    <div class="production-select">
+        <div class="d-inline-flex grid-header">
+            <div class="grid-header-text"><p>PRODUCTION</p></div>
+            <button class="btn text-light" @onclick="() => ToggleProductionMode()">Switch to @(ProductionMode == "Factory" ? "MPF" : "Factory") mode</button>
         </div>
-    </div>
-</div>
-<div class="output-info">
-    <div class="d-inline-flex output-header">
-        <div class="output-header-text"><p>OUTPUT</p></div>
-        <div class="output-buttons">
-            <button class="btn text-light" @onclick="() => PriceInCrates = !PriceInCrates">Show price in @(PriceInCrates ? "units" : "crates")</button>
-            <button class="btn text-light" @onclick="() => ResetSelectedItems()">Reset all</button>
+
+        <div class="d-inline-flex category-selector">
+            @foreach (string category in CategoryNames)
+            {
+                if ((CannotFactory.Contains(category) && ProductionMode == "Factory") || (CannotMPF.Contains(category) && ProductionMode == "MPF"))
+                    continue;
+                <button class="btn category-button @(category == SelectedCategory ? "category-selected" : "")"
+                @onclick="() => SelectedCategory = category" style="background-image: url(icons/ProductionIcons/@(category).png)"></button>
+            }
         </div>
-    </div>
-    <div class="output-categories">
-        @foreach (string category in CategoryNames) 
-        {
-            if ((CannotFactory.Contains(category) && ProductionMode == "Factory") || (CannotMPF.Contains(category) && ProductionMode == "MPF"))
-                continue;
-            <div class="output-row">
-                <div class="output-top">
-                    <div class="output-top-image" style="background-image: url(icons/ProductionIcons/@(category).png)"></div>
-                    <div class="output-top-items">
-                        @foreach (var key in SelectedItems[CategoryNames.IndexOf(category)].Select((value, index) => new { index, value })) {
-                        <button class="btn" style="background-image: url(icons/ProductionIcons/@(GetProductionBuilding(category))/@(key.value).png"
-                        @onclick="() => SelectedItems[CategoryNames.IndexOf(category)].RemoveAt(key.index)"></button>
-                    }
-                    </div>
-                    <div class="output-item-count">@SelectedItems[CategoryNames.IndexOf(category)].Count()</div>
-                </div>
-                <div class="output-bottom">
-                    @if(GetQueuePrice("Bmat", category) > 0) 
-                    {
-                        <div style="background-image: url(icons/ProductionIcons/MaterialBasic.png)">
-                            @(PriceInCrates ? Math.Ceiling(GetQueuePrice("Bmat", category) / (PriceInCrates ? 100 : 1)) + " crates" : GetQueuePrice("Bmat", category) + " units")
-                        </div>
-                    }
-                    @if (GetQueuePrice("Rmat", category) > 0)
-                    {
-                        <div style="background-image: url(icons/ProductionIcons/MaterialRefined.png)">
-                            @(PriceInCrates ? Math.Ceiling(GetQueuePrice("Rmat", category) / (PriceInCrates ? 20 : 1)) + " crates" : GetQueuePrice("Rmat", category) + " units")
-                        </div>
-                    }
-                    @if (GetQueuePrice("Emat", category) > 0)
-                    {
-                        <div style="background-image: url(icons/ProductionIcons/MaterialExplosive.png)">
-                             @(PriceInCrates ? Math.Ceiling(GetQueuePrice("Emat", category) / (PriceInCrates ? 20 : 1)) + " crates" : GetQueuePrice("Emat", category) + " units")
-                        </div>
-                    }
-                     @if (GetQueuePrice("Hemat", category) > 0)
-                    {
-                        <div style="background-image: url(icons/ProductionIcons/MaterialHeavyExplosive.png)">
-                             @(PriceInCrates ? Math.Ceiling(GetQueuePrice("Hemat", category) / (PriceInCrates ? 20 : 1)) + " crates" : GetQueuePrice("Hemat", category) + " units")
-                        </div>
-                    }
-                </div>
+
+        <div class="category-grid-background">
+            <div class="category-grid">
+            @foreach (KeyValuePair<string, ProductionItem> item in ProductionData.GetCategoryData(SelectedCategory)) 
+            {
+                if (!item.Value.CanMPF && ProductionMode == "MPF")
+                    continue;
+                <button class="btn production-item @(CheckIfDisabled(SelectedCategory, item.Key) ? "button-disabled" : "")" 
+                style="background-image: url(icons/ProductionIcons/@(ProductionData.GetProductionBuilding(SelectedCategory))/@(item.Key).png)"
+                @onmouseover="() => { HoveredItem = item.Value; InfoboxVisibility = true; }" @onmousemove="(e) => { MouseX = e.PageX; MouseY = e.PageY; }" 
+                @onmouseout="() => { HoveredItem = item.Value; InfoboxVisibility = false; }"
+                @onclick="() => SelectItem(SelectedCategory, item.Key)"
+                ></button>
+            }
             </div>
-        }
+        </div>
     </div>
-    <div class="output-sum-background">
-        <div class="output-sum">
-            @if (GetQueuePrice("Bmat") > 0)
+
+    <div class="output-info">
+        <div class="d-inline-flex output-header">
+            <div class="output-header-text"><p>OUTPUT</p></div>
+            <div class="output-buttons">
+                <button class="btn text-light" @onclick="() => PriceInCrates = !PriceInCrates">Show price in @(PriceInCrates ? "units" : "crates")</button>
+                <button class="btn text-light" @onclick="() => ResetSelectedItems()">Reset all</button>
+            </div>
+        </div>
+
+        <div class="output-categories">
+            @foreach (string category in CategoryNames) 
             {
-                <div style="background-image: url(icons/ProductionIcons/MaterialBasic.png)">
-                    @(PriceInCrates ? Math.Ceiling(GetQueuePrice("Bmat") / (PriceInCrates ? 100 : 1)) + " crates" : GetQueuePrice("Bmat") + " units")
-                </div>
-            }
-            @if (GetQueuePrice("Rmat") > 0)
-            {
-                <div style="background-image: url(icons/ProductionIcons/MaterialRefined.png)">
-                    @(PriceInCrates ? Math.Ceiling(GetQueuePrice("Rmat") / (PriceInCrates ? 20 : 1)) + " crates" : GetQueuePrice("Rmat") + " units")
-                </div>
-            }
-            @if (GetQueuePrice("Emat") > 0)
-            {
-                <div style="background-image: url(icons/ProductionIcons/MaterialExplosive.png)">
-                    @(PriceInCrates ? Math.Ceiling(GetQueuePrice("Emat") / (PriceInCrates ? 20 : 1)) + " crates" : GetQueuePrice("Emat") + " units")
-                </div>
-            }
-            @if (GetQueuePrice("Hemat") > 0)
-            {
-                <div style="background-image: url(icons/ProductionIcons/MaterialHeavyExplosive.png)">
-                    @(PriceInCrates ? Math.Ceiling(GetQueuePrice("Hemat") / (PriceInCrates ? 20 : 1)) + " crates" : GetQueuePrice("Hemat") + " units")
+                if ((CannotFactory.Contains(category) && ProductionMode == "Factory") || (CannotMPF.Contains(category) && ProductionMode == "MPF"))
+                    continue;
+                <div class="output-row">
+                    <div class="output-top">
+                        <div class="output-top-image" style="background-image: url(icons/ProductionIcons/@(category).png)"></div>
+                        @if(SelectedItems.Count > 0) {
+                            <div class="output-top-items">
+                            @foreach (string outputCategory in SelectedItems[category]) 
+                            {
+                                <button class="btn" style="background-image: url(icons/ProductionIcons/@(ProductionData.GetProductionBuilding(category))/@(outputCategory).png"
+                                @onclick="() => SelectedItems[category].RemoveAt(SelectedItems[category].IndexOf(outputCategory))"></button>
+                            }
+                            </div>
+                            <div class="output-item-count">@SelectedItems[category].Count()</div>
+                        }
+                    </div>
+
+                    <div class="output-bottom">
+                        @if(GetQueuePrice("Bmat", category) > 0) 
+                        {
+                            <div style="background-image: url(icons/ProductionIcons/MaterialBasic.png)">
+                                @(PriceInCrates ? Math.Ceiling(GetQueuePrice("Bmat", category) / (PriceInCrates ? 100 : 1)) + " crates" : GetQueuePrice("Bmat", category) + " units")
+                            </div>
+                        }
+                        @if (GetQueuePrice("Rmat", category) > 0)
+                        {
+                            <div style="background-image: url(icons/ProductionIcons/MaterialRefined.png)">
+                                @(PriceInCrates ? Math.Ceiling(GetQueuePrice("Rmat", category) / (PriceInCrates ? 20 : 1)) + " crates" : GetQueuePrice("Rmat", category) + " units")
+                            </div>
+                        }
+                        @if (GetQueuePrice("Emat", category) > 0)
+                        {
+                            <div style="background-image: url(icons/ProductionIcons/MaterialExplosive.png)">
+                                    @(PriceInCrates ? Math.Ceiling(GetQueuePrice("Emat", category) / (PriceInCrates ? 20 : 1)) + " crates" : GetQueuePrice("Emat", category) + " units")
+                            </div>
+                        }
+                            @if (GetQueuePrice("Hemat", category) > 0)
+                        {
+                            <div style="background-image: url(icons/ProductionIcons/MaterialHeavyExplosive.png)">
+                                    @(PriceInCrates ? Math.Ceiling(GetQueuePrice("Hemat", category) / (PriceInCrates ? 20 : 1)) + " crates" : GetQueuePrice("Hemat", category) + " units")
+                            </div>
+                        }
+                    </div>
                 </div>
             }
         </div>
+
+        <div class="output-sum-background">
+            <div class="output-sum">
+                @if (GetQueuePrice("Bmat") > 0)
+                {
+                    <div style="background-image: url(icons/ProductionIcons/MaterialBasic.png)">
+                        @(PriceInCrates ? Math.Ceiling(GetQueuePrice("Bmat") / (PriceInCrates ? 100 : 1)) + " crates" : GetQueuePrice("Bmat") + " units")
+                    </div>
+                }
+                @if (GetQueuePrice("Rmat") > 0)
+                {
+                    <div style="background-image: url(icons/ProductionIcons/MaterialRefined.png)">
+                        @(PriceInCrates ? Math.Ceiling(GetQueuePrice("Rmat") / (PriceInCrates ? 20 : 1)) + " crates" : GetQueuePrice("Rmat") + " units")
+                    </div>
+                }
+                @if (GetQueuePrice("Emat") > 0)
+                {
+                    <div style="background-image: url(icons/ProductionIcons/MaterialExplosive.png)">
+                        @(PriceInCrates ? Math.Ceiling(GetQueuePrice("Emat") / (PriceInCrates ? 20 : 1)) + " crates" : GetQueuePrice("Emat") + " units")
+                    </div>
+                }
+                @if (GetQueuePrice("Hemat") > 0)
+                {
+                    <div style="background-image: url(icons/ProductionIcons/MaterialHeavyExplosive.png)">
+                        @(PriceInCrates ? Math.Ceiling(GetQueuePrice("Hemat") / (PriceInCrates ? 20 : 1)) + " crates" : GetQueuePrice("Hemat") + " units")
+                    </div>
+                }
+            </div>
+        </div>
     </div>
-</div>
 </div>
 
 <ItemInfobox Item=@HoveredItem SelectedCategory=@SelectedCategory Visibility=@InfoboxVisibility MouseX=@MouseX MouseY=@MouseY></ItemInfobox>
 
 
 @code {
+
+    public ProductionItemCategories ProductionData = new();
+
     static public List<string> CategoryNames { get; set; } = new();
 
     static public List<string> CannotFactory { get; set; } = new();
 
     static public List<string> CannotMPF { get; set; } = new();
 
-    public ProductionItemCategories ProductionData = new();
+    private Dictionary<string, List<string>> SelectedItems = new();
 
     public string ProductionMode { get; set; } = "";
-
-    private List<List<string>> SelectedItems = new();
 
     public string SelectedCategory { get; set; } = "";
 
@@ -149,35 +163,22 @@
 
     protected override async Task OnInitializedAsync()
     {
-        CategoryNames = new()
-        {
-            "SmallArms", "HeavyArms", "HeavyMunitions", "Utility", "Medical", "Supplies", "Uniforms", "Vehicles", "Shippables"
-        };
+        NavManager.NavigateTo("/factory");
 
-        CannotFactory = new()
-        {
-            "Vehicles", "Shippables"
-        };
+        ProductionData = await Http.GetFromJsonAsync<ProductionItemCategories>("data/ProductionData.json") ?? throw new FileNotFoundException();
 
-        CannotMPF = new()
-        {
-            "Medical", "Utility", "Supplies"
-        };
+        CategoryNames = ProductionData.CategoryNames;
 
-        ResetSelectedItems();
+        CannotFactory = ProductionData.CannotFactory;
+
+        CannotMPF = ProductionData.CannotMPF;
 
         // Default calculator parameters
         ProductionMode = "Factory";
         SelectedCategory = "SmallArms";
         PriceInCrates = false;
 
-        // Default infobox parameters
-        InfoboxVisibility = false;
-        MouseX = 0;
-        MouseY = 0;
-
-        if (!System.IO.File.Exists("data/ProductionData.json"))
-            ProductionData = await Http.GetFromJsonAsync<ProductionItemCategories>("data/ProductionData.json");
+        ResetSelectedItems();
     }
 
     public void ToggleProductionMode()
@@ -198,91 +199,70 @@
         }
     }
 
-    public string GetProductionBuilding(string itemCategory) 
-    {
-        if (itemCategory == "Vehicles")
-            return "Garage";
-        else if (itemCategory == "Shippables")
-            return "ConYard";
-        else
-            return "Factory";
-    }
-
     public bool CheckIfDisabled(string itemCategory, string itemKey) {
-        if (SelectedItems[CategoryNames.IndexOf(itemCategory)].Count() == (itemCategory == "Vehicles" || itemCategory == "Shippables" ? 5 : 9) && ProductionMode == "MPF")
-        {
-            InfoboxVisibility = false;
+        if (SelectedItems[itemCategory].Count() == (itemCategory == "Vehicles" || itemCategory == "Shippables" ? 5 : 9) && ProductionMode == "MPF")
             return true;
-        }
-        else if (SelectedItems[CategoryNames.IndexOf(itemCategory)].Count() != 0 && ProductionMode == "MPF")
-            return !(SelectedItems[CategoryNames.IndexOf(itemCategory)].Contains(itemKey));
+        else if (SelectedItems[itemCategory].Count() != 0 && ProductionMode == "MPF")
+            return !(SelectedItems[itemCategory].Contains(itemKey));
         else
             return false;
     }
 
-    public Dictionary<string, ProductionItem> GetCategoryData(string categoryName)
+    public void SelectItem(string itemCategory, string itemKey) // This literally only has to exist because I wanted to keep the infobox for disabled buttons x)
     {
-        int categoryIndex = CategoryNames.IndexOf(categoryName);
-
-        switch (categoryIndex)
-        {
-            default:
-            case 0: return ProductionData.SmallArms;
-            case 1: return ProductionData.HeavyArms;
-            case 2: return ProductionData.HeavyMunitions;
-            case 3: return ProductionData.Utility;
-            case 4: return ProductionData.Medical;
-            case 5: return ProductionData.Supplies;
-            case 6: return ProductionData.Uniforms;
-            case 7: return ProductionData.Vehicles;
-            case 8: return ProductionData.Shippables;
-        }
+        if (!CheckIfDisabled(itemCategory, itemKey))
+            SelectedItems[itemCategory].Add(itemKey);
     }
 
     public void ResetSelectedItems()
     {
         SelectedItems.Clear();
         foreach (string category in CategoryNames)
-            SelectedItems.Add(new List<string>());
+            SelectedItems.Add(category, new List<string>());
     }
 
     public double GetQueuePrice(string materialKey, string itemCategory = "all")
     {
-        bool isVehicleOrShippable = (itemCategory == "Vehicles" || itemCategory == "Shippables");
-        double currentDiscount = 0;
         double queuePrice = 0;
-        ProductionItem itemInfo = new();
 
-        if(itemCategory == "all") 
+        if(SelectedItems.Count() > 0) 
         {
-            foreach(string category in CategoryNames) {
-                queuePrice += GetQueuePrice(materialKey, category);
-            }
-        }
-        else
-        {
-            foreach (var item in SelectedItems[CategoryNames.IndexOf(itemCategory)].Select((value, index) => new { index, value }))
+            bool isVehicleOrShippable = (itemCategory == "Vehicles" || itemCategory == "Shippables");
+            double currentDiscount = 0;
+            ProductionItem itemInfo = new();
+            int itemIndex = 0;
+
+            if(itemCategory == "all") 
             {
-                currentDiscount = ProductionMode == "MPF" ? 1 - 0.1 * Math.Min(item.index + 1, 5) : 1;
-                itemInfo = GetCategoryData(itemCategory)[item.value];
-
-                switch (materialKey)
+                foreach(string category in CategoryNames) {
+                    queuePrice += GetQueuePrice(materialKey, category);
+                }
+            }
+            else
+            {
+                foreach (string item in SelectedItems[itemCategory])
                 {
-                    case "Bmat":
-                        queuePrice += Math.Floor(itemInfo.BmatCost * currentDiscount) * (isVehicleOrShippable ? 3 : 1);
-                        break;
-                    case "Rmat":
-                        queuePrice += Math.Floor(itemInfo.RmatCost * currentDiscount) * (isVehicleOrShippable ? 3 : 1);
-                        break;
-                    case "Emat":
-                        queuePrice += Math.Floor(itemInfo.EmatCost * currentDiscount) * (isVehicleOrShippable ? 3 : 1);
-                        break;
-                    case "Hemat":
-                        queuePrice += Math.Floor(itemInfo.HematCost * currentDiscount) * (isVehicleOrShippable ? 3 : 1);
-                        break;
-                    default:
-                        queuePrice += 0;
-                        break;
+                    currentDiscount = ProductionMode == "MPF" ? 1 - 0.1 * Math.Min(++itemIndex, 5) : 1;
+                    itemInfo = ProductionData.GetCategoryData(itemCategory)[item];
+
+                    switch (materialKey)
+                    {
+                        case "Bmat":
+                            queuePrice += Math.Floor(itemInfo.BmatCost * currentDiscount) * (isVehicleOrShippable ? 3 : 1);
+                            break;
+                        case "Rmat":
+                            queuePrice += Math.Floor(itemInfo.RmatCost * currentDiscount) * (isVehicleOrShippable ? 3 : 1);
+                            break;
+                        case "Emat":
+                            queuePrice += Math.Floor(itemInfo.EmatCost * currentDiscount) * (isVehicleOrShippable ? 3 : 1);
+                            break;
+                        case "Hemat":
+                            queuePrice += Math.Floor(itemInfo.HematCost * currentDiscount) * (isVehicleOrShippable ? 3 : 1);
+                            break;
+                        default:
+                            queuePrice += 0;
+                            break;
+                    }
                 }
             }
         }

@@ -26,21 +26,20 @@
 
         public int HematCost { get; set; }
 
-        public ProductionItem(string? name, string? category, string? description, string? damageType, string[]? damageInfo, string? ammoUsed, bool canMPF, int crateSize, int bmatCost, int rmatCost, int ematCost, int hematCost)
-        {
-            Name = name;
-            Category = category;
-            Description = description;
-            DamageType = damageType;
-            DamageInfo = damageInfo;
-            AmmoUsed = ammoUsed;
-            CanMPF = canMPF;
-            CrateSize = crateSize;
-            BmatCost = bmatCost;
-            RmatCost = rmatCost;
-            EmatCost = ematCost;
-            HematCost = hematCost;
-        }
+
+        // Assembly Station Variables
+
+        public int CmatCost { get; set; }
+
+        public int PCmatCost { get; set; }
+
+        public int SteelCost { get; set; }
+
+        public int[] AssmatCost { get; set; }
+
+        public string BaseVehicle { get; set; }
+
+        public int ProductionTime { get; set; }
 
         public ProductionItem()
         {
@@ -56,6 +55,13 @@
             RmatCost = 0;
             EmatCost = 0;
             HematCost = 0;
+
+            CmatCost = 0;
+            PCmatCost = 0;
+            SteelCost = 0;
+            AssmatCost = new int[5];
+            BaseVehicle = "";
+            ProductionTime = 0;
         }
     }
 }

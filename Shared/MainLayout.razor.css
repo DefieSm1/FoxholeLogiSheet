@@ -18,10 +18,6 @@ main {
 }
 
 @media (max-width: 640.98px) {
-    .top-row {
-        
-    }
-
     .top-row a, .top-row .btn-link {
         margin-left: 0;
     }
