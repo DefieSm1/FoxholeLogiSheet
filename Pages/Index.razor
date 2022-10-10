@@ -163,7 +163,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        NavManager.NavigateTo("/factory");
+        NavManager.NavigateTo("factory");
 
         ProductionData = await Http.GetFromJsonAsync<ProductionItemCategories>("data/ProductionData.json") ?? throw new FileNotFoundException();
 
