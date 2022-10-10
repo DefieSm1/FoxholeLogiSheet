@@ -12,6 +12,8 @@
     justify-content: space-between;
 }
 
+/* INPUT HEADER, CATEGORY AND PRODUCTION MODE SELECTION */
+
 .production-select[b-rz48f9patv] {
     width: 725px;
     max-width: 100vw;
@@ -50,6 +52,8 @@
     justify-content: flex-start;
     background-color: #5E5E5E;
 }
+
+/* ITEM SELECTION */
 
 .category-button[b-rz48f9patv] {
     height: 100%;
@@ -99,6 +103,8 @@
         .category-grid > button:hover[b-rz48f9patv] {
             background-color: #7F7F7F;
         }
+
+/* OUTPUT HEADER, PRICEMODE AND RESET */
 
 .output-info[b-rz48f9patv] {
     height: max-content;
@@ -243,6 +249,16 @@
         background-color: rgba(0, 0, 0, 0.3);
     }
 
+/* OTHER STUFF */
+
+.button-disabled[b-rz48f9patv] {
+    opacity: .65;
+}
+
+    .button-disabled:hover[b-rz48f9patv] {
+        background-color: #414241 !important;
+    }
+
 *[b-rz48f9patv]::-webkit-scrollbar {
     display: block;
     width: 12px;
@@ -263,6 +279,8 @@
 *[b-rz48f9patv]::-webkit-scrollbar-thumb {
     background-color: #7F7F7F;
 }
+
+/* MY ATTEMPT AT MAKING THIS WHOLE JUMBLE RESPONSIVE */
 
 @media only screen and (max-width: 1550px) {
     .production-container[b-rz48f9patv] {
@@ -472,10 +490,6 @@ main[b-j1d26w5cpj] {
 }
 
 @media (max-width: 640.98px) {
-    .top-row[b-j1d26w5cpj] {
-        
-    }
-
     .top-row a[b-j1d26w5cpj], .top-row .btn-link[b-j1d26w5cpj] {
         margin-left: 0;
     }

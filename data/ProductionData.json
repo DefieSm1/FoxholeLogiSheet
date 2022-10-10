@@ -946,7 +946,7 @@
             "category": "Water Bucket",
             "description": "A bucket that holds water. You can toss water onto fires to extinguish them.",
             "damageType": "",
-            "damageInfo": [ "Dear God..." ],
+            "damageInfo": [ "Dear God...", "There's more.", "No!" ],
             "ammoUsed": "Water",
             "canMPF": false,
             "crateSize": 50,
@@ -1316,7 +1316,7 @@
         {
             "name": "Dunne Caravaner 2f",
             "category": "Transport Bus",
-            "description": "The Caravaner is a transport vechicle used to shuttle personnel to the front line",
+            "description": "The Caravaner is a transport vehicle used to shuttle personnel to the front line",
             "damageType": "",
             "damageInfo": [ "" ],
             "ammoUsed": "",
@@ -1421,7 +1421,7 @@
         {
             "name": "Niska Mk. I  Gun Motor Carriage",
             "category": "Half-Track",
-            "description": "Designed for escort missions and to support infantry operations, the Niska Gun Motor Carriage Half-Track is an armoured, versatile all-terrain vechicle that can be equipped with a variety of mounted weapons.",
+            "description": "Designed for escort missions and to support infantry operations, the Niska Gun Motor Carriage Half-Track is an armoured, versatile all-terrain vehicle that can be equipped with a variety of mounted weapons.",
             "damageType": "",
             "damageInfo": [ "" ],
             "ammoUsed": "",
@@ -1436,7 +1436,7 @@
         {
             "name": "Mulloy LPC",
             "category": "Landing APC",
-            "description": "The Mulloy Landing Personnel Carrier is an armoured amphibious vechicle designed for carrying troops across large bodies of water to aid in coordinated beach landings and flanking assaults.",
+            "description": "The Mulloy Landing Personnel Carrier is an armoured amphibious vehicle designed for carrying troops across large bodies of water to aid in coordinated beach landings and flanking assaults.",
             "damageType": "",
             "damageInfo": [ "" ],
             "ammoUsed": "",
@@ -1451,7 +1451,7 @@
         {
             "name": "Devitt Mk. III",
             "category": "Light Tank",
-            "description": "A highly maneuverabl lightweight tank. Designed for urban enviroments, the Devitt is fitted with a 40mm cannon.",
+            "description": "A highly maneuverable lightweight tank. Designed for urban enviroments, the Devitt is fitted with a 40mm cannon.",
             "damageType": "",
             "damageInfo": [ "" ],
             "ammoUsed": "40mm",
@@ -1540,8 +1540,8 @@
         "LightUtilityVehicle":
         {
             "name": "Drummond 100a",
-            "category": "Light Utility Vechicle",
-            "description": "A multipurpose off-road Warden vechicle that can scout nearby targets.",
+            "category": "Light Utility Vehicle",
+            "description": "A multipurpose off-road Warden vehicle that can scout nearby targets.",
             "damageType": "",
             "damageInfo": [ "" ],
             "ammoUsed": "",
