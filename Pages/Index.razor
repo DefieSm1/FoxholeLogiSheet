@@ -33,7 +33,7 @@
                     continue;
                 <button class="btn production-item @(CheckIfDisabled(SelectedCategory, item.Key) ? "button-disabled" : "")" 
                 style="background-image: url(icons/ProductionIcons/@(ProductionData.GetProductionBuilding(SelectedCategory))/@(item.Key).png)"
-                @onmouseover="() => { HoveredItem = item.Value; InfoboxVisibility = true; }" @onmousemove="(e) => { MouseX = e.PageX; MouseY = e.PageY; }" 
+                @onmouseover="() => { HoveredItem = item.Value; InfoboxVisibility = true; InfoboxSimple = false; }" @onmousemove="(e) => { MouseX = e.PageX; MouseY = e.PageY; }" 
                 @onmouseout="() => { HoveredItem = item.Value; InfoboxVisibility = false; }"
                 @onclick="() => SelectItem(SelectedCategory, item.Key)"
                 ></button>
@@ -64,7 +64,10 @@
                             @foreach (string outputCategory in SelectedItems[category]) 
                             {
                                 <button class="btn" style="background-image: url(icons/ProductionIcons/@(ProductionData.GetProductionBuilding(category))/@(outputCategory).png"
-                                @onclick="() => SelectedItems[category].RemoveAt(SelectedItems[category].IndexOf(outputCategory))"></button>
+                                @onmouseover="() => { HoveredItem = ProductionData.GetCategoryData(category)[outputCategory]; InfoboxVisibility = true; InfoboxSimple = true; }" 
+                                @onmousemove="(e) => { MouseX = e.PageX - 450; MouseY = e.PageY; InfoboxVisibility = true; }"
+                                @onmouseout="() => { HoveredItem = ProductionData.GetCategoryData(category)[outputCategory]; InfoboxVisibility = false; }"
+                                @onclick="() => { SelectedItems[category].RemoveAt(SelectedItems[category].IndexOf(outputCategory)); InfoboxVisibility = false; }"></button>
                             }
                             </div>
                             <div class="output-item-count">@SelectedItems[category].Count()</div>
@@ -132,8 +135,7 @@
     </div>
 </div>
 
-<ItemInfobox Item=@HoveredItem SelectedCategory=@SelectedCategory Visibility=@InfoboxVisibility MouseX=@MouseX MouseY=@MouseY></ItemInfobox>
-
+<ItemInfobox Item=@HoveredItem SelectedCategory=@SelectedCategory Visibility=@InfoboxVisibility Simplified=@InfoboxSimple MouseX=@MouseX MouseY=@MouseY></ItemInfobox>
 
 @code {
 
@@ -156,6 +158,8 @@
     public ProductionItem HoveredItem { get; set; } = new();
 
     public bool InfoboxVisibility { get; set; }
+
+    public bool InfoboxSimple { get; set; }
 
     public double MouseX { get; set; }
 

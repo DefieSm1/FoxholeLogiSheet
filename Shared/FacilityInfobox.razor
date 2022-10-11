@@ -1,0 +1,46 @@
+﻿@using FoxholeLogiSheet.Data
+
+<div class="building-infobox d-@(Visibility ? "block" : "none")" style="left: @(MouseX+20)px; top: @(Math.Ceiling(MouseY/1.5)+5)px">
+	<div class="infobox-header">
+		<p>@Building.Name</p>
+	</div>
+
+	<div class="building-info">
+		<p class="building-description">@Building.Description</p>
+		<div class="building-costs">
+			<div class="@(Building.BmatCost > 0 ? "" : "d-none")">
+				<img src="icons/ProductionIcons/MaterialBasic.png" />
+				<span>@(Building.BmatCost) - Basic Materials</span>
+			</div>
+			<div class="@(Building.CmatCost > 0 ? "" : "d-none")">
+				<img src="icons/Facility/MaterialConstruction.png" />
+				<span>@(Building.CmatCost) - Construction Materials</span>
+			</div>
+			<div class="@(Building.PCmatCost > 0 ? "" : "d-none")">
+				<img src="icons/Facility/MaterialProcessedConstruction.png" />
+				<span>@(Building.PCmatCost) - Processed Construction Materials</span>
+			</div>
+			<div class="@(Building.SteelCost > 0 ? "" : "d-none")">
+				<img src="icons/Facility/MaterialSteel.png" />
+				<span>@(Building.SteelCost) - Steel Construction Materials</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+@code {
+	[Parameter]
+	public FacilityBuilding Building { get; set; } = new();
+
+	[Parameter]
+	public string SelectedCategory { get; set; } = "";
+
+	[Parameter]
+	public bool Visibility { get; set; } = false;
+
+	[Parameter]
+	public double MouseX { get; set; } = 0;
+
+	[Parameter]
+	public double MouseY { get; set; } = 0;
+}

@@ -6,10 +6,10 @@ p {
     margin-bottom: 0.6rem !important;
 }
 
-.item-infobox {
+.building-infobox {
     position: fixed;
     z-index: 1;
-    width: 410px;
+    max-width: 410px;
     background-color: rgba(0, 0, 0, 0.95);
     color: rgb(230, 230, 230);
     font-size: 16px;
@@ -27,36 +27,36 @@ p {
         vertical-align: middle;
     }
 
-.item-info {
+.building-info {
     padding: 12px;
 }
 
-.item-category {
+.building-category {
     color: #E5BA82;
     font-style: italic;
 }
 
-.item-damagetype {
+.building-damagetype {
     color: #F2804B;
 }
 
-.item-damageinfo {
+.building-damageinfo {
     color: #E5BA82;
 }
 
-.item-ammoused {
+.building-ammoused {
     color: #BCBCBC;
 }
 
-.item-cratesize {
+.building-cratesize {
     color: #F2804B;
 }
 
-.item-costs {
+.building-costs {
     flex-direction: column;
 }
 
-    .item-costs > * {
+    .building-costs > * {
         display: flex;
         height: 40px;
         width: 100%;
@@ -65,12 +65,12 @@ p {
         flex-direction: row;
     }
 
-    .item-costs img {
+    .building-costs img {
         height: 100%;
         padding: 4px;
     }
 
-    .item-costs span {
+    .building-costs span {
         padding: 8px;
     }
 

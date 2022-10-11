@@ -1,62 +1,73 @@
 ﻿@using FoxholeLogiSheet.Data
 
-<div class="item-infobox d-@(Visibility ? "block" : "none")" style="left: @(MouseX+20)px; top: @(Math.Ceiling(MouseY/1.5)+5)px">
+<div class="item-infobox d-@(Visibility ? "block" : "none")" style="left: @(MouseX+20)px; top: @(Math.Ceiling(MouseY/MouseYModifier)+5)px">
 	<div class="infobox-header">
 		<p>@Item.Name</p>
 	</div>
 	<div class="item-info">
 		<p class="item-category">@Item.Category</p>
 		<p class="item-description">@Item.Description</p>
-		@if(Item.DamageType != "") 
+		@if(!Simplified)
 		{
-			<p class="item-damagetype">Deals @Item.DamageType damage</p>
-		}
-		@foreach(string info in Item.DamageInfo!) 
-		{
-			<p class="item-damageinfo">@info</p>
-		}
-		<p class="item-ammoused">@Item.AmmoUsed</p>
-		@if(Item.CrateSize != 0) 
-		{
-			<p class="item-cratesize">Produces a crate of @(Item.CrateSize)x @(Item.Name)(s)</p>
-		}
-		<div class="item-costs">
-			<div class="@(Item.BmatCost > 0 ? "" : "d-none")">
-				<img src="icons/ProductionIcons/MaterialBasic.png" /> 
-				<span>@(Item.BmatCost * (SelectedCategory == "Vehicles" || SelectedCategory == "Shippables" ? Item.CrateSize : 1)) - Basic Materials</span>
-			</div>
-			<div class="@(Item.RmatCost > 0 ? "" : "d-none")">
-				<img src="icons/ProductionIcons/MaterialRefined.png" /> 
-				<span>@(Item.RmatCost * (SelectedCategory == "Vehicles" || SelectedCategory == "Shippables" ? Item.CrateSize : 1)) - Refined Materials</span>
-			</div>
-			<div class="@(Item.EmatCost > 0 ? "" : "d-none")">
-				<img src="icons/ProductionIcons/MaterialExplosive.png" /> 
-				<span>@(Item.EmatCost * (SelectedCategory == "Vehicles" || SelectedCategory == "Shippables" ? Item.CrateSize : 1)) - Explosive Materials</span>
-			</div>
-			<div class="@(Item.HematCost > 0 ? "" : "d-none")">
-				<img src="icons/ProductionIcons/MaterialHeavyExplosive.png" /> 
-				<span>@(Item.HematCost * (SelectedCategory == "Vehicles" || SelectedCategory == "Shippables" ? Item.CrateSize : 1)) - Heavy Explosive Materials</span>
-			</div>
-			<div class="@(Item.CmatCost > 0 ? "" : "d-none")">
-				<img src="icons/ProductionIcons/Facility/MaterialConstruction.png" /> 
-				<span>@(Item.CmatCost) - Construction Materials</span>
-			</div>
-			<div class="@(Item.PCmatCost > 0 ? "" : "d-none")">
-				<img src="icons/ProductionIcons/Facility/MaterialProcessedConstruction.png" /> 
-				<span>@(Item.PCmatCost) - Processed Construction Materials</span>
-			</div>
-			<div class="@(Item.SteelCost > 0 ? "" : "d-none")">
-				<img src="icons/ProductionIcons/Facility/MaterialSteel.png" /> 
-				<span>@(Item.SteelCost) - Steel Construction Materials</span>
-			</div>
-			@for(int i = 0; i < Item.AssmatCost.Count(); i++)
+			@if(Item.DamageType != "") 
 			{
-				<div class="@(Item.AssmatCost[i] > 0 ? "" : "d-none")">
-					<img src="icons/ProductionIcons/Facility/AssemblyMaterialsT@(i+1).png" />
-					<span>@(Item.AssmatCost[i]) - Assembly Materials @ToRoman(i + 1)</span>
-				</div>
+				<p class="item-damagetype">Deals @Item.DamageType damage</p>
 			}
-		</div>
+			@foreach(string info in Item.DamageInfo!) 
+			{
+				<p class="item-damageinfo">@info</p>
+			}
+			<p class="item-ammoused">@Item.AmmoUsed</p>
+			@if(Item.CrateSize != 0) 
+			{
+				<p class="item-cratesize">Produces a crate of @(Item.CrateSize)x @(Item.Name)(s)</p>
+			}
+			@if(Item.BaseVehicle != "")
+			{
+				<p class="item-damageinfo">Requires base vehicle: @Item.BaseVehicle</p>
+			}
+			@if (SelectedCategory == "Assembly")
+			{
+				<p class="item-damageinfo">@(Item.ProductionTime / 3600):@(Item.ProductionTime % 3600 / 60 < 10 ? "0" + Item.ProductionTime % 3600 / 60 : Item.ProductionTime % 3600 / 60):@(Item.ProductionTime % 3600 % 60 < 10 ? "0" + Item.ProductionTime % 3600 % 60 : Item.ProductionTime % 3600 % 60)</p>
+			}
+			<div class="item-costs">
+				<div class="@(Item.BmatCost > 0 ? "" : "d-none")">
+					<img src="icons/ProductionIcons/MaterialBasic.png" /> 
+					<span>@(Item.BmatCost * (SelectedCategory == "Vehicles" || SelectedCategory == "Shippables" ? Item.CrateSize : 1)) - Basic Materials</span>
+				</div>
+				<div class="@(Item.RmatCost > 0 ? "" : "d-none")">
+					<img src="icons/ProductionIcons/MaterialRefined.png" /> 
+					<span>@(Item.RmatCost * (SelectedCategory == "Vehicles" || SelectedCategory == "Shippables" ? Item.CrateSize : 1)) - Refined Materials</span>
+				</div>
+				<div class="@(Item.EmatCost > 0 ? "" : "d-none")">
+					<img src="icons/ProductionIcons/MaterialExplosive.png" /> 
+					<span>@(Item.EmatCost * (SelectedCategory == "Vehicles" || SelectedCategory == "Shippables" ? Item.CrateSize : 1)) - Explosive Materials</span>
+				</div>
+				<div class="@(Item.HematCost > 0 ? "" : "d-none")">
+					<img src="icons/ProductionIcons/MaterialHeavyExplosive.png" /> 
+					<span>@(Item.HematCost * (SelectedCategory == "Vehicles" || SelectedCategory == "Shippables" ? Item.CrateSize : 1)) - Heavy Explosive Materials</span>
+				</div>
+				<div class="@(Item.CmatCost > 0 ? "" : "d-none")">
+					<img src="icons/Facility/MaterialConstruction.png" /> 
+					<span>@(Item.CmatCost) - Construction Materials</span>
+				</div>
+				<div class="@(Item.PCmatCost > 0 ? "" : "d-none")">
+					<img src="icons/Facility/MaterialProcessedConstruction.png" /> 
+					<span>@(Item.PCmatCost) - Processed Construction Materials</span>
+				</div>
+				<div class="@(Item.SteelCost > 0 ? "" : "d-none")">
+					<img src="icons/Facility/MaterialSteel.png" /> 
+					<span>@(Item.SteelCost) - Steel Construction Materials</span>
+				</div>
+				@for(int i = 0; i < Item.AssmatCost.Count(); i++)
+				{
+					<div class="@(Item.AssmatCost[i] > 0 ? "" : "d-none")">
+						<img src="icons/Facility/AssemblyMaterialsT@(i+1).png" />
+						<span>@(Item.AssmatCost[i]) - Assembly Materials @ToRoman(i + 1)</span>
+					</div>
+				}
+			</div>
+		}
 	</div>
 </div>
 
@@ -71,25 +82,31 @@
 	public bool Visibility { get; set; } = false;
 
 	[Parameter]
+	public bool Simplified { get; set; } = false;
+
+	[Parameter]
 	public double MouseX { get; set; } = 0;
 
 	[Parameter]
 	public double MouseY { get; set; } = 0;
 
+	[Parameter]
+	public double MouseYModifier { get; set; } = 1.2;
+
 	public static string ToRoman(int number)
 	{
 		if ((number < 0) || (number > 3999)) throw new ArgumentOutOfRangeException("insert value betwheen 1 and 3999");
 		if (number < 1) return string.Empty;
-		if (number >= 1000) return "M" + ToRoman(number - 1000);
-		if (number >= 900) return "CM" + ToRoman(number - 900);
-		if (number >= 500) return "D" + ToRoman(number - 500);
-		if (number >= 400) return "CD" + ToRoman(number - 400);
-		if (number >= 100) return "C" + ToRoman(number - 100);
-		if (number >= 90) return "XC" + ToRoman(number - 90);
-		if (number >= 50) return "L" + ToRoman(number - 50);
-		if (number >= 40) return "XL" + ToRoman(number - 40);
-		if (number >= 10) return "X" + ToRoman(number - 10);
-		if (number >= 9) return "IX" + ToRoman(number - 9);
+		//if (number >= 1000) return "M" + ToRoman(number - 1000); // Commented out until we get AssMats 6 to 1000 x)
+		//if (number >= 900) return "CM" + ToRoman(number - 900);
+		//if (number >= 500) return "D" + ToRoman(number - 500);
+		//if (number >= 400) return "CD" + ToRoman(number - 400);
+		//if (number >= 100) return "C" + ToRoman(number - 100);
+		//if (number >= 90) return "XC" + ToRoman(number - 90);
+		//if (number >= 50) return "L" + ToRoman(number - 50);
+		//if (number >= 40) return "XL" + ToRoman(number - 40);
+		//if (number >= 10) return "X" + ToRoman(number - 10);
+		//if (number >= 9) return "IX" + ToRoman(number - 9);
 		if (number >= 5) return "V" + ToRoman(number - 5);
 		if (number >= 4) return "IV" + ToRoman(number - 4);
 		if (number >= 1) return "I" + ToRoman(number - 1);
