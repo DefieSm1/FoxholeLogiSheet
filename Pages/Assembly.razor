@@ -15,7 +15,7 @@
 				style="background-image: url(icons/Facility/AssemblyStation/@(building.Key).png)"
 					@onmouseover="() => { HoveredBuilding = building.Value; BuildingInfoboxVisibility = true; }" @onmousemove="(e) => { MouseX = e.PageX; MouseY = e.PageY; }" 
 					@onmouseout="() => { HoveredBuilding = building.Value; BuildingInfoboxVisibility = false; }"
-					@onclick="() => SelectedBuilding = building.Key"></button>
+					@onclick="() => { SelectedBuilding = building.Key; SelectedUpgrade = (building.Value.BuildingUpgrades.Contains(SelectedUpgrade) ? SelectedUpgrade : string.Empty); }"></button>
 				foreach(string upgrade in building.Value.BuildingUpgrades)
 				{
 					<button class="assembly-building building-upgrade @(SelectedUpgrade == upgrade ? "button-disabled" : "")" 

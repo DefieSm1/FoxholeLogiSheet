@@ -321,7 +321,7 @@
         {
             "name": "Devitt Ironhide MK. IV",
             "category": "Light Tank",
-            "description": "The Ironhide Light Tank is similar to the Mk. III but reinforced with plates of heavt steel at the expense of speed and maneuverability.",
+            "description": "The Ironhide Light Tank is similar to the Mk. III but reinforced with plates of heavy steel at the expense of speed and maneuverability.",
             "damageType": "",
             "damageInfo": [ "" ],
             "ammoUsed": "40mm",
