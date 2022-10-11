@@ -1,0 +1,22 @@
+{
+    "AssemblyStation":
+    {
+        "name": "Light Vehicle Assembly Station",
+        "description": "A standard Assembly Station for production of essential vehicles and equipment. Construction will take time and may be halted if resources are depleted. Some projects require a base vehicle to be present on the Assembly Station before production can begin.",
+        "bmatCost": 0,
+        "cmatCost": 75,
+        "pcmatCost": 0,
+        "steelCost": 0,
+        "buildingUpgrades": [ "AssemblyStationMotorPool", "AssemblyStationRocket", "AssemblyStationField", "AssemblyStationTank", "AssemblyStationWeapons" ]
+    },
+    "AssemblyLarge":
+    {
+        "name": "Large Assembly Factory",
+        "description": "A large Assembly Station for production of advanced vehicles and equipment, such as tanks and trains. Construction will take time and may be halted if resources are depleted.",
+        "bmatCost": 0,
+        "cmatCost": 0,
+        "pcmatCost": 250,
+        "steelCost": 0,
+        "buildingUpgrades": [ "AssemblyLargeTrain", "AssemblyLargeHeavyTank" ]
+    }
+}
