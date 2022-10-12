@@ -5,6 +5,7 @@
 
 @inject HttpClient Http
 @inject NavigationManager NavManager
+@inject IJSRuntime JsRuntime
 @using FoxholeLogiSheet.Data
 
 <h1 class="production-header">@ProductionMode Calculator</h1>
@@ -33,7 +34,7 @@
                     continue;
                 <button class="btn production-item @(CheckIfDisabled(SelectedCategory, item.Key) ? "button-disabled" : "")" 
                 style="background-image: url(icons/ProductionIcons/@(ProductionData.GetProductionBuilding(SelectedCategory))/@(item.Key).png)"
-                @onmouseover="() => { HoveredItem = item.Value; InfoboxVisibility = true; InfoboxSimple = false; }" @onmousemove="(e) => { MouseX = e.PageX; MouseY = e.PageY; }" 
+                @onmouseover="() => { HoveredItem = item.Value; InfoboxVisibility = true; InfoboxSimple = false; }" 
                 @onmouseout="() => { HoveredItem = item.Value; InfoboxVisibility = false; }"
                 @onclick="() => SelectItem(SelectedCategory, item.Key)"
                 ></button>
@@ -65,7 +66,7 @@
                             {
                                 <button class="btn" style="background-image: url(icons/ProductionIcons/@(ProductionData.GetProductionBuilding(category))/@(outputCategory).png"
                                 @onmouseover="() => { HoveredItem = ProductionData.GetCategoryData(category)[outputCategory]; InfoboxVisibility = true; InfoboxSimple = true; }" 
-                                @onmousemove="(e) => { MouseX = e.PageX - 450; MouseY = e.PageY; InfoboxVisibility = true; }"
+                                @onmousemove="() => InfoboxVisibility = true"
                                 @onmouseout="() => { HoveredItem = ProductionData.GetCategoryData(category)[outputCategory]; InfoboxVisibility = false; }"
                                 @onclick="() => { SelectedItems[category].RemoveAt(SelectedItems[category].IndexOf(outputCategory)); InfoboxVisibility = false; }"></button>
                             }
@@ -135,7 +136,7 @@
     </div>
 </div>
 
-<ItemInfobox Item=@HoveredItem SelectedCategory=@SelectedCategory Visibility=@InfoboxVisibility Simplified=@InfoboxSimple MouseX=@MouseX MouseY=@MouseY></ItemInfobox>
+<ItemInfobox Item=@HoveredItem SelectedCategory=@SelectedCategory Visibility=@InfoboxVisibility Simplified=@InfoboxSimple></ItemInfobox>
 
 @code {
 
@@ -161,12 +162,10 @@
 
     public bool InfoboxSimple { get; set; }
 
-    public double MouseX { get; set; }
-
-    public double MouseY { get; set; }
-
     protected override async Task OnInitializedAsync()
     {
+        await JsRuntime.InvokeVoidAsync("startInfoboxTracking");
+
         NavManager.NavigateTo("factory");
 
         ProductionData = await Http.GetFromJsonAsync<ProductionItemCategories>("data/ProductionData.json") ?? throw new FileNotFoundException();

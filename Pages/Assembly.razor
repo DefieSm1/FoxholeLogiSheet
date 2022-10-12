@@ -3,6 +3,7 @@
 <PageTitle>Assembly Calculator</PageTitle>
 
 @inject HttpClient Http
+@inject IJSRuntime JsRuntime
 @using FoxholeLogiSheet.Data
 
 <h1 class="assembly-header">Assembly Station Calculator</h1>
@@ -13,16 +14,16 @@
 			{
 				<button class="assembly-building building-base @(SelectedBuilding == building.Key ? "button-disabled" : "")" 
 				style="background-image: url(icons/Facility/AssemblyStation/@(building.Key).png)"
-					@onmouseover="() => { HoveredBuilding = building.Value; BuildingInfoboxVisibility = true; }" @onmousemove="(e) => { MouseX = e.PageX; MouseY = e.PageY; }" 
+					@onmouseover="() => { HoveredBuilding = building.Value; BuildingInfoboxVisibility = true; InfoboxSimple = false; }"
 					@onmouseout="() => { HoveredBuilding = building.Value; BuildingInfoboxVisibility = false; }"
 					@onclick="() => { SelectedBuilding = building.Key; SelectedUpgrade = (building.Value.BuildingUpgrades.Contains(SelectedUpgrade) ? SelectedUpgrade : string.Empty); }"></button>
 				foreach(string upgrade in building.Value.BuildingUpgrades)
 				{
 					<button class="assembly-building building-upgrade @(SelectedUpgrade == upgrade ? "button-disabled" : "")" 
 					style="background-image: url(icons/Facility/AssemblyStation/@(upgrade).png)"
-					@onmouseover="() => { HoveredBuilding = AssemblyUpgrades[upgrade]; BuildingInfoboxVisibility = true; }" @onmousemove="(e) => { MouseX = e.PageX; MouseY = e.PageY; }"
+					@onmouseover="() => { HoveredBuilding = AssemblyUpgrades[upgrade]; BuildingInfoboxVisibility = true; InfoboxSimple = false; }"
 					@onmouseout="() => { HoveredBuilding = AssemblyUpgrades[upgrade]; BuildingInfoboxVisibility = false; }"
-					@onclick="() => { SelectedBuilding = building.Key; SelectedUpgrade = upgrade; BuildingInfoboxVisibility = false; StateHasChanged(); }"></button>
+					@onclick="() => { SelectedBuilding = building.Key; SelectedUpgrade = upgrade; BuildingInfoboxVisibility = false; }"></button>
 				}
 			}
 		</div>
@@ -37,7 +38,7 @@
 				{
 					<button class="btn vehicle-button"
 					style="background-image: url(icons/AssemblyStation/@(item.Key).png)"
-					@onmouseover="() => { HoveredItem = item.Value; ItemInfoboxVisibility = true; }" @onmousemove="(e) => { MouseX = e.PageX; MouseY = e.PageY; }"
+                    @onmouseover="() => { HoveredItem = item.Value; ItemInfoboxVisibility = true; InfoboxSimple = false;; }"
 					@onmouseout="() => { HoveredItem = item.Value; ItemInfoboxVisibility = false; }"
                     @onclick="() => SelectedVehicles[SelectedBuilding].Add(item.Key)"></button>
 				}
@@ -52,7 +53,6 @@
 					<button class="btn vehicle-button"
 					style="background-image: url(icons/AssemblyStation/@(item.Key).png)"
 					@onmouseover="() => { HoveredItem = item.Value; ItemInfoboxVisibility = true; InfoboxSimple = false; }" 
-                    @onmousemove="(e) => { MouseX = e.PageX; MouseY = e.PageY; }"
 					@onmouseout="() => { HoveredItem = item.Value; ItemInfoboxVisibility = false; }"
                     @onclick="() => SelectedVehicles[SelectedUpgrade].Add(item.Key)"></button>
 				}
@@ -83,7 +83,7 @@
                                 {
                                     <button class="btn" style="background-image: url(icons/AssemblyStation/@(vehicle).png"
                                     @onmouseover="() => { HoveredItem = AssemblyVehicles.GetBuildingVehicles(building)[vehicle]; ItemInfoboxVisibility = true; InfoboxSimple = true; }"
-                                    @onmousemove="(e) => { MouseX = e.PageX - 450; MouseY = e.PageY + 200; ItemInfoboxVisibility = true; }" 
+                                    @onmousemove="() => ItemInfoboxVisibility = true" 
                                     @onmouseout="() => { HoveredItem = AssemblyVehicles.GetBuildingVehicles(building)[vehicle]; ItemInfoboxVisibility = false; }"
                                     @onclick="() => { SelectedVehicles[building].RemoveAt(SelectedVehicles[building].IndexOf(vehicle)); ItemInfoboxVisibility = false; }"></button>
                                 }
@@ -175,8 +175,8 @@
     </div>
 </div>
 
-<FacilityInfobox Building=@HoveredBuilding Visibility=@BuildingInfoboxVisibility MouseX=@MouseX MouseY=MouseY></FacilityInfobox>
-<ItemInfobox Item=@HoveredItem SelectedCategory="Assembly" Visibility=@ItemInfoboxVisibility Simplified=@InfoboxSimple MouseX=@MouseX MouseY=@MouseY MouseYModifier="1.8"></ItemInfobox>
+<FacilityInfobox Building=@HoveredBuilding Visibility=@BuildingInfoboxVisibility></FacilityInfobox>
+<ItemInfobox Item=@HoveredItem SelectedCategory="Assembly" Visibility=@ItemInfoboxVisibility Simplified=@InfoboxSimple></ItemInfobox>
 
 
 @code {
@@ -202,12 +202,10 @@
 
     public bool InfoboxSimple { get; set; }
 
-    public double MouseX { get; set; }
-
-    public double MouseY { get; set; }
-
     protected override async Task OnInitializedAsync()
     {
+        await JsRuntime.InvokeVoidAsync("startInfoboxTracking");
+
         AssemblyBuildings = await Http.GetFromJsonAsync<Dictionary<string, FacilityBuilding>>("data/AssemblyStation/AssemblyBuildingData.json") ?? throw new FileNotFoundException();
 
         AssemblyUpgrades = await Http.GetFromJsonAsync<Dictionary<string, FacilityBuilding>>("data/AssemblyStation/AssemblyUpgradeData.json") ?? throw new FileNotFoundException();

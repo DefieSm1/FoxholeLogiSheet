@@ -1,6 +1,6 @@
 ﻿@using FoxholeLogiSheet.Data
 
-<div class="building-infobox d-@(Visibility ? "block" : "none")" style="left: @(MouseX+20)px; top: @(Math.Ceiling(MouseY/1.5)+5)px">
+<div class="building-infobox d-@(Visibility ? "block" : "none")">
 	<div class="infobox-header">
 		<p>@Building.Name</p>
 	</div>
@@ -37,10 +37,4 @@
 
 	[Parameter]
 	public bool Visibility { get; set; } = false;
-
-	[Parameter]
-	public double MouseX { get; set; } = 0;
-
-	[Parameter]
-	public double MouseY { get; set; } = 0;
 }
