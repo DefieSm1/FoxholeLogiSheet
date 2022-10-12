@@ -363,7 +363,7 @@
             "steelCost": 0,
             "assmatCost": [ 10, 0, 0, 8, 0 ],
             "baseVehicle": "",
-            "productionTime": 0
+            "productionTime": 420
         },
         "CruiserTankHighwayman":
         {
@@ -406,15 +406,15 @@
             "category": "Field Gun",
             "description": "This robust field cannon not only allows infantry to fire heavy 75mm shells with ease, but it provides state-of-the-art curved blast shielding for maximum protection from crossfire.",
             "damageType": "",
-            "damageInfo": [ "THIS VEHICLES STATS ARE INCOMPLETE UNTIL I'LL BE ABLE TO FIND ITS TOOLTIP INGAME" ],
+            "damageInfo": [ "" ],
             "ammoUsed": "75mm",
             "bmatCost": 0,
             "cmatCost": 0,
             "pcmatCost": 0,
-            "steelCost": 0,
-            "assmatCost": [ 0, 0, 0, 0, 0 ],
-            "baseVehicle": "",
-            "productionTime": 0
+            "steelCost": 15,
+            "assmatCost": [ 0, 20, 15, 0, 0 ],
+            "baseVehicle": "Balfour Wolfhound 40mm (Field Cannon)",
+            "productionTime": 420
         },
         "CruiserTankThornfall":
         {
@@ -422,15 +422,15 @@
             "category": "Cruiser Tank",
             "description": "Armed with a rack of Bonesaw mortar launchers, the Thornfall is designed to launch an indirect mechanized assault on enemy armour. This unique vehicle supports an allied assault and cannot withstand large amounts of punishment.",
             "damageType": "Armour Piercing",
-            "damageInfo": [ "Engine can be boosted for increased top speed", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles", "Additional 100% chance to penetrate armoured vehicles", "THIS VEHICLES STATS ARE INCOMPLETE UNTIL I'LL BE ABLE TO FIND ITS TOOLTIP INGAME" ],
+            "damageInfo": [ "Engine can be boosted for increased top speed", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles", "Additional 100% chance to penetrate armoured vehicles" ],
             "ammoUsed": "ARC/RPG, 12.7mm",
             "bmatCost": 0,
             "cmatCost": 0,
             "pcmatCost": 0,
-            "steelCost": 0,
-            "assmatCost": [ 0, 0, 0, 0, 0 ],
+            "steelCost": 10,
+            "assmatCost": [ 0, 10, 0, 15, 0 ],
             "baseVehicle": "Gallagher Outlaw Mk. II (Cruiser Tank)",
-            "productionTime": 0
+            "productionTime": 600
         }
     },
     "AssemblyLarge": 
@@ -508,15 +508,15 @@
             "category": "Combat Car",
             "description": "In his later years, O'Brien nearly died in an attack on a military passenger train while travelling to Whedon's Row. In response, he put his team to work designing not only an infantry car that offered powerful protection to any locomotive, but one that just the sight of it would run off all but the most committed of attackers—Namely its thick armour plating and powerful twin turrets.",
             "damageType": "",
-            "damageInfo": [ "THIS VEHICLES STATS ARE INCOMPLETE UNTIL I'LL BE ABLE TO FIND ITS TOOLTIP INGAME" ],
-            "ammoUsed": "",
+            "damageInfo": [ "" ],
+            "ammoUsed": "40mm",
             "bmatCost": 0,
             "cmatCost": 0,
             "pcmatCost": 0,
-            "steelCost": 0,
-            "assmatCost": [ 0, 0, 0, 0, 0 ],
+            "steelCost": 30,
+            "assmatCost": [ 30, 0, 0, 30, 0 ],
             "baseVehicle": "",
-            "productionTime": 0
+            "productionTime": 1800
         },
         "WideGaugeRailwayGun":
         {
@@ -524,15 +524,15 @@
             "category": "Long-Range Artillery Car",
             "description": "All the power of a stationary Storm Cannon, but easily relocated via rails. This devastating cannon is capable of leveling enemy fortifications at very large distances.",
             "damageType": "",
-            "damageInfo": [ "THIS VEHICLES STATS ARE INCOMPLETE UNTIL I'LL BE ABLE TO FIND ITS TOOLTIP INGAME" ],
+            "damageInfo": [ "CHOO-CHOO MOTHER******" ],
             "ammoUsed": "300mm",
             "bmatCost": 0,
             "cmatCost": 0,
             "pcmatCost": 0,
-            "steelCost": 0,
-            "assmatCost": [ 0, 0, 0, 0, 0 ],
+            "steelCost": 285,
+            "assmatCost": [ 0, 95, 0, 105, 175 ],
             "baseVehicle": "",
-            "productionTime": 0
+            "productionTime": 259200
         }
     },
     "AssemblyLargeHeavyTank":
@@ -543,15 +543,15 @@
             "category": "Super Tank",
             "description": "This gargantuan beast is the brainchild of Gray Cullen. Once thought impossible, the Predator was Cullen's idea of how a great ship might operate on land. It boasts two sets of quad-barrelled grenade launches and a heavy-duty 94.5mm forward facing cannon. While limitations of ground-based travel posed certain restrictions on the scope of the project, Cullen wasn't deterred and made necessary adjustments to meet his vision of the ideal land ship.",
             "damageType": "",
-            "damageInfo": [ "THIS VEHICLES STATS ARE INCOMPLETE UNTIL I'LL BE ABLE TO FIND ITS TOOLTIP INGAME" ],
+            "damageInfo": [ "" ],
             "ammoUsed": "94.5mm, Green Ash Grenade, Tremola Grenade GPb-1, PT-815 Smoke Grenade, A3 Harpa Fragmentation Grenade",
             "bmatCost": 0,
             "cmatCost": 0,
             "pcmatCost": 0,
-            "steelCost": 0,
-            "assmatCost": [ 0, 0, 0, 0, 0 ],
+            "steelCost": 275,
+            "assmatCost": [ 0, 105, 0, 95, 175 ],
             "baseVehicle": "",
-            "productionTime": 0
+            "productionTime": 172800
         },
         "BattleTank":
         {
@@ -559,15 +559,15 @@
             "category": "Battle Tank",
             "description": "A heavy-duty Battle Tank with thick armour plating and destructive firepower. The Flood is fitted with a 75mm turret and a front-facing 12.7mm anti-infantry machine gun. The heavy armour limits top speed, but in exchange it can take a lot of punishment.",
             "damageType": "",
-            "damageInfo": [ "THIS VEHICLES STATS ARE INCOMPLETE UNTIL I'LL BE ABLE TO FIND ITS TOOLTIP INGAME" ],
+            "damageInfo": [ "" ],
             "ammoUsed": "75mm",
             "bmatCost": 0,
             "cmatCost": 0,
             "pcmatCost": 0,
-            "steelCost": 0,
-            "assmatCost": [ 0, 0, 0, 0, 0 ],
+            "steelCost": 50,
+            "assmatCost": [ 0, 30, 0, 60, 35 ],
             "baseVehicle": "",
-            "productionTime": 0
+            "productionTime": 86400
         }
     }
 }
