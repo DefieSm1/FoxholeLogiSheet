@@ -567,7 +567,7 @@
             "steelCost": 50,
             "assmatCost": [ 0, 30, 0, 60, 35 ],
             "baseVehicle": "",
-            "productionTime": 86400
+            "productionTime": 64800
         }
     }
 }

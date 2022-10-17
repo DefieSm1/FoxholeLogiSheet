@@ -1,0 +1,237 @@
+﻿@page "/facility"
+
+<PageTitle>Facility Sheet</PageTitle>
+
+@inject HttpClient Http
+@inject IJSRuntime JsRuntime
+@using FoxholeLogiSheet.Data
+
+<h1 class="facility-header">Facility Sheet</h1>
+<div class="building-select">
+	<div class="building-select-header"><p>SELECT STRUCTURE</p></div>
+	<div class="building-select-buttons">
+		@foreach(KeyValuePair<string, FacilityBuilding> building in FacilityBuildingData) 
+		{
+			<button class="facility-building building-base @(SelectedBuilding == building.Key ? "button-disabled" : "")" 
+			style="background-image: url(icons/Facility/@(building.Key).png)"
+				@onmouseover="() => { HoveredBuilding = building.Value; BuildingInfoboxVisibility = true; }"
+				@onmouseout="() => { HoveredBuilding = building.Value; BuildingInfoboxVisibility = false; }"
+				@onclick="() => { SelectedBuilding = building.Key; SelectedUpgrade = String.Empty; ResetMultipliers(); }"></button>
+		}
+	</div>
+</div>
+<div class="facility-container">
+	<div class="recipe-list">
+		@if(SelectedBuilding != "") 
+		{
+			<div class="recipe-header"><p>@FacilityBuildingData[SelectedBuilding].Name!.ToUpper()</p></div>
+			<div class="facility-recipes">
+				@foreach(var recipe in FacilityRecipes[SelectedBuilding].Select((value, index) => new {value, index}))
+				{
+					<div class="facility-recipe">
+						<div class="recipe-item-info">
+							@if (recipe.value.InputNames.Count() == recipe.value.InputAmounts.Count() && recipe.value.InputNames[0] != "")
+							{
+								@foreach (var item in recipe.value.InputNames.Select((value, index) => new { value, index })) 
+								{
+									<button class="inputItem" style="background-image: url(icons/Facility/@(item.value).png)"
+											@onmouseover="() => { HoveredItem = FacilityItems[item.value]; ItemInfoboxVisibility = true; }"
+											@onmouseout="() => { HoveredItem = FacilityItems[item.value]; ItemInfoboxVisibility = false; }">
+										@(recipe.value.InputAmounts[item.index] * BuildingMultipliers[recipe.index])@(FacilityItems[recipe.value.InputNames[item.index]].IsLiquid ? "L" : "")
+									</button>
+								}
+							}
+
+							<div class="recipe-info">
+								<p><span class="power-icon"></span>@(recipe.value.PowerConsumption < 0 ? recipe.value.PowerConsumption * -1 : "-" + recipe.value.PowerConsumption) MW</p>
+								@if (recipe.value.OutputNames[0] != "")
+								{
+									<img src="icons/ProductionArrow.png"/>
+								}
+								<span class="recipe-time"> @* The reason for these weirdly placed linebreaks is so it's more readable without HTML adding a space between the bits *@
+									@(recipe.value.ProductionTime * BuildingMultipliers[recipe.index] / 3600):@(
+									  recipe.value.ProductionTime * BuildingMultipliers[recipe.index] % 3600 / 60 < 10 ? "0" + recipe.value.ProductionTime * BuildingMultipliers[recipe.index] % 3600 / 60 : recipe.value.ProductionTime * BuildingMultipliers[recipe.index] % 3600 / 60):@(
+									  recipe.value.ProductionTime * BuildingMultipliers[recipe.index] % 3600 % 60 < 10 ? "0" + recipe.value.ProductionTime * BuildingMultipliers[recipe.index] % 3600 % 60 : recipe.value.ProductionTime * BuildingMultipliers[recipe.index] % 3600 % 60)
+								</span>
+							</div>
+
+							@if (recipe.value.OutputNames.Count() == recipe.value.OutputAmounts.Count() && recipe.value.OutputNames[0] != "")
+							{
+								@foreach (var item in recipe.value.OutputNames.Select((value, index) => new { value, index })) 
+								{
+									<button class="inputItem" style="background-image: url(icons/Facility/@(item.value).png)"
+											@onmouseover="() => { HoveredItem = FacilityItems[item.value]; ItemInfoboxVisibility = true; }"
+											@onmouseout="() => { HoveredItem = FacilityItems[item.value]; ItemInfoboxVisibility = false; }">
+										@(recipe.value.OutputAmounts[item.index] * BuildingMultipliers[recipe.index])@(FacilityItems[recipe.value.OutputNames[item.index]].IsLiquid ? "L" : "")
+									</button>
+								}
+							}
+
+							<div class="recipe-multiplier">
+								<input type="number" min="1" value="@BuildingMultipliers[recipe.index]" @onchange="(e) => MultiplierChange(e.Value.ToString(), recipe.index)" />
+							</div>
+						</div>
+					</div>
+				}
+			</div>
+		}
+		@if(SelectedUpgrade != "") 
+		{
+			<div class="recipe-header"><p>@FacilityUpgrades[SelectedUpgrade].Name!.ToUpper()</p></div>
+			<div class="facility-recipes">
+				@foreach (var recipe in FacilityRecipes[SelectedUpgrade].Select((value, index) => new { value, index }))
+				{
+					<div class="facility-recipe">
+						<div class="recipe-item-info">
+							@if (recipe.value.InputNames.Count() == recipe.value.InputAmounts.Count() && recipe.value.InputNames[0] != "")
+							{
+								@foreach (var item in recipe.value.InputNames.Select((value, index) => new { value, index })) 
+								{
+									<button class="inputItem" style="background-image: url(icons/Facility/@(item.value).png)"
+											@onmouseover="() => { HoveredItem = FacilityItems[item.value]; ItemInfoboxVisibility = true; }"
+											@onmouseout="() => { HoveredItem = FacilityItems[item.value]; ItemInfoboxVisibility = false; }">
+										@(recipe.value.InputAmounts[item.index] * UpgradeMulitpliers[recipe.index])@(FacilityItems[recipe.value.InputNames[item.index]].IsLiquid ? "L" : "")
+									</button>
+								}
+							}
+
+							<div class="recipe-info">
+								<p><span class="power-icon"></span>@(recipe.value.PowerConsumption < 0 ? recipe.value.PowerConsumption * -1 : "-" + recipe.value.PowerConsumption) MW</p>
+								@if (recipe.value.OutputNames[0] != "")
+								{
+									<img src="icons/ProductionArrow.png"/>
+								}
+								<span class="recipe-time"> @* The reason for these weirdly placed linebreaks is so it's more readable without HTML adding a space between the bits *@
+									@(recipe.value.ProductionTime * UpgradeMulitpliers[recipe.index] / 3600):@(
+									  recipe.value.ProductionTime * UpgradeMulitpliers[recipe.index] % 3600 / 60 < 10 ? "0" + recipe.value.ProductionTime * UpgradeMulitpliers[recipe.index] % 3600 / 60 : recipe.value.ProductionTime * UpgradeMulitpliers[recipe.index] % 3600 / 60):@(
+									  recipe.value.ProductionTime * UpgradeMulitpliers[recipe.index] % 3600 % 60 < 10 ? "0" + recipe.value.ProductionTime * UpgradeMulitpliers[recipe.index] % 3600 % 60 : recipe.value.ProductionTime * UpgradeMulitpliers[recipe.index] % 3600 % 60)
+								</span>
+							</div>
+
+							@if (recipe.value.OutputNames.Count() == recipe.value.OutputAmounts.Count() && recipe.value.OutputNames[0] != "")
+							{
+								@foreach (var item in recipe.value.OutputNames.Select((value, index) => new { value, index })) 
+								{
+									<button class="inputItem" style="background-image: url(icons/Facility/@(item.value).png)"
+											@onmouseover="() => { HoveredItem = FacilityItems[item.value]; ItemInfoboxVisibility = true; }"
+											@onmouseout="() => { HoveredItem = FacilityItems[item.value]; ItemInfoboxVisibility = false; }">
+										@(recipe.value.OutputAmounts[item.index] * UpgradeMulitpliers[recipe.index])@(FacilityItems[recipe.value.OutputNames[item.index]].IsLiquid ? "L" : "")
+									</button>
+								}
+							}
+
+							<div class="recipe-multiplier">
+								<input type="number" min="1" value="@UpgradeMulitpliers[recipe.index]" @onchange="(e) => MultiplierChange(e.Value.ToString(), recipe.index, true)" />
+							</div>
+						</div>
+					</div>
+				}
+			</div>
+		}
+	</div>
+	@if (SelectedBuilding != "" && FacilityBuildingData[SelectedBuilding].BuildingUpgrades[0] != "")
+	{
+		<div class="upgrade-select">
+			<div class="upgrade-select-header"><p>UPGRADES</p></div>
+			<div class="upgrade-select-buttons">
+			@foreach(string upgrade in FacilityBuildingData[SelectedBuilding].BuildingUpgrades) 
+			{
+					<button class="building-upgrade @(SelectedUpgrade == upgrade ? "button-disabled" : "")"
+					style="background-image: url(icons/Facility/@(upgrade).png)"
+					@onmouseover="() => { HoveredBuilding = FacilityUpgrades[upgrade]; BuildingInfoboxVisibility = true; }"
+					@onmouseout="() => { HoveredBuilding = FacilityUpgrades[upgrade]; BuildingInfoboxVisibility = false; }"
+					@onclick="() => { SelectedUpgrade = upgrade; BuildingInfoboxVisibility = false; ResetMultipliers(); }"></button>
+			}
+		</div>
+		</div>
+	}
+</div>
+
+<FacilityInfobox Building=@HoveredBuilding Visibility=@BuildingInfoboxVisibility />
+<ItemInfobox Item=@HoveredItem SelectedCategory="Facility" Visibility=@ItemInfoboxVisibility />
+
+@code {
+	public Dictionary<string, FacilityBuilding> FacilityBuildingData = new();
+
+	public Dictionary<string, FacilityBuilding> FacilityUpgrades = new();
+
+	public Dictionary<string, List<FacilityRecipe>> FacilityRecipes = new();
+
+	public Dictionary<string, ProductionItem> FacilityItems = new();
+
+	public List<int> BuildingMultipliers = new();
+
+	public List<int> UpgradeMulitpliers = new();
+
+	const int maxRecipies = 10; // Maximum possible amount of recipes in a building + it's upgrades
+
+	public FacilityBuilding HoveredBuilding { get; set; } = new();
+
+	public string SelectedBuilding { get; set; } = "";
+
+	public string SelectedUpgrade { get; set; } = "";
+
+	public ProductionItem HoveredItem { get; set; } = new();
+
+	public bool BuildingInfoboxVisibility { get; set; }
+
+	public bool ItemInfoboxVisibility { get; set; }
+
+	protected override async Task OnInitializedAsync()
+	{
+		await JsRuntime.InvokeVoidAsync("startInfoboxTracking");
+
+		FacilityBuildingData = await Http.GetFromJsonAsync<Dictionary<string, FacilityBuilding>>("data/Facility/FacilityBuildingData.json") ?? throw new FileNotFoundException();
+
+		FacilityUpgrades = await Http.GetFromJsonAsync<Dictionary<string, FacilityBuilding>>("data/Facility/FacilityUpgradeData.json") ?? throw new FileNotFoundException();
+
+		FacilityRecipes = await Http.GetFromJsonAsync<Dictionary<string, List<FacilityRecipe>>>("data/Facility/FacilityRecipeData.json") ?? throw new FileNotFoundException();
+
+		FacilityItems = await Http.GetFromJsonAsync<Dictionary<string, ProductionItem>>("data/Facility/FacillityItemData.json") ?? throw new FileNotFoundException();
+
+		// Default Parameters
+		SelectedBuilding = "MaterialsFactory";
+
+		SelectedUpgrade = "";
+
+		HoveredItem = FacilityItems["MaterialBasic"];
+
+		ResetMultipliers();
+	}
+
+	public void ResetMultipliers()
+	{
+		BuildingMultipliers = new();
+		UpgradeMulitpliers = new();
+		for (int i = 0; i < maxRecipies; i++) {
+			BuildingMultipliers.Add(1);
+			UpgradeMulitpliers.Add(1);
+		}
+	}
+
+	public void MultiplierChange(string input, int itemIndex, bool upgrade = false) 
+	{
+		int newNumber;
+
+		if(!Int32.TryParse(input, out newNumber))
+			if (upgrade)
+				UpgradeMulitpliers[itemIndex] = 1;
+			else
+				BuildingMultipliers[itemIndex] = 1;
+
+		if(upgrade) 
+		{
+			if (newNumber < 1)
+				UpgradeMulitpliers[itemIndex] = 1;
+			else
+				UpgradeMulitpliers[itemIndex] = newNumber;
+		}
+		else 
+		{
+			if (newNumber < 1)
+				BuildingMultipliers[itemIndex] = 1;
+			else
+				BuildingMultipliers[itemIndex] = newNumber;
+		}
+	}
+}

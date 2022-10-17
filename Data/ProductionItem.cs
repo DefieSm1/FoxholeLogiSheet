@@ -10,7 +10,7 @@
 
         public string? DamageType { get; set; }
 
-        public string[]? DamageInfo { get; set; }
+        public List<string>? DamageInfo { get; set; }
 
         public string? AmmoUsed { get; set; }
 
@@ -26,6 +26,9 @@
 
         public int HematCost { get; set; }
 
+        // Facility Variables
+
+        public bool IsLiquid { get; set; }
 
         // Assembly Station Variables
 
@@ -35,7 +38,7 @@
 
         public int SteelCost { get; set; }
 
-        public int[] AssmatCost { get; set; }
+        public List<int> AssmatCost { get; set; }
 
         public string BaseVehicle { get; set; }
 
@@ -47,7 +50,7 @@
             Category = "";
             Description = "";
             DamageType = "";
-            DamageInfo = new string[] { "" };
+            DamageInfo = new List<string> { "" };
             AmmoUsed = "";
             CanMPF = true;
             CrateSize = 0;
@@ -56,10 +59,12 @@
             EmatCost = 0;
             HematCost = 0;
 
+            IsLiquid = false;
+
             CmatCost = 0;
             PCmatCost = 0;
             SteelCost = 0;
-            AssmatCost = new int[5];
+            AssmatCost = new List<int> { 0, 0, 0, 0, 0 };
             BaseVehicle = "";
             ProductionTime = 0;
         }

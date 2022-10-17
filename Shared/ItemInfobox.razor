@@ -26,9 +26,11 @@
 			{
 				<p class="item-damageinfo">Requires base vehicle: @Item.BaseVehicle</p>
 			}
-			@if (SelectedCategory == "Assembly")
-			{
-				<p class="item-damageinfo">@(Item.ProductionTime / 3600):@(Item.ProductionTime % 3600 / 60 < 10 ? "0" + Item.ProductionTime % 3600 / 60 : Item.ProductionTime % 3600 / 60):@(Item.ProductionTime % 3600 % 60 < 10 ? "0" + Item.ProductionTime % 3600 % 60 : Item.ProductionTime % 3600 % 60)</p>
+			@if (SelectedCategory == "Assembly") @* The reason for these weirdly placed linebreaks is so it's more readable without HTML adding a space between the bits *@
+			{ 
+				<p class="item-damageinfo">@(Item.ProductionTime / 3600):@(
+					Item.ProductionTime % 3600 / 60 < 10 ? "0" + Item.ProductionTime % 3600 / 60 : Item.ProductionTime % 3600 / 60):@(
+						Item.ProductionTime % 3600 % 60 < 10 ? "0" + Item.ProductionTime % 3600 % 60 : Item.ProductionTime % 3600 % 60)</p>
 			}
 			<div class="item-costs">
 				<div class="@(Item.BmatCost > 0 ? "" : "d-none")">

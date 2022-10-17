@@ -1,33 +1,33 @@
 ﻿@page "/assembly"
 
-<PageTitle>Assembly Calculator</PageTitle>
+<PageTitle>Assembly Sheet</PageTitle>
 
 @inject HttpClient Http
 @inject IJSRuntime JsRuntime
 @using FoxholeLogiSheet.Data
 
 <h1 class="assembly-header">Assembly Station Calculator</h1>
-	<div class="building-select">
-		<div class="building-select-header"><p>SELECT STRUCTURE</p></div>
-		<div class="building-select-buttons">
-			@foreach(KeyValuePair<string, FacilityBuilding> building in AssemblyBuildings) 
+<div class="building-select">
+	<div class="building-select-header"><p>SELECT STRUCTURE</p></div>
+	<div class="building-select-buttons">
+		@foreach(KeyValuePair<string, FacilityBuilding> building in AssemblyBuildings) 
+		{
+			<button class="assembly-building building-base @(SelectedBuilding == building.Key ? "button-disabled" : "")" 
+			style="background-image: url(icons/Facility/AssemblyStation/@(building.Key).png)"
+				@onmouseover="() => { HoveredBuilding = building.Value; BuildingInfoboxVisibility = true; InfoboxSimple = false; }"
+				@onmouseout="() => { HoveredBuilding = building.Value; BuildingInfoboxVisibility = false; }"
+				@onclick="() => { SelectedBuilding = building.Key; SelectedUpgrade = (building.Value.BuildingUpgrades.Contains(SelectedUpgrade) ? SelectedUpgrade : string.Empty); }"></button>
+			foreach(string upgrade in building.Value.BuildingUpgrades)
 			{
-				<button class="assembly-building building-base @(SelectedBuilding == building.Key ? "button-disabled" : "")" 
-				style="background-image: url(icons/Facility/AssemblyStation/@(building.Key).png)"
-					@onmouseover="() => { HoveredBuilding = building.Value; BuildingInfoboxVisibility = true; InfoboxSimple = false; }"
-					@onmouseout="() => { HoveredBuilding = building.Value; BuildingInfoboxVisibility = false; }"
-					@onclick="() => { SelectedBuilding = building.Key; SelectedUpgrade = (building.Value.BuildingUpgrades.Contains(SelectedUpgrade) ? SelectedUpgrade : string.Empty); }"></button>
-				foreach(string upgrade in building.Value.BuildingUpgrades)
-				{
-					<button class="assembly-building building-upgrade @(SelectedUpgrade == upgrade ? "button-disabled" : "")" 
-					style="background-image: url(icons/Facility/AssemblyStation/@(upgrade).png)"
-					@onmouseover="() => { HoveredBuilding = AssemblyUpgrades[upgrade]; BuildingInfoboxVisibility = true; InfoboxSimple = false; }"
-					@onmouseout="() => { HoveredBuilding = AssemblyUpgrades[upgrade]; BuildingInfoboxVisibility = false; }"
-					@onclick="() => { SelectedBuilding = building.Key; SelectedUpgrade = upgrade; BuildingInfoboxVisibility = false; }"></button>
-				}
+				<button class="assembly-building building-upgrade @(SelectedUpgrade == upgrade ? "button-disabled" : "")" 
+				style="background-image: url(icons/Facility/AssemblyStation/@(upgrade).png)"
+				@onmouseover="() => { HoveredBuilding = AssemblyUpgrades[upgrade]; BuildingInfoboxVisibility = true; InfoboxSimple = false; }"
+				@onmouseout="() => { HoveredBuilding = AssemblyUpgrades[upgrade]; BuildingInfoboxVisibility = false; }"
+				@onclick="() => { SelectedBuilding = building.Key; SelectedUpgrade = upgrade; BuildingInfoboxVisibility = false; }"></button>
 			}
-		</div>
+		}
 	</div>
+</div>
 <div class="assembly-container">
 	<div class="vehicle-select">
 		@if(SelectedBuilding != "") 
@@ -175,8 +175,8 @@
     </div>
 </div>
 
-<FacilityInfobox Building=@HoveredBuilding Visibility=@BuildingInfoboxVisibility></FacilityInfobox>
-<ItemInfobox Item=@HoveredItem SelectedCategory="Assembly" Visibility=@ItemInfoboxVisibility Simplified=@InfoboxSimple></ItemInfobox>
+<FacilityInfobox Building=@HoveredBuilding Visibility=@BuildingInfoboxVisibility />
+<ItemInfobox Item=@HoveredItem SelectedCategory="Assembly" Visibility=@ItemInfoboxVisibility Simplified=@InfoboxSimple />
 
 
 @code {

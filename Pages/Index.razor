@@ -1,7 +1,7 @@
 ﻿@page "/"
 @page "/factory"
 
-<PageTitle>@ProductionMode Calculator</PageTitle>
+<PageTitle>@ProductionMode Sheet</PageTitle>
 
 @inject HttpClient Http
 @inject NavigationManager NavManager
@@ -136,7 +136,7 @@
     </div>
 </div>
 
-<ItemInfobox Item=@HoveredItem SelectedCategory=@SelectedCategory Visibility=@InfoboxVisibility Simplified=@InfoboxSimple></ItemInfobox>
+<ItemInfobox Item=@HoveredItem SelectedCategory=@SelectedCategory Visibility=@InfoboxVisibility Simplified=@InfoboxSimple />
 
 @code {
 

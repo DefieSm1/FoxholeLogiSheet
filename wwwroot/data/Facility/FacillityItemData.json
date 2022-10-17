@@ -1,0 +1,343 @@
+{
+    "MaterialRawSalvage":
+    {
+        "name": "Salvage",
+        "category": "",
+        "description": "Salvage that can be recycled into other resources at a Refinery.",
+        "damageType": "",
+        "damageInfo": [ "" ],
+        "isLiquid": false
+    },
+    "MaterialRawComponents":
+    {
+        "name": "Components",
+        "category": "",
+        "description": "Components that can be salvaged into Refined Mateirals at a Refinery.",
+        "damageType": "",
+        "damageInfo": [ "" ],
+        "isLiquid": false
+    },
+    "MaterialRawComponentsDamaged":
+    {
+        "name": "Damaged Components",
+        "category": "",
+        "description": "Damaged Components that can be salvaged into Components.",
+        "damageType": "",
+        "damageInfo": [ "" ],
+        "isLiquid": false
+    },
+    "MaterialRawSulfur":
+    {
+        "name": "Sulfur",
+        "description": "Sulfur that can be refined into Heavy Explosive Materials at a Refinery.",
+        "damageType": "",
+        "damageInfo": [ "" ],
+        "isLiquid": false
+    },
+    "MaterialExplosive":
+    {
+        "name": "Explosive Materials",
+        "category": "",
+        "description": "Resource used for producing heavy explosive weapons.",
+        "damageType": "",
+        "damageInfo": [ "" ],
+        "isLiquid": false
+    },
+    "MaterialHeavyExplosive":
+    {
+        "name": "Heavy Explosive Materials",
+        "category": "",
+        "description": "Resource used for producing heavy explosive weapons.",
+        "damageType": "",
+        "damageInfo": [ "" ],
+        "isLiquid": false
+    },
+    "MaterialRawCoal":
+    {
+        "name": "Coal",
+        "category": "",
+        "description": "Chunks of raw Coal that can be refined into materials needed for production and power generation at Facilities.",
+        "damageType": "",
+        "damageInfo": [ "" ],
+        "isLiquid": false
+    },
+    "MaterialCoke":
+    {
+        "name": "Coke",
+        "category": "",
+        "description": "Refined Coal required for various Facility processes.",
+        "damageType": "",
+        "damageInfo": [ "" ],
+        "isLiquid": false
+    },
+    "MaterialBasic":
+    {
+        "name": "Basic Materials",
+        "category": "Resource used for building basic structures and producing itmes.",
+        "damageType": "",
+        "damageInfo": [ "" ],
+        "description": "",
+        "isLiquid": false
+    },
+    "MaterialConstruction":
+    {
+        "name": "Construction Materials",
+        "category": "",
+        "description": "Metal beams needed to produce basic structures and vehicles at Facilities.",
+        "damageType": "",
+        "damageInfo": [ "" ],
+        "isLiquid": false
+    },
+    "MaterialProcessedConstruction":
+    {
+        "name": "Processed Construction Materials",
+        "category": "Large Material",
+        "description": "Refined metal bars needed to produce advanced structures and vehicles at Facilities.",
+        "damageType": "",
+        "damageInfo": [ "" ],
+        "isLiquid": false
+    },
+    "MaterialSteel":
+    {
+        "name": "Steel Construction Materials",
+        "category": "Large Material",
+        "description": "Shaped, steel beams required for most advanced processes at Facilities.",
+        "damageType": "",
+        "damageInfo": [ "" ],
+        "isLiquid": false
+    },
+    "AssemblyMaterialsT1":
+    {
+        "name": "Assembly Materials I",
+        "category": "Large Material",
+        "description": "Specialized metal sheets forged using Coal that are required to assembly advanced vehicles and equipment.",
+        "damageType": "",
+        "damageInfo": [ "" ],
+        "isLiquid": false
+    },
+    "AssemblyMaterialsT2":
+    {
+        "name": "Assembly Materials II",
+        "category": "Large Material",
+        "description": "Specialized metal bars fortified with Petrol that are required to assemble advanced vehicles and equipment.",
+        "damageType": "",
+        "damageInfo": [ "" ],
+        "isLiquid": false
+    },
+    "AssemblyMaterialsT3":
+    {
+        "name": "Assembly Materials III",
+        "category": "Large Material",
+        "description": "Sufluer-enriched metallic bars that are required to assemble advanced vehicles and equipment.",
+        "damageType": "",
+        "damageInfo": [ "" ],
+        "isLiquid": false
+    },
+    "AssemblyMaterialsT4":
+    {
+        "name": "Assembly Materials IV",
+        "category": "Large Material",
+        "description": "High-end steel bars, fortified with Heavy Oil that are required to assemble advanced vehicles and equipment.",
+        "damageType": "",
+        "damageInfo": [ "" ],
+        "isLiquid": false
+    },
+    "AssemblyMaterialsT5":
+    {
+        "name": "Assembly Materials V",
+        "category": "Large Material",
+        "description": "Meticulously engineered alloy beams that are required to assemble advanced vehicles and equipment.",
+        "damageType": "",
+        "damageInfo": [ "" ],
+        "isLiquid": false
+    },
+    "MaterialDiesel":
+    {
+        "name": "Diesel",
+        "category": "",
+        "description": "Common fuel used to power all vehicles and resource mines.",
+        "damageType": "",
+        "damageInfo": [ "" ],
+        "isLiquid": true
+    },
+    "MaterialOilCrude":
+    {
+        "name": "Oil",
+        "category": "",
+        "description": "A raw viscous liquid that must be refined into fuel at Facilities.",
+        "damageType": "",
+        "damageInfo": [ "" ],
+        "isLiquid": true
+    },
+    "MaterialOilPetrol":
+    {
+        "name": "Petrol",
+        "category": "",
+        "description": "A medium grade fuel that's refined from Oil. Used as higher end fuel for vehicles and in various applications at Facilities.",
+        "damageType": "",
+        "damageInfo": [ "" ],
+        "isLiquid": true
+    },
+    "MaterialOilHeavy":
+    {
+        "name": "Heavy Oil",
+        "category": "",
+        "description": "A high grade fuel that's refined from Oil. Used in a variety of applications at Facilities.",
+        "damageType": "",
+        "damageInfo": [ "" ],
+        "isLiquid": true
+    },
+    "MaterialOilEnriched":
+    {
+        "name": "Enriched Oil",
+        "category": "",
+        "description": "Oil that has been purified and enriched for advanced Facilities processes.",
+        "damageType": "",
+        "damageInfo": [ "" ],
+        "isLiquid": true
+    },
+    "MaterialWater":
+    {
+        "name": "Water",
+        "category": "",
+        "description": "Water... in a can!",
+        "damageType": "",
+        "damageInfo": [ "" ],
+        "isLiquid": true
+    },
+    "UtilitySandbag":
+    {
+        "name": "Sandbag",
+        "category": "Large Material",
+        "description": "Used to construct Sandbag defenses.",
+        "damageType": "",
+        "damageInfo": [ "" ],
+        "isLiquid": false
+    },
+    "UtilityBarbedWire":
+    {
+        "name": "Barbed Wire",
+        "category": "Large Material",
+        "description": "Used to construct Barbed Wire defenses.",
+        "damageType": "",
+        "damageInfo": [ "" ],
+        "isLiquid": false
+    },
+    "UtilityMetalBeam":
+    {
+        "name": "Metal Beam",
+        "category": "Large Material",
+        "description": "Used to construct Barbed Metal Beam defenses.",
+        "damageType": "",
+        "damageInfo": [ "" ],
+        "isLiquid": false
+    },
+    "Pipe":
+    {
+        "name": "Pipe",
+        "category": "Large Material",
+        "description": "Used to construct various types of pipelines for transporting liquids.",
+        "damageType": "",
+        "damageInfo": [ "" ],
+        "isLiquid": false
+    },
+    "MaterialConcrete":
+    {
+        "name": "Concrete Materials",
+        "category": "",
+        "description": "A concrete compound that is used to build heavily fortified structures.",
+        "damageType": "",
+        "damageInfo": [ "" ],
+        "isLiquid": false
+    },
+    "AmmoFlame":
+    {
+        "name": "Flame Ammo",
+        "category": "",
+        "description": "A drum containing fuel for use with flame weapons.",
+        "damageType": "Incendiary",
+        "damageInfo": [ "This can be attached to certain vehicles" ],
+        "isLiquid": false
+    },
+    "AmmoShell250":
+    {
+        "name": "250mm",
+        "category": "",
+        "description": "A shell that is launched over short distances by a spigot mortart.",
+        "damageType": "Demolition",
+        "damageInfo": [ "Can ruin structures that have been severly damaged by artillery" ],
+        "isLiquid": false
+    },
+    "AmmoRocketHE":
+    {
+        "name": "3C-High Explosive Rocket",
+        "category": "",
+        "description": "Standard calibre rocket with a heavy explosive payload. Chance to ignite objects near impact.",
+        "damageType": "Incendiary",
+        "damageInfo": [ "Deals High Explosive damage on impact" ],
+        "isLiquid": false
+    },
+    "AmmoRocketFlame":
+    {
+        "name": "4C-Fire Rocket",
+        "category": "",
+        "description": "Standard calibre rocket with an incendiary explosion. Will ignite objects near impact.",
+        "damageType": "Incendiary",
+        "damageInfo": [ "Deals High Explosive damage on impact" ],
+        "isLiquid": false
+    },
+    "AmmoShell75":
+    {
+        "name": "75mm",
+        "category": "",
+        "description": "Standard payload for battle tanks.",
+        "damageType": "Explosive",
+        "damageInfo": [ "Can penetrate armoured vehicles", "Higher chance to penetrate armoured vehicles at direct angles (to the sides/rear of the target) and at close range", "High chance to penetrate armoured vehicles" ],
+        "isLiquid": false
+    },
+    "AmmoShell945":
+    {
+        "name": "94.5mm",
+        "category": "",
+        "description": "A heavy anti-tank shell",
+        "damageType": "Armour Piercing",
+        "damageInfo": [ "Can penetrate armoured vehicles", "Higher chance to penetrate armoured vehicles at direct angles (to the sides/rear of the target) and at close range", "High chance to penetrate armoured vehicles", "Higher base chance to disable vehicle subsystems" ],
+        "isLiquid": false
+    },
+    "AmmoShell300":
+    {
+        "name": "300mm",
+        "category": "",
+        "description": "Standard payload used with Storm Cannons.",
+        "damageType": "High Explosive",
+        "damageInfo": [ "Can ruin structures that have been severly damaged by artillery", "Reduced damage against Trenches" ],
+        "isLiquid": false
+    },
+    "AmmoShell120":
+    {
+        "name": "120mm",
+        "category": "",
+        "description": "Payload for light artillery weapons.",
+        "damageType": "High Explosive",
+        "damageInfo": [ "Can ruin structures that have been severly damaged by artillery", "Reduced damage against Trenches" ],
+        "isLiquid": false
+    },
+    "AmmoShell150":
+    {
+        "name": "150mm",
+        "category": "",
+        "description": "Payload for heavy artillery weapons.",
+        "damageType": "High Explosive",
+        "damageInfo": [ "Can ruin structures that have been severly damaged by artillery", "Reduced damage against Trenches" ],
+        "isLiquid": false
+    },
+    "SuppliesGarrison":
+    {
+        "name": "Garrison Supplies",
+        "category": "",
+        "description": "Supplies for maintaining structures. Store at Bases to prevent decay on surrounding structures.",
+        "damageType": "",
+        "damageInfo": [ "" ],
+        "isLiquid": false
+    }
+}
