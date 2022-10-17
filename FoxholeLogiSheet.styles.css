@@ -6,13 +6,6 @@
     font-size: 2.8rem;
 }
 
-.assembly-container[b-u5l6ycqe8q] {
-    width: 100%;
-    padding: 0 8vw;
-    display: flex;
-    justify-content: space-around;
-}
-
 .building-select[b-u5l6ycqe8q] {
     max-width: fit-content;
     margin: 0 auto 20px;
@@ -69,6 +62,13 @@
 .building-base[b-u5l6ycqe8q] {
     height: 90px;
     width: 90px;
+}
+
+.assembly-container[b-u5l6ycqe8q] {
+    width: 100%;
+    padding: 0 8vw;
+    display: flex;
+    justify-content: space-around;
 }
 
 .vehicle-select-header[b-u5l6ycqe8q] {
@@ -357,6 +357,289 @@
             display: none;
         }
     }
+}
+/* /Pages/Facility.razor.rz.scp.css */
+.facility-header[b-22iwbtwwcp] {
+    text-align: center;
+    color: whitesmoke;
+    margin-bottom: 1.2rem;
+    font-size: 2.8rem;
+}
+
+.facility-container[b-22iwbtwwcp] {
+    width: 100%;
+    padding: 0 8vw;
+    display: flex;
+    justify-content: center
+}
+
+.building-select[b-22iwbtwwcp] {
+    max-width: fit-content;
+    margin: 0 auto 20px;
+}
+
+.building-select-header[b-22iwbtwwcp] {
+    width: 100%;
+    height: 50px;
+    background-color: #7F7F7F;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+    .building-select-header > p[b-22iwbtwwcp] {
+        margin: 0;
+        color: whitesmoke;
+        font-weight: 400;
+        font-size: 1.2em;
+    }
+
+.building-select-buttons[b-22iwbtwwcp] {
+    padding: 6px 2px 0;
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+.facility-building[b-22iwbtwwcp] {
+    width: 100px;
+    height: 100px;
+    margin: 0 3px;
+    border: none;
+    outline: none !important;
+    border-radius: 0;
+    transition: none;
+    box-shadow: none;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #414241;
+}
+
+    .facility-building:hover[b-22iwbtwwcp] {
+        background-color: #7F7F7F;
+    }
+
+    .facility-building:disabled[b-22iwbtwwcp] {
+        opacity: .65;
+    }
+
+        .facility-building:disabled:hover[b-22iwbtwwcp] {
+            background-color: #414241;
+        }
+
+facility-container[b-22iwbtwwcp] {
+    width: 100%;
+    padding: 0 8vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.recipe-list[b-22iwbtwwcp] {
+    width: 750px;
+    height: fit-content;
+    margin-right: 10px;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: flex;
+    flex-direction: column;
+}
+
+.recipe-header[b-22iwbtwwcp] {
+    width: 100%;
+    height: 50px;
+    background-color: #7F7F7F;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+    .recipe-header > p[b-22iwbtwwcp] {
+        margin: 0;
+        color: whitesmoke;
+        font-weight: 400;
+        font-size: 1.2em;
+    }
+
+.facility-recipes[b-22iwbtwwcp] {
+    max-height: 250px;
+    padding: 8px;
+    display: grid;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow-y: auto;
+}
+
+.facility-recipe[b-22iwbtwwcp] {
+    padding: 12px;
+    background-color: #212121;
+}
+
+.recipe-item-info[b-22iwbtwwcp] {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+    .facility-recipe button[b-22iwbtwwcp] {
+        width: 80px;
+        aspect-ratio: 1;
+        outline: none !important;
+        border-radius: 0;
+        border-width: 0;
+        transition: none;
+        box-shadow: none;
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #414241;
+        cursor: default;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        color: whitesmoke;
+        font-size: 18px;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
+
+        .facility-recipes button:hover[b-22iwbtwwcp] {
+            background-color: #7F7F7F;
+        }
+
+.recipe-info[b-22iwbtwwcp] {
+    display: flex;
+    flex-direction: column;
+}
+
+    .recipe-info p[b-22iwbtwwcp] {
+        margin: 0;
+        height: fit-content;
+        color: #E5BA82;
+        text-align: center;
+    }
+
+    .recipe-info img[b-22iwbtwwcp] {
+        height: 40px;
+        width: auto;
+        margin: auto;
+    }
+
+.power-icon[b-22iwbtwwcp] {
+    height: 16px;
+    aspect-ratio: 1;
+    display: inline-block;
+    background-image: url(icons/ProductionPower.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.recipe-time[b-22iwbtwwcp] {
+    margin-top: auto;
+    color: #E5BA82;
+    text-align: center;
+}
+
+.recipe-multiplier[b-22iwbtwwcp] {
+    margin: auto 0 auto auto;
+    display: flex;
+    flex-direction: row;
+
+}
+
+    .recipe-multiplier > input[b-22iwbtwwcp] {
+        color: whitesmoke;
+        width: 120px;
+        text-align: right;
+        font-size: 40px;
+        background: none;
+        border: 1px dashed whitesmoke;
+    }
+
+.upgrade-select[b-22iwbtwwcp] {
+    max-width: fit-content;
+    max-height: max-content;
+    margin: 0 0 20px;
+}
+
+.upgrade-select-header[b-22iwbtwwcp] {
+    width: 100%;
+    height: 50px;
+    background-color: #7F7F7F;
+    display: flex;
+    align-items: center;
+    padding: 0 0.6rem;
+}
+
+    .upgrade-select-header > p[b-22iwbtwwcp] {
+        margin: 0;
+        color: whitesmoke;
+        font-weight: 400;
+        font-size: 1.2em;
+    }
+
+.upgrade-select-buttons[b-22iwbtwwcp] {
+    padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.95);
+    gap: 8px;
+}
+
+.building-upgrade[b-22iwbtwwcp] {
+    width: 100px;
+    height: 100px;
+    border: none;
+    outline: none !important;
+    border-radius: 0;
+    transition: none;
+    box-shadow: none;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #414241;
+}
+
+    .building-upgrade:hover[b-22iwbtwwcp] {
+        background-color: #7F7F7F;
+    }
+
+    .building-upgrade:disabled[b-22iwbtwwcp] {
+        opacity: .65;
+    }
+
+        .building-upgrade:disabled:hover[b-22iwbtwwcp] {
+            background-color: #414241;
+        }
+
+/* OTHER STUFF */
+
+.button-disabled[b-22iwbtwwcp] {
+    opacity: .65;
+}
+
+    .button-disabled:hover[b-22iwbtwwcp] {
+        background-color: #414241 !important;
+    }
+
+*[b-22iwbtwwcp]::-webkit-scrollbar {
+    display: block;
+    width: 12px;
+}
+
+*[b-22iwbtwwcp]::-webkit-scrollbar-button {
+    display: none;
+}
+
+*[b-22iwbtwwcp]::-webkit-scrollbar-track {
+    background-color: #00000000;
+}
+
+*[b-22iwbtwwcp]::-webkit-scrollbar-track-piece {
+    background-color: #00000000;
+}
+
+*[b-22iwbtwwcp]::-webkit-scrollbar-thumb {
+    background-color: #7F7F7F;
 }
 /* /Pages/Index.razor.rz.scp.css */
 .production-header[b-rz48f9patv] {

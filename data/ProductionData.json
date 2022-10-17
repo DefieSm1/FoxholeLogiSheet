@@ -1255,7 +1255,7 @@
             "category": "Warden Snow Uniform",
             "description": "Born and bred in the northern cold, this heavy parka protects Warden infantry from all but the worst blizzards.",
             "damageType": "",
-            "damageInfo": [ "6 backpack slots" , "Kinetic weapon light ammunition stacks", "High resistance to Snow Storms"],
+            "damageInfo": [ "6 backpack slots" , "Kinetic weapon light ammunition stacks", "High resistance to Snow Storms" ],
             "ammoUsed": "",
             "canMPF": true,
             "crateSize": 15,

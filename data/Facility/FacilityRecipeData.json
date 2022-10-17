@@ -1,0 +1,405 @@
+{
+    "MaterialsFactory":
+    [
+        {
+            "inputNames": [ "MaterialRawSalvage" ],
+            "inputAmounts": [ 10 ],
+            "outputNames": [ "MaterialConstruction" ],
+            "outputAmounts": [ 1 ],
+            "powerConsumption": 4,
+            "productionTime": 25
+        }
+    ],
+    "MaterialsFactoryForge":
+    [
+        {
+            "inputNames": [ "MaterialRawSalvage", "MaterialCoke" ],
+            "inputAmounts": [ 15, 75 ],
+            "outputNames": [ "AssemblyMaterialsT1" ],
+            "outputAmounts": [ 1 ],
+            "powerConsumption": 2,
+            "productionTime": 60
+        },
+        {
+            "inputNames": [ "MaterialRawSalvage", "MaterialOilPetrol" ],
+            "inputAmounts": [ 15, 50 ],
+            "outputNames": [ "AssemblyMaterialsT2" ],
+            "outputAmounts": [ 1 ],
+            "powerConsumption": 2,
+            "productionTime": 60
+        }
+    ],
+    "MaterialsFactoryMetalPress":
+    [
+        {
+            "inputNames": [ "MaterialRawSalvage", "MaterialOilPetrol" ],
+            "inputAmounts": [ 15, 25 ],
+            "outputNames": [ "MaterialConstruction" ],
+            "outputAmounts": [ 3 ],
+            "powerConsumption": 4,
+            "productionTime": 25
+        }
+    ],
+    "MaterialsFactorySmelter":
+    [
+        {
+            "inputNames": [ "MaterialRawSalvage", "MaterialCoke" ],
+            "inputAmounts": [ 15, 25 ],
+            "outputNames": [ "MaterialConstruction" ],
+            "outputAmounts": [ 3 ],
+            "powerConsumption": 4,
+            "productionTime": 25
+        }
+    ],
+    "MaterialsFactoryAssembly":
+    [
+        {
+            "inputNames": [ "MaterialRawSalvage" ],
+            "inputAmounts": [ 25 ],
+            "outputNames": [ "MaterialConstruction", "UtilitySandbag" ],
+            "outputAmounts": [ 1, 5 ],
+            "powerConsumption": 2,
+            "productionTime": 25
+        },
+        {
+            "inputNames": [ "MaterialRawSalvage" ],
+            "inputAmounts": [ 25 ],
+            "outputNames": [ "MaterialConstruction", "UtilityBarbedWire" ],
+            "outputAmounts": [ 1, 5 ],
+            "powerConsumption": 2,
+            "productionTime": 25
+        }
+    ],
+    "MetalworksFactory":
+    [
+        {
+            "inputNames": [ "MaterialConstruction", "MaterialRawComponents" ],
+            "inputAmounts": [ 3, 20 ],
+            "outputNames": [ "MaterialProcessedConstruction" ],
+            "outputAmounts": [ 1 ],
+            "powerConsumption": 5,
+            "productionTime": 60
+        },
+        {
+            "inputNames": [ "MaterialProcessedConstruction" ],
+            "inputAmounts": [ 3 ],
+            "outputNames": [ "Pipe" ],
+            "outputAmounts": [ 1 ],
+            "powerConsumption": 5,
+            "productionTime": 120
+        }
+    ],
+    "MetalworksFactoryBlastFurnace":
+    [
+        {
+            "inputNames": [ "MaterialProcessedConstruction", "MaterialOilHeavy" ],
+            "inputAmounts": [ 1, 66 ],
+            "outputNames": [ "AssemblyMaterialsT4" ],
+            "outputAmounts": [ 1 ],
+            "powerConsumption": 5,
+            "productionTime": 120
+        },
+        {
+            "inputNames": [ "MaterialConstruction", "MaterialRawSulfur" ],
+            "inputAmounts": [ 3, 20 ],
+            "outputNames": [ "AssemblyMaterialsT3" ],
+            "outputAmounts": [ 1 ],
+            "powerConsumption": 5,
+            "productionTime": 120
+        },
+        {
+            "inputNames": [ "MaterialConstruction", "MaterialRawComponents", "MaterialOilHeavy" ],
+            "inputAmounts": [ 3, 55, 6 ],
+            "outputNames": [ "MaterialProcessedConstruction" ],
+            "outputAmounts": [ 3 ],
+            "powerConsumption": 8,
+            "productionTime": 60
+        }
+    ],
+    "MetalworksFactoryRecycler":
+    [
+        {
+            "inputNames": [ "MaterialConstruction", "MaterialRawComponents" ],
+            "inputAmounts": [ 3, 20 ],
+            "outputNames": [ "MaterialProcessedConstruction", "UtilityMetalBeam" ],
+            "outputAmounts": [ 1, 1 ],
+            "powerConsumption": 5,
+            "productionTime": 60
+        },
+        {
+            "inputNames": [ "MaterialRawComponentsDamaged" ],
+            "inputAmounts": [ 30 ],
+            "outputNames": [ "MaterialRawComponents" ],
+            "outputAmounts": [ 20 ],
+            "powerConsumption": 4,
+            "productionTime": 90
+        }
+    ],
+    "MetalworksFactoryEngineering":
+    [
+        {
+            "inputNames": [ "MaterialProcessedConstruction", "MaterialCoke", "MaterialRawSulfur", "MaterialOilHeavy" ],
+            "inputAmounts": [ 3, 200, 65, 35 ],
+            "outputNames": [ "MaterialSteel" ],
+            "outputAmounts": [ 1 ],
+            "powerConsumption": 9,
+            "productionTime": 90
+        },
+        {
+            "inputNames": [ "MaterialProcessedConstruction", "MaterialCoke", "MaterialOilEnriched", "MaterialWater" ],
+            "inputAmounts": [ 9, 375, 90, 100 ],
+            "outputNames": [ "MaterialSteel" ],
+            "outputAmounts": [ 3 ],
+            "powerConsumption": 12,
+            "productionTime": 90
+        },
+        {
+            "inputNames": [ "MaterialSteel", "MaterialCoke", "AssemblyMaterialsT1", "AssemblyMaterialsT2" ],
+            "inputAmounts": [ 3, 245, 10, 10 ],
+            "outputNames": [ "AssemblyMaterialsT5" ],
+            "outputAmounts": [ 1 ],
+            "powerConsumption": 8,
+            "productionTime": 120
+        }
+    ],
+    "CoalRefinery":
+    [
+        {
+            "inputNames": [ "MaterialRawCoal" ],
+            "inputAmounts": [ 200 ],
+            "outputNames": [ "MaterialCoke" ],
+            "outputAmounts": [ 180 ],
+            "powerConsumption": 3,
+            "productionTime": 120
+        }
+    ],
+    "CoalRefineryCokeFurnace":
+    [
+        {
+            "inputNames": [ "MaterialRawCoal" ],
+            "inputAmounts": [ 200 ],
+            "outputNames": [ "MaterialCoke", "MaterialRawSulfur" ],
+            "outputAmounts": [ 165, 15 ],
+            "powerConsumption": 3,
+            "productionTime": 120
+        }
+    ],
+    "CoalRefineryLiquifier":
+    [
+        {
+            "inputNames": [ "MaterialRawCoal", "MaterialWater" ],
+            "inputAmounts": [ 300, 50 ],
+            "outputNames": [ "MaterialConcrete", "MaterialOilCrude" ],
+            "outputAmounts": [ 1, 50 ],
+            "powerConsumption": 4,
+            "productionTime": 120
+        }
+    ],
+    "CoalRefineryAdvancedLiquifier":
+    [
+        {
+            "inputNames": [ "MaterialRawCoal", "MaterialWater" ],
+            "inputAmounts": [ 300, 100 ],
+            "outputNames": [ "MaterialCoke", "MaterialOilHeavy" ],
+            "outputAmounts": [ 260, 60 ],
+            "powerConsumption": 4,
+            "productionTime": 180
+        }
+    ],
+    "OilRefinery":
+    [
+        {
+            "inputNames": [ "MaterialOilCrude" ],
+            "inputAmounts": [ 150 ],
+            "outputNames": [ "MaterialOilPetrol" ],
+            "outputAmounts": [ 150 ],
+            "powerConsumption": 1,
+            "productionTime": 150
+        }
+    ],
+    "OilRefineryReformer":
+    [
+        {
+            "inputNames": [ "MaterialOilCrude", "MaterialWater" ],
+            "inputAmounts": [ 120, 30 ],
+            "outputNames": [ "MaterialOilPetrol" ],
+            "outputAmounts": [ 150 ],
+            "powerConsumption": 1,
+            "productionTime": 150
+        }
+    ],
+    "OilRefineryCrackSchack":
+    [
+        {
+            "inputNames": [ "MaterialOilCrude" ],
+            "inputAmounts": [ 150 ],
+            "outputNames": [ "MaterialOilHeavy" ],
+            "outputAmounts": [ 90 ],
+            "powerConsumption": 1.5,
+            "productionTime": 160
+        }
+    ],
+    "OilRefineryPetrochemical":
+    [
+        {
+            "inputNames": [ "MaterialRawSulfur", "MaterialOilHeavy" ],
+            "inputAmounts": [ 60, 30 ],
+            "outputNames": [ "MaterialOilEnriched" ],
+            "outputAmounts": [ 30 ],
+            "powerConsumption": 6,
+            "productionTime": 200
+        }
+    ],
+    "AmmoFactory":
+    [
+        {
+            "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
+            "inputAmounts": [ 1, 1 ],
+            "outputNames": [ "AmmoFlame" ],
+            "outputAmounts": [ 1 ],
+            "powerConsumption": 4,
+            "productionTime": 25
+        },
+        {
+            "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
+            "inputAmounts": [ 6, 5 ],
+            "outputNames": [ "AmmoShell250" ],
+            "outputAmounts": [ 1 ],
+            "powerConsumption": 4,
+            "productionTime": 30
+        }
+    ],
+    "AmmoFactoryRocket":
+    [
+        {
+            "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
+            "inputAmounts": [ 1, 2 ],
+            "outputNames": [ "AmmoRocketHE" ],
+            "outputAmounts": [ 1 ],
+            "powerConsumption": 4,
+            "productionTime": 25
+        },
+        {
+            "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
+            "inputAmounts": [ 1, 2 ],
+            "outputNames": [ "AmmoRocketFlame" ],
+            "outputAmounts": [ 1 ],
+            "powerConsumption": 4,
+            "productionTime": 25
+        }
+    ],
+    "AmmoFactoryLargeShell":
+    [
+        {
+            "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
+            "inputAmounts": [ 2, 2 ],
+            "outputNames": [ "AmmoShell75" ],
+            "outputAmounts": [ 1 ],
+            "powerConsumption": 4,
+            "productionTime": 60
+        },
+        {
+            "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
+            "inputAmounts": [ 2, 2 ],
+            "outputNames": [ "AmmoShell945" ],
+            "outputAmounts": [ 1 ],
+            "powerConsumption": 4,
+            "productionTime": 60
+        },
+        {
+            "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
+            "inputAmounts": [ 6, 4 ],
+            "outputNames": [ "AmmoShell300" ],
+            "outputAmounts": [ 1 ],
+            "powerConsumption": 6,
+            "productionTime": 60
+        },
+        {
+            "inputNames": [ "MaterialExplosive", "MaterialConstruction" ],
+            "inputAmounts": [ 3, 2 ],
+            "outputNames": [ "AmmoShell120" ],
+            "outputAmounts": [ 1 ],
+            "powerConsumption": 4,
+            "productionTime": 25
+        },
+        {
+            "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
+            "inputAmounts": [ 2, 3 ],
+            "outputNames": [ "AmmoShell150" ],
+            "outputAmounts": [ 1 ],
+            "powerConsumption": 4,
+            "productionTime": 40
+        }
+    ],
+    "MaintenanceTunnel":
+    [
+        {
+            "inputNames": [ "MaterialConstruction" ],
+            "inputAmounts": [ 1 ],
+            "outputNames": [ "SuppliesGarrison" ],
+            "outputAmounts": [ 10 ],
+            "powerConsumption": 2,
+            "productionTime": 325
+        }
+    ],
+    "DieselPowerPlant":
+    [
+        {
+            "inputNames": [ "MaterialDiesel" ],
+            "inputAmounts": [ 25 ],
+            "outputNames": [ "" ],
+            "outputAmounts": [ 0 ],
+            "powerConsumption": -5,
+            "productionTime": 45
+        }
+    ],
+    "DieselPowerPlantPetrol":
+    [
+        {
+            "inputNames": [ "MaterialOilPetrol" ],
+            "inputAmounts": [ 50 ],
+            "outputNames": [ "" ],
+            "outputAmounts": [ 0 ],
+            "powerConsumption": -12,
+            "productionTime": 90
+        }
+    ],
+    "PowerStation":
+    [
+        {
+            "inputNames": [ "MaterialOilCrude" ],
+            "inputAmounts": [ 50 ],
+            "outputNames": [ "" ],
+            "outputAmounts": [ 0 ],
+            "powerConsumption": -10,
+            "productionTime": 90
+        },
+        {
+            "inputNames": [ "MaterialRawCoal", "MaterialWater" ],
+            "inputAmounts": [ 60, 25 ],
+            "outputNames": [ "" ],
+            "outputAmounts": [ 0 ],
+            "powerConsumption": -10,
+            "productionTime": 90
+        }
+    ],
+    "PowerStationSulfuricReactor":
+    [
+        {
+            "inputNames": [ "MaterialOilHeavy" ],
+            "inputAmounts": [ 50 ],
+            "outputNames": [ "MaterialRawSulfur" ],
+            "outputAmounts": [ 5 ],
+            "powerConsumption": -16,
+            "productionTime": 120
+        },
+        {
+            "inputNames": [ "MaterialCoke", "MaterialWater" ],
+            "inputAmounts": [ 60, 25 ],
+            "outputNames": [ "MaterialRawSulfur" ],
+            "outputAmounts": [ 5 ],
+            "powerConsumption": -16,
+            "productionTime": 120
+        }
+    ]
+}
