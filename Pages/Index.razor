@@ -8,7 +8,7 @@
 @inject IJSRuntime JsRuntime
 @using FoxholeLogiSheet.Data
 
-<h1 class="production-header">@ProductionMode Calculator</h1>
+<h1 class="production-header">@ProductionMode Sheet</h1>
 <div class="d-inline-flex text-light production-container">
     <div class="production-select">
         <div class="d-inline-flex grid-header">
@@ -76,6 +76,14 @@
                     </div>
 
                     <div class="output-bottom">
+                        @if (GetQueuePrice("Time", category) > 0)
+                        {
+                            <div style="background-image: url(icons/Time.png)">
+                                @((int)(GetQueuePrice("Time", category)) / 3600):@(
+                                  (int)(GetQueuePrice("Time", category)) % 3600 / 60 < 10 ? "0" + (int)(GetQueuePrice("Time", category)) % 3600 / 60 : (int)(GetQueuePrice("Time", category))  % 3600 / 60):@(
+                                  (int)(GetQueuePrice("Time", category)) % 3600 % 60 < 10 ? "0" + (int)(GetQueuePrice("Time", category)) % 3600 % 60 : (int)(GetQueuePrice("Time", category))  % 3600 % 60)
+                            </div>
+                        }
                         @if(GetQueuePrice("Bmat", category) > 0) 
                         {
                             <div style="background-image: url(icons/ProductionIcons/MaterialBasic.png)">
@@ -261,6 +269,9 @@
                             break;
                         case "Hemat":
                             queuePrice += Math.Floor(itemInfo.HematCost * currentDiscount) * (isVehicleOrShippable ? 3 : 1);
+                            break;
+                        case "Time":
+                            queuePrice += itemInfo.ProductionTime * (ProductionMode == "MPF" ? isVehicleOrShippable ? 3 : 1 : 1);
                             break;
                         default:
                             queuePrice += 0;

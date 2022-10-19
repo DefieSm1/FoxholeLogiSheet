@@ -140,7 +140,7 @@
 					style="background-image: url(icons/Facility/@(upgrade).png)"
 					@onmouseover="() => { HoveredBuilding = FacilityUpgrades[upgrade]; BuildingInfoboxVisibility = true; }"
 					@onmouseout="() => { HoveredBuilding = FacilityUpgrades[upgrade]; BuildingInfoboxVisibility = false; }"
-					@onclick="() => { SelectedUpgrade = upgrade; BuildingInfoboxVisibility = false; ResetMultipliers(); }"></button>
+					@onclick="() => { SelectedUpgrade = upgrade; ResetMultipliers(); }"></button>
 			}
 		</div>
 		</div>

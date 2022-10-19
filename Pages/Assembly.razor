@@ -6,7 +6,7 @@
 @inject IJSRuntime JsRuntime
 @using FoxholeLogiSheet.Data
 
-<h1 class="assembly-header">Assembly Station Calculator</h1>
+<h1 class="assembly-header">Assembly Station Sheet</h1>
 <div class="building-select">
 	<div class="building-select-header"><p>SELECT STRUCTURE</p></div>
 	<div class="building-select-buttons">
@@ -23,7 +23,7 @@
 				style="background-image: url(icons/Facility/AssemblyStation/@(upgrade).png)"
 				@onmouseover="() => { HoveredBuilding = AssemblyUpgrades[upgrade]; BuildingInfoboxVisibility = true; InfoboxSimple = false; }"
 				@onmouseout="() => { HoveredBuilding = AssemblyUpgrades[upgrade]; BuildingInfoboxVisibility = false; }"
-				@onclick="() => { SelectedBuilding = building.Key; SelectedUpgrade = upgrade; BuildingInfoboxVisibility = false; }"></button>
+				@onclick="() => { SelectedBuilding = building.Key; SelectedUpgrade = upgrade; }"></button>
 			}
 		}
 	</div>

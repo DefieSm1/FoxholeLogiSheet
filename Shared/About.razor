@@ -1,11 +1,20 @@
 ﻿<div class="about-container" style="display: @(Display ? "flex" : "none")">
 	<div class="about-background" @onclick="HideAbout"></div>
 	<div class="about-infobox">
-		<h1>Foxhole Logi Sheet @version</h1>
+		<h1>Foxhole Logi Sheet</h1>
 		<p>A Logistics Helper Tool for Wardens</p>
 		<p>Currently includes Factory, Facility and Assembly Station sheets.</p>
 		<p>For any suggestions/issues/feedback contact on Discord: @@Defie#9180</p>
 		<p>Up to date for Foxhole Update 50 „Inferno”</p>
+		<hr />
+		<div class="changelog">
+			<p>Version @version</p>
+			<ul>
+				<li>Added production times for all Factory/MPF items</li>
+				<li>Fixed Assmat cost of Battle Tank</li>
+			</ul>
+		</div>
+		<hr />
 		<p class="about-trademark"><a href="https://www.foxholegame.com/">Foxhole</a> is a registered trademark of <a href="https://www.siegecamp.com/">Siegecamp</a></p>
 	</div>
 </div> 

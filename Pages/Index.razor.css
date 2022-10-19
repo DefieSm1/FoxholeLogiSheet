@@ -209,14 +209,14 @@
 }
 
     .output-bottom > * {
-        width: 25%;
+        width: 20%;
         margin: 2px;
         display: flex;
         justify-content: center;
         align-items: center;
         background-size: contain;
         background-repeat: no-repeat;
-        background-size: 15%;
+        background-size: 18%;
         background-position: 5px; 
         background-color: rgba(0, 0, 0, 0.3);
     }
@@ -246,6 +246,7 @@
         background-size: 15%;
         background-position: 5px;
         background-color: rgba(0, 0, 0, 0.3);
+        font-size: 20px;
     }
 
 /* OTHER STUFF */

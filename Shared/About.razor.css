@@ -16,21 +16,37 @@
     z-index: 3;
 }
 
-    .about-infobox > h1 {
-        padding: 18px;
+    .about-infobox h1 {
+        padding: 12px;
+        margin-bottom: 4px;
         background-color: #7F7F7F;
         text-align: center;
     }
 
-    .about-infobox > p {
+    .about-infobox p {
         padding: 4px 18px;
+        margin-bottom: 0;
         font-size: 1.2rem;
+    }
+
+    .about-infobox hr {
+        margin: 12px 0;
+    }
+
+    .changelog p {
+        font-size: 1.4rem;
+        margin-bottom: 4px;
+    }
+
+    .changelog ul {
+        margin: 8px 4px;
     }
 
 .about-trademark, .about-trademark > * {
     text-align: center;
     font-style: italic;
     color: #E5BA82;
+    padding-bottom: 18px !important;
 }
 
 .about-background {
