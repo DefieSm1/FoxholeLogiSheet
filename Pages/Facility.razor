@@ -34,7 +34,7 @@
 							{
 								@foreach (var item in recipe.value.InputNames.Select((value, index) => new { value, index })) 
 								{
-									<button class="inputItem" style="background-image: url(icons/Facility/@(item.value).png)"
+									<button class="input-item" style="background-image: url(icons/Facility/@(item.value).png)"
 											@onmouseover="() => { HoveredItem = FacilityItems[item.value]; ItemInfoboxVisibility = true; }"
 											@onmouseout="() => { HoveredItem = FacilityItems[item.value]; ItemInfoboxVisibility = false; }">
 										@(recipe.value.InputAmounts[item.index] * BuildingMultipliers[recipe.index])@(FacilityItems[recipe.value.InputNames[item.index]].IsLiquid ? "L" : "")
@@ -48,10 +48,8 @@
 								{
 									<img src="icons/ProductionArrow.png"/>
 								}
-								<span class="recipe-time"> @* The reason for these weirdly placed linebreaks is so it's more readable without HTML adding a space between the bits *@
-									@(recipe.value.ProductionTime * BuildingMultipliers[recipe.index] / 3600):@(
-									  recipe.value.ProductionTime * BuildingMultipliers[recipe.index] % 3600 / 60 < 10 ? "0" + recipe.value.ProductionTime * BuildingMultipliers[recipe.index] % 3600 / 60 : recipe.value.ProductionTime * BuildingMultipliers[recipe.index] % 3600 / 60):@(
-									  recipe.value.ProductionTime * BuildingMultipliers[recipe.index] % 3600 % 60 < 10 ? "0" + recipe.value.ProductionTime * BuildingMultipliers[recipe.index] % 3600 % 60 : recipe.value.ProductionTime * BuildingMultipliers[recipe.index] % 3600 % 60)
+								<span class="recipe-time">
+									@GetTimestamp(recipe.value.ProductionTime * BuildingMultipliers[recipe.index])
 								</span>
 							</div>
 
@@ -59,7 +57,7 @@
 							{
 								@foreach (var item in recipe.value.OutputNames.Select((value, index) => new { value, index })) 
 								{
-									<button class="inputItem" style="background-image: url(icons/Facility/@(item.value).png)"
+									<button class="input-item" style="background-image: url(icons/Facility/@(item.value).png)"
 											@onmouseover="() => { HoveredItem = FacilityItems[item.value]; ItemInfoboxVisibility = true; }"
 											@onmouseout="() => { HoveredItem = FacilityItems[item.value]; ItemInfoboxVisibility = false; }">
 										@(recipe.value.OutputAmounts[item.index] * BuildingMultipliers[recipe.index])@(FacilityItems[recipe.value.OutputNames[item.index]].IsLiquid ? "L" : "")
@@ -68,7 +66,12 @@
 							}
 
 							<div class="recipe-multiplier">
-								<input type="number" min="1" value="@BuildingMultipliers[recipe.index]" @onchange="(e) => MultiplierChange(e.Value.ToString(), recipe.index)" />
+								<button class="extra-recipe-info"
+										@onmouseover="() => { HoveredRecipe = recipe.value; RecipeInfoboxVisibility = true; }"
+										@onmouseout="() => { HoveredRecipe = recipe.value; RecipeInfoboxVisibility = false; }">
+									?
+								</button>
+								<input type="number" min="1" value="@BuildingMultipliers[recipe.index]" @onchange="(e) => MultiplierChange(e.Value?.ToString(), recipe.index)" />
 							</div>
 						</div>
 					</div>
@@ -85,12 +88,12 @@
 						<div class="recipe-item-info">
 							@if (recipe.value.InputNames.Count() == recipe.value.InputAmounts.Count() && recipe.value.InputNames[0] != "")
 							{
-								@foreach (var item in recipe.value.InputNames.Select((value, index) => new { value, index })) 
+								@foreach (var item in recipe.value.InputNames.Select((value, index) => new { value, index }))
 								{
-									<button class="inputItem" style="background-image: url(icons/Facility/@(item.value).png)"
+									<button class="input-item" style="background-image: url(icons/Facility/@(item.value).png)"
 											@onmouseover="() => { HoveredItem = FacilityItems[item.value]; ItemInfoboxVisibility = true; }"
 											@onmouseout="() => { HoveredItem = FacilityItems[item.value]; ItemInfoboxVisibility = false; }">
-										@(recipe.value.InputAmounts[item.index] * UpgradeMulitpliers[recipe.index])@(FacilityItems[recipe.value.InputNames[item.index]].IsLiquid ? "L" : "")
+										@(recipe.value.InputAmounts[item.index] * UpgradeMultipliers[recipe.index])@(FacilityItems[recipe.value.InputNames[item.index]].IsLiquid ? "L" : "")
 									</button>
 								}
 							}
@@ -99,29 +102,32 @@
 								<p><span class="power-icon"></span>@(recipe.value.PowerConsumption < 0 ? recipe.value.PowerConsumption * -1 : "-" + recipe.value.PowerConsumption) MW</p>
 								@if (recipe.value.OutputNames[0] != "")
 								{
-									<img src="icons/ProductionArrow.png"/>
+									<img src="icons/ProductionArrow.png" />
 								}
-								<span class="recipe-time"> @* The reason for these weirdly placed linebreaks is so it's more readable without HTML adding a space between the bits *@
-									@(recipe.value.ProductionTime * UpgradeMulitpliers[recipe.index] / 3600):@(
-									  recipe.value.ProductionTime * UpgradeMulitpliers[recipe.index] % 3600 / 60 < 10 ? "0" + recipe.value.ProductionTime * UpgradeMulitpliers[recipe.index] % 3600 / 60 : recipe.value.ProductionTime * UpgradeMulitpliers[recipe.index] % 3600 / 60):@(
-									  recipe.value.ProductionTime * UpgradeMulitpliers[recipe.index] % 3600 % 60 < 10 ? "0" + recipe.value.ProductionTime * UpgradeMulitpliers[recipe.index] % 3600 % 60 : recipe.value.ProductionTime * UpgradeMulitpliers[recipe.index] % 3600 % 60)
+								<span class="recipe-time">
+									@GetTimestamp(recipe.value.ProductionTime * UpgradeMultipliers[recipe.index])
 								</span>
 							</div>
 
 							@if (recipe.value.OutputNames.Count() == recipe.value.OutputAmounts.Count() && recipe.value.OutputNames[0] != "")
 							{
-								@foreach (var item in recipe.value.OutputNames.Select((value, index) => new { value, index })) 
+								@foreach (var item in recipe.value.OutputNames.Select((value, index) => new { value, index }))
 								{
-									<button class="inputItem" style="background-image: url(icons/Facility/@(item.value).png)"
+									<button class="input-item" style="background-image: url(icons/Facility/@(item.value).png)"
 											@onmouseover="() => { HoveredItem = FacilityItems[item.value]; ItemInfoboxVisibility = true; }"
 											@onmouseout="() => { HoveredItem = FacilityItems[item.value]; ItemInfoboxVisibility = false; }">
-										@(recipe.value.OutputAmounts[item.index] * UpgradeMulitpliers[recipe.index])@(FacilityItems[recipe.value.OutputNames[item.index]].IsLiquid ? "L" : "")
+										@(recipe.value.OutputAmounts[item.index] * UpgradeMultipliers[recipe.index])@(FacilityItems[recipe.value.OutputNames[item.index]].IsLiquid ? "L" : "")
 									</button>
 								}
 							}
 
 							<div class="recipe-multiplier">
-								<input type="number" min="1" value="@UpgradeMulitpliers[recipe.index]" @onchange="(e) => MultiplierChange(e.Value.ToString(), recipe.index, true)" />
+								<button class="extra-recipe-info"
+											@onmouseover="() => { HoveredRecipe = recipe.value; RecipeInfoboxVisibility = true; }"
+											@onmouseout="() => { HoveredRecipe = recipe.value; RecipeInfoboxVisibility = false; }">
+									?
+								</button>
+								<input type="number" min="1" value="@UpgradeMultipliers[recipe.index]" @onchange="(e) => MultiplierChange(e.Value?.ToString(), recipe.index)" />
 							</div>
 						</div>
 					</div>
@@ -147,6 +153,29 @@
 	}
 </div>
 
+<div class="recipe-infobox d-@(RecipeInfoboxVisibility ? "block" : "none")">
+	<div class="recipe-infobox-header">
+		<p>Recipe Autonomy</p>
+	</div>
+
+	<div class="recipe-infobox-info">
+		@if (HoveredRecipe.InputAmounts.Count != 0 && HoveredRecipe.OutputAmounts.Count != 0)
+		{
+			@if (HoveredRecipe.InputAmounts[0] != 0)
+			{
+				<p>
+					Max Input Autonomy: <span>@GetRecipeAutonomy()</span><br />
+					<i>ie. how long could a facility produce this recipe with the inputs fully filled once and all needed liquids being piped in</i></p>
+			}
+			@if (HoveredRecipe.OutputAmounts[0] != 0)
+			{
+				<p>Max Overflow Time: <span>@GetRecipeAutonomy("output")</span><br />
+					<i>ie. how long could a facility produce this recipe until reaching the item capacity for the outputs with inputs being always filled and output liquids being piped out</i></p>
+			}
+		}
+	</div>
+</div>
+
 <FacilityInfobox Building=@HoveredBuilding Visibility=@BuildingInfoboxVisibility />
 <ItemInfobox Item=@HoveredItem SelectedCategory="Facility" Visibility=@ItemInfoboxVisibility />
 
@@ -161,7 +190,7 @@
 
 	public List<int> BuildingMultipliers = new();
 
-	public List<int> UpgradeMulitpliers = new();
+	public List<int> UpgradeMultipliers = new();
 
 	const int maxRecipies = 10; // Maximum possible amount of recipes in a building + it's upgrades
 
@@ -173,9 +202,15 @@
 
 	public ProductionItem HoveredItem { get; set; } = new();
 
+	public FacilityRecipe HoveredRecipe { get; set; } = new();
+
 	public bool BuildingInfoboxVisibility { get; set; }
 
+	public bool RecipeInfoboxVisibility { get; set; }
+
 	public bool ItemInfoboxVisibility { get; set; }
+
+	const int MaxFacilityCapacity = 32000;
 
 	protected override async Task OnInitializedAsync()
 	{
@@ -194,37 +229,35 @@
 
 		SelectedUpgrade = "";
 
-		HoveredItem = FacilityItems["MaterialBasic"];
-
 		ResetMultipliers();
 	}
 
 	public void ResetMultipliers()
 	{
 		BuildingMultipliers = new();
-		UpgradeMulitpliers = new();
+		UpgradeMultipliers = new();
 		for (int i = 0; i < maxRecipies; i++) {
 			BuildingMultipliers.Add(1);
-			UpgradeMulitpliers.Add(1);
+			UpgradeMultipliers.Add(1);
 		}
 	}
 
-	public void MultiplierChange(string input, int itemIndex, bool upgrade = false) 
+	public void MultiplierChange(string? input, int itemIndex, bool upgrade = false) 
 	{
 		int newNumber;
 
 		if(!Int32.TryParse(input, out newNumber))
 			if (upgrade)
-				UpgradeMulitpliers[itemIndex] = 1;
+				UpgradeMultipliers[itemIndex] = 1;
 			else
 				BuildingMultipliers[itemIndex] = 1;
 
 		if(upgrade) 
 		{
 			if (newNumber < 1)
-				UpgradeMulitpliers[itemIndex] = 1;
+				UpgradeMultipliers[itemIndex] = 1;
 			else
-				UpgradeMulitpliers[itemIndex] = newNumber;
+				UpgradeMultipliers[itemIndex] = newNumber;
 		}
 		else 
 		{
@@ -233,5 +266,53 @@
 			else
 				BuildingMultipliers[itemIndex] = newNumber;
 		}
+	}
+
+	public string GetTimestamp(int seconds)
+	{
+		TimeSpan recipeTime = TimeSpan.FromSeconds(seconds);
+
+		return recipeTime.ToString(@"h\:mm\:ss");
+	}
+
+	public string GetRecipeAutonomy(string type = "input")
+	{
+		int AutonomyTime = 0;
+
+		if (HoveredRecipe.OutputNames[0] == "SuppliesGarrison" && type == "output")
+			AutonomyTime = 1000 / HoveredRecipe.OutputAmounts[0] * HoveredRecipe.ProductionTime;
+		else if(type == "input")
+		{
+			int largest = 0;
+
+			for (int i = 0; i < HoveredRecipe.InputAmounts.Count() - 1; i++)
+				if ((HoveredRecipe.InputAmounts[i] > HoveredRecipe.InputAmounts[largest]) && !FacilityItems[HoveredRecipe.InputNames[i]].IsLiquid)
+					largest = HoveredRecipe.InputAmounts[i];
+
+			if (FacilityItems[HoveredRecipe.InputNames[largest]].IsLiquid)
+				AutonomyTime = -1;
+			else
+				AutonomyTime = MaxFacilityCapacity / HoveredRecipe.InputAmounts[largest] * HoveredRecipe.ProductionTime;
+		}
+		else
+		{
+			int largest = 0;
+
+			for (int i = 0; i < HoveredRecipe.OutputAmounts.Count() - 1; i++)
+				if ((HoveredRecipe.OutputAmounts[i] > HoveredRecipe.OutputAmounts[largest]) && !FacilityItems[HoveredRecipe.OutputNames[i]].IsLiquid)
+					largest = HoveredRecipe.InputAmounts[i];
+
+			if (FacilityItems[HoveredRecipe.OutputNames[largest]].IsLiquid)
+				AutonomyTime = -1;
+			else
+				AutonomyTime = MaxFacilityCapacity / HoveredRecipe.OutputAmounts[largest] * HoveredRecipe.ProductionTime;
+		}
+
+		if (AutonomyTime == -1)
+			return "∞";
+
+		TimeSpan time = TimeSpan.FromSeconds(AutonomyTime);
+
+		return time.ToString(@"d\:hh\:mm\:ss");
 	}
 }

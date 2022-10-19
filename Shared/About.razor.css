@@ -11,6 +11,7 @@
 }
 
 .about-infobox {
+    width: 650px;
     background-color: rgba(0, 0, 0, 0.95);
     color: rgb(230, 230, 230);
     z-index: 3;

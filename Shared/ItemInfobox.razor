@@ -28,9 +28,7 @@
 			}
 			@if (Item.ProductionTime > 0) @* The reason for these weirdly placed linebreaks is so it's more readable without HTML adding a space between the bits *@
 			{ 
-				<p class="item-damageinfo">@(Item.ProductionTime / 3600):@(
-											 Item.ProductionTime % 3600 / 60 < 10 ? "0" + Item.ProductionTime % 3600 / 60 : Item.ProductionTime % 3600 / 60):@(
-											 Item.ProductionTime % 3600 % 60 < 10 ? "0" + Item.ProductionTime % 3600 % 60 : Item.ProductionTime % 3600 % 60)</p>
+				<p class="item-damageinfo">@time.ToString(@"h\:mm\:ss")</p>
 			}
 			<div class="item-costs">
 				<div class="@(Item.BmatCost > 0 ? "" : "d-none")">
@@ -85,6 +83,13 @@
 
 	[Parameter]
 	public bool Simplified { get; set; } = false;
+
+	public TimeSpan time = new();
+
+	protected override async Task OnParametersSetAsync()
+	{
+		time = TimeSpan.FromSeconds(Item.ProductionTime);
+	}
 
 	public static string ToRoman(int number)
 	{

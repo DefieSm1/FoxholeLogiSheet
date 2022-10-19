@@ -79,9 +79,7 @@
                         @if (GetQueuePrice("Time", category) > 0)
                         {
                             <div style="background-image: url(icons/Time.png)">
-                                @((int)(GetQueuePrice("Time", category)) / 3600):@(
-                                  (int)(GetQueuePrice("Time", category)) % 3600 / 60 < 10 ? "0" + (int)(GetQueuePrice("Time", category)) % 3600 / 60 : (int)(GetQueuePrice("Time", category))  % 3600 / 60):@(
-                                  (int)(GetQueuePrice("Time", category)) % 3600 % 60 < 10 ? "0" + (int)(GetQueuePrice("Time", category)) % 3600 % 60 : (int)(GetQueuePrice("Time", category))  % 3600 % 60)
+                                @GetTimestamp(GetQueuePrice("Time", category))
                             </div>
                         }
                         @if(GetQueuePrice("Bmat", category) > 0) 
@@ -231,6 +229,13 @@
         foreach (string category in CategoryNames)
             SelectedItems.Add(category, new List<string>());
     }
+
+    public string GetTimestamp(double seconds)
+	{
+		TimeSpan recipeTime = TimeSpan.FromSeconds(seconds);
+
+		return recipeTime.ToString(@"h\:mm\:ss");
+	}
 
     public double GetQueuePrice(string materialKey, string itemCategory = "all")
     {

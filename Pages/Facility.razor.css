@@ -118,30 +118,30 @@ facility-container {
     gap: 10px;
 }
 
-    .facility-recipe button {
-        width: 80px;
-        aspect-ratio: 1;
-        outline: none !important;
-        border-radius: 0;
-        border-width: 0;
-        transition: none;
-        box-shadow: none;
-        background-size: 80%;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-color: #414241;
-        cursor: default;
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        color: whitesmoke;
-        font-size: 18px;
-        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    }
+.input-item {
+    width: 80px;
+    aspect-ratio: 1;
+    outline: none !important;
+    border-radius: 0;
+    border-width: 0;
+    transition: none;
+    box-shadow: none;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #414241;
+    cursor: default;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: whitesmoke;
+    font-size: 18px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
 
-        .facility-recipes button:hover {
-            background-color: #7F7F7F;
-        }
+    .input-item:hover {
+        background-color: #7F7F7F;
+    }
 
 .recipe-info {
     display: flex;
@@ -181,7 +181,6 @@ facility-container {
     margin: auto 0 auto auto;
     display: flex;
     flex-direction: row;
-
 }
 
     .recipe-multiplier > input {
@@ -191,6 +190,31 @@ facility-container {
         font-size: 40px;
         background: none;
         border: 1px dashed whitesmoke;
+    }
+
+.extra-recipe-info {
+    width: 40px;
+    height: 40px;
+    margin: auto 8px auto 0;
+    outline: none !important;
+    border-radius: 0;
+    border-width: 0;
+    transition: none;
+    box-shadow: none;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #414241;
+    cursor: default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+    .extra-recipe-info:hover {
+        background-color: #7F7F7F;
     }
 
 .upgrade-select {
@@ -249,6 +273,49 @@ facility-container {
         .building-upgrade:disabled:hover {
             background-color: #414241;
         }
+
+.recipe-infobox {
+    position: fixed;
+    z-index: 1;
+    max-width: 410px;
+    background-color: rgba(0, 0, 0, 0.95);
+    color: rgb(230, 230, 230);
+    font-size: 16px;
+}
+
+.recipe-infobox, .recipe-infobox > * {
+    pointer-events: none;
+}
+
+.recipe-infobox-header {
+    background-color: #7F7F7F;
+    margin: 0 !important;
+    padding: 0.4rem;
+    padding-left: 12px;
+}
+
+    .recipe-infobox-header > p {
+        margin: 0 !important;
+        vertical-align: middle;
+    }
+
+.recipe-infobox-info {
+    margin: 0.8rem;
+}
+
+.recipe-infobox-info > p {
+    margin: 0;
+}
+
+    .recipe-infobox-info > p > span, .recipe-infobox-info > p > i {
+        color: #E5BA82;
+    }
+
+@media only screen and (max-width: 800px) {
+    .recipe-infobox, .recipe-infobox > * {
+        display: none !important;
+    }
+}
 
 /* OTHER STUFF */
 
