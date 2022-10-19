@@ -271,7 +271,7 @@
                             queuePrice += Math.Floor(itemInfo.HematCost * currentDiscount) * (isVehicleOrShippable ? 3 : 1);
                             break;
                         case "Time":
-                            queuePrice += itemInfo.ProductionTime * (ProductionMode == "MPF" ? isVehicleOrShippable ? 3 : 1 : 1);
+                            queuePrice += itemInfo.ProductionTime * (ProductionMode == "MPF" ? isVehicleOrShippable ? 1 : 10 : 1);
                             break;
                         default:
                             queuePrice += 0;
