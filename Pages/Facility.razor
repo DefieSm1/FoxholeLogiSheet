@@ -285,9 +285,9 @@
 		{
 			int largest = 0;
 
-			for (int i = 0; i < HoveredRecipe.InputAmounts.Count() - 1; i++)
+			for (int i = 0; i < HoveredRecipe.InputAmounts.Count(); i++)
 				if ((HoveredRecipe.InputAmounts[i] > HoveredRecipe.InputAmounts[largest]) && !FacilityItems[HoveredRecipe.InputNames[i]].IsLiquid)
-					largest = HoveredRecipe.InputAmounts[i];
+					largest = i;
 
 			if (FacilityItems[HoveredRecipe.InputNames[largest]].IsLiquid)
 				AutonomyTime = -1;
@@ -298,9 +298,9 @@
 		{
 			int largest = 0;
 
-			for (int i = 0; i < HoveredRecipe.OutputAmounts.Count() - 1; i++)
+			for (int i = 0; i < HoveredRecipe.OutputAmounts.Count(); i++)
 				if ((HoveredRecipe.OutputAmounts[i] > HoveredRecipe.OutputAmounts[largest]) && !FacilityItems[HoveredRecipe.OutputNames[i]].IsLiquid)
-					largest = HoveredRecipe.InputAmounts[i];
+					largest = i;
 
 			if (FacilityItems[HoveredRecipe.OutputNames[largest]].IsLiquid)
 				AutonomyTime = -1;
