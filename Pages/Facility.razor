@@ -127,7 +127,7 @@
 											@onmouseout="() => { HoveredRecipe = recipe.value; RecipeInfoboxVisibility = false; }">
 									?
 								</button>
-								<input type="number" min="1" value="@UpgradeMultipliers[recipe.index]" @onchange="(e) => MultiplierChange(e.Value?.ToString(), recipe.index)" />
+								<input type="number" min="1" value="@UpgradeMultipliers[recipe.index]" @onchange="(e) => MultiplierChange(e.Value?.ToString(), recipe.index, true)" />
 							</div>
 						</div>
 					</div>
