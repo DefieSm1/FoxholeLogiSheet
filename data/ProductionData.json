@@ -14,7 +14,8 @@
             "bmatCost": 165,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 80
         },
         "ARAalto":
         {
@@ -29,7 +30,8 @@
             "bmatCost": 165,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 80
         },
         "AmmoRifle792":
         {
@@ -44,7 +46,8 @@
             "bmatCost": 120,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 60
         },
         "MGMalone":
         {
@@ -59,7 +62,8 @@
             "bmatCost": 0,
             "rmatCost": 25,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 100
         },
         "GrenadeHarpa":
         {
@@ -74,7 +78,8 @@
             "bmatCost": 100,
             "rmatCost": 0,
             "ematCost": 20,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 100
         },
         "PistolCascadier":
         {
@@ -89,7 +94,8 @@
             "bmatCost": 60,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 30
         },
         "AmmoPistol8":
         {
@@ -104,7 +110,8 @@
             "bmatCost": 40,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 20
         },
         "PistolRevolver":
         {
@@ -119,7 +126,8 @@
             "bmatCost": 60,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 50
         },
         "RifleHangman":
         {
@@ -134,7 +142,8 @@
             "bmatCost": 125,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 80
         },
         "AmmoPistol44":
         {
@@ -149,7 +158,8 @@
             "bmatCost": 40,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 40
         },
         "RifleSampo":
         {
@@ -164,7 +174,8 @@
             "bmatCost": 125,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 70
         },
         "RifleBlakerow":
         {
@@ -179,7 +190,8 @@
             "bmatCost": 140,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 80
         },
         "RifleCinder":
         {
@@ -194,7 +206,8 @@
             "bmatCost": 130,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 90
         },
         "RifleLough":
         {
@@ -209,7 +222,8 @@
             "bmatCost": 100,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 70
         },
         "RifleSniper":
         {
@@ -224,7 +238,8 @@
             "rmatCost": 15,
             "bmatCost": 200,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 125
         },
         "AmmoRifle762":
         {
@@ -239,7 +254,8 @@
             "bmatCost": 80,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 50
         },
         "Shotgun":
         {
@@ -254,7 +270,8 @@
             "bmatCost": 80,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 80
         },
         "AmmoBuckshot":
         {
@@ -269,7 +286,8 @@
             "bmatCost": 80,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 50
         },
         "SMGLiar":
         {
@@ -284,7 +302,8 @@
             "bmatCost": 120,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 80
         },
         "SMGFiddler":
         {
@@ -299,7 +318,8 @@
             "bmatCost": 120,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 80
         },
         "AmmoSMG9":
         {
@@ -314,7 +334,8 @@
             "bmatCost": 80,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 50
         },
         "GrenadeSmoke":
         {
@@ -329,7 +350,8 @@
             "bmatCost": 120,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 75
         },
         "GrenadeGas":
         {
@@ -344,7 +366,8 @@
             "bmatCost": 140,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 100
         },
         "AmmoMG127":
         {
@@ -359,7 +382,8 @@
             "bmatCost": 100,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 70
         }
     },
     "heavyArms":
@@ -377,7 +401,8 @@
             "bmatCost": 150,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 37
         },
         "AmmoAT20":
         {
@@ -392,7 +417,8 @@
             "bmatCost": 100,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 100
         },
         "ATBonesawTripod":
         {
@@ -407,7 +433,8 @@
             "bmatCost": 100,
             "rmatCost": 5,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 250
         },
         "ATBonesawHand":
         {
@@ -422,7 +449,8 @@
             "bmatCost": 100,
             "rmatCost": 25,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 50
         },
         "AmmoATIndirect":
         {
@@ -437,7 +465,8 @@
             "bmatCost": 60,
             "rmatCost": 0,
             "ematCost": 75,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 100
         },
         "Flamethrower":
         {
@@ -452,7 +481,8 @@
             "bmatCost": 165,
             "rmatCost": 30,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 50
         },
         "GrenadeTremola":
         {
@@ -467,7 +497,8 @@
             "bmatCost": 150,
             "rmatCost": 0,
             "ematCost": 10,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 80
         },
         "MGRatcatcher":
         {
@@ -482,7 +513,8 @@
             "bmatCost": 100,
             "rmatCost": 5,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 125
         },
         "AmmoShell30":
         {
@@ -497,7 +529,8 @@
             "bmatCost": 80,
             "rmatCost": 0,
             "ematCost": 20,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 100
         },
         "Mortar":
         {
@@ -512,7 +545,8 @@
             "bmatCost": 100,
             "rmatCost": 25,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 50
         },
         "AmmoMortarFlare":
         {
@@ -527,7 +561,8 @@
             "bmatCost": 60,
             "rmatCost": 0,
             "ematCost": 10,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 100
         },
         "AmmoMortarShrapnel":
         {
@@ -542,7 +577,8 @@
             "bmatCost": 60,
             "rmatCost": 0,
             "ematCost": 15,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 100
         },
         "AmmoMortarHE":
         {
@@ -557,7 +593,8 @@
             "bmatCost": 60,
             "rmatCost": 0,
             "ematCost": 35,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 100
         },
         "GrenadeATFlask":
         {
@@ -572,7 +609,8 @@
             "bmatCost": 100,
             "rmatCost": 0,
             "ematCost": 40,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 75
         },
         "GrenadeHE":
         {
@@ -587,7 +625,8 @@
             "bmatCost": 100,
             "rmatCost": 0,
             "ematCost": 10,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 80
         },
         "GrenadeATSticky":
         {
@@ -602,7 +641,8 @@
             "bmatCost": 50,
             "rmatCost": 0,
             "ematCost": 50,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 75
         },
         "RPGFoebreaker":
         {
@@ -617,7 +657,8 @@
             "bmatCost": 100,
             "rmatCost": 5,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 250
         },
         "RPGCutler":
         {
@@ -632,7 +673,8 @@
             "bmatCost": 100,
             "rmatCost": 35,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 50
         },
         "AmmoRPG":
         {
@@ -647,7 +689,8 @@
             "bmatCost": 60,
             "rmatCost": 0,
             "ematCost": 45,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 100
         }
     },
     "heavyMunitions":
@@ -665,7 +708,8 @@
             "bmatCost": 120,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 10
+            "hematCost": 10,
+            "productionTime": 65
         },
         "AmmoShell120":
         {
@@ -680,7 +724,8 @@
             "bmatCost": 60,
             "rmatCost": 0,
             "ematCost": 15,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 55
         },
         "AmmoShell250":
         {
@@ -695,7 +740,8 @@
             "bmatCost": 120,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 25
+            "hematCost": 25,
+            "productionTime": 150
         },
         "AmmoShell68":
         {
@@ -710,7 +756,8 @@
             "bmatCost": 120,
             "rmatCost": 0,
             "ematCost": 120,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 200
         },
         "AmmoShell40":
         {
@@ -725,7 +772,8 @@
             "bmatCost": 160,
             "rmatCost": 0,
             "ematCost": 120,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 200
         },
         "RocketWarhead":
         {
@@ -740,7 +788,8 @@
             "bmatCost": 0,
             "rmatCost": 200,
             "ematCost": 0,
-            "hematCost": 1000
+            "hematCost": 1000,
+            "productionTime": 600
         }
     },
     "utility":
@@ -758,7 +807,8 @@
             "bmatCost": 15,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 15
         },
         "UtilityBinoculars":
         {
@@ -773,7 +823,8 @@
             "bmatCost": 75,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 50
         },
         "AmmoFlamethrower":
         {
@@ -788,7 +839,8 @@
             "bmatCost": 135,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 5
+            "hematCost": 5,
+            "productionTime": 100
         },
         "UtilityListeningKit":
         {
@@ -803,7 +855,8 @@
             "bmatCost": 150,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 60
         },
         "UtilityMetalBeam":
         {
@@ -818,7 +871,8 @@
             "bmatCost": 25,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 20
         },
         "UtilityRadioBackpack":
         {
@@ -833,7 +887,8 @@
             "bmatCost": 150,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 75
         },
         "UtilitySandbag":
         {
@@ -848,7 +903,8 @@
             "bmatCost": 15,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 15
         },
         "UtilitySatchel":
         {
@@ -863,7 +919,8 @@
             "bmatCost": 100,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 15
+            "hematCost": 15,
+            "productionTime": 100
         },
         "UtilityShovel":
         {
@@ -878,7 +935,8 @@
             "bmatCost": 200,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 100
         },
         "UtilitySledgeHammer":
         {
@@ -893,7 +951,8 @@
             "bmatCost": 200,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 100
         },
         "UtilityATMine":
         {
@@ -908,7 +967,8 @@
             "bmatCost": 100,
             "rmatCost": 0,
             "ematCost": 10,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 100
         },
         "UtilityTripod":
         {
@@ -923,7 +983,8 @@
             "bmatCost": 100,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 60
         },
         "UtilityWrench":
         {
@@ -938,7 +999,8 @@
             "bmatCost": 75,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 50
         },
         "UtilityBucket":
         {
@@ -953,7 +1015,8 @@
             "bmatCost": 80,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 40
         },
         "UtilityBayonet":
         {
@@ -968,7 +1031,8 @@
             "bmatCost": 40,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 30
         },
         "UtilityGasMask":
         {
@@ -983,7 +1047,8 @@
             "bmatCost": 160,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 100
         },
         "UtilityGasFilter":
         {
@@ -998,7 +1063,8 @@
             "bmatCost": 100,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 50
         },
         "UtilityOspreay":
         {
@@ -1013,7 +1079,8 @@
             "bmatCost": 85,
             "rmatCost": 10,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 100
         },
         "UtilityRadio":
         {
@@ -1028,7 +1095,8 @@
             "bmatCost": 75,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 50
         },
         "RocketBooster":
         {
@@ -1043,7 +1111,8 @@
             "bmatCost": 0,
             "rmatCost": 800,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 600
         }
     },
     "medical":
@@ -1061,7 +1130,8 @@
             "bmatCost": 80,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 40
         },
         "MedicalAidKit":
         {
@@ -1076,7 +1146,8 @@
             "bmatCost": 60,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 35
         },
         "MedicalTraumaKit":
         {
@@ -1091,7 +1162,8 @@
             "bmatCost": 80,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 50
         },
         "MedicalPlasma":
         {
@@ -1106,7 +1178,8 @@
             "bmatCost": 80,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 40
         },
         "MedicalSoldierSupplies":
         {
@@ -1121,7 +1194,8 @@
             "bmatCost": 80,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 80
         }
     },
     "supplies":
@@ -1139,7 +1213,8 @@
             "bmatCost": 75,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 190
         },
         "SuppliesGarrison":
         {
@@ -1154,7 +1229,8 @@
             "bmatCost": 75,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 190
         }
     },
     "uniforms":
@@ -1172,7 +1248,8 @@
             "bmatCost": 100,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 90
         },
         "UniformArmour":
         {
@@ -1187,7 +1264,8 @@
             "bmatCost": 100,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 90
         },
         "UniformEngineer":
         {
@@ -1202,7 +1280,8 @@
             "bmatCost": 100,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 90
         },
         "UniformMedic":
         {
@@ -1217,7 +1296,8 @@
             "bmatCost": 100,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 90
         },
         "UniformOfficer":
         {
@@ -1232,7 +1312,8 @@
             "bmatCost": 100,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 90
         },
         "UniformScout":
         {
@@ -1247,7 +1328,8 @@
             "bmatCost": 100,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 90
         },
         "UniformSnow":
         {
@@ -1262,7 +1344,8 @@
             "bmatCost": 100,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 90
         },
         "UniformTank":
         {
@@ -1277,7 +1360,8 @@
             "bmatCost": 100,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 90
         }
     },
     "vehicles":
@@ -1295,7 +1379,8 @@
             "bmatCost": 150,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 7205
         },
         "ACMG":
         {
@@ -1310,7 +1395,8 @@
             "bmatCost": 0,
             "rmatCost": 25,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 1250
         },
         "TruckBus":
         {
@@ -1325,7 +1411,8 @@
             "bmatCost": 100,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 5000
         },
         "TankDestroyerHeavy":
         {
@@ -1340,7 +1427,8 @@
             "bmatCost": 0,
             "rmatCost": 160,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 8000
         },
         "FieldAntiTank":
         {
@@ -1355,7 +1443,8 @@
             "bmatCost": 0,
             "rmatCost": 20,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 1000
         },
         "FieldCannon":
         {
@@ -1370,7 +1459,8 @@
             "bmatCost": 0,
             "rmatCost": 30,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 1500
         },
         "FieldMachinegun":
         {
@@ -1385,7 +1475,8 @@
             "bmatCost": 0,
             "rmatCost": 20,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 1000
         },
         "FieldMortar":
         {
@@ -1400,7 +1491,8 @@
             "bmatCost": 0,
             "rmatCost": 35,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 1750
         },
         "TruckFlatbed":
         {
@@ -1415,7 +1507,8 @@
             "bmatCost": 0,
             "rmatCost": 30,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 1500
         },
         "HalfTrack":
         {
@@ -1430,7 +1523,8 @@
             "bmatCost": 0,
             "rmatCost": 60,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 3000
         },
         "ArmouredPersonnelCarrier":
         {
@@ -1445,7 +1539,8 @@
             "bmatCost": 0,
             "rmatCost": 20,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 1000
         },
         "LightTank":
         {
@@ -1460,7 +1555,8 @@
             "bmatCost": 0,
             "rmatCost": 120,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 6000
         },
         "CruiserTankOutlaw":
         {
@@ -1475,7 +1571,8 @@
             "bmatCost": 0,
             "rmatCost": 165,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 8250
         },
         "AssaultTankSilverhand":
         {
@@ -1490,7 +1587,8 @@
             "bmatCost": 0,
             "rmatCost": 155,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 7750
         },
         "Motorcycle":
         {
@@ -1505,7 +1603,8 @@
             "bmatCost": 85,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 4250
         },
         "TruckFuel":
         {
@@ -1520,7 +1619,8 @@
             "bmatCost": 100,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 5000
         },
         "ScoutTankSpire":
         {
@@ -1535,7 +1635,8 @@
             "bmatCost": 0,
             "rmatCost": 70,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 3500
         },
         "LightUtilityVehicle":
         {
@@ -1550,7 +1651,8 @@
             "bmatCost": 0,
             "rmatCost": 10,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 500
         },
         "TruckDump":
         {
@@ -1565,7 +1667,8 @@
             "bmatCost": 120,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 6000
         },
         "Truck":
         {
@@ -1580,7 +1683,8 @@
             "bmatCost": 100,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 5000
         },
         "ShipBarge":
         {
@@ -1595,7 +1699,8 @@
             "bmatCost": 150,
             "rmatCost": 0, 
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 7500
         },
         "ShipFreighter":
         {
@@ -1610,7 +1715,8 @@
             "bmatCost": 500,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 25000
         },
         "ShipGunboatDouble":
         {
@@ -1625,7 +1731,8 @@
             "bmatCost": 0,
             "rmatCost": 160,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 8000
         },
         "ShipGunboat":
         {
@@ -1640,7 +1747,8 @@
             "bmatCost": 0,
             "rmatCost": 160,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 8000
         },
         "ShipWhiteWhale":
         {
@@ -1655,7 +1763,8 @@
             "bmatCost": 0,
             "rmatCost": 100,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 5000
         },
         "ContructionVehicle":
         {
@@ -1670,7 +1779,8 @@
             "bmatCost": 100,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 5000
         },
         "Crane":
         {
@@ -1685,7 +1795,8 @@
             "bmatCost": 125,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 6250
         }
     },
     "shippables":
@@ -1703,7 +1814,8 @@
             "bmatCost": 25,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 1250
         },
         "ConcreteMixer":
         {
@@ -1718,7 +1830,8 @@
             "bmatCost": 0,
             "rmatCost": 75,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 3750
         },
         "EmplacedAntiTank":
         {
@@ -1733,7 +1846,8 @@
             "bmatCost": 150,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 7500
         },
         "ArtilleryExalt":
         {
@@ -1748,7 +1862,8 @@
             "bmatCost": 0,
             "rmatCost": 175,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 8750
         },
         "ArtilleryLariat":
         {
@@ -1763,7 +1878,8 @@
             "bmatCost": 0,
             "rmatCost": 35,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 1750
         },
         "EmplacedMachinegun":
         {
@@ -1778,7 +1894,8 @@
             "bmatCost": 75,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 3750
         },
         "ContainerMaterial":
         {
@@ -1793,7 +1910,8 @@
             "bmatCost": 50,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 2500
         },
         "ContainerCrate":
         {
@@ -1808,7 +1926,8 @@
             "bmatCost": 100,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 5000
         },
         "FuelContainer":
         {
@@ -1823,7 +1942,8 @@
             "bmatCost": 100,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 0
+            "hematCost": 0,
+            "productionTime": 5000
         }
     }
 }

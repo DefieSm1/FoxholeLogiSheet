@@ -853,14 +853,14 @@ facility-container[b-22iwbtwwcp] {
 }
 
     .output-bottom > *[b-rz48f9patv] {
-        width: 25%;
+        width: 20%;
         margin: 2px;
         display: flex;
         justify-content: center;
         align-items: center;
         background-size: contain;
         background-repeat: no-repeat;
-        background-size: 15%;
+        background-size: 18%;
         background-position: 5px; 
         background-color: rgba(0, 0, 0, 0.3);
     }
@@ -890,6 +890,7 @@ facility-container[b-22iwbtwwcp] {
         background-size: 15%;
         background-position: 5px;
         background-color: rgba(0, 0, 0, 0.3);
+        font-size: 20px;
     }
 
 /* OTHER STUFF */
@@ -1004,21 +1005,37 @@ facility-container[b-22iwbtwwcp] {
     z-index: 3;
 }
 
-    .about-infobox > h1[b-dwg33yn5ks] {
-        padding: 18px;
+    .about-infobox h1[b-dwg33yn5ks] {
+        padding: 12px;
+        margin-bottom: 4px;
         background-color: #7F7F7F;
         text-align: center;
     }
 
-    .about-infobox > p[b-dwg33yn5ks] {
+    .about-infobox p[b-dwg33yn5ks] {
         padding: 4px 18px;
+        margin-bottom: 0;
         font-size: 1.2rem;
+    }
+
+    .about-infobox hr[b-dwg33yn5ks] {
+        margin: 12px 0;
+    }
+
+    .changelog p[b-dwg33yn5ks] {
+        font-size: 1.4rem;
+        margin-bottom: 4px;
+    }
+
+    .changelog ul[b-dwg33yn5ks] {
+        margin: 8px 4px;
     }
 
 .about-trademark[b-dwg33yn5ks], .about-trademark > *[b-dwg33yn5ks] {
     text-align: center;
     font-style: italic;
     color: #E5BA82;
+    padding-bottom: 18px !important;
 }
 
 .about-background[b-dwg33yn5ks] {

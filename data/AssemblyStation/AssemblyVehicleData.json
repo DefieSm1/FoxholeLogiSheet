@@ -565,7 +565,7 @@
             "cmatCost": 0,
             "pcmatCost": 0,
             "steelCost": 50,
-            "assmatCost": [ 0, 30, 0, 60, 35 ],
+            "assmatCost": [ 0, 0, 30, 60, 35 ],
             "baseVehicle": "",
             "productionTime": 64800
         }
