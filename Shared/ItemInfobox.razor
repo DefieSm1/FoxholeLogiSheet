@@ -9,7 +9,7 @@
 		<p class="item-description">@Item.Description</p>
 		@if(!Simplified)
 		{
-			@if(Item.DamageType != "") 
+			@if(!String.IsNullOrEmpty(Item.DamageType))
 			{
 				<p class="item-damagetype">Deals @Item.DamageType damage</p>
 			}
@@ -17,18 +17,30 @@
 			{
 				<p class="item-damageinfo  @(SelectedCategory == "Uniforms" ? "item-cratesize" : "")">@info</p>
 			}
-			<p class="item-ammoused">@Item.AmmoUsed</p>
-			@if(Item.CrateSize != 0) 
+			@if(!String.IsNullOrEmpty(Item.AmmoUsed))
+			{
+				<p class="item-ammoused">@Item.AmmoUsed</p>
+			}
+			@if(Item.CrateSize > 0) 
 			{
 				<p class="item-cratesize">Produces a crate of @(Item.CrateSize)x @(Item.Name)(s)</p>
 			}
-			@if(Item.BaseVehicle != "")
+			@if(!String.IsNullOrEmpty(Item.BaseVehicle))
 			{
 				<p class="item-damageinfo">Requires base vehicle: @Item.BaseVehicle</p>
 			}
-			@if (Item.ProductionTime > 0) @* The reason for these weirdly placed linebreaks is so it's more readable without HTML adding a space between the bits *@
+			@if (Item.ProductionTime > 0)
 			{ 
-				<p class="item-damageinfo">@time.ToString(@"h\:mm\:ss")</p>
+				<p class="item-damageinfo">
+					@if(time.Days > 0)
+					{
+						@time.ToString(@"d\:hh\:mm\:ss")
+					}
+					else
+					{
+						@time.ToString(@"h\:mm\:ss")
+					}
+				</p>
 			}
 			<div class="item-costs">
 				<div class="@(Item.BmatCost > 0 ? "" : "d-none")">

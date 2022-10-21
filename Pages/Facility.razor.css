@@ -12,6 +12,8 @@
     justify-content: center
 }
 
+/* BUILDING SELECTION */
+
 .building-select {
     max-width: fit-content;
     margin: 0 auto 20px;
@@ -64,6 +66,8 @@
         .facility-building:disabled:hover {
             background-color: #414241;
         }
+
+/* FACILITY RECIPES */
 
 facility-container {
     width: 100%;
@@ -192,6 +196,8 @@ facility-container {
         border: 1px dashed whitesmoke;
     }
 
+/* RECIPE EXTRA INFOBOX */
+
 .extra-recipe-info {
     width: 40px;
     height: 40px;
@@ -216,6 +222,45 @@ facility-container {
     .extra-recipe-info:hover {
         background-color: #7F7F7F;
     }
+
+.recipe-infobox {
+    position: fixed;
+    z-index: 1;
+    max-width: 410px;
+    background-color: rgba(0, 0, 0, 0.95);
+    color: rgb(230, 230, 230);
+    font-size: 16px;
+}
+
+.recipe-infobox, .recipe-infobox > * {
+    pointer-events: none;
+}
+
+.recipe-infobox-header {
+    background-color: #7F7F7F;
+    margin: 0 !important;
+    padding: 0.4rem;
+    padding-left: 12px;
+}
+
+    .recipe-infobox-header > p {
+        margin: 0 !important;
+        vertical-align: middle;
+    }
+
+.recipe-infobox-info {
+    margin: 0.8rem;
+}
+
+.recipe-infobox-info > p {
+    margin: 0;
+}
+
+    .recipe-infobox-info > p > span, .recipe-infobox-info > p > i {
+        color: #E5BA82;
+    }
+
+/* BUILDING UPGRADE SELECTION */
 
 .upgrade-select {
     max-width: fit-content;
@@ -273,43 +318,6 @@ facility-container {
         .building-upgrade:disabled:hover {
             background-color: #414241;
         }
-
-.recipe-infobox {
-    position: fixed;
-    z-index: 1;
-    max-width: 410px;
-    background-color: rgba(0, 0, 0, 0.95);
-    color: rgb(230, 230, 230);
-    font-size: 16px;
-}
-
-.recipe-infobox, .recipe-infobox > * {
-    pointer-events: none;
-}
-
-.recipe-infobox-header {
-    background-color: #7F7F7F;
-    margin: 0 !important;
-    padding: 0.4rem;
-    padding-left: 12px;
-}
-
-    .recipe-infobox-header > p {
-        margin: 0 !important;
-        vertical-align: middle;
-    }
-
-.recipe-infobox-info {
-    margin: 0.8rem;
-}
-
-.recipe-infobox-info > p {
-    margin: 0;
-}
-
-    .recipe-infobox-info > p > span, .recipe-infobox-info > p > i {
-        color: #E5BA82;
-    }
 
 @media only screen and (max-width: 800px) {
     .recipe-infobox, .recipe-infobox > * {

@@ -272,7 +272,10 @@
 	{
 		TimeSpan recipeTime = TimeSpan.FromSeconds(seconds);
 
-		return recipeTime.ToString(@"h\:mm\:ss");
+		if (recipeTime.Days > 0)
+			return recipeTime.ToString(@"d\:hh\:mm\:ss");
+		else
+			return recipeTime.ToString(@"h\:mm\:ss");
 	}
 
 	public string GetRecipeAutonomy(string type = "input")
