@@ -1,6 +1,5 @@
 {
-    "AssemblyStationMotorPool":
-    {
+    "AssemblyStationMotorPool": {
         "name": "Motor Pool",
         "description": "An assembly station for producing light-duty logistics vehicles like trucks.",
         "bmatCost": 0,
@@ -8,8 +7,7 @@
         "pcmatCost": 0,
         "steelCost": 0
     },
-    "AssemblyStationRocket":
-    {
+    "AssemblyStationRocket": {
         "name": "Rocket Factory",
         "description": "An assembly station for producing half-tracks and rocket vehicles.",
         "bmatCost": 0,
@@ -17,8 +15,7 @@
         "pcmatCost": 65,
         "steelCost": 0
     },
-    "AssemblyStationField":
-    {
+    "AssemblyStationField": {
         "name": "Field Station",
         "description": "An assembly station for producing field weapons and utility vehicles such as Harvesters.",
         "bmatCost": 0,
@@ -26,8 +23,7 @@
         "pcmatCost": 25,
         "steelCost": 0
     },
-    "AssemblyStationTank":
-    {
+    "AssemblyStationTank": {
         "name": "Tank Factory",
         "description": "An assembly station for producing tank class vehicles",
         "bmatCost": 0,
@@ -35,8 +31,7 @@
         "pcmatCost": 200,
         "steelCost": 0
     },
-    "AssemblyStationWeapons":
-    {
+    "AssemblyStationWeapons": {
         "name": "Weapons Platform",
         "description": "An assembly station for producing emplaced weapon platforms and specialized tanks.",
         "bmatCost": 0,
@@ -44,8 +39,7 @@
         "pcmatCost": 0,
         "steelCost": 20
     },
-    "AssemblyLargeTrain":
-    {
+    "AssemblyLargeTrain": {
         "name": "Train Assembly",
         "description": "An assembly station for producing train cars.",
         "bmatCost": 0,
@@ -53,8 +47,7 @@
         "pcmatCost": 0,
         "steelCost": 150
     },
-    "AssemblyLargeHeavyTank":
-    {
+    "AssemblyLargeHeavyTank": {
         "name": "Heavy Tank Assembly",
         "description": "An assembly station for producing heavy tank class vehicles.",
         "bmatCost": 0,

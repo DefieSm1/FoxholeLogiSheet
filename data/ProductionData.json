@@ -1,8 +1,6 @@
 {
-    "smallArms":
-    {
-        "ARBooker":
-        {
+    "smallArms": {
+        "ARBooker": {
             "name": "Booker Storm Rifle 838",
             "category": "Assault Rifle",
             "description": "The Booker is a high-impact three-round burst Storm Rifle for those who like to shoot first.",
@@ -17,8 +15,7 @@
             "hematCost": 0,
             "productionTime": 80
         },
-        "ARAalto":
-        {
+        "ARAalto": {
             "name": "Aalto Storm Rifle 24",
             "category": "Assault Rifle",
             "description": "Widely considered to be the first storm rifle, the Aalto is a marvel in Caoivish engineering. With its two fire modes, it can be used as a rapid-fire assault weapon or a mid-range rifle.",
@@ -33,8 +30,7 @@
             "hematCost": 0,
             "productionTime": 80
         },
-        "AmmoRifle792":
-        {
+        "AmmoRifle792": {
             "name": "7.92mm",
             "category": "",
             "description": "Standard ammunition for Storm Rifles and Armored Cars.",
@@ -49,8 +45,7 @@
             "hematCost": 0,
             "productionTime": 60
         },
-        "MGMalone":
-        {
+        "MGMalone": {
             "name": "Malone MK.2",
             "category": "Machine Gun",
             "description": "This heavy machine gun is bulky enough to require a steady surface to maintain stability. The Malone series of machine guns are unmatched defenders on the battlefield.",
@@ -65,8 +60,7 @@
             "hematCost": 0,
             "productionTime": 100
         },
-        "GrenadeHarpa":
-        {
+        "GrenadeHarpa": {
             "name": "A3 Harpa Fragmentation Grenade",
             "category": "Grenade",
             "description": "This anti-personnel fragmentation grenade is designed with pull-pin mechanics and a time fuse for user safety. Serrations in the casing allow for a better grip and increased fragmentation effectiveness.",
@@ -81,8 +75,7 @@
             "hematCost": 0,
             "productionTime": 100
         },
-        "PistolCascadier":
-        {
+        "PistolCascadier": {
             "name": "Cascadier 873",
             "category": "Pistol",
             "description": "This unique sidearm fires in three-round bursts. The Cascadier may not have the stopping power of its cousins, but it more than makes up for it with its lightweight frame, concealability, and fire rate.",
@@ -97,8 +90,7 @@
             "hematCost": 0,
             "productionTime": 30
         },
-        "AmmoPistol8":
-        {
+        "AmmoPistol8": {
             "name": "8mm",
             "category": "",
             "description": "Standard ammunition for pistols.",
@@ -113,8 +105,7 @@
             "hematCost": 0,
             "productionTime": 20
         },
-        "PistolRevolver":
-        {
+        "PistolRevolver": {
             "name": "Cometa T2-9",
             "category": "Revolver",
             "description": "The Cometa T2-9 boasts remarkable stopping power for a sidearm. This Estrellan mainstay has lived through several generations due to its fine craftsmanship and design.",
@@ -129,8 +120,7 @@
             "hematCost": 0,
             "productionTime": 50
         },
-        "RifleHangman":
-        {
+        "RifleHangman": {
             "name": "The Hangman 757",
             "category": "Heavy Rifle",
             "description": "The weapon of choice for pirates and smugglers, its legend is well-earned. With incredibly high stopping power and unique revolver mechanism, the Hangman often plays judge, jury, and executioner.",
@@ -145,8 +135,7 @@
             "hematCost": 0,
             "productionTime": 80
         },
-        "AmmoPistol44":
-        {
+        "AmmoPistol44": {
             "name": ".44",
             "category": "",
             "description": "Standard ammunition for revolvers.",
@@ -161,8 +150,7 @@
             "hematCost": 0,
             "productionTime": 40
         },
-        "RifleSampo":
-        {
+        "RifleSampo": {
             "name": "Sampo Auto-Rifle 77",
             "category": "Rifle",
             "description": "The precursor to the storm rifle, the Sampo Auto-Rifle, is a mastercraft of its day. With a single shot and automatic fire mode, this versatile rifle may not reach the fire rates of automatic weapons but more than makes up for it with utility.",
@@ -177,8 +165,7 @@
             "hematCost": 0,
             "productionTime": 70
         },
-        "RifleBlakerow":
-        {
+        "RifleBlakerow": {
             "name": "Blakerow 871",
             "category": "Rifle",
             "description": "The Blakerow is a carbine with a high rate of fire compared to its bolt-action predecessor. This increased fire rate does come at the cost of innate stopping power; however, its versatility and lightweight frame more than makes up for any perceived shortcomings.",
@@ -193,8 +180,7 @@
             "hematCost": 0,
             "productionTime": 80
         },
-        "RifleCinder":
-        {
+        "RifleCinder": {
             "name": "Clancy-Cinder M3",
             "category": "Long Rifle",
             "description": "The Clancy Cinder is a classic, high-powered long rifle designed for use in mid-to-long range encounters. First deployed with the Hands during a high-risk operation in Acrithia.",
@@ -209,8 +195,7 @@
             "hematCost": 0,
             "productionTime": 90
         },
-        "RifleLough":
-        {
+        "RifleLough": {
             "name": "No.2 Loughcaster",
             "category": "Rifle",
             "description": "Standard-issue Warden rifle. This bolt-action firearm is as robust as they come and has seen over a century of use on the battlefield.",
@@ -225,8 +210,7 @@
             "hematCost": 0,
             "productionTime": 70
         },
-        "RifleSniper":
-        {
+        "RifleSniper": {
             "name": "Clancy-Raca m4",
             "category": "Sniper Rifle",
             "description": "A heavy-duty, long-range marksman rifle. The Clancy-Raca has one hell of a kick but is fitted with a powerful scope, allowing infantry to survey the battlefield and provide support from a safe location.",
@@ -241,8 +225,7 @@
             "hematCost": 0,
             "productionTime": 125
         },
-        "AmmoRifle762":
-        {
+        "AmmoRifle762": {
             "name": "7.62mm",
             "category": "",
             "description": "Standard ammunition for rifles.",
@@ -257,8 +240,7 @@
             "hematCost": 0,
             "productionTime": 50
         },
-        "Shotgun":
-        {
+        "Shotgun": {
             "name": "Brasa Shotgun",
             "category": "Shotgun",
             "description": "This close-range firearm is an Estrellan import originally designed for hunting wild game. The Brasa is primarily used in urban operations.",
@@ -273,8 +255,7 @@
             "hematCost": 0,
             "productionTime": 80
         },
-        "AmmoBuckshot":
-        {
+        "AmmoBuckshot": {
             "name": "Buckshot",
             "category": "",
             "description": "Standard ammunition for Shotguns.",
@@ -289,8 +270,7 @@
             "hematCost": 0,
             "productionTime": 50
         },
-        "SMGLiar":
-        {
+        "SMGLiar": {
             "name": "No.1 \"The Liar\" Submachinegun",
             "category": "Submachine Gun",
             "description": "This unique, heavy-duty submachine gun is not very useful on the run, but with careful aim and adequate cover, becomes a razorblade in the night.",
@@ -305,8 +285,7 @@
             "hematCost": 0,
             "productionTime": 80
         },
-        "SMGFiddler":
-        {
+        "SMGFiddler": {
             "name": "Fiddler Submachine Gun Model 868",
             "category": "Submachine Gun",
             "description": "The Fiddler Submachine gun is a widely used urban combat weapon. Its high rate of fire and compact frame makes it ideal for close-quarters engagements.",
@@ -321,8 +300,7 @@
             "hematCost": 0,
             "productionTime": 80
         },
-        "AmmoSMG9":
-        {
+        "AmmoSMG9": {
             "name": "9mm",
             "category": "",
             "description": "Standard ammunition for submachine guns.",
@@ -337,8 +315,7 @@
             "hematCost": 0,
             "productionTime": 50
         },
-        "GrenadeSmoke":
-        {
+        "GrenadeSmoke": {
             "name": "PT-815 Smoke Grenade",
             "category": "Smoke Grenade",
             "description": "A standard smoke grenade designed for concealing allied movement or screening the enemy's vision.",
@@ -353,8 +330,7 @@
             "hematCost": 0,
             "productionTime": 75
         },
-        "GrenadeGas":
-        {
+        "GrenadeGas": {
             "name": "Green Ash Grenade",
             "category": "Gas Grenade",
             "description": "Green ash is an asphyxiating toxin. Inhaling it without protection will result in a quick death. Be sure to wear a gas mask with fresh filters when handling Green Ash.",
@@ -369,8 +345,7 @@
             "hematCost": 0,
             "productionTime": 100
         },
-        "AmmoMG127":
-        {
+        "AmmoMG127": {
             "name": "12.7mm",
             "category": "",
             "description": "Standard ammunition for machine guns.",
@@ -386,10 +361,8 @@
             "productionTime": 70
         }
     },
-    "heavyArms":
-    {
-        "ATRifle":
-        {
+    "heavyArms": {
+        "ATRifle": {
             "name": "135 Neville Anti-Tank Rifle",
             "category": "Anti-Tank Rifle",
             "description": "The Neville is unmatched in its versatility as a portable, magazine-based anti-armor firearm.",
@@ -404,8 +377,7 @@
             "hematCost": 0,
             "productionTime": 37
         },
-        "AmmoAT20":
-        {
+        "AmmoAT20": {
             "name": "20mm",
             "category": "",
             "description": "Standard ammunition for anti-tank rifles.",
@@ -420,8 +392,7 @@
             "hematCost": 0,
             "productionTime": 100
         },
-        "ATBonesawTripod":
-        {
+        "ATBonesawTripod": {
             "name": "Bonesaw MK.3",
             "category": "Mounted Anti-Tank RPG",
             "description": "This variant of the Bonesaw MK.3 is specially designed for use with tripod mounts. This affords it with increased stability and maximum potential range.",
@@ -436,8 +407,7 @@
             "hematCost": 0,
             "productionTime": 250
         },
-        "ATBonesawHand":
-        {
+        "ATBonesawHand": {
             "name": "Bonesaw MK.3",
             "category": "Anti-Tank RPG",
             "description": "The pride of the Warden anti-armored arsenal, the Bonesaw Mk.3 has one job; to cut through heavy metal plating of Colonial tanks.",
@@ -452,8 +422,7 @@
             "hematCost": 0,
             "productionTime": 50
         },
-        "AmmoATIndirect":
-        {
+        "AmmoATIndirect": {
             "name": "ARC/RPG",
             "category": "",
             "description": "An anti-tank projectili fied from indirect RPG launchers.",
@@ -468,8 +437,7 @@
             "hematCost": 0,
             "productionTime": 100
         },
-        "Flamethrower":
-        {
+        "Flamethrower": {
             "name": "Wilow's Bane Model 845",
             "category": "Flamethrower",
             "description": "Named for the unfortunate trees harmed in the development of this highly destructive weapon, the Wilow's Bane utilizes flammable chemicals and fires them into a concentrated stream through an open flame. This liquid flame ignites Colonial emplacements and garrisons to route infantry while reducing their defenses to a pile of ash.",
@@ -484,8 +452,7 @@
             "hematCost": 0,
             "productionTime": 50
         },
-        "GrenadeTremola":
-        {
+        "GrenadeTremola": {
             "name": "Tremola Grenade GPb-1",
             "category": "HE Grenade",
             "description": "An explosive Estrllan grenade specially designed for use with handheld grenade launchers. This modern grenade boasts a large payload and is deadly to lingering infantry and structural supports.",
@@ -500,8 +467,7 @@
             "hematCost": 0,
             "productionTime": 80
         },
-        "MGRatcatcher":
-        {
+        "MGRatcatcher": {
             "name": "Malone Ratcatcher MK.1",
             "category": "Mounted Machinegun",
             "description": "Early iterations of this machinegun were built to be emplaced in bunkers and on the decks of lightly armed warships, the Ratcatcher is Harvey Malone’s first freely mountable infantry weapon designed for field use. Just like its predecessors, this heavy weapon suppresses enemy soldiers with unmatched efficiency.",
@@ -516,8 +482,7 @@
             "hematCost": 0,
             "productionTime": 125
         },
-        "AmmoShell30":
-        {
+        "AmmoShell30": {
             "name": "30mm",
             "category": "",
             "description": "Standard explosive shell with certain small vehicles and infantry weapons",
@@ -532,8 +497,7 @@
             "hematCost": 0,
             "productionTime": 100
         },
-        "Mortar":
-        {
+        "Mortar": {
             "name": "Cremari Mortar",
             "category": "Mortar",
             "description": "This short-range cannon is designed to bombard enemy infantry with indirect fire.",
@@ -548,8 +512,7 @@
             "hematCost": 0,
             "productionTime": 50
         },
-        "AmmoMortarFlare":
-        {
+        "AmmoMortarFlare": {
             "name": "Flare Mortar Shell",
             "category": "",
             "description": "A long-burning flare that ignites midair to illuminate a large area and reveals enemy targets.",
@@ -564,8 +527,7 @@
             "hematCost": 0,
             "productionTime": 100
         },
-        "AmmoMortarShrapnel":
-        {
+        "AmmoMortarShrapnel": {
             "name": "Shrapnel Mortar Shell",
             "category": "",
             "description": "A payload filled with shrapnel used with mortar tubes. Devestates nearby infantry.",
@@ -580,8 +542,7 @@
             "hematCost": 0,
             "productionTime": 100
         },
-        "AmmoMortarHE":
-        {
+        "AmmoMortarHE": {
             "name": "Mortar Shell",
             "category": "",
             "description": "An explosive payload used with mortar tubes.",
@@ -596,8 +557,7 @@
             "hematCost": 0,
             "productionTime": 100
         },
-        "GrenadeATFlask":
-        {
+        "GrenadeATFlask": {
             "name": "BF5 White Ash Flask Grenade",
             "category": "Anti-Tank Grenade",
             "description": "An explosive flask used for melting enemy armor. This carefully designed liquid bomb explodes into a dazzling flash of molten debris upon impact.",
@@ -612,8 +572,7 @@
             "hematCost": 0,
             "productionTime": 75
         },
-        "GrenadeHE":
-        {
+        "GrenadeHE": {
             "name": "Mammon 91-b",
             "category": "HE Grenade",
             "description": "This densely packed, high-explosive grenade is designed to damage structures and vehicles.",
@@ -628,8 +587,7 @@
             "hematCost": 0,
             "productionTime": 80
         },
-        "GrenadeATSticky":
-        {
+        "GrenadeATSticky": {
             "category": "",
             "name": "Anti-Tank Sticky Bomb",
             "description": "An adherable grenade designed to penetrate heavy tank armor. The sticky bomb can only be thrown a short distance and is ineffective against structures.",
@@ -644,8 +602,7 @@
             "hematCost": 0,
             "productionTime": 75
         },
-        "RPGFoebreaker":
-        {
+        "RPGFoebreaker": {
             "name": "Cutler Foebreaker",
             "category": "Mounted RPG Launcher",
             "description": "This unique duel-barrelled RPG launcher can fire two RPG shells in relatively quick succession. This increase in firepower makes it nearly impossible for a single soldier to operate without the support of a sturdy mount.",
@@ -660,8 +617,7 @@
             "hematCost": 0,
             "productionTime": 250
         },
-        "RPGCutler":
-        {
+        "RPGCutler": {
             "name": "Cutler Launcher 4",
             "category": "RPG",
             "description": "The Cutler Launcher is capable of firing and unguided, rocket-propelled grenade over short distances with startling efficiency. Its simple design allows for easy deployment and storage.",
@@ -676,8 +632,7 @@
             "hematCost": 0,
             "productionTime": 50
         },
-        "AmmoRPG":
-        {
+        "AmmoRPG": {
             "name": "RPG",
             "category": "",
             "description": "A fast-moving explosive projectile used with RPG launchers.",
@@ -693,10 +648,8 @@
             "productionTime": 100
         }
     },
-    "heavyMunitions":
-    {
-        "AmmoShell150":
-        {
+    "heavyMunitions": {
+        "AmmoShell150": {
             "name": "150mm",
             "category": "",
             "description": "Payload for heavy artillery weapons.",
@@ -711,8 +664,7 @@
             "hematCost": 10,
             "productionTime": 65
         },
-        "AmmoShell120":
-        {
+        "AmmoShell120": {
             "name": "120mm",
             "category": "",
             "description": "Payload for light artillery weapons.",
@@ -727,8 +679,7 @@
             "hematCost": 0,
             "productionTime": 55
         },
-        "AmmoShell250":
-        {
+        "AmmoShell250": {
             "name": "250mm",
             "category": "",
             "description": "A shell that is launched over short distances by a spigot mortar.",
@@ -743,8 +694,7 @@
             "hematCost": 25,
             "productionTime": 150
         },
-        "AmmoShell68":
-        {
+        "AmmoShell68": {
             "name": "68mm",
             "category": "",
             "description": "A standard anti-tank shell.",
@@ -759,8 +709,7 @@
             "hematCost": 0,
             "productionTime": 200
         },
-        "AmmoShell40":
-        {
+        "AmmoShell40": {
             "name": "40mm",
             "category": "",
             "description": "Standard payload for light tanks.",
@@ -775,8 +724,7 @@
             "hematCost": 0,
             "productionTime": 200
         },
-        "RocketWarhead":
-        {
+        "RocketWarhead": {
             "name": "Warhead",
             "category": "",
             "description": "The payload for Ballistic Rockets. A high yield bomb that delivers 3 tons of TNT and is capable of leveling and entire village or town block.",
@@ -792,10 +740,8 @@
             "productionTime": 600
         }
     },
-    "utility":
-    {
-        "UtilityBarbedWire":
-        {
+    "utility": {
+        "UtilityBarbedWire": {
             "name": "Barbed Wire",
             "category": "Large Material",
             "description": "Used to construct Barbed Wire",
@@ -810,8 +756,7 @@
             "hematCost": 0,
             "productionTime": 15
         },
-        "UtilityBinoculars":
-        {
+        "UtilityBinoculars": {
             "name": "Binoculars",
             "category": "",
             "description": "An optical instrument used for viewing distant object.",
@@ -826,8 +771,7 @@
             "hematCost": 0,
             "productionTime": 50
         },
-        "AmmoFlamethrower":
-        {
+        "AmmoFlamethrower": {
             "name": "Wilow's Bane Ammo",
             "category": "Flamethrower Ammo",
             "description": "Ammo for Willow's Bane Model 845",
@@ -842,8 +786,7 @@
             "hematCost": 5,
             "productionTime": 100
         },
-        "UtilityListeningKit":
-        {
+        "UtilityListeningKit": {
             "name": "Listening Kit",
             "category": "Equipment",
             "description": "A device used to intercept enemy radio broadcasts transmitted from nearby sources.",
@@ -858,8 +801,7 @@
             "hematCost": 0,
             "productionTime": 60
         },
-        "UtilityMetalBeam":
-        {
+        "UtilityMetalBeam": {
             "name": "Metal Beam",
             "category": "Large Material",
             "description": "Used to construct Metal Beam defenses.",
@@ -874,8 +816,7 @@
             "hematCost": 0,
             "productionTime": 20
         },
-        "UtilityRadioBackpack":
-        {
+        "UtilityRadioBackpack": {
             "name": "Radio Backpack",
             "category": "",
             "description": "Automatically gathers map intel periodically when equipped. The Radio Backpack is also used to transmit other sensitive information across long distances.",
@@ -890,8 +831,7 @@
             "hematCost": 0,
             "productionTime": 75
         },
-        "UtilitySandbag":
-        {
+        "UtilitySandbag": {
             "name": "Sandbag",
             "category": "Large Material",
             "description": "Large Material",
@@ -906,8 +846,7 @@
             "hematCost": 0,
             "productionTime": 15
         },
-        "UtilitySatchel":
-        {
+        "UtilitySatchel": {
             "name": "Alligator Charge",
             "category": "Explosive Charge",
             "description": "This heavy-duty explosive device is designed to deal significant damage to structures and stationary vehicles.",
@@ -922,8 +861,7 @@
             "hematCost": 15,
             "productionTime": 100
         },
-        "UtilityShovel":
-        {
+        "UtilityShovel": {
             "name": "Shovel",
             "category": "",
             "description": "A tool for digging Trenches and other entrenched structures.",
@@ -938,8 +876,7 @@
             "hematCost": 0,
             "productionTime": 100
         },
-        "UtilitySledgeHammer":
-        {
+        "UtilitySledgeHammer": {
             "name": "Sledge Hammer",
             "category": "",
             "description": "A tool used to salvage components from remains of old vehicles and equipment.",
@@ -954,8 +891,7 @@
             "hematCost": 0,
             "productionTime": 100
         },
-        "UtilityATMine":
-        {
+        "UtilityATMine": {
             "name": "Absime AT-99",
             "category": "Explosive Charge",
             "description": "A simple mine that is places under terrain and fitted with a pressure-sensitive plate to detonate under the weight of heavt vehicles. Mines are visible to friendlies and enemies on foot and deactivate after 48 in-game days.",
@@ -970,8 +906,7 @@
             "hematCost": 0,
             "productionTime": 100
         },
-        "UtilityTripod":
-        {
+        "UtilityTripod": {
             "name": "Tripod",
             "category": "",
             "description": "A mount point for deployable infantry weapons and equipment.",
@@ -986,8 +921,7 @@
             "hematCost": 0,
             "productionTime": 60
         },
-        "UtilityWrench":
-        {
+        "UtilityWrench": {
             "name": "Wrench",
             "category": "",
             "description": "A multipurpose tool. Can be used to dismantle mines/barbed wire and unlock vehicles.",
@@ -1002,8 +936,7 @@
             "hematCost": 0,
             "productionTime": 50
         },
-        "UtilityBucket":
-        {
+        "UtilityBucket": {
             "name": "Water Bucket",
             "category": "Water Bucket",
             "description": "A bucket that holds water. You can toss water onto fires to extinguish them.",
@@ -1018,8 +951,7 @@
             "hematCost": 0,
             "productionTime": 40
         },
-        "UtilityBayonet":
-        {
+        "UtilityBayonet": {
             "name": "Buckhorn CCQ-18",
             "category": "Bayonet",
             "description": "Attached to the barrel of a rifle, this short blade can spear enemies in close quarters encounters.",
@@ -1034,8 +966,7 @@
             "hematCost": 0,
             "productionTime": 30
         },
-        "UtilityGasMask":
-        {
+        "UtilityGasMask": {
             "name": "Gas Mask",
             "category": "",
             "description": "Protects against poison gas.",
@@ -1050,8 +981,7 @@
             "hematCost": 0,
             "productionTime": 100
         },
-        "UtilityGasFilter":
-        {
+        "UtilityGasFilter": {
             "name": "Gas Mask Filter",
             "category": "",
             "description": "When attached to a Gas Mask, this filter provides fresh air to the wearer.",
@@ -1066,8 +996,7 @@
             "hematCost": 0,
             "productionTime": 50
         },
-        "UtilityOspreay":
-        {
+        "UtilityOspreay": {
             "name": "The Ospreay",
             "category": "Grenade Launcher",
             "description": "A rifle attachment that fires grenades with pneumatic force. Along with specialized grenades, it can launch standard grenades.",
@@ -1082,8 +1011,7 @@
             "hematCost": 0,
             "productionTime": 100
         },
-        "UtilityRadio":
-        {
+        "UtilityRadio": {
             "name": "Radio",
             "category": "",
             "description": "Receives map intelligence updates.",
@@ -1098,8 +1026,7 @@
             "hematCost": 0,
             "productionTime": 50
         },
-        "RocketBooster":
-        {
+        "RocketBooster": {
             "name": "Rocket Booster",
             "category": "",
             "description": "A booster engine that provides thrust for launching Ballistic Rockets to long distance targets.",
@@ -1115,10 +1042,8 @@
             "productionTime": 600
         }
     },
-    "medical":
-    {
-        "MedicalBandages":
-        {
+    "medical": {
+        "MedicalBandages": {
             "name": "Bandages",
             "category": "",
             "description": "Used to stem bleeding.",
@@ -1133,8 +1058,7 @@
             "hematCost": 0,
             "productionTime": 40
         },
-        "MedicalAidKit":
-        {
+        "MedicalAidKit": {
             "name": "First Aid Kit",
             "category": "",
             "description": "Used by medics to heal others.",
@@ -1149,8 +1073,7 @@
             "hematCost": 0,
             "productionTime": 35
         },
-        "MedicalTraumaKit":
-        {
+        "MedicalTraumaKit": {
             "name": "Trauma Kit",
             "category": "",
             "description": "Used by medics to revive wounded soldiers.",
@@ -1165,8 +1088,7 @@
             "hematCost": 0,
             "productionTime": 50
         },
-        "MedicalPlasma":
-        {
+        "MedicalPlasma": {
             "name": "Blood Plasma",
             "category": "",
             "description": "A blood component used to treat wounded soldiers on the battlefield.",
@@ -1181,8 +1103,7 @@
             "hematCost": 0,
             "productionTime": 40
         },
-        "MedicalSoldierSupplies":
-        {
+        "MedicalSoldierSupplies": {
             "name": "Soldier Supplies",
             "category": "",
             "description": "A standard issue set of supplies for foot soldiers. Bases must be stockpiled with Soldier Supplies in order for players to spawn.",
@@ -1198,10 +1119,8 @@
             "productionTime": 80
         }
     },
-    "supplies":
-    {
-        "SuppliesBunker":
-        {
+    "supplies": {
+        "SuppliesBunker": {
             "name": "Bunker Supplies",
             "category": "",
             "description": "Supplies for maintaining structures. Store at Bases to prevent decay on surrounding Bunker/Trench structures when Garrison Supplies are not available.",
@@ -1216,8 +1135,7 @@
             "hematCost": 0,
             "productionTime": 190
         },
-        "SuppliesGarrison":
-        {
+        "SuppliesGarrison": {
             "name": "Garrison Supplies",
             "category": "",
             "description": "Supplies for maintaining structures. Store at Bases to prevent decay on surrounding structures.",
@@ -1233,10 +1151,8 @@
             "productionTime": 190
         }
     },
-    "uniforms":
-    {
-        "UniformAmmo":
-        {
+    "uniforms": {
+        "UniformAmmo": {
             "name": "Specialist's Overcoat",
             "category": "Warden Heavy Ammo Uniform",
             "description": "Warden specialists require a uniform designed to optimize their capacity to haul a variety of heavy ammunition.",
@@ -1251,8 +1167,7 @@
             "hematCost": 0,
             "productionTime": 90
         },
-        "UniformArmour":
-        {
+        "UniformArmour": {
             "name": "Gunner's Breastplate",
             "category": "Warden Armour Uniform",
             "description": "Repourposed from ancient wars, these armour plates are highly effective at stopping enemy small arms fire. That protection comes at the cost of weight, and the wearer will feel quite restricted and encumbered.",
@@ -1267,8 +1182,7 @@
             "hematCost": 0,
             "productionTime": 90
         },
-        "UniformEngineer":
-        {
+        "UniformEngineer": {
             "name": "Sapper Gear",
             "category": "Warden Engineer Uniform",
             "description": "Caoivish engineers are legendary in song and nature. They wear specialized uniforms, outfitted with belts and bags for easy access to tools and handheld materials.",
@@ -1283,8 +1197,7 @@
             "hematCost": 0,
             "productionTime": 90
         },
-        "UniformMedic":
-        {
+        "UniformMedic": {
             "name": "Physician's Jacket",
             "category": "Warden Medic Uniform",
             "description": "Physicians in the Warden army are umatched and this uniform has a plethora of pockets and bags designed to carry and deploy first aid gear easily.",
@@ -1299,8 +1212,7 @@
             "hematCost": 0,
             "productionTime": 90
         },
-        "UniformOfficer":
-        {
+        "UniformOfficer": {
             "name": "Officer's Regalia",
             "category": "Warden Officer Uniform",
             "description": "A formal uniform that denotes a regiment's leading officer. While impractical, the officer on duty may use their authority to discipline subordinates without reperation. Officers hold an important role in the Warden Military, dating back to ancient times when Caoiva was ruled by a dozen kings.",
@@ -1315,8 +1227,7 @@
             "hematCost": 0,
             "productionTime": 90
         },
-        "UniformScout":
-        {
+        "UniformScout": {
             "name": "Outrider's Mantle",
             "category": "Warden Scout Uniform",
             "description": "The Warden army relies on outriders to provide and recieve vital intelligence. Their gear is sturdy and well-suited for extended operations in rugget terrain and inclement weather.",
@@ -1331,8 +1242,7 @@
             "hematCost": 0,
             "productionTime": 90
         },
-        "UniformSnow":
-        {
+        "UniformSnow": {
             "name": "Caoivish Parka",
             "category": "Warden Snow Uniform",
             "description": "Born and bred in the northern cold, this heavy parka protects Warden infantry from all but the worst blizzards.",
@@ -1347,8 +1257,7 @@
             "hematCost": 0,
             "productionTime": 90
         },
-        "UniformTank":
-        {
+        "UniformTank": {
             "name": "Padded Boiler Suit",
             "category": "Warden Tank Uniform",
             "description": "Caoivish armour is unmatched in its design and resilience. All crew are provided with a sturdy boilersuit and satchel belts to access essential tools required for tank maintenance and operation.",
@@ -1364,10 +1273,8 @@
             "productionTime": 90
         }
     },
-    "vehicles":
-    {
-        "TruckAmbulance":
-        {
+    "vehicles": {
+        "TruckAmbulance": {
             "name": "Dunne Responder 3e",
             "category": "Ambulance",
             "description": "The Responder Ambulance is efficient at transporting Critically Wounded Soldiers and carrying medical supplies.",
@@ -1382,8 +1289,7 @@
             "hematCost": 0,
             "productionTime": 7205
         },
-        "ACMG":
-        {
+        "ACMG": {
             "name": "O'Brien V.110",
             "category": "Armoured Car",
             "description": "Warden Armoured Cars are quick, well-rounded urban assault platforms. These anti-infantry vehicles are equipped with twin-barrelled machineguns.",
@@ -1398,8 +1304,7 @@
             "hematCost": 0,
             "productionTime": 1250
         },
-        "TruckBus":
-        {
+        "TruckBus": {
             "name": "Dunne Caravaner 2f",
             "category": "Transport Bus",
             "description": "The Caravaner is a transport vehicle used to shuttle personnel to the front line",
@@ -1414,8 +1319,7 @@
             "hematCost": 0,
             "productionTime": 5000
         },
-        "TankDestroyerHeavy":
-        {
+        "TankDestroyerHeavy": {
             "name": "Noble Widow MK. XIV",
             "category": "Destroyer Tank",
             "description": "This deadly tank turns predator into prey. A tank Destroyer, the Noble Widow specializes in ambush tactics, waiting for its quarry and striking with destructive high-velocity shells.",
@@ -1430,8 +1334,7 @@
             "hematCost": 0,
             "productionTime": 8000
         },
-        "FieldAntiTank":
-        {
+        "FieldAntiTank": {
             "name": "Collins Cannon 68mm",
             "category": "Field AT Gun",
             "description": "The Collins Cannon is a mobile Anti-Tank field gun firing 68mm armour-piercing rounds.",
@@ -1446,8 +1349,7 @@
             "hematCost": 0,
             "productionTime": 1000
         },
-        "FieldCannon":
-        {
+        "FieldCannon": {
             "name": "Balfour Wolfhound",
             "category": "Field Cannon",
             "description": "This destructive short-ranged cannon is designed for direct engagement with enemy fortifications. The Wolfhound is fitted with reinforced shielding and a 40mm barrel.",
@@ -1462,8 +1364,7 @@
             "hematCost": 0,
             "productionTime": 1500
         },
-        "FieldMachinegun":
-        {
+        "FieldMachinegun": {
             "name": "Swallowtail 988/127-2",
             "category": "Field Machine Gun",
             "description": "A dual barreled, high calibre anti-infantry machine gun. The Swallowtail is fitted with forward-facing armour plating and is excellent for suppression.",
@@ -1478,8 +1379,7 @@
             "hematCost": 0,
             "productionTime": 1000
         },
-        "FieldMortar":
-        {
+        "FieldMortar": {
             "name": "Balfour Falconer 250mm",
             "category": "Field Mortar",
             "description": "A heavy mobile mortar platform fitted with a thick frontal shield for assaulting fortified locations.",
@@ -1494,8 +1394,7 @@
             "hematCost": 0,
             "productionTime": 1750
         },
-        "TruckFlatbed":
-        {
+        "TruckFlatbed": {
             "name": "BMS - Packmule Flatbed",
             "category": "Flatbed Truck",
             "description": "A heavy duty shipping transport truck designed by Basset Motor Society. It's built for hauling the heaviest of equipment over long distances with ease.",
@@ -1510,8 +1409,7 @@
             "hematCost": 0,
             "productionTime": 1500
         },
-        "HalfTrack":
-        {
+        "HalfTrack": {
             "name": "Niska Mk. I  Gun Motor Carriage",
             "category": "Half-Track",
             "description": "Designed for escort missions and to support infantry operations, the Niska Gun Motor Carriage Half-Track is an armoured, versatile all-terrain vehicle that can be equipped with a variety of mounted weapons.",
@@ -1526,8 +1424,7 @@
             "hematCost": 0,
             "productionTime": 3000
         },
-        "ArmouredPersonnelCarrier":
-        {
+        "ArmouredPersonnelCarrier": {
             "name": "Mulloy LPC",
             "category": "Landing APC",
             "description": "The Mulloy Landing Personnel Carrier is an armoured amphibious vehicle designed for carrying troops across large bodies of water to aid in coordinated beach landings and flanking assaults.",
@@ -1542,8 +1439,7 @@
             "hematCost": 0,
             "productionTime": 1000
         },
-        "LightTank":
-        {
+        "LightTank": {
             "name": "Devitt Mk. III",
             "category": "Light Tank",
             "description": "A highly maneuverable lightweight tank. Designed for urban enviroments, the Devitt is fitted with a 40mm cannon.",
@@ -1558,8 +1454,7 @@
             "hematCost": 0,
             "productionTime": 6000
         },
-        "CruiserTankOutlaw":
-        {
+        "CruiserTankOutlaw": {
             "name": "Gallagher Outlaw Mk. II",
             "category": "Cruiser Tank",
             "description": "Originally designed in response to increasing swarms of Mesean armour, the Outlaw is an exceptionally capable medium tank armed with a long-range 40mm turred and includes a built-in storm rifle support position.",
@@ -1574,8 +1469,7 @@
             "hematCost": 0,
             "productionTime": 8250
         },
-        "AssaultTankSilverhand":
-        {
+        "AssaultTankSilverhand": {
             "name": "Silverhand - Mk. IV",
             "category": "Assault Tank",
             "description": "The Silverhand assault tank is fitted with destructive dual-barrel armaments, and heavy frontal and rear armour. Its 68mm frontal cannon is paired with a lighter 40mm turret.",
@@ -1590,8 +1484,7 @@
             "hematCost": 0,
             "productionTime": 7750
         },
-        "Motorcycle":
-        {
+        "Motorcycle": {
             "name": "Kivela Power Wheel 80-1",
             "category": "Motorcycle",
             "description": "A Warden motorcycle used in patrols and fitted with a sidecar. The Kiveal Power Wheel can also gain a momentary speed boost by burning additional fuel.",
@@ -1606,8 +1499,7 @@
             "hematCost": 0,
             "productionTime": 4250
         },
-        "TruckFuel":
-        {
+        "TruckFuel": {
             "name": "Dunne Fuelrunner 2d",
             "category": "Fuel Tanker",
             "description": "The Fuelrunner is a heavy Dunne rig designed to transport and distribute large quantities of Fuel.",
@@ -1622,8 +1514,7 @@
             "hematCost": 0,
             "productionTime": 5000
         },
-        "ScoutTankSpire":
-        {
+        "ScoutTankSpire": {
             "name": "King Spire Mk. I",
             "category": "Scout Tank",
             "description": "This small tank has been recently recommissioned to the Warden arsenal. It boasts a high maneuverability and an antenna that allows for long-range communications during high-stakes recon operations.",
@@ -1638,8 +1529,7 @@
             "hematCost": 0,
             "productionTime": 3500
         },
-        "LightUtilityVehicle":
-        {
+        "LightUtilityVehicle": {
             "name": "Drummond 100a",
             "category": "Light Utility Vehicle",
             "description": "A multipurpose off-road Warden vehicle that can scout nearby targets.",
@@ -1654,8 +1544,7 @@
             "hematCost": 0,
             "productionTime": 500
         },
-        "TruckDump":
-        {
+        "TruckDump": {
             "name": "Dunne Loadlugger 3c",
             "category": "Truck",
             "description": "This standard Truck is fitted with a resource hopper in place of the standard cargo hold. This allows for a much greater capacity for resources at the expense of space for cargo.",
@@ -1670,8 +1559,7 @@
             "hematCost": 0,
             "productionTime": 6000
         },
-        "Truck":
-        {
+        "Truck": {
             "name": "Dunne Transport",
             "category": "Truck",
             "description": "A heavy-duty Warden truck used to mobilize troops and supplies.",
@@ -1686,8 +1574,7 @@
             "hematCost": 0,
             "productionTime": 5000
         },
-        "ShipBarge":
-        {
+        "ShipBarge": {
             "name": "BMS - Aquatipper",
             "category": "Barge",
             "description": "A large shipping vessel, the Aquatipper is used to transport vehicles, equipment, and personnel over large bodies of water.",
@@ -1702,8 +1589,7 @@
             "hematCost": 0,
             "productionTime": 7500
         },
-        "ShipFreighter":
-        {
+        "ShipFreighter": {
             "name": "BMS - Ironship",
             "category": "Freighter",
             "description": "The Basset Motor Society's Ironship-class shipping vessel is used to freight shippable goods and heavy vehicles.",
@@ -1718,8 +1604,7 @@
             "hematCost": 0,
             "productionTime": 25000
         },
-        "ShipGunboatDouble":
-        {
+        "ShipGunboatDouble": {
             "name": "74c-2 Ronan Meteora Gunship",
             "category": "Gunboat",
             "description": "The Meteora Gunship replaces the machinegun with another identical 120mm artillery cannon on the bow.",
@@ -1734,8 +1619,7 @@
             "hematCost": 0,
             "productionTime": 8000
         },
-        "ShipGunboat":
-        {
+        "ShipGunboat": {
             "name": "74b-1 Ronan Gunship",
             "category": "Gunboat",
             "description": "A naval vessel designed to bombard coastal targets. The Ronan is fitted with a 120mm light artillery cannon and a 12.7mm Machinegun",
@@ -1750,8 +1634,7 @@
             "hematCost": 0,
             "productionTime": 8000
         },
-        "ShipWhiteWhale":
-        {
+        "ShipWhiteWhale": {
             "name": "BMS - White Whale",
             "category": "Landing Ship",
             "description": "A heavily armoured vessel, the Basset Motor Society's White Whale-class troop transports can deploy on faraway beaches to function as a permament forward operating base.",
@@ -1766,8 +1649,7 @@
             "hematCost": 0,
             "productionTime": 5000
         },
-        "ContructionVehicle":
-        {
+        "ContructionVehicle": {
             "name": "BMS - Universal Assembly Rig",
             "category": "Construction Vehicle",
             "description": "A specialized vehicle designed by the Basset Motor Society used in the construction of large structures.",
@@ -1782,8 +1664,7 @@
             "hematCost": 0,
             "productionTime": 5000
         },
-        "Crane":
-        {
+        "Crane": {
             "name": "BMS - Class 2 Mobile Auto-Crane",
             "category": "Crane",
             "description": "The Basset Motor Society's Class 2 Mobile Auto-Crane is used to lift and reposition vehicles and very heavy equipment.",
@@ -1799,10 +1680,8 @@
             "productionTime": 6250
         }
     },
-    "shippables":
-    {
-        "MaterialPallet":
-        {
+    "shippables": {
+        "MaterialPallet": {
             "name": "Material Pallet",
             "category": "",
             "description": "A material pallet.",
@@ -1817,8 +1696,7 @@
             "hematCost": 0,
             "productionTime": 1250
         },
-        "ConcreteMixer":
-        {
+        "ConcreteMixer": {
             "name": "Concrete Mixer",
             "category": "",
             "description": "A portable device that mixes various materials to form Concrete, which are used to build heavily fortified structures.",
@@ -1833,8 +1711,7 @@
             "hematCost": 0,
             "productionTime": 3750
         },
-        "EmplacedAntiTank":
-        {
+        "EmplacedAntiTank": {
             "name": "Leary Shellbore 68mm",
             "category": "",
             "description": "A defensive emplacement with a 68mm Anti-Tank cannon. This rudimentary weapon was once built to fit onto the hull of large naval vessels, but was eventually pahsed out and repurposed.",
@@ -1849,8 +1726,7 @@
             "hematCost": 0,
             "productionTime": 7500
         },
-        "ArtilleryExalt":
-        {
+        "ArtilleryExalt": {
             "name": "Huber Exalt 150mm",
             "category": "",
             "description": "A heavy cannon designed to shatter the garrisons and fortifications of advancing forces. The Exalt is best utilized when emplaced into a defensive position to take advantage of it's impressive range.",
@@ -1865,8 +1741,7 @@
             "hematCost": 0,
             "productionTime": 8750
         },
-        "ArtilleryLariat":
-        {
+        "ArtilleryLariat": {
             "name": "Huber Lariat 120mm",
             "category": "",
             "description": "A light artillery cannon designed to be a fixture in defensive fortifications. The Lariat sports a formidibable long-range 120mm cannon designed to put immense pressure on enemy infantry.",
@@ -1881,8 +1756,7 @@
             "hematCost": 0,
             "productionTime": 1750
         },
-        "EmplacedMachinegun":
-        {
+        "EmplacedMachinegun": {
             "name": "Leary Snare Trap 127",
             "category": "",
             "description": "The Snare Trap is a repurposed anti-aircraft flak cannon used to fortify emplaced positions with twin anti-infantry machine guns.",
@@ -1897,8 +1771,7 @@
             "hematCost": 0,
             "productionTime": 3750
         },
-        "ContainerMaterial":
-        {
+        "ContainerMaterial": {
             "name": "Resource Container",
             "category": "",
             "description": "A container that can carry large quantities of resources and can be transpoted by certain vehicles.",
@@ -1913,8 +1786,7 @@
             "hematCost": 0,
             "productionTime": 2500
         },
-        "ContainerCrate":
-        {
+        "ContainerCrate": {
             "name": "Shipping Container",
             "category": "",
             "description": "A container for shipping very large quantities of Crates using Crane loaded vehicles. This typ of container can only be unloaded at Storage Depots and Seaports.",
@@ -1929,8 +1801,7 @@
             "hematCost": 0,
             "productionTime": 5000
         },
-        "FuelContainer":
-        {
+        "FuelContainer": {
             "name": "Fuel Container",
             "category": "",
             "description": "Stores a high volume of liquids, supporting a variety of fuel types. Nearby structures or vehicles can be refueled directly from this container.",

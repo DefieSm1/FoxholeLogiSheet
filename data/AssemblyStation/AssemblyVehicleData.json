@@ -1,8 +1,6 @@
 {
-    "AssemblyStation": 
-    {
-        "MaterialPallet":
-        {
+    "AssemblyStation": {
+        "MaterialPallet": {
             "name": "Material Pallet",
             "category": "",
             "description": "A material pallet.",
@@ -17,8 +15,7 @@
             "baseVehicle": "",
             "productionTime": 5
         },
-        "TruckArmoured":
-        {
+        "TruckArmoured": {
             "name": "Dunne Leatherback 2a",
             "category": "Truck",
             "description": "A heavy, reinforced Dunne transport. Fitted with a heavier frame, the Leatherback is capable of enduring more punishment at the cost of initial acceleration.",
@@ -33,8 +30,7 @@
             "baseVehicle": "Dunne Transport (Truck)",
             "productionTime": 300
         },
-        "TruckTracked":
-        {
+        "TruckTracked": {
             "name": "Dunne Landrunner 12c",
             "category": "Truck",
             "description": "This standard Truck is fitted with rugged off-road treads, allowing for more efficient movement on rough terrain and conditions at the expense of maximum speed.",
@@ -49,8 +45,7 @@
             "baseVehicle": "Dunne Transport (Truck)",
             "productionTime": 300
         },
-        "SmallGaugeEngine":
-        {
+        "SmallGaugeEngine": {
             "name": "BMS Mineseeker",
             "category": "Small Train Locomotive",
             "description": "The Mineseeker is the Bassett Motor Society's mechanized mule. This small 0-4-0 locomotive can haul tonnes of weight over short distances with little overhead. Ideal for a mining operation or short-range supply chains.",
@@ -65,8 +60,7 @@
             "baseVehicle": "",
             "productionTime": 900
         },
-        "SmallGaugeResource":
-        {
+        "SmallGaugeResource": {
             "name": "BMS Railtruck",
             "category": "Small Container Car",
             "description": "A small gauge container car for transporting raw materials.",
@@ -81,8 +75,7 @@
             "baseVehicle": "",
             "productionTime": 300
         },
-        "SmallGaugeFlatbed":
-        {
+        "SmallGaugeFlatbed": {
             "name": "BMS Linerunner",
             "category": "Small Flatbed Car",
             "description": "A low profile flatbed car for transporting large resources and munitions over short distances on small gauge tracks.",
@@ -98,10 +91,8 @@
             "productionTime": 300
         }
     },
-    "AssemblyStationMotorPool": 
-    {
-        "ACBonesaw":
-        {
+    "AssemblyStationMotorPool": {
+        "ACBonesaw": {
             "name": "O'Brien V. 113 Gravekeeper",
             "category": "Armoured Car",
             "description": "A slight variation of the V.110, the Gravekeeper comes fitted with an embedded Bonesaw launcher, transforming the humble armoured car into an effective indirect anti-armour vehicle.",
@@ -116,8 +107,7 @@
             "baseVehicle": "O'Brien V. 110 (Armoured Car)",
             "productionTime": 300
         },
-        "ACTracked":
-        {
+        "ACTracked": {
             "name": "O'Brien V. 121 Highlander",
             "category": "Armoured Car",
             "description": "Fitted with all-terrain treads, the Highlander brings significant all-terrain mobility and performs especially well in snowy and mountainous enviroments.",
@@ -132,8 +122,7 @@
             "baseVehicle": "O'Brien V. 110 (Armoured Car)",
             "productionTime": 300
         },
-        "ACFlame":
-        {
+        "ACFlame": {
             "name": "O'Brien V. 130 Wild Jack",
             "category": "Armoured Car",
             "description": "While the Noble Firebrand Mk. XVII is a deadly flamethrower tank, a more efficient means of employing flame weapons was needed. Enter the Wild Jack. Named for the fiery idols mady by children for Dead Harvest, the Wild Jack is a variation of the Highlander.",
@@ -148,8 +137,7 @@
             "baseVehicle": "O'Brien V. 110 (Armoured Car)",
             "productionTime": 300
         },
-        "ACHeavy":
-        {
+        "ACHeavy": {
             "name": "O'Brien V. 101 Freeman",
             "category": "Armoured Car",
             "description": "This early O'Brien variant, the V.101 Freeman is fitted with a 360 degree ballistics cannon turret at the expense of top speed.",
@@ -164,8 +152,7 @@
             "baseVehicle": "O'Brien V. 110 (Armoured Car)",
             "productionTime": 300
         },
-        "LightUtilitySpitfire":
-        {
+        "LightUtilitySpitfire": {
             "name": "Drummond Spitfire 100d",
             "category": "Light Utility Vehicle",
             "description": "This LMG-mounted Light Utility Vehicle provides a heavy-duty weapons platform with superior speed. Perfectly suited for supporting flanking infantry or an armoured assault.",
@@ -180,8 +167,7 @@
             "baseVehicle": "Drummond 100a (Light Utility Vehicle)",
             "productionTime": 150
         },
-        "LightUtilityDuckJeep":
-        {
+        "LightUtilityDuckJeep": {
             "name": "Drummond Loscann 55c",
             "category": "Light Utility Vehicle",
             "description": "This amphibious Light Utility Vehicle has been heavily modified to cross rivers and lakes with ease. Venturing out into the open sea is ill-advised, however.",
@@ -197,10 +183,8 @@
             "productionTime": 150
         }
     },
-    "AssemblyStationRocket":
-    {
-        "HalfTrackRocket":
-        {
+    "AssemblyStationRocket": {
+        "HalfTrackRocket": {
             "name": "Niska-Rycker Mk. IX Skycaller",
             "category": "Half-Track",
             "description": "A first of its kind, the Skycaller is a variation of the Niska Motor Carriage with a Rycker designed rocket battery fited in the rear bed. This unique armoured vehicle quickly fires rockets over long distances with ease, and can be rearmed and relocated at the drop of a hat. The Skycaller is the deadly result of combined Nevish and Caoivish engineering.",
@@ -215,8 +199,7 @@
             "baseVehicle": "Niska Mk. I Gun Motor Carriage (Half-Track)",
             "productionTime": 300
         },
-        "FieldRocketLauncher":
-        {
+        "FieldRocketLauncher": {
             "name": "Rycker 4/3-F Wasp Nest",
             "category": "Field Launcher",
             "description": "Lyle Rycker first built a prototype of the Wasp Nest as a test for his rack mounted rocket batteries that would eventually find their way onto armoured vehicles. Capable of firing twelve compact rockets in quick succession, the Wasp Nest became a quick favourite of the Warden infantry testing it, so an official design was requisitioned.",
@@ -231,8 +214,7 @@
             "baseVehicle": "",
             "productionTime": 600
         },
-        "HalfTrackAntiTank":
-        {
+        "HalfTrackAntiTank": {
             "name": "Niska Mk. II Blinder",
             "category": "Half-Track",
             "description": "Fitted with a heavy-duty anti-tank gun, the Blinder is capable of punching through all but the most tempered of alloys.",
@@ -248,10 +230,8 @@
             "productionTime": 300
         }
     },
-    "AssemblyStationField":
-    {
-        "Harvester":
-        {
+    "AssemblyStationField": {
+        "Harvester": {
             "name": "BMS - Scrap Hauler",
             "category": "Harvester",
             "description": "The Scrap Hauler, designed by the Bassett Motor Society is a heavy-duty piece of machinery designed to reduce scrap metal and other materials into usable, raw resources. Scrap Haulers are often used to extract battlefield resources following skirmishes.",
@@ -266,8 +246,7 @@
             "baseVehicle": "",
             "productionTime": 900
         },
-        "ScoutTankGallant":
-        {
+        "ScoutTankGallant": {
             "name": "King Gallant Mk. II",
             "category": "Scout Tank",
             "description": "A heavily armoured variant of the King Spire, the Gallant Mk. II boasts a weighty 30mm cannon at the cost of top speed.",
@@ -282,8 +261,7 @@
             "baseVehicle": "King Spire Mk. I (Scout Tank)",
             "productionTime": 300
         },
-        "FieldAntiTankHeavy":
-        {
+        "FieldAntiTankHeavy": {
             "name": "Balfour Rampart 68mm",
             "category": "Heavy Field Cannon",
             "description": "The Rampart is a powerful field cannon capable of dealing devastating damage to all but the heaviest of armoured vehicles while providing its crew with comprehensive ballistic shielding.",
@@ -299,10 +277,8 @@
             "productionTime": 300
         }
     },
-    "AssemblyStationTank":
-    {
-        "TankDestroyerFlame":
-        {
+    "AssemblyStationTank": {
+        "TankDestroyerFlame": {
             "name": "Noble Firebrand Mk. XVII",
             "category": "Destroyer Tank",
             "description": "In response to the Legion embarking on aggressive northern offensives, the Firebrand is designed to conflagrate and eradicate their garrisons with ease. Built using the aggressive frame of the Widow, the Firebrand is a pure force of nature when paired with a secondary armoured escort.",
@@ -317,8 +293,7 @@
             "baseVehicle": "Noble Widow MK. XIV (Destroyer Tank)",
             "productionTime": 420
         },
-        "LightTankUpgraded":
-        {
+        "LightTankUpgraded": {
             "name": "Devitt Ironhide MK. IV",
             "category": "Light Tank",
             "description": "The Ironhide Light Tank is similar to the Mk. III but reinforced with plates of heavy steel at the expense of speed and maneuverability.",
@@ -333,8 +308,7 @@
             "baseVehicle": "Devitt Mk. III (Light Tank)",
             "productionTime": 300
         },
-        "LightTankMortar":
-        {
+        "LightTankMortar": {
             "name": "Devitt-Caine Mk. IV MMR",
             "category": "Light Tank",
             "description": "A modified Devitt fitted with a specializes Cain mortar turret at the expense of top speed.",
@@ -349,8 +323,7 @@
             "baseVehicle": "Devitt Mk. III (Light Tank)",
             "productionTime": 300
         },
-        "AssaultTankChieftan":
-        {
+        "AssaultTankChieftan": {
             "name": "Silverhand Chieftan - Mk. VI",
             "category": "Assault Tank",
             "description": "The Chieftan assault tank is fitted with asymmetrical armaments, including a 250mm mortar cannon and a twin-barreled 12.7mm turret.",
@@ -365,8 +338,7 @@
             "baseVehicle": "",
             "productionTime": 420
         },
-        "CruiserTankHighwayman":
-        {
+        "CruiserTankHighwayman": {
             "name": "Gallagher Highwayman Mk. III",
             "category": "Cruiser Tank",
             "description": "Colm Gallagher's engineers desginged a variation on the Outlaw that features an independently rotating MG turret sitting atop the main armament of twin anti-tank cannons. What it lack in raw firepower compared to its older sibling, the Highwayman more than makes up for it with versatility.",
@@ -381,13 +353,12 @@
             "baseVehicle": "Gallagher Outlaw Mk. II (Cruiser Tank)",
             "productionTime": 420
         },
-        "EmplacedAntiTankHeavy":
-        {
+        "EmplacedAntiTankHeavy": {
             "name": "Huber Starbreaker 94.5mm",
             "category": "",
             "description": "Built to compliment other free-standing artillery pieces, the emplaced Huber Starbreaker launches 94.5mm shells over very long distances. A necessary tool for infantry to knock back armoured Colonial advances.",
             "damageType": "",
-            "damageInfo": [ "Gunner (Left): Equipped with a high velocity barrel that deals 50% extra damage per shot." ],
+            "damageInfo": [ "Gunner (Left): Equipped with a high velocity barrel that deals 50% extra damage per shot" ],
             "ammoUsed": "94.5mm",
             "bmatCost": 0,
             "cmatCost": 0,
@@ -398,10 +369,8 @@
             "productionTime": 600
         }
     },
-    "AssemblyStationWeapons": 
-    {
-        "FieldCannonSuper":
-        {
+    "AssemblyStationWeapons": {
+        "FieldCannonSuper": {
             "name": "Balfour Stockade 75mm",
             "category": "Field Gun",
             "description": "This robust field cannon not only allows infantry to fire heavy 75mm shells with ease, but it provides state-of-the-art curved blast shielding for maximum protection from crossfire.",
@@ -416,8 +385,7 @@
             "baseVehicle": "Balfour Wolfhound 40mm (Field Cannon)",
             "productionTime": 420
         },
-        "CruiserTankThornfall":
-        {
+        "CruiserTankThornfall": {
             "name": "Gallagher Thornfall Mk. VI",
             "category": "Cruiser Tank",
             "description": "Armed with a rack of Bonesaw mortar launchers, the Thornfall is designed to launch an indirect mechanized assault on enemy armour. This unique vehicle supports an allied assault and cannot withstand large amounts of punishment.",
@@ -433,10 +401,8 @@
             "productionTime": 600
         }
     },
-    "AssemblyLarge": 
-    {
-        "WideGaugeTrain":
-        {
+    "AssemblyLarge": {
+        "WideGaugeTrain": {
             "name": "BMS Black Bolt",
             "category": "Locomotive",
             "description": "One of the most storied mass-market 0-6-2 locomotives engineered by the Bassett Motor Society, this coal-powered industrial train engine is reliable , tested, and incredibly durable. The Black Bolt's legacy is ummatched having aided the Bassett Motor Society in supplying countries across the globe.",
@@ -451,8 +417,7 @@
             "baseVehicle": "",
             "productionTime": 21600
         },
-        "WideGaugeCoal":
-        {
+        "WideGaugeCoal": {
             "name": "BMS Rockhold",
             "category": "Container Car",
             "description": "A container car for transporting coal to refuel trains over long-distance trips.",
@@ -467,8 +432,7 @@
             "baseVehicle": "",
             "productionTime": 1800
         },
-        "WideGaugeInfantry":
-        {
+        "WideGaugeInfantry": {
             "name": "BMS Holdout",
             "category": "Infantry Car",
             "description": "An armoured train car with a mounted machinegun position for transporting infantry over long distances.",
@@ -483,8 +447,7 @@
             "baseVehicle": "",
             "productionTime": 1800
         },
-        "WideGaugeFlatbed":
-        {
+        "WideGaugeFlatbed": {
             "name": "BMS Longrider",
             "category": "Flatbed Car",
             "description": "A flatbed car for transporting large resources and munitions by train over long-distances.",
@@ -500,10 +463,8 @@
             "productionTime": 1800
         }
     },
-    "AssemblyLargeTrain":
-    {
-        "WideGaugeCombat":
-        {
+    "AssemblyLargeTrain": {
+        "WideGaugeCombat": {
             "name": "O'Brien Warsmith v.215",
             "category": "Combat Car",
             "description": "In his later years, O'Brien nearly died in an attack on a military passenger train while travelling to Whedon's Row. In response, he put his team to work designing not only an infantry car that offered powerful protection to any locomotive, but one that just the sight of it would run off all but the most committed of attackers—Namely its thick armour plating and powerful twin turrets.",
@@ -518,8 +479,7 @@
             "baseVehicle": "",
             "productionTime": 1800
         },
-        "WideGaugeRailwayGun":
-        {
+        "WideGaugeRailwayGun": {
             "name": "Tempest Cannon RA-2",
             "category": "Long-Range Artillery Car",
             "description": "All the power of a stationary Storm Cannon, but easily relocated via rails. This devastating cannon is capable of leveling enemy fortifications at very large distances.",
@@ -535,15 +495,13 @@
             "productionTime": 259200
         }
     },
-    "AssemblyLargeHeavyTank":
-    {
-        "SuperTank":
-        {
+    "AssemblyLargeHeavyTank": {
+        "SuperTank": {
             "name": "Cullen Predator Mk. III",
             "category": "Super Tank",
             "description": "This gargantuan beast is the brainchild of Gray Cullen. Once thought impossible, the Predator was Cullen's idea of how a great ship might operate on land. It boasts two sets of quad-barrelled grenade launches and a heavy-duty 94.5mm forward facing cannon. While limitations of ground-based travel posed certain restrictions on the scope of the project, Cullen wasn't deterred and made necessary adjustments to meet his vision of the ideal land ship.",
             "damageType": "",
-            "damageInfo": [ "" ],
+            "damageInfo": [ "Gunner (Front): Equipped with a high velocity barrel that deals 25% extra damage per shot" ],
             "ammoUsed": "94.5mm, Green Ash Grenade, Tremola Grenade GPb-1, PT-815 Smoke Grenade, A3 Harpa Fragmentation Grenade",
             "bmatCost": 0,
             "cmatCost": 0,
@@ -553,14 +511,13 @@
             "baseVehicle": "",
             "productionTime": 172800
         },
-        "BattleTank":
-        {
+        "BattleTank": {
             "name": "Flood Mk. I",
             "category": "Battle Tank",
             "description": "A heavy-duty Battle Tank with thick armour plating and destructive firepower. The Flood is fitted with a 75mm turret and a front-facing 12.7mm anti-infantry machine gun. The heavy armour limits top speed, but in exchange it can take a lot of punishment.",
             "damageType": "",
-            "damageInfo": [ "" ],
-            "ammoUsed": "75mm",
+            "damageInfo": [ "Turret (Front): Equipped with a low velocity barrel that deals 36% less damage per shot" ],
+            "ammoUsed": "75mm, 12.7mm",
             "bmatCost": 0,
             "cmatCost": 0,
             "pcmatCost": 0,
