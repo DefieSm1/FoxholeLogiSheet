@@ -1,6 +1,5 @@
 { 
-    "MaterialsFactoryForge":
-    {
+    "MaterialsFactoryForge": {
         "name": "Forge",
         "description": "A unique factroy for forging specialized machinery parts needed to construct vehicles. Requires Coke or Petrol.",
         "bmatCost": 0,
@@ -8,8 +7,7 @@
         "pcmatCost": 0,
         "steelCost": 0
     },
-    "MaterialsFactoryMetalPress":
-    {
+    "MaterialsFactoryMetalPress": {
         "name": "Metal Press",
         "description": "A heavy automatic press that refines materials into a denser form.",
         "bmatCost": 0,
@@ -17,8 +15,7 @@
         "pcmatCost": 0,
         "steelCost": 0
     },
-    "MaterialsFactorySmelter":
-    {
+    "MaterialsFactorySmelter": {
         "name": "Smelter",
         "description": "An industrial smelter for melting down Salvage to remove impurities. Requires Coke.",
         "bmatCost": 0,
@@ -26,8 +23,7 @@
         "pcmatCost": 0,
         "steelCost": 0
     },
-    "MaterialsFactoryAssembly": 
-    {
+    "MaterialsFactoryAssembly":  {
         "name": "Assembly Bay",
         "description": "An assembly bay with specialized equipment for quickly building and packing materials needed on the frontlines.",
         "bmatCost": 50,
@@ -35,8 +31,7 @@
         "pcmatCost": 0,
         "steelCost": 0
     },
-    "MetalworksFactoryBlastFurnace":
-    {
+    "MetalworksFactoryBlastFurnace": {
         "name": "Blast Furnace",
         "description": "A large industrial cauldron for liquefying metals to remove impurities from advanced materials.",
         "bmatCost": 0,
@@ -44,8 +39,7 @@
         "pcmatCost": 200,
         "steelCost": 0
     },
-    "MetalworksFactoryRecycler":
-    {
+    "MetalworksFactoryRecycler": {
         "name": "Recycler",
         "description": "Advanced sorting machinery for sifting piles of scrap metal for useful materials.",
         "bmatCost": 0,
@@ -53,8 +47,7 @@
         "pcmatCost": 0,
         "steelCost": 0
     },
-    "MetalworksFactoryEngineering":
-    {
+    "MetalworksFactoryEngineering": {
         "name": "Engineering Station",
         "description": "An expanded workshop for manual process of delicate materials.",
         "bmatCost": 0,
@@ -62,8 +55,7 @@
         "pcmatCost": 150,
         "steelCost": 0
     },
-    "CoalRefineryCokeFurnace":
-    {
+    "CoalRefineryCokeFurnace": {
         "name": "Coke Furnace",
         "description": "A high powered furnace that brings Coal to high temperatures to seperate out non-volatile Coke.",
         "bmatCost": 0,
@@ -71,8 +63,7 @@
         "pcmatCost": 0,
         "steelCost": 0
     },
-    "CoalRefineryLiquifier":
-    {
+    "CoalRefineryLiquifier": {
         "name": "Coal Liquefier",
         "description": "Processing vats that refines Coal into Oil.",
         "bmatCost": 0,
@@ -80,8 +71,7 @@
         "pcmatCost": 20,
         "steelCost": 0
     },
-    "CoalRefineryAdvancedLiquifier":
-    {
+    "CoalRefineryAdvancedLiquifier": {
         "name": "Advanced Coal Liquefier",
         "description": "Advanced processing vats that refine large amounts of coal into Heavy Oil.",
         "bmatCost": 0,
@@ -89,8 +79,7 @@
         "pcmatCost": 0,
         "steelCost": 65
     },
-    "OilRefineryReformer":
-    {
+    "OilRefineryReformer": {
         "name": "Reformer",
         "description": "A large processing drum that allows for the controlled introduction of hydrogen to yield a similar output of Petrol for less raw oil.",
         "bmatCost": 0,
@@ -98,8 +87,7 @@
         "pcmatCost": 0,
         "steelCost": 0
     },
-    "OilRefineryCrackSchack":
-    {
+    "OilRefineryCrackSchack": {
         "name": "Cracking Unit",
         "description": "A high-heat furnace that catalyses raw oil into refined Heavy Oil.",
         "bmatCost": 0,
@@ -107,8 +95,7 @@
         "pcmatCost": 20,
         "steelCost": 0
     },
-    "OilRefineryPetrochemical":
-    {
+    "OilRefineryPetrochemical": {
         "name": "Petrochemical Plant",
         "description": "A blast furnace that further refines Heavy Oil into an Enriched Oil needed for advanced processes.",
         "bmatCost": 0,
@@ -116,8 +103,7 @@
         "pcmatCost": 0,
         "steelCost": 25
     },
-    "AmmoFactoryRocket":
-    {
+    "AmmoFactoryRocket": {
         "name": "Rocket Factory",
         "description": "Produces various types of Rockets.",
         "bmatCost": 0,
@@ -125,8 +111,7 @@
         "pcmatCost": 35,
         "steelCost": 0
     },
-    "AmmoFactoryLargeShell":
-    {
+    "AmmoFactoryLargeShell": {
         "name": "Large Shell Factory",
         "description": "Produces large calibre ordinance for use with tanks and artillery.",
         "bmatCost": 0,
@@ -134,8 +119,7 @@
         "pcmatCost": 175,
         "steelCost": 0
     },
-    "DieselPowerPlantPetrol":
-    {
+    "DieselPowerPlantPetrol": {
         "name": "Petrol Power Plant",
         "description": "A generator that burns petrol to generate more power.",
         "bmatCost": 0,
@@ -143,8 +127,7 @@
         "pcmatCost": 0,
         "steelCost": 0
     },
-    "PowerStationSulfuricReactor":
-    {
+    "PowerStationSulfuricReactor": {
         "name": "Sulfiric Reactor",
         "description": "A reactor that combines Water with Heavy Oil or refined Coke, resulting in a more pure natural gas, which in turn is more efficient at generating power. Chunks of raw Sulfur are created as a byproduct.",
         "bmatCost": 0,

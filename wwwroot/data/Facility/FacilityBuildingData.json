@@ -1,6 +1,5 @@
 {
-    "MaterialsFactory":
-    {
+    "MaterialsFactory": {
         "name": "Materials Factory",
         "description": "A factory that refines raw resources into Construction Materials for advanced facilities. Additional modifications allow for the development of a variety of different materials.",
         "bmatCost": 200,
@@ -9,8 +8,7 @@
         "steelCost": 0,
         "buildingUpgrades": [ "MaterialsFactoryForge", "MaterialsFactoryMetalPress", "MaterialsFactorySmelter", "MaterialsFactoryAssembly" ]
     },
-    "MetalworksFactory":
-    {
+    "MetalworksFactory": {
         "name": "Metalworks Factory",
         "description": "A factory for refining raw resources into Processed Construction Materials. Additional modifications can allow for addtitional refined materials needed for advanced facility operations.",
         "bmatCost": 0,
@@ -19,8 +17,7 @@
         "steelCost": 0,
         "buildingUpgrades": [ "MetalworksFactoryBlastFurnace", "MetalworksFactoryRecycler", "MetalworksFactoryEngineering" ]
     },
-    "CoalRefinery":
-    {
+    "CoalRefinery": {
         "name": "Coal Refinery",
         "description": "A processing plant that refines Coal into useful materials used in facility production and power.",
         "bmatCost": 0,
@@ -29,8 +26,7 @@
         "steelCost": 0,
         "buildingUpgrades": [ "CoalRefineryCokeFurnace", "CoalRefineryLiquifier", "CoalRefineryAdvancedLiquifier" ]
     },
-    "OilRefinery":
-    {
+    "OilRefinery": {
         "name": "Oil Refinery",
         "description": "A refinery that processes Oil into other useful materials for purposes of production and power generation.",
         "bmatCost": 0,
@@ -39,8 +35,7 @@
         "steelCost": 0,
         "buildingUpgrades": [ "OilRefineryReformer", "OilRefineryCrackSchack", "OilRefineryPetrochemical" ]
     },
-    "AmmoFactory":
-    {
+    "AmmoFactory": {
         "name": "Ammunition Factory",
         "description": "A factory for producing advanced ammo types such as large calibre shells, rockets, and flame ammo.",
         "bmatCost": 0,
@@ -49,8 +44,7 @@
         "steelCost": 0,
         "buildingUpgrades": [ "AmmoFactoryRocket", "AmmoFactoryLargeShell" ]
     },
-    "MaintenanceTunnel":
-    {
+    "MaintenanceTunnel": {
         "name": "Maintenance Tunnel",
         "description": "A supply tunnel that provides Garrison Supplies to nearby Facilities and Railway Tracks. Garrison Supplies may also be produced on-site using Construction Materials. The rate of consumption is 2 Garrison Supplies per-hour per-structure once decay beings. Some structures have additional consumption requirements.",
         "bmatCost": 0,
@@ -59,8 +53,7 @@
         "steelCost": 0,
         "buildingUpgrades": [ "" ]
     },
-    "DieselPowerPlant":
-    {
+    "DieselPowerPlant": {
         "name": "Diesel Power Plant",
         "description": "A structure that generates power by burning Diesel.",
         "bmatCost": 150,
@@ -69,8 +62,7 @@
         "steelCost": 0,
         "buildingUpgrades": [ "DieselPowerPlantPetrol" ]
     },
-    "PowerStation":
-    {
+    "PowerStation": {
         "name": "Power Station",
         "description": "A power plant that generates a large amount of electricity using Oil or Coal.",
         "bmatCost": 0,

@@ -249,30 +249,38 @@
     .output-sum > * {
         width: 100%;
         height: 50%;
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        padding: 2px;
+        grid-gap: 2px;
+    }
+
+    .sum-top {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .sum-bottom {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
     
-    .sum-conmats > *, .sum-assmats > * {
-        margin: 2px;
-        padding-right: 12px;
+    .sum-top > *, .sum-bottom > * {
+        padding-right: 8px;
         display: flex;
         justify-content: right;
         align-items: center;
         background-size: contain;
         background-repeat: no-repeat;
-        background-size: 25%;
+        background-size: 23%;
         background-position: 5px;
         background-color: rgba(0, 0, 0, 0.3);
     }
 
-    .sum-conmats > * {
-        width: 25%;
-    }
+.sum-top-raw, .sum-bottom-raw {
+    grid-template-columns: 1fr 1fr 1fr;
+}
 
-    .sum-assmats > * {
-        width: 20%;
-    }
+.sum-top-raw > *, .sum-bottom-raw > * {
+    background-size: 16%;
+}
 
 /* OTHER STUFF */
 

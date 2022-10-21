@@ -30,6 +30,10 @@
         font-size: 1.2rem;
     }
 
+    .about-infobox a {
+        color: #E5BA82;
+    }
+
     .about-infobox hr {
         margin: 12px 0;
     }
@@ -40,7 +44,7 @@
     }
 
     .changelog ul {
-        margin: 8px 4px;
+        margin: 8px 4px 8px 6px;
     }
 
 .about-trademark, .about-trademark > * {

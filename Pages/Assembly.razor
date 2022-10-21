@@ -64,6 +64,7 @@
         <div class="d-inline-flex output-header">
             <div class="output-header-text"><p>OUTPUT</p></div>
             <div class="output-buttons">
+                <button class="btn text-light" @onclick="() => RawPrice = !RawPrice">Show price as @(RawPrice ? "facility" : "raw") materials</button>
                 <button class="btn text-light" @onclick="() => ResetSelectedVehicles()">Reset all</button>
             </div>
         </div>
@@ -93,36 +94,36 @@
                     </div>
 
                     <div class="output-bottom">
-                        @if (GetQueuePrice("Bmat", building) > 0)
+                        @if (GetQueuePrice("MaterialBasic", building) > 0)
                         {
                             <div style="background-image: url(icons/ProductionIcons/MaterialBasic.png)">
-                                @GetQueuePrice("Bmat", building)
+                                @GetQueuePrice("MaterialBasic", building)
                             </div>
                         }
-                        @if (GetQueuePrice("Cmat", building) > 0)
+                        @if (GetQueuePrice("MaterialConstruction", building) > 0)
                         {
                             <div style="background-image: url(icons/Facility/MaterialConstruction.png)">
-                                @GetQueuePrice("Cmat", building)
+                                @GetQueuePrice("MaterialConstruction", building)
                             </div>
                         }
-                        @if (GetQueuePrice("PCmat", building) > 0)
+                        @if (GetQueuePrice("MaterialProcessedConstruction", building) > 0)
                         {
                             <div style="background-image: url(icons/Facility/MaterialProcessedConstruction.png)">
-                                @GetQueuePrice("PCmat", building)
+                                @GetQueuePrice("MaterialProcessedConstruction", building)
                             </div>
                         }
-                        @if (GetQueuePrice("Steel", building) > 0)
+                        @if (GetQueuePrice("MaterialSteel", building) > 0)
                         {
                             <div style="background-image: url(icons/Facility/MaterialSteel.png)">
-                                @GetQueuePrice("Steel", building)
+                                @GetQueuePrice("MaterialSteel", building)
                             </div>
                         }
                         @for (int i = 0; i < AssemblyVehicles.AssmatAmount; i++)
                         {
-                            @if (GetQueuePrice("Assmat", building, i) > 0)
+                            @if (GetQueuePrice("AssemblyMaterials", building, i) > 0)
                             {
                                 <div style="background-image: url(icons/Facility/AssemblyMaterialsT@(i+1).png)">
-                                    @GetQueuePrice("Assmat", building, i)
+                                    @GetQueuePrice("AssemblyMaterials", building, i)
                                 </div>
                             }
                         }
@@ -133,43 +134,89 @@
 
         <div class="output-sum-background">
             <div class="output-sum">
-                <div class="sum-conmats">
-                    @if (GetQueuePrice("Bmat") > 0)
-                    {
-                        <div style="background-image: url(icons/ProductionIcons/MaterialBasic.png)">
-                            @GetQueuePrice("Bmat")<span class="sum-pricename">&nbsp;BMs</span>
-                        </div>
-                    }
-                    @if (GetQueuePrice("Cmat") > 0)
-                    {
-                        <div style="background-image: url(icons/Facility/MaterialConstruction.png)">
-                            @GetQueuePrice("Cmat")<span class="sum-pricename">&nbsp;CMs</span>
-                        </div>
-                    }
-                    @if (GetQueuePrice("PCmat") > 0)
-                    {
-                        <div style="background-image: url(icons/Facility/MaterialProcessedConstruction.png)">
-                            @GetQueuePrice("PCmat")<span class="sum-pricename">&nbsp;PCMs</span>
-                        </div>
-                    }
-                    @if (GetQueuePrice("Steel") > 0)
-                    {
-                        <div style="background-image: url(icons/Facility/MaterialSteel.png)">
-                            @GetQueuePrice("Steel")<span class="sum-pricename">&nbsp;Steel</span>
-                        </div>
-                    }
-                </div>
-                <div class="sum-assmats">
-                    @for (int i = 0; i < AssemblyVehicles.AssmatAmount; i++)
-                    {
-                        @if (GetQueuePrice("Assmat", "all", i) > 0)
+                @if(!RawPrice)
+                {
+                    <div class="sum-top">
+                        @if (GetQueuePrice("MaterialBasic") > 0)
                         {
-                            <div style="background-image: url(icons/Facility/AssemblyMaterialsT@(i+1).png)">
-                                @GetQueuePrice("Assmat", "all", i)<span class="sum-pricename">&nbsp;A@(i + 1)s</span>
+                            <div style="background-image: url(icons/ProductionIcons/MaterialBasic.png)">
+                                @GetQueuePrice("MaterialBasic")<span class="sum-pricename">&nbsp;BMs</span>
                             </div>
                         }
-                    }
-                </div>
+                        @if (GetQueuePrice("MaterialConstruction") > 0)
+                        {
+                            <div style="background-image: url(icons/Facility/MaterialConstruction.png)">
+                                @GetQueuePrice("MaterialConstruction")<span class="sum-pricename">&nbsp;CMs</span>
+                            </div>
+                        }
+                        @if (GetQueuePrice("MaterialProcessedConstruction") > 0)
+                        {
+                            <div style="background-image: url(icons/Facility/MaterialProcessedConstruction.png)">
+                                @GetQueuePrice("MaterialProcessedConstruction")<span class="sum-pricename">&nbsp;PCMs</span>
+                            </div>
+                        }
+                        @if (GetQueuePrice("MaterialSteel") > 0)
+                        {
+                            <div style="background-image: url(icons/Facility/MaterialSteel.png)">
+                                @GetQueuePrice("MaterialSteel")<span class="sum-pricename">&nbsp;Steel</span>
+                            </div>
+                        }
+                    </div>
+                    <div class="sum-bottom">
+                        @for (int i = 0; i < AssemblyVehicles.AssmatAmount; i++)
+                        {
+                            @if (GetQueuePrice("AssemblyMaterials", "all", i) > 0)
+                            {
+                                <div style="background-image: url(icons/Facility/AssemblyMaterialsT@(i+1).png)">
+                                    @GetQueuePrice("AssemblyMaterials", "all", i)<span class="sum-pricename">&nbsp;A@(i + 1)s</span>
+                                </div>
+                            }
+                        }
+                    </div>
+                }
+                else
+                {
+                    <div class="sum-top sum-top-raw">
+                        @if (GetRawSumPrice("Salvage") > 0)
+                        {
+                            <div style="background-image: url(icons/Facility/MaterialRawSalvage.png)">
+                                @GetRawSumPrice("Salvage")<span class="sum-pricename">&nbsp;Salvage</span>
+                            </div>
+                        }
+                        @if (GetRawSumPrice("Components") > 0)
+                        {
+                            <div style="background-image: url(icons/Facility/MaterialRawComponents.png)">
+                                @GetRawSumPrice("Components")<span class="sum-pricename">&nbsp;Comps</span>
+                            </div>
+                        }
+                        @if (GetRawSumPrice("Coal") > 0)
+                        {
+                            <div style="background-image: url(icons/Facility/MaterialRawCoal.png)">
+                                @GetRawSumPrice("Coal")<span class="sum-pricename">&nbsp;Coal</span>
+                            </div>
+                        }
+                    </div>
+                    <div class="sum-bottom sum-bottom-raw">
+                        @if (GetRawSumPrice("Sulfur") > 0)
+                        {
+                            <div style="background-image: url(icons/Facility/MaterialRawSulfur.png)">
+                                @GetRawSumPrice("Sulfur")<span class="sum-pricename">&nbsp;Sulfur</span>
+                            </div>
+                        }
+                        @if (GetRawSumPrice("Oil") > 0)
+                        {
+                            <div style="background-image: url(icons/Facility/MaterialOilCrude.png)">
+                                @GetRawSumPrice("Oil")<span class="sum-pricename">&nbsp;L Oil</span>
+                            </div>
+                        }
+                        @if (GetRawSumPrice("Water") > 0)
+                        {
+                            <div style="background-image: url(icons/Facility/MaterialWater.png)">
+                                @GetRawSumPrice("Water")<span class="sum-pricename">&nbsp;L Water</span>
+                            </div>
+                        }
+                    </div>
+                }
             </div>
         </div>
     </div>
@@ -196,6 +243,14 @@
 
     public Dictionary<string, List<string>> SelectedVehicles { get; set; } = new();
 
+    public bool RawPrice { get; set; } = false;
+
+    public Dictionary<string, AssemblyRawCosts> MaterialRawCosts = new();
+
+    public List<string> MaterialNames = new();
+
+    public List<string> RawMaterialNames = new();
+
     public bool BuildingInfoboxVisibility { get; set; }
 
     public bool ItemInfoboxVisibility { get; set; }
@@ -211,6 +266,12 @@
         AssemblyUpgrades = await Http.GetFromJsonAsync<Dictionary<string, FacilityBuilding>>("data/AssemblyStation/AssemblyUpgradeData.json") ?? throw new FileNotFoundException();
 
         AssemblyVehicles = await Http.GetFromJsonAsync<AssemblyVehicleBuildings>("data/AssemblyStation/AssemblyVehicleData.json") ?? throw new FileNotFoundException();
+
+        MaterialRawCosts = await Http.GetFromJsonAsync<Dictionary<string, AssemblyRawCosts>>("data/AssemblyStation/AssemblyRawCostData.json") ?? throw new FileNotFoundException();
+
+        MaterialNames = MaterialRawCosts.Keys.ToList();
+
+        RawMaterialNames = new() { "Salvage", "Components", "Sulfur", "Coal", "Oil", "Water" };
 
         // Default parameters
         SelectedBuilding = "AssemblyStation";
@@ -251,19 +312,19 @@
 
                     switch (materialKey)
                     {
-                        case "Bmat":
+                        case "MaterialBasic":
                             queuePrice += vehicleInfo.BmatCost;
                             break;
-                        case "Cmat":
+                        case "MaterialConstruction":
                             queuePrice += vehicleInfo.CmatCost;
                             break;
-                        case "PCmat":
+                        case "MaterialProcessedConstruction":
                             queuePrice += vehicleInfo.PCmatCost;
                             break;
-                        case "Steel":
+                        case "MaterialSteel":
                             queuePrice += vehicleInfo.SteelCost;
                             break;
-                        case "Assmat":
+                        case "AssemblyMaterials":
                             queuePrice += vehicleInfo.AssmatCost[AssmatIndex];
                             break;
                         default:
@@ -273,6 +334,58 @@
                 }
             }
         }
+
         return queuePrice;
+    }
+
+    public double GetRawMatPrice(string materialKey, string rawMaterialKey, double amount)
+    {
+        double itemPrice = 0;
+
+        AssemblyRawCosts materialInfo = new();
+
+        materialInfo = MaterialRawCosts[materialKey];
+
+        switch (rawMaterialKey)
+        {
+            case "Salvage":
+                itemPrice += materialInfo.SalvageCost;
+                break;
+            case "Components":
+                itemPrice += materialInfo.ComponentCost;
+                break;
+            case "Sulfur":
+                itemPrice += materialInfo.SulfurCost;
+                break;
+            case "Coal":
+                itemPrice += materialInfo.CoalCost;
+                break;
+            case "Oil":
+                itemPrice += materialInfo.OilCost;
+                break;
+            case "Water":
+                itemPrice += materialInfo.WaterCost;
+                break;
+            default:
+                itemPrice += 0;
+                break;
+        }
+
+        return itemPrice * amount;
+    }
+
+    public double GetRawSumPrice(string materialKey)
+    {
+        double rawSum = 0;
+
+        foreach(string material in MaterialNames)
+        {
+            if(material.StartsWith("AssemblyMaterialsT"))
+                rawSum += GetRawMatPrice(material, materialKey, GetQueuePrice("AssemblyMaterials", "all", Int32.Parse(material.Substring(material.Length - 1)) - 1));
+            else 
+                rawSum += GetRawMatPrice(material, materialKey, GetQueuePrice(material));
+        }
+
+        return rawSum;
     }
 }
