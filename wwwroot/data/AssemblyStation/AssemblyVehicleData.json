@@ -335,7 +335,7 @@
             "pcmatCost": 5,
             "steelCost": 0,
             "assmatCost": [ 10, 0, 0, 8, 0 ],
-            "baseVehicle": "",
+            "baseVehicle": "Silverhand - Mk. IV (Assault Tank)",
             "productionTime": 420
         },
         "CruiserTankHighwayman": {

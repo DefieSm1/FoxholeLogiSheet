@@ -94,6 +94,12 @@
                     </div>
 
                     <div class="output-bottom">
+                        @if (GetQueuePrice("Time", building) > 0)
+                        {
+                            <div style="background-image: @(GetTimestamp(GetQueuePrice("Time", building)).Length > 9 ? "" : "url(icons/Time.png)")">
+                                @GetTimestamp(GetQueuePrice("Time", building))
+                            </div>
+                        }
                         @if (GetQueuePrice("MaterialBasic", building) > 0)
                         {
                             <div style="background-image: url(icons/ProductionIcons/MaterialBasic.png)">
@@ -289,6 +295,16 @@
         }
     }
 
+    public string GetTimestamp(double seconds)
+    {
+        TimeSpan vehicleTime = TimeSpan.FromSeconds(seconds);
+
+        if (vehicleTime.Days > 0)
+            return vehicleTime.ToString(@"d\:hh\:mm\:ss");
+        else
+            return vehicleTime.ToString(@"h\:mm\:ss");
+    }
+
     public double GetQueuePrice(string materialKey, string vehicleBuilding = "all", int AssmatIndex = 0)
     {
         double queuePrice = 0;
@@ -326,6 +342,9 @@
                             break;
                         case "AssemblyMaterials":
                             queuePrice += vehicleInfo.AssmatCost[AssmatIndex];
+                            break;
+                        case "Time":
+                            queuePrice += vehicleInfo.ProductionTime;
                             break;
                         default:
                             queuePrice += 0;
