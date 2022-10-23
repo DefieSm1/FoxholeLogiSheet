@@ -160,7 +160,6 @@
     padding: 6px;
     padding-right: 0;
     padding-bottom: 0;
-    grid-gap: 4px;
     overflow-y: scroll;
 }
 
@@ -219,18 +218,17 @@
 
 .output-bottom[b-u5l6ycqe8q] {
     height: 40%;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     background-color: #414241;
 }
 
     .output-bottom > *[b-u5l6ycqe8q] {
-        width: 20%;
         margin: 2px;
-        padding-right: 12px;
         display: flex;
-        justify-content: right;
+        justify-content: flex-end;
         align-items: center;
+        padding-right: 16px;
         background-size: contain;
         background-repeat: no-repeat;
         background-size: 25%;
@@ -938,17 +936,17 @@ facility-container[b-22iwbtwwcp] {
 
 .output-bottom[b-rz48f9patv] {
     height: 40%;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     background-color: #414241;
 }
 
     .output-bottom > *[b-rz48f9patv] {
-        width: 20%;
         margin: 2px;
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
+        padding-right: 16px;
         background-size: contain;
         background-repeat: no-repeat;
         background-size: 18%;
@@ -963,22 +961,22 @@ facility-container[b-22iwbtwwcp] {
 }
 
 .output-sum[b-rz48f9patv] {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     background-color: #414241;
     height: 38px;
     width: 100%;
 }
 
     .output-sum > *[b-rz48f9patv] {
-        width: 25%;
         margin: 2px;
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
+        padding-right: 16px;
         background-size: contain;
         background-repeat: no-repeat;
-        background-size: 15%;
+        background-size: 16%;
         background-position: 5px;
         background-color: rgba(0, 0, 0, 0.3);
         font-size: 20px;
