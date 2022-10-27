@@ -128,7 +128,7 @@
         "steelCost": 0
     },
     "PowerStationSulfuricReactor": {
-        "name": "Sulfiric Reactor",
+        "name": "Sulfuric Reactor",
         "description": "A reactor that combines Water with Heavy Oil or refined Coke, resulting in a more pure natural gas, which in turn is more efficient at generating power. Chunks of raw Sulfur are created as a byproduct.",
         "bmatCost": 0,
         "cmatCost": 0,

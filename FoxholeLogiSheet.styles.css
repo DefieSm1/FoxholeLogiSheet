@@ -70,7 +70,8 @@
     width: 100%;
     padding: 0 8vw;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 40px;
 }
 
 /* VEHICLE GRID */
@@ -452,7 +453,7 @@ facility-container[b-22iwbtwwcp] {
 }
 
 .recipe-list[b-22iwbtwwcp] {
-    width: 750px;
+    width: 800px;
     height: fit-content;
     margin-right: 10px;
     background-color: rgba(0, 0, 0, 0.95);
@@ -523,6 +524,8 @@ facility-container[b-22iwbtwwcp] {
     }
 
 .recipe-info[b-22iwbtwwcp] {
+    width: 80px;
+    margin: 0 -6px;
     display: flex;
     flex-direction: column;
 }
@@ -1090,6 +1093,7 @@ facility-container[b-22iwbtwwcp] {
 
 .about-infobox[b-dwg33yn5ks] {
     width: 650px;
+    border: 1px solid #7F7F7F;
     background-color: rgba(0, 0, 0, 0.95);
     color: rgb(230, 230, 230);
     z-index: 3;
@@ -1377,7 +1381,7 @@ main[b-j1d26w5cpj] {
     color: white;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
     .nav-link-text[b-1w542lhpil] {
         display: none;
     }
