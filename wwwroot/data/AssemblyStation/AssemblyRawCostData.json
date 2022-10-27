@@ -25,10 +25,10 @@
 	},
 	"MaterialSteel": {
 		"salvageCost": 15,
-		"componentCost": 57,
+		"componentCost": 55,
 		"sulfurCost": 60,
-		"coalCost": 138,
-		"oilCost": 62,
+		"coalCost": 167,
+		"oilCost": 60,
 		"waterCost": 34
 	},
 	"AssemblyMaterialsT1": {
@@ -44,13 +44,13 @@
 		"componentCost": 0,
 		"sulfurCost": 0,
 		"coalCost": 0,
-		"oilCost": 50,
+		"oilCost": 40,
 		"waterCost": 0
 	},
 	"AssemblyMaterialsT3": {
 		"salvageCost": 15,
 		"componentCost": 0,
-		"sulfurCost": 0,
+		"sulfurCost": 20,
 		"coalCost": 30,
 		"oilCost": 0,
 		"waterCost": 0
@@ -60,15 +60,15 @@
 		"componentCost": 19,
 		"sulfurCost": 0,
 		"coalCost": 10,
-		"oilCost": 110,
+		"oilCost": 115,
 		"waterCost": 0
 	},
 	"AssemblyMaterialsT5": {
 		"salvageCost": 345,
-		"componentCost": 171,
+		"componentCost": 165,
 		"sulfurCost": 180,
-		"coalCost": 2181,
-		"oilCost": 336,
+		"coalCost": 1610,
+		"oilCost": 580,
 		"waterCost": 102
 	}
 }

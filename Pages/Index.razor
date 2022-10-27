@@ -100,7 +100,7 @@
                                     @(PriceInCrates ? Math.Ceiling(GetQueuePrice("Emat", category) / (PriceInCrates ? 20 : 1)) + " crates" : GetQueuePrice("Emat", category) + " units")
                             </div>
                         }
-                            @if (GetQueuePrice("Hemat", category) > 0)
+                        @if (GetQueuePrice("Hemat", category) > 0)
                         {
                             <div style="background-image: url(icons/ProductionIcons/MaterialHeavyExplosive.png)">
                                     @(PriceInCrates ? Math.Ceiling(GetQueuePrice("Hemat", category) / (PriceInCrates ? 20 : 1)) + " crates" : GetQueuePrice("Hemat", category) + " units")

@@ -30,9 +30,9 @@
 </div>
 <div class="assembly-container">
 	<div class="vehicle-select">
-		@if(SelectedBuilding != "") 
+		@if(!String.IsNullOrEmpty(SelectedBuilding)) 
 		{
-			<div class="vehicle-select-header"><p>@AssemblyBuildings[SelectedBuilding].Name.ToUpper()</p></div>
+			<div class="vehicle-select-header"><p>@AssemblyBuildings[SelectedBuilding].Name!.ToUpper()</p></div>
 			<div class="vehicle-grid">
 				@foreach (KeyValuePair<string, ProductionItem> item in AssemblyVehicles.GetBuildingVehicles(SelectedBuilding))
 				{
@@ -44,9 +44,9 @@
 				}
 			</div>
 		}
-		@if(SelectedUpgrade != "") 
+		@if(!String.IsNullOrEmpty(SelectedUpgrade)) 
 		{
-			<div class="vehicle-select-header"><p>@AssemblyUpgrades[SelectedUpgrade].Name.ToUpper()</p></div>
+			<div class="vehicle-select-header"><p>@AssemblyUpgrades[SelectedUpgrade].Name!.ToUpper()</p></div>
 			<div class="vehicle-grid">
 				@foreach (KeyValuePair<string, ProductionItem> item in AssemblyVehicles.GetBuildingVehicles(SelectedUpgrade))
 				{

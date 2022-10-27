@@ -26,6 +26,8 @@
 
         public int HematCost { get; set; }
 
+        public int ProductionTime { get; set; }
+
         // Facility Variables
 
         public bool IsLiquid { get; set; }
@@ -42,8 +44,6 @@
 
         public string BaseVehicle { get; set; }
 
-        public int ProductionTime { get; set; }
-
         public ProductionItem()
         {
             Name = "";
@@ -58,6 +58,7 @@
             RmatCost = 0;
             EmatCost = 0;
             HematCost = 0;
+            ProductionTime = 0;
 
             IsLiquid = false;
 
@@ -66,7 +67,6 @@
             SteelCost = 0;
             AssmatCost = new List<int> { 0, 0, 0, 0, 0 };
             BaseVehicle = "";
-            ProductionTime = 0;
         }
     }
 }

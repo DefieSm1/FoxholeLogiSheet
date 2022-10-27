@@ -22,7 +22,7 @@
 </div>
 <div class="facility-container">
 	<div class="recipe-list">
-		@if(SelectedBuilding != "") 
+		@if(!String.IsNullOrEmpty(SelectedBuilding)) 
 		{
 			<div class="recipe-header"><p>@FacilityBuildingData[SelectedBuilding].Name!.ToUpper()</p></div>
 			<div class="facility-recipes">
@@ -30,7 +30,7 @@
 				{
 					<div class="facility-recipe">
 						<div class="recipe-item-info">
-							@if (recipe.value.InputNames.Count() == recipe.value.InputAmounts.Count() && recipe.value.InputNames[0] != "")
+							@if (recipe.value.InputNames.Count() == recipe.value.InputAmounts.Count() && !String.IsNullOrEmpty(recipe.value.InputNames[0]))
 							{
 								@foreach (var item in recipe.value.InputNames.Select((value, index) => new { value, index })) 
 								{
@@ -44,16 +44,13 @@
 
 							<div class="recipe-info">
 								<p><span class="power-icon"></span>@(recipe.value.PowerConsumption < 0 ? recipe.value.PowerConsumption * -1 : "-" + recipe.value.PowerConsumption) MW</p>
-								@if (recipe.value.OutputNames[0] != "")
-								{
-									<img src="icons/ProductionArrow.png"/>
-								}
+								<img src="icons/ProductionArrow.png" style="@(String.IsNullOrEmpty(recipe.value.OutputNames[0]) ? "opacity: 0" : "")"/>
 								<span class="recipe-time">
 									@GetTimestamp(recipe.value.ProductionTime * BuildingMultipliers[recipe.index])
 								</span>
 							</div>
 
-							@if (recipe.value.OutputNames.Count() == recipe.value.OutputAmounts.Count() && recipe.value.OutputNames[0] != "")
+							@if (recipe.value.OutputNames.Count() == recipe.value.OutputAmounts.Count() && !String.IsNullOrEmpty(recipe.value.OutputNames[0]))
 							{
 								@foreach (var item in recipe.value.OutputNames.Select((value, index) => new { value, index })) 
 								{
@@ -78,7 +75,7 @@
 				}
 			</div>
 		}
-		@if(SelectedUpgrade != "") 
+		@if(!String.IsNullOrEmpty(SelectedUpgrade)) 
 		{
 			<div class="recipe-header"><p>@FacilityUpgrades[SelectedUpgrade].Name!.ToUpper()</p></div>
 			<div class="facility-recipes">
@@ -86,7 +83,7 @@
 				{
 					<div class="facility-recipe">
 						<div class="recipe-item-info">
-							@if (recipe.value.InputNames.Count() == recipe.value.InputAmounts.Count() && recipe.value.InputNames[0] != "")
+							@if (recipe.value.InputNames.Count() == recipe.value.InputAmounts.Count() && !String.IsNullOrEmpty(recipe.value.InputNames[0]))
 							{
 								@foreach (var item in recipe.value.InputNames.Select((value, index) => new { value, index }))
 								{
@@ -100,16 +97,11 @@
 
 							<div class="recipe-info">
 								<p><span class="power-icon"></span>@(recipe.value.PowerConsumption < 0 ? recipe.value.PowerConsumption * -1 : "-" + recipe.value.PowerConsumption) MW</p>
-								@if (recipe.value.OutputNames[0] != "")
-								{
-									<img src="icons/ProductionArrow.png" />
-								}
-								<span class="recipe-time">
-									@GetTimestamp(recipe.value.ProductionTime * UpgradeMultipliers[recipe.index])
-								</span>
+								<img src="icons/ProductionArrow.png" style="@(String.IsNullOrEmpty(recipe.value.OutputNames[0]) ? "opacity: 1" : "")"/>
+								<span class="recipe-time"> @GetTimestamp(recipe.value.ProductionTime * UpgradeMultipliers[recipe.index])</span>
 							</div>
 
-							@if (recipe.value.OutputNames.Count() == recipe.value.OutputAmounts.Count() && recipe.value.OutputNames[0] != "")
+							@if (recipe.value.OutputNames.Count() == recipe.value.OutputAmounts.Count() && !String.IsNullOrEmpty(recipe.value.OutputNames[0]))
 							{
 								@foreach (var item in recipe.value.OutputNames.Select((value, index) => new { value, index }))
 								{

@@ -26,16 +26,5 @@
             SteelCost = 0;
             BuildingUpgrades = new();
         }
-
-        public FacilityBuilding(string? name, string? description, int bmatCost, int cmatCost, int pcmatCost, int steelCost, List<string> buildingUpgrades)
-        {
-            Name = name;
-            Description = description;
-            BmatCost = bmatCost;
-            CmatCost = cmatCost;
-            PCmatCost = pcmatCost;
-            SteelCost = steelCost;
-            BuildingUpgrades = buildingUpgrades;
-        }
     }
 }

@@ -69,7 +69,8 @@
     width: 100%;
     padding: 0 8vw;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 40px;
 }
 
 /* VEHICLE GRID */
