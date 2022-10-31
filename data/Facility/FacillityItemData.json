@@ -7,10 +7,19 @@
         "damageInfo": [ "" ],
         "isLiquid": false
     },
-    "MaterialRawComponents": {
-        "name": "Components",
+    "MaterialBasic": {
+        "name": "Basic Materials",
+        "category": "Resource used for building basic structures and producing itmes.",
+        "damageType": "",
+        "damageInfo": [ "" ],
+        "description": "",
+        "isLiquid": false
+    },
+    "MaterialExplosive":
+    {
+        "name": "Explosive Materials",
         "category": "",
-        "description": "Components that can be salvaged into Refined Mateirals at a Refinery.",
+        "description": "Resource used for producing heavy explosive weapons.",
         "damageType": "",
         "damageInfo": [ "" ],
         "isLiquid": false
@@ -24,18 +33,17 @@
         "damageInfo": [ "" ],
         "isLiquid": false
     },
-    "MaterialRawSulfur": {
-        "name": "Sulfur",
-        "description": "Sulfur that can be refined into Heavy Explosive Materials at a Refinery.",
+    "MaterialRawComponents": {
+        "name": "Components",
+        "category": "",
+        "description": "Components that can be salvaged into Refined Mateirals at a Refinery.",
         "damageType": "",
         "damageInfo": [ "" ],
         "isLiquid": false
     },
-    "MaterialExplosive":
-    {
-        "name": "Explosive Materials",
-        "category": "",
-        "description": "Resource used for producing heavy explosive weapons.",
+    "MaterialRawSulfur": {
+        "name": "Sulfur",
+        "description": "Sulfur that can be refined into Heavy Explosive Materials at a Refinery.",
         "damageType": "",
         "damageInfo": [ "" ],
         "isLiquid": false
@@ -62,14 +70,6 @@
         "description": "Refined Coal required for various Facility processes.",
         "damageType": "",
         "damageInfo": [ "" ],
-        "isLiquid": false
-    },
-    "MaterialBasic": {
-        "name": "Basic Materials",
-        "category": "Resource used for building basic structures and producing itmes.",
-        "damageType": "",
-        "damageInfo": [ "" ],
-        "description": "",
         "isLiquid": false
     },
     "MaterialConstruction": {
@@ -232,14 +232,6 @@
         "damageInfo": [ "This can be attached to certain vehicles" ],
         "isLiquid": false
     },
-    "AmmoShell250": {
-        "name": "250mm",
-        "category": "",
-        "description": "A shell that is launched over short distances by a spigot mortart.",
-        "damageType": "Demolition",
-        "damageInfo": [ "Can ruin structures that have been severly damaged by artillery" ],
-        "isLiquid": false
-    },
     "AmmoRocketHE": {
         "name": "3C-High Explosive Rocket",
         "category": "",
@@ -267,17 +259,9 @@
     "AmmoShell945": {
         "name": "94.5mm",
         "category": "",
-        "description": "A heavy anti-tank shell",
+        "description": "A heavy anti-tank shell.",
         "damageType": "Armour Piercing",
         "damageInfo": [ "Can penetrate armoured vehicles", "Higher chance to penetrate armoured vehicles at direct angles (to the sides/rear of the target) and at close range", "High chance to penetrate armoured vehicles", "Higher base chance to disable vehicle subsystems" ],
-        "isLiquid": false
-    },
-    "AmmoShell300": {
-        "name": "300mm",
-        "category": "",
-        "description": "Standard payload used with Storm Cannons.",
-        "damageType": "High Explosive",
-        "damageInfo": [ "Can ruin structures that have been severly damaged by artillery", "Reduced damage against Trenches" ],
         "isLiquid": false
     },
     "AmmoShell120": {
@@ -294,6 +278,22 @@
         "description": "Payload for heavy artillery weapons.",
         "damageType": "High Explosive",
         "damageInfo": [ "Can ruin structures that have been severly damaged by artillery", "Reduced damage against Trenches" ],
+        "isLiquid": false
+    },
+    "AmmoShell300": {
+        "name": "300mm",
+        "category": "",
+        "description": "Standard payload used with Storm Cannons.",
+        "damageType": "High Explosive",
+        "damageInfo": [ "Can ruin structures that have been severly damaged by artillery", "Reduced damage against Trenches" ],
+        "isLiquid": false
+    },
+    "AmmoShell250": {
+        "name": "250mm",
+        "category": "",
+        "description": "A shell that is launched over short distances by a spigot mortar.",
+        "damageType": "Demolition",
+        "damageInfo": [ "Can ruin structures that have been severly damaged by artillery" ],
         "isLiquid": false
     },
     "SuppliesGarrison": {
