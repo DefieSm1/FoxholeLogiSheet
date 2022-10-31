@@ -6,17 +6,107 @@
 }
 
 .facility-container {
-    width: 100%;
-    padding: 0 8vw;
+    margin: 0 auto;
     display: flex;
-    justify-content: center
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
 }
+
+/* ITEM SELECTION */
+
+.item-select {
+    max-width: fit-content;
+    max-height: max-content;
+    margin: 0 0 20px;
+}
+
+.item-select-header {
+    width: 100%;
+    height: 50px;
+    background-color: #7F7F7F;
+    display: flex;
+    align-items: center;
+    padding-left: 0.6rem;
+}
+
+    .item-select-header > p {
+        margin: 0;
+        color: whitesmoke;
+        font-weight: 400;
+        font-size: 1.2em;
+    }
+
+    .item-select-header > button:first-of-type {
+        margin-left: auto;
+        box-shadow: none;
+        font-weight: 400;
+        font-size: 1.2em;
+    }
+
+.item-select-info {
+    margin-right: 12px;
+    font-weight: 400;
+    font-size: 1.2em;
+    width: 30px;
+    height: 30px;
+    transition: none;
+    border: 1px black solid;
+    box-shadow: none;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #787878;
+    cursor: default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.item-select-buttons {
+    max-height: 603px;
+    padding: 6px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: rgba(0, 0, 0, 0.95);
+    gap: 6px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.facility-item {
+    width: 75px;
+    height: 75px;
+    border: none;
+    outline: none !important;
+    border-radius: 0;
+    transition: none;
+    box-shadow: none;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #414241;
+}
+
+    .facility-item:hover {
+        background-color: #7F7F7F;
+    }
+
+    .facility-item:disabled {
+        opacity: .65;
+    }
+
+        .facility-item:disabled:hover {
+            background-color: #414241;
+        }
 
 /* BUILDING SELECTION */
 
 .building-select {
     max-width: fit-content;
-    margin: 0 auto 20px;
+    margin-bottom: 20px;
 }
 
 .building-select-header {
@@ -36,20 +126,20 @@
     }
 
 .building-select-buttons {
-    padding: 6px 2px 0;
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    gap: 6px;
     background-color: rgba(0, 0, 0, 0.95);
 }
 
 .facility-building {
-    width: 100px;
-    height: 100px;
-    margin: 0 3px;
-    border: none;
-    outline: none !important;
+    width: 95px;
+    height: 95px;
     border-radius: 0;
     transition: none;
     box-shadow: none;
-    background-size: 80%;
+    background-size: 75px;
     background-repeat: no-repeat;
     background-position: center;
     background-color: #414241;
@@ -59,25 +149,16 @@
         background-color: #7F7F7F;
     }
 
-    .facility-building:disabled {
-        opacity: .65;
-    }
-
-        .facility-building:disabled:hover {
-            background-color: #414241;
-        }
-
 /* FACILITY RECIPES */
 
-facility-container {
+.recipe-container {
     width: 100%;
-    padding: 0 8vw;
     display: flex;
     justify-content: space-around;
 }
 
 .recipe-list {
-    width: 800px;
+    width: 813px;
     height: fit-content;
     margin-right: 10px;
     background-color: rgba(0, 0, 0, 0.95);
@@ -130,7 +211,7 @@ facility-container {
     border-width: 0;
     transition: none;
     box-shadow: none;
-    background-size: 80%;
+    background-size: 65px;
     background-repeat: no-repeat;
     background-position: center;
     background-color: #414241;
@@ -197,6 +278,45 @@ facility-container {
         background: none;
         border: 1px dashed whitesmoke;
     }
+
+/* ITEM LIST INFOBOX */
+
+.item-list-infobox {
+    position: fixed;
+    z-index: 1;
+    max-width: 410px;
+    background-color: rgba(0, 0, 0, 0.95);
+    color: rgb(230, 230, 230);
+    font-size: 16px;
+}
+
+    .item-list-infobox, .item-list-infobox > * {
+        pointer-events: none;
+    }
+
+.item-list-infobox-header {
+    background-color: #7F7F7F;
+    margin: 0 !important;
+    padding: 0.4rem;
+    padding-left: 12px;
+}
+
+    .item-list-infobox-header > p {
+        margin: 0 !important;
+        vertical-align: middle;
+    }
+
+.item-list-infobox-info {
+    margin: 0.8rem;
+}
+
+    .item-list-infobox-info > p {
+        margin: 0;
+    }
+
+        .item-list-infobox-info > p > span, .item-list-infobox-info > p > i {
+            color: #E5BA82;
+        }
 
 /* RECIPE EXTRA INFOBOX */
 
@@ -287,19 +407,17 @@ facility-container {
     }
 
 .upgrade-select-buttons {
-    padding: 8px 0;
+    padding: 6px;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.95);
-    gap: 8px;
+    gap: 6px;
 }
 
 .building-upgrade {
-    width: 100px;
-    height: 100px;
-    border: none;
-    outline: none !important;
+    width: 99px;
+    height: 99px;
     border-radius: 0;
     transition: none;
     box-shadow: none;
@@ -312,14 +430,6 @@ facility-container {
     .building-upgrade:hover {
         background-color: #7F7F7F;
     }
-
-    .building-upgrade:disabled {
-        opacity: .65;
-    }
-
-        .building-upgrade:disabled:hover {
-            background-color: #414241;
-        }
 
 @media only screen and (max-width: 800px) {
     .recipe-infobox, .recipe-infobox > * {
@@ -351,7 +461,7 @@ facility-container {
 }
 
 *::-webkit-scrollbar-track-piece {
-    background-color: #00000000;
+    background-color: #4d4d4d;
 }
 
 *::-webkit-scrollbar-thumb {

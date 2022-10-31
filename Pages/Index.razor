@@ -19,8 +19,8 @@
         <div class="d-inline-flex category-selector">
             @foreach (string category in CategoryNames)
             {
-                if ((CannotFactory.Contains(category) && ProductionMode == "Factory") || (CannotMPF.Contains(category) && ProductionMode == "MPF"))
-                    continue;
+                if ((CannotFactory.Contains(category) && ProductionMode == "Factory") || (CannotMPF.Contains(category) && ProductionMode == "MPF")) continue;
+
                 <button class="btn category-button @(category == SelectedCategory ? "category-selected" : "")"
                 @onclick="() => SelectedCategory = category" style="background-image: url(icons/ProductionIcons/@(category).png)"></button>
             }
@@ -30,8 +30,8 @@
             <div class="category-grid">
             @foreach (KeyValuePair<string, ProductionItem> item in ProductionData.GetCategoryData(SelectedCategory)) 
             {
-                if (!item.Value.CanMPF && ProductionMode == "MPF")
-                    continue;
+                if (!item.Value.CanMPF && ProductionMode == "MPF") continue;
+
                 <button class="btn production-item @(CheckIfDisabled(SelectedCategory, item.Key) ? "button-disabled" : "")" 
                 style="background-image: url(icons/ProductionIcons/@(ProductionData.GetProductionBuilding(SelectedCategory))/@(item.Key).png)"
                 @onmouseover="() => { HoveredItem = item.Value; InfoboxVisibility = true; InfoboxSimple = false; }" 
