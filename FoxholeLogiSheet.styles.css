@@ -68,10 +68,9 @@
 
 .assembly-container[b-u5l6ycqe8q] {
     width: 100%;
-    padding: 0 8vw;
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 3vw;
 }
 
 /* VEHICLE GRID */
@@ -321,18 +320,19 @@
     background-color: #7F7F7F;
 }
 
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 1400px) {
 
     .assembly-container[b-u5l6ycqe8q] {
-        width: 100vw;
-        padding: 0;
-        margin: 0;
         flex-direction: column;
         align-items: center;
     }
 
+    .vehicle-select[b-u5l6ycqe8q] {
+        max-width: 100%;
+    }
+
     .vehicle-grid[b-u5l6ycqe8q] {
-        width: 100vw;
+        max-width: 100%;
         height: max-content;
     }
 
@@ -351,26 +351,26 @@
         font-size: 1em;
     }
 
-    @media only screen and (max-width: 650px) {
-        .vehicle-grid[b-u5l6ycqe8q] {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-        }
+    .output-bottom[b-u5l6ycqe8q] {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 
-        .output-info[b-u5l6ycqe8q] {
-            width: 100vw;
-        }
+}
+@media only screen and (max-width: 650px) {
+    .vehicle-grid[b-u5l6ycqe8q] {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 
-        .output-top-items > button[b-u5l6ycqe8q] {
-            width: 20%;
-        }
+    .output-info[b-u5l6ycqe8q] {
+        width: 100%;
+    }
 
-        .output-bottom > *[b-u5l6ycqe8q] {
-            background-size: 40%;
-        }
+    .output-top-items > button[b-u5l6ycqe8q] {
+        width: 20%;
+    }
 
-        .sum-pricename[b-u5l6ycqe8q] {
-            display: none;
-        }
+    .sum-pricename[b-u5l6ycqe8q] {
+        display: none;
     }
 }
 /* /Pages/Facility.razor.rz.scp.css */
@@ -853,8 +853,8 @@
 
 .production-container[b-rz48f9patv] {
     width: 100%;
-    padding: 0 8vw;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 3vw;
 }
 
 /* INPUT HEADER, CATEGORY AND PRODUCTION MODE SELECTION */
@@ -921,7 +921,7 @@
 }
 
 .category-grid-background[b-rz48f9patv] {
-    height: 610px;
+    height: 614px;
     padding: 6px;
     background-color: rgba(0, 0, 0, 0.95);
     overflow-y: auto;
@@ -1130,13 +1130,13 @@
 
 @media only screen and (max-width: 1550px) {
     .production-container[b-rz48f9patv] {
-        padding: 0;
+        gap: 20px;
     }
 }
 
 @media only screen and (max-width: 1200px) {
     .production-container[b-rz48f9patv] {
-        width: 100vw;
+        width: 100%;
         padding: 0;
         margin: 0;
         flex-direction: column;
@@ -1430,7 +1430,6 @@ main[b-j1d26w5cpj] {
     background-color: #727272ed;
     justify-content: flex-start;
     height: 6vh;
-    width: 100vw;
     display: flex;
     align-items: center;
 }
