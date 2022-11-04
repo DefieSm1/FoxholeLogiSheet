@@ -12,7 +12,6 @@ main {
     background-color: #727272ed;
     justify-content: flex-start;
     height: 6vh;
-    width: 100vw;
     display: flex;
     align-items: center;
 }

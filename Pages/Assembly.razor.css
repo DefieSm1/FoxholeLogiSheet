@@ -67,10 +67,9 @@
 
 .assembly-container {
     width: 100%;
-    padding: 0 8vw;
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 3vw;
 }
 
 /* VEHICLE GRID */
@@ -320,18 +319,19 @@
     background-color: #7F7F7F;
 }
 
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 1400px) {
 
     .assembly-container {
-        width: 100vw;
-        padding: 0;
-        margin: 0;
         flex-direction: column;
         align-items: center;
     }
 
+    .vehicle-select {
+        max-width: 100%;
+    }
+
     .vehicle-grid {
-        width: 100vw;
+        max-width: 100%;
         height: max-content;
     }
 
@@ -350,25 +350,25 @@
         font-size: 1em;
     }
 
-    @media only screen and (max-width: 650px) {
-        .vehicle-grid {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-        }
+    .output-bottom {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 
-        .output-info {
-            width: 100vw;
-        }
+}
+@media only screen and (max-width: 650px) {
+    .vehicle-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 
-        .output-top-items > button {
-            width: 20%;
-        }
+    .output-info {
+        width: 100%;
+    }
 
-        .output-bottom > * {
-            background-size: 40%;
-        }
+    .output-top-items > button {
+        width: 20%;
+    }
 
-        .sum-pricename {
-            display: none;
-        }
+    .sum-pricename {
+        display: none;
     }
 }

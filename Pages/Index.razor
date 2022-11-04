@@ -264,16 +264,16 @@
                     switch (materialKey)
                     {
                         case "Bmat":
-                            queuePrice += Math.Floor(itemInfo.BmatCost * currentDiscount) * (isVehicleOrShippable ? 3 : 1);
+                            queuePrice += Math.Floor(itemInfo.BmatCost * currentDiscount * (isVehicleOrShippable ? itemInfo.CrateSize : 1));
                             break;
                         case "Rmat":
-                            queuePrice += Math.Floor(itemInfo.RmatCost * currentDiscount) * (isVehicleOrShippable ? 3 : 1);
+                            queuePrice += Math.Floor(itemInfo.RmatCost * currentDiscount * (isVehicleOrShippable ? itemInfo.CrateSize : 1));
                             break;
                         case "Emat":
-                            queuePrice += Math.Floor(itemInfo.EmatCost * currentDiscount) * (isVehicleOrShippable ? 3 : 1);
+                            queuePrice += Math.Floor(itemInfo.EmatCost * currentDiscount * (isVehicleOrShippable ? itemInfo.CrateSize : 1));
                             break;
                         case "Hemat":
-                            queuePrice += Math.Floor(itemInfo.HematCost * currentDiscount) * (isVehicleOrShippable ? 3 : 1);
+                            queuePrice += Math.Floor(itemInfo.HematCost * currentDiscount * (isVehicleOrShippable ? itemInfo.CrateSize : 1));
                             break;
                         case "Time":
                             queuePrice += itemInfo.ProductionTime * (ProductionMode == "MPF" ? isVehicleOrShippable ? 1 : 10 : 1);

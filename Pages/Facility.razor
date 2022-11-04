@@ -377,7 +377,7 @@
 		else if (hasOutputHighlight)
 			return result += outputColor;
 		else
-			return "";
+			return "inherit";
 	}
 
 	public string GetItemHighlight(string item)
@@ -385,7 +385,7 @@
 		if (SelectedItem == item)
 			return "2px dashed #6098E6";
 		else
-			return "none";
+			return "inherit";
 	}
 
 	public string GetRecipeAutonomy(string type = "input")
