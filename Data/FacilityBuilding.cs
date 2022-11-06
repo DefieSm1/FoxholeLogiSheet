@@ -16,6 +16,8 @@
 
         public List<string> BuildingUpgrades { get; set; }
 
+        public List<FacilityRecipe> BuildingRecipes {get; set; }
+
         public FacilityBuilding()
         {
             Name = "";
@@ -25,6 +27,7 @@
             PCmatCost = 0;
             SteelCost = 0;
             BuildingUpgrades = new();
+            BuildingRecipes = new();
         }
     }
 }

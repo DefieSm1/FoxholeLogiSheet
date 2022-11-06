@@ -13,17 +13,17 @@
 		@foreach(KeyValuePair<string, FacilityBuilding> building in AssemblyBuildings) 
 		{
 			<button class="assembly-building building-base @(SelectedBuilding == building.Key ? "button-disabled" : "")" 
-			style="background-image: url(icons/Facility/AssemblyStation/@(building.Key).png)"
-				@onmouseover="() => { HoveredBuilding = building.Value; BuildingInfoboxVisibility = true; InfoboxSimple = false; }"
-				@onmouseout="() => { HoveredBuilding = building.Value; BuildingInfoboxVisibility = false; }"
-				@onclick="() => { SelectedBuilding = building.Key; SelectedUpgrade = (building.Value.BuildingUpgrades.Contains(SelectedUpgrade) ? SelectedUpgrade : string.Empty); }"></button>
+			        style="background-image: url(icons/Facility/AssemblyStation/@(building.Key).png)"
+				    @onmouseover="() => { HoveredBuilding = building.Value; BuildingInfoboxVisibility = true; InfoboxSimple = false; }"
+				    @onmouseout="() => { HoveredBuilding = building.Value; BuildingInfoboxVisibility = false; }"
+				    @onclick="() => { SelectedBuilding = building.Key; SelectedUpgrade = (building.Value.BuildingUpgrades.Contains(SelectedUpgrade) ? SelectedUpgrade : string.Empty); }"></button>
 			foreach(string upgrade in building.Value.BuildingUpgrades)
 			{
 				<button class="assembly-building building-upgrade @(SelectedUpgrade == upgrade ? "button-disabled" : "")" 
-				style="background-image: url(icons/Facility/AssemblyStation/@(upgrade).png)"
-				@onmouseover="() => { HoveredBuilding = AssemblyUpgrades[upgrade]; BuildingInfoboxVisibility = true; InfoboxSimple = false; }"
-				@onmouseout="() => { HoveredBuilding = AssemblyUpgrades[upgrade]; BuildingInfoboxVisibility = false; }"
-				@onclick="() => { SelectedBuilding = building.Key; SelectedUpgrade = upgrade; }"></button>
+				        style="background-image: url(icons/Facility/AssemblyStation/@(upgrade).png)"
+				        @onmouseover="() => { HoveredBuilding = AssemblyUpgrades[upgrade]; BuildingInfoboxVisibility = true; InfoboxSimple = false; }"
+				        @onmouseout="() => { HoveredBuilding = AssemblyUpgrades[upgrade]; BuildingInfoboxVisibility = false; }"
+				        @onclick="() => { SelectedBuilding = building.Key; SelectedUpgrade = upgrade; }"></button>
 			}
 		}
 	</div>
@@ -37,10 +37,10 @@
 				@foreach (KeyValuePair<string, ProductionItem> item in AssemblyVehicles.GetBuildingVehicles(SelectedBuilding))
 				{
 					<button class="btn vehicle-button"
-					style="background-image: url(icons/AssemblyStation/@(item.Key).png)"
-                    @onmouseover="() => { HoveredItem = item.Value; ItemInfoboxVisibility = true; InfoboxSimple = false;; }"
-					@onmouseout="() => { HoveredItem = item.Value; ItemInfoboxVisibility = false; }"
-                    @onclick="() => SelectedVehicles[SelectedBuilding].Add(item.Key)"></button>
+					        style="background-image: url(icons/AssemblyStation/@(item.Key).png)"
+                            @onmouseover="() => { HoveredItem = item.Value; ItemInfoboxVisibility = true; InfoboxSimple = false;; }"
+					        @onmouseout="() => { HoveredItem = item.Value; ItemInfoboxVisibility = false; }"
+                            @onclick="() => SelectedVehicles[SelectedBuilding].Add(item.Key)"></button>
 				}
 			</div>
 		}
@@ -51,10 +51,10 @@
 				@foreach (KeyValuePair<string, ProductionItem> item in AssemblyVehicles.GetBuildingVehicles(SelectedUpgrade))
 				{
 					<button class="btn vehicle-button"
-					style="background-image: url(icons/AssemblyStation/@(item.Key).png)"
-					@onmouseover="() => { HoveredItem = item.Value; ItemInfoboxVisibility = true; InfoboxSimple = false; }" 
-					@onmouseout="() => { HoveredItem = item.Value; ItemInfoboxVisibility = false; }"
-                    @onclick="() => SelectedVehicles[SelectedUpgrade].Add(item.Key)"></button>
+					        style="background-image: url(icons/AssemblyStation/@(item.Key).png)"
+					        @onmouseover="() => { HoveredItem = item.Value; ItemInfoboxVisibility = true; InfoboxSimple = false; }" 
+					        @onmouseout="() => { HoveredItem = item.Value; ItemInfoboxVisibility = false; }"
+                            @onclick="() => SelectedVehicles[SelectedUpgrade].Add(item.Key)"></button>
 				}
 			</div>
 		}
@@ -83,10 +83,10 @@
                                 @foreach (string vehicle in SelectedVehicles[building])
                                 {
                                     <button class="btn" style="background-image: url(icons/AssemblyStation/@(vehicle).png"
-                                    @onmouseover="() => { HoveredItem = AssemblyVehicles.GetBuildingVehicles(building)[vehicle]; ItemInfoboxVisibility = true; InfoboxSimple = true; }"
-                                    @onmousemove="() => ItemInfoboxVisibility = true" 
-                                    @onmouseout="() => { HoveredItem = AssemblyVehicles.GetBuildingVehicles(building)[vehicle]; ItemInfoboxVisibility = false; }"
-                                    @onclick="() => { SelectedVehicles[building].RemoveAt(SelectedVehicles[building].IndexOf(vehicle)); ItemInfoboxVisibility = false; }"></button>
+                                            @onmouseover="() => { HoveredItem = AssemblyVehicles.GetBuildingVehicles(building)[vehicle]; ItemInfoboxVisibility = true; InfoboxSimple = true; }"
+                                            @onmousemove="() => ItemInfoboxVisibility = true" 
+                                            @onmouseout="() => { HoveredItem = AssemblyVehicles.GetBuildingVehicles(building)[vehicle]; ItemInfoboxVisibility = false; }"
+                                            @onclick="() => { SelectedVehicles[building].RemoveAt(SelectedVehicles[building].IndexOf(vehicle)); ItemInfoboxVisibility = false; }"></button>
                                 }
                             </div>
                             <div class="output-item-count">@SelectedVehicles[building].Count()</div>
@@ -295,15 +295,7 @@
         }
     }
 
-    public string GetTimestamp(double seconds)
-    {
-        TimeSpan vehicleTime = TimeSpan.FromSeconds(seconds);
-
-        if (vehicleTime.Days > 0)
-            return vehicleTime.ToString(@"d\:hh\:mm\:ss");
-        else
-            return vehicleTime.ToString(@"h\:mm\:ss");
-    }
+    public string GetTimestamp(double seconds) => TimeSpan.FromSeconds(seconds).ToString(TimeSpan.FromSeconds(seconds).Days > 0 ? @"d\:hh\:mm\:ss" : @"h\:mm\:ss");
 
     public double GetQueuePrice(string materialKey, string vehicleBuilding = "all", int AssmatIndex = 0)
     {
@@ -326,30 +318,15 @@
                 {
                     vehicleInfo = AssemblyVehicles.GetBuildingVehicles(vehicleBuilding)[item];
 
-                    switch (materialKey)
-                    {
-                        case "MaterialBasic":
-                            queuePrice += vehicleInfo.BmatCost;
-                            break;
-                        case "MaterialConstruction":
-                            queuePrice += vehicleInfo.CmatCost;
-                            break;
-                        case "MaterialProcessedConstruction":
-                            queuePrice += vehicleInfo.PCmatCost;
-                            break;
-                        case "MaterialSteel":
-                            queuePrice += vehicleInfo.SteelCost;
-                            break;
-                        case "AssemblyMaterials":
-                            queuePrice += vehicleInfo.AssmatCost[AssmatIndex];
-                            break;
-                        case "Time":
-                            queuePrice += vehicleInfo.ProductionTime;
-                            break;
-                        default:
-                            queuePrice += 0;
-                            break;
-                    }
+                    queuePrice += materialKey switch {
+                        "MaterialBasic" => vehicleInfo.BmatCost,
+                        "MaterialConstruction" => vehicleInfo.CmatCost,
+                        "MaterialProcessedConstruction" => vehicleInfo.PCmatCost,
+                        "MaterialSteel" => vehicleInfo.SteelCost,
+                        "AssemblyMaterials" => vehicleInfo.AssmatCost[AssmatIndex],
+                        "Time" => vehicleInfo.ProductionTime,
+                        _ => 0
+                    };
                 }
             }
         }
@@ -359,36 +336,20 @@
 
     public double GetRawMatPrice(string materialKey, string rawMaterialKey, double amount)
     {
-        double itemPrice = 0;
-
         AssemblyRawCosts materialInfo = new();
 
         materialInfo = MaterialRawCosts[materialKey];
 
-        switch (rawMaterialKey)
+        double itemPrice = rawMaterialKey switch
         {
-            case "Salvage":
-                itemPrice += materialInfo.SalvageCost;
-                break;
-            case "Components":
-                itemPrice += materialInfo.ComponentCost;
-                break;
-            case "Sulfur":
-                itemPrice += materialInfo.SulfurCost;
-                break;
-            case "Coal":
-                itemPrice += materialInfo.CoalCost;
-                break;
-            case "Oil":
-                itemPrice += materialInfo.OilCost;
-                break;
-            case "Water":
-                itemPrice += materialInfo.WaterCost;
-                break;
-            default:
-                itemPrice += 0;
-                break;
-        }
+            "Salvage" => materialInfo.SalvageCost,
+            "Components" => materialInfo.ComponentCost,
+            "Sulfur" => materialInfo.SulfurCost,
+            "Coal" => materialInfo.CoalCost,
+            "Oil" => materialInfo.OilCost,
+            "Water" => materialInfo.WaterCost,
+            _ => 0
+        };
 
         return itemPrice * amount;
     }

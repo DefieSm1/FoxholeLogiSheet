@@ -56,23 +56,18 @@
             AssmatAmount = 5;
         }
 
-        public Dictionary<string, ProductionItem> GetBuildingVehicles(string buildingName)
+        public Dictionary<string, ProductionItem> GetBuildingVehicles(string buildingName) => AssemblyNames.IndexOf(buildingName) switch
         {
-            int categoryIndex = AssemblyNames.IndexOf(buildingName);
-
-            switch (categoryIndex)
-            {
-                default:
-                case 0: return AssemblyStation ?? throw new KeyNotFoundException("Couldn't fetch " + buildingName);
-                case 1: return AssemblyStationMotorPool ?? throw new KeyNotFoundException("Couldn't fetch " + buildingName);
-                case 2: return AssemblyStationRocket ?? throw new KeyNotFoundException("Couldn't fetch " + buildingName);
-                case 3: return AssemblyStationField ?? throw new KeyNotFoundException("Couldn't fetch " + buildingName);
-                case 4: return AssemblyStationTank ?? throw new KeyNotFoundException("Couldn't fetch " + buildingName);
-                case 5: return AssemblyStationWeapons ?? throw new KeyNotFoundException("Couldn't fetch " + buildingName);
-                case 6: return AssemblyLarge ?? throw new KeyNotFoundException("Couldn't fetch " + buildingName);
-                case 7: return AssemblyLargeTrain ?? throw new KeyNotFoundException("Couldn't fetch " + buildingName);
-                case 8: return AssemblyLargeHeavyTank ?? throw new KeyNotFoundException("Couldn't fetch " + buildingName);
-            }
-        }
+            0 => AssemblyStation ?? throw new KeyNotFoundException("Couldn't fetch " + buildingName),
+            1 => AssemblyStationMotorPool ?? throw new KeyNotFoundException("Couldn't fetch " + buildingName),
+            2 => AssemblyStationRocket ?? throw new KeyNotFoundException("Couldn't fetch " + buildingName),
+            3 => AssemblyStationField ?? throw new KeyNotFoundException("Couldn't fetch " + buildingName),
+            4 => AssemblyStationTank ?? throw new KeyNotFoundException("Couldn't fetch " + buildingName),
+            5 => AssemblyStationWeapons ?? throw new KeyNotFoundException("Couldn't fetch " + buildingName),
+            6 => AssemblyLarge ?? throw new KeyNotFoundException("Couldn't fetch " + buildingName),
+            7 => AssemblyLargeTrain ?? throw new KeyNotFoundException("Couldn't fetch " + buildingName),
+            8 => AssemblyLargeHeavyTank ?? throw new KeyNotFoundException("Couldn't fetch " + buildingName),
+            _ => AssemblyStation ?? throw new KeyNotFoundException("Couldn't fetch " + buildingName)
+        };
     }
 }

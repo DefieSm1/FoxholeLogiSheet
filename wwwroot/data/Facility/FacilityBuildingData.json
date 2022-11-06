@@ -6,7 +6,17 @@
         "cmatCost": 0,
         "pcmatCost": 0,
         "steelCost": 0,
-        "buildingUpgrades": [ "MaterialsFactoryForge", "MaterialsFactoryMetalPress", "MaterialsFactorySmelter", "MaterialsFactoryAssembly" ]
+        "buildingUpgrades": [ "MaterialsFactoryForge", "MaterialsFactoryMetalPress", "MaterialsFactorySmelter", "MaterialsFactoryAssembly" ],
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialRawSalvage" ],
+                "inputAmounts": [ 10 ],
+                "outputNames": [ "MaterialConstruction" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 4,
+                "productionTime": 25
+            }
+        ]
     },
     "MetalworksFactory": {
         "name": "Metalworks Factory",
@@ -15,7 +25,25 @@
         "cmatCost": 125,
         "pcmatCost": 0,
         "steelCost": 0,
-        "buildingUpgrades": [ "MetalworksFactoryBlastFurnace", "MetalworksFactoryRecycler", "MetalworksFactoryEngineering" ]
+        "buildingUpgrades": [ "MetalworksFactoryBlastFurnace", "MetalworksFactoryRecycler", "MetalworksFactoryEngineering" ],
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialConstruction", "MaterialRawComponents" ],
+                "inputAmounts": [ 3, 20 ],
+                "outputNames": [ "MaterialProcessedConstruction" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 5,
+                "productionTime": 60
+            },
+            {
+                "inputNames": [ "MaterialProcessedConstruction" ],
+                "inputAmounts": [ 3 ],
+                "outputNames": [ "Pipe" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 5,
+                "productionTime": 120
+            }
+        ]
     },
     "CoalRefinery": {
         "name": "Coal Refinery",
@@ -24,7 +52,17 @@
         "cmatCost": 50,
         "pcmatCost": 0,
         "steelCost": 0,
-        "buildingUpgrades": [ "CoalRefineryCokeFurnace", "CoalRefineryLiquifier", "CoalRefineryAdvancedLiquifier" ]
+        "buildingUpgrades": [ "CoalRefineryCokeFurnace", "CoalRefineryLiquifier", "CoalRefineryAdvancedLiquifier" ],
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialRawCoal" ],
+                "inputAmounts": [ 200 ],
+                "outputNames": [ "MaterialCoke" ],
+                "outputAmounts": [ 180 ],
+                "powerConsumption": 3,
+                "productionTime": 120
+            }
+        ]
     },
     "OilRefinery": {
         "name": "Oil Refinery",
@@ -33,7 +71,17 @@
         "cmatCost": 50,
         "pcmatCost": 0,
         "steelCost": 0,
-        "buildingUpgrades": [ "OilRefineryReformer", "OilRefineryCrackSchack", "OilRefineryPetrochemical" ]
+        "buildingUpgrades": [ "OilRefineryReformer", "OilRefineryCrackSchack", "OilRefineryPetrochemical" ],
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialOilCrude" ],
+                "inputAmounts": [ 150 ],
+                "outputNames": [ "MaterialOilPetrol" ],
+                "outputAmounts": [ 150 ],
+                "powerConsumption": 1,
+                "productionTime": 150
+            }
+        ]
     },
     "AmmoFactory": {
         "name": "Ammunition Factory",
@@ -42,7 +90,25 @@
         "cmatCost": 0,
         "pcmatCost": 25,
         "steelCost": 0,
-        "buildingUpgrades": [ "AmmoFactoryRocket", "AmmoFactoryLargeShell" ]
+        "buildingUpgrades": [ "AmmoFactoryRocket", "AmmoFactoryLargeShell" ],
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
+                "inputAmounts": [ 1, 1 ],
+                "outputNames": [ "AmmoFlame" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 4,
+                "productionTime": 25
+            },
+            {
+                "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
+                "inputAmounts": [ 6, 5 ],
+                "outputNames": [ "AmmoShell250" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 4,
+                "productionTime": 30
+            }
+        ]
     },
     "MaintenanceTunnel": {
         "name": "Maintenance Tunnel",
@@ -51,7 +117,17 @@
         "cmatCost": 200,
         "pcmatCost": 0,
         "steelCost": 0,
-        "buildingUpgrades": [ "" ]
+        "buildingUpgrades": [ "" ],
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialConstruction" ],
+                "inputAmounts": [ 1 ],
+                "outputNames": [ "SuppliesGarrison" ],
+                "outputAmounts": [ 10 ],
+                "powerConsumption": 2,
+                "productionTime": 325
+            }
+        ]
     },
     "DieselPowerPlant": {
         "name": "Diesel Power Plant",
@@ -60,7 +136,17 @@
         "cmatCost": 0,
         "pcmatCost": 0,
         "steelCost": 0,
-        "buildingUpgrades": [ "DieselPowerPlantPetrol" ]
+        "buildingUpgrades": [ "DieselPowerPlantPetrol" ],
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialDiesel" ],
+                "inputAmounts": [ 25 ],
+                "outputNames": [ "" ],
+                "outputAmounts": [ 0 ],
+                "powerConsumption": -5,
+                "productionTime": 45
+            }
+        ]
     },
     "PowerStation": {
         "name": "Power Station",
@@ -69,6 +155,24 @@
         "cmatCost": 0,
         "pcmatCost": 25,
         "steelCost": 0,
-        "buildingUpgrades": [ "PowerStationSulfuricReactor" ]
+        "buildingUpgrades": [ "PowerStationSulfuricReactor" ],
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialOilCrude" ],
+                "inputAmounts": [ 50 ],
+                "outputNames": [ "" ],
+                "outputAmounts": [ 0 ],
+                "powerConsumption": -10,
+                "productionTime": 90
+            },
+            {
+                "inputNames": [ "MaterialRawCoal", "MaterialWater" ],
+                "inputAmounts": [ 60, 25 ],
+                "outputNames": [ "" ],
+                "outputAmounts": [ 0 ],
+                "powerConsumption": -10,
+                "productionTime": 90
+            }
+        ]
     }
 }

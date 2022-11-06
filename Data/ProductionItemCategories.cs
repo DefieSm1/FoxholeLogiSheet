@@ -60,24 +60,19 @@
             CannotMPF = new() { "Medical", "Utility", "Supplies" };
         }
 
-        public Dictionary<string, ProductionItem> GetCategoryData(string categoryName)
+        public Dictionary<string, ProductionItem> GetCategoryData(string categoryName) => CategoryNames.IndexOf(categoryName) switch
         {
-            int categoryIndex = CategoryNames.IndexOf(categoryName);
-
-            switch (categoryIndex)
-            {
-                default:
-                case 0: return SmallArms ?? throw new KeyNotFoundException("Couldn't fetch " + categoryName);
-                case 1: return HeavyArms ?? throw new KeyNotFoundException("Couldn't fetch " + categoryName);
-                case 2: return HeavyMunitions ?? throw new KeyNotFoundException("Couldn't fetch " + categoryName);
-                case 3: return Utility ?? throw new KeyNotFoundException("Couldn't fetch " + categoryName) ;
-                case 4: return Medical ?? throw new KeyNotFoundException("Couldn't fetch " + categoryName);
-                case 5: return Supplies ?? throw new KeyNotFoundException("Couldn't fetch " + categoryName);
-                case 6: return Uniforms ?? throw new KeyNotFoundException("Couldn't fetch " + categoryName);
-                case 7: return Vehicles ?? throw new KeyNotFoundException("Couldn't fetch " + categoryName);
-                case 8: return Shippables ?? throw new KeyNotFoundException("Couldn't fetch " + categoryName);
-            }
-        }
+            0 => SmallArms ?? throw new KeyNotFoundException("Couldn't fetch " + categoryName),
+            1 => HeavyArms ?? throw new KeyNotFoundException("Couldn't fetch " + categoryName),
+            2 => HeavyMunitions ?? throw new KeyNotFoundException("Couldn't fetch " + categoryName),
+            3 => Utility ?? throw new KeyNotFoundException("Couldn't fetch " + categoryName),
+            4 => Medical ?? throw new KeyNotFoundException("Couldn't fetch " + categoryName),
+            5 => Supplies ?? throw new KeyNotFoundException("Couldn't fetch " + categoryName),
+            6 => Uniforms ?? throw new KeyNotFoundException("Couldn't fetch " + categoryName),
+            7 => Vehicles ?? throw new KeyNotFoundException("Couldn't fetch " + categoryName),
+            8 => Shippables ?? throw new KeyNotFoundException("Couldn't fetch " + categoryName),
+            _ => SmallArms ?? throw new KeyNotFoundException("Couldn't fetch " + categoryName)
+        };
         public string GetProductionBuilding(string itemCategory)
         {
             if (itemCategory == "Vehicles")

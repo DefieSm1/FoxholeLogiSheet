@@ -14,21 +14,18 @@
 				<p>FACILITY ITEMS</p>
 				<button class="btn text-light" @onclick="() => { SelectedItem = String.Empty; HighlightBuildings(); }">Unselect</button>
 				<button class="item-select-info"
-							@onmouseover="() => ItemListInfoboxVisibility = true"
-							@onmouseout="() => ItemListInfoboxVisibility = false">
-					?
-				</button>
+						@onmouseover="() => ItemListInfoboxVisibility = true"
+						@onmouseout="() => ItemListInfoboxVisibility = false">?</button>
 			</div>
 			<div class="item-select-buttons">
 			@foreach(string item in FacilityItems.Keys) 
 			{
 				@if(item == "MaterialBasic") continue;
 
-				<button class="facility-item @(SelectedItem == item ? "button-disabled" : "")"
-				style="background-image: url(icons/Facility/@(item).png)"
-				@onmouseover="() => { HoveredItem = FacilityItems[item]; ItemInfoboxVisibility = true; }"
-				@onmouseout="() => { HoveredItem = FacilityItems[item]; ItemInfoboxVisibility = false; }"
-				@onclick="() => { SelectedItem = item; HighlightBuildings(item); }"></button>
+				<button class="facility-item @(SelectedItem == item ? "button-disabled" : "")" style="background-image: url(icons/Facility/@(item).png)"
+						@onmouseover="() => { HoveredItem = FacilityItems[item]; ItemInfoboxVisibility = true; }"
+						@onmouseout="() => { HoveredItem = FacilityItems[item]; ItemInfoboxVisibility = false; }"
+						@onclick="() => { SelectedItem = item; HighlightBuildings(item); }"></button>
 			}
 			</div>
 		</div>
@@ -40,10 +37,10 @@
 				@foreach(KeyValuePair<string, FacilityBuilding> building in FacilityBuildingData) 
 				{
 					<button class="facility-building building-base @(SelectedBuilding == building.Key ? "button-disabled" : "")" 
-					style="background-image: url(icons/Facility/@(building.Key).png); border: @GetBuildingHighlight(building.Key)"
-						@onmouseover="() => { HoveredBuilding = building.Value; BuildingInfoboxVisibility = true; }"
-						@onmouseout="() => { HoveredBuilding = building.Value; BuildingInfoboxVisibility = false; }"
-						@onclick="() => { SelectedBuilding = building.Key; SelectedUpgrade = String.Empty; ResetMultipliers(); }"></button>
+							style="background-image: url(icons/Facility/@(building.Key).png); border: @GetBuildingHighlight(building.Key)"
+							@onmouseover="() => { HoveredBuilding = building.Value; BuildingInfoboxVisibility = true; }"
+							@onmouseout="() => { HoveredBuilding = building.Value; BuildingInfoboxVisibility = false; }"
+							@onclick="() => { SelectedBuilding = building.Key; SelectedUpgrade = String.Empty; ResetMultipliers(); }"></button>
 				}
 			</div>
 		</div>
@@ -53,7 +50,7 @@
 				{
 					<div class="recipe-header"><p>@FacilityBuildingData[SelectedBuilding].Name!.ToUpper()</p></div>
 					<div class="facility-recipes">
-						@foreach(var recipe in FacilityRecipes[SelectedBuilding].Select((value, index) => new {value, index}))
+						@foreach(var recipe in FacilityBuildingData[SelectedBuilding].BuildingRecipes.Select((value, index) => new {value, index}))
 						{
 							<div class="facility-recipe">
 								<div class="recipe-item-info">
@@ -64,7 +61,7 @@
 											<button class="input-item" style="background-image: url(icons/Facility/@(item.value).png); border: @GetItemHighlight(item.value)"
 													@onmouseover="() => { HoveredItem = FacilityItems[item.value]; ItemInfoboxVisibility = true; }"
 													@onmouseout="() => { HoveredItem = FacilityItems[item.value]; ItemInfoboxVisibility = false; }">
-												@(recipe.value.InputAmounts[item.index] * BuildingMultipliers[recipe.index])@(FacilityItems[recipe.value.InputNames[item.index]].IsLiquid ? "L" : "")
+													@(recipe.value.InputAmounts[item.index] * BuildingMultipliers[recipe.index])@(FacilityItems[recipe.value.InputNames[item.index]].IsLiquid ? "L" : "")
 											</button>
 										}
 									}
@@ -84,7 +81,7 @@
 											<button class="input-item" style="background-image: url(icons/Facility/@(item.value).png); border: @GetItemHighlight(item.value)"
 													@onmouseover="() => { HoveredItem = FacilityItems[item.value]; ItemInfoboxVisibility = true; }"
 													@onmouseout="() => { HoveredItem = FacilityItems[item.value]; ItemInfoboxVisibility = false; }">
-												@(recipe.value.OutputAmounts[item.index] * BuildingMultipliers[recipe.index])@(FacilityItems[recipe.value.OutputNames[item.index]].IsLiquid ? "L" : "")
+													@(recipe.value.OutputAmounts[item.index] * BuildingMultipliers[recipe.index])@(FacilityItems[recipe.value.OutputNames[item.index]].IsLiquid ? "L" : "")
 											</button>
 										}
 									}
@@ -92,9 +89,7 @@
 									<div class="recipe-multiplier">
 										<button class="extra-recipe-info"
 												@onmouseover="() => { HoveredRecipe = recipe.value; RecipeInfoboxVisibility = true; }"
-												@onmouseout="() => { HoveredRecipe = recipe.value; RecipeInfoboxVisibility = false; }">
-											?
-										</button>
+												@onmouseout="() => { HoveredRecipe = recipe.value; RecipeInfoboxVisibility = false; }">?</button>
 										<input type="number" min="1" value="@BuildingMultipliers[recipe.index]" @onchange="(e) => MultiplierChange(e.Value?.ToString(), recipe.index)" />
 									</div>
 								</div>
@@ -106,7 +101,7 @@
 				{
 					<div class="recipe-header"><p>@FacilityUpgrades[SelectedUpgrade].Name!.ToUpper()</p></div>
 					<div class="facility-recipes">
-						@foreach (var recipe in FacilityRecipes[SelectedUpgrade].Select((value, index) => new { value, index }))
+						@foreach (var recipe in FacilityUpgrades[SelectedUpgrade].BuildingRecipes.Select((value, index) => new { value, index }))
 						{
 							<div class="facility-recipe">
 								<div class="recipe-item-info">
@@ -117,7 +112,7 @@
 											<button class="input-item" style="background-image: url(icons/Facility/@(item.value).png); border: @GetItemHighlight(item.value)"
 													@onmouseover="() => { HoveredItem = FacilityItems[item.value]; ItemInfoboxVisibility = true; }"
 													@onmouseout="() => { HoveredItem = FacilityItems[item.value]; ItemInfoboxVisibility = false; }">
-												@(recipe.value.InputAmounts[item.index] * UpgradeMultipliers[recipe.index])@(FacilityItems[recipe.value.InputNames[item.index]].IsLiquid ? "L" : "")
+													@(recipe.value.InputAmounts[item.index] * UpgradeMultipliers[recipe.index])@(FacilityItems[recipe.value.InputNames[item.index]].IsLiquid ? "L" : "")
 											</button>
 										}
 									}
@@ -135,7 +130,7 @@
 											<button class="input-item" style="background-image: url(icons/Facility/@(item.value).png); border: @GetItemHighlight(item.value)"
 													@onmouseover="() => { HoveredItem = FacilityItems[item.value]; ItemInfoboxVisibility = true; }"
 													@onmouseout="() => { HoveredItem = FacilityItems[item.value]; ItemInfoboxVisibility = false; }">
-												@(recipe.value.OutputAmounts[item.index] * UpgradeMultipliers[recipe.index])@(FacilityItems[recipe.value.OutputNames[item.index]].IsLiquid ? "L" : "")
+													@(recipe.value.OutputAmounts[item.index] * UpgradeMultipliers[recipe.index])@(FacilityItems[recipe.value.OutputNames[item.index]].IsLiquid ? "L" : "")
 											</button>
 										}
 									}
@@ -143,9 +138,7 @@
 									<div class="recipe-multiplier">
 										<button class="extra-recipe-info"
 													@onmouseover="() => { HoveredRecipe = recipe.value; RecipeInfoboxVisibility = true; }"
-													@onmouseout="() => { HoveredRecipe = recipe.value; RecipeInfoboxVisibility = false; }">
-											?
-										</button>
+													@onmouseout="() => { HoveredRecipe = recipe.value; RecipeInfoboxVisibility = false; }">?</button>
 										<input type="number" min="1" value="@UpgradeMultipliers[recipe.index]" @onchange="(e) => MultiplierChange(e.Value?.ToString(), recipe.index, true)" />
 									</div>
 								</div>
@@ -203,13 +196,18 @@
 			@if (HoveredRecipe.InputAmounts[0] != 0)
 			{
 				<p>
-					Max Input Autonomy: <span>@GetRecipeAutonomy()</span><br />
-					<i>ie. how long could a facility produce this recipe with the inputs fully filled once and all needed liquids being piped in</i></p>
+					Max Input Autonomy: <span>@GetRecipeAutonomy()</span>
+					<br />
+					<i>ie. how long could a facility produce this recipe with the inputs fully filled once and all needed liquids being piped in</i>
+				</p>
 			}
 			@if (HoveredRecipe.OutputAmounts[0] != 0)
 			{
-				<p>Max Overflow Time: <span>@GetRecipeAutonomy("output")</span><br />
-					<i>ie. how long could a facility produce this recipe until reaching the item capacity for the outputs with inputs being always filled and output liquids being piped out</i></p>
+				<p>
+					Max Overflow Time: <span>@GetRecipeAutonomy("output")</span>
+					<br />
+					<i>ie. how long could a facility produce this recipe until reaching the item capacity for the outputs with inputs being always filled and output liquids being piped out</i>
+				</p>
 			}
 		}
 	</div>
@@ -222,8 +220,6 @@
 	public Dictionary<string, FacilityBuilding> FacilityBuildingData = new();
 
 	public Dictionary<string, FacilityBuilding> FacilityUpgrades = new();
-
-	public Dictionary<string, List<FacilityRecipe>> FacilityRecipes = new();
 
 	public Dictionary<string, ProductionItem> FacilityItems = new();
 
@@ -266,8 +262,6 @@
 		FacilityBuildingData = await Http.GetFromJsonAsync<Dictionary<string, FacilityBuilding>>("data/Facility/FacilityBuildingData.json") ?? throw new FileNotFoundException();
 
 		FacilityUpgrades = await Http.GetFromJsonAsync<Dictionary<string, FacilityBuilding>>("data/Facility/FacilityUpgradeData.json") ?? throw new FileNotFoundException();
-
-		FacilityRecipes = await Http.GetFromJsonAsync<Dictionary<string, List<FacilityRecipe>>>("data/Facility/FacilityRecipeData.json") ?? throw new FileNotFoundException();
 
 		FacilityItems = await Http.GetFromJsonAsync<Dictionary<string, ProductionItem>>("data/Facility/FacillityItemData.json") ?? throw new FileNotFoundException();
 
@@ -317,15 +311,7 @@
 		}
 	}
 
-	public string GetTimestamp(int seconds)
-	{
-		TimeSpan recipeTime = TimeSpan.FromSeconds(seconds);
-
-		if (recipeTime.Days > 0)
-			return recipeTime.ToString(@"d\:hh\:mm\:ss");
-		else
-			return recipeTime.ToString(@"h\:mm\:ss");
-	}
+	public string GetTimestamp(int seconds) => TimeSpan.FromSeconds(seconds).ToString(TimeSpan.FromSeconds(seconds).Days > 0 ? @"d\:hh\:mm\:ss" : @"h\:mm\:ss");
 
 	public void HighlightBuildings(string item = "none")
 	{
@@ -334,26 +320,36 @@
 
 		if(item != "none")
 		{
-			foreach(string building in FacilityRecipes.Keys)
-			{
-				bool hasInInput = FacilityRecipes[building].Any(e => e.InputNames.Contains(item));
-				bool hasInOutput = FacilityRecipes[building].Any(e => e.OutputNames.Contains(item));
-
-				if (hasInInput)
-					InputHighlight.Add(building);
-				if (hasInOutput)
-					OutputHighlight.Add(building);
-			}
-
-			// This is so buildings that don't use/make the item by themselves, but have upgrades that do, are also highlighted
 			foreach(string building in FacilityBuildingData.Keys)
 			{
-				bool hasInInput = InputHighlight.Any(e => e.StartsWith(building));
-				bool hasInOutput = OutputHighlight.Any(e => e.StartsWith(building));
-
-				if (hasInInput && !InputHighlight.Contains(building))
+				if (FacilityBuildingData[building].BuildingRecipes.Any(e => e.InputNames.Contains(item)))
 					InputHighlight.Add(building);
-				if (hasInOutput && !OutputHighlight.Contains(building))
+				if (FacilityBuildingData[building].BuildingRecipes.Any(e => e.OutputNames.Contains(item)))
+					OutputHighlight.Add(building);
+
+				bool upgradeHasInput = false;
+				bool upgradeHasOutput = false;
+
+				if (FacilityBuildingData[building].BuildingUpgrades[0] != String.Empty)
+				{
+					foreach(string upgrade in FacilityBuildingData[building].BuildingUpgrades)
+					{
+						if (FacilityUpgrades[upgrade].BuildingRecipes.Any(e => e.InputNames.Contains(item)))
+						{
+							upgradeHasInput = true;
+							InputHighlight.Add(upgrade);
+						}
+						if (FacilityUpgrades[upgrade].BuildingRecipes.Any(e => e.OutputNames.Contains(item)))
+						{
+							upgradeHasOutput = true;
+							OutputHighlight.Add(upgrade);
+						}
+					}
+				}
+
+				if (upgradeHasInput && !InputHighlight.Contains(building))
+					InputHighlight.Add(building);
+				if (upgradeHasOutput && !OutputHighlight.Contains(building))
 					OutputHighlight.Add(building);
 			}
 		}
@@ -368,14 +364,14 @@
 		string inputColor = "#EB1F00";
 		string outputColor = "#3DAD32";
 
-		string result = "2px dashed ";
+		string border = "2px dashed ";
 
 		if (hasInputHighlight && hasOutputHighlight)
-			return result += bothColor;
+			return border += bothColor;
 		else if (hasInputHighlight)
-			return result += inputColor;
+			return border += inputColor;
 		else if (hasOutputHighlight)
-			return result += outputColor;
+			return border += outputColor;
 		else
 			return "inherit";
 	}
@@ -393,7 +389,9 @@
 		int AutonomyTime = 0;
 
 		if (HoveredRecipe.OutputNames[0] == "SuppliesGarrison" && type == "output")
+		{
 			AutonomyTime = 1000 / HoveredRecipe.OutputAmounts[0] * HoveredRecipe.ProductionTime;
+		}
 		else if(type == "input")
 		{
 			int largest = 0;

@@ -22,7 +22,7 @@
                 if ((CannotFactory.Contains(category) && ProductionMode == "Factory") || (CannotMPF.Contains(category) && ProductionMode == "MPF")) continue;
 
                 <button class="btn category-button @(category == SelectedCategory ? "category-selected" : "")"
-                @onclick="() => SelectedCategory = category" style="background-image: url(icons/ProductionIcons/@(category).png)"></button>
+                        @onclick="() => SelectedCategory = category" style="background-image: url(icons/ProductionIcons/@(category).png)"></button>
             }
         </div>
 
@@ -33,11 +33,10 @@
                 if (!item.Value.CanMPF && ProductionMode == "MPF") continue;
 
                 <button class="btn production-item @(CheckIfDisabled(SelectedCategory, item.Key) ? "button-disabled" : "")" 
-                style="background-image: url(icons/ProductionIcons/@(ProductionData.GetProductionBuilding(SelectedCategory))/@(item.Key).png)"
-                @onmouseover="() => { HoveredItem = item.Value; InfoboxVisibility = true; InfoboxSimple = false; }" 
-                @onmouseout="() => { HoveredItem = item.Value; InfoboxVisibility = false; }"
-                @onclick="() => SelectItem(SelectedCategory, item.Key)"
-                ></button>
+                        style="background-image: url(icons/ProductionIcons/@(ProductionData.GetProductionBuilding(SelectedCategory))/@(item.Key).png)"
+                        @onmouseover="() => { HoveredItem = item.Value; InfoboxVisibility = true; InfoboxSimple = false; }" 
+                        @onmouseout="() => { HoveredItem = item.Value; InfoboxVisibility = false; }"
+                        @onclick="() => SelectItem(SelectedCategory, item.Key)"></button>
             }
             </div>
         </div>
@@ -65,10 +64,10 @@
                             @foreach (string outputCategory in SelectedItems[category]) 
                             {
                                 <button class="btn" style="background-image: url(icons/ProductionIcons/@(ProductionData.GetProductionBuilding(category))/@(outputCategory).png"
-                                @onmouseover="() => { HoveredItem = ProductionData.GetCategoryData(category)[outputCategory]; InfoboxVisibility = true; InfoboxSimple = true; }" 
-                                @onmousemove="() => InfoboxVisibility = true"
-                                @onmouseout="() => { HoveredItem = ProductionData.GetCategoryData(category)[outputCategory]; InfoboxVisibility = false; }"
-                                @onclick="() => { SelectedItems[category].RemoveAt(SelectedItems[category].IndexOf(outputCategory)); InfoboxVisibility = false; }"></button>
+                                        @onmouseover="() => { HoveredItem = ProductionData.GetCategoryData(category)[outputCategory]; InfoboxVisibility = true; InfoboxSimple = true; }" 
+                                        @onmousemove="() => InfoboxVisibility = true"
+                                        @onmouseout="() => { HoveredItem = ProductionData.GetCategoryData(category)[outputCategory]; InfoboxVisibility = false; }"
+                                        @onclick="() => { SelectedItems[category].RemoveAt(SelectedItems[category].IndexOf(outputCategory)); InfoboxVisibility = false; }"></button>
                             }
                             </div>
                             <div class="output-item-count">@SelectedItems[category].Count()</div>
@@ -184,7 +183,9 @@
 
         // Default calculator parameters
         ProductionMode = "Factory";
+
         SelectedCategory = "SmallArms";
+
         PriceInCrates = false;
 
         ResetSelectedItems();
@@ -230,12 +231,7 @@
             SelectedItems.Add(category, new List<string>());
     }
 
-    public string GetTimestamp(double seconds)
-	{
-		TimeSpan recipeTime = TimeSpan.FromSeconds(seconds);
-
-		return recipeTime.ToString(@"h\:mm\:ss");
-	}
+    public string GetTimestamp(double seconds) => TimeSpan.FromSeconds(seconds).ToString(@"h\:mm\:ss");
 
     public double GetQueuePrice(string materialKey, string itemCategory = "all")
     {
@@ -261,27 +257,15 @@
                     currentDiscount = ProductionMode == "MPF" ? 1 - 0.1 * Math.Min(++itemIndex, 5) : 1;
                     itemInfo = ProductionData.GetCategoryData(itemCategory)[item];
 
-                    switch (materialKey)
+                    queuePrice += materialKey switch
                     {
-                        case "Bmat":
-                            queuePrice += Math.Floor(itemInfo.BmatCost * currentDiscount * (isVehicleOrShippable ? itemInfo.CrateSize : 1));
-                            break;
-                        case "Rmat":
-                            queuePrice += Math.Floor(itemInfo.RmatCost * currentDiscount * (isVehicleOrShippable ? itemInfo.CrateSize : 1));
-                            break;
-                        case "Emat":
-                            queuePrice += Math.Floor(itemInfo.EmatCost * currentDiscount * (isVehicleOrShippable ? itemInfo.CrateSize : 1));
-                            break;
-                        case "Hemat":
-                            queuePrice += Math.Floor(itemInfo.HematCost * currentDiscount * (isVehicleOrShippable ? itemInfo.CrateSize : 1));
-                            break;
-                        case "Time":
-                            queuePrice += itemInfo.ProductionTime * (ProductionMode == "MPF" ? isVehicleOrShippable ? 1 : 10 : 1);
-                            break;
-                        default:
-                            queuePrice += 0;
-                            break;
-                    }
+                        "Bmat" => itemInfo.BmatCost,
+                        "Rmat" => itemInfo.RmatCost,
+                        "Emat" => itemInfo.EmatCost,
+                        "Hemat" => itemInfo.HematCost,
+                        "Time" => itemInfo.ProductionTime,
+                        _ => 0
+                    };
                 }
             }
         }
