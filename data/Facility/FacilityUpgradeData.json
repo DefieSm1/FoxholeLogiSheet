@@ -5,7 +5,25 @@
         "bmatCost": 0,
         "cmatCost": 200,
         "pcmatCost": 0,
-        "steelCost": 0
+        "steelCost": 0,
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialRawSalvage", "MaterialCoke" ],
+                "inputAmounts": [ 15, 75 ],
+                "outputNames": [ "AssemblyMaterialsT1" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 2,
+                "productionTime": 60
+            },
+            {
+                "inputNames": [ "MaterialRawSalvage", "MaterialOilPetrol" ],
+                "inputAmounts": [ 15, 50 ],
+                "outputNames": [ "AssemblyMaterialsT2" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 2,
+                "productionTime": 60
+            }
+        ]
     },
     "MaterialsFactoryMetalPress": {
         "name": "Metal Press",
@@ -13,7 +31,17 @@
         "bmatCost": 0,
         "cmatCost": 25,
         "pcmatCost": 0,
-        "steelCost": 0
+        "steelCost": 0,
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialRawSalvage", "MaterialOilPetrol" ],
+                "inputAmounts": [ 15, 25 ],
+                "outputNames": [ "MaterialConstruction" ],
+                "outputAmounts": [ 3 ],
+                "powerConsumption": 4,
+                "productionTime": 25
+            }
+        ]
     },
     "MaterialsFactorySmelter": {
         "name": "Smelter",
@@ -21,7 +49,17 @@
         "bmatCost": 0,
         "cmatCost": 25,
         "pcmatCost": 0,
-        "steelCost": 0
+        "steelCost": 0,
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialRawSalvage", "MaterialCoke" ],
+                "inputAmounts": [ 15, 25 ],
+                "outputNames": [ "MaterialConstruction" ],
+                "outputAmounts": [ 3 ],
+                "powerConsumption": 4,
+                "productionTime": 25
+            }
+        ]
     },
     "MaterialsFactoryAssembly":  {
         "name": "Assembly Bay",
@@ -29,7 +67,25 @@
         "bmatCost": 50,
         "cmatCost": 0,
         "pcmatCost": 0,
-        "steelCost": 0
+        "steelCost": 0,
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialRawSalvage" ],
+                "inputAmounts": [ 25 ],
+                "outputNames": [ "MaterialConstruction", "UtilitySandbag" ],
+                "outputAmounts": [ 1, 5 ],
+                "powerConsumption": 2,
+                "productionTime": 25
+            },
+            {
+                "inputNames": [ "MaterialRawSalvage" ],
+                "inputAmounts": [ 25 ],
+                "outputNames": [ "MaterialConstruction", "UtilityBarbedWire" ],
+                "outputAmounts": [ 1, 5 ],
+                "powerConsumption": 2,
+                "productionTime": 25
+            }
+        ]
     },
     "MetalworksFactoryBlastFurnace": {
         "name": "Blast Furnace",
@@ -37,7 +93,33 @@
         "bmatCost": 0,
         "cmatCost": 0,
         "pcmatCost": 200,
-        "steelCost": 0
+        "steelCost": 0,
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialProcessedConstruction", "MaterialOilHeavy" ],
+                "inputAmounts": [ 1, 66 ],
+                "outputNames": [ "AssemblyMaterialsT4" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 5,
+                "productionTime": 120
+            },
+            {
+                "inputNames": [ "MaterialConstruction", "MaterialRawSulfur" ],
+                "inputAmounts": [ 3, 20 ],
+                "outputNames": [ "AssemblyMaterialsT3" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 5,
+                "productionTime": 120
+            },
+            {
+                "inputNames": [ "MaterialConstruction", "MaterialRawComponents", "MaterialOilHeavy" ],
+                "inputAmounts": [ 3, 55, 6 ],
+                "outputNames": [ "MaterialProcessedConstruction" ],
+                "outputAmounts": [ 3 ],
+                "powerConsumption": 8,
+                "productionTime": 60
+            }
+        ]
     },
     "MetalworksFactoryRecycler": {
         "name": "Recycler",
@@ -45,7 +127,25 @@
         "bmatCost": 0,
         "cmatCost": 25,
         "pcmatCost": 0,
-        "steelCost": 0
+        "steelCost": 0,
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialConstruction", "MaterialRawComponents" ],
+                "inputAmounts": [ 3, 20 ],
+                "outputNames": [ "MaterialProcessedConstruction", "UtilityMetalBeam" ],
+                "outputAmounts": [ 1, 1 ],
+                "powerConsumption": 5,
+                "productionTime": 60
+            },
+            {
+                "inputNames": [ "MaterialRawComponentsDamaged" ],
+                "inputAmounts": [ 30 ],
+                "outputNames": [ "MaterialRawComponents" ],
+                "outputAmounts": [ 20 ],
+                "powerConsumption": 4,
+                "productionTime": 90
+            }
+        ]
     },
     "MetalworksFactoryEngineering": {
         "name": "Engineering Station",
@@ -53,7 +153,33 @@
         "bmatCost": 0,
         "cmatCost": 0,
         "pcmatCost": 150,
-        "steelCost": 0
+        "steelCost": 0,
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialProcessedConstruction", "MaterialCoke", "MaterialRawSulfur", "MaterialOilHeavy" ],
+                "inputAmounts": [ 3, 200, 65, 35 ],
+                "outputNames": [ "MaterialSteel" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 9,
+                "productionTime": 90
+            },
+            {
+                "inputNames": [ "MaterialProcessedConstruction", "MaterialCoke", "MaterialOilEnriched", "MaterialWater" ],
+                "inputAmounts": [ 9, 375, 90, 100 ],
+                "outputNames": [ "MaterialSteel" ],
+                "outputAmounts": [ 3 ],
+                "powerConsumption": 12,
+                "productionTime": 90
+            },
+            {
+                "inputNames": [ "MaterialSteel", "MaterialCoke", "AssemblyMaterialsT1", "AssemblyMaterialsT2" ],
+                "inputAmounts": [ 3, 245, 10, 10 ],
+                "outputNames": [ "AssemblyMaterialsT5" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 8,
+                "productionTime": 120
+            }
+        ]
     },
     "CoalRefineryCokeFurnace": {
         "name": "Coke Furnace",
@@ -61,7 +187,17 @@
         "bmatCost": 0,
         "cmatCost": 200,
         "pcmatCost": 0,
-        "steelCost": 0
+        "steelCost": 0,
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialRawCoal" ],
+                "inputAmounts": [ 200 ],
+                "outputNames": [ "MaterialCoke", "MaterialRawSulfur" ],
+                "outputAmounts": [ 165, 15 ],
+                "powerConsumption": 3,
+                "productionTime": 120
+            }
+        ]
     },
     "CoalRefineryLiquifier": {
         "name": "Coal Liquefier",
@@ -69,7 +205,17 @@
         "bmatCost": 0,
         "cmatCost": 0,
         "pcmatCost": 20,
-        "steelCost": 0
+        "steelCost": 0,
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialRawCoal", "MaterialWater" ],
+                "inputAmounts": [ 300, 50 ],
+                "outputNames": [ "MaterialConcrete", "MaterialOilCrude" ],
+                "outputAmounts": [ 1, 50 ],
+                "powerConsumption": 4,
+                "productionTime": 120
+            }
+        ]
     },
     "CoalRefineryAdvancedLiquifier": {
         "name": "Advanced Coal Liquefier",
@@ -77,7 +223,17 @@
         "bmatCost": 0,
         "cmatCost": 0,
         "pcmatCost": 0,
-        "steelCost": 65
+        "steelCost": 65,
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialRawCoal", "MaterialWater" ],
+                "inputAmounts": [ 300, 100 ],
+                "outputNames": [ "MaterialCoke", "MaterialOilHeavy" ],
+                "outputAmounts": [ 260, 60 ],
+                "powerConsumption": 4,
+                "productionTime": 180
+            }
+        ]
     },
     "OilRefineryReformer": {
         "name": "Reformer",
@@ -85,7 +241,17 @@
         "bmatCost": 0,
         "cmatCost": 200,
         "pcmatCost": 0,
-        "steelCost": 0
+        "steelCost": 0,
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialOilCrude", "MaterialWater" ],
+                "inputAmounts": [ 120, 30 ],
+                "outputNames": [ "MaterialOilPetrol" ],
+                "outputAmounts": [ 150 ],
+                "powerConsumption": 1,
+                "productionTime": 150
+            }
+        ]
     },
     "OilRefineryCrackSchack": {
         "name": "Cracking Unit",
@@ -93,7 +259,17 @@
         "bmatCost": 0,
         "cmatCost": 0,
         "pcmatCost": 20,
-        "steelCost": 0
+        "steelCost": 0,
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialOilCrude" ],
+                "inputAmounts": [ 150 ],
+                "outputNames": [ "MaterialOilHeavy" ],
+                "outputAmounts": [ 90 ],
+                "powerConsumption": 1.5,
+                "productionTime": 160
+            }
+        ]
     },
     "OilRefineryPetrochemical": {
         "name": "Petrochemical Plant",
@@ -101,7 +277,17 @@
         "bmatCost": 0,
         "cmatCost": 0,
         "pcmatCost": 0,
-        "steelCost": 25
+        "steelCost": 25,
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialRawSulfur", "MaterialOilHeavy" ],
+                "inputAmounts": [ 60, 30 ],
+                "outputNames": [ "MaterialOilEnriched" ],
+                "outputAmounts": [ 30 ],
+                "powerConsumption": 6,
+                "productionTime": 200
+            }
+        ]
     },
     "AmmoFactoryRocket": {
         "name": "Rocket Factory",
@@ -109,7 +295,25 @@
         "bmatCost": 0,
         "cmatCost": 0,
         "pcmatCost": 35,
-        "steelCost": 0
+        "steelCost": 0,
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
+                "inputAmounts": [ 1, 2 ],
+                "outputNames": [ "AmmoRocketHE" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 4,
+                "productionTime": 25
+            },
+            {
+                "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
+                "inputAmounts": [ 1, 2 ],
+                "outputNames": [ "AmmoRocketFlame" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 4,
+                "productionTime": 25
+            }
+        ]
     },
     "AmmoFactoryLargeShell": {
         "name": "Large Shell Factory",
@@ -117,7 +321,49 @@
         "bmatCost": 0,
         "cmatCost": 0,
         "pcmatCost": 175,
-        "steelCost": 0
+        "steelCost": 0,
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
+                "inputAmounts": [ 2, 2 ],
+                "outputNames": [ "AmmoShell75" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 4,
+                "productionTime": 60
+            },
+            {
+                "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
+                "inputAmounts": [ 2, 2 ],
+                "outputNames": [ "AmmoShell945" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 4,
+                "productionTime": 60
+            },
+            {
+                "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
+                "inputAmounts": [ 6, 4 ],
+                "outputNames": [ "AmmoShell300" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 6,
+                "productionTime": 60
+            },
+            {
+                "inputNames": [ "MaterialExplosive", "MaterialConstruction" ],
+                "inputAmounts": [ 3, 2 ],
+                "outputNames": [ "AmmoShell120" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 4,
+                "productionTime": 25
+            },
+            {
+                "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
+                "inputAmounts": [ 2, 3 ],
+                "outputNames": [ "AmmoShell150" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 4,
+                "productionTime": 40
+            }
+        ]
     },
     "DieselPowerPlantPetrol": {
         "name": "Petrol Power Plant",
@@ -125,7 +371,17 @@
         "bmatCost": 0,
         "cmatCost": 100,
         "pcmatCost": 0,
-        "steelCost": 0
+        "steelCost": 0,
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialOilPetrol" ],
+                "inputAmounts": [ 50 ],
+                "outputNames": [ "" ],
+                "outputAmounts": [ 0 ],
+                "powerConsumption": -12,
+                "productionTime": 90
+            }
+        ]
     },
     "PowerStationSulfuricReactor": {
         "name": "Sulfuric Reactor",
@@ -133,6 +389,24 @@
         "bmatCost": 0,
         "cmatCost": 0,
         "pcmatCost": 0,
-        "steelCost": 25
+        "steelCost": 25,
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialOilHeavy" ],
+                "inputAmounts": [ 50 ],
+                "outputNames": [ "MaterialRawSulfur" ],
+                "outputAmounts": [ 5 ],
+                "powerConsumption": -16,
+                "productionTime": 120
+            },
+            {
+                "inputNames": [ "MaterialCoke", "MaterialWater" ],
+                "inputAmounts": [ 60, 25 ],
+                "outputNames": [ "MaterialRawSulfur" ],
+                "outputAmounts": [ 5 ],
+                "powerConsumption": -16,
+                "productionTime": 120
+            }
+        ]
     }
 }
