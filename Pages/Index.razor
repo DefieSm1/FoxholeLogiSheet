@@ -259,11 +259,11 @@
 
                     queuePrice += materialKey switch
                     {
-                        "Bmat" => itemInfo.BmatCost,
-                        "Rmat" => itemInfo.RmatCost,
-                        "Emat" => itemInfo.EmatCost,
-                        "Hemat" => itemInfo.HematCost,
-                        "Time" => itemInfo.ProductionTime,
+                        "Bmat" => Math.Floor(itemInfo.BmatCost * currentDiscount * (isVehicleOrShippable ? itemInfo.CrateSize : 1)),
+                        "Rmat" => Math.Floor(itemInfo.RmatCost * currentDiscount * (isVehicleOrShippable ? itemInfo.CrateSize : 1)),
+                        "Emat" => Math.Floor(itemInfo.EmatCost * currentDiscount * (isVehicleOrShippable ? itemInfo.CrateSize : 1)),
+                        "Hemat" => Math.Floor(itemInfo.HematCost * currentDiscount * (isVehicleOrShippable ? itemInfo.CrateSize : 1)),
+                        "Time" => itemInfo.ProductionTime * (ProductionMode == "MPF" ? isVehicleOrShippable ? 1 : 10 : 1),
                         _ => 0
                     };
                 }
