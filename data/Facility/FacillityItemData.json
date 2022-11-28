@@ -69,7 +69,7 @@
         "category": "",
         "description": "Refined Coal required for various Facility processes.",
         "damageType": "",
-        "damageInfo": [ "" ],
+        "damageInfo": [ "Not to be confused with the product you consume" ],
         "isLiquid": false
     },
     "MaterialConstruction": {
