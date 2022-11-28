@@ -200,7 +200,16 @@
 					<br />
 					<i>ie. how long could a facility produce this recipe with the inputs fully filled once and all needed liquids being piped in</i>
 				</p>
+				@if(HoveredRecipe.InputNames.Any(e => FacilityItems[e].IsLiquid))
+				{
+					<p>
+						Max Input Autonomy (without pipes): <span>@GetRecipeAutonomy("input", false)</span>
+						<br />
+						<i>self explanatory</i>
+					</p>
+				}
 			}
+			<hr />
 			@if (HoveredRecipe.OutputAmounts[0] != 0)
 			{
 				<p>
@@ -208,6 +217,14 @@
 					<br />
 					<i>ie. how long could a facility produce this recipe until reaching the item capacity for the outputs with inputs being always filled and output liquids being piped out</i>
 				</p>
+				@if (HoveredRecipe.OutputNames.Any(e => FacilityItems[e].IsLiquid))
+				{
+					<p>
+						Max Overflow Time (without pipes): <span>@GetRecipeAutonomy("output", false)</span>
+						<br />
+						<i>also self explanatory</i>
+					</p>
+				}
 			}
 		}
 	</div>
@@ -253,7 +270,9 @@
 
 	public bool ItemInfoboxVisibility { get; set; }
 
-	const int MaxFacilityCapacity = 32000;
+	const int MaxFacilityItemCapacity = 32000;
+
+	const int MaxFacilityLiquidCapacity = 1000;
 
 	protected override async Task OnInitializedAsync()
 	{
@@ -384,46 +403,67 @@
 			return "inherit";
 	}
 
-	public string GetRecipeAutonomy(string type = "input")
+	public string GetRecipeAutonomy(string type = "input", bool pipes = true)
 	{
-		int AutonomyTime = 0;
+		int autonomyTime = 0;
+
 
 		if (HoveredRecipe.OutputNames[0] == "SuppliesGarrison" && type == "output")
 		{
-			AutonomyTime = 1000 / HoveredRecipe.OutputAmounts[0] * HoveredRecipe.ProductionTime;
+			autonomyTime = 1000 / HoveredRecipe.OutputAmounts[0] * HoveredRecipe.ProductionTime;
 		}
 		else if(type == "input")
 		{
-			int largest = 0;
+			int largest = HoveredRecipe.InputNames.Any(e => !FacilityItems[e].IsLiquid) ? 0 : -1;
+			int largestLiquid = HoveredRecipe.InputNames.Any(e => FacilityItems[e].IsLiquid) ? 0 : -1;
 
-			for (int i = 0; i < HoveredRecipe.InputAmounts.Count(); i++)
-				if ((HoveredRecipe.InputAmounts[i] > HoveredRecipe.InputAmounts[largest]) && !FacilityItems[HoveredRecipe.InputNames[i]].IsLiquid)
+			for (int i = 0; i < HoveredRecipe.InputAmounts.Count(); i++) 
+			{
+				if (largest != -1 && (HoveredRecipe.InputAmounts[i] > HoveredRecipe.InputAmounts[largest]) && !FacilityItems[HoveredRecipe.InputNames[i]].IsLiquid)
 					largest = i;
+				if (largestLiquid != -1 && (HoveredRecipe.InputAmounts[i] > HoveredRecipe.InputAmounts[largestLiquid]) && FacilityItems[HoveredRecipe.InputNames[i]].IsLiquid)
+					largestLiquid = i;
+			}
 
-			if (FacilityItems[HoveredRecipe.InputNames[largest]].IsLiquid)
-				AutonomyTime = -1;
+			if (largest == -1 && pipes)
+				autonomyTime = -1;
 			else
-				AutonomyTime = MaxFacilityCapacity / HoveredRecipe.InputAmounts[largest] * HoveredRecipe.ProductionTime;
+			{
+				int itemAutonomy = largest != -1 ? MaxFacilityItemCapacity / HoveredRecipe.InputAmounts[largest] * HoveredRecipe.ProductionTime : int.MaxValue;
+
+				int liquidAutonomy = largestLiquid != -1 && !pipes ? MaxFacilityLiquidCapacity / HoveredRecipe.InputAmounts[largestLiquid] * HoveredRecipe.ProductionTime : int.MaxValue;
+
+				autonomyTime = Math.Min(itemAutonomy, liquidAutonomy);
+			}
 		}
 		else
 		{
-			int largest = 0;
+			int largest = HoveredRecipe.OutputNames.Any(e => !FacilityItems[e].IsLiquid) ? 0 : -1;
+			int largestLiquid = HoveredRecipe.OutputNames.Any(e => FacilityItems[e].IsLiquid) ? 0 : -1;
 
-			for (int i = 0; i < HoveredRecipe.OutputAmounts.Count(); i++)
-				if ((HoveredRecipe.OutputAmounts[i] > HoveredRecipe.OutputAmounts[largest]) && !FacilityItems[HoveredRecipe.OutputNames[i]].IsLiquid)
+			for (int i = 0; i < HoveredRecipe.OutputAmounts.Count(); i++) 
+			{
+				if (largest != -1 && (HoveredRecipe.OutputAmounts[i] > HoveredRecipe.OutputAmounts[largest]) && !FacilityItems[HoveredRecipe.OutputNames[i]].IsLiquid)
 					largest = i;
+				if (largestLiquid != -1 && (HoveredRecipe.OutputAmounts[i] > HoveredRecipe.OutputAmounts[largestLiquid]) && FacilityItems[HoveredRecipe.OutputNames[i]].IsLiquid)
+					largestLiquid = i;
+			}
 
-			if (FacilityItems[HoveredRecipe.OutputNames[largest]].IsLiquid)
-				AutonomyTime = -1;
+			if (largest == -1 && pipes)
+				autonomyTime = -1;
 			else
-				AutonomyTime = MaxFacilityCapacity / HoveredRecipe.OutputAmounts[largest] * HoveredRecipe.ProductionTime;
+			{
+				int itemAutonomy = largest != -1 ? MaxFacilityItemCapacity / HoveredRecipe.OutputAmounts[largest] * HoveredRecipe.ProductionTime : int.MaxValue;
+
+				int liquidAutonomy = largestLiquid != -1 && !pipes ? MaxFacilityLiquidCapacity / HoveredRecipe.OutputAmounts[largestLiquid] * HoveredRecipe.ProductionTime : int.MaxValue;
+
+				autonomyTime = Math.Min(itemAutonomy, liquidAutonomy);
+			}
 		}
 
-		if (AutonomyTime == -1)
+		if (autonomyTime == -1)
 			return "∞";
 
-		TimeSpan time = TimeSpan.FromSeconds(AutonomyTime);
-
-		return time.ToString(@"d\:hh\:mm\:ss");
+		return TimeSpan.FromSeconds(autonomyTime).ToString(@"d\:hh\:mm\:ss");
 	}
 }

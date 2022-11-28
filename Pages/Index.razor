@@ -231,7 +231,7 @@
             SelectedItems.Add(category, new List<string>());
     }
 
-    public string GetTimestamp(double seconds) => TimeSpan.FromSeconds(seconds).ToString(@"h\:mm\:ss");
+    public string GetTimestamp(double seconds) => TimeSpan.FromSeconds(seconds).ToString(TimeSpan.FromSeconds(seconds).Days > 0 ? @"d\:hh\:mm\:ss" : @"h\:mm\:ss");
 
     public double GetQueuePrice(string materialKey, string itemCategory = "all")
     {
