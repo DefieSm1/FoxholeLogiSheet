@@ -1,6 +1,7 @@
 { 
     "MaterialsFactoryForge": {
         "name": "Forge",
+        "buildingType": "Manufacturing",
         "description": "A unique factroy for forging specialized machinery parts needed to construct vehicles. Requires Coke or Petrol.",
         "bmatCost": 0,
         "cmatCost": 200,
@@ -27,6 +28,7 @@
     },
     "MaterialsFactoryMetalPress": {
         "name": "Metal Press",
+        "buildingType": "Manufacturing",
         "description": "A heavy automatic press that refines materials into a denser form.",
         "bmatCost": 0,
         "cmatCost": 25,
@@ -406,6 +408,106 @@
                 "outputAmounts": [ 5 ],
                 "powerConsumption": -16,
                 "productionTime": 120
+            }
+        ]
+    },
+    "HarvesterComponentsExcavator": {
+        "name": "Excavator",
+        "buildingType": "Gathering",
+        "description": "Improves component excavation.",
+        "bmatCost": 0,
+        "cmatCost": 0,
+        "pcmatCost": 75,
+        "steelCost": 0,
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialOilPetrol" ],
+                "inputAmounts": [ 6 ],
+                "outputNames": [ "MaterialRawComponentsDamaged" ],
+                "outputAmounts": [ 9 ],
+                "powerConsumption": 0,
+                "productionTime": 12
+            }
+        ]
+    },
+    "OilWellElectric": {
+        "name": "Electric Oil Well",
+        "buildingType": "Gathering",
+        "description": "A generator that leverages electricity to pump oil through attached pipes.",
+        "bmatCost": 0,
+        "cmatCost": 0,
+        "pcmatCost": 25,
+        "steelCost": 0,
+        "buildingRecipes": [
+            {
+                "inputNames": [ "" ],
+                "inputAmounts": [ 0 ],
+                "outputNames": [ "MaterialOilCrude", "fluidCan" ],
+                "outputAmounts": [ 1, 1 ],
+                "powerConsumption": 2,
+                "productionTime": 26
+            },
+            {
+                "inputNames": [ "" ],
+                "inputAmounts": [ 0 ],
+                "outputNames": [ "MaterialOilCrude" ],
+                "outputAmounts": [ 75 ],
+                "powerConsumption": 2,
+                "productionTime": 40
+            }
+        ]
+    },
+    "OilWellFracker": {
+        "name": "Fracker",
+        "buildingType": "Gathering",
+        "description": "A machine that opens the cracks in the earth by injecting water at high pressure to increase output of Crude Oil",
+        "bmatCost": 0,
+        "cmatCost": 0,
+        "pcmatCost": 0,
+        "steelCost": 25,
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialWater" ],
+                "inputAmounts": [ 25 ],
+                "outputNames": [ "MaterialOilCrude", "fluidCan" ],
+                "outputAmounts": [ 2, 2 ],
+                "powerConsumption": 3,
+                "productionTime": 40
+            },
+            {
+                "inputNames": [ "MaterialWater" ],
+                "inputAmounts": [ 25 ],
+                "outputNames": [ "MaterialOilCrude" ],
+                "outputAmounts": [ 75 ],
+                "powerConsumption": 3,
+                "productionTime": 30
+            }
+        ]
+    },
+    "WaterPumpElectric": {
+        "name": "Electric Water Pump",
+        "buildingType": "Gathering",
+        "description": "A generator that pumps water more efficiently. Requires Power.",
+        "bmatCost": 0,
+        "cmatCost": 150,
+        "pcmatCost": 0,
+        "steelCost": 0,
+        "buildingRecipes": [
+            {
+                "inputNames": [ "" ],
+                "inputAmounts": [ 0 ],
+                "outputNames": [ "MaterialWater" ],
+                "outputAmounts": [ 60 ],
+                "powerConsumption": 0.5,
+                "productionTime": 50
+            },
+            {
+                "inputNames": [ "" ],
+                "inputAmounts": [ 0 ],
+                "outputNames": [ "MaterialWater", "fluidCan" ],
+                "outputAmounts": [ 1, 1 ],
+                "powerConsumption": 0,
+                "productionTime": 40
             }
         ]
     }

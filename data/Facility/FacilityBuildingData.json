@@ -1,6 +1,7 @@
 {
     "MaterialsFactory": {
         "name": "Materials Factory",
+        "buildingType": "Manufacturing",
         "description": "A factory that refines raw resources into Construction Materials for advanced facilities. Additional modifications allow for the development of a variety of different materials.",
         "bmatCost": 200,
         "cmatCost": 0,
@@ -20,6 +21,7 @@
     },
     "MetalworksFactory": {
         "name": "Metalworks Factory",
+        "buildingType": "Manufacturing",
         "description": "A factory for refining raw resources into Processed Construction Materials. Additional modifications can allow for addtitional refined materials needed for advanced facility operations.",
         "bmatCost": 0,
         "cmatCost": 125,
@@ -47,6 +49,7 @@
     },
     "CoalRefinery": {
         "name": "Coal Refinery",
+        "buildingType": "Manufacturing",
         "description": "A processing plant that refines Coal into useful materials used in facility production and power.",
         "bmatCost": 0,
         "cmatCost": 50,
@@ -66,6 +69,7 @@
     },
     "OilRefinery": {
         "name": "Oil Refinery",
+        "buildingType": "Manufacturing",
         "description": "A refinery that processes Oil into other useful materials for purposes of production and power generation.",
         "bmatCost": 0,
         "cmatCost": 50,
@@ -85,6 +89,7 @@
     },
     "AmmoFactory": {
         "name": "Ammunition Factory",
+        "buildingType": "Manufacturing",
         "description": "A factory for producing advanced ammo types such as large calibre shells, rockets, and flame ammo.",
         "bmatCost": 0,
         "cmatCost": 0,
@@ -112,6 +117,7 @@
     },
     "MaintenanceTunnel": {
         "name": "Maintenance Tunnel",
+        "buildingType": "Manufacturing",
         "description": "A supply tunnel that provides Garrison Supplies to nearby Facilities and Railway Tracks. Garrison Supplies may also be produced on-site using Construction Materials. The rate of consumption is 2 Garrison Supplies per-hour per-structure once decay beings. Some structures have additional consumption requirements.",
         "bmatCost": 0,
         "cmatCost": 200,
@@ -131,6 +137,7 @@
     },
     "DieselPowerPlant": {
         "name": "Diesel Power Plant",
+        "buildingType": "Manufacturing",
         "description": "A structure that generates power by burning Diesel.",
         "bmatCost": 150,
         "cmatCost": 0,
@@ -150,6 +157,7 @@
     },
     "PowerStation": {
         "name": "Power Station",
+        "buildingType": "Manufacturing",
         "description": "A power plant that generates a large amount of electricity using Oil or Coal.",
         "bmatCost": 0,
         "cmatCost": 0,
@@ -172,6 +180,126 @@
                 "outputAmounts": [ 0 ],
                 "powerConsumption": -10,
                 "productionTime": 90
+            }
+        ]
+    },
+    "HarvesterSalvage": {
+        "name": "Stationary Harvester (Scrap)",
+        "buildingType": "Gathering",
+        "description": "A stationary harvester that automatically gathers Salvage. Requires Petrol.",
+        "bmatCost": 0,
+        "cmatCost": 150,
+        "pcmatCost": 0,
+        "steelCost": 0,
+        "buildingUpgrades": [ "" ],
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialOilPetrol" ],
+                "inputAmounts": [ 4 ],
+                "outputNames": [ "MaterialRawSalvage" ],
+                "outputAmounts": [ 50 ],
+                "powerConsumption": 0,
+                "productionTime": 12
+            }
+        ]
+    },
+    "HarvesterComponents": {
+        "name": "Stationary Harvester (Components)",
+        "buildingType": "Gathering",
+        "description": "A stationary harvester that automatically gathers Components. Requires Petrol.",
+        "bmatCost": 0,
+        "cmatCost": 175,
+        "pcmatCost": 0,
+        "steelCost": 0,
+        "buildingUpgrades": [ "HarvesterComponentsExcavator" ],
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialOilPetrol" ],
+                "inputAmounts": [ 4 ],
+                "outputNames": [ "MaterialRawComponents" ],
+                "outputAmounts": [ 6 ],
+                "powerConsumption": 0,
+                "productionTime": 12
+            }
+        ]
+    },
+    "HarvesterCoal": {
+        "name": "Stationary Harvester (Coal)",
+        "buildingType": "Gathering",
+        "description": "A stationary harvester that automatically gathers Coal. Requires Petrol.",
+        "bmatCost": 0,
+        "cmatCost": 0,
+        "pcmatCost": 25,
+        "steelCost": 0,
+        "buildingUpgrades": [ "" ],
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialOilPetrol" ],
+                "inputAmounts": [ 4 ],
+                "outputNames": [ "MaterialRawCoal" ],
+                "outputAmounts": [ 50 ],
+                "powerConsumption": 0,
+                "productionTime": 12
+            }
+        ]
+    },
+    "HarvesterSulfur": {
+        "name": "Stationary Harvester (Sulfur)",
+        "buildingType": "Gathering",
+        "description": "A stationary harvester that automatically gathers Sulfur using Heavy Oil as fuel",
+        "bmatCost": 0,
+        "cmatCost": 0,
+        "pcmatCost": 0,
+        "steelCost": 20,
+        "buildingUpgrades": [ "" ],
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialOilHeavy" ],
+                "inputAmounts": [ 4 ],
+                "outputNames": [ "MaterialRawSulfur" ],
+                "outputAmounts": [ 6 ],
+                "powerConsumption": 0,
+                "productionTime": 12
+            }
+        ]
+    },
+    "OilWell": {
+        "name": "Oil Well",
+        "buildingType": "Gathering",
+        "description": "Extracts fuel from Crude Oil Fields. Must be constructed nearby.",
+        "bmatCost": 0,
+        "cmatCost": 35,
+        "pcmatCost": 0,
+        "steelCost": 0,
+        "buildingUpgrades": [ "OilWellElectric", "OilWellFracker" ],
+        "buildingRecipes": [
+            {
+                "inputNames": [ "" ],
+                "inputAmounts": [ 0 ],
+                "outputNames": [ "MaterialOilCrude", "fluidCan" ],
+                "outputAmounts": [ 1, 1 ],
+                "powerConsumption": 0,
+                "productionTime": 50
+            }
+        ]
+    },
+    "WaterPump": {
+        "name": "Water Pump",
+        "buildingType": "Gathering",
+        "description": "Pumps water through pipes. Must be built on bodies of water.",
+        "bmatCost": 0,
+        "cmatCost": 35,
+        "pcmatCost": 0,
+        "steelCost": 0,
+        "buildingUpgrades": [ "WaterPumpElectric" ],
+        "buildingRecipes": [
+            {
+                "inputNames": [ "" ],
+                "inputAmounts": [ 0 ],
+                "outputNames": [ "MaterialWater", "fluidCan" ],
+                "outputAmounts": [ 1, 1 ],
+                "powerConsumption": 0,
+                "productionTime": 0
             }
         ]
     }
