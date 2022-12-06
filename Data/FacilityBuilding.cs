@@ -4,6 +4,8 @@
     {
         public string? Name { get; set; }
 
+        public string? BuildingType { get; set; }
+
         public string? Description { get; set; }
 
         public int BmatCost { get; set; }
@@ -21,6 +23,7 @@
         public FacilityBuilding()
         {
             Name = "";
+            BuildingType = "";
             Description = "";
             BmatCost = 0;
             CmatCost = 0;

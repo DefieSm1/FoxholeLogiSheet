@@ -125,6 +125,13 @@
         font-size: 1.2em;
     }
 
+    .building-select-header > button:first-of-type {
+        margin-left: auto;
+        box-shadow: none;
+        font-weight: 400;
+        font-size: 1.2em;
+    }
+
 .building-select-buttons {
     display: flex;
     align-items: center;
@@ -421,7 +428,7 @@
     border-radius: 0;
     transition: none;
     box-shadow: none;
-    background-size: 80%;
+    background-size: 75px;
     background-repeat: no-repeat;
     background-position: center;
     background-color: #414241;

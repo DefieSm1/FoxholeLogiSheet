@@ -27,7 +27,7 @@
             "pcmatCost": 0,
             "steelCost": 0,
             "assmatCost": [ 0, 0, 0, 0, 0 ],
-            "baseVehicle": "Dunne Transport (Truck)",
+            "baseVehicle": "Truck",
             "productionTime": 300
         },
         "TruckTracked": {
@@ -42,7 +42,7 @@
             "pcmatCost": 0,
             "steelCost": 0,
             "assmatCost": [ 0, 0, 0, 0, 0 ],
-            "baseVehicle": "Dunne Transport (Truck)",
+            "baseVehicle": "Truck",
             "productionTime": 300
         },
         "SmallGaugeEngine": {
@@ -104,7 +104,7 @@
             "pcmatCost": 10,
             "steelCost": 0,
             "assmatCost": [ 10, 0, 0, 0, 0 ],
-            "baseVehicle": "O'Brien V. 110 (Armoured Car)",
+            "baseVehicle": "ACMG",
             "productionTime": 300
         },
         "ACTracked": {
@@ -119,7 +119,7 @@
             "pcmatCost": 0,
             "steelCost": 0,
             "assmatCost": [ 5, 0, 0, 0, 0 ],
-            "baseVehicle": "O'Brien V. 110 (Armoured Car)",
+            "baseVehicle": "ACMG",
             "productionTime": 300
         },
         "ACFlame": {
@@ -134,7 +134,7 @@
             "pcmatCost": 10,
             "steelCost": 0,
             "assmatCost": [ 10, 0, 0, 0, 0 ],
-            "baseVehicle": "O'Brien V. 110 (Armoured Car)",
+            "baseVehicle": "ACMG",
             "productionTime": 300
         },
         "ACHeavy": {
@@ -149,7 +149,7 @@
             "pcmatCost": 0,
             "steelCost": 0,
             "assmatCost": [ 15, 0, 0, 0, 0 ],
-            "baseVehicle": "O'Brien V. 110 (Armoured Car)",
+            "baseVehicle": "ACMG",
             "productionTime": 300
         },
         "LightUtilitySpitfire": {
@@ -164,7 +164,7 @@
             "pcmatCost": 0,
             "steelCost": 0,
             "assmatCost": [ 0, 10, 0, 0, 0 ],
-            "baseVehicle": "Drummond 100a (Light Utility Vehicle)",
+            "baseVehicle": "LightUtilityVehicle",
             "productionTime": 150
         },
         "LightUtilityDuckJeep": {
@@ -179,7 +179,7 @@
             "pcmatCost": 0,
             "steelCost": 0,
             "assmatCost": [ 0, 5, 0, 0, 0 ],
-            "baseVehicle": "Drummond 100a (Light Utility Vehicle)",
+            "baseVehicle": "LightUtilityVehicle",
             "productionTime": 150
         }
     },
@@ -196,7 +196,7 @@
             "pcmatCost": 10,
             "steelCost": 0,
             "assmatCost": [ 10, 0, 8, 0, 0 ],
-            "baseVehicle": "Niska Mk. I Gun Motor Carriage (Half-Track)",
+            "baseVehicle": "HalfTrack",
             "productionTime": 300
         },
         "FieldRocketLauncher": {
@@ -226,7 +226,7 @@
             "pcmatCost": 5,
             "steelCost": 0,
             "assmatCost": [ 0, 10, 0, 3, 0 ],
-            "baseVehicle": "Niska Mk. I Gun Motor Carriage (Half-Track)",
+            "baseVehicle": "HalfTrack",
             "productionTime": 300
         }
     },
@@ -258,7 +258,7 @@
             "pcmatCost": 5,
             "steelCost": 0,
             "assmatCost": [ 0, 0, 5, 0, 0 ],
-            "baseVehicle": "King Spire Mk. I (Scout Tank)",
+            "baseVehicle": "ScoutTankSpire",
             "productionTime": 300
         },
         "FieldAntiTankHeavy": {
@@ -273,7 +273,7 @@
             "pcmatCost": 5,
             "steelCost": 0,
             "assmatCost": [ 0, 0, 0, 5, 0 ],
-            "baseVehicle": "Collins Cannon 68mm (Filed AT Gun)",
+            "baseVehicle": "FieldAntiTank",
             "productionTime": 300
         }
     },
@@ -290,7 +290,7 @@
             "pcmatCost": 10,
             "steelCost": 0,
             "assmatCost": [ 10, 0, 15, 0, 0 ],
-            "baseVehicle": "Noble Widow MK. XIV (Destroyer Tank)",
+            "baseVehicle": "TankDestroyerHeavy",
             "productionTime": 420
         },
         "LightTankUpgraded": {
@@ -305,7 +305,7 @@
             "pcmatCost": 8,
             "steelCost": 0,
             "assmatCost": [ 0, 20, 5, 0, 0 ],
-            "baseVehicle": "Devitt Mk. III (Light Tank)",
+            "baseVehicle": "LightTank",
             "productionTime": 300
         },
         "LightTankMortar": {
@@ -320,7 +320,7 @@
             "pcmatCost": 3,
             "steelCost": 0,
             "assmatCost": [ 20, 0, 0, 3, 0 ],
-            "baseVehicle": "Devitt Mk. III (Light Tank)",
+            "baseVehicle": "LightTank",
             "productionTime": 300
         },
         "AssaultTankChieftan": {
@@ -335,7 +335,7 @@
             "pcmatCost": 5,
             "steelCost": 0,
             "assmatCost": [ 10, 0, 0, 8, 0 ],
-            "baseVehicle": "Silverhand - Mk. IV (Assault Tank)",
+            "baseVehicle": "AssaultTankSilverhand",
             "productionTime": 420
         },
         "CruiserTankHighwayman": {
@@ -350,7 +350,7 @@
             "pcmatCost": 5,
             "steelCost": 0,
             "assmatCost": [ 0, 10, 5, 0, 0 ],
-            "baseVehicle": "Gallagher Outlaw Mk. II (Cruiser Tank)",
+            "baseVehicle": "CruiserTankOutlaw",
             "productionTime": 420
         },
         "EmplacedAntiTankHeavy": {
@@ -382,7 +382,7 @@
             "pcmatCost": 0,
             "steelCost": 15,
             "assmatCost": [ 0, 20, 15, 0, 0 ],
-            "baseVehicle": "Balfour Wolfhound 40mm (Field Cannon)",
+            "baseVehicle": "FieldCannon",
             "productionTime": 420
         },
         "CruiserTankThornfall": {
@@ -397,7 +397,7 @@
             "pcmatCost": 0,
             "steelCost": 10,
             "assmatCost": [ 0, 10, 0, 15, 0 ],
-            "baseVehicle": "Gallagher Outlaw Mk. II (Cruiser Tank)",
+            "baseVehicle": "CruiserTankOutlaw",
             "productionTime": 600
         }
     },
@@ -484,7 +484,7 @@
             "category": "Long-Range Artillery Car",
             "description": "All the power of a stationary Storm Cannon, but easily relocated via rails. This devastating cannon is capable of leveling enemy fortifications at very large distances.",
             "damageType": "",
-            "damageInfo": [ "Needs Enriched Oil to fire" ],
+            "damageInfo": [ "Uses Enriched Oil to fire" ],
             "ammoUsed": "300mm",
             "bmatCost": 0,
             "cmatCost": 0,
@@ -501,7 +501,7 @@
             "category": "Super Tank",
             "description": "This gargantuan beast is the brainchild of Gray Cullen. Once thought impossible, the Predator was Cullen's idea of how a great ship might operate on land. It boasts two sets of quad-barrelled grenade launches and a heavy-duty 94.5mm forward facing cannon. While limitations of ground-based travel posed certain restrictions on the scope of the project, Cullen wasn't deterred and made necessary adjustments to meet his vision of the ideal land ship.",
             "damageType": "",
-            "damageInfo": [ "Uses Enriched Oil as Fuel", "Gunner (Front): Equipped with a high velocity barrel that deals 25% extra damage per shot" ],
+            "damageInfo": [ "Uses Enriched Oil as fuel", "Gunner (Front): Equipped with a high velocity barrel that deals 25% extra damage per shot" ],
             "ammoUsed": "94.5mm, Green Ash Grenade, Tremola Grenade GPb-1, PT-815 Smoke Grenade, A3 Harpa Fragmentation Grenade",
             "bmatCost": 0,
             "cmatCost": 0,
@@ -516,7 +516,7 @@
             "category": "Battle Tank",
             "description": "A heavy-duty Battle Tank with thick armour plating and destructive firepower. The Flood is fitted with a 75mm turret and a front-facing 12.7mm anti-infantry machine gun. The heavy armour limits top speed, but in exchange it can take a lot of punishment.",
             "damageType": "",
-            "damageInfo": [ "Uses Heavy Oil as Fuel", "Turret (Front): Equipped with a low velocity barrel that deals 36% less damage per shot" ],
+            "damageInfo": [ "Uses Heavy Oil as fuel", "Turret (Front): Equipped with a low velocity barrel that deals 36% less damage per shot" ],
             "ammoUsed": "75mm, 12.7mm",
             "bmatCost": 0,
             "cmatCost": 0,

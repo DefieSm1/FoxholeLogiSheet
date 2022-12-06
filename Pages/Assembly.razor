@@ -13,17 +13,17 @@
 		@foreach(KeyValuePair<string, FacilityBuilding> building in AssemblyBuildings) 
 		{
 			<button class="assembly-building building-base @(SelectedBuilding == building.Key ? "button-disabled" : "")" 
-			        style="background-image: url(icons/Facility/AssemblyStation/@(building.Key).png)"
-				    @onmouseover="() => { HoveredBuilding = building.Value; BuildingInfoboxVisibility = true; InfoboxSimple = false; }"
-				    @onmouseout="() => { HoveredBuilding = building.Value; BuildingInfoboxVisibility = false; }"
-				    @onclick="() => { SelectedBuilding = building.Key; SelectedUpgrade = (building.Value.BuildingUpgrades.Contains(SelectedUpgrade) ? SelectedUpgrade : string.Empty); }"></button>
+					style="background-image: url(icons/Facility/AssemblyStation/@(building.Key).png)"
+					@onmouseover="() => { HoveredBuilding = building.Value; BuildingInfoboxVisibility = true; InfoboxSimple = false; }"
+					@onmouseout="() => { HoveredBuilding = building.Value; BuildingInfoboxVisibility = false; }"
+					@onclick="() => { SelectedBuilding = building.Key; SelectedUpgrade = (building.Value.BuildingUpgrades.Contains(SelectedUpgrade) ? SelectedUpgrade : string.Empty); }"></button>
 			foreach(string upgrade in building.Value.BuildingUpgrades)
 			{
 				<button class="assembly-building building-upgrade @(SelectedUpgrade == upgrade ? "button-disabled" : "")" 
-				        style="background-image: url(icons/Facility/AssemblyStation/@(upgrade).png)"
-				        @onmouseover="() => { HoveredBuilding = AssemblyUpgrades[upgrade]; BuildingInfoboxVisibility = true; InfoboxSimple = false; }"
-				        @onmouseout="() => { HoveredBuilding = AssemblyUpgrades[upgrade]; BuildingInfoboxVisibility = false; }"
-				        @onclick="() => { SelectedBuilding = building.Key; SelectedUpgrade = upgrade; }"></button>
+						style="background-image: url(icons/Facility/AssemblyStation/@(upgrade).png)"
+						@onmouseover="() => { HoveredBuilding = AssemblyUpgrades[upgrade]; BuildingInfoboxVisibility = true; InfoboxSimple = false; }"
+						@onmouseout="() => { HoveredBuilding = AssemblyUpgrades[upgrade]; BuildingInfoboxVisibility = false; }"
+						@onclick="() => { SelectedBuilding = building.Key; SelectedUpgrade = upgrade; }"></button>
 			}
 		}
 	</div>
@@ -37,10 +37,10 @@
 				@foreach (KeyValuePair<string, ProductionItem> item in AssemblyVehicles.GetBuildingVehicles(SelectedBuilding))
 				{
 					<button class="btn vehicle-button"
-					        style="background-image: url(icons/AssemblyStation/@(item.Key).png)"
-                            @onmouseover="() => { HoveredItem = item.Value; ItemInfoboxVisibility = true; InfoboxSimple = false;; }"
-					        @onmouseout="() => { HoveredItem = item.Value; ItemInfoboxVisibility = false; }"
-                            @onclick="() => SelectedVehicles[SelectedBuilding].Add(item.Key)"></button>
+							style="background-image: url(icons/AssemblyStation/@(item.Key).png)"
+							@onmouseover="() => { HoveredItem = item.Value; ItemInfoboxVisibility = true; InfoboxSimple = false;; }"
+							@onmouseout="() => { HoveredItem = item.Value; ItemInfoboxVisibility = false; }"
+							@onclick="() => SelectedVehicles[SelectedBuilding].Add(item.Key)"></button>
 				}
 			</div>
 		}
@@ -51,321 +51,326 @@
 				@foreach (KeyValuePair<string, ProductionItem> item in AssemblyVehicles.GetBuildingVehicles(SelectedUpgrade))
 				{
 					<button class="btn vehicle-button"
-					        style="background-image: url(icons/AssemblyStation/@(item.Key).png)"
-					        @onmouseover="() => { HoveredItem = item.Value; ItemInfoboxVisibility = true; InfoboxSimple = false; }" 
-					        @onmouseout="() => { HoveredItem = item.Value; ItemInfoboxVisibility = false; }"
-                            @onclick="() => SelectedVehicles[SelectedUpgrade].Add(item.Key)"></button>
+							style="background-image: url(icons/AssemblyStation/@(item.Key).png)"
+							@onmouseover="() => { HoveredItem = item.Value; ItemInfoboxVisibility = true; InfoboxSimple = false; }" 
+							@onmouseout="() => { HoveredItem = item.Value; ItemInfoboxVisibility = false; }"
+							@onclick="() => SelectedVehicles[SelectedUpgrade].Add(item.Key)"></button>
 				}
 			</div>
 		}
 	</div>
 
-    <div class="output-info">
-        <div class="d-inline-flex output-header">
-            <div class="output-header-text"><p>OUTPUT</p></div>
-            <div class="output-buttons">
-                <button class="btn text-light" @onclick="() => RawPrice = !RawPrice">Show price as @(RawPrice ? "facility" : "raw") materials</button>
-                <button class="btn text-light" @onclick="() => ResetSelectedVehicles()">Reset all</button>
-            </div>
-        </div>
+	<div class="output-info">
+		<div class="d-inline-flex output-header">
+			<div class="output-header-text"><p>OUTPUT</p></div>
+			<div class="output-buttons">
+				<button class="btn text-light" @onclick="() => RawPrice = !RawPrice">Show price as @(RawPrice ? "facility" : "raw") materials</button>
+				<button class="btn text-light" @onclick="() => ResetSelectedVehicles()">Reset all</button>
+			</div>
+		</div>
 
-        <div class="output-categories">
-            @foreach (string building in AssemblyVehicles.AssemblyNames)
-            {
-                if (SelectedVehicles.Count() == 0 || SelectedVehicles[building].Count() == 0)
-                    continue;
-                <div class="output-row">
-                    <div class="output-top">
-                        <div class="output-top-image" style="background-image: url(icons/Facility/AssemblyStation/@(building).png)"></div>
-                        @if (SelectedVehicles.Count > 0)
-                        {
-                            <div class="output-top-items">
-                                @foreach (string vehicle in SelectedVehicles[building])
-                                {
-                                    <button class="btn" style="background-image: url(icons/AssemblyStation/@(vehicle).png"
-                                            @onmouseover="() => { HoveredItem = AssemblyVehicles.GetBuildingVehicles(building)[vehicle]; ItemInfoboxVisibility = true; InfoboxSimple = true; }"
-                                            @onmousemove="() => ItemInfoboxVisibility = true" 
-                                            @onmouseout="() => { HoveredItem = AssemblyVehicles.GetBuildingVehicles(building)[vehicle]; ItemInfoboxVisibility = false; }"
-                                            @onclick="() => { SelectedVehicles[building].RemoveAt(SelectedVehicles[building].IndexOf(vehicle)); ItemInfoboxVisibility = false; }"></button>
-                                }
-                            </div>
-                            <div class="output-item-count">@SelectedVehicles[building].Count()</div>
-                        }
-                    </div>
+		<div class="output-categories">
+			@foreach (string building in AssemblyVehicles.AssemblyNames)
+			{
+				if (SelectedVehicles.Count() == 0 || SelectedVehicles[building].Count() == 0)
+					continue;
+				<div class="output-row">
+					<div class="output-top">
+						<div class="output-top-image" style="background-image: url(icons/Facility/AssemblyStation/@(building).png)"></div>
+						@if (SelectedVehicles.Count > 0)
+						{
+							<div class="output-top-items">
+								@foreach (string vehicle in SelectedVehicles[building])
+								{
+									<button class="btn" style="background-image: url(icons/AssemblyStation/@(vehicle).png"
+											@onmouseover="() => { HoveredItem = AssemblyVehicles.GetBuildingVehicles(building)[vehicle]; ItemInfoboxVisibility = true; InfoboxSimple = true; }"
+											@onmousemove="() => ItemInfoboxVisibility = true" 
+											@onmouseout="() => { HoveredItem = AssemblyVehicles.GetBuildingVehicles(building)[vehicle]; ItemInfoboxVisibility = false; }"
+											@onclick="() => { SelectedVehicles[building].RemoveAt(SelectedVehicles[building].IndexOf(vehicle)); ItemInfoboxVisibility = false; }"></button>
+								}
+							</div>
+							<div class="output-item-count">@SelectedVehicles[building].Count()</div>
+						}
+					</div>
 
-                    <div class="output-bottom">
-                        @if (GetQueuePrice("Time", building) > 0)
-                        {
-                            <div style="background-image: @(GetTimestamp(GetQueuePrice("Time", building)).Length > 9 ? "" : "url(icons/Time.png)")">
-                                @GetTimestamp(GetQueuePrice("Time", building))
-                            </div>
-                        }
-                        @if (GetQueuePrice("MaterialBasic", building) > 0)
-                        {
-                            <div style="background-image: url(icons/ProductionIcons/MaterialBasic.png)">
-                                @GetQueuePrice("MaterialBasic", building)
-                            </div>
-                        }
-                        @if (GetQueuePrice("MaterialConstruction", building) > 0)
-                        {
-                            <div style="background-image: url(icons/Facility/MaterialConstruction.png)">
-                                @GetQueuePrice("MaterialConstruction", building)
-                            </div>
-                        }
-                        @if (GetQueuePrice("MaterialProcessedConstruction", building) > 0)
-                        {
-                            <div style="background-image: url(icons/Facility/MaterialProcessedConstruction.png)">
-                                @GetQueuePrice("MaterialProcessedConstruction", building)
-                            </div>
-                        }
-                        @if (GetQueuePrice("MaterialSteel", building) > 0)
-                        {
-                            <div style="background-image: url(icons/Facility/MaterialSteel.png)">
-                                @GetQueuePrice("MaterialSteel", building)
-                            </div>
-                        }
-                        @for (int i = 0; i < AssemblyVehicles.AssmatAmount; i++)
-                        {
-                            @if (GetQueuePrice("AssemblyMaterials", building, i) > 0)
-                            {
-                                <div style="background-image: url(icons/Facility/AssemblyMaterialsT@(i+1).png)">
-                                    @GetQueuePrice("AssemblyMaterials", building, i)
-                                </div>
-                            }
-                        }
-                    </div>
-                </div>
-            }
-        </div>
+					<div class="output-bottom">
+						@if (GetQueuePrice("Time", building) > 0)
+						{
+							<div style="background-image: @(GetTimestamp(GetQueuePrice("Time", building)).Length > 9 ? "" : "url(icons/Time.png)")">
+								@GetTimestamp(GetQueuePrice("Time", building))
+							</div>
+						}
+						@if (GetQueuePrice("MaterialBasic", building) > 0)
+						{
+							<div style="background-image: url(icons/ProductionIcons/MaterialBasic.png)">
+								@GetQueuePrice("MaterialBasic", building)
+							</div>
+						}
+						@if (GetQueuePrice("MaterialConstruction", building) > 0)
+						{
+							<div style="background-image: url(icons/Facility/MaterialConstruction.png)">
+								@GetQueuePrice("MaterialConstruction", building)
+							</div>
+						}
+						@if (GetQueuePrice("MaterialProcessedConstruction", building) > 0)
+						{
+							<div style="background-image: url(icons/Facility/MaterialProcessedConstruction.png)">
+								@GetQueuePrice("MaterialProcessedConstruction", building)
+							</div>
+						}
+						@if (GetQueuePrice("MaterialSteel", building) > 0)
+						{
+							<div style="background-image: url(icons/Facility/MaterialSteel.png)">
+								@GetQueuePrice("MaterialSteel", building)
+							</div>
+						}
+						@for (int i = 0; i < AssemblyVehicles.AssmatAmount; i++)
+						{
+							@if (GetQueuePrice("AssemblyMaterials", building, i) > 0)
+							{
+								<div style="background-image: url(icons/Facility/AssemblyMaterialsT@(i+1).png)">
+									@GetQueuePrice("AssemblyMaterials", building, i)
+								</div>
+							}
+						}
+					</div>
+				</div>
+			}
+		</div>
 
-        <div class="output-sum-background">
-            <div class="output-sum">
-                @if(!RawPrice)
-                {
-                    <div class="sum-top">
-                        @if (GetQueuePrice("MaterialBasic") > 0)
-                        {
-                            <div style="background-image: url(icons/ProductionIcons/MaterialBasic.png)">
-                                @GetQueuePrice("MaterialBasic")<span class="sum-pricename">&nbsp;BMs</span>
-                            </div>
-                        }
-                        @if (GetQueuePrice("MaterialConstruction") > 0)
-                        {
-                            <div style="background-image: url(icons/Facility/MaterialConstruction.png)">
-                                @GetQueuePrice("MaterialConstruction")<span class="sum-pricename">&nbsp;CMs</span>
-                            </div>
-                        }
-                        @if (GetQueuePrice("MaterialProcessedConstruction") > 0)
-                        {
-                            <div style="background-image: url(icons/Facility/MaterialProcessedConstruction.png)">
-                                @GetQueuePrice("MaterialProcessedConstruction")<span class="sum-pricename">&nbsp;PCMs</span>
-                            </div>
-                        }
-                        @if (GetQueuePrice("MaterialSteel") > 0)
-                        {
-                            <div style="background-image: url(icons/Facility/MaterialSteel.png)">
-                                @GetQueuePrice("MaterialSteel")<span class="sum-pricename">&nbsp;Steel</span>
-                            </div>
-                        }
-                    </div>
-                    <div class="sum-bottom">
-                        @for (int i = 0; i < AssemblyVehicles.AssmatAmount; i++)
-                        {
-                            @if (GetQueuePrice("AssemblyMaterials", "all", i) > 0)
-                            {
-                                <div style="background-image: url(icons/Facility/AssemblyMaterialsT@(i+1).png)">
-                                    @GetQueuePrice("AssemblyMaterials", "all", i)<span class="sum-pricename">&nbsp;A@(i + 1)s</span>
-                                </div>
-                            }
-                        }
-                    </div>
-                }
-                else
-                {
-                    <div class="sum-top sum-top-raw">
-                        @if (GetRawSumPrice("Salvage") > 0)
-                        {
-                            <div style="background-image: url(icons/Facility/MaterialRawSalvage.png)">
-                                @GetRawSumPrice("Salvage")<span class="sum-pricename">&nbsp;Salvage</span>
-                            </div>
-                        }
-                        @if (GetRawSumPrice("Components") > 0)
-                        {
-                            <div style="background-image: url(icons/Facility/MaterialRawComponents.png)">
-                                @GetRawSumPrice("Components")<span class="sum-pricename">&nbsp;Comps</span>
-                            </div>
-                        }
-                        @if (GetRawSumPrice("Coal") > 0)
-                        {
-                            <div style="background-image: url(icons/Facility/MaterialRawCoal.png)">
-                                @GetRawSumPrice("Coal")<span class="sum-pricename">&nbsp;Coal</span>
-                            </div>
-                        }
-                    </div>
-                    <div class="sum-bottom sum-bottom-raw">
-                        @if (GetRawSumPrice("Sulfur") > 0)
-                        {
-                            <div style="background-image: url(icons/Facility/MaterialRawSulfur.png)">
-                                @GetRawSumPrice("Sulfur")<span class="sum-pricename">&nbsp;Sulfur</span>
-                            </div>
-                        }
-                        @if (GetRawSumPrice("Oil") > 0)
-                        {
-                            <div style="background-image: url(icons/Facility/MaterialOilCrude.png)">
-                                @GetRawSumPrice("Oil")<span class="sum-pricename">&nbsp;L Oil</span>
-                            </div>
-                        }
-                        @if (GetRawSumPrice("Water") > 0)
-                        {
-                            <div style="background-image: url(icons/Facility/MaterialWater.png)">
-                                @GetRawSumPrice("Water")<span class="sum-pricename">&nbsp;L Water</span>
-                            </div>
-                        }
-                    </div>
-                }
-            </div>
-        </div>
-    </div>
+		<div class="output-sum-background">
+			<div class="output-sum">
+				@if(!RawPrice)
+				{
+					<div class="sum-top">
+						@if (GetQueuePrice("MaterialBasic") > 0)
+						{
+							<div style="background-image: url(icons/ProductionIcons/MaterialBasic.png)">
+								@GetQueuePrice("MaterialBasic")<span class="sum-pricename">&nbsp;BMs</span>
+							</div>
+						}
+						@if (GetQueuePrice("MaterialConstruction") > 0)
+						{
+							<div style="background-image: url(icons/Facility/MaterialConstruction.png)">
+								@GetQueuePrice("MaterialConstruction")<span class="sum-pricename">&nbsp;CMs</span>
+							</div>
+						}
+						@if (GetQueuePrice("MaterialProcessedConstruction") > 0)
+						{
+							<div style="background-image: url(icons/Facility/MaterialProcessedConstruction.png)">
+								@GetQueuePrice("MaterialProcessedConstruction")<span class="sum-pricename">&nbsp;PCMs</span>
+							</div>
+						}
+						@if (GetQueuePrice("MaterialSteel") > 0)
+						{
+							<div style="background-image: url(icons/Facility/MaterialSteel.png)">
+								@GetQueuePrice("MaterialSteel")<span class="sum-pricename">&nbsp;Steel</span>
+							</div>
+						}
+					</div>
+					<div class="sum-bottom">
+						@for (int i = 0; i < AssemblyVehicles.AssmatAmount; i++)
+						{
+							@if (GetQueuePrice("AssemblyMaterials", "all", i) > 0)
+							{
+								<div style="background-image: url(icons/Facility/AssemblyMaterialsT@(i+1).png)">
+									@GetQueuePrice("AssemblyMaterials", "all", i)<span class="sum-pricename">&nbsp;A@(i + 1)s</span>
+								</div>
+							}
+						}
+					</div>
+				}
+				else
+				{
+					<div class="sum-top sum-top-raw">
+						@if (GetRawSumPrice("Salvage") > 0)
+						{
+							<div style="background-image: url(icons/Facility/MaterialRawSalvage.png)">
+								@GetRawSumPrice("Salvage")<span class="sum-pricename">&nbsp;Salvage</span>
+							</div>
+						}
+						@if (GetRawSumPrice("Components") > 0)
+						{
+							<div style="background-image: url(icons/Facility/MaterialRawComponents.png)">
+								@GetRawSumPrice("Components")<span class="sum-pricename">&nbsp;Comps</span>
+							</div>
+						}
+						@if (GetRawSumPrice("Coal") > 0)
+						{
+							<div style="background-image: url(icons/Facility/MaterialRawCoal.png)">
+								@GetRawSumPrice("Coal")<span class="sum-pricename">&nbsp;Coal</span>
+							</div>
+						}
+					</div>
+					<div class="sum-bottom sum-bottom-raw">
+						@if (GetRawSumPrice("Sulfur") > 0)
+						{
+							<div style="background-image: url(icons/Facility/MaterialRawSulfur.png)">
+								@GetRawSumPrice("Sulfur")<span class="sum-pricename">&nbsp;Sulfur</span>
+							</div>
+						}
+						@if (GetRawSumPrice("Oil") > 0)
+						{
+							<div style="background-image: url(icons/Facility/MaterialOilCrude.png)">
+								@GetRawSumPrice("Oil")<span class="sum-pricename">&nbsp;L Oil</span>
+							</div>
+						}
+						@if (GetRawSumPrice("Water") > 0)
+						{
+							<div style="background-image: url(icons/Facility/MaterialWater.png)">
+								@GetRawSumPrice("Water")<span class="sum-pricename">&nbsp;L Water</span>
+							</div>
+						}
+					</div>
+				}
+			</div>
+		</div>
+	</div>
 </div>
 
 <FacilityInfobox Building=@HoveredBuilding Visibility=@BuildingInfoboxVisibility />
-<ItemInfobox Item=@HoveredItem SelectedCategory="Assembly" Visibility=@ItemInfoboxVisibility Simplified=@InfoboxSimple />
-
+<ItemInfobox Item=@HoveredItem BaseVehicle=@(String.IsNullOrEmpty(HoveredItem.BaseVehicle) ? null : GarageVehicles[HoveredItem.BaseVehicle]) SelectedCategory="Assembly" Visibility=@ItemInfoboxVisibility Simplified=@InfoboxSimple />
 
 @code {
-    public Dictionary<string, FacilityBuilding> AssemblyBuildings = new();
+	public Dictionary<string, FacilityBuilding> AssemblyBuildings = new();
 
-    public Dictionary<string, FacilityBuilding> AssemblyUpgrades = new();
+	public Dictionary<string, FacilityBuilding> AssemblyUpgrades = new();
 
-    public AssemblyVehicleBuildings AssemblyVehicles = new();
+	public AssemblyVehicleBuildings AssemblyVehicles = new();
 
-    public FacilityBuilding HoveredBuilding { get; set; } = new();
+	public Dictionary<string, ProductionItem> GarageVehicles = new();
 
-    public string SelectedBuilding { get; set; } = "";
+	public FacilityBuilding HoveredBuilding { get; set; } = new();
 
-    public string SelectedUpgrade { get; set; } = "";
+	public string SelectedBuilding { get; set; } = "";
 
-    public ProductionItem HoveredItem { get; set; } = new();
+	public string SelectedUpgrade { get; set; } = "";
 
-    public Dictionary<string, List<string>> SelectedVehicles { get; set; } = new();
+	public ProductionItem HoveredItem { get; set; } = new();
 
-    public bool RawPrice { get; set; } = false;
+	public Dictionary<string, List<string>> SelectedVehicles { get; set; } = new();
 
-    public Dictionary<string, AssemblyRawCosts> MaterialRawCosts = new();
+	public bool RawPrice { get; set; } = false;
 
-    public List<string> MaterialNames = new();
+	public Dictionary<string, AssemblyRawCosts> MaterialRawCosts = new();
 
-    public List<string> RawMaterialNames = new();
+	public List<string> MaterialNames = new();
 
-    public bool BuildingInfoboxVisibility { get; set; }
+	public List<string> RawMaterialNames = new();
 
-    public bool ItemInfoboxVisibility { get; set; }
+	public bool BuildingInfoboxVisibility { get; set; }
 
-    public bool InfoboxSimple { get; set; }
+	public bool ItemInfoboxVisibility { get; set; }
 
-    protected override async Task OnInitializedAsync()
-    {
-        await JsRuntime.InvokeVoidAsync("startInfoboxTracking");
+	public bool InfoboxSimple { get; set; }
 
-        AssemblyBuildings = await Http.GetFromJsonAsync<Dictionary<string, FacilityBuilding>>("data/AssemblyStation/AssemblyBuildingData.json") ?? throw new FileNotFoundException();
+	protected override async Task OnInitializedAsync()
+	{
+		await JsRuntime.InvokeVoidAsync("startInfoboxTracking");
 
-        AssemblyUpgrades = await Http.GetFromJsonAsync<Dictionary<string, FacilityBuilding>>("data/AssemblyStation/AssemblyUpgradeData.json") ?? throw new FileNotFoundException();
+		AssemblyBuildings = await Http.GetFromJsonAsync<Dictionary<string, FacilityBuilding>>("data/AssemblyStation/AssemblyBuildingData.json") ?? throw new FileNotFoundException();
 
-        AssemblyVehicles = await Http.GetFromJsonAsync<AssemblyVehicleBuildings>("data/AssemblyStation/AssemblyVehicleData.json") ?? throw new FileNotFoundException();
+		AssemblyUpgrades = await Http.GetFromJsonAsync<Dictionary<string, FacilityBuilding>>("data/AssemblyStation/AssemblyUpgradeData.json") ?? throw new FileNotFoundException();
 
-        MaterialRawCosts = await Http.GetFromJsonAsync<Dictionary<string, AssemblyRawCosts>>("data/AssemblyStation/AssemblyRawCostData.json") ?? throw new FileNotFoundException();
+		AssemblyVehicles = await Http.GetFromJsonAsync<AssemblyVehicleBuildings>("data/AssemblyStation/AssemblyVehicleData.json") ?? throw new FileNotFoundException();
 
-        MaterialNames = MaterialRawCosts.Keys.ToList();
+		ProductionItemCategories Production = await Http.GetFromJsonAsync<ProductionItemCategories>("data/ProductionData.json") ?? throw new FileNotFoundException();
 
-        RawMaterialNames = new() { "Salvage", "Components", "Sulfur", "Coal", "Oil", "Water" };
+		GarageVehicles = Production.GetCategoryData("Vehicles");
 
-        // Default parameters
-        SelectedBuilding = "AssemblyStation";
+		MaterialRawCosts = await Http.GetFromJsonAsync<Dictionary<string, AssemblyRawCosts>>("data/AssemblyStation/AssemblyRawCostData.json") ?? throw new FileNotFoundException();
 
-        SelectedUpgrade = "";
+		MaterialNames = MaterialRawCosts.Keys.ToList();
 
-        ResetSelectedVehicles();
-    }
+		RawMaterialNames = new() { "Salvage", "Components", "Sulfur", "Coal", "Oil", "Water" };
 
-    public void ResetSelectedVehicles()
-    {
-        SelectedVehicles.Clear();
-        foreach (string building in AssemblyVehicles.AssemblyNames) {
-            SelectedVehicles.Add(building, new List<string>());
-        }
-    }
+		// Default parameters
+		SelectedBuilding = "AssemblyStation";
 
-    public string GetTimestamp(double seconds) => TimeSpan.FromSeconds(seconds).ToString(TimeSpan.FromSeconds(seconds).Days > 0 ? @"d\:hh\:mm\:ss" : @"h\:mm\:ss");
+		SelectedUpgrade = "";
 
-    public double GetQueuePrice(string materialKey, string vehicleBuilding = "all", int AssmatIndex = 0)
-    {
-        double queuePrice = 0;
+		ResetSelectedVehicles();
+	}
 
-        if (SelectedVehicles.Count() > 0)
-        {
-            ProductionItem vehicleInfo = new();
+	public void ResetSelectedVehicles()
+	{
+		SelectedVehicles.Clear();
+		foreach (string building in AssemblyVehicles.AssemblyNames) {
+			SelectedVehicles.Add(building, new List<string>());
+		}
+	}
 
-            if (vehicleBuilding == "all")
-            {
-                foreach (string category in AssemblyVehicles.AssemblyNames)
-                {
-                    queuePrice += GetQueuePrice(materialKey, category, AssmatIndex);
-                }
-            }
-            else
-            {
-                foreach (string item in SelectedVehicles[vehicleBuilding])
-                {
-                    vehicleInfo = AssemblyVehicles.GetBuildingVehicles(vehicleBuilding)[item];
+	public string GetTimestamp(double seconds) => TimeSpan.FromSeconds(seconds).ToString(TimeSpan.FromSeconds(seconds).Days > 0 ? @"d\:hh\:mm\:ss" : @"h\:mm\:ss");
 
-                    queuePrice += materialKey switch {
-                        "MaterialBasic" => vehicleInfo.BmatCost,
-                        "MaterialConstruction" => vehicleInfo.CmatCost,
-                        "MaterialProcessedConstruction" => vehicleInfo.PCmatCost,
-                        "MaterialSteel" => vehicleInfo.SteelCost,
-                        "AssemblyMaterials" => vehicleInfo.AssmatCost[AssmatIndex],
-                        "Time" => vehicleInfo.ProductionTime,
-                        _ => 0
-                    };
-                }
-            }
-        }
+	public double GetQueuePrice(string materialKey, string vehicleBuilding = "all", int AssmatIndex = 0)
+	{
+		double queuePrice = 0;
 
-        return queuePrice;
-    }
+		if (SelectedVehicles.Count() > 0)
+		{
+			ProductionItem vehicleInfo = new();
 
-    public double GetRawMatPrice(string materialKey, string rawMaterialKey, double amount)
-    {
-        AssemblyRawCosts materialInfo = new();
+			if (vehicleBuilding == "all")
+			{
+				foreach (string category in AssemblyVehicles.AssemblyNames)
+				{
+					queuePrice += GetQueuePrice(materialKey, category, AssmatIndex);
+				}
+			}
+			else
+			{
+				foreach (string item in SelectedVehicles[vehicleBuilding])
+				{
+					vehicleInfo = AssemblyVehicles.GetBuildingVehicles(vehicleBuilding)[item];
 
-        materialInfo = MaterialRawCosts[materialKey];
+					queuePrice += materialKey switch {
+						"MaterialBasic" => vehicleInfo.BmatCost,
+						"MaterialConstruction" => vehicleInfo.CmatCost,
+						"MaterialProcessedConstruction" => vehicleInfo.PCmatCost,
+						"MaterialSteel" => vehicleInfo.SteelCost,
+						"AssemblyMaterials" => vehicleInfo.AssmatCost[AssmatIndex],
+						"Time" => vehicleInfo.ProductionTime,
+						_ => 0
+					};
+				}
+			}
+		}
 
-        double itemPrice = rawMaterialKey switch
-        {
-            "Salvage" => materialInfo.SalvageCost,
-            "Components" => materialInfo.ComponentCost,
-            "Sulfur" => materialInfo.SulfurCost,
-            "Coal" => materialInfo.CoalCost,
-            "Oil" => materialInfo.OilCost,
-            "Water" => materialInfo.WaterCost,
-            _ => 0
-        };
+		return queuePrice;
+	}
 
-        return itemPrice * amount;
-    }
+	public double GetRawMatPrice(string materialKey, string rawMaterialKey, double amount)
+	{
+		AssemblyRawCosts materialInfo = new();
 
-    public double GetRawSumPrice(string materialKey)
-    {
-        double rawSum = 0;
+		materialInfo = MaterialRawCosts[materialKey];
 
-        foreach(string material in MaterialNames)
-        {
-            if(material.StartsWith("AssemblyMaterialsT"))
-                rawSum += GetRawMatPrice(material, materialKey, GetQueuePrice("AssemblyMaterials", "all", Int32.Parse(material.Substring(material.Length - 1)) - 1));
-            else 
-                rawSum += GetRawMatPrice(material, materialKey, GetQueuePrice(material));
-        }
+		double itemPrice = rawMaterialKey switch
+		{
+			"Salvage" => materialInfo.SalvageCost,
+			"Components" => materialInfo.ComponentCost,
+			"Sulfur" => materialInfo.SulfurCost,
+			"Coal" => materialInfo.CoalCost,
+			"Oil" => materialInfo.OilCost,
+			"Water" => materialInfo.WaterCost,
+			_ => 0
+		};
 
-        return rawSum;
-    }
+		return itemPrice * amount;
+	}
+
+	public double GetRawSumPrice(string materialKey)
+	{
+		double rawSum = 0;
+
+		foreach(string material in MaterialNames)
+		{
+			if(material.StartsWith("AssemblyMaterialsT"))
+				rawSum += GetRawMatPrice(material, materialKey, GetQueuePrice("AssemblyMaterials", "all", Int32.Parse(material.Substring(material.Length - 1)) - 1));
+			else 
+				rawSum += GetRawMatPrice(material, materialKey, GetQueuePrice(material));
+		}
+
+		return rawSum;
+	}
 }

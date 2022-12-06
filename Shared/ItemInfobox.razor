@@ -25,9 +25,9 @@
 			{
 				<p class="item-cratesize">Produces a crate of @(Item.CrateSize)x @(Item.Name)(s)</p>
 			}
-			@if(!String.IsNullOrEmpty(Item.BaseVehicle))
+			@if(!String.IsNullOrEmpty(Item.BaseVehicle) && BaseVehicle != null)
 			{
-				<p class="item-damageinfo">Requires base vehicle: @Item.BaseVehicle</p>
+				<p class="item-damageinfo">Requires base vehicle: @BaseVehicle.Name (@BaseVehicle.Category)</p>
 			}
 			@if (Item.ProductionTime > 0)
 			{ 
@@ -86,6 +86,9 @@
 @code {
 	[Parameter]
 	public ProductionItem Item { get; set; } = new();
+
+	[Parameter]
+	public ProductionItem? BaseVehicle { get; set; } = null;
 
 	[Parameter]
 	public string SelectedCategory { get; set; } = "SmallArms";
