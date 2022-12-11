@@ -9,6 +9,10 @@
 		<p class="item-description">@Item.Description</p>
 		@if(!Simplified)
 		{
+			@if(!String.IsNullOrEmpty(Item.AmmoUsed))
+			{
+				<p class="item-ammoused">@Item.AmmoUsed</p>
+			}
 			@if(!String.IsNullOrEmpty(Item.DamageType))
 			{
 				<p class="item-damagetype">Deals @Item.DamageType damage</p>
@@ -16,10 +20,6 @@
 			@foreach(string info in Item.DamageInfo!) 
 			{
 				<p class="item-damageinfo  @(SelectedCategory == "Uniforms" ? "item-cratesize" : "")">@info</p>
-			}
-			@if(!String.IsNullOrEmpty(Item.AmmoUsed))
-			{
-				<p class="item-ammoused">@Item.AmmoUsed</p>
 			}
 			@if(Item.CrateSize > 0)
 			{
