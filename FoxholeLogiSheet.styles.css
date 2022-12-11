@@ -92,7 +92,7 @@
     }
 
 .vehicle-grid[b-u5l6ycqe8q] {
-    height: 105px;
+    height: max-content;
     width: 600px;
     padding: 5px;
     display: grid;

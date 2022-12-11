@@ -253,7 +253,7 @@
         "category": "",
         "description": "Standard payload for battle tanks.",
         "damageType": "Explosive",
-        "damageInfo": [ "Can penetrate armoured vehicles", "Higher chance to penetrate armoured vehicles at direct angles (to the sides/rear of the target) and at close range", "High chance to penetrate armoured vehicles" ],
+        "damageInfo": [ "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ],
         "isLiquid": false
     },
     "AmmoShell945": {
@@ -261,7 +261,7 @@
         "category": "",
         "description": "A heavy anti-tank shell.",
         "damageType": "Armour Piercing",
-        "damageInfo": [ "Can penetrate armoured vehicles", "Higher chance to penetrate armoured vehicles at direct angles (to the sides/rear of the target) and at close range", "High chance to penetrate armoured vehicles", "Higher base chance to disable vehicle subsystems" ],
+        "damageInfo": [ "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles", "Higher base chance to disable vehicle subsystems" ],
         "isLiquid": false
     },
     "AmmoShell120": {
@@ -294,6 +294,41 @@
         "description": "A shell that is launched over short distances by a spigot mortar.",
         "damageType": "Demolition",
         "damageInfo": [ "Can ruin structures that have been severly damaged by artillery" ],
+        "isLiquid": false
+    },
+    "UtilityTripod": {
+        "name": "Tripod",
+        "category": "",
+        "description": "A mount point for deployable infantry weapons and equipment.",
+        "damageType": "",
+        "damageInfo": [ "" ],
+        "isLiquid": false
+    },
+    "ATBonesawTripod": {
+        "name": "Bonesaw MK.3",
+        "category": "Mounted Anti-Tank RPG",
+        "description": "This variant of the Bonesaw MK.3 is specially designed for use with tripod mounts. This affords it with increased stability and maximum potential range.",
+        "damageType": "Armour Piercing",
+        "damageInfo": [ "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles", "Additional 100% chance to penetrate armoured vehicles", "This can be attached to certain vehicles" ],
+        "ammoUsed": "ARC/RPG",
+        "isLiquid": false
+    },
+    "RPGFoebreaker": {
+        "name": "Cutler Foebreaker",
+        "category": "Mounted RPG Launcher",
+        "description": "This unique duel-barrelled RPG launcher can fire two RPG shells in relatively quick succession. This increase in firepower makes it nearly impossible for a single soldier to operate without the support of a sturdy mount.",
+        "damageType": "Explosive",
+        "damageInfo": [ "Can penetrate armoured vehicles", "This can be attached to certain vehicles" ],
+        "ammoUsed": "RPG",
+        "isLiquid": false
+    },
+    "MGRatcatcher": {
+        "name": "Malone Ratcatcher MK.1",
+        "category": "Mounted Machinegun",
+        "description": "Early iterations of this machinegun were built to be emplaced in bunkers and on the decks of lightly armed warships, the Ratcatcher is Harvey Malone’s first freely mountable infantry weapon designed for field use. Just like its predecessors, this heavy weapon suppresses enemy soldiers with unmatched efficiency.",
+        "damageType": "",
+        "damageInfo": [ "This can be attached to certain vehicles" ],
+        "ammoUsed": "12.7mm",
         "isLiquid": false
     },
     "SuppliesGarrison": {

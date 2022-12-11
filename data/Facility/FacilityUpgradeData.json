@@ -183,6 +183,124 @@
             }
         ]
     },
+    "AmmoFactoryRocket": {
+        "name": "Rocket Factory",
+        "description": "Produces various types of Rockets.",
+        "bmatCost": 0,
+        "cmatCost": 0,
+        "pcmatCost": 35,
+        "steelCost": 0,
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
+                "inputAmounts": [ 1, 2 ],
+                "outputNames": [ "AmmoRocketHE" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 4,
+                "productionTime": 25
+            },
+            {
+                "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
+                "inputAmounts": [ 1, 2 ],
+                "outputNames": [ "AmmoRocketFlame" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 4,
+                "productionTime": 25
+            }
+        ]
+    },
+    "AmmoFactoryLargeShell": {
+        "name": "Large Shell Factory",
+        "description": "Produces large calibre ordinance for use with tanks and artillery.",
+        "bmatCost": 0,
+        "cmatCost": 0,
+        "pcmatCost": 175,
+        "steelCost": 0,
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
+                "inputAmounts": [ 2, 2 ],
+                "outputNames": [ "AmmoShell75" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 4,
+                "productionTime": 60
+            },
+            {
+                "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
+                "inputAmounts": [ 2, 2 ],
+                "outputNames": [ "AmmoShell945" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 4,
+                "productionTime": 60
+            },
+            {
+                "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
+                "inputAmounts": [ 6, 4 ],
+                "outputNames": [ "AmmoShell300" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 6,
+                "productionTime": 60
+            },
+            {
+                "inputNames": [ "MaterialExplosive", "MaterialConstruction" ],
+                "inputAmounts": [ 3, 2 ],
+                "outputNames": [ "AmmoShell120" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 4,
+                "productionTime": 25
+            },
+            {
+                "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
+                "inputAmounts": [ 2, 3 ],
+                "outputNames": [ "AmmoShell150" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 4,
+                "productionTime": 40
+            }
+        ]
+    },
+    "AmmoFactoryTripod": {
+        "name": "Large Shell Factory",
+        "description": "Produces various types of tripod weapons.",
+        "bmatCost": 0,
+        "cmatCost": 0,
+        "pcmatCost": 50,
+        "steelCost": 0,
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialConstruction" ],
+                "inputAmounts": [ 2 ],
+                "outputNames": [ "UtilityTripod" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 4,
+                "productionTime": 25
+            },
+            {
+                "inputNames": [ "MaterialConstruction", "MaterialProcessedConstruction" ],
+                "inputAmounts": [ 2, 1 ],
+                "outputNames": [ "ATBonesawTripod" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 4,
+                "productionTime": 25
+            },
+            {
+                "inputNames": [ "MaterialConstruction", "MaterialProcessedConstruction" ],
+                "inputAmounts": [ 2, 1 ],
+                "outputNames": [ "RPGFoebreaker" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 4,
+                "productionTime": 25
+            },
+            {
+                "inputNames": [ "MaterialConstruction", "MaterialProcessedConstruction" ],
+                "inputAmounts": [ 2, 1 ],
+                "outputNames": [ "MGRatcatcher" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 4,
+                "productionTime": 25
+            }
+        ]
+    },
     "CoalRefineryCokeFurnace": {
         "name": "Coke Furnace",
         "description": "A high powered furnace that brings Coal to high temperatures to seperate out non-volatile Coke.",
@@ -288,82 +406,6 @@
                 "outputAmounts": [ 30 ],
                 "powerConsumption": 6,
                 "productionTime": 200
-            }
-        ]
-    },
-    "AmmoFactoryRocket": {
-        "name": "Rocket Factory",
-        "description": "Produces various types of Rockets.",
-        "bmatCost": 0,
-        "cmatCost": 0,
-        "pcmatCost": 35,
-        "steelCost": 0,
-        "buildingRecipes": [
-            {
-                "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
-                "inputAmounts": [ 1, 2 ],
-                "outputNames": [ "AmmoRocketHE" ],
-                "outputAmounts": [ 1 ],
-                "powerConsumption": 4,
-                "productionTime": 25
-            },
-            {
-                "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
-                "inputAmounts": [ 1, 2 ],
-                "outputNames": [ "AmmoRocketFlame" ],
-                "outputAmounts": [ 1 ],
-                "powerConsumption": 4,
-                "productionTime": 25
-            }
-        ]
-    },
-    "AmmoFactoryLargeShell": {
-        "name": "Large Shell Factory",
-        "description": "Produces large calibre ordinance for use with tanks and artillery.",
-        "bmatCost": 0,
-        "cmatCost": 0,
-        "pcmatCost": 175,
-        "steelCost": 0,
-        "buildingRecipes": [
-            {
-                "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
-                "inputAmounts": [ 2, 2 ],
-                "outputNames": [ "AmmoShell75" ],
-                "outputAmounts": [ 1 ],
-                "powerConsumption": 4,
-                "productionTime": 60
-            },
-            {
-                "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
-                "inputAmounts": [ 2, 2 ],
-                "outputNames": [ "AmmoShell945" ],
-                "outputAmounts": [ 1 ],
-                "powerConsumption": 4,
-                "productionTime": 60
-            },
-            {
-                "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
-                "inputAmounts": [ 6, 4 ],
-                "outputNames": [ "AmmoShell300" ],
-                "outputAmounts": [ 1 ],
-                "powerConsumption": 6,
-                "productionTime": 60
-            },
-            {
-                "inputNames": [ "MaterialExplosive", "MaterialConstruction" ],
-                "inputAmounts": [ 3, 2 ],
-                "outputNames": [ "AmmoShell120" ],
-                "outputAmounts": [ 1 ],
-                "powerConsumption": 4,
-                "productionTime": 25
-            },
-            {
-                "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
-                "inputAmounts": [ 2, 3 ],
-                "outputNames": [ "AmmoShell150" ],
-                "outputAmounts": [ 1 ],
-                "powerConsumption": 4,
-                "productionTime": 40
             }
         ]
     },
