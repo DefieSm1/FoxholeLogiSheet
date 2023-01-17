@@ -260,7 +260,7 @@
         ]
     },
     "AmmoFactoryTripod": {
-        "name": "Large Shell Factory",
+        "name": "Tripod Factory",
         "description": "Produces various types of tripod weapons.",
         "bmatCost": 0,
         "cmatCost": 0,
@@ -276,24 +276,24 @@
                 "productionTime": 25
             },
             {
-                "inputNames": [ "MaterialConstruction", "MaterialProcessedConstruction" ],
-                "inputAmounts": [ 2, 1 ],
+                "inputNames": [ "MaterialConstruction" ],
+                "inputAmounts": [ 3 ],
                 "outputNames": [ "ATBonesawTripod" ],
                 "outputAmounts": [ 1 ],
                 "powerConsumption": 4,
                 "productionTime": 25
             },
             {
-                "inputNames": [ "MaterialConstruction", "MaterialProcessedConstruction" ],
-                "inputAmounts": [ 2, 1 ],
+                "inputNames": [ "MaterialConstruction" ],
+                "inputAmounts": [ 3 ],
                 "outputNames": [ "RPGFoebreaker" ],
                 "outputAmounts": [ 1 ],
                 "powerConsumption": 4,
                 "productionTime": 25
             },
             {
-                "inputNames": [ "MaterialConstruction", "MaterialProcessedConstruction" ],
-                "inputAmounts": [ 2, 1 ],
+                "inputNames": [ "MaterialConstruction" ],
+                "inputAmounts": [ 3 ],
                 "outputNames": [ "MGRatcatcher" ],
                 "outputAmounts": [ 1 ],
                 "powerConsumption": 4,

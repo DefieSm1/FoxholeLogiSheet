@@ -88,7 +88,7 @@
 											<button class="input-item" style="background-image: url(icons/Facility/@(item.value).png); border: @GetItemHighlight(item.value)"
 													@onmouseover="() => { HoveredItem = FacilityItems[item.value]; ItemInfoboxVisibility = true; }"
 													@onmouseout="() => { HoveredItem = FacilityItems[item.value]; ItemInfoboxVisibility = false; }">
-													@(recipe.value.OutputAmounts[item.index] * UpgradeMultipliers[recipe.index])@(FacilityItems[recipe.value.OutputNames[item.index]].IsLiquid && !recipe.value.OutputNames.Contains("fluidCan") ? "L" : "")
+													@(recipe.value.OutputAmounts[item.index] * BuildingMultipliers[recipe.index])@(FacilityItems[recipe.value.OutputNames[item.index]].IsLiquid && !recipe.value.OutputNames.Contains("fluidCan") ? "L" : "")
 											</button>
 										}
 									}
