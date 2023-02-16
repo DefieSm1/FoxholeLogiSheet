@@ -106,9 +106,9 @@
 				}
 				@if(!String.IsNullOrEmpty(SelectedUpgrade)) 
 				{
-					<div class="recipe-header"><p>@FacilityUpgrades[SelectedUpgrade].Name!.ToUpper()</p></div>
+					<div class="recipe-header"><p>@FacilityBuildingUpgrades[SelectedUpgrade].Name!.ToUpper()</p></div>
 					<div class="facility-recipes">
-						@foreach (var recipe in FacilityUpgrades[SelectedUpgrade].BuildingRecipes.Select((value, index) => new { value, index }))
+						@foreach (var recipe in FacilityBuildingUpgrades[SelectedUpgrade].BuildingRecipes.Select((value, index) => new { value, index }))
 						{
 							<div class="facility-recipe">
 								<div class="recipe-item-info">
@@ -129,7 +129,7 @@
 											<span class="power-icon"></span>@(recipe.value.PowerConsumption <= 0 ? (recipe.value.PowerConsumption == 0 ? recipe.value.PowerConsumption 
 																			: recipe.value.PowerConsumption * -1) : "-" + recipe.value.PowerConsumption) MW
 										</p>
-										<img src="icons/ProductionArrow.png" style="@(String.IsNullOrEmpty(recipe.value.OutputNames[0]) ? "opacity: 1" : "")"/>
+										<img src="icons/ProductionArrow.png" style="@(String.IsNullOrEmpty(recipe.value.OutputNames[0]) ? "opacity: 0" : "")"/>
 										<span class="recipe-time"> @GetTimestamp(recipe.value.ProductionTime * UpgradeMultipliers[recipe.index])</span>
 									</div>
 
@@ -167,8 +167,8 @@
 							{
 									<button class="building-upgrade @(SelectedUpgrade == upgrade ? "button-disabled" : "")"
 									style="background-image: url(icons/Facility/@(upgrade).png); border: @GetBuildingHighlight(upgrade)"
-									@onmouseover="() => { HoveredBuilding = FacilityUpgrades[upgrade]; BuildingInfoboxVisibility = true; }"
-									@onmouseout="() => { HoveredBuilding = FacilityUpgrades[upgrade]; BuildingInfoboxVisibility = false; }"
+									@onmouseover="() => { HoveredBuilding = FacilityBuildingUpgrades[upgrade]; BuildingInfoboxVisibility = true; }"
+									@onmouseout="() => { HoveredBuilding = FacilityBuildingUpgrades[upgrade]; BuildingInfoboxVisibility = false; }"
 									@onclick="() => { SelectedUpgrade = upgrade; ResetMultipliers(); }"></button>
 							}
 					}
@@ -251,7 +251,7 @@
 @code {
 	public Dictionary<string, FacilityBuilding> FacilityBuildingData = new();
 
-	public Dictionary<string, FacilityBuilding> FacilityUpgrades = new();
+	public Dictionary<string, FacilityBuilding> FacilityBuildingUpgrades = new();
 
 	public Dictionary<string, ProductionItem> FacilityItems = new();
 
@@ -289,19 +289,21 @@
 
 	const int MaxFacilityItemCapacity = 32000;
 
+	const int MaxMaintenanceTunnelCapacity = 1000;
+
 	const int MaxHarvesterCapacity = 2500;
 
 	const int MaxFacilityLiquidCapacity = 1000;
 
 	protected override async Task OnInitializedAsync()
 	{
-		await JsRuntime.InvokeVoidAsync("startInfoboxTracking");
+		string facilityDataDirectory = "data/facility";
 
-		FacilityBuildingData = await Http.GetFromJsonAsync<Dictionary<string, FacilityBuilding>>("data/Facility/FacilityBuildingData.json") ?? throw new FileNotFoundException();
+		FacilityBuildingData = await Http.GetFromJsonAsync<Dictionary<string, FacilityBuilding>>($"{facilityDataDirectory}/FacilityBuildingData.json") ?? throw new FileNotFoundException();
 
-		FacilityUpgrades = await Http.GetFromJsonAsync<Dictionary<string, FacilityBuilding>>("data/Facility/FacilityUpgradeData.json") ?? throw new FileNotFoundException();
+		FacilityBuildingUpgrades = await Http.GetFromJsonAsync<Dictionary<string, FacilityBuilding>>($"{facilityDataDirectory}/FacilityUpgradeData.json") ?? throw new FileNotFoundException();
 
-		FacilityItems = await Http.GetFromJsonAsync<Dictionary<string, ProductionItem>>("data/Facility/FacillityItemData.json") ?? throw new FileNotFoundException();
+		FacilityItems = await Http.GetFromJsonAsync<Dictionary<string, ProductionItem>>($"{facilityDataDirectory}/FacillityItemData.json") ?? throw new FileNotFoundException();
 
 		// Default Parameters
 		SelectedItem = "";
@@ -319,6 +321,7 @@
 	{
 		BuildingMultipliers = new();
 		UpgradeMultipliers = new();
+
 		for (int i = 0; i < maxRecipies; i++) {
 			BuildingMultipliers.Add(1);
 			UpgradeMultipliers.Add(1);
@@ -327,71 +330,66 @@
 
 	public void MultiplierChange(string? input, int itemIndex, bool upgrade = false) 
 	{
+		List<int> newMultipliers = upgrade ? UpgradeMultipliers : BuildingMultipliers;
+
 		int newNumber;
 
-		if(!Int32.TryParse(input, out newNumber))
-			if (upgrade)
-				UpgradeMultipliers[itemIndex] = 1;
-			else
-				BuildingMultipliers[itemIndex] = 1;
+		if (!int.TryParse(input, out newNumber))
+			newNumber = 1;
 
-		if(upgrade) 
-		{
-			if (newNumber < 1)
-				UpgradeMultipliers[itemIndex] = 1;
-			else
-				UpgradeMultipliers[itemIndex] = newNumber;
-		}
-		else 
-		{
-			if (newNumber < 1)
-				BuildingMultipliers[itemIndex] = 1;
-			else
-				BuildingMultipliers[itemIndex] = newNumber;
-		}
+		if (newNumber < 1)
+			newMultipliers[itemIndex] = 1;
+		else
+			newMultipliers[itemIndex] = newNumber;
+
+		if (upgrade)
+			UpgradeMultipliers = newMultipliers;
+		else
+			BuildingMultipliers = newMultipliers;
 	}
 
-	public string GetTimestamp(int seconds) => TimeSpan.FromSeconds(seconds).ToString(TimeSpan.FromSeconds(seconds).Days > 0 ? @"d\:hh\:mm\:ss" : @"h\:mm\:ss");
+	public string GetTimestamp(int seconds, bool FullStamp = false) => TimeSpan.FromSeconds(seconds).ToString(TimeSpan.FromSeconds(seconds).Days > 0 || FullStamp ? @"d\:hh\:mm\:ss" : @"h\:mm\:ss");
 
 	public void HighlightBuildings(string item = "none")
 	{
 		InputHighlight = new();
 		OutputHighlight = new();
 
-		if(item != "none")
+		if (item == "none")
+			return;
+
+		foreach(string building in FacilityBuildingData.Keys)
 		{
-			foreach(string building in FacilityBuildingData.Keys)
+			if (FacilityBuildingData[building].BuildingRecipes.Any(e => e.InputNames.Contains(item)))
+				InputHighlight.Add(building);
+			if (FacilityBuildingData[building].BuildingRecipes.Any(e => e.OutputNames.Contains(item)))
+				OutputHighlight.Add(building);
+
+			bool upgradeHasInput = false;
+			bool upgradeHasOutput = false;
+
+
+			if (FacilityBuildingData[building].BuildingUpgrades[0] == String.Empty)
+				continue;
+
+			foreach (string upgrade in FacilityBuildingData[building].BuildingUpgrades)
 			{
-				if (FacilityBuildingData[building].BuildingRecipes.Any(e => e.InputNames.Contains(item)))
-					InputHighlight.Add(building);
-				if (FacilityBuildingData[building].BuildingRecipes.Any(e => e.OutputNames.Contains(item)))
-					OutputHighlight.Add(building);
-
-				bool upgradeHasInput = false;
-				bool upgradeHasOutput = false;
-
-				if (FacilityBuildingData[building].BuildingUpgrades[0] != String.Empty)
+				if (FacilityBuildingUpgrades[upgrade].BuildingRecipes.Any(e => e.InputNames.Contains(item)))
 				{
-					foreach(string upgrade in FacilityBuildingData[building].BuildingUpgrades)
-					{
-						if (FacilityUpgrades[upgrade].BuildingRecipes.Any(e => e.InputNames.Contains(item)))
-						{
-							upgradeHasInput = true;
-							InputHighlight.Add(upgrade);
-						}
-						if (FacilityUpgrades[upgrade].BuildingRecipes.Any(e => e.OutputNames.Contains(item)))
-						{
-							upgradeHasOutput = true;
-							OutputHighlight.Add(upgrade);
-						}
-					}
+					upgradeHasInput = true;
+					InputHighlight.Add(upgrade);
 				}
-
-				if (upgradeHasInput && !InputHighlight.Contains(building))
-					InputHighlight.Add(building);
-				if (upgradeHasOutput && !OutputHighlight.Contains(building))
-					OutputHighlight.Add(building);
+				if (FacilityBuildingUpgrades[upgrade].BuildingRecipes.Any(e => e.OutputNames.Contains(item)))
+				{
+					upgradeHasOutput = true;
+					OutputHighlight.Add(upgrade);
+				}
 			}
+
+			if (upgradeHasInput && !InputHighlight.Contains(building))
+				InputHighlight.Add(building);
+			if (upgradeHasOutput && !OutputHighlight.Contains(building))
+				OutputHighlight.Add(building);
 		}
 	}
 
@@ -408,25 +406,21 @@
 
 		if (hasInputHighlight && hasOutputHighlight)
 			return border += bothColor;
-		else if (hasInputHighlight)
+
+		if (hasInputHighlight)
 			return border += inputColor;
-		else if (hasOutputHighlight)
+
+		if (hasOutputHighlight)
 			return border += outputColor;
-		else
-			return "inherit";
+
+		return "inherit";
 	}
 
-	public string GetItemHighlight(string item)
-	{
-		if (SelectedItem == item)
-			return "2px dashed #6098E6";
-		else
-			return "inherit";
-	}
+	public string GetItemHighlight(string item) => SelectedItem == item ? "2px dashed #6098E6" : "inherit";
 
 	public void SwitchBuildingType()
 	{
-		if(SelectedBuildingType == "Manufacturing")
+		if (SelectedBuildingType == "Manufacturing")
 		{
 			SelectedBuildingType = "Gathering";
 			SelectedBuilding = "HarvesterSalvage";
@@ -443,69 +437,48 @@
 	public string GetRecipeAutonomy(string type = "input", bool pipes = true)
 	{
 		int autonomyTime = 0;
-		int itemCapacity = SelectedBuildingType == "Manufacturing" ? MaxFacilityItemCapacity : MaxHarvesterCapacity;
 
-		if (HoveredRecipe.OutputNames[0] == "SuppliesGarrison" && type == "output")
+		int itemCapacity = SelectedBuilding == "MaintenanceTunnel" ? MaxMaintenanceTunnelCapacity : SelectedBuildingType switch
 		{
-			autonomyTime = 1000 / HoveredRecipe.OutputAmounts[0] * HoveredRecipe.ProductionTime;
-		}
-		else if(type == "input")
+			"Manufacturing" => MaxFacilityItemCapacity,
+			"Gathering" => MaxHarvesterCapacity,
+			_ => MaxFacilityItemCapacity
+		};
+
+		List<string> RecipeElementNames = type == "input" ? HoveredRecipe.InputNames : HoveredRecipe.OutputNames;
+		List<int> RecipeElementAmounts = type == "input" ? HoveredRecipe.InputAmounts : HoveredRecipe.OutputAmounts;
+
+		if (RecipeElementNames.Contains("fluidCan"))
 		{
-			int largest = HoveredRecipe.InputNames.Any(e => !FacilityItems[e].IsLiquid) ? 0 : -1;
-			int largestLiquid = HoveredRecipe.InputNames.Any(e => FacilityItems[e].IsLiquid) ? 0 : -1;
-
-			for (int i = 0; i < HoveredRecipe.InputAmounts.Count(); i++) 
-			{
-				if (largest != -1 && (HoveredRecipe.InputAmounts[i] > HoveredRecipe.InputAmounts[largest]) && !FacilityItems[HoveredRecipe.InputNames[i]].IsLiquid)
-					largest = i;
-				if (largestLiquid != -1 && (HoveredRecipe.InputAmounts[i] > HoveredRecipe.InputAmounts[largestLiquid]) && FacilityItems[HoveredRecipe.InputNames[i]].IsLiquid)
-					largestLiquid = i;
-			}
-
-			if (largest == -1 && pipes)
-				autonomyTime = -1;
-			else
-			{
-				int itemAutonomy = largest != -1 ? itemCapacity / HoveredRecipe.InputAmounts[largest] * HoveredRecipe.ProductionTime : int.MaxValue;
-
-				int liquidAutonomy = largestLiquid != -1 && !pipes ? MaxFacilityLiquidCapacity / HoveredRecipe.InputAmounts[largestLiquid] * HoveredRecipe.ProductionTime : int.MaxValue;
-
-				autonomyTime = Math.Min(itemAutonomy, liquidAutonomy);
-			}
+			autonomyTime = 50 / RecipeElementAmounts[0] * HoveredRecipe.ProductionTime;
+			return GetTimestamp(autonomyTime, true);
 		}
+
+		int largest = RecipeElementNames.Any(e => e != "fluidCan" && !FacilityItems[e].IsLiquid) ? 0 : -1;
+		int largestLiquid = RecipeElementNames.Any(e => e != "fluidCan" && FacilityItems[e].IsLiquid) ? 0 : -1;
+
+		for (int i = 0; i < RecipeElementAmounts.Count(); i++) 
+		{
+			if (largest != -1 && (RecipeElementAmounts[i] > RecipeElementAmounts[largest]) && !FacilityItems[RecipeElementNames[i]].IsLiquid)
+				largest = i;
+			if (largestLiquid != -1 && (RecipeElementAmounts[i] > RecipeElementAmounts[largestLiquid]) && FacilityItems[RecipeElementNames[i]].IsLiquid)
+				largestLiquid = i;
+		}
+
+		if (largest == -1 && pipes)
+			autonomyTime = -1;
 		else
 		{
-			if(HoveredRecipe.OutputNames.Contains("fluidCan"))
-			{
-				return TimeSpan.FromSeconds(50 / HoveredRecipe.OutputAmounts[0] * HoveredRecipe.ProductionTime).ToString(@"d\:hh\:mm\:ss");
-			}
+			int itemAutonomy = largest != -1 ? itemCapacity / RecipeElementAmounts[largest] * HoveredRecipe.ProductionTime : int.MaxValue;
 
-			int largest = HoveredRecipe.OutputNames.Any(e => e != "fluidCan" && !FacilityItems[e].IsLiquid) ? 0 : -1;
-			int largestLiquid = HoveredRecipe.OutputNames.Any(e => e != "fluidCan" && FacilityItems[e].IsLiquid) ? 0 : -1;
+			int liquidAutonomy = largestLiquid != -1 && !pipes ? MaxFacilityLiquidCapacity / RecipeElementAmounts[largestLiquid] * HoveredRecipe.ProductionTime : int.MaxValue;
 
-			for (int i = 0; i < HoveredRecipe.OutputAmounts.Count(); i++) 
-			{
-				if (largest != -1 && (HoveredRecipe.OutputAmounts[i] > HoveredRecipe.OutputAmounts[largest]) && !FacilityItems[HoveredRecipe.OutputNames[i]].IsLiquid)
-					largest = i;
-				if (largestLiquid != -1 && (HoveredRecipe.OutputAmounts[i] > HoveredRecipe.OutputAmounts[largestLiquid]) && FacilityItems[HoveredRecipe.OutputNames[i]].IsLiquid)
-					largestLiquid = i;
-			}
-
-			if (largest == -1 && pipes)
-				autonomyTime = -1;
-			else
-			{
-				int itemAutonomy = largest != -1 ? itemCapacity / HoveredRecipe.OutputAmounts[largest] * HoveredRecipe.ProductionTime : int.MaxValue;
-
-				int liquidAutonomy = largestLiquid != -1 && !pipes ? MaxFacilityLiquidCapacity / HoveredRecipe.OutputAmounts[largestLiquid] * HoveredRecipe.ProductionTime : int.MaxValue;
-
-				autonomyTime = Math.Min(itemAutonomy, liquidAutonomy);
-			}
+			autonomyTime = Math.Min(itemAutonomy, liquidAutonomy);
 		}
 
 		if (autonomyTime == -1)
 			return "∞";
 
-		return TimeSpan.FromSeconds(autonomyTime).ToString(@"d\:hh\:mm\:ss");
+		return GetTimestamp(autonomyTime, true);
 	}
 }

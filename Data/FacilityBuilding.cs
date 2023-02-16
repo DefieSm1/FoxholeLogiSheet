@@ -18,7 +18,7 @@
 
         public List<string> BuildingUpgrades { get; set; }
 
-        public List<FacilityRecipe> BuildingRecipes {get; set; }
+        public List<FacilityRecipe> BuildingRecipes { get; set; }
 
         public FacilityBuilding()
         {

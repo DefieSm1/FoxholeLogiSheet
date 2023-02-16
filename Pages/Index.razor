@@ -36,7 +36,7 @@
                         style="background-image: url(icons/ProductionIcons/@(ProductionData.GetProductionBuilding(SelectedCategory))/@(item.Key).png)"
                         @onmouseover="() => { HoveredItem = item.Value; InfoboxVisibility = true; InfoboxSimple = false; }" 
                         @onmouseout="() => { HoveredItem = item.Value; InfoboxVisibility = false; }"
-                        @onclick="() => SelectItem(SelectedCategory, item.Key)"></button>
+                        @onclick="() => AddItem(SelectedCategory, item.Key)"></button>
             }
             </div>
         </div>
@@ -169,8 +169,6 @@
 
     protected override async Task OnInitializedAsync()
     {
-        await JsRuntime.InvokeVoidAsync("startInfoboxTracking");
-
         NavManager.NavigateTo("factory");
 
         ProductionData = await Http.GetFromJsonAsync<ProductionItemCategories>("data/ProductionData.json") ?? throw new FileNotFoundException();
@@ -198,27 +196,31 @@
             ProductionMode = "Factory";
             if (CannotFactory.Contains(SelectedCategory))
                 SelectedCategory = "SmallArms";
-            ResetSelectedItems();
         }
         else
         {
             ProductionMode = "MPF";
             if (CannotMPF.Contains(SelectedCategory))
                 SelectedCategory = "SmallArms";
-            ResetSelectedItems();
         }
+
+        ResetSelectedItems();
     }
 
     public bool CheckIfDisabled(string itemCategory, string itemKey) {
-        if (SelectedItems[itemCategory].Count() == (itemCategory == "Vehicles" || itemCategory == "Shippables" ? 5 : 9) && ProductionMode == "MPF")
-            return true;
-        else if (SelectedItems[itemCategory].Count() != 0 && ProductionMode == "MPF")
-            return !(SelectedItems[itemCategory].Contains(itemKey));
-        else
+        if (ProductionMode != "MPF")
             return false;
+
+        if (SelectedItems[itemCategory].Count() == (itemCategory == "Vehicles" || itemCategory == "Shippables" ? 5 : 9))
+            return true;
+
+        if (SelectedItems[itemCategory].Count() > 0)
+            return !(SelectedItems[itemCategory].Contains(itemKey));
+
+        return false;
     }
 
-    public void SelectItem(string itemCategory, string itemKey) // This literally only has to exist because I wanted to keep the infobox for disabled buttons x)
+    public void AddItem(string itemCategory, string itemKey) // This literally only has to exist because I wanted to keep the infobox for disabled buttons x)
     {
         if (!CheckIfDisabled(itemCategory, itemKey))
             SelectedItems[itemCategory].Add(itemKey);
@@ -231,44 +233,46 @@
             SelectedItems.Add(category, new List<string>());
     }
 
-    public string GetTimestamp(double seconds) => TimeSpan.FromSeconds(seconds).ToString(TimeSpan.FromSeconds(seconds).Days > 0 ? @"d\:hh\:mm\:ss" : @"h\:mm\:ss");
+    public string GetTimestamp(double seconds, bool FullStamp = false) => TimeSpan.FromSeconds(seconds).ToString(TimeSpan.FromSeconds(seconds).Days > 0 || FullStamp ? @"d\:hh\:mm\:ss" : @"h\:mm\:ss");
 
     public double GetQueuePrice(string materialKey, string itemCategory = "all")
     {
         double queuePrice = 0;
 
-        if(SelectedItems.Count() > 0) 
+        if (SelectedItems.Count() <= 0)
+            return 0;
+
+        if(itemCategory == "all")
         {
-            bool isVehicleOrShippable = (itemCategory == "Vehicles" || itemCategory == "Shippables");
-            double currentDiscount = 0;
-            ProductionItem itemInfo = new();
-            int itemIndex = 0;
+            foreach(string category in CategoryNames) 
+                queuePrice += GetQueuePrice(materialKey, category);
 
-            if(itemCategory == "all") 
-            {
-                foreach(string category in CategoryNames) {
-                    queuePrice += GetQueuePrice(materialKey, category);
-                }
-            }
-            else
-            {
-                foreach (string item in SelectedItems[itemCategory])
-                {
-                    currentDiscount = ProductionMode == "MPF" ? 1 - 0.1 * Math.Min(++itemIndex, 5) : 1;
-                    itemInfo = ProductionData.GetCategoryData(itemCategory)[item];
-
-                    queuePrice += materialKey switch
-                    {
-                        "Bmat" => Math.Floor(itemInfo.BmatCost * currentDiscount * (isVehicleOrShippable ? itemInfo.CrateSize : 1)),
-                        "Rmat" => Math.Floor(itemInfo.RmatCost * currentDiscount * (isVehicleOrShippable ? itemInfo.CrateSize : 1)),
-                        "Emat" => Math.Floor(itemInfo.EmatCost * currentDiscount * (isVehicleOrShippable ? itemInfo.CrateSize : 1)),
-                        "Hemat" => Math.Floor(itemInfo.HematCost * currentDiscount * (isVehicleOrShippable ? itemInfo.CrateSize : 1)),
-                        "Time" => itemInfo.ProductionTime * (ProductionMode == "MPF" ? isVehicleOrShippable ? 1 : 10 : 1),
-                        _ => 0
-                    };
-                }
-            }
+            return queuePrice;
         }
+
+        bool isVehicleOrShippable = (itemCategory == "Vehicles" || itemCategory == "Shippables");
+        double currentDiscount = 0;
+        ProductionItem itemInfo = new();
+        int itemIndex = 0;
+
+        foreach (string item in SelectedItems[itemCategory])
+        {
+            currentDiscount = ProductionMode == "MPF" ? 1 - 0.1 * Math.Min(++itemIndex, 5) : 1;
+            itemInfo = ProductionData.GetCategoryData(itemCategory)[item];
+
+            double crateSize = isVehicleOrShippable ? itemInfo.CrateSize : 1;
+
+            queuePrice += materialKey switch
+            {
+                "Bmat" => Math.Floor(itemInfo.BmatCost * currentDiscount * crateSize),
+                "Rmat" => Math.Floor(itemInfo.RmatCost * currentDiscount * crateSize),
+                "Emat" => Math.Floor(itemInfo.EmatCost * currentDiscount * crateSize),
+                "Hemat" => Math.Floor(itemInfo.HematCost * currentDiscount * crateSize),
+                "Time" => itemInfo.ProductionTime * (ProductionMode == "MPF" ? isVehicleOrShippable ? 1 : 10 : 1),
+                _ => 0
+            };
+        }
+
         return queuePrice;
     }
 }

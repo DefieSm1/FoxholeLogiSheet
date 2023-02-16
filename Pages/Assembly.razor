@@ -21,8 +21,8 @@
 			{
 				<button class="assembly-building building-upgrade @(SelectedUpgrade == upgrade ? "button-disabled" : "")" 
 						style="background-image: url(icons/Facility/AssemblyStation/@(upgrade).png)"
-						@onmouseover="() => { HoveredBuilding = AssemblyUpgrades[upgrade]; BuildingInfoboxVisibility = true; InfoboxSimple = false; }"
-						@onmouseout="() => { HoveredBuilding = AssemblyUpgrades[upgrade]; BuildingInfoboxVisibility = false; }"
+						@onmouseover="() => { HoveredBuilding = AssemblyBuildingUpgrades[upgrade]; BuildingInfoboxVisibility = true; InfoboxSimple = false; }"
+						@onmouseout="() => { HoveredBuilding = AssemblyBuildingUpgrades[upgrade]; BuildingInfoboxVisibility = false; }"
 						@onclick="() => { SelectedBuilding = building.Key; SelectedUpgrade = upgrade; }"></button>
 			}
 		}
@@ -46,7 +46,7 @@
 		}
 		@if(!String.IsNullOrEmpty(SelectedUpgrade)) 
 		{
-			<div class="vehicle-select-header"><p>@AssemblyUpgrades[SelectedUpgrade].Name!.ToUpper()</p></div>
+			<div class="vehicle-select-header"><p>@AssemblyBuildingUpgrades[SelectedUpgrade].Name!.ToUpper()</p></div>
 			<div class="vehicle-grid">
 				@foreach (KeyValuePair<string, ProductionItem> item in AssemblyVehicles.GetBuildingVehicles(SelectedUpgrade))
 				{
@@ -234,7 +234,7 @@
 @code {
 	public Dictionary<string, FacilityBuilding> AssemblyBuildings = new();
 
-	public Dictionary<string, FacilityBuilding> AssemblyUpgrades = new();
+	public Dictionary<string, FacilityBuilding> AssemblyBuildingUpgrades = new();
 
 	public AssemblyVehicleBuildings AssemblyVehicles = new();
 
@@ -266,19 +266,19 @@
 
 	protected override async Task OnInitializedAsync()
 	{
-		await JsRuntime.InvokeVoidAsync("startInfoboxTracking");
+		string assemblyDataDirectory = "data/AssemblyStation";
 
-		AssemblyBuildings = await Http.GetFromJsonAsync<Dictionary<string, FacilityBuilding>>("data/AssemblyStation/AssemblyBuildingData.json") ?? throw new FileNotFoundException();
+		AssemblyBuildings = await Http.GetFromJsonAsync<Dictionary<string, FacilityBuilding>>($"{assemblyDataDirectory}/AssemblyBuildingData.json") ?? throw new FileNotFoundException();
 
-		AssemblyUpgrades = await Http.GetFromJsonAsync<Dictionary<string, FacilityBuilding>>("data/AssemblyStation/AssemblyUpgradeData.json") ?? throw new FileNotFoundException();
+		AssemblyBuildingUpgrades = await Http.GetFromJsonAsync<Dictionary<string, FacilityBuilding>>($"{assemblyDataDirectory}/AssemblyUpgradeData.json") ?? throw new FileNotFoundException();
 
-		AssemblyVehicles = await Http.GetFromJsonAsync<AssemblyVehicleBuildings>("data/AssemblyStation/AssemblyVehicleData.json") ?? throw new FileNotFoundException();
+		AssemblyVehicles = await Http.GetFromJsonAsync<AssemblyVehicleBuildings>($"{assemblyDataDirectory}/AssemblyVehicleData.json") ?? throw new FileNotFoundException();
 
 		ProductionItemCategories Production = await Http.GetFromJsonAsync<ProductionItemCategories>("data/ProductionData.json") ?? throw new FileNotFoundException();
 
 		GarageVehicles = Production.GetCategoryData("Vehicles");
 
-		MaterialRawCosts = await Http.GetFromJsonAsync<Dictionary<string, AssemblyRawCosts>>("data/AssemblyStation/AssemblyRawCostData.json") ?? throw new FileNotFoundException();
+		MaterialRawCosts = await Http.GetFromJsonAsync<Dictionary<string, AssemblyRawCosts>>($"{assemblyDataDirectory}/AssemblyRawCostData.json") ?? throw new FileNotFoundException();
 
 		MaterialNames = MaterialRawCosts.Keys.ToList();
 
@@ -295,7 +295,8 @@
 	public void ResetSelectedVehicles()
 	{
 		SelectedVehicles.Clear();
-		foreach (string building in AssemblyVehicles.AssemblyNames) {
+		foreach (string building in AssemblyVehicles.AssemblyNames) 
+		{
 			SelectedVehicles.Add(building, new List<string>());
 		}
 	}
@@ -306,34 +307,34 @@
 	{
 		double queuePrice = 0;
 
-		if (SelectedVehicles.Count() > 0)
+		if (SelectedVehicles.Count() <= 0)
+			return 0;
+
+		ProductionItem vehicleInfo = new();
+
+		if (vehicleBuilding == "all")
 		{
-			ProductionItem vehicleInfo = new();
-
-			if (vehicleBuilding == "all")
+			foreach (string category in AssemblyVehicles.AssemblyNames)
 			{
-				foreach (string category in AssemblyVehicles.AssemblyNames)
-				{
-					queuePrice += GetQueuePrice(materialKey, category, AssmatIndex);
-				}
+				queuePrice += GetQueuePrice(materialKey, category, AssmatIndex);
 			}
-			else
-			{
-				foreach (string item in SelectedVehicles[vehicleBuilding])
-				{
-					vehicleInfo = AssemblyVehicles.GetBuildingVehicles(vehicleBuilding)[item];
 
-					queuePrice += materialKey switch {
-						"MaterialBasic" => vehicleInfo.BmatCost,
-						"MaterialConstruction" => vehicleInfo.CmatCost,
-						"MaterialProcessedConstruction" => vehicleInfo.PCmatCost,
-						"MaterialSteel" => vehicleInfo.SteelCost,
-						"AssemblyMaterials" => vehicleInfo.AssmatCost[AssmatIndex],
-						"Time" => vehicleInfo.ProductionTime,
-						_ => 0
-					};
-				}
-			}
+			return queuePrice;
+		}
+	
+		foreach (string item in SelectedVehicles[vehicleBuilding])
+		{
+			vehicleInfo = AssemblyVehicles.GetBuildingVehicles(vehicleBuilding)[item];
+
+			queuePrice += materialKey switch {
+				"MaterialBasic" => vehicleInfo.BmatCost,
+				"MaterialConstruction" => vehicleInfo.CmatCost,
+				"MaterialProcessedConstruction" => vehicleInfo.PCmatCost,
+				"MaterialSteel" => vehicleInfo.SteelCost,
+				"AssemblyMaterials" => vehicleInfo.AssmatCost[AssmatIndex],
+				"Time" => vehicleInfo.ProductionTime,
+				_ => 0
+			};
 		}
 
 		return queuePrice;

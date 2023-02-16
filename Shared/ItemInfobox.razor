@@ -32,14 +32,7 @@
 			@if (Item.ProductionTime > 0)
 			{ 
 				<p class="item-damageinfo">
-					@if(time.Days > 0)
-					{
-						@time.ToString(@"d\:hh\:mm\:ss")
-					}
-					else
-					{
-						@time.ToString(@"h\:mm\:ss")
-					}
+					@TimeSpan.FromSeconds(time.Seconds).ToString(TimeSpan.FromSeconds(time.Seconds).Days > 0 ? @"d\:hh\:mm\:ss" : @"h\:mm\:ss")
 				</p>
 			}
 			<div class="item-costs">
@@ -108,7 +101,7 @@
 
 	public static string ToRoman(int number)
 	{
-		if ((number < 0) || (number > 3999)) throw new ArgumentOutOfRangeException("insert value betwheen 1 and 3999");
+		if ((number < 0) || (number > 8)) throw new ArgumentOutOfRangeException("Insert value betwheen 1 and 8");
 		if (number < 1) return string.Empty;
 		if (number >= 5) return "V" + ToRoman(number - 5);
 		if (number >= 4) return "IV" + ToRoman(number - 4);
