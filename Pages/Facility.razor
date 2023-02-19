@@ -297,7 +297,7 @@
 
 	protected override async Task OnInitializedAsync()
 	{
-		string facilityDataDirectory = "data/facility";
+		string facilityDataDirectory = "data/Facility";
 
 		FacilityBuildingData = await Http.GetFromJsonAsync<Dictionary<string, FacilityBuilding>>($"{facilityDataDirectory}/FacilityBuildingData.json") ?? throw new FileNotFoundException();
 
