@@ -7,7 +7,7 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "FoxholeLogiSheet.dll": "sha256-VyZxfef7ixayJvoESkKcfPm0W6kAsOwA84Dh8Kbq3bE=",
+      "FoxholeLogiSheet.dll": "sha256-C3YLpWjizgSZq2x9ZEyQ6sT8pK97X796UyC6FRUehTw=",
       "Microsoft.AspNetCore.Components.dll": "sha256-KCNA6ANM9R\/CCYeY6pC1eZeBgO\/Wij88dboOUWiLdSk=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-ZvB65TF6Tix6kJ7DpZLqlclEGauA8yT7fm7zhj+YQNM=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-VfuhQtMrvCmEflZYOOSPlstWKSnWBKH\/9leuaVp3ChE=",
