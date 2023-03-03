@@ -32,7 +32,7 @@
 			@if (Item.ProductionTime > 0)
 			{ 
 				<p class="item-damageinfo">
-					@TimeSpan.FromSeconds(time.Seconds).ToString(TimeSpan.FromSeconds(time.Seconds).Days > 0 ? @"d\:hh\:mm\:ss" : @"h\:mm\:ss")
+					@(TimeSpan.FromSeconds(Item.ProductionTime).ToString(TimeSpan.FromSeconds(Item.ProductionTime).Days > 0 ? @"d\:hh\:mm\:ss" : @"h\:mm\:ss"))
 				</p>
 			}
 			<div class="item-costs">
@@ -91,13 +91,6 @@
 
 	[Parameter]
 	public bool Simplified { get; set; } = false;
-
-	public TimeSpan time = new();
-
-	protected override void OnParametersSet()
-	{
-		time = TimeSpan.FromSeconds(Item.ProductionTime);
-	}
 
 	public static string ToRoman(int number)
 	{
