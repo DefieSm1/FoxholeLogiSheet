@@ -331,10 +331,10 @@
         "ammoUsed": "12.7mm",
         "isLiquid": false
     },
-    "SuppliesGarrison": {
-        "name": "Garrison Supplies",
+    "SuppliesMaintenance": {
+        "name": "Maintenance Supplies",
         "category": "",
-        "description": "Supplies for maintaining structures. Store at Bases to prevent decay on surrounding structures.",
+        "description": "Supplies for maintaining structures. Store at Bases or Maintenance Tunnels to prevent decay on surrounding structures.",
         "damageType": "",
         "damageInfo": [ "" ],
         "isLiquid": false

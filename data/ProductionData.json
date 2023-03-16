@@ -460,10 +460,10 @@
             "damageInfo": [ "" ],
             "ammoUsed": "",
             "canMPF": true,
-            "crateSize": 15,
-            "bmatCost": 150,
+            "crateSize": 20,
+            "bmatCost": 75,
             "rmatCost": 0,
-            "ematCost": 10,
+            "ematCost": 50,
             "hematCost": 0,
             "productionTime": 80
         },
@@ -771,6 +771,21 @@
             "hematCost": 0,
             "productionTime": 50
         },
+        "UtilityHavocCharge": {
+            "name": "Havoc Charge",
+            "category": "",
+            "description": "A high-powered explosive charge that requires an accompanying detonator. The Havoc Charge is highly effective at demolishing large structures. The charge must be detonated via gunshot. The Havoc Charge's true potential is unleashed when executing strategic demolitions at safe distances.",
+            "damageType": "Demolition",
+            "damageInfo": [ "" ],
+            "ammoUsed": "",
+            "canMPF": false,
+            "crateSize": 5,
+            "bmatCost": 75,
+            "rmatCost": 0,
+            "ematCost": 0,
+            "hematCost": 10,
+            "productionTime": 60
+        },
         "AmmoFlamethrower": {
             "name": "Wilow's Bane Ammo",
             "category": "Flamethrower Ammo",
@@ -846,20 +861,20 @@
             "hematCost": 0,
             "productionTime": 15
         },
-        "UtilitySatchel": {
-            "name": "Alligator Charge",
+        "UtilityHavocDetonator": {
+            "name": "Havoc Charge Detonator",
             "category": "Explosive Charge",
-            "description": "This heavy-duty explosive device is designed to deal significant damage to structures and stationary vehicles.",
-            "damageType": "Demoliton",
-            "damageInfo": [ "Can ruin structures that have been severly damaged by artillery" ],
+            "description": "Required to detonate Havoc Charges. The Havoc Charge must be placed before can be deployed.",
+            "damageType": "",
+            "damageInfo": [ "" ],
             "ammoUsed": "",
             "canMPF": false,
             "crateSize": 5,
-            "bmatCost": 100,
+            "bmatCost": 75,
             "rmatCost": 0,
             "ematCost": 0,
-            "hematCost": 15,
-            "productionTime": 100
+            "hematCost": 5,
+            "productionTime": 60
         },
         "UtilityShovel": {
             "name": "Shovel",
@@ -1002,7 +1017,7 @@
             "description": "A rifle attachment that fires grenades with pneumatic force. Along with specialized grenades, it can launch standard grenades.",
             "damageType": "",
             "damageInfo": [ "" ],
-            "ammoUsed": "Tremola Grenade GPb-1, Green Ash Grenade, A3 Harpa Fragmentation Grenade",
+            "ammoUsed": "Green Ash Grenade, A3 Harpa Fragmentation Grenade",
             "canMPF": false,
             "crateSize": 20,
             "bmatCost": 85,
@@ -1040,6 +1055,21 @@
             "ematCost": 0,
             "hematCost": 0,
             "productionTime": 600
+        },
+        "UtilitySatchel": {
+            "name": "Alligator Charge",
+            "category": "Explosive Charge",
+            "description": "This heavy-duty explosive device is designed to deal significant damage to structures and stationary vehicles.",
+            "damageType": "Demolition",
+            "damageInfo": [ "Can ruin structures that have been severly damaged by artillery" ],
+            "ammoUsed": "",
+            "canMPF": false,
+            "crateSize": 5,
+            "bmatCost": 100,
+            "rmatCost": 0,
+            "ematCost": 80,
+            "hematCost": 0,
+            "productionTime": 100
         }
     },
     "medical": {
@@ -1120,35 +1150,20 @@
         }
     },
     "supplies": {
-        "SuppliesBunker": {
-            "name": "Bunker Supplies",
+        "SuppliesMaintenance": {
+            "name": "Maintenance Supplies",
             "category": "",
-            "description": "Supplies for maintaining structures. Store at Bases to prevent decay on surrounding Bunker/Trench structures when Garrison Supplies are not available.",
+            "description": "Supplies for maintaining structures. Store at Bases or Maintenance Tunnels to prevent decay on surrounding structures.",
             "damageType": "",
             "damageInfo": [ "" ],
             "ammoUsed": "",
-            "canMPF": false,
-            "crateSize": 150,
-            "bmatCost": 75,
+            "canMPF": true,
+            "crateSize": 100,
+            "bmatCost": 250,
             "rmatCost": 0,
             "ematCost": 0,
             "hematCost": 0,
-            "productionTime": 190
-        },
-        "SuppliesGarrison": {
-            "name": "Garrison Supplies",
-            "category": "",
-            "description": "Supplies for maintaining structures. Store at Bases to prevent decay on surrounding structures.",
-            "damageType": "",
-            "damageInfo": [ "" ],
-            "ammoUsed": "",
-            "canMPF": false,
-            "crateSize": 150,
-            "bmatCost": 75,
-            "rmatCost": 0,
-            "ematCost": 0,
-            "hematCost": 0,
-            "productionTime": 190
+            "productionTime": 125
         }
     },
     "uniforms": {
@@ -1664,7 +1679,7 @@
             "hematCost": 0,
             "productionTime": 5000
         },
-        "ContructionVehicle": {
+        "ConstructionVehicle": {
             "name": "BMS - Universal Assembly Rig",
             "category": "Construction Vehicle",
             "description": "A specialized vehicle designed by the Basset Motor Society used in the construction of large structures.",
