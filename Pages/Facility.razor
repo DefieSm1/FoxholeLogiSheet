@@ -438,7 +438,7 @@
 	{
 		int autonomyTime = 0;
 
-		int itemCapacity = SelectedBuilding == "MaintenanceTunnel" ? MaxMaintenanceTunnelCapacity : SelectedBuildingType switch
+		int itemCapacity = SelectedBuildingType switch
 		{
 			"Manufacturing" => MaxFacilityItemCapacity,
 			"Gathering" => MaxHarvesterCapacity,

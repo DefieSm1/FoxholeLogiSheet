@@ -14,7 +14,15 @@
                 "inputAmounts": [ 10 ],
                 "outputNames": [ "MaterialConstruction" ],
                 "outputAmounts": [ 1 ],
-                "powerConsumption": 4,
+                "powerConsumption": 2,
+                "productionTime": 25
+            },
+            {
+                "inputNames": [ "MaterialRawSalvage" ],
+                "inputAmounts": [ 20 ],
+                "outputNames": [ "SuppliesMaintenance" ],
+                "outputAmounts": [ 20 ],
+                "powerConsumption": 3,
                 "productionTime": 25
             }
         ]
@@ -91,7 +99,7 @@
                 "outputNames": [ "MaterialCoke" ],
                 "outputAmounts": [ 180 ],
                 "powerConsumption": 3,
-                "productionTime": 120
+                "productionTime": 270
             }
         ]
     },
@@ -123,7 +131,7 @@
         "cmatCost": 0,
         "pcmatCost": 0,
         "steelCost": 0,
-        "buildingUpgrades": [ "DieselPowerPlantPetrol" ],
+        "buildingUpgrades": [ "DieselPowerPlantPetrol", "DieselPowerPlantCoal" ],
         "buildingRecipes": [
             {
                 "inputNames": [ "MaterialDiesel" ],
@@ -155,31 +163,11 @@
             },
             {
                 "inputNames": [ "MaterialRawCoal", "MaterialWater" ],
-                "inputAmounts": [ 60, 25 ],
+                "inputAmounts": [ 30, 1 ],
                 "outputNames": [ "" ],
                 "outputAmounts": [ 0 ],
                 "powerConsumption": -10,
                 "productionTime": 90
-            }
-        ]
-    },
-    "MaintenanceTunnel": {
-        "name": "Maintenance Tunnel",
-        "buildingType": "Manufacturing",
-        "description": "A supply tunnel that provides Garrison Supplies to nearby Facilities and Railway Tracks. Garrison Supplies may also be produced on-site using Construction Materials. The rate of consumption is 2 Garrison Supplies per-hour per-structure once decay beings. Some structures have additional consumption requirements.",
-        "bmatCost": 0,
-        "cmatCost": 200,
-        "pcmatCost": 0,
-        "steelCost": 0,
-        "buildingUpgrades": [ "" ],
-        "buildingRecipes": [
-            {
-                "inputNames": [ "MaterialConstruction" ],
-                "inputAmounts": [ 1 ],
-                "outputNames": [ "SuppliesGarrison" ],
-                "outputAmounts": [ 10 ],
-                "powerConsumption": 2,
-                "productionTime": 325
             }
         ]
     },
@@ -235,7 +223,7 @@
         "buildingRecipes": [
             {
                 "inputNames": [ "MaterialOilPetrol" ],
-                "inputAmounts": [ 4 ],
+                "inputAmounts": [ 1 ],
                 "outputNames": [ "MaterialRawCoal" ],
                 "outputAmounts": [ 50 ],
                 "powerConsumption": 0,

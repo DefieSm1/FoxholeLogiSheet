@@ -9,7 +9,7 @@
         "buildingUpgrades": [ "AssemblyStationMotorPool", "AssemblyStationRocket", "AssemblyStationField", "AssemblyStationTank", "AssemblyStationWeapons" ]
     },
     "AssemblyLarge": {
-        "name": "Large Assembly Factory",
+        "name": "Large Assembly Station",
         "description": "A large Assembly Station for production of advanced vehicles and equipment, such as tanks and trains. Construction will take time and may be halted if resources are depleted.",
         "bmatCost": 0,
         "cmatCost": 0,

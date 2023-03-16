@@ -10,9 +10,9 @@
 
 		public Dictionary<string, ProductionItem>? Utility { get; set; }
 
-		public Dictionary<string, ProductionItem>? Medical { get; set; }
-
 		public Dictionary<string, ProductionItem>? Supplies { get; set; }
+
+		public Dictionary<string, ProductionItem>? Medical { get; set; }
 
 		public Dictionary<string, ProductionItem>? Uniforms { get; set; }
 
@@ -20,11 +20,11 @@
 
 		public Dictionary<string, ProductionItem>? Shippables { get; set; }
 
-		public List<string> CategoryNames { get; set; } = new();
+		public List<string> CategoryNames { get; set; }
 
-		public List<string> CannotFactory { get; set; } = new();
+		public List<string> CannotFactory { get; set; }
 
-		public List<string> CannotMPF { get; set; } = new();
+		public List<string> CannotMPF { get; set; }
 
 		public ProductionItemCategories()
 		{
@@ -32,15 +32,15 @@
 			HeavyArms = new();
 			HeavyMunitions = new();
 			Utility = new();
-			Medical = new();
 			Supplies = new();
+			Medical = new();
 			Uniforms = new();
 			Vehicles = new();
 			Shippables = new();
 
-			CategoryNames = new() { "SmallArms", "HeavyArms", "HeavyMunitions", "Utility", "Medical", "Supplies", "Uniforms", "Vehicles", "Shippables" };
+			CategoryNames = new() { "SmallArms", "HeavyArms", "HeavyMunitions", "Utility", "Supplies", "Medical", "Uniforms", "Vehicles", "Shippables" };
 			CannotFactory = new() { "Vehicles", "Shippables" };
-			CannotMPF = new() { "Medical", "Utility", "Supplies" };
+			CannotMPF = new() { "Utility", "Medical" };
 		}
 
 		public ProductionItemCategories(Dictionary<string, ProductionItem>? smallArms, Dictionary<string, ProductionItem>? heavyArms, Dictionary<string, ProductionItem>? heavyMunitions, Dictionary<string, ProductionItem>? utility, Dictionary<string, ProductionItem>? medical, Dictionary<string, ProductionItem>? supplies, Dictionary<string, ProductionItem>? uniforms, Dictionary<string, ProductionItem>? vehicles, Dictionary<string, ProductionItem>? shippables)
@@ -66,10 +66,10 @@
 			1 => HeavyArms ?? throw new KeyNotFoundException("Couldn't fetch " + categoryName),
 			2 => HeavyMunitions ?? throw new KeyNotFoundException("Couldn't fetch " + categoryName),
 			3 => Utility ?? throw new KeyNotFoundException("Couldn't fetch " + categoryName),
-			4 => Medical ?? throw new KeyNotFoundException("Couldn't fetch " + categoryName),
-			5 => Supplies ?? throw new KeyNotFoundException("Couldn't fetch " + categoryName),
+			4 => Supplies ?? throw new KeyNotFoundException("Couldn't fetch " + categoryName),
+			5 => Medical ?? throw new KeyNotFoundException("Couldn't fetch " + categoryName),
 			6 => Uniforms ?? throw new KeyNotFoundException("Couldn't fetch " + categoryName),
-			7 => Vehicles ?? throw new KeyNotFoundException("Couldn't fetch " + categoryName),
+            7 => Vehicles ?? throw new KeyNotFoundException("Couldn't fetch " + categoryName),
 			8 => Shippables ?? throw new KeyNotFoundException("Couldn't fetch " + categoryName),
 			_ => SmallArms ?? throw new KeyNotFoundException("Couldn't fetch " + categoryName)
 		};

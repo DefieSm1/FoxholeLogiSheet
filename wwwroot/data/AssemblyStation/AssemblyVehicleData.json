@@ -104,6 +104,21 @@
             "assmatCost": [ 0, 5, 0, 0, 0 ],
             "baseVehicle": "TruckAmbulance",
             "productionTime": 1800
+        },
+        "SmallGaugeFuel": {
+            "name": "BMS Tinderbox",
+            "category": "Small Liquid Container Car",
+            "description": "The Tinderbox is a simple car used for transporting liquids between facilities.",
+            "damageType": "",
+            "damageInfo": [ "" ],
+            "ammoUsed": "",
+            "bmatCost": 0,
+            "cmatCost": 35,
+            "pcmatCost": 0,
+            "steelCost": 0,
+            "assmatCost": [ 5, 15, 0, 0, 0 ],
+            "baseVehicle": "",
+            "productionTime": 300
         }
     },
     "AssemblyStationMotorPool": {
@@ -261,6 +276,21 @@
             "baseVehicle": "",
             "productionTime": 900
         },
+        "ConstructionVehicleAdvanced": {
+            "name": "BMS - Fabricator",
+            "category": "Advanced Construction Vehicle",
+            "description": "An advanced variant of the Universal Assembly Rig, the BMS - Fabricator is fitted with a unique kit designed to handle advanced or specialized construction and excavation jobs.",
+            "damageType": "",
+            "damageInfo": [ "" ],
+            "ammoUsed": "",
+            "bmatCost": 0,
+            "cmatCost": 0,
+            "pcmatCost": 10,
+            "steelCost": 0,
+            "assmatCost": [ 0, 0, 0, 0, 0 ],
+            "baseVehicle": "ConstructionVehicle",
+            "productionTime": 900
+        },
         "ScoutTankGallant": {
             "name": "King Gallant Mk. II",
             "category": "Scout Tank",
@@ -413,6 +443,21 @@
             "steelCost": 10,
             "assmatCost": [ 0, 10, 0, 15, 0 ],
             "baseVehicle": "CruiserTankOutlaw",
+            "productionTime": 600
+        },
+        "AssaultTankLordscar": {
+            "name": "Silverhand Lordscar - Mk. X",
+            "category": "Assault Tank",
+            "description": "A cut down variation of the Silverhand Assault Tank that sacrifices armour and protection in favour of a high-powered 94.5mm cannon. This open-top weapon platfrom is uniquely designed to intercept enemy armour before they're given time to retaliate. Its moniker is a tribute to the maiming of the great king the Silverhand is named for; while his title was stripped, and his pride damage, his rage was never quelled.",
+            "damageType": "Armour Piercing",
+            "damageInfo": [ "Higher base chance to disable vehicle subsystem" ],
+            "ammoUsed": "94.5mm",
+            "bmatCost": 0,
+            "cmatCost": 0,
+            "pcmatCost": 0,
+            "steelCost": 35,
+            "assmatCost": [ 0, 15, 25, 0, 0 ],
+            "baseVehicle": "AssaultTankSilverhand",
             "productionTime": 600
         }
     },
