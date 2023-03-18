@@ -29,10 +29,16 @@
 			{
 				<p class="item-damageinfo">Requires base vehicle: @BaseVehicle.Name (@BaseVehicle.Category)</p>
 			}
-			@if (Item.ProductionTime > 0)
+			@if(Item.ProductionTime > 0)
 			{ 
 				<p class="item-damageinfo">
-					@(TimeSpan.FromSeconds(Item.ProductionTime).ToString(TimeSpan.FromSeconds(Item.ProductionTime).Days > 0 ? @"d\:hh\:mm\:ss" : @"h\:mm\:ss"))
+					@GetTimestamp(Item.ProductionTime)
+				</p>
+			}
+			@if(CurrentBuilding == "Factory" || CurrentBuilding == "MPF")
+			{
+				<p class="item-cratesize">
+					<i>Hold SHIFT when clicking to @(CurrentBuilding == "Factory" ? "add 4 of the item to queue" : "fill queue with the item")</i>
 				</p>
 			}
 			<div class="item-costs">
@@ -84,13 +90,26 @@
 	public ProductionItem? BaseVehicle { get; set; } = null;
 
 	[Parameter]
-	public string SelectedCategory { get; set; } = "SmallArms";
+	public string CurrentBuilding { get; set; } = "";
+
+	[Parameter]
+	public string SelectedCategory { get; set; } = "";
 
 	[Parameter]
 	public bool Visibility { get; set; } = false;
 
 	[Parameter]
 	public bool Simplified { get; set; } = false;
+
+	public string GetTimestamp(double seconds) 
+	{
+		if(CurrentBuilding == "MPF")
+		{
+			seconds *= 10;
+		}
+
+		return TimeSpan.FromSeconds(seconds).ToString(TimeSpan.FromSeconds(seconds).Days > 0 ? @"d\:hh\:mm\:ss" : @"h\:mm\:ss");
+	}
 
 	public static string ToRoman(int number)
 	{

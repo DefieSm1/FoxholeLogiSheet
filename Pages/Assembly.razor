@@ -4,6 +4,7 @@
 
 @inject HttpClient Http
 @inject IJSRuntime JsRuntime
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
 @using FoxholeLogiSheet.Data
 
 <h1 class="assembly-header">Assembly Station Sheet</h1>
@@ -266,6 +267,8 @@
 
 	protected override async Task OnInitializedAsync()
 	{
+		await localStorage.SetItemAsync("lastPage", "Assembly");
+
 		string assemblyDataDirectory = "data/AssemblyStation";
 
 		AssemblyBuildings = await Http.GetFromJsonAsync<Dictionary<string, FacilityBuilding>>($"{assemblyDataDirectory}/AssemblyBuildingData.json") ?? throw new FileNotFoundException();
