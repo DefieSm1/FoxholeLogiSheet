@@ -174,7 +174,7 @@
     "HarvesterSalvage": {
         "name": "Stationary Harvester (Scrap)",
         "buildingType": "Gathering",
-        "description": "A stationary harvester that automatically gathers Salvage. Requires Petrol.",
+        "description": "A stationary harvester that automatically gathers Salvage using Petrol as fuel..",
         "bmatCost": 0,
         "cmatCost": 150,
         "pcmatCost": 0,
@@ -194,7 +194,7 @@
     "HarvesterComponents": {
         "name": "Stationary Harvester (Components)",
         "buildingType": "Gathering",
-        "description": "A stationary harvester that automatically gathers Components. Requires Petrol.",
+        "description": "A stationary harvester that automatically gathers Components using Petrol as fuel.",
         "bmatCost": 0,
         "cmatCost": 175,
         "pcmatCost": 0,
@@ -214,7 +214,7 @@
     "HarvesterCoal": {
         "name": "Stationary Harvester (Coal)",
         "buildingType": "Gathering",
-        "description": "A stationary harvester that automatically gathers Coal. Requires Petrol.",
+        "description": "A stationary harvester that automatically gathers Coal using Petrol as fuel.",
         "bmatCost": 0,
         "cmatCost": 0,
         "pcmatCost": 25,
@@ -234,7 +234,7 @@
     "HarvesterSulfur": {
         "name": "Stationary Harvester (Sulfur)",
         "buildingType": "Gathering",
-        "description": "A stationary harvester that automatically gathers Sulfur using Heavy Oil as fuel",
+        "description": "A stationary harvester that automatically gathers Sulfur using Heavy Oil as fuel.",
         "bmatCost": 0,
         "cmatCost": 0,
         "pcmatCost": 0,
