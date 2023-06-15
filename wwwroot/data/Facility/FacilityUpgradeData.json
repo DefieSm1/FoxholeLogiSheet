@@ -194,6 +194,14 @@
             {
                 "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
                 "inputAmounts": [ 1, 2 ],
+                "outputNames": [ "AmmoRocketHE" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 4,
+                "productionTime": 25
+            },
+            {
+                "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
+                "inputAmounts": [ 1, 2 ],
                 "outputNames": [ "AmmoRocketFlame" ],
                 "outputAmounts": [ 1 ],
                 "powerConsumption": 4,
