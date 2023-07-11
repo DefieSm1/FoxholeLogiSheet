@@ -456,7 +456,7 @@
             "cmatCost": 0,
             "pcmatCost": 0,
             "steelCost": 10,
-            "assmatCost": [ 0, 10, 0, 15, 0 ],
+            "assmatCost": [ 10, 0, 0, 15, 0 ],
             "baseVehicle": "CruiserTankOutlaw",
             "productionTime": 600
         },
