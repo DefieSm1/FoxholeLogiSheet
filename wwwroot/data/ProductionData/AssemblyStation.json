@@ -1,0 +1,76 @@
+{
+  "MaterialPallet": {
+    "name": "Material Pallet",
+    "description": "A material pallet.",
+    "itemSpecifics":{
+      "general": [ "I miss small containers..." ] 
+    },
+    "bmatCost": 25,
+    "productionTime": 5
+  },
+  "TruckArmoured": {
+    "name": "Dunne Leatherback 2a",
+    "category": "Truck",
+    "description": "A heavy, reinforced Dunne transport. Fitted with a heavier frame, the Leatherback is capable of enduring more punishment at the cost of initial acceleration.",
+    "itemSpecifics":{
+      "general": [ "Can tow other vehicles", "I AM F%&#!G INVINCIBLE!" ] 
+    },
+    "cmatCost": 10,
+    "baseVehicle": "Truck",
+    "productionTime": 300
+  },
+  "TruckTracked": {
+    "name": "Dunne Landrunner 12c",
+    "category": "Truck",
+    "description": "This standard Truck is fitted with rugged off-road treads, allowing for more efficient movement on rough terrain and conditions at the expense of maximum speed.",
+    "itemSpecifics":{
+      "general": [ "Can tow other vehicles" ] 
+    },
+    "cmatCost": 10,
+    "baseVehicle": "Truck",
+    "productionTime": 300
+  },
+  "SmallGaugeEngine": {
+    "name": "BMS Mineseeker",
+    "category": "Small Train Locomotive",
+    "description": "The Mineseeker is the Bassett Motor Society's mechanized mule. This small 0-4-0 locomotive can haul tonnes of weight over short distances with little overhead. Ideal for a mining operation or short-range supply chains.",
+    "ammoUsed": "Coal",
+    "cmatCost": 125,
+    "assmatCost": [ 10, 20, 0, 0, 0 ],
+    "productionTime": 900
+  },
+  "SmallGaugeResource": {
+    "name": "BMS Railtruck",
+    "category": "Small Container Car",
+    "description": "A small gauge container car for transporting raw materials.",
+    "cmatCost": 35,
+    "assmatCost": [ 15, 5, 0, 0, 0 ],
+    "productionTime": 300
+  },
+  "SmallGaugeFlatbed": {
+    "name": "BMS Linerunner",
+    "category": "Small Flatbed Car",
+    "description": "A low profile flatbed car for transporting large resources and munitions over short distances on small gauge tracks.",
+    "cmatCost": 35,
+    "assmatCost": [ 15, 5, 0, 0, 0 ],
+    "productionTime": 300
+  },
+  "TruckAmbulanceFlame": {
+    "name": "Dunne Dousing Engine 3r",
+    "category": "Fire Engine",
+    "description": "A simple variant of the Dunne Responder 3e that's fitted with a high-powered hose designed to extinguish raging flames.",
+    "ammoUsed": "Water",
+    "cmatCost": 15,
+    "assmatCost": [ 0, 5, 0, 0, 0 ],
+    "baseVehicle": "TruckAmbulance",
+    "productionTime": 1800
+  },
+  "SmallGaugeFuel": {
+    "name": "BMS Tinderbox",
+    "category": "Small Liquid Container Car",
+    "description": "The Tinderbox is a simple car used for transporting liquids between facilities.",
+    "cmatCost": 35,
+    "assmatCost": [ 5, 15, 0, 0, 0 ],
+    "productionTime": 300
+  }
+}

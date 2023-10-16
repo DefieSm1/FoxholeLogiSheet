@@ -1,0 +1,32 @@
+﻿@inject IConfiguration AppConfig
+
+<div style="background-image: url(icons/ProductionIcons/@(MaterialTag).png)">
+    @if (MaterialTag == "Time")
+    {
+        @(GetTimestamp(QueuePrice))
+    }
+    else if (!Tag)
+    {
+        @QueuePrice
+    }
+    else 
+    {
+        @(PriceInCrates ? Math.Ceiling(QueuePrice / (PriceInCrates ? 20 : 1)) + " crates" : QueuePrice + " units")
+    }
+</div>
+
+@code {
+    [Parameter]
+    public string MaterialTag { get; set; } = "";
+
+    [Parameter]
+    public double QueuePrice { get; set; } = 0;
+
+    [Parameter]
+    public bool Tag { get; set; } = true;
+
+    [Parameter]
+    public bool PriceInCrates { get; set; } = false;
+
+    public string GetTimestamp(double seconds, bool FullStamp = false) => TimeSpan.FromSeconds(seconds).ToString(TimeSpan.FromSeconds(seconds).Days > 0 || FullStamp ? @"d\:hh\:mm\:ss" : @"h\:mm\:ss");
+}

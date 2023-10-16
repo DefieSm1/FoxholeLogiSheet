@@ -1,0 +1,54 @@
+{
+  "ShipBase": {
+    "name": "BMS - Longhook",
+    "category": "Base Ship",
+    "description": "The Basset Motor Society's premiere base ships, the BMS - Longhook is sturdy, reliable vessel that provides an excellent centre of operations for building and maintaining smaller boats for ferrying personnel and equipment.",
+    "ammoUsed": "12.7mm",
+    "itemSpecifics":{
+      "Gunner (Starboard Bow), Gunner (Port Bow)": [ "$Deals Heavy Kinetic damage" ]
+    },
+    "hullSegments": 8,
+    "shellPlating": 15,
+    "productionTime": 14400
+  },
+  "ShipStorage": {
+    "name": "BMS - Bluefin",
+    "category": "Storage Ship",
+    "description": "The Bluefin storage ship is a massive, all-purpose mobile naval yard cabable of storing crates of resources, packed vehicles and ammunition for long-distance travel and beach-to-beach equipment ferrying. The Bassett Motor Society is proud to deliver such a cutting-edge, versatile blue water asset to various countries Raka, Katoma, and the Alliant Union.",
+    "ammoUsed": "12.7mm",
+    "itemSpecifics":{
+      "Gunner (Starboard), Gunner (Port)": [ "$Deals Heavy Kinetic damage" ]
+    },
+    "hullSegments": 25,
+    "shellPlating": 15,
+    "productionTime":28800
+  },
+  "ShipSubmarine": {
+    "name": "Nakki",
+    "category": "Submarine",
+    "description": "This Nevish vessel excels at punching holes in the hulls of the Colonial fleet. Armed with Moray Torpedos and state-of-the-art sonar technology, the Nakki is a silent killer. Famously, three Nakkis crept behind a Colonial fleet at night and picked them apart one by one, leading to Prefect Evnader to call a retreat. Their \"Legion\" was not at all prepared to be assaulted from under the waves.",
+    "ammoUsed": "Moray Torpedo, 40mm",
+    "itemSpecifics":{
+      "Gunner (Starboard Beam)": [ "$Deals High Explosive damage", "Increaed chance to cause a leak." ],
+      "Turret (Midships)": [ "$Deals Explosive damage", "Can penetrate armoured vehicles" ]
+    },
+    "hullSegments": 12,
+    "shellPlating": 12,
+    "productionTime": 21600
+  },
+  "ShipBattleship": {
+    "name": "Callahan",
+    "category": "Battleship",
+    "description": "Callahan-class Battleships are massive, fully featured mobile bases. They pack enough firepower to devestate enemy naval vessels and their crew, or rain death on nearby shorelines while shrugging of punishment with its reinforced hull. Named for Caoiva's founder and first Archon, who famously held fast in conflict with rival clans who wanted his head. Several Callahans remain anchored at Whedon's Row Harbour.",
+    "ammoUsed": "150mm, 12.7mm, 120mm, 30mm",
+    "itemSpecifics":{
+      "Cannoneer (Bow), Cannoneer (Midships), Cannoneer (Stern), Cannoneer (Starboard Beam), Cannoneer (Port Beam)": [ "$Deals High Explosive damage", "Can ruin structures that have been severly damaged by artillery", "Reduced damage against Trenches", "Incresed damage against Field Structures" ],
+      "Gunner (Starboard Beam), Gunner (Port Beam)": [ "$Deals Kinetic Damage" ],
+      "Gunner (Port Beam), Gunner (Starboard Beam), Gunner (Starboard Quarter), Gunner (Port Quarter)": [ "$Deals Explosive damage", "Can penetrate armoured vehicles" ]
+    },
+    "hullSegments": 20,
+    "shellPlating": 20,
+    "trubineComponents": 4,
+    "productionTime": 36000
+  }
+}

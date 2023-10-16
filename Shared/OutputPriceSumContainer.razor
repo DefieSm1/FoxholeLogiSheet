@@ -1,0 +1,15 @@
+﻿<div class="container">
+    <div class="sums" style="grid-template-columns: @RepeatString(" 1fr", Columns)">
+        @ChildContent
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public int Columns { get; set; }
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    public string RepeatString(string str, int amount) => string.Concat(Enumerable.Repeat(str, amount));
+}

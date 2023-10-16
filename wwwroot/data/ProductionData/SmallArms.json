@@ -1,0 +1,266 @@
+{
+  "ARBooker": {
+    "name": "Booker Storm Rifle 838",
+    "category": "Assault Rifle",
+    "description": "The Booker is a high-impact three-round burst Storm Rifle for those who like to shoot first.",
+    "ammoUsed": "7.92mm",
+    "crateSize": 10,
+    "bmatCost": 165,
+    "productionTime": 80
+  },
+  "ARAalto": {
+    "name": "Aalto Storm Rifle 24",
+    "category": "Assault Rifle",
+    "description": "Widely considered to be the first storm rifle, the Aalto is a marvel in Caoivish engineering. With its two fire modes, it can be used as a rapid-fire assault weapon or a mid-range rifle.",
+    "ammoUsed": "7.92mm",
+    "crateSize": 10,
+    "bmatCost": 165,
+    "productionTime": 80
+  },
+  "AmmoRifle792": {
+    "name": "7.92mm",
+    "description": "Standard ammunition for Storm Rifles and Armored Cars.",
+    "itemSpecifics":{
+      "general": [ "$Deals Light Kinetic damage" ] 
+    },
+    "crateSize": 30,
+    "bmatCost": 120,
+    "productionTime": 60
+  },
+  "MGMalone": {
+    "name": "Malone MK.2",
+    "category": "Machine Gun",
+    "description": "This heavy machine gun is bulky enough to require a steady surface to maintain stability. The Malone series of machine guns are unmatched defenders on the battlefield.",
+    "ammoUsed": "12.7mm",
+    "itemSpecifics":{
+      "general": [ "Equipped with a low velocity barrel that deals 36% less damage per shot" ] 
+    },
+    "crateSize": 5,
+    "rmatCost": 25,
+    "productionTime": 100
+  },
+  "GrenadeHarpa": {
+    "name": "A3 Harpa Fragmentation Grenade",
+    "category": "Grenade",
+    "description": "This anti-personnel fragmentation grenade is designed with pull-pin mechanics and a time fuse for user safety. Serrations in the casing allow for a better grip and increased fragmentation effectiveness.",
+    "itemSpecifics":{
+      "general": [ "$Deals Light Kinetic damage" ] 
+    },
+    "crateSize": 20,
+    "bmatCost": 100,
+    "ematCost": 20,
+    "productionTime": 100
+  },
+  "PistolCascadier": {
+    "name": "Cascadier 873",
+    "category": "Pistol",
+    "description": "This unique sidearm fires in three-round bursts. The Cascadier may not have the stopping power of its cousins, but it more than makes up for it with its lightweight frame, concealability, and fire rate.",
+    "ammoUsed": "8mm",
+    "itemSpecifics":{
+      "general": [ "Equipped with a low velocity barrel that deals 11% less damage per shot" ] 
+    },
+    "crateSize": 40,
+    "bmatCost": 60,
+    "productionTime": 30
+  },
+  "AmmoPistol8": {
+    "name": "8mm",
+    "description": "Standard ammunition for pistols.",
+    "itemSpecifics":{
+      "general": [ "$Deals Light Kinetic damage", "Gotta say, interesting idea you've got there" ] 
+    },
+    "crateSize": 40,
+    "bmatCost": 40,
+    "productionTime": 20
+  },
+  "PistolRevolver": {
+    "name": "Cometa T2-9",
+    "category": "Revolver",
+    "description": "The Cometa T2-9 boasts remarkable stopping power for a sidearm. This Estrellan mainstay has lived through several generations due to its fine craftsmanship and design.",
+    "ammoUsed": ".44",
+    "crateSize": 30,
+    "bmatCost": 60,
+    "productionTime": 50
+  },
+  "RifleHangman": {
+    "name": "The Hangman 757",
+    "category": "Heavy Rifle",
+    "description": "The weapon of choice for pirates and smugglers, its legend is well-earned. With incredibly high stopping power and unique revolver mechanism, the Hangman often plays judge, jury, and executioner.",
+    "ammoUsed": ".44",
+    "itemSpecifics":{
+      "general": [ "Compatible ammo with attached The Ospreay (Grenade Launcher): Green Ash Grenade, A3 Harpa Fragmentation Grenade", "Allows Buckhorn CCQ-18 (Bayonet) attachement", "Equipped with a high velocity barrel that deals 29% extra damage per shot"  ] 
+    },
+    "crateSize": 20,
+    "bmatCost": 125,
+    "productionTime": 80
+  },
+  "AmmoPistol44": {
+    "name": ".44",
+    "description": "Standard ammunition for revolvers.",
+    "itemSpecifics":{
+      "general": [ "$Deals Light Kinetic damage" ] 
+    },
+    "crateSize": 40,
+    "bmatCost": 40,
+    "productionTime": 40
+  },
+  "RifleSampo": {
+    "name": "Sampo Auto-Rifle 77",
+    "category": "Rifle",
+    "description": "The precursor to the storm rifle, the Sampo Auto-Rifle, is a mastercraft of its day. With a single shot and automatic fire mode, this versatile rifle may not reach the fire rates of automatic weapons but more than makes up for it with utility.",
+    "ammoUsed": "7.62mm",
+    "itemSpecifics":{
+      "general": [ "Equipped with a low velocity barrel that deals 19% less damage per shot" ] 
+    },
+    "crateSize": 20,
+    "bmatCost": 125,
+    "productionTime": 70
+  },
+  "RifleBlakerow": {
+    "name": "Blakerow 871",
+    "category": "Rifle",
+    "description": "The Blakerow is a carbine with a high rate of fire compared to its bolt-action predecessor. This increased fire rate does come at the cost of innate stopping power; however, its versatility and lightweight frame more than makes up for any perceived shortcomings.",
+    "ammoUsed": "7.62mm",
+    "itemSpecifics":{
+      "general": [ "Compatible ammo with attached The Ospreay (Grenade Launcher): Green Ash Grenade, A3 Harpa Fragmentation Grenade", "Allows Buckhorn CCQ-18 (Bayonet) attachement", "Equipped with a low velocity barrel that deals 11% less damage per shot" ] 
+    },
+    "crateSize": 20,
+    "bmatCost": 140,
+    "productionTime": 80
+  },
+  "RifleCinder": {
+    "name": "Clancy-Cinder M3",
+    "category": "Long Rifle",
+    "description": "The Clancy Cinder is a classic, high-powered long rifle designed for use in mid-to-long range encounters. First deployed with the Hands during a high-risk operation in Acrithia.",
+    "ammoUsed": "7.62mm",
+    "itemSpecifics":{
+      "general": [ "Compatible ammo with attached The Ospreay (Grenade Launcher): Green Ash Grenade, A3 Harpa Fragmentation Grenade", "Allows Buckhorn CCQ-18 (Bayonet) attachement" ]
+    },
+    "crateSize": 15,
+    "bmatCost": 130,
+    "productionTime": 90
+  },
+  "RifleHawthorne": {
+    "name": "No. 2B Hawthorne",
+    "category": "Rifle",
+    "description": "Initially a field-modified Loughcaster, the Hawthorne sports a sawed-off barrel and a much lower profile than its ancestor. While sacrificing accuracy, its lightweight frame opens up the Hawthorne to a much higher degree of flexibility in battle and can be carried alongside a heavier primary firearm.",
+    "ammoUsed": "7.62mm",
+    "itemSpecifics":{
+      "general": [ "Allows Buckhorn CCQ-18 (Bayonet) attachement", "Equipped with a low velocity barrel that deals 11% less damage per shot" ] 
+    },
+    "crateSize": 15,
+    "bmatCost": 70,
+    "productionTime": 60
+  },
+  "RifleLough": {
+    "name": "No.2 Loughcaster",
+    "category": "Rifle",
+    "description": "Standard-issue Warden rifle. This bolt-action firearm is as robust as they come and has seen over a century of use on the battlefield.",
+    "ammoUsed": "7.62mm",
+    "itemSpecifics": {
+      "general": [ "Compatible ammo with attached The Ospreay (Grenade Launcher): Green Ash Grenade, A3 Harpa Fragmentation Grenade", "Allows Buckhorn CCQ-18 (Bayonet) attachement" ]
+    },
+    "crateSize": 20,
+    "bmatCost": 100,
+    "productionTime": 70
+  },
+  "RifleSniper": {
+    "name": "Clancy-Raca M4",
+    "category": "Sniper Rifle",
+    "description": "A heavy-duty, long-range marksman rifle. The Clancy-Raca has one hell of a kick but is fitted with a powerful scope, allowing infantry to survey the battlefield and provide support from a safe location.",
+    "ammoUsed": "7.62mm",
+    "itemSpecifics":{
+      "general": [ "Equipped with a high velocity barrel that deals 35% extra damage per shot" ] 
+    },
+    "crateSize": 3,
+    "rmatCost": 15,
+    "bmatCost": 200,
+    "productionTime": 125
+  },
+  "AmmoRifle762": {
+    "name": "7.62mm",
+    "description": "Standard ammunition for rifles.",
+    "itemSpecifics":{
+      "general": [ "$Deals Light Kinetic damage" ] 
+    },
+    "crateSize": 40,
+    "bmatCost": 80,
+    "productionTime": 50
+  },
+  "Shotgun": {
+    "name": "Brasa Shotgun",
+    "category": "Shotgun",
+    "description": "This close-range firearm is an Estrellan import originally designed for hunting wild game. The Brasa is primarily used in urban operations.",
+    "ammoUsed": "Buckshot",
+    "crateSize": 20,
+    "bmatCost": 80,
+    "productionTime": 80
+  },
+  "AmmoBuckshot": {
+    "name": "Buckshot",
+    "description": "Standard ammunition for Shotguns.",
+    "itemSpecifics":{
+      "general": [ "$Deals Light Kinetic damage" ] 
+    },
+    "crateSize": 40,
+    "bmatCost": 80,
+    "productionTime": 50
+  },
+  "SMGLiar": {
+    "name": "No.1 \"The Liar\" Submachinegun",
+    "category": "Submachine Gun",
+    "description": "This unique, heavy-duty submachine gun is not very useful on the run, but with careful aim and adequate cover, becomes a razorblade in the night.",
+    "ammoUsed": "9mm",
+    "crateSize": 20,
+    "bmatCost": 120,
+    "productionTime": 80
+  },
+  "SMGFiddler": {
+    "name": "Fiddler Submachine Gun Model 868",
+    "category": "Submachine Gun",
+    "description": "The Fiddler Submachine gun is a widely used urban combat weapon. Its high rate of fire and compact frame makes it ideal for close-quarters engagements.",
+    "ammoUsed": "9mm",
+    "crateSize": 20,
+    "bmatCost": 120,
+    "productionTime": 80
+  },
+  "AmmoSMG9": {
+    "name": "9mm",
+    "description": "Standard ammunition for submachine guns.",
+    "itemSpecifics":{
+      "general": [ "$Deals Light Kinetic damage" ] 
+    },
+    "crateSize": 40,
+    "bmatCost": 80,
+    "productionTime": 50
+  },
+  "GrenadeSmoke": {
+    "name": "PT-815 Smoke Grenade",
+    "category": "Smoke Grenade",
+    "description": "A standard smoke grenade designed for concealing allied movement or screening the enemy's vision.",
+    "crateSize": 10,
+    "bmatCost": 120,
+    "productionTime": 75
+  },
+  "GrenadeGas": {
+    "name": "Green Ash Grenade",
+    "category": "Gas Grenade",
+    "description": "Green ash is an asphyxiating toxin. Inhaling it without protection will result in a quick death. Be sure to wear a gas mask with fresh filters when handling Green Ash.",
+    "itemSpecifics":{
+      "general": [ "$Deals Poisonous Gas damage", "Causes damage over time" ] 
+    },
+    "crateSize": 10,
+    "bmatCost": 140,
+    "productionTime": 100
+  },
+  "AmmoMG127": {
+    "name": "12.7mm",
+    "description": "Standard ammunition for machine guns.",
+    "itemSpecifics":{
+      "general": [ "$Deals Heavy Kinetic damage" ] 
+    },
+    "crateSize": 20,
+    "bmatCost": 100,
+    "productionTime": 70
+  }
+}

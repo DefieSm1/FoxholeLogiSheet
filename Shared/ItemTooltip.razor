@@ -1,0 +1,130 @@
+﻿@using FoxholeLogiSheet.Data
+
+<div class="item-tooltip d-@(Visibility ? "block" : "none") @(Large ? "tooltip-large" : "")">
+	<div class="tooltip-header">
+		<p>@Item.Name</p>
+	</div>
+	<div class="item-info">
+		<p class="item-category">@Item.Category</p>
+		<p class="item-description">@Item.Description</p>
+		@if(!Simplified && !String.IsNullOrEmpty(Item.Name))
+		{
+			<p class="item-ammoused" hidden="@String.IsNullOrEmpty(Item.AmmoUsed)">@Item.AmmoUsed</p>
+
+			@if (Item.ItemSpecifics.Count != 0)
+			{
+				@foreach (KeyValuePair<string, List<string>> entry in Item.ItemSpecifics)
+				{
+					<ItemTooltipSpecifics PositionName=@entry.Key Specifics=@entry.Value />
+				}
+			}
+
+			<p class="item-cratesize" hidden="@(Item.CrateSize == 0)">Produces a crate of @(Item.CrateSize)x @(Item.Name)(s)</p>
+
+			@if(!String.IsNullOrEmpty(Item.BaseVehicle) && BaseVehicle != null)
+			{
+				<p class="item-damageinfo">Requires base vehicle: @BaseVehicle.Name (@BaseVehicle.Category)</p>
+			}
+
+			<p class="highlight" hidden="@(Item.ProductionTime == 0)">@GetTimestamp(Item.ProductionTime)</p>
+
+			@if (BaseVehicle != null)
+			{
+				<p class="highlight">@BaseVehicle.Name (@BaseVehicle.Category)</p>
+			}
+
+			<p class="item-cratesize" hidden="@(CurrentBuilding != "Factory" && CurrentBuilding != "MPF" && CurrentBuilding != "Assembly")">
+				<i>Hold SHIFT when clicking to @(CurrentBuilding == "MPF" ? "fill queue with the item" : "add 4 of the item to queue")</i>
+			</p>
+
+			<div class="item-costs">
+			@foreach (string materialKey in MaterialKeys)
+			{
+				<div hidden="@(GetCost(materialKey) == 0)">
+					<img src="icons/ProductionIcons/@(materialKey).png" />
+					<span>@(GetCost(materialKey) * (SelectedCategory == "Vehicles" || SelectedCategory == "Shippables" ? Item.CrateSize : 1)) - @(GetMaterialName(materialKey))</span>
+				</div>
+			}
+			</div>
+		}
+	</div>
+</div>
+
+@code {
+	[Parameter]
+	public ProductionItem Item { get; set; } = new();
+
+	[Parameter]
+	public bool Visibility { get; set; } = false;
+
+	[Parameter]
+	public bool Simplified { get; set; } = false;
+
+	[Parameter]
+	public bool Large { get; set; } = false;
+
+	[Parameter]
+	public ProductionItem? BaseVehicle { get; set; } = null;
+
+	[Parameter]
+	public string CurrentBuilding { get; set; } = "";
+
+	[Parameter]
+	public string SelectedCategory { get; set; } = "";
+
+	[Parameter]
+	public List<string> MaterialKeys { get; set; } = new();
+
+	public string GetTimestamp(double seconds) 
+	{
+		if(CurrentBuilding == "MPF") seconds *= 10;
+
+		return TimeSpan.FromSeconds(seconds).ToString(TimeSpan.FromSeconds(seconds).Days > 0 ? @"d\:hh\:mm\:ss" : @"h\:mm\:ss");
+	}
+
+	public int GetCost(string materialKey) => materialKey switch
+	{
+		"MaterialBasic" => Item.BmatCost,
+		"MaterialExplosive" => Item.EmatCost,
+		"MaterialRefined" => Item.RmatCost,
+		"MaterialHeavyExplosive" => Item.HematCost,
+		"MaterialConstruction" => Item.CmatCost,
+		"MaterialProcessedConstruction" => Item.PCmatCost,
+		"MaterialSteel" => Item.SteelCost,
+		"MaterialRareAlloys" => Item.RareCost,
+		"MaterialThermalShielding" => Item.ShieldingCost,
+		"MaterialUnstableSubstances" => Item.SubstanceCost,
+		"NavalHullSegments" => Item.HullSegments,
+		"NavalShellPlating" => Item.ShellPlating,
+		"NavalTurbineComponents" => Item.TurbineComponents,
+		"AssemblyMaterialsT1" => Item.AssmatCost[0],
+		"AssemblyMaterialsT2" => Item.AssmatCost[1],
+		"AssemblyMaterialsT3" => Item.AssmatCost[2],
+		"AssemblyMaterialsT4" => Item.AssmatCost[3],
+		"AssemblyMaterialsT5" => Item.AssmatCost[4],
+		_ => 0
+	};
+
+	public string GetMaterialName(string materialKey) => materialKey switch
+	{
+		"MaterialBasic" => "Basic Materials",
+		"MaterialExplosive" => "Explosive Materials",
+		"MaterialRefined" => "Refined Materials",
+		"MaterialHeavyExplosive" => "Heavy Explosive Materials",
+		"MaterialConstruction" => "Construction Materials",
+		"MaterialProcessedConstruction" => "Processed Construction Materials",
+		"MaterialSteel" => "Steel Construction Materials",
+		"MaterialRareAlloys" => "Rare Alloys",
+		"MaterialThermalShielding" => "Thermal Shielding",
+		"MaterialUnstableSubstances" => "Unstable Substances",
+		"NavalHullSegments" => "Naval Hull Segments",
+		"NavalShellPlating" => "Naval Shell Plating",
+		"NavalTurbineComponents" => "Naval Turbine Components",
+		"AssemblyMaterialsT1" => "Assembly Materials I",
+		"AssemblyMaterialsT2" => "Assembly Materials II",
+		"AssemblyMaterialsT3" => "Assembly Materials III",
+		"AssemblyMaterialsT4" => "Assembly Materials IV",
+		"AssemblyMaterialsT5" => "Assembly Materials V",
+		_ => ""
+	};
+}

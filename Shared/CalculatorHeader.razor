@@ -1,0 +1,14 @@
+﻿<div class="header">
+    <div class="header-text"><p>@Text</p></div>
+    <div class="buttons">
+        @ChildContent
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string Text { get; set; } = "TEXT";
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+}

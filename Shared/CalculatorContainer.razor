@@ -1,0 +1,12 @@
+﻿<div style="width: @(Width)px; height: @(Height);">@ChildContent</div>
+
+@code {
+    [Parameter]
+    public string Width { get; set; } = "725";
+
+    [Parameter]
+    public string Height { get; set; } = "fit-content";
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+}

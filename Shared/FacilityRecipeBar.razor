@@ -1,0 +1,59 @@
+﻿<div class="container">
+    @foreach (var inputItem in InputNames.Select((value, index) => new { value, index }))
+    {
+        <div class="item-box" style="background-image: url(icons/ProductionIcons/Facility/@(inputItem.value.Trim('$')).png); border: @GetItemHighlight(inputItem.value)"
+             @onmouseover="() => OnMouseOver!(inputItem.value)"
+             @onmouseout="() => OnMouseOut!(inputItem.value)">
+             @(InputAmounts[inputItem.index] * Multiplier)@(inputItem.value.Contains('$') ? "L" : "")
+        </div>    
+    }
+
+    <div class="recipe-info" style="@(OutputAmounts.Count() == 0 ? "background-image: none;" : "")">
+        <p><span class="power-icon"></span>@(PowerConsumption > 0 ? "" : "-")@PowerConsumption MW</p>
+        <p>@GetTimestamp(ProductionTime * Multiplier)</p>
+    </div>
+
+    @foreach (var outputItem in OutputNames.Select((value, index) => new { value, index }))
+    {
+        <div class="item-box" style="background-image: url(icons/ProductionIcons/Facility/@(outputItem.value.Trim('$')).png); border: @GetItemHighlight(outputItem.value)"
+             @onmouseover="() => OnMouseOver!(outputItem.value)"
+             @onmouseout="() => OnMouseOut!(outputItem.value)">
+            @(OutputAmounts[outputItem.index] * Multiplier)@(outputItem.value.Contains('$') ? "L" : "")
+        </div>
+    }
+
+    <input type="number" min="1" value="@Multiplier" @onchange="(e) => Multiplier = int.Parse(e.Value!.ToString()!)" />
+</div>
+
+@code {
+    [Parameter]
+    public Data.FacilityRecipe Recipe { get; set; } = new();
+
+    [Parameter]
+    public string? SelectedItem { get; set; } = null;
+
+    [Parameter, EditorRequired]
+    public Action<string>? OnMouseOver { get; set; }
+
+    [Parameter, EditorRequired]
+    public Action<string>? OnMouseOut { get; set; }
+
+    public List<string> InputNames { get => Recipe.InputNames; }
+
+    public List<int> InputAmounts { get => Recipe.InputAmounts; }
+
+    public List<string> OutputNames { get => Recipe.OutputNames; }
+
+    public List<int> OutputAmounts { get => Recipe.OutputAmounts; }
+
+    public float PowerConsumption { get => Recipe.PowerConsumption; }
+
+    public int ProductionTime { get => Recipe.ProductionTime; }
+
+    public int Multiplier { get; set; } = 1;
+
+    public string GetItemHighlight(string item) => SelectedItem == item ? "2px dashed #6098E6" : "inherit";
+
+    public string GetTimestamp(int seconds) => TimeSpan.FromSeconds(seconds).ToString(TimeSpan.FromSeconds(seconds).Days > 0 ? @"d\:hh\:mm\:ss" : @"h\:mm\:ss");
+
+}

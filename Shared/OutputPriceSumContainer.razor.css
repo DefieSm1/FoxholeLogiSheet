@@ -1,0 +1,14 @@
+﻿.container {
+    display: flex;
+    padding: 0 5px 5px;
+}
+
+.sums {
+    height: 36px;
+    width: 100%;
+    padding: 2px;
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 4px;
+    background-color: #414241;
+}

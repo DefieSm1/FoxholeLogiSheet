@@ -1,0 +1,19 @@
+﻿<div>
+    @foreach (string category in Categories)
+    {
+        <button @onclick="() => OnButtonClick(category)"
+                class="@(category == SelectedCategory ? "selected" : "")"
+                style="background-image: url(icons/ProductionIcons/@(category).png)" />
+    }
+</div>
+
+@code {
+    [Parameter]
+    public List<string> Categories { get; set; } = new();
+
+    [Parameter]
+    public string SelectedCategory { get; set; } = "";
+
+    [Parameter, EditorRequired]
+    public Action<string> OnButtonClick { get; set; }
+}

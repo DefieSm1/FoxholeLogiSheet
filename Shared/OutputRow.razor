@@ -1,0 +1,55 @@
+﻿<div class="output-row">
+    <div class="output-top">
+        <div class="output-top-image" style="background-image: url(icons@(CurrentIconSet())/@(CategoryKey).png)"></div>
+        <div class="output-top-items">
+            @foreach (var item in ItemKeys.Select((value, i) => (value, i)))
+            {
+                <button class="item-button" style="background-image: url(icons/ProductionIcons/@(IconSet == "assembly" ? "AssemblyStation" : CategoryKey)/@(item.value).png"
+                        @onmouseover="() => OnMouseOver!(item.value)"
+                        @onmouseout="() => OnMouseOut!(item.value)"
+                        @onclick="() => OnButtonClick!(item.value, item.i)" />
+            }
+        </div>
+        <div class="output-item-count">@ItemKeys.Count()</div>
+    </div>
+
+    <div class="output-bottom" style="grid-template-columns: @RepeatString(" 1fr", PriceColumns)">
+        @ChildContent
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string CategoryKey { get; set; } = "";
+
+    [Parameter]
+    public List<string> ItemKeys { get; set; } = new();
+
+    [Parameter]
+    public string IconSet { get; set; } = "items";
+
+    [Parameter]
+    public int PriceColumns { get; set; } = 5; 
+
+    [Parameter, EditorRequired]
+    public Action<string>? OnMouseOver { get; set; }
+
+    [Parameter, EditorRequired]
+    public Action<string>? OnMouseOut { get; set; }
+
+    [Parameter, EditorRequired]
+    public Action<string, int>? OnButtonClick { get; set; }
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    public string CurrentIconSet() => IconSet switch
+    {
+        "items" => "/ProductionIcons",
+        "facility" => "/Facility",
+        "assembly" => "/Assembly",
+        _ => "/ProductionIcons"
+    };
+
+    public string RepeatString(string str, int amount) => string.Concat(Enumerable.Repeat(str, amount));
+}

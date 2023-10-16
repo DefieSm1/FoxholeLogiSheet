@@ -1,0 +1,9 @@
+﻿<button @onclick=ParentMethod>@Text</button>
+
+@code {
+    [Parameter]
+    public string Text { get; set; } = "BUTTON";
+
+    [Parameter, EditorRequired]
+    public Action ParentMethod { get; set; }
+}

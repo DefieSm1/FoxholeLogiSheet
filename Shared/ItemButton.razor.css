@@ -1,0 +1,23 @@
+﻿.item-button {
+    aspect-ratio: 1;
+    outline: none !important;
+    border-radius: 0;
+    transition: none;
+    box-shadow: none;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #414241;
+}
+
+    .item-button:hover {
+        background-color: #7F7F7F;
+    }
+
+.button-disabled {
+    opacity: .65;
+}
+
+    .button-disabled:hover {
+        background-color: #414241 !important;
+    }

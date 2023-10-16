@@ -5,243 +5,123 @@
 @inject HttpClient Http
 @inject IJSRuntime JsRuntime
 @inject Blazored.LocalStorage.ILocalStorageService localStorage
+@inject IConfiguration AppConfig
 @using FoxholeLogiSheet.Data
 
-<h1 class="assembly-header">Assembly Station Sheet</h1>
-<div class="building-select">
-	<div class="building-select-header"><p>SELECT STRUCTURE</p></div>
-	<div class="building-select-buttons">
-		@foreach(KeyValuePair<string, FacilityBuilding> building in AssemblyBuildings) 
-		{
-			<button class="assembly-building building-base @(SelectedBuilding == building.Key ? "button-disabled" : "")" 
-					style="background-image: url(icons/Facility/AssemblyStation/@(building.Key).png)"
-					@onmouseover="() => { HoveredBuilding = building.Value; BuildingInfoboxVisibility = true; InfoboxSimple = false; }"
-					@onmouseout="() => { HoveredBuilding = building.Value; BuildingInfoboxVisibility = false; }"
-					@onclick="() => { SelectedBuilding = building.Key; SelectedUpgrade = (building.Value.BuildingUpgrades.Contains(SelectedUpgrade) ? SelectedUpgrade : string.Empty); }"></button>
-			foreach(string upgrade in building.Value.BuildingUpgrades)
+<PageHeader>Assembly Sheet</PageHeader>
+
+<ProductionContainer>
+	<CalculatorContainer Width="@((AssemblyBuildings.Count() * 100).ToString())">
+		<CalculatorHeader Text="SELECT STRUCTURE" />
+		<ItemGrid Columns=@(AssemblyBuildings.Count) Rows=1>
+			@foreach (KeyValuePair<string, ProductionItem> building in AssemblyBuildings)
 			{
-				<button class="assembly-building building-upgrade @(SelectedUpgrade == upgrade ? "button-disabled" : "")" 
-						style="background-image: url(icons/Facility/AssemblyStation/@(upgrade).png)"
-						@onmouseover="() => { HoveredBuilding = AssemblyBuildingUpgrades[upgrade]; BuildingInfoboxVisibility = true; InfoboxSimple = false; }"
-						@onmouseout="() => { HoveredBuilding = AssemblyBuildingUpgrades[upgrade]; BuildingInfoboxVisibility = false; }"
-						@onclick="() => { SelectedBuilding = building.Key; SelectedUpgrade = upgrade; }"></button>
+				<ItemButton ItemName=@building.Key Category="Assembly" Disabled=@(SelectedBuilding == building.Key) IconSet="buildings"
+							OnMouseOver="() => { HoveredItem = AssemblyBuildings[building.Key]; TooltipVisibility = true; TooltipSimplified = false; StateHasChanged(); }"
+							OnMouseOut="() => { HoveredItem = AssemblyBuildings[building.Key]; TooltipVisibility = false; StateHasChanged(); }"
+							OnButtonClick="(e) => { SelectedBuilding = building.Key; SelectedUpgrade = String.Empty; StateHasChanged(); }" />
 			}
-		}
-	</div>
-</div>
-<div class="assembly-container">
-	<div class="vehicle-select">
-		@if(!String.IsNullOrEmpty(SelectedBuilding)) 
-		{
-			<div class="vehicle-select-header"><p>@AssemblyBuildings[SelectedBuilding].Name!.ToUpper()</p></div>
-			<div class="vehicle-grid">
-				@foreach (KeyValuePair<string, ProductionItem> item in AssemblyVehicles.GetBuildingVehicles(SelectedBuilding))
-				{
-					<button class="btn vehicle-button"
-							style="background-image: url(icons/AssemblyStation/@(item.Key).png)"
-							@onmouseover="() => { HoveredItem = item.Value; ItemInfoboxVisibility = true; InfoboxSimple = false;; }"
-							@onmouseout="() => { HoveredItem = item.Value; ItemInfoboxVisibility = false; }"
-							@onclick="() => SelectedVehicles[SelectedBuilding].Add(item.Key)"></button>
-				}
-			</div>
-		}
-		@if(!String.IsNullOrEmpty(SelectedUpgrade)) 
-		{
-			<div class="vehicle-select-header"><p>@AssemblyBuildingUpgrades[SelectedUpgrade].Name!.ToUpper()</p></div>
-			<div class="vehicle-grid">
-				@foreach (KeyValuePair<string, ProductionItem> item in AssemblyVehicles.GetBuildingVehicles(SelectedUpgrade))
-				{
-					<button class="btn vehicle-button"
-							style="background-image: url(icons/AssemblyStation/@(item.Key).png)"
-							@onmouseover="() => { HoveredItem = item.Value; ItemInfoboxVisibility = true; InfoboxSimple = false; }" 
-							@onmouseout="() => { HoveredItem = item.Value; ItemInfoboxVisibility = false; }"
-							@onclick="() => SelectedVehicles[SelectedUpgrade].Add(item.Key)"></button>
-				}
-			</div>
-		}
-	</div>
+		</ItemGrid>
+	</CalculatorContainer>
+</ProductionContainer>
 
-	<div class="output-info">
-		<div class="d-inline-flex output-header">
-			<div class="output-header-text"><p>OUTPUT</p></div>
-			<div class="output-buttons">
-				<button class="btn text-light" @onclick="() => RawPrice = !RawPrice">Show price as @(RawPrice ? "facility" : "raw") materials</button>
-				<button class="btn text-light" @onclick="() => ResetSelectedVehicles()">Reset all</button>
-			</div>
-		</div>
-
-		<div class="output-categories">
-			@foreach (string building in AssemblyVehicles.AssemblyNames)
+<ProductionContainer>
+	<CalculatorContainer Width=565>
+		<CalculatorHeader Text=@CurrentBuilding.Name.ToUpper() />
+		<ItemGrid Columns=6 Rows=1>
+			@foreach(KeyValuePair<string, ProductionItem> item in CurrentBuildingItems)
 			{
-				if (SelectedVehicles.Count() == 0 || SelectedVehicles[building].Count() == 0)
-					continue;
-				<div class="output-row">
-					<div class="output-top">
-						<div class="output-top-image" style="background-image: url(icons/Facility/AssemblyStation/@(building).png)"></div>
-						@if (SelectedVehicles.Count > 0)
-						{
-							<div class="output-top-items">
-								@foreach (string vehicle in SelectedVehicles[building])
-								{
-									<button class="btn" style="background-image: url(icons/AssemblyStation/@(vehicle).png"
-											@onmouseover="() => { HoveredItem = AssemblyVehicles.GetBuildingVehicles(building)[vehicle]; ItemInfoboxVisibility = true; InfoboxSimple = true; }"
-											@onmousemove="() => ItemInfoboxVisibility = true" 
-											@onmouseout="() => { HoveredItem = AssemblyVehicles.GetBuildingVehicles(building)[vehicle]; ItemInfoboxVisibility = false; }"
-											@onclick="() => { SelectedVehicles[building].RemoveAt(SelectedVehicles[building].IndexOf(vehicle)); ItemInfoboxVisibility = false; }"></button>
-								}
-							</div>
-							<div class="output-item-count">@SelectedVehicles[building].Count()</div>
-						}
-					</div>
-
-					<div class="output-bottom">
-						@if (GetQueuePrice("Time", building) > 0)
-						{
-							<div style="background-image: @(GetTimestamp(GetQueuePrice("Time", building)).Length > 9 ? "" : "url(icons/Time.png)")">
-								@GetTimestamp(GetQueuePrice("Time", building))
-							</div>
-						}
-						@if (GetQueuePrice("MaterialBasic", building) > 0)
-						{
-							<div style="background-image: url(icons/ProductionIcons/MaterialBasic.png)">
-								@GetQueuePrice("MaterialBasic", building)
-							</div>
-						}
-						@if (GetQueuePrice("MaterialConstruction", building) > 0)
-						{
-							<div style="background-image: url(icons/Facility/MaterialConstruction.png)">
-								@GetQueuePrice("MaterialConstruction", building)
-							</div>
-						}
-						@if (GetQueuePrice("MaterialProcessedConstruction", building) > 0)
-						{
-							<div style="background-image: url(icons/Facility/MaterialProcessedConstruction.png)">
-								@GetQueuePrice("MaterialProcessedConstruction", building)
-							</div>
-						}
-						@if (GetQueuePrice("MaterialSteel", building) > 0)
-						{
-							<div style="background-image: url(icons/Facility/MaterialSteel.png)">
-								@GetQueuePrice("MaterialSteel", building)
-							</div>
-						}
-						@for (int i = 0; i < AssemblyVehicles.AssmatAmount; i++)
-						{
-							@if (GetQueuePrice("AssemblyMaterials", building, i) > 0)
-							{
-								<div style="background-image: url(icons/Facility/AssemblyMaterialsT@(i+1).png)">
-									@GetQueuePrice("AssemblyMaterials", building, i)
-								</div>
-							}
-						}
-					</div>
-				</div>
+				<ItemButton ItemName=@item.Key Category="AssemblyStation" IconSet="items" 
+							OnMouseOver="() => { HoveredItem = CurrentBuildingItems[item.Key]; TooltipVisibility = true; TooltipSimplified = false; StateHasChanged(); }"
+							OnMouseOut="() => { HoveredItem = CurrentBuildingItems[item.Key]; TooltipVisibility = false; StateHasChanged(); }"
+							OnButtonClick="(e) => AddItem(e, SelectedBuilding, item.Key)" />
+			}
+		</ItemGrid>
+		@if (!String.IsNullOrEmpty(SelectedUpgrade))
+		{
+			<CalculatorHeader Text=@CurrentUpgrade.Name.ToUpper() />
+			<ItemGrid Columns=6 Rows=1>
+			@foreach (KeyValuePair<string, ProductionItem> item in CurrentUpgradeItems)
+			{
+				<ItemButton ItemName=@item.Key Category="AssemblyStation" IconSet="items"
+							OnMouseOver="() => { HoveredItem = CurrentUpgradeItems[item.Key]; TooltipVisibility = true; TooltipSimplified = false; StateHasChanged(); }"
+							OnMouseOut="() => { HoveredItem = CurrentUpgradeItems[item.Key]; TooltipVisibility = false; StateHasChanged(); }"
+							OnButtonClick="(e) => AddItem(e, SelectedUpgrade, item.Key)" />
+			}
+			</ItemGrid>
+		}
+	</CalculatorContainer>
+	<CalculatorContainer Width="200">
+		<CalculatorHeader Text="UPGRADES" />
+		<ItemGrid Columns="2" Rows="1" >
+			@foreach(string upgrade in CurrentBuilding.BuildingUpgrades)
+			{
+				<ItemButton ItemName=@upgrade Category="Assembly" Disabled=@(SelectedUpgrade == upgrade) IconSet="buildings"
+							OnMouseOver="() => { HoveredItem = AssemblyBuildingUpgrades[upgrade]; TooltipVisibility = true; TooltipSimplified = false; StateHasChanged(); }"
+							OnMouseOut="() => { HoveredItem = AssemblyBuildingUpgrades[upgrade]; TooltipVisibility = false; StateHasChanged(); }"
+							OnButtonClick="(e) => { SelectedUpgrade = upgrade; StateHasChanged(); }" />
+			}
+			@if (CurrentBuilding.BuildingUpgrades.Count == 0)
+			{
+				<div class="no-upgrades"><i>No upgrades!</i></div>
+			}
+		</ItemGrid>
+	</CalculatorContainer>
+	<CalculatorContainer Height="540px">
+		<CalculatorHeader Text="OUTPUT" >
+			<HeaderButton ParentMethod=@ResetSelectedItems Text="Reset all" />
+		</CalculatorHeader>
+		<div class="output-sums">
+			@foreach (List<string> outputRow in MaterialOutputRows)
+			{
+				<OutputPriceSumContainer Columns=5>
+				@foreach (string materialKey in outputRow)
+				{
+					@if (GetQueuePrice(materialKey) == 0) continue;
+					<PriceBox MaterialTag=@materialKey Tag=false QueuePrice=@GetQueuePrice(materialKey) />
+				}
+				</OutputPriceSumContainer>
 			}
 		</div>
+		<OutputContainer>
+			@foreach (string category in AssemblyBuildingNames)
+			{
+				if (SelectedItems[category].Count() == 0) continue;
 
-		<div class="output-sum-background">
-			<div class="output-sum">
-				@if(!RawPrice)
-				{
-					<div class="sum-top">
-						@if (GetQueuePrice("MaterialBasic") > 0)
-						{
-							<div style="background-image: url(icons/ProductionIcons/MaterialBasic.png)">
-								@GetQueuePrice("MaterialBasic")<span class="sum-pricename">&nbsp;BMs</span>
-							</div>
-						}
-						@if (GetQueuePrice("MaterialConstruction") > 0)
-						{
-							<div style="background-image: url(icons/Facility/MaterialConstruction.png)">
-								@GetQueuePrice("MaterialConstruction")<span class="sum-pricename">&nbsp;CMs</span>
-							</div>
-						}
-						@if (GetQueuePrice("MaterialProcessedConstruction") > 0)
-						{
-							<div style="background-image: url(icons/Facility/MaterialProcessedConstruction.png)">
-								@GetQueuePrice("MaterialProcessedConstruction")<span class="sum-pricename">&nbsp;PCMs</span>
-							</div>
-						}
-						@if (GetQueuePrice("MaterialSteel") > 0)
-						{
-							<div style="background-image: url(icons/Facility/MaterialSteel.png)">
-								@GetQueuePrice("MaterialSteel")<span class="sum-pricename">&nbsp;Steel</span>
-							</div>
-						}
-					</div>
-					<div class="sum-bottom">
-						@for (int i = 0; i < AssemblyVehicles.AssmatAmount; i++)
-						{
-							@if (GetQueuePrice("AssemblyMaterials", "all", i) > 0)
-							{
-								<div style="background-image: url(icons/Facility/AssemblyMaterialsT@(i+1).png)">
-									@GetQueuePrice("AssemblyMaterials", "all", i)<span class="sum-pricename">&nbsp;A@(i + 1)s</span>
-								</div>
-							}
-						}
-					</div>
-				}
-				else
-				{
-					<div class="sum-top sum-top-raw">
-						@if (GetRawSumPrice("Salvage") > 0)
-						{
-							<div style="background-image: url(icons/Facility/MaterialRawSalvage.png)">
-								@GetRawSumPrice("Salvage")<span class="sum-pricename">&nbsp;Salvage</span>
-							</div>
-						}
-						@if (GetRawSumPrice("Components") > 0)
-						{
-							<div style="background-image: url(icons/Facility/MaterialRawComponents.png)">
-								@GetRawSumPrice("Components")<span class="sum-pricename">&nbsp;Comps</span>
-							</div>
-						}
-						@if (GetRawSumPrice("Coal") > 0)
-						{
-							<div style="background-image: url(icons/Facility/MaterialRawCoal.png)">
-								@GetRawSumPrice("Coal")<span class="sum-pricename">&nbsp;Coal</span>
-							</div>
-						}
-					</div>
-					<div class="sum-bottom sum-bottom-raw">
-						@if (GetRawSumPrice("Sulfur") > 0)
-						{
-							<div style="background-image: url(icons/Facility/MaterialRawSulfur.png)">
-								@GetRawSumPrice("Sulfur")<span class="sum-pricename">&nbsp;Sulfur</span>
-							</div>
-						}
-						@if (GetRawSumPrice("Oil") > 0)
-						{
-							<div style="background-image: url(icons/Facility/MaterialOilCrude.png)">
-								@GetRawSumPrice("Oil")<span class="sum-pricename">&nbsp;L Oil</span>
-							</div>
-						}
-						@if (GetRawSumPrice("Water") > 0)
-						{
-							<div style="background-image: url(icons/Facility/MaterialWater.png)">
-								@GetRawSumPrice("Water")<span class="sum-pricename">&nbsp;L Water</span>
-							</div>
-						}
-					</div>
-				}
-			</div>
-		</div>
-	</div>
-</div>
+				<OutputRow ItemKeys=SelectedItems[category] IconSet="assembly" PriceColumns=6 CategoryKey=@category
+						   OnMouseOver="(itemKey) => { HoveredItem = AssemblyCategories[category][itemKey]; TooltipVisibility = true; TooltipSimplified = true; StateHasChanged(); }"
+						   OnMouseOut="(itemKey) => { HoveredItem = AssemblyCategories[category][itemKey]; TooltipVisibility = false; StateHasChanged(); }"
+						   OnButtonClick="(itemKey, itemNumber) => { SelectedItems[category].RemoveAt(itemNumber); TooltipVisibility = false; StateHasChanged(); }">
+					@foreach (string key in MaterialKeys)
+					{
+						@if (GetQueuePrice(key, category) == 0) continue;
+						<PriceBox MaterialTag=@key Tag=false QueuePrice=@GetQueuePrice(key, category) />
+					}
+				</OutputRow>
+			}
+		</OutputContainer>
+	</CalculatorContainer>
+</ProductionContainer>
 
-<FacilityInfobox Building=@HoveredBuilding Visibility=@BuildingInfoboxVisibility />
-<ItemInfobox Item=@HoveredItem BaseVehicle=@(String.IsNullOrEmpty(HoveredItem.BaseVehicle) ? null : GarageVehicles[HoveredItem.BaseVehicle]) SelectedCategory="Assembly" Visibility=@ItemInfoboxVisibility Simplified=@InfoboxSimple />
+<ItemTooltip Item=@HoveredItem BaseVehicle=@(String.IsNullOrEmpty(HoveredItem.BaseVehicle) ? null : BaseVehicles[HoveredItem.BaseVehicle]) 
+			 CurrentBuilding="Assembly" SelectedCategory=@(HoveredItem.IsBuilding ? "Building" : "Assembly") 
+			 Visibility=@TooltipVisibility Simplified=@TooltipSimplified Large=@(SelectedBuilding == "DryDock")
+			 MaterialKeys=@MaterialKeys />
 
 @code {
-	public Dictionary<string, FacilityBuilding> AssemblyBuildings = new();
+	public AssemblyConfig Config { get; set; } = new();
 
-	public Dictionary<string, FacilityBuilding> AssemblyBuildingUpgrades = new();
+	public Dictionary<string, ProductionItem> AssemblyBuildings = new();
 
-	public AssemblyVehicleBuildings AssemblyVehicles = new();
+	public Dictionary<string, ProductionItem> AssemblyBuildingUpgrades = new();
 
-	public Dictionary<string, ProductionItem> GarageVehicles = new();
+	public Dictionary<string, Dictionary<string, ProductionItem>> AssemblyCategories { get; set; } = new();
 
-	public FacilityBuilding HoveredBuilding { get; set; } = new();
+	public List<string> MaterialKeys { get => Config.MaterialKeys; }
+
+	public List<List<string>> MaterialOutputRows { get => Config.MaterialOutputRows; }
+
+	Dictionary<string, List<string>> SelectedItems = new();
 
 	public string SelectedBuilding { get; set; } = "";
 
@@ -249,132 +129,116 @@
 
 	public ProductionItem HoveredItem { get; set; } = new();
 
-	public Dictionary<string, List<string>> SelectedVehicles { get; set; } = new();
+	public bool TooltipVisibility { get; set; } = false;
 
-	public bool RawPrice { get; set; } = false;
+	public bool TooltipSimplified { get; set; } = false;
 
-	public Dictionary<string, AssemblyRawCosts> MaterialRawCosts = new();
+	public ProductionItem CurrentBuilding { get => AssemblyBuildings.Keys.Contains(SelectedBuilding) ? AssemblyBuildings[SelectedBuilding] : new(); }
 
-	public List<string> MaterialNames = new();
+	public ProductionItem CurrentUpgrade { get => AssemblyBuildingUpgrades.Keys.Contains(SelectedUpgrade) ? AssemblyBuildingUpgrades[SelectedUpgrade] : new(); }
 
-	public List<string> RawMaterialNames = new();
+	public List<string> AssemblyBuildingNames { get => AssemblyCategories.Keys.Where((string e) => e != "Vehicles").ToList<string>(); }
 
-	public bool BuildingInfoboxVisibility { get; set; }
+	public Dictionary<string, ProductionItem> CurrentBuildingItems { get => AssemblyCategories.Keys.Contains(SelectedBuilding) ? AssemblyCategories[SelectedBuilding] : new(); }
 
-	public bool ItemInfoboxVisibility { get; set; }
+	public Dictionary<string, ProductionItem> CurrentUpgradeItems { get => AssemblyCategories.Keys.Contains(SelectedUpgrade) ? AssemblyCategories[SelectedUpgrade] : new(); }
 
-	public bool InfoboxSimple { get; set; }
+	public Dictionary<string, ProductionItem> BaseVehicles { get => AssemblyCategories.Keys.Contains("Vehicles") ? AssemblyCategories["Vehicles"] : new(); }
 
 	protected override async Task OnInitializedAsync()
 	{
 		await localStorage.SetItemAsync("lastPage", "Assembly");
 
-		string assemblyDataDirectory = "data/AssemblyStation";
+		Config = AppConfig.GetSection("assembly").Get<AssemblyConfig>() ?? throw new InvalidOperationException("Could not find requested configuration");
 
-		AssemblyBuildings = await Http.GetFromJsonAsync<Dictionary<string, FacilityBuilding>>($"{assemblyDataDirectory}/AssemblyBuildingData.json") ?? throw new FileNotFoundException();
+		AssemblyBuildings = await Http.GetFromJsonAsync<Dictionary<string, ProductionItem>>("data/Assembly/AssemblyBuildingData.json") ?? throw new FileNotFoundException();
 
-		AssemblyBuildingUpgrades = await Http.GetFromJsonAsync<Dictionary<string, FacilityBuilding>>($"{assemblyDataDirectory}/AssemblyUpgradeData.json") ?? throw new FileNotFoundException();
+		AssemblyBuildingUpgrades = await Http.GetFromJsonAsync<Dictionary<string, ProductionItem>>("data/Assembly/AssemblyUpgradeData.json") ?? throw new FileNotFoundException();
 
-		AssemblyVehicles = await Http.GetFromJsonAsync<AssemblyVehicleBuildings>($"{assemblyDataDirectory}/AssemblyVehicleData.json") ?? throw new FileNotFoundException();
+		List<string> categoriesToLoad = Config.LoadedCategories;
 
-		ProductionItemCategories Production = await Http.GetFromJsonAsync<ProductionItemCategories>("data/ProductionData.json") ?? throw new FileNotFoundException();
-
-		GarageVehicles = Production.GetCategoryData("Vehicles");
-
-		MaterialRawCosts = await Http.GetFromJsonAsync<Dictionary<string, AssemblyRawCosts>>($"{assemblyDataDirectory}/AssemblyRawCostData.json") ?? throw new FileNotFoundException();
-
-		MaterialNames = MaterialRawCosts.Keys.ToList();
-
-		RawMaterialNames = new() { "Salvage", "Components", "Sulfur", "Coal", "Oil", "Water" };
-
-		// Default parameters
-		SelectedBuilding = "AssemblyStation";
-
-		SelectedUpgrade = "";
-
-		ResetSelectedVehicles();
-	}
-
-	public void ResetSelectedVehicles()
-	{
-		SelectedVehicles.Clear();
-		foreach (string building in AssemblyVehicles.AssemblyNames) 
+		Dictionary<string, ProductionItem> category;
+		foreach (string categoryName in categoriesToLoad)
 		{
-			SelectedVehicles.Add(building, new List<string>());
+			category = await Http.GetFromJsonAsync<Dictionary<string, ProductionItem>>($"data/ProductionData/{categoryName}.json") ?? throw new FileNotFoundException();
+			AssemblyCategories.Add(categoryName, category);
 		}
+
+		SelectedBuilding = Config.DefaultBuilding;
+		SelectedUpgrade = Config.DefaultUpgrade;
+
+		ResetSelectedItems();
 	}
 
-	public string GetTimestamp(double seconds) => TimeSpan.FromSeconds(seconds).ToString(TimeSpan.FromSeconds(seconds).Days > 0 ? @"d\:hh\:mm\:ss" : @"h\:mm\:ss");
+	public void ResetSelectedItems()
+	{
+		SelectedItems.Clear();
+		foreach (string category in Config.LoadedCategories)
+			SelectedItems.Add(category, new());
+	}
 
-	public double GetQueuePrice(string materialKey, string vehicleBuilding = "all", int AssmatIndex = 0)
+	public void AddItem(MouseEventArgs e, string category, string item)
+	{
+		if (!e.ShiftKey)
+		{
+			SelectedItems[category].Add(item);
+			StateHasChanged();
+			return;
+		}
+
+		SelectedItems[category].AddRange(Enumerable.Repeat(item, 4));
+		StateHasChanged();
+		return;
+	}
+
+	public double GetQueuePrice(string materialKey, string vehicleBuilding = "all")
 	{
 		double queuePrice = 0;
 
-		if (SelectedVehicles.Count() <= 0)
+		if (SelectedItems.Count() <= 0)
 			return 0;
 
 		ProductionItem vehicleInfo = new();
 
 		if (vehicleBuilding == "all")
 		{
-			foreach (string category in AssemblyVehicles.AssemblyNames)
+			foreach (string category in AssemblyBuildingNames)
 			{
-				queuePrice += GetQueuePrice(materialKey, category, AssmatIndex);
+				queuePrice += GetQueuePrice(materialKey, category);
 			}
 
 			return queuePrice;
 		}
-	
-		foreach (string item in SelectedVehicles[vehicleBuilding])
-		{
-			vehicleInfo = AssemblyVehicles.GetBuildingVehicles(vehicleBuilding)[item];
 
-			queuePrice += materialKey switch {
+		foreach (string item in SelectedItems[vehicleBuilding])
+		{
+			vehicleInfo = AssemblyCategories[vehicleBuilding][item];
+
+			queuePrice += materialKey switch
+			{
+				"Time" => vehicleInfo.ProductionTime,
 				"MaterialBasic" => vehicleInfo.BmatCost,
+				"MaterialExplosive" => vehicleInfo.EmatCost,
+				"MaterialRefined" => vehicleInfo.RmatCost,
+				"MaterialHeavyExplosive" => vehicleInfo.HematCost,
 				"MaterialConstruction" => vehicleInfo.CmatCost,
 				"MaterialProcessedConstruction" => vehicleInfo.PCmatCost,
 				"MaterialSteel" => vehicleInfo.SteelCost,
-				"AssemblyMaterials" => vehicleInfo.AssmatCost[AssmatIndex],
-				"Time" => vehicleInfo.ProductionTime,
+				"MaterialRareAlloys" => vehicleInfo.RareCost,
+				"MaterialThermalShielding" => vehicleInfo.ShieldingCost,
+				"MaterialUnstableSubstances" => vehicleInfo.SubstanceCost,
+				"NavalHullSegments" => vehicleInfo.HullSegments,
+				"NavalShellPlating" => vehicleInfo.ShellPlating,
+				"NavalTurbineComponents" => vehicleInfo.TurbineComponents,
+				"AssemblyMaterialsT1" => vehicleInfo.AssmatCost[0],
+				"AssemblyMaterialsT2" => vehicleInfo.AssmatCost[1],
+				"AssemblyMaterialsT3" => vehicleInfo.AssmatCost[2],
+				"AssemblyMaterialsT4" => vehicleInfo.AssmatCost[3],
+				"AssemblyMaterialsT5" => vehicleInfo.AssmatCost[4],
 				_ => 0
 			};
 		}
 
 		return queuePrice;
-	}
-
-	public double GetRawMatPrice(string materialKey, string rawMaterialKey, double amount)
-	{
-		AssemblyRawCosts materialInfo = new();
-
-		materialInfo = MaterialRawCosts[materialKey];
-
-		double itemPrice = rawMaterialKey switch
-		{
-			"Salvage" => materialInfo.SalvageCost,
-			"Components" => materialInfo.ComponentCost,
-			"Sulfur" => materialInfo.SulfurCost,
-			"Coal" => materialInfo.CoalCost,
-			"Oil" => materialInfo.OilCost,
-			"Water" => materialInfo.WaterCost,
-			_ => 0
-		};
-
-		return itemPrice * amount;
-	}
-
-	public double GetRawSumPrice(string materialKey)
-	{
-		double rawSum = 0;
-
-		foreach(string material in MaterialNames)
-		{
-			if(material.StartsWith("AssemblyMaterialsT"))
-				rawSum += GetRawMatPrice(material, materialKey, GetQueuePrice("AssemblyMaterials", "all", Int32.Parse(material.Substring(material.Length - 1)) - 1));
-			else 
-				rawSum += GetRawMatPrice(material, materialKey, GetQueuePrice(material));
-		}
-
-		return rawSum;
 	}
 }

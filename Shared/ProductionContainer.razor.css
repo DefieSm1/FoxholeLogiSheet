@@ -1,0 +1,8 @@
+﻿div {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 2vw;
+}

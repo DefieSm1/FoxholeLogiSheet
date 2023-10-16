@@ -1,0 +1,22 @@
+﻿.specifics {
+    margin-bottom: 6px;
+}
+
+p {
+    margin: 4px 0;
+    color: #E5BA82;
+}
+
+.with-background {
+    padding: 2px 4px;
+    background-color: #414241;
+}
+
+hr {
+    margin: 6px 0 4px;
+    padding: 1.5px;
+}
+
+.reddish-color {
+    color: #F2804B;
+}

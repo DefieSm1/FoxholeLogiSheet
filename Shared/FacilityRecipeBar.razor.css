@@ -1,0 +1,74 @@
+﻿.container {
+    background-color: #212121;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    padding: 0 8px;
+}
+
+.item-box {
+    height: 85%;
+    padding: 0 6px;
+    aspect-ratio: 1;
+    outline: none !important;
+    border-radius: 0;
+    border-width: 0;
+    transition: none;
+    box-shadow: none;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #414241;
+    cursor: default;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: whitesmoke;
+    font-size: 18px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+    .item-box:hover {
+        background-color: #7F7F7F;
+    }
+
+.recipe-info {
+    height: 90%;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url(icons/ProductionIcons/ProductionArrow.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+    .recipe-info p {
+        color: #E5BA82; 
+        margin: 0;
+        text-align: center;
+    }
+
+.power-icon {
+    height: 16px;
+    aspect-ratio: 1;
+    display: inline-block;
+    background-image: url(icons/ProductionIcons/ProductionPower.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+input {
+    margin-left: auto;
+    color: whitesmoke;
+    width: 100px;
+    text-align: right;
+    font-size: 40px;
+    background: none;
+    border: 1px dashed whitesmoke;
+}

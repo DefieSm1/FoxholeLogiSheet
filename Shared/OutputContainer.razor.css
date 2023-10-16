@@ -1,0 +1,8 @@
+﻿div {
+    flex-grow: 1;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
+    padding: 5px;
+    overflow-y: auto;
+}

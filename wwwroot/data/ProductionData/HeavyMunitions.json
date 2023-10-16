@@ -1,0 +1,57 @@
+{
+  "AmmoShell150": {
+    "name": "150mm",
+    "description": "Payload for heavy artillery weapons.",
+    "itemSpecifics":{
+      "general": [ "$Deals High Explosive damage", "Can ruin structures that have been severly damaged by artillery", "Reduced damaged against Trenches", "Increased damage against Field Structures" ] 
+    },
+    "crateSize": 5,
+    "bmatCost": 120,
+    "hematCost": 10,
+    "productionTime": 65
+  },
+  "AmmoShell120": {
+    "name": "120mm",
+    "description": "Payload for light artillery weapons.",
+    "itemSpecifics":{
+      "general": [ "$Deals High Explosive damage", "Can ruin structures that have been severly damaged by artillery", "Reduced damaged against Trenches", "Increased damage against Field Structures" ] 
+    },
+    "crateSize": 5,
+    "bmatCost": 60,
+    "ematCost": 15,
+    "productionTime": 55
+  },
+  "AmmoShell250": {
+    "name": "250mm",
+    "description": "A shell that is launched over short distances by a spigot mortar.",
+    "itemSpecifics":{
+      "general": [ "$Deals Demolition damage", "Can ruin structures that have been severly damaged by artillery" ] 
+    },
+    "crateSize": 5,
+    "bmatCost": 120,
+    "hematCost": 25,
+    "productionTime": 150
+  },
+  "AmmoShell68": {
+    "name": "68mm",
+    "description": "A standard anti-tank shell.",
+    "itemSpecifics":{
+      "general": [ "$Deals Armour Piercing damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ] 
+    },
+    "crateSize": 20,
+    "bmatCost": 120,
+    "ematCost": 120,
+    "productionTime": 200
+  },
+  "AmmoShell40": {
+    "name": "40mm",
+    "description": "Standard payload for light tanks.",
+    "itemSpecifics":{
+      "general": [ "$Deals Explosive damage", "Can penetrate armoured vehicles" ] 
+    },
+    "crateSize": 20,
+    "bmatCost": 160,
+    "ematCost": 120,
+    "productionTime": 200
+  }
+}

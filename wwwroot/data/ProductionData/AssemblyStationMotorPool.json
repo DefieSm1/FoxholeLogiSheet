@@ -1,0 +1,85 @@
+{
+  "ACBonesaw": {
+    "name": "O'Brien V. 113 Gravekeeper",
+    "category": "Armoured Car",
+    "description": "A slight variation of the V.110, the Gravekeeper comes fitted with an embedded Bonesaw launcher, transforming the humble armoured car into an effective indirect anti-armour vehicle.",
+    "ammoUsed": "ARC/RPG",
+    "pcmatCost": 10,
+    "assmatCost": [ 10, 0, 0, 0, 0 ],
+    "baseVehicle": "ACMG",
+    "productionTime": 300
+  },
+  "ACTracked": {
+    "name": "O'Brien V. 121 Highlander",
+    "category": "Armoured Car",
+    "description": "Fitted with all-terrain treads, the Highlander brings significant all-terrain mobility and performs especially well in snowy and mountainous enviroments.",
+    "ammoUsed": "7.92mm",
+    "itemSpecifics":{
+      "Turret (Center)": [ "$Deals Light Kinetic damage" ] 
+    },
+    "cmatCost": 5,
+    "assmatCost": [ 5, 0, 0, 0, 0 ],
+    "baseVehicle": "ACMG",
+    "productionTime": 300
+  },
+  "ACFlame": {
+    "name": "O'Brien V. 130 Wild Jack",
+    "category": "Armoured Car",
+    "description": "While the Noble Firebrand Mk. XVII is a deadly flamethrower tank, a more efficient means of employing flame weapons was needed. Enter the Wild Jack. Named for the fiery idols mady by children for Dead Harvest, the Wild Jack is a variation of the Highlander.",
+    "ammoUsed": "Flame Ammo",
+    "itemSpecifics":{
+      "Turret (Center)": [ "$Deals Incendiary damage" ] 
+    },
+    "pcmatCost": 10,
+    "assmatCost": [ 10, 0, 0, 0, 0 ],
+    "baseVehicle": "ACMG",
+    "productionTime": 300
+  },
+  "ACHeavy": {
+    "name": "O'Brien V. 101 Freeman",
+    "category": "Armoured Car",
+    "description": "This early O'Brien variant, the V.101 Freeman is fitted with a 360 degree ballistics cannon turret at the expense of top speed.",
+    "ammoUsed": "40mm",
+    "itemSpecifics":{
+      "Turret (Center)": [ "$Deals Explosive damage", "Can penetrate armoured vehicles" ] 
+    },
+    "cmatCost": 15,
+    "assmatCost": [ 15, 0, 0, 0, 0 ],
+    "baseVehicle": "ACGrenade",
+    "productionTime": 300
+  },
+  "LightUtilitySpitfire": {
+    "name": "Drummond Spitfire 100d",
+    "category": "Light Utility Vehicle",
+    "description": "This LMG-mounted Light Utility Vehicle provides a heavy-duty weapons platform with superior speed. Perfectly suited for supporting flanking infantry or an armoured assault.",
+    "ammoUsed": "7.92mm",
+    "itemSpecifics":{
+      "Gunner (Rear)": [ "$Deals Light Kinetic damage" ] 
+    },
+    "cmatCost": 3,
+    "assmatCost": [ 0, 10, 0, 0, 0 ],
+    "baseVehicle": "LightUtilityVehicle",
+    "productionTime": 150
+  },
+  "LightUtilityDuckJeep": {
+    "name": "Drummond Loscann 55c",
+    "category": "Light Utility Vehicle",
+    "description": "This amphibious Light Utility Vehicle has been heavily modified to cross rivers and lakes with ease. Venturing out into the open sea is ill-advised, however.",
+    "cmatCost": 3,
+    "assmatCost": [ 0, 5, 0, 0, 0 ],
+    "baseVehicle": "LightUtilityVehicle",
+    "productionTime": 150
+  },
+  "FieldATRifle": {
+    "name": "Duncan's Coin 20mm",
+    "category": "Field AT Rifle",
+    "description": "This field gun is a capable, if somewhat flimsy, anti-tank weapon derived from cheap materials, crude processing, and utilizes dated technology. The affixed 20mm cannon may feel ancient by modern standards, but rest assured, it has no problems piercing modern armour.",
+    "ammoUsed": "20mm",
+    "itemSpecifics":{
+      "Gunner (Right)": [ "Equipped with a low velocity barrel that deals 25% less damage per shot", "$Deals Anti-Tank Kinetic damage", "Can penetrate armoured vehicles" ] 
+    },
+    "cmatCost": 30,
+    "assmatCost": [ 0, 20, 0, 0, 0 ],
+    "productionTime": 600
+  }
+}

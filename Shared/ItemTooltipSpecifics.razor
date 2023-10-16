@@ -1,0 +1,21 @@
+﻿<div class="specifics @(PositionName == "general" ? "" : "with-background")">
+    @if (PositionName != "general")
+    {
+        <p>@PositionName</p>
+        <hr />
+    }
+    @foreach (string specific in Specifics)
+    {
+        <p class="specific @(specific.Contains('$') ? "reddish-color" : "")">@specific.Trim('$')</p>
+    }
+</div>
+
+
+
+@code {
+    [Parameter]
+    public string PositionName { get; set; } = "";
+
+    [Parameter]
+    public List<string> Specifics { get; set; } = new();
+}

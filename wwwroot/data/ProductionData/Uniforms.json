@@ -1,0 +1,90 @@
+{
+  "UniformAmmo": {
+    "name": "Specialist's Overcoat",
+    "category": "Warden Heavy Ammo Uniform",
+    "description": "Warden specialists require a uniform designed to optimize their capacity to haul a variety of heavy ammunition.",
+    "itemSpecifics":{
+      "general": [ "$5 backpack slots", "$Heavy ammunition stacks", "$Heavy ammunition has reduced encumbrance" ] 
+    },
+    "crateSize": 15,
+    "bmatCost": 100,
+    "productionTime": 90
+  },
+  "UniformArmour": {
+    "name": "Gunner's Breastplate",
+    "category": "Warden Armour Uniform",
+    "description": "Repourposed from ancient wars, these armour plates are highly effective at stopping enemy small arms fire. That protection comes at the cost of weight, and the wearer will feel quite restricted and encumbered.",
+    "itemSpecifics":{
+      "general": [ "$3 backpack slots" ] 
+    },
+    "crateSize": 3,
+    "bmatCost": 100,
+    "productionTime": 90
+  },
+  "UniformEngineer": {
+    "name": "Sapper Gear",
+    "category": "Warden Engineer Uniform",
+    "description": "Caoivish engineers are legendary in song and nature. They wear specialized uniforms, outfitted with belts and bags for easy access to tools and handheld materials.",
+    "itemSpecifics":{
+      "general": [ "$8 backpack slots", "$Materials have reduced encumbrance" ] 
+    },
+    "crateSize": 15,
+    "bmatCost": 100,
+    "productionTime": 90
+  },
+  "UniformMedic": {
+    "name": "Physician's Jacket",
+    "category": "Warden Medic Uniform",
+    "description": "Physicians in the Warden army are umatched and this uniform has a plethora of pockets and bags designed to carry and deploy first aid gear easily.",
+    "itemSpecifics":{
+      "general": [ "$6 backpack slots", "$Bandages and Blood Plasma stack", "$First Aid Kits and Trauma Kits have reduced encumbrance" ] 
+    },
+    "crateSize": 15,
+    "bmatCost": 100,
+    "productionTime": 90
+  },
+  "UniformOfficer": {
+    "name": "Officer's Regalia",
+    "category": "Warden Officer Uniform",
+    "description": "A formal uniform that denotes a regiment's leading officer. While impractical, the officer on duty may use their authority to discipline subordinates without reperation. Officers hold an important role in the Warden Military, dating back to ancient times when Caoiva was ruled by a dozen kings.",
+    "itemSpecifics":{
+      "general": [ "$6 backpack slots" ] 
+    },
+    "crateSize": 3,
+    "bmatCost": 100,
+    "productionTime": 90
+  },
+  "UniformScout": {
+    "name": "Outrider's Mantle",
+    "category": "Warden Scout Uniform",
+    "description": "The Warden army relies on outriders to provide and recieve vital intelligence. Their gear is sturdy and well-suited for extended operations in rugget terrain and inclement weather.",
+    "itemSpecifics":{
+      "general": [ "$5 backpack slots", "$Bandages and Blood Plasma stack", "$High chance of not being detected by enemy intelligence", "$Low resistance to Snow Storms" ] 
+    },
+    "crateSize": 15,
+    "bmatCost": 100,
+    "productionTime": 90
+  },
+  "UniformSnow": {
+    "name": "Caoivish Parka",
+    "category": "Warden Snow Uniform",
+    "description": "Born and bred in the northern cold, this heavy parka protects Warden infantry from all but the worst blizzards.",
+    "itemSpecifics":{
+      "general": [ "$6 backpack slots", "$Kinetic weapon light ammunition stacks", "$High resistance to Snow Storms" ] 
+    },
+    "crateSize": 15,
+    "bmatCost": 100,
+    "productionTime": 90
+  },
+  "UniformTank": {
+    "name": "Padded Boiler Suit",
+    "category": "Warden Tank Uniform",
+    "description": "Caoivish armour is unmatched in its design and resilience. All crew are provided with a sturdy boilersuit and satchel belts to access essential tools required for tank maintenance and operation.",
+    "itemSpecifics":{
+      "general": [ "$7 backpack slots", "$Gas Mask Filters stack", "$Basic Materials have reduced encumbrance" ] 
+    },
+    "crateSize": 15,
+    "bmatCost": 100,
+    "productionTime": 90
+  }
+}

@@ -1,0 +1,28 @@
+﻿div {
+    height: 60px;
+    width: 100%;
+    justify-content: flex-start;
+    background-color: #5E5E5E;
+}
+
+button {
+    height: 100%;
+    aspect-ratio: 1;
+    outline: none !important;
+    border: none;
+    border-radius: 0;
+    transition: none;
+    box-shadow: none;
+    background-color: #5E5E5E;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.selected {
+    background-color: rgba(255, 255, 255, 0.4);
+}

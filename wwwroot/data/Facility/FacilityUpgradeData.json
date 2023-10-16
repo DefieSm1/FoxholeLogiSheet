@@ -3,10 +3,8 @@
         "name": "Forge",
         "buildingType": "Manufacturing",
         "description": "A unique factroy for forging specialized machinery parts needed to construct vehicles. Requires Coke or Petrol.",
-        "bmatCost": 0,
         "cmatCost": 200,
-        "pcmatCost": 0,
-        "steelCost": 0,
+        "isBuilding": true,
         "buildingRecipes": [
             {
                 "inputNames": [ "MaterialRawSalvage", "MaterialCoke" ],
@@ -17,7 +15,7 @@
                 "productionTime": 60
             },
             {
-                "inputNames": [ "MaterialRawSalvage", "MaterialOilPetrol" ],
+                "inputNames": [ "MaterialRawSalvage", "$MaterialOilPetrol" ],
                 "inputAmounts": [ 15, 50 ],
                 "outputNames": [ "AssemblyMaterialsT2" ],
                 "outputAmounts": [ 1 ],
@@ -30,13 +28,11 @@
         "name": "Metal Press",
         "buildingType": "Manufacturing",
         "description": "A heavy automatic press that refines materials into a denser form.",
-        "bmatCost": 0,
         "cmatCost": 25,
-        "pcmatCost": 0,
-        "steelCost": 0,
+        "isBuilding": true,
         "buildingRecipes": [
             {
-                "inputNames": [ "MaterialRawSalvage", "MaterialOilPetrol" ],
+                "inputNames": [ "MaterialRawSalvage", "$MaterialOilPetrol" ],
                 "inputAmounts": [ 15, 25 ],
                 "outputNames": [ "MaterialConstruction" ],
                 "outputAmounts": [ 3 ],
@@ -48,10 +44,8 @@
     "MaterialsFactorySmelter": {
         "name": "Smelter",
         "description": "An industrial smelter for melting down Salvage to remove impurities. Requires Coke.",
-        "bmatCost": 0,
         "cmatCost": 25,
-        "pcmatCost": 0,
-        "steelCost": 0,
+        "isBuilding": true,
         "buildingRecipes": [
             {
                 "inputNames": [ "MaterialRawSalvage", "MaterialCoke" ],
@@ -67,9 +61,7 @@
         "name": "Assembly Bay",
         "description": "An assembly bay with specialized equipment for quickly building and packing materials needed on the frontlines.",
         "bmatCost": 50,
-        "cmatCost": 0,
-        "pcmatCost": 0,
-        "steelCost": 0,
+        "isBuilding": true,
         "buildingRecipes": [
             {
                 "inputNames": [ "MaterialRawSalvage" ],
@@ -92,13 +84,11 @@
     "MetalworksFactoryBlastFurnace": {
         "name": "Blast Furnace",
         "description": "A large industrial cauldron for liquefying metals to remove impurities from advanced materials.",
-        "bmatCost": 0,
-        "cmatCost": 0,
         "pcmatCost": 200,
-        "steelCost": 0,
+        "isBuilding": true,
         "buildingRecipes": [
             {
-                "inputNames": [ "MaterialProcessedConstruction", "MaterialOilHeavy" ],
+                "inputNames": [ "MaterialProcessedConstruction", "$MaterialOilHeavy" ],
                 "inputAmounts": [ 1, 66 ],
                 "outputNames": [ "AssemblyMaterialsT4" ],
                 "outputAmounts": [ 1 ],
@@ -114,22 +104,28 @@
                 "productionTime": 120
             },
             {
-                "inputNames": [ "MaterialConstruction", "MaterialRawComponents", "MaterialOilHeavy" ],
+                "inputNames": [ "MaterialConstruction", "MaterialRawComponents", "$MaterialOilHeavy" ],
                 "inputAmounts": [ 3, 55, 6 ],
                 "outputNames": [ "MaterialProcessedConstruction" ],
                 "outputAmounts": [ 3 ],
                 "powerConsumption": 8,
                 "productionTime": 60
+            },
+            {
+                "inputNames": [ "MaterialRawRareMetals", "MaterialProcessedConstruction", "MaterialCoke" ],
+                "inputAmounts": [20, 5, 60],
+                "outputNames": [ "MaterialRareAlloys" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 10,
+                "productionTime": 180
             }
         ]
     },
     "MetalworksFactoryRecycler": {
         "name": "Recycler",
         "description": "Advanced sorting machinery for sifting piles of scrap metal for useful materials.",
-        "bmatCost": 0,
         "cmatCost": 25,
-        "pcmatCost": 0,
-        "steelCost": 0,
+        "isBuilding": true,
         "buildingRecipes": [
             {
                 "inputNames": [ "MaterialConstruction", "MaterialRawComponents" ],
@@ -152,13 +148,11 @@
     "MetalworksFactoryEngineering": {
         "name": "Engineering Station",
         "description": "An expanded workshop for manual process of delicate materials.",
-        "bmatCost": 0,
-        "cmatCost": 0,
         "pcmatCost": 150,
-        "steelCost": 0,
+        "isBuilding": true,
         "buildingRecipes": [
             {
-                "inputNames": [ "MaterialProcessedConstruction", "MaterialCoke", "MaterialRawSulfur", "MaterialOilHeavy" ],
+                "inputNames": [ "MaterialProcessedConstruction", "MaterialCoke", "MaterialRawSulfur", "$MaterialOilHeavy" ],
                 "inputAmounts": [ 3, 200, 65, 35 ],
                 "outputNames": [ "MaterialSteel" ],
                 "outputAmounts": [ 1 ],
@@ -166,7 +160,7 @@
                 "productionTime": 90
             },
             {
-                "inputNames": [ "MaterialProcessedConstruction", "MaterialCoke", "MaterialOilEnriched", "MaterialWater" ],
+                "inputNames": [ "MaterialProcessedConstruction", "MaterialCoke", "$MaterialOilEnriched", "$MaterialWater" ],
                 "inputAmounts": [ 9, 375, 90, 100 ],
                 "outputNames": [ "MaterialSteel" ],
                 "outputAmounts": [ 3 ],
@@ -184,12 +178,10 @@
         ]
     },
     "AmmoFactoryRocket": {
-        "name": "Rocket Factory",
+        "name": "Rocket Battery Workshop",
         "description": "Produces various types of Rockets.",
-        "bmatCost": 0,
-        "cmatCost": 0,
         "pcmatCost": 35,
-        "steelCost": 0,
+        "isBuilding": true,
         "buildingRecipes": [
             {
                 "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
@@ -206,16 +198,22 @@
                 "outputAmounts": [ 1 ],
                 "powerConsumption": 4,
                 "productionTime": 25
+            },
+            {
+                "inputNames": [ "MaterialHeavyExplosive", "AmmoFlame" ],
+                "inputAmounts": [ 2, 3 ],
+                "outputNames": [ "MaterialUnstableSubstances" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 5,
+                "productionTime": 1800
             }
         ]
     },
     "AmmoFactoryLargeShell": {
         "name": "Large Shell Factory",
         "description": "Produces large calibre ordinance for use with tanks and artillery.",
-        "bmatCost": 0,
-        "cmatCost": 0,
         "pcmatCost": 175,
-        "steelCost": 0,
+        "isBuilding": true,
         "buildingRecipes": [
             {
                 "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
@@ -256,16 +254,22 @@
                 "outputAmounts": [ 1 ],
                 "powerConsumption": 4,
                 "productionTime": 40
+            },
+            {
+                "inputNames": [ "MaterialHeavyExplosive", "MaterialProcessedConstruction" ],
+                "inputAmounts": [ 4, 2 ],
+                "outputNames": [ "Torpedo" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 6,
+                "productionTime": 240
             }
         ]
     },
     "AmmoFactoryTripod": {
         "name": "Tripod Factory",
         "description": "Produces various types of tripod weapons.",
-        "bmatCost": 0,
-        "cmatCost": 0,
         "pcmatCost": 50,
-        "steelCost": 0,
+        "isBuilding": true,
         "buildingRecipes": [
             {
                 "inputNames": [ "MaterialConstruction" ],
@@ -304,10 +308,8 @@
     "CoalRefineryCokeFurnace": {
         "name": "Coke Furnace",
         "description": "A high powered furnace that brings Coal to high temperatures to seperate out non-volatile Coke.",
-        "bmatCost": 0,
         "cmatCost": 200,
-        "pcmatCost": 0,
-        "steelCost": 0,
+        "isBuilding": true,
         "buildingRecipes": [
             {
                 "inputNames": [ "MaterialRawCoal" ],
@@ -322,15 +324,13 @@
     "CoalRefineryLiquifier": {
         "name": "Coal Liquefier",
         "description": "Processing vats that refines Coal into Oil.",
-        "bmatCost": 0,
-        "cmatCost": 0,
         "pcmatCost": 20,
-        "steelCost": 0,
+        "isBuilding": true,
         "buildingRecipes": [
             {
-                "inputNames": [ "MaterialRawCoal", "MaterialWater" ],
+                "inputNames": [ "MaterialRawCoal", "$MaterialWater" ],
                 "inputAmounts": [ 300, 50 ],
-                "outputNames": [ "MaterialConcrete", "MaterialOilCrude" ],
+                "outputNames": [ "MaterialConcrete", "$MaterialOilCrude" ],
                 "outputAmounts": [ 1, 50 ],
                 "powerConsumption": 6,
                 "productionTime": 270
@@ -340,15 +340,13 @@
     "CoalRefineryAdvancedLiquifier": {
         "name": "Advanced Coal Liquefier",
         "description": "Advanced processing vats that refine large amounts of coal into Heavy Oil.",
-        "bmatCost": 0,
-        "cmatCost": 0,
-        "pcmatCost": 0,
         "steelCost": 65,
+        "isBuilding": true,
         "buildingRecipes": [
             {
-                "inputNames": [ "MaterialRawCoal", "MaterialWater" ],
+                "inputNames": [ "MaterialRawCoal", "$MaterialWater" ],
                 "inputAmounts": [ 300, 100 ],
-                "outputNames": [ "MaterialCoke", "MaterialOilHeavy" ],
+                "outputNames": [ "MaterialCoke", "$MaterialOilHeavy" ],
                 "outputAmounts": [ 260, 60 ],
                 "powerConsumption": 6,
                 "productionTime": 405
@@ -358,15 +356,13 @@
     "OilRefineryReformer": {
         "name": "Reformer",
         "description": "A large processing drum that allows for the controlled introduction of hydrogen to yield a similar output of Petrol for less raw oil.",
-        "bmatCost": 0,
         "cmatCost": 200,
-        "pcmatCost": 0,
-        "steelCost": 0,
+        "isBuilding": true,
         "buildingRecipes": [
             {
-                "inputNames": [ "MaterialOilCrude", "MaterialWater" ],
+                "inputNames": [ "$MaterialOilCrude", "$MaterialWater" ],
                 "inputAmounts": [ 120, 30 ],
-                "outputNames": [ "MaterialOilPetrol" ],
+                "outputNames": [ "$MaterialOilPetrol" ],
                 "outputAmounts": [ 150 ],
                 "powerConsumption": 1,
                 "productionTime": 150
@@ -376,15 +372,13 @@
     "OilRefineryCrackSchack": {
         "name": "Cracking Unit",
         "description": "A high-heat furnace that catalyses raw oil into refined Heavy Oil.",
-        "bmatCost": 0,
-        "cmatCost": 0,
         "pcmatCost": 20,
-        "steelCost": 0,
+        "isBuilding": true,
         "buildingRecipes": [
             {
-                "inputNames": [ "MaterialOilCrude" ],
+                "inputNames": [ "$MaterialOilCrude" ],
                 "inputAmounts": [ 150 ],
-                "outputNames": [ "MaterialOilHeavy" ],
+                "outputNames": [ "$MaterialOilHeavy" ],
                 "outputAmounts": [ 90 ],
                 "powerConsumption": 1.5,
                 "productionTime": 160
@@ -394,15 +388,13 @@
     "OilRefineryPetrochemical": {
         "name": "Petrochemical Plant",
         "description": "A blast furnace that further refines Heavy Oil into an Enriched Oil needed for advanced processes.",
-        "bmatCost": 0,
-        "cmatCost": 0,
-        "pcmatCost": 0,
         "steelCost": 25,
+        "isBuilding": true,
         "buildingRecipes": [
             {
-                "inputNames": [ "MaterialRawSulfur", "MaterialOilHeavy" ],
+                "inputNames": [ "MaterialRawSulfur", "$MaterialOilHeavy" ],
                 "inputAmounts": [ 60, 30 ],
-                "outputNames": [ "MaterialOilEnriched" ],
+                "outputNames": [ "$MaterialOilEnriched" ],
                 "outputAmounts": [ 30 ],
                 "powerConsumption": 6,
                 "productionTime": 200
@@ -412,16 +404,12 @@
     "DieselPowerPlantPetrol": {
         "name": "Petrol Power Plant",
         "description": "A generator that burns petrol to generate more power.",
-        "bmatCost": 0,
         "cmatCost": 100,
-        "pcmatCost": 0,
-        "steelCost": 0,
+        "isBuilding": true,
         "buildingRecipes": [
             {
-                "inputNames": [ "MaterialOilPetrol" ],
+                "inputNames": [ "$MaterialOilPetrol" ],
                 "inputAmounts": [ 50 ],
-                "outputNames": [ "" ],
-                "outputAmounts": [ 0 ],
                 "powerConsumption": -12,
                 "productionTime": 90
             }
@@ -430,16 +418,12 @@
     "DieselPowerPlantCoal": {
         "name": "Coal Power Plant",
         "description": "A generator that burns coal to generate more power.",
-        "bmatCost": 0,
         "cmatCost": 100,
-        "pcmatCost": 0,
-        "steelCost": 0,
+        "isBuilding": true,
         "buildingRecipes": [
             {
                 "inputNames": [ "MaterialRawCoal" ],
                 "inputAmounts": [ 60 ],
-                "outputNames": [ "" ],
-                "outputAmounts": [ 0 ],
                 "powerConsumption": -5,
                 "productionTime": 90
             }
@@ -448,13 +432,11 @@
     "PowerStationSulfuricReactor": {
         "name": "Sulfuric Reactor",
         "description": "A reactor that combines Water with Heavy Oil or refined Coke, resulting in a more pure natural gas, which in turn is more efficient at generating power. Chunks of raw Sulfur are created as a byproduct.",
-        "bmatCost": 0,
-        "cmatCost": 0,
-        "pcmatCost": 0,
         "steelCost": 25,
+        "isBuilding": true,
         "buildingRecipes": [
             {
-                "inputNames": [ "MaterialOilHeavy" ],
+                "inputNames": [ "$MaterialOilHeavy" ],
                 "inputAmounts": [ 50 ],
                 "outputNames": [ "MaterialRawSulfur" ],
                 "outputAmounts": [ 5 ],
@@ -462,7 +444,7 @@
                 "productionTime": 120
             },
             {
-                "inputNames": [ "MaterialCoke", "MaterialWater" ],
+                "inputNames": [ "MaterialCoke", "$MaterialWater" ],
                 "inputAmounts": [ 30, 1 ],
                 "outputNames": [ "MaterialRawSulfur" ],
                 "outputAmounts": [ 5 ],
@@ -475,13 +457,11 @@
         "name": "Excavator",
         "buildingType": "Gathering",
         "description": "Improves component excavation.",
-        "bmatCost": 0,
-        "cmatCost": 0,
         "pcmatCost": 75,
-        "steelCost": 0,
+        "isBuilding": true,
         "buildingRecipes": [
             {
-                "inputNames": [ "MaterialOilPetrol" ],
+                "inputNames": [ "$MaterialOilPetrol" ],
                 "inputAmounts": [ 6 ],
                 "outputNames": [ "MaterialRawComponentsDamaged" ],
                 "outputAmounts": [ 9 ],
@@ -494,23 +474,17 @@
         "name": "Electric Oil Well",
         "buildingType": "Gathering",
         "description": "A generator that leverages electricity to pump oil through attached pipes.",
-        "bmatCost": 0,
-        "cmatCost": 0,
         "pcmatCost": 25,
-        "steelCost": 0,
+        "isBuilding": true,
         "buildingRecipes": [
             {
-                "inputNames": [ "" ],
-                "inputAmounts": [ 0 ],
-                "outputNames": [ "MaterialOilCrude", "fluidCan" ],
+                "outputNames": [ "MaterialOilCrude" ],
                 "outputAmounts": [ 1, 1 ],
                 "powerConsumption": 2,
                 "productionTime": 26
             },
             {
-                "inputNames": [ "" ],
-                "inputAmounts": [ 0 ],
-                "outputNames": [ "MaterialOilCrude" ],
+                "outputNames": [ "$MaterialOilCrude" ],
                 "outputAmounts": [ 75 ],
                 "powerConsumption": 2,
                 "productionTime": 40
@@ -521,23 +495,21 @@
         "name": "Fracker",
         "buildingType": "Gathering",
         "description": "A machine that opens the cracks in the earth by injecting water at high pressure to increase output of Crude Oil",
-        "bmatCost": 0,
-        "cmatCost": 0,
-        "pcmatCost": 0,
         "steelCost": 25,
+        "isBuilding": true,
         "buildingRecipes": [
             {
-                "inputNames": [ "MaterialWater" ],
+                "inputNames": [ "$MaterialWater" ],
                 "inputAmounts": [ 25 ],
-                "outputNames": [ "MaterialOilCrude", "fluidCan" ],
+                "outputNames": [ "MaterialOilCrude" ],
                 "outputAmounts": [ 2, 2 ],
                 "powerConsumption": 3,
                 "productionTime": 40
             },
             {
-                "inputNames": [ "MaterialWater" ],
+                "inputNames": [ "$MaterialWater" ],
                 "inputAmounts": [ 25 ],
-                "outputNames": [ "MaterialOilCrude" ],
+                "outputNames": [ "$MaterialOilCrude" ],
                 "outputAmounts": [ 75 ],
                 "powerConsumption": 3,
                 "productionTime": 30
@@ -548,23 +520,17 @@
         "name": "Electric Water Pump",
         "buildingType": "Gathering",
         "description": "A generator that pumps water more efficiently. Requires Power.",
-        "bmatCost": 0,
         "cmatCost": 150,
-        "pcmatCost": 0,
-        "steelCost": 0,
+        "isBuilding": true,
         "buildingRecipes": [
             {
-                "inputNames": [ "" ],
-                "inputAmounts": [ 0 ],
                 "outputNames": [ "MaterialWater" ],
                 "outputAmounts": [ 60 ],
                 "powerConsumption": 0.5,
                 "productionTime": 50
             },
             {
-                "inputNames": [ "" ],
-                "inputAmounts": [ 0 ],
-                "outputNames": [ "MaterialWater", "fluidCan" ],
+                "outputNames": [ "MaterialWater" ],
                 "outputAmounts": [ 1, 1 ],
                 "powerConsumption": 0,
                 "productionTime": 40
