@@ -1,0 +1,84 @@
+{
+  "ConcreteMixer": {
+    "name": "Concrete Mixer",
+    "description": "A portable device that mixes various materials to form Concrete, which are used to build heavily fortified structures.",
+    "crateSize": 3,
+    "rmatCost": 75,
+    "productionTime": 3750
+  },
+  "EmplacedAntiTank": {
+    "name": "Leary Shellbore 68mm",
+    "description": "A defensive emplacement with a 68mm Anti-Tank cannon. This rudimentary weapon was once built to fit onto the hull of large naval vessels, but was eventually pahsed out and repurposed.",
+    "ammoUsed": "68mm",
+    "itemSpecifics":{
+      "Gunner": [ "$Deals Armour Piercing damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ] 
+    },
+    "crateSize": 3,
+    "bmatCost": 150,
+    "productionTime": 7500
+  },
+  "ArtilleryExalt": {
+    "name": "Huber Exalt 150mm",
+    "description": "A heavy cannon designed to shatter the garrisons and fortifications of advancing forces. The Exalt is best utilized when emplaced into a defensive position to take advantage of it's impressive range.",
+    "ammoUsed": "150mm",
+    "itemSpecifics":{
+      "Cannoneer": [ "$Deals High Explosive damage", "Can ruin structures that have been severly damaged by artillery", "Reduced damaged against Trenches", "Increased damage against Field Structures" ] 
+    },
+    "crateSize": 3,
+    "rmatCost": 175,
+    "productionTime": 8750
+  },
+  "EmplacedMachinegun": {
+    "name": "Leary Snare Trap 127",
+    "description": "The Snare Trap is a repurposed anti-aircraft flak cannon used to fortify emplaced positions with twin anti-infantry machine guns.",
+    "ammoUsed": "12.7mm",
+    "itemSpecifics":{
+      "Machine Gun": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "$Deals Heavy Kinetic damage" ] 
+    },
+    "crateSize": 3,
+    "bmatCost": 75,
+    "productionTime": 3750
+  },
+  "ArtilleryLariat": {
+    "name": "Huber Lariat 120mm",
+    "description": "A light artillery cannon designed to be a fixture in defensive fortifications. The Lariat sports a formidibable long-range 120mm cannon designed to put immense pressure on enemy infantry.",
+    "ammoUsed": "120mm",
+    "itemSpecifics":{
+      "Cannoneer": [ "$Deals High Explosive damage", "Can ruin structures that have been severly damaged by artillery", "Reduced damaged against Trenches", "Increased damage against Field Structures" ] 
+    },
+    "crateSize": 3,
+    "rmatCost": 35,
+    "productionTime": 1750
+  },
+  "MaterialPallet": {
+    "name": "Material Pallet",
+    "description": "A material pallet.",
+    "itemSpecifics":{
+      "general": [ "I miss small containers..." ] 
+    },
+    "crateSize": 3,
+    "bmatCost": 25,
+    "productionTime": 1250
+  },
+  "ContainerMaterial": {
+    "name": "Resource Container",
+    "description": "A container that can carry large quantities of resources and can be transpoted by certain vehicles.",
+    "crateSize": 3,
+    "bmatCost": 50,
+    "productionTime": 2500
+  },
+  "ContainerCrate": {
+    "name": "Shipping Container",
+    "description": "A container for shipping very large quantities of Crates using Crane loaded vehicles. This typ of container can only be unloaded at Storage Depots and Seaports.",
+    "crateSize": 3,
+    "bmatCost": 100,
+    "productionTime": 5000
+  },
+  "FuelContainer": {
+    "name": "Liquid Container",
+    "description": "Stores a high volume of liquids, supporting a variety of fuel types. Nearby structures or vehicles can be refueled directly from this container.",
+    "crateSize": 3,
+    "bmatCost": 100,
+    "productionTime": 5000
+  }
+}

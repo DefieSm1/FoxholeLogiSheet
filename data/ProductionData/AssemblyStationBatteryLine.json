@@ -1,0 +1,62 @@
+{
+  "HalfTrackRocket": {
+    "name": "Niska-Rycker Mk. IX Skycaller",
+    "category": "Half-Track",
+    "description": "A first of its kind, the Skycaller is a variation of the Niska Motor Carriage with a Rycker designed rocket battery fited in the rear bed. This unique armoured vehicle quickly fires rockets over long distances with ease, and can be rearmed and relocated at the drop of a hat. The Skycaller is the deadly result of combined Nevish and Caoivish engineering.",
+    "ammoUsed": "4C-Fire Rocket",
+    "itemSpecifics":{
+      "Gunner": [ "$Deals Incendiary damage", "Deals High Explosive damage on impact" ] 
+    },
+    "pcmatCost": 10,
+    "assmatCost": [ 10, 0, 8, 0, 0 ],
+    "baseVehicle": "HalfTrack",
+    "productionTime": 300
+  },
+  "HalfTrackAntiTank": {
+    "name": "Niska Mk. II Blinder",
+    "category": "Half-Track",
+    "description": "Fitted with a heavy-duty anti-tank gun, the Blinder is capable of punching through all but the most tempered of alloys.",
+    "ammoUsed": "68mm",
+    "itemSpecifics": {
+      "Gunner (Rear)": [ "$Deals Armour Piercing damage", "Can penetrate vehicles", "High chance to penetrate armoured vehicles" ] 
+    },
+    "pcmatCost": 5,
+    "assmatCost": [ 0, 10, 0, 3, 0 ],
+    "baseVehicle": "HalfTrack",
+    "productionTime": 300
+  },
+  "ScoutTankJester": {
+    "name": "King Jester - Mk. I-1",
+    "category": "Scout Tank",
+    "description": "Originally designed as a mock-up for more sophisticated rocket platforms, the Jester gets its designation from the response to reckless early prototypes that were bolted onto stripped down King Spires. This unusual vehicle can fire specialized rockets over long distances. Its light frame makes it easy to reposition, but vulnerable to sabotage.",
+    "ammoUsed": "3C-High Explosive Rocket",
+    "itemSpecifics":{
+      "Gunner": [ "$Deals Incendiary damage", "Deals High Explosive damage on impact" ] 
+    },
+    "pcmatCost": 20,
+    "assmatCost": [ 15, 0, 3, 0, 0 ],
+    "baseVehicle": "ScoutTankSpire",
+    "productionTime": 600
+  },
+  "HalfTrackLMG": {
+    "name": "Niska Mk. III Scar Twin",
+    "category": "Half-Track",
+    "description": "The third Niska Motor Carriage variation sports twin mounted machine guns at the expense of reduced passenger shielding and overall firepower. This simple revision was originally an ad hoc alteration by field engineers, but quickly sought after by armour regiments across the Caoiva-Veli front line.",
+    "ammoUsed": "7.92mm",
+    "itemSpecifics": {
+      "Gunner (Left), Gunner (Right)": [ "$Deals Light Kinetic damage" ]
+    }
+  },
+  "FieldRocketLauncher": {
+    "name": "Rycker 4/3-F Wasp Nest",
+    "category": "Field Launcher",
+    "description": "Lyle Rycker first built a prototype of the Wasp Nest as a test for his rack mounted rocket batteries that would eventually find their way onto armoured vehicles. Capable of firing twelve compact rockets in quick succession, the Wasp Nest became a quick favourite of the Warden infantry testing it, so an official design was requisitioned.",
+    "ammoUsed": "4C-Fire Rocket",
+    "itemSpecifics":{
+      "Cannoneer (Right)": [ "$Deals Incendiary damage", "Deals High Explosive damage on impact" ] 
+    },
+    "pcmatCost": 20,
+    "assmatCost": [ 0, 15, 0, 3, 0 ],
+    "productionTime": 600
+  }
+}

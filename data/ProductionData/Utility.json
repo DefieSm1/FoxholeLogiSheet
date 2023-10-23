@@ -1,0 +1,177 @@
+{
+  "UtilityBarbedWire": {
+    "name": "Barbed Wire",
+    "category": "Large Material",
+    "description": "Used to construct Barbed Wire",
+    "crateSize": 5,
+    "bmatCost": 15,
+    "productionTime": 15
+  },
+  "UtilityBinoculars": {
+    "name": "Binoculars",
+    "description": "An optical instrument used for viewing distant object.",
+    "crateSize": 5,
+    "bmatCost": 75,
+    "productionTime": 50
+  },
+  "UtilityHavocCharge": {
+    "name": "Havoc Charge",
+    "description": "A high-powered explosive charge that requires an accompanying detonator. The Havoc Charge is highly effective at demolishing large structures. The charge must be detonated via gunshot. The Havoc Charge's true potential is unleashed when executing strategic demolitions at safe distances.",
+    "crateSize": 5,
+    "bmatCost": 75,
+    "hematCost": 10,
+    "productionTime": 60
+  },
+  "AmmoFlamethrower": {
+    "name": "Wilow's Bane Ammo",
+    "category": "Flamethrower Ammo",
+    "description": "Ammo for Willow's Bane Model 845",
+    "crateSize": 10,
+    "bmatCost": 135,
+    "hematCost": 5,
+    "productionTime": 100
+  },
+  "UtilityListeningKit": {
+    "name": "Listening Kit",
+    "category": "Equipment",
+    "description": "A device used to intercept enemy radio broadcasts transmitted from nearby sources.",
+    "crateSize": 5,
+    "bmatCost": 150,
+    "productionTime": 60
+  },
+  "UtilityMetalBeam": {
+    "name": "Metal Beam",
+    "category": "Large Material",
+    "description": "Used to construct Metal Beam defenses.",
+    "crateSize": 5,
+    "bmatCost": 25,
+    "productionTime": 20
+  },
+  "UtilityRadioBackpack": {
+    "name": "Radio Backpack",
+    "description": "Automatically gathers map intel periodically when equipped. The Radio Backpack is also used to transmit other sensitive information across long distances.",
+    "crateSize": 5,
+    "bmatCost": 150,
+    "productionTime": 75
+  },
+  "UtilitySandbag": {
+    "name": "Sandbag",
+    "category": "Large Material",
+    "description": "Large Material",
+    "crateSize": 5,
+    "bmatCost": 15,
+    "productionTime": 15
+  },
+  "UtilityHavocDetonator": {
+    "name": "Havoc Charge Detonator",
+    "category": "Explosive Charge",
+    "description": "Required to detonate Havoc Charges. The Havoc Charge must be placed before can be deployed.",
+    "crateSize": 5,
+    "bmatCost": 75,
+    "hematCost": 5,
+    "productionTime": 60
+  },
+  "UtilitySatchel": {
+    "name": "Alligator Charge",
+    "category": "Explosive Charge",
+    "description": "This heavy-duty explosive device is designed to deal significant damage to structures and stationary vehicles.",
+    "itemSpecifics":{
+      "general": [ "$Deals Demolition damage", "Can ruin structures that have been severly damaged by artillery" ] 
+    },
+    "crateSize": 5,
+    "bmatCost": 150,
+    "ematCost": 80,
+    "productionTime": 100
+  },
+  "UtilityShovel": {
+    "name": "Shovel",
+    "description": "A tool for digging Trenches and other entrenched structures.",
+    "crateSize": 10,
+    "bmatCost": 200,
+    "productionTime": 100
+  },
+  "UtilitySledgeHammer": {
+    "name": "Sledge Hammer",
+    "description": "A tool used to salvage components from remains of old vehicles and equipment.",
+    "crateSize": 10,
+    "bmatCost": 200,
+    "productionTime": 100
+  },
+  "UtilityATMine": {
+    "name": "Absime AT-99",
+    "category": "Explosive Charge",
+    "description": "A simple mine that is places under terrain and fitted with a pressure-sensitive plate to detonate under the weight of heavt vehicles. Mines are visible to friendlies and enemies on foot and deactivate after 48 in-game days.",
+    "itemSpecifics":{
+      "general": [ "Deactivates after 2 days", "$Deals Anti-Tank Explosive damage", "Always Disables Track subsystem", "There are no friendly mines" ] 
+    },
+    "crateSize": 10,
+    "bmatCost": 100,
+    "ematCost": 10,
+    "productionTime": 100
+  },
+  "UtilityTripod": {
+    "name": "Tripod",
+    "description": "A mount point for deployable infantry weapons and equipment.",
+    "crateSize": 5,
+    "bmatCost": 100,
+    "productionTime": 60
+  },
+  "UtilityWrench": {
+    "name": "Wrench",
+    "description": "A multipurpose tool. Can be used to dismantle mines/barbed wire and unlock vehicles.",
+    "crateSize": 5,
+    "bmatCost": 75,
+    "productionTime": 50
+  },
+  "UtilityBucket": {
+    "name": "Water Bucket",
+    "category": "Water Bucket",
+    "description": "A bucket that holds water. You can toss water onto fires to extinguish them.",
+    "ammoUsed": "Water (not included)",
+    "itemSpecifics":{
+      "general": [ "Dear God...", "$There's more.", "No!" ] 
+    },
+    "crateSize": 50,
+    "bmatCost": 80,
+    "productionTime": 40
+  },
+  "UtilityBayonet": {
+    "name": "Buckhorn CCQ-18",
+    "category": "Bayonet",
+    "description": "Attached to the barrel of a rifle, this short blade can spear enemies in close quarters encounters.",
+    "crateSize": 20,
+    "bmatCost": 40,
+    "productionTime": 30
+  },
+  "UtilityGasMask": {
+    "name": "Gas Mask",
+    "description": "Protects against poison gas.",
+    "crateSize": 20,
+    "bmatCost": 160,
+    "productionTime": 100
+  },
+  "UtilityGasFilter": {
+    "name": "Gas Mask Filter",
+    "description": "When attached to a Gas Mask, this filter provides fresh air to the wearer.",
+    "crateSize": 20,
+    "bmatCost": 100,
+    "productionTime": 50
+  },
+  "UtilityOspreay": {
+    "name": "The Ospreay",
+    "category": "Grenade Launcher",
+    "description": "A rifle attachment that fires grenades with pneumatic force. Along with specialized grenades, it can launch standard grenades.",
+    "ammoUsed": "Green Ash Grenade, A3 Harpa Fragmentation Grenade",
+    "crateSize": 20,
+    "bmatCost": 85,
+    "rmatCost": 10,
+    "productionTime": 100
+  },
+  "UtilityRadio": {
+    "name": "Radio",
+    "description": "Receives map intelligence updates.",
+    "crateSize": 5,
+    "bmatCost": 75,
+    "productionTime": 50
+  }
+}

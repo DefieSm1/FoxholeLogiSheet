@@ -54,6 +54,27 @@ html, body {
     transform: scale(1.1);
 }
 
+*::-webkit-scrollbar {
+    display: block;
+    width: 12px;
+}
+
+*::-webkit-scrollbar-button {
+    display: none;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: #00000000;
+}
+
+*::-webkit-scrollbar-track-piece {
+    background-color: #4d4d4d;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #7F7F7F;
+}
+
 h1:focus {
     outline: none;
 }

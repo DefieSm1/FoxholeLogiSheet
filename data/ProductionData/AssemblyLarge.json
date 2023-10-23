@@ -1,0 +1,47 @@
+{
+  "WideGaugeTrain": {
+    "name": "BMS Black Bolt",
+    "category": "Locomotive",
+    "description": "One of the most storied mass-market 0-6-2 locomotives engineered by the Bassett Motor Society, this coal-powered industrial train engine is reliable , tested, and incredibly durable. The Black Bolt's legacy is ummatched having aided the Bassett Motor Society in supplying countries across the globe.",
+    "ammoUsed": "Coal",
+    "pcmatCost": 200,
+    "assmatCost": [ 60, 0, 0, 50, 0 ],
+    "productionTime": 21600
+  },
+  "WideGaugeCoal": {
+    "name": "BMS Rockhold",
+    "category": "Container Car",
+    "description": "A container car for transporting coal to refuel trains over long-distance trips.",
+    "pcmatCost": 20,
+    "assmatCost": [ 0, 15, 5, 0, 0 ],
+    "productionTime": 1800
+  },
+  "WideGaugeInfantry": {
+    "name": "BMS Holdout",
+    "category": "Infantry Car",
+    "description": "An armoured train car with a mounted machinegun position for transporting infantry over long distances.",
+    "pcmatCost": 20,
+    "assmatCost": [ 0, 15, 5, 0, 0 ],
+    "productionTime": 1800
+  },
+  "WideGaugeFlatbed": {
+    "name": "BMS Longrider",
+    "category": "Flatbed Car",
+    "description": "A flatbed car for transporting large resources and munitions by train over long-distances.",
+    "pcmatCost": 20,
+    "assmatCost": [ 0, 15, 10, 0, 0 ],
+    "productionTime": 1800
+  },
+  "WideGaugeCaboose": {
+    "name": "BMS Roadhouse",
+    "category": "Caboose",
+    "description": "A simple caboose that allows rail crews to maintain tracks more efficiently.",
+    "ammoUsed": "Construction Materials, Maintenance Supplies",
+    "itemSpecifics":{
+      "general": [ "$Repairs Decay damage", "Uses stored materials to repair the decay and damage of tracks the train passes over." ] 
+    },
+    "pcmatCost": 20,
+    "assmatCost": [ 0, 15, 5, 0, 0 ],
+    "productionTime": 1800
+  }
+}

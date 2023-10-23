@@ -1,0 +1,222 @@
+{
+  "ATRifle": {
+    "name": "135 Neville Anti-Tank Rifle",
+    "category": "Anti-Tank Rifle",
+    "description": "The Neville is unmatched in its versatility as a portable, magazine-based anti-armor firearm.",
+    "ammoUsed": "20mm",
+    "crateSize": 3,
+    "bmatCost": 150,
+    "productionTime": 37
+  },
+  "AmmoAT20": {
+    "name": "20mm",
+    "description": "Standard ammunition for anti-tank rifles.",
+    "itemSpecifics":{
+      "general": [ "$Deals Anti-Tank Kinetic damage", "Can penetrate armoured vehicles" ] 
+    },
+    "crateSize": 10,
+    "bmatCost": 100,
+    "productionTime": 100
+  },
+  "ATBonesawTripod": {
+    "name": "Bonesaw MK.3",
+    "category": "Mounted Anti-Tank RPG",
+    "description": "This variant of the Bonesaw MK.3 is specially designed for use with tripod mounts. This affords it with increased stability and maximum potential range.",
+    "ammoUsed": "ARC/RPG",
+    "itemSpecifics":{
+      "general": [ "This can be attached to certain vehicles" ] 
+    },
+    "crateSize": 5,
+    "bmatCost": 100,
+    "rmatCost": 5,
+    "productionTime": 250
+  },
+  "ATBonesawHand": {
+    "name": "Bonesaw MK.3",
+    "category": "Anti-Tank RPG",
+    "description": "The pride of the Warden anti-armored arsenal, the Bonesaw Mk.3 has one job; to cut through heavy metal plating of Colonial tanks.",
+    "ammoUsed": "ARC/RPG",
+    "itemSpecifics":{
+      "general": [ "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles", "Additional 100% chance to penetrate armoured vehicles"  ] 
+    },
+    "crateSize": 5,
+    "bmatCost": 100,
+    "rmatCost": 25,
+    "productionTime": 50
+  },
+  "AmmoATIndirect": {
+    "name": "ARC/RPG",
+    "description": "An anti-tank projectili fied from indirect RPG launchers.",
+    "itemSpecifics":{
+      "general": [ "$Deals Armour Piercing damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles", "Additional 100% chance to penetrate armoured vehicles" ] 
+    },
+    "crateSize": 15,
+    "bmatCost": 60,
+    "ematCost": 75,
+    "productionTime": 100
+  },
+  "Flamethrower": {
+    "name": "Wilow's Bane Model 845",
+    "category": "Flamethrower",
+    "description": "Named for the unfortunate trees harmed in the development of this highly destructive weapon, the Wilow's Bane utilizes flammable chemicals and fires them into a concentrated stream through an open flame. This liquid flame ignites Colonial emplacements and garrisons to route infantry while reducing their defenses to a pile of ash.",
+    "ammoUsed": "Wilow's Bane Ammo, \"Molten Wind\" v.II Ammo",
+    "itemSpecifics":{
+      "general": [ "How'd you like your collies, original, or extra crispy?" ] 
+    },
+    "crateSize": 10,
+    "bmatCost": 165,
+    "rmatCost": 30,
+    "productionTime": 50
+  },
+  "GrenadeTremola": {
+    "name": "Tremola Grenade GPb-1",
+    "category": "HE Grenade",
+    "description": "An explosive Estrllan grenade specially designed for use with handheld grenade launchers. This modern grenade boasts a large payload and is deadly to lingering infantry and structural supports.",
+    "itemSpecifics":{
+      "general": [ "$Deals Explosive damage" ] 
+    },
+    "crateSize": 20,
+    "bmatCost": 75,
+    "ematCost": 50,
+    "productionTime": 80
+  },
+  "MGRatcatcher": {
+    "name": "Malone Ratcatcher MK.1",
+    "category": "Mounted Machinegun",
+    "description": "Early iterations of this machinegun were built to be emplaced in bunkers and on the decks of lightly armed warships, the Ratcatcher is Harvey Malone’s first freely mountable infantry weapon designed for field use. Just like its predecessors, this heavy weapon suppresses enemy soldiers with unmatched efficiency.",
+    "ammoUsed": "12.7mm",
+    "itemSpecifics":{
+      "general": [ "This can be attached to certain vehicles" ] 
+    },
+    "crateSize": 5,
+    "bmatCost": 100,
+    "rmatCost": 5,
+    "productionTime": 125
+  },
+  "AmmoShell30": {
+    "name": "30mm",
+    "description": "Standard explosive shell with certain small vehicles and infantry weapons",
+    "itemSpecifics":{
+      "general": [ "$Deals Explosive damage", "Can penetrate armoured vehicles" ] 
+    },
+    "crateSize": 20,
+    "bmatCost": 80,
+    "ematCost": 20,
+    "productionTime": 100
+  },
+  "Mortar": {
+    "name": "Cremari Mortar",
+    "category": "Mortar",
+    "description": "This short-range cannon is designed to bombard enemy infantry with indirect fire.",
+    "ammoUsed": "Mortar Shell, Shrapnel Mortar Shell, Flare Mortar Shell",
+    "crateSize": 5,
+    "bmatCost": 100,
+    "rmatCost": 25,
+    "productionTime": 50
+  },
+  "AmmoMortarFlare": {
+    "name": "Flare Mortar Shell",
+    "description": "A long-burning flare that ignites midair to illuminate a large area and reveals enemy targets.",
+    "itemSpecifics":{
+      "general": [ "$Deals Eye-Hurting Photon damage" ] 
+    },
+    "crateSize": 15,
+    "bmatCost": 60,
+    "ematCost": 10,
+    "productionTime": 100
+  },
+  "AmmoMortarShrapnel": {
+    "name": "Shrapnel Mortar Shell",
+    "description": "A payload filled with shrapnel used with mortar tubes. Devestates nearby infantry.",
+    "itemSpecifics":{
+      "general": [ "$Deals Shrapnel damage", "Always causes target to bleed" ] 
+    },
+    "crateSize": 15,
+    "bmatCost": 60,
+    "ematCost": 15,
+    "productionTime": 100
+  },
+  "AmmoMortarHE": {
+    "name": "Mortar Shell",
+    "description": "An explosive payload used with mortar tubes.",
+    "itemSpecifics":{
+      "general": [ "$Deals High Explosive damage", "Reduced damage against Trenches", "Increased damage against Field Structures" ] 
+    },
+    "crateSize": 15,
+    "bmatCost": 60,
+    "ematCost": 35,
+    "productionTime": 100
+  },
+  "GrenadeATFlask": {
+    "name": "BF5 White Ash Flask Grenade",
+    "category": "Anti-Tank Grenade",
+    "description": "An explosive flask used for melting enemy armor. This carefully designed liquid bomb explodes into a dazzling flash of molten debris upon impact.",
+    "itemSpecifics":{
+      "general": [ "$Deals Anti-Tank Explosive damage", "High chance of disabling Track subsystem" ] 
+    },
+    "crateSize": 10,
+    "bmatCost": 100,
+    "ematCost": 40,
+    "productionTime": 75
+  },
+  "GrenadeHE": {
+    "name": "Mammon 91-b",
+    "category": "HE Grenade",
+    "description": "This densely packed, high-explosive grenade is designed to damage structures and vehicles.",
+    "itemSpecifics":{
+      "general": [ "$Deals Explosive damage" ] 
+    },
+    "crateSize": 20,
+    "bmatCost": 100,
+    "ematCost": 10,
+    "productionTime": 80
+  },
+  "GrenadeATSticky": {
+    "name": "Anti-Tank Sticky Bomb",
+    "description": "An adherable grenade designed to penetrate heavy tank armor. The sticky bomb can only be thrown a short distance and is ineffective against structures.",
+    "itemSpecifics":{
+      "general": [ "$Deals Anti-Tank Explosive damage", "High chance of disabling Track subsystem" ] 
+    },
+    "crateSize": 10,
+    "bmatCost": 50,
+    "ematCost": 50,
+    "productionTime": 75
+  },
+  "RPGFoebreaker": {
+    "name": "Cutler Foebreaker",
+    "category": "Mounted RPG Launcher",
+    "description": "This unique duel-barrelled RPG launcher can fire two RPG shells in relatively quick succession. This increase in firepower makes it nearly impossible for a single soldier to operate without the support of a sturdy mount.",
+    "ammoUsed": "RPG",
+    "itemSpecifics":{
+      "general": [ "This can be attached to certain vehicles" ] 
+    },
+    "crateSize": 5,
+    "bmatCost": 100,
+    "rmatCost": 5,
+    "productionTime": 250
+  },
+  "RPGCutler": {
+    "name": "Cutler Launcher 4",
+    "category": "RPG",
+    "description": "The Cutler Launcher is capable of firing and unguided, rocket-propelled grenade over short distances with startling efficiency. Its simple design allows for easy deployment and storage.",
+    "ammoUsed": "RPG",
+    "itemSpecifics":{
+      "general": [ "$Deals Explosive damage", "Can penetrate armoured vehicles" ] 
+    },
+    "crateSize": 5,
+    "bmatCost": 100,
+    "rmatCost": 35,
+    "productionTime": 50
+  },
+  "AmmoRPG": {
+    "name": "RPG",
+    "description": "A fast-moving explosive projectile used with RPG launchers.",
+    "itemSpecifics":{
+      "general": [ "$Deals Explosive damage", "Can penetrate armoured vehicles" ] 
+    },
+    "crateSize": 15,
+    "bmatCost": 60,
+    "ematCost": 45,
+    "productionTime": 100
+  }
+}

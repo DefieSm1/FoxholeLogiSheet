@@ -1,0 +1,39 @@
+{
+  "MedicalBandages": {
+    "name": "Bandages",
+    "description": "Used to stem bleeding.",
+    "crateSize": 50,
+    "bmatCost": 80,
+    "productionTime": 40
+  },
+  "MedicalAidKit": {
+    "name": "First Aid Kit",
+    "description": "Used by medics to heal others.",
+    "ammoUsed": "Bandages",
+    "crateSize": 10,
+    "bmatCost": 60,
+    "productionTime": 35
+  },
+  "MedicalTraumaKit": {
+    "name": "Trauma Kit",
+    "description": "Used by medics to revive wounded soldiers.",
+    "ammoUsed": "Blood Plasma",
+    "crateSize": 10,
+    "bmatCost": 80,
+    "productionTime": 50
+  },
+  "MedicalPlasma": {
+    "name": "Blood Plasma",
+    "description": "A blood component used to treat wounded soldiers on the battlefield.",
+    "crateSize": 50,
+    "bmatCost": 80,
+    "productionTime": 40
+  },
+  "MedicalSoldierSupplies": {
+    "name": "Soldier Supplies",
+    "description": "A standard issue set of supplies for foot soldiers. Bases must be stockpiled with Soldier Supplies in order for players to spawn.",
+    "crateSize": 10,
+    "bmatCost": 80,
+    "productionTime": 80
+  }
+}

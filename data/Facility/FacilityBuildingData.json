@@ -4,9 +4,7 @@
         "buildingType": "Manufacturing",
         "description": "A factory that refines raw resources into Construction Materials for advanced facilities. Additional modifications allow for the development of a variety of different materials.",
         "bmatCost": 200,
-        "cmatCost": 0,
-        "pcmatCost": 0,
-        "steelCost": 0,
+        "isBuilding": true,
         "buildingUpgrades": [ "MaterialsFactoryForge", "MaterialsFactoryMetalPress", "MaterialsFactorySmelter", "MaterialsFactoryAssembly" ],
         "buildingRecipes": [
             {
@@ -31,10 +29,8 @@
         "name": "Metalworks Factory",
         "buildingType": "Manufacturing",
         "description": "A factory for refining raw resources into Processed Construction Materials. Additional modifications can allow for addtitional refined materials needed for advanced facility operations.",
-        "bmatCost": 0,
         "cmatCost": 125,
-        "pcmatCost": 0,
-        "steelCost": 0,
+        "isBuilding": true,
         "buildingUpgrades": [ "MetalworksFactoryBlastFurnace", "MetalworksFactoryRecycler", "MetalworksFactoryEngineering" ],
         "buildingRecipes": [
             {
@@ -59,10 +55,8 @@
         "name": "Ammunition Factory",
         "buildingType": "Manufacturing",
         "description": "A factory for producing advanced ammo types such as large calibre shells, rockets, and flame ammo.",
-        "bmatCost": 0,
-        "cmatCost": 0,
         "pcmatCost": 25,
-        "steelCost": 0,
+        "isBuilding": true,
         "buildingUpgrades": [ "AmmoFactoryRocket", "AmmoFactoryLargeShell", "AmmoFactoryTripod" ],
         "buildingRecipes": [
             {
@@ -80,6 +74,14 @@
                 "outputAmounts": [ 1 ],
                 "powerConsumption": 4,
                 "productionTime": 30
+            },
+            {
+                "inputNames": [ "MaterialConstruction", "AssemblyMaterialsT4" ],
+                "inputAmounts": [ 2, 5 ],
+                "outputNames": [ "MaterialThermalShielding" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 4,
+                "productionTime": 25
             }
         ]
     },
@@ -87,10 +89,8 @@
         "name": "Coal Refinery",
         "buildingType": "Manufacturing",
         "description": "A processing plant that refines Coal into useful materials used in facility production and power.",
-        "bmatCost": 0,
         "cmatCost": 50,
-        "pcmatCost": 0,
-        "steelCost": 0,
+        "isBuilding": true,
         "buildingUpgrades": [ "CoalRefineryCokeFurnace", "CoalRefineryLiquifier", "CoalRefineryAdvancedLiquifier" ],
         "buildingRecipes": [
             {
@@ -107,16 +107,14 @@
         "name": "Oil Refinery",
         "buildingType": "Manufacturing",
         "description": "A refinery that processes Oil into other useful materials for purposes of production and power generation.",
-        "bmatCost": 0,
         "cmatCost": 50,
-        "pcmatCost": 0,
-        "steelCost": 0,
+        "isBuilding": true,
         "buildingUpgrades": [ "OilRefineryReformer", "OilRefineryCrackSchack", "OilRefineryPetrochemical" ],
         "buildingRecipes": [
             {
-                "inputNames": [ "MaterialOilCrude" ],
+                "inputNames": [ "$MaterialOilCrude" ],
                 "inputAmounts": [ 150 ],
-                "outputNames": [ "MaterialOilPetrol" ],
+                "outputNames": [ "$MaterialOilPetrol" ],
                 "outputAmounts": [ 150 ],
                 "powerConsumption": 1,
                 "productionTime": 150
@@ -128,16 +126,12 @@
         "buildingType": "Manufacturing",
         "description": "A structure that generates power by burning Diesel.",
         "bmatCost": 150,
-        "cmatCost": 0,
-        "pcmatCost": 0,
-        "steelCost": 0,
+        "isBuilding": true,
         "buildingUpgrades": [ "DieselPowerPlantPetrol", "DieselPowerPlantCoal" ],
         "buildingRecipes": [
             {
-                "inputNames": [ "MaterialDiesel" ],
+                "inputNames": [ "$MaterialDiesel" ],
                 "inputAmounts": [ 25 ],
-                "outputNames": [ "" ],
-                "outputAmounts": [ 0 ],
                 "powerConsumption": -5,
                 "productionTime": 45
             }
@@ -147,25 +141,19 @@
         "name": "Power Station",
         "buildingType": "Manufacturing",
         "description": "A power plant that generates a large amount of electricity using Oil or Coal.",
-        "bmatCost": 0,
-        "cmatCost": 0,
         "pcmatCost": 25,
-        "steelCost": 0,
+        "isBuilding": true,
         "buildingUpgrades": [ "PowerStationSulfuricReactor" ],
         "buildingRecipes": [
             {
-                "inputNames": [ "MaterialOilCrude" ],
+                "inputNames": [ "$MaterialOilCrude" ],
                 "inputAmounts": [ 50 ],
-                "outputNames": [ "" ],
-                "outputAmounts": [ 0 ],
                 "powerConsumption": -10,
                 "productionTime": 90
             },
             {
-                "inputNames": [ "MaterialRawCoal", "MaterialWater" ],
+                "inputNames": [ "MaterialRawCoal", "$MaterialWater" ],
                 "inputAmounts": [ 30, 1 ],
-                "outputNames": [ "" ],
-                "outputAmounts": [ 0 ],
                 "powerConsumption": -10,
                 "productionTime": 90
             }
@@ -175,14 +163,11 @@
         "name": "Stationary Harvester (Scrap)",
         "buildingType": "Gathering",
         "description": "A stationary harvester that automatically gathers Salvage using Petrol as fuel..",
-        "bmatCost": 0,
         "cmatCost": 150,
-        "pcmatCost": 0,
-        "steelCost": 0,
-        "buildingUpgrades": [ "" ],
+        "isBuilding": true,
         "buildingRecipes": [
             {
-                "inputNames": [ "MaterialOilPetrol" ],
+                "inputNames": [ "$MaterialOilPetrol" ],
                 "inputAmounts": [ 4 ],
                 "outputNames": [ "MaterialRawSalvage" ],
                 "outputAmounts": [ 50 ],
@@ -195,14 +180,12 @@
         "name": "Stationary Harvester (Components)",
         "buildingType": "Gathering",
         "description": "A stationary harvester that automatically gathers Components using Petrol as fuel.",
-        "bmatCost": 0,
         "cmatCost": 175,
-        "pcmatCost": 0,
-        "steelCost": 0,
+        "isBuilding": true,
         "buildingUpgrades": [ "HarvesterComponentsExcavator" ],
         "buildingRecipes": [
             {
-                "inputNames": [ "MaterialOilPetrol" ],
+                "inputNames": [ "$MaterialOilPetrol" ],
                 "inputAmounts": [ 4 ],
                 "outputNames": [ "MaterialRawComponents" ],
                 "outputAmounts": [ 6 ],
@@ -215,14 +198,11 @@
         "name": "Stationary Harvester (Coal)",
         "buildingType": "Gathering",
         "description": "A stationary harvester that automatically gathers Coal using Petrol as fuel.",
-        "bmatCost": 0,
-        "cmatCost": 0,
         "pcmatCost": 25,
-        "steelCost": 0,
-        "buildingUpgrades": [ "" ],
+        "isBuilding": true,
         "buildingRecipes": [
             {
-                "inputNames": [ "MaterialOilPetrol" ],
+                "inputNames": [ "$MaterialOilPetrol" ],
                 "inputAmounts": [ 1 ],
                 "outputNames": [ "MaterialRawCoal" ],
                 "outputAmounts": [ 50 ],
@@ -235,14 +215,11 @@
         "name": "Stationary Harvester (Sulfur)",
         "buildingType": "Gathering",
         "description": "A stationary harvester that automatically gathers Sulfur using Heavy Oil as fuel.",
-        "bmatCost": 0,
-        "cmatCost": 0,
-        "pcmatCost": 0,
         "steelCost": 20,
-        "buildingUpgrades": [ "" ],
+        "isBuilding": true,
         "buildingRecipes": [
             {
-                "inputNames": [ "MaterialOilHeavy" ],
+                "inputNames": [ "$MaterialOilHeavy" ],
                 "inputAmounts": [ 4 ],
                 "outputNames": [ "MaterialRawSulfur" ],
                 "outputAmounts": [ 6 ],
@@ -255,17 +232,13 @@
         "name": "Oil Well",
         "buildingType": "Gathering",
         "description": "Extracts fuel from Crude Oil Fields. Must be constructed nearby.",
-        "bmatCost": 0,
         "cmatCost": 35,
-        "pcmatCost": 0,
-        "steelCost": 0,
+        "isBuilding": true,
         "buildingUpgrades": [ "OilWellElectric", "OilWellFracker" ],
         "buildingRecipes": [
             {
-                "inputNames": [ "" ],
-                "inputAmounts": [ 0 ],
-                "outputNames": [ "MaterialOilCrude", "fluidCan" ],
-                "outputAmounts": [ 1, 1 ],
+                "outputNames": [ "MaterialOilCrude" ],
+                "outputAmounts": [ 1 ],
                 "powerConsumption": 0,
                 "productionTime": 50
             }
@@ -275,19 +248,37 @@
         "name": "Water Pump",
         "buildingType": "Gathering",
         "description": "Pumps water through pipes. Must be built on bodies of water.",
-        "bmatCost": 0,
         "cmatCost": 35,
-        "pcmatCost": 0,
-        "steelCost": 0,
+        "isBuilding": true,
         "buildingUpgrades": [ "WaterPumpElectric" ],
         "buildingRecipes": [
             {
-                "inputNames": [ "" ],
-                "inputAmounts": [ 0 ],
-                "outputNames": [ "MaterialWater", "fluidCan" ],
-                "outputAmounts": [ 1, 1 ],
+                "outputNames": [ "MaterialWater" ],
+                "outputAmounts": [ 1 ],
                 "powerConsumption": 0,
-                "productionTime": 0
+                "productionTime": 50
+            }
+        ]
+    },
+    "OilRig": {
+        "name": "Offshore Platform",
+        "buildingType": "Gathering",
+        "description": "Offshore Platforms are open-water extraction facilities used to extract various oils. A steady supply of processed Coal is required for certain operations, as extracting materials from the ocean floor is a complex process.",
+        "cmatCost": 100,
+        "buildingRecipes": [
+            {
+                "outputNames": [ "$MaterialOilHeavy" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 0,
+                "productionTime": 50
+            },
+            {
+                "inputNames": [ "MaterialRawCoal" ],
+                "inputAmounts": [ 100 ],
+                "outputNames": [ "$MaterialOilEnriched" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 0,
+                "productionTime": 90
             }
         ]
     }
