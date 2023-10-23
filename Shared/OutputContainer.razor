@@ -1,8 +1,11 @@
-﻿<div>
+﻿<div style="grid-template-rows: repeat(@Rows, 1fr)">
     @ChildContent
 </div>
 
 @code {
+    [Parameter]
+    public int Rows { get; set; } = 7;
+
     [Parameter]
     public RenderFragment? ChildContent { get; set; }
 }

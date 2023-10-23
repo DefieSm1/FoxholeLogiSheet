@@ -67,7 +67,7 @@
 			}
 		</ItemGrid>
 	</CalculatorContainer>
-	<CalculatorContainer Height="540px">
+	<CalculatorContainer Height="560px">
 		<CalculatorHeader Text="OUTPUT" >
 			<HeaderButton ParentMethod=@ResetSelectedItems Text="Reset all" />
 		</CalculatorHeader>
@@ -83,12 +83,12 @@
 				</OutputPriceSumContainer>
 			}
 		</div>
-		<OutputContainer>
+		<OutputContainer Rows=4>
 			@foreach (string category in AssemblyBuildingNames)
 			{
 				if (SelectedItems[category].Count() == 0) continue;
 
-				<OutputRow ItemKeys=SelectedItems[category] IconSet="assembly" PriceColumns=6 CategoryKey=@category
+				<OutputRow ItemKeys=SelectedItems[category] IconSet="assembly" PriceColumns=@(category == "AssemblyStationNavalWorks" || category == "AssemblyStationRocket" ? 9 : 6) CategoryKey=@category
 						   OnMouseOver="(itemKey) => { HoveredItem = AssemblyCategories[category][itemKey]; TooltipVisibility = true; TooltipSimplified = true; StateHasChanged(); }"
 						   OnMouseOut="(itemKey) => { HoveredItem = AssemblyCategories[category][itemKey]; TooltipVisibility = false; StateHasChanged(); }"
 						   OnButtonClick="(itemKey, itemNumber) => { SelectedItems[category].RemoveAt(itemNumber); TooltipVisibility = false; StateHasChanged(); }">

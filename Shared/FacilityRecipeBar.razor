@@ -9,7 +9,7 @@
     }
 
     <div class="recipe-info" style="@(OutputAmounts.Count() == 0 ? "background-image: none;" : "")">
-        <p><span class="power-icon"></span>@(PowerConsumption > 0 ? "" : "-")@PowerConsumption MW</p>
+        <p><span class="power-icon"></span>@(PowerConsumption > 0 ? "-" : "")@PowerConsumption MW</p>
         <p>@GetTimestamp(ProductionTime * Multiplier)</p>
     </div>
 
