@@ -1,0 +1,36 @@
+﻿.item-tooltip {
+    position: fixed;
+    z-index: 1;
+    max-width: 410px;
+    background-color: rgba(0, 0, 0, 0.95);
+    color: rgb(230, 230, 230);
+    font-size: 16px;
+}
+
+    .item-tooltip, .item-tooltip > * {
+        pointer-events: none;
+    }
+
+.header-text {
+    background-color: #7F7F7F;
+    margin: 0 !important;
+    padding: 0.4rem;
+    padding-left: 12px;
+}
+
+    .header-text > p {
+        margin: 0 !important;
+        vertical-align: middle;
+    }
+
+.info {
+    margin: 0.8rem;
+}
+
+    .info > p {
+        margin: 0;
+    }
+
+        .info > p > span, .infobox-info > p > i {
+            color: #E5BA82;
+        }

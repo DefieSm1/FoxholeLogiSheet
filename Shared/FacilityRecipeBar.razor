@@ -55,5 +55,4 @@
     public string GetItemHighlight(string item) => SelectedItem == item ? "2px dashed #6098E6" : "inherit";
 
     public string GetTimestamp(int seconds) => TimeSpan.FromSeconds(seconds).ToString(TimeSpan.FromSeconds(seconds).Days > 0 ? @"d\:hh\:mm\:ss" : @"h\:mm\:ss");
-
 }

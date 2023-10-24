@@ -26,7 +26,7 @@
 </ProductionContainer>
 
 <ProductionContainer>
-	<CalculatorContainer Width=565>
+	<CalculatorContainer Width="565px">
 		<CalculatorHeader Text=@CurrentBuilding.Name.ToUpper() />
 		<ItemGrid Columns=6 Rows=1>
 			@foreach(KeyValuePair<string, ProductionItem> item in CurrentBuildingItems)
@@ -51,7 +51,7 @@
 			</ItemGrid>
 		}
 	</CalculatorContainer>
-	<CalculatorContainer Width="200">
+	<CalculatorContainer Width="200px">
 		<CalculatorHeader Text="UPGRADES" />
 		<ItemGrid Columns="2" Rows="1" >
 			@foreach(string upgrade in CurrentBuilding.BuildingUpgrades)
@@ -88,14 +88,14 @@
 			{
 				if (SelectedItems[category].Count() == 0) continue;
 
-				<OutputRow ItemKeys=SelectedItems[category] IconSet="assembly" PriceColumns=@(category == "AssemblyStationNavalWorks" || category == "AssemblyStationRocket" ? 9 : 6) CategoryKey=@category
+				<OutputRow ItemKeys=SelectedItems[category] IconSet="assembly" PriceColumns=6 CategoryKey=@category
 						   OnMouseOver="(itemKey) => { HoveredItem = AssemblyCategories[category][itemKey]; TooltipVisibility = true; TooltipSimplified = true; StateHasChanged(); }"
 						   OnMouseOut="(itemKey) => { HoveredItem = AssemblyCategories[category][itemKey]; TooltipVisibility = false; StateHasChanged(); }"
 						   OnButtonClick="(itemKey, itemNumber) => { SelectedItems[category].RemoveAt(itemNumber); TooltipVisibility = false; StateHasChanged(); }">
 					@foreach (string key in MaterialKeys)
 					{
 						@if (GetQueuePrice(key, category) == 0) continue;
-						<PriceBox MaterialTag=@key Tag=false QueuePrice=@GetQueuePrice(key, category) />
+						<PriceBox MaterialTag=@key Tag=false NoTimeIcon=@(category == "AssemblyStationNavalWorks" || category == "AssemblyStationRocket") QueuePrice=@GetQueuePrice(key, category) />
 					}
 				</OutputRow>
 			}
@@ -147,7 +147,7 @@
 
 	protected override async Task OnInitializedAsync()
 	{
-		await localStorage.SetItemAsync("lastPage", "Assembly");
+		await localStorage.SetItemAsync("lastPage", "assembly");
 
 		Config = AppConfig.GetSection("assembly").Get<AssemblyConfig>() ?? throw new InvalidOperationException("Could not find requested configuration");
 

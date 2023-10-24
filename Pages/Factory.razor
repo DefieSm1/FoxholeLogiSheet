@@ -92,7 +92,7 @@
 
 	protected override async Task OnInitializedAsync()
 	{
-		await localStorage.SetItemAsync("lastPage", "Factory");
+		await localStorage.SetItemAsync("lastPage", "factory");
 
 		Config = AppConfig.GetSection("factory").Get<FactoryConfig>() ?? throw new InvalidOperationException("Could not find requested configuration");
 		List<string> categoriesToLoad = Config.LoadedCategories;

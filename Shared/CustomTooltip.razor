@@ -1,0 +1,20 @@
+﻿<div class="item-tooltip item-list-infobox" hidden="@(!Visibility)">
+	<div class="header-text">
+		<p>@Header</p>
+	</div>
+
+	<div class="info">
+		@ChildContent
+	</div>
+</div>
+
+@code {
+	[Parameter]
+	public bool Visibility { get; set; } = false;
+
+	[Parameter]
+	public string Header { get; set; } = "";
+
+	[Parameter]
+	public RenderFragment? ChildContent { get; set; }
+}

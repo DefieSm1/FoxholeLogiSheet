@@ -13,7 +13,7 @@
         <div class="output-item-count">@ItemKeys.Count()</div>
     </div>
 
-    <div class="output-bottom" style="grid-template-columns: @RepeatString(" 1fr", PriceColumns)">
+    <div class="output-bottom" style="grid-template-columns: repeat(@(PriceColumns), minmax(0, 1fr));">
         @ChildContent
     </div>
 </div>
@@ -50,6 +50,4 @@
         "assembly" => "/Assembly",
         _ => "/ProductionIcons"
     };
-
-    public string RepeatString(string str, int amount) => string.Concat(Enumerable.Repeat(str, amount));
 }

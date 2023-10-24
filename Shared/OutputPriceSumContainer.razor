@@ -1,5 +1,5 @@
 ﻿<div class="container">
-    <div class="sums" style="grid-template-columns: @RepeatString(" 1fr", Columns)">
+    <div class="sums" style="grid-template-columns: repeat(@(Columns), 1fr);">
         @ChildContent
     </div>
 </div>

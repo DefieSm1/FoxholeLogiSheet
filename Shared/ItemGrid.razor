@@ -1,4 +1,4 @@
-﻿<div style="@(SetGridTemplate()); @(OverflowScroll ? "overflow-y: auto;" : "")">
+﻿<div style="grid-template-columns: repeat(@(Columns), 1fr); grid-template-rows: repeat(@(Rows), 1fr); @(OverflowScroll ? "overflow-y: auto;" : "")">
     @ChildContent
 </div>
 
@@ -14,14 +14,4 @@
 
     [Parameter]
     public RenderFragment? ChildContent { get; set; }
-
-    public string RepeatString(string str, int amount) => string.Concat(Enumerable.Repeat(str, amount));
-
-    public string SetGridTemplate()
-    {
-        string columnTemplate = $"grid-template-columns:{RepeatString(" 1fr", Columns)}";
-        string rowTemplate = $"grid-template-rows:{RepeatString(" 1fr", Rows)}";
-
-        return $"{columnTemplate}; {rowTemplate}";
-    }
 }

@@ -1,6 +1,6 @@
 ﻿@using FoxholeLogiSheet.Data
 
-<div class="item-tooltip d-@(Visibility ? "block" : "none") @(Large ? "tooltip-large" : "")">
+<div class="item-tooltip @(Large ? "tooltip-large" : "")" hidden="@(!Visibility)">
 	<div class="tooltip-header">
 		<p>@Item.Name</p>
 	</div>

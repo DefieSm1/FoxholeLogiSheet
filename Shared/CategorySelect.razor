@@ -1,7 +1,7 @@
 ﻿<div>
     @foreach (string category in Categories)
     {
-        <button @onclick="() => OnButtonClick(category)"
+        <button @onclick="() => OnButtonClick!(category)"
                 class="@(category == SelectedCategory ? "selected" : "")"
                 style="background-image: url(icons/ProductionIcons/@(category).png)" />
     }
@@ -15,5 +15,5 @@
     public string SelectedCategory { get; set; } = "";
 
     [Parameter, EditorRequired]
-    public Action<string> OnButtonClick { get; set; }
+    public Action<string>? OnButtonClick { get; set; }
 }

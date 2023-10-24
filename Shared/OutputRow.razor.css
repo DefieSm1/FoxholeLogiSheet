@@ -57,6 +57,8 @@
 .output-bottom {
     height: 40%;
     display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
     background-color: #414241;
     gap: 4px;
     padding: 2px;

@@ -1,6 +1,4 @@
-﻿@inject IConfiguration AppConfig
-
-<div style="background-image: url(icons/ProductionIcons/@(MaterialTag).png) @(MaterialTag == "Time" && TimeSpan.FromSeconds(QueuePrice).Days > 0 ? "background-image: none;" : "")">
+﻿<div style="background-image: url(icons/ProductionIcons/@(MaterialTag).png) @(MaterialTag == "Time" && NoTimeIcon ? "background-image: none;" : "")">
     @if (MaterialTag == "Time")
     {
         @(GetTimestamp(QueuePrice))
@@ -24,6 +22,9 @@
 
     [Parameter]
     public bool Tag { get; set; } = true;
+
+    [Parameter]
+    public bool NoTimeIcon { get; set; } = false;
 
     [Parameter]
     public bool PriceInCrates { get; set; } = false;

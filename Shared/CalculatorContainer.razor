@@ -1,8 +1,8 @@
-﻿<div style="width: @(Width)px; height: @(Height);">@ChildContent</div>
+﻿<div style="width: @(Width); height: @(Height);">@ChildContent</div>
 
 @code {
     [Parameter]
-    public string Width { get; set; } = "725";
+    public string Width { get; set; } = "725px";
 
     [Parameter]
     public string Height { get; set; } = "fit-content";

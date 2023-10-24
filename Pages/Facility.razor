@@ -11,7 +11,7 @@
 <PageHeader>Facility Sheet</PageHeader>
 
 <ProductionContainer>
-	<CalculatorContainer Width="@((FacilityBuildingSet.Count() * 100).ToString())">
+	<CalculatorContainer Width="@((FacilityBuildingSet.Count() * 100).ToString() + "px")">
 		<CalculatorHeader Text="SELECT STRUCTURE">
 			<HeaderButton Text="@($"Switch to {(BuildingSet == "Gathering" ? "Manufacturing" : "Gathering")}")" 
 						  ParentMethod="@(() => { BuildingSet = BuildingSet == "Gathering" ? "Manufacturing" : "Gathering"; SelectedBuilding = BuildingSet == "Gathering" ? "HarvesterSalvage" : Config.DefaultBuilding; } )" />
@@ -29,7 +29,7 @@
 </ProductionContainer>
 
 <ProductionContainer>
-	<CalculatorContainer Width="380" Height="515px">
+	<CalculatorContainer Width="380px" Height="515px">
 		<CalculatorHeader Text="FIND ITEM" >
 			<HeaderButton Text="Unselect" ParentMethod="() => { SelectedItem = null; HighlightBuildings(); StateHasChanged(); }" />
 			<button class="item-select-info"
@@ -48,7 +48,7 @@
 			}
 		</ItemGrid>
 	</CalculatorContainer>
-	<CalculatorContainer Width="120">
+	<CalculatorContainer Width="120px">
 		<CalculatorHeader Text="UPGRADES" />
 		<ItemGrid Columns="1" Rows="1">
 			@foreach (string upgrade in CurrentBuilding.BuildingUpgrades)
@@ -91,23 +91,14 @@
 
 <ItemTooltip Item=@HoveredItem CurrentBuilding="Facility" SelectedCategory="Building" Visibility=@TooltipVisibility Simplified=@TooltipSimplified MaterialKeys=@MaterialKeys />
 
-<div class="item-tooltip item-list-infobox d-@(ItemTooltipVisible ? "block" : "none")">
-	<div class="item-list-infobox-header">
-		<p>Find facility items!</p>
-	</div>
-
-	<div class="item-list-infobox-info">
-		<p>Click an item to find out in what building and/or upgrade it is made and/or used.</p>
-		<br />
-		<p>A <span style="color: #EB1F00">red border</span> means that building/upgrade can <b style="color: #EB1F00">use</b> that item in one or more of its recipes.</p>
-		<p>A <span style="color: #3DAD32">green border</span> means that it can <b style="color: #3DAD32">make</b> that item in one or more of its recipes.</p>
-		<p>A <span style="color: #6098E6">blue border</span> means that it contains both recipes that <b style="color: #EB1F00">use</b> <i style="color: #6098E6"><b>and</b></i> <b style="color: #3DAD32">make</b> that item.</p>
-		<br />
-		<p>A building that doesn't use or make the recipe will still be highlighted if one of its upgrades do.</p>
-		<br />
-		<p>Within the recipe list itself, the selected item will be also given a <span style="color: #6098E6">blue border.</span></p>
-	</div>
-</div>
+<CustomTooltip Visibility=@ItemTooltipVisible Header="Find facility items!">
+	<p>Click an item to find out in what building and/or upgrade it is made and/or used.</p>
+	<p>A <span style="color: #EB1F00">red border</span> means that building/upgrade can <b style="color: #EB1F00">use</b> that item in one or more of its recipes.</p>
+	<p>A <span style="color: #3DAD32">green border</span> means that it can <b style="color: #3DAD32">make</b> that item in one or more of its recipes.</p>
+	<p>A <span style="color: #6098E6">blue border</span> means that it contains both recipes that <b style="color: #EB1F00">use</b> <i style="color: #6098E6"><b>and</b></i> <b style="color: #3DAD32">make</b> that item.</p>
+	<p>A building that doesn't use or make the recipe will still be highlighted if one of its upgrades do.</p>
+	<p>Within the recipe list itself, the selected item will be also given a <span style="color: #6098E6">blue border.</span></p>
+</CustomTooltip>
 
 @code {
 	public FacilityConfig Config { get; set; } = new();
@@ -154,7 +145,7 @@
 
 	protected override async Task OnInitializedAsync()
 	{
-		await localStorage.SetItemAsync("lastPage", "Facility");
+		await localStorage.SetItemAsync("lastPage", "facility");
 
 		Config = AppConfig.GetSection("facility").Get<FacilityConfig>() ?? throw new InvalidOperationException("Could not find requested configuration");
 
