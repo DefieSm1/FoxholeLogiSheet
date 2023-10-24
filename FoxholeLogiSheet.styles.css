@@ -46,43 +46,6 @@
     color: whitesmoke;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
-
-.item-list-infobox[b-22iwbtwwcp] {
-    position: fixed;
-    z-index: 1;
-    max-width: 410px;
-    background-color: rgba(0, 0, 0, 0.95);
-    color: rgb(230, 230, 230);
-    font-size: 16px;
-}
-
-    .item-list-infobox[b-22iwbtwwcp], .item-list-infobox > *[b-22iwbtwwcp] {
-        pointer-events: none;
-    }
-
-.item-list-infobox-header[b-22iwbtwwcp] {
-    background-color: #7F7F7F;
-    margin: 0 !important;
-    padding: 0.4rem;
-    padding-left: 12px;
-}
-
-    .item-list-infobox-header > p[b-22iwbtwwcp] {
-        margin: 0 !important;
-        vertical-align: middle;
-    }
-
-.item-list-infobox-info[b-22iwbtwwcp] {
-    margin: 0.8rem;
-}
-
-    .item-list-infobox-info > p[b-22iwbtwwcp] {
-        margin: 0;
-    }
-
-        .item-list-infobox-info > p > span[b-22iwbtwwcp], .item-list-infobox-info > p > i[b-22iwbtwwcp] {
-            color: #E5BA82;
-        }
 /* /Pages/Factory.razor.rz.scp.css */
 /* /Shared/About.razor.rz.scp.css */
 .about-container[b-dwg33yn5ks] {
@@ -209,6 +172,43 @@ button:hover[b-ta6x8vk70b] {
 .selected[b-ta6x8vk70b] {
     background-color: rgba(255, 255, 255, 0.4);
 }
+/* /Shared/CustomTooltip.razor.rz.scp.css */
+.item-tooltip[b-6fd8o0p2rp] {
+    position: fixed;
+    z-index: 1;
+    max-width: 410px;
+    background-color: rgba(0, 0, 0, 0.95);
+    color: rgb(230, 230, 230);
+    font-size: 16px;
+}
+
+    .item-tooltip[b-6fd8o0p2rp], .item-tooltip > *[b-6fd8o0p2rp] {
+        pointer-events: none;
+    }
+
+.header-text[b-6fd8o0p2rp] {
+    background-color: #7F7F7F;
+    margin: 0 !important;
+    padding: 0.4rem;
+    padding-left: 12px;
+}
+
+    .header-text > p[b-6fd8o0p2rp] {
+        margin: 0 !important;
+        vertical-align: middle;
+    }
+
+.info[b-6fd8o0p2rp] {
+    margin: 0.8rem;
+}
+
+    .info > p[b-6fd8o0p2rp] {
+        margin: 0;
+    }
+
+        .info > p > span[b-6fd8o0p2rp], .infobox-info > p > i[b-6fd8o0p2rp] {
+            color: #E5BA82;
+        }
 /* /Shared/FacilityRecipeBar.razor.rz.scp.css */
 .container[b-wzi826dnd8] {
     background-color: #212121;
@@ -607,6 +607,8 @@ div[b-rmwa4oxe30] {
 .output-bottom[b-phyhao1vm0] {
     height: 40%;
     display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
     background-color: #414241;
     gap: 4px;
     padding: 2px;
