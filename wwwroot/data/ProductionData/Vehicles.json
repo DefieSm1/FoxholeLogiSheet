@@ -234,8 +234,8 @@
     "category": "Freighter",
     "description": "The Basset Motor Society's Ironship-class shipping vessel is used to freight shippable goods and heavy vehicles.",
     "crateSize": 3,
-    "bmatCost": 750,
-    "productionTime": 37500
+    "bmatCost": 500,
+    "productionTime": 25000
   },
   "ShipGunboat": {
     "name": "74b-1 Ronan Gunship",

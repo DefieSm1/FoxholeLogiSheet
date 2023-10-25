@@ -267,7 +267,7 @@
         "cmatCost": 100,
         "buildingRecipes": [
             {
-                "outputNames": [ "$MaterialOilHeavy" ],
+                "outputNames": [ "MaterialOilHeavy" ],
                 "outputAmounts": [ 1 ],
                 "powerConsumption": 0,
                 "productionTime": 50
@@ -275,7 +275,7 @@
             {
                 "inputNames": [ "MaterialRawCoal" ],
                 "inputAmounts": [ 100 ],
-                "outputNames": [ "$MaterialOilEnriched" ],
+                "outputNames": [ "MaterialOilEnriched" ],
                 "outputAmounts": [ 1 ],
                 "powerConsumption": 0,
                 "productionTime": 90
