@@ -10,7 +10,7 @@
   "resources": {
     "assembly": {
       "Blazored.LocalStorage.dll": "sha256-eXVgTw72kEn74FZgDQbLtvAmXbiZDSj5gzUnxVmwowQ=",
-      "FoxholeLogiSheet.dll": "sha256-jG9EzDHOrP6jOqWCfKDQSmTwZ+q2KOogBPeCLN2YyyU=",
+      "FoxholeLogiSheet.dll": "sha256-uSXQcYGJ0dDrOkkhahiQkk252VCyHQYqGQOStV54jXo=",
       "Microsoft.AspNetCore.Components.dll": "sha256-LauOH3S\/rgh68PliRyk2AjZ3Omzjc2f7fwyHfuAyA7A=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-GraYeIB\/0hm9uY5r3QaiP4wjGr+PUwe9PuuMpu3QGIg=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-NSM1B9Pq5744C3D4rbASpDKWSSWh3YUdxbWGpdFcOh4=",
