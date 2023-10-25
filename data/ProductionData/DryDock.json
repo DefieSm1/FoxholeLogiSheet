@@ -48,7 +48,7 @@
     },
     "hullSegments": 20,
     "shellPlating": 20,
-    "trubineComponents": 4,
+    "turbineComponents": 4,
     "productionTime": 36000
   }
 }
