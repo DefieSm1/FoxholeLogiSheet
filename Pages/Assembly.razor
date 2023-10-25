@@ -11,7 +11,7 @@
 <PageHeader>Assembly Sheet</PageHeader>
 
 <ProductionContainer>
-	<CalculatorContainer Width="@((AssemblyBuildings.Count() * 100).ToString())">
+	<CalculatorContainer Width="@((AssemblyBuildings.Count() * 100).ToString() + "px")">
 		<CalculatorHeader Text="SELECT STRUCTURE" />
 		<ItemGrid Columns=@(AssemblyBuildings.Count) Rows=1>
 			@foreach (KeyValuePair<string, ProductionItem> building in AssemblyBuildings)
