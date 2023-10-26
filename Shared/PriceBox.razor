@@ -9,7 +9,7 @@
     }
     else 
     {
-        @(PriceInCrates ? Math.Ceiling(QueuePrice / (PriceInCrates ? 20 : 1)) + " crates" : QueuePrice + " units")
+        @(PriceInCrates ? Math.Ceiling(QueuePrice / (PriceInCrates ? CrateSize() : 1)) + " crates" : QueuePrice + " units")
     }
 </div>
 
@@ -28,6 +28,12 @@
 
     [Parameter]
     public bool PriceInCrates { get; set; } = false;
+
+    public int CrateSize() => MaterialTag switch
+    {
+        "MaterialBasic" => 100,
+        _ => 20
+    };
 
     public string GetTimestamp(double seconds, bool FullStamp = false) => TimeSpan.FromSeconds(seconds).ToString(TimeSpan.FromSeconds(seconds).Days > 0 || FullStamp ? @"d\:hh\:mm\:ss" : @"h\:mm\:ss");
 }
