@@ -21,17 +21,12 @@
 
 			<p class="item-cratesize" hidden="@(Item.CrateSize == 0)">Produces a crate of @(Item.CrateSize)x @(Item.Name)(s)</p>
 
-			@if(!String.IsNullOrEmpty(Item.BaseVehicle) && BaseVehicle != null)
+			@if (BaseVehicle != null)
 			{
-				<p class="item-damageinfo">Requires base vehicle: @BaseVehicle.Name (@BaseVehicle.Category)</p>
+				<p class="highlight">Requires base vehicle: @BaseVehicle.Name (@BaseVehicle.Category)</p>
 			}
 
 			<p class="highlight" hidden="@(Item.ProductionTime == 0)">@GetTimestamp(Item.ProductionTime)</p>
-
-			@if (BaseVehicle != null)
-			{
-				<p class="highlight">@BaseVehicle.Name (@BaseVehicle.Category)</p>
-			}
 
 			<p class="item-cratesize" hidden="@(CurrentBuilding != "Factory" && CurrentBuilding != "MPF" && CurrentBuilding != "Assembly")">
 				<i>Hold SHIFT when clicking to @(CurrentBuilding == "MPF" ? "fill queue with the item" : "add 4 of the item to queue")</i>
