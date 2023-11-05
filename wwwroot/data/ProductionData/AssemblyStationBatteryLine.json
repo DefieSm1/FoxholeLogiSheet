@@ -44,8 +44,11 @@
     "description": "The third Niska Motor Carriage variation sports twin mounted machine guns at the expense of reduced passenger shielding and overall firepower. This simple revision was originally an ad hoc alteration by field engineers, but quickly sought after by armour regiments across the Caoiva-Veli front line.",
     "ammoUsed": "7.92mm",
     "itemSpecifics": {
+      "general": [ "Can tow other vehicles" ],
       "Gunner (Left), Gunner (Right)": [ "$Deals Light Kinetic damage" ]
-    }
+    },
+    "pcmatCost": 5,
+    "assmatCost": [ 0, 0, 0, 5, 0 ]
   },
   "FieldRocketLauncher": {
     "name": "Rycker 4/3-F Wasp Nest",
