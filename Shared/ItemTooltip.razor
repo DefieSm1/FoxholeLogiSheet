@@ -72,7 +72,7 @@
 
 	public string GetTimestamp(double seconds) 
 	{
-		if(CurrentBuilding == "MPF") seconds *= 10;
+		if(CurrentBuilding == "MPF" && SelectedCategory != "Vehicles" && SelectedCategory != "Shippables") seconds *= 10;
 
 		return TimeSpan.FromSeconds(seconds).ToString(TimeSpan.FromSeconds(seconds).Days > 0 ? @"d\:hh\:mm\:ss" : @"h\:mm\:ss");
 	}
