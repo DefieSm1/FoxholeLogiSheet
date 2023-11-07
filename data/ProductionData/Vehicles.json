@@ -179,7 +179,8 @@
     "name": "Rooster - Junkwagon",
     "category": "Trailer",
     "description": "A simple towable trailer that holds common building resources.",
-    "rmatCost": 30,
+    "crateSize": 3,
+    "rmatCost": 10,
     "productionTime": 600
   },
   "ScoutTankSpire": {
