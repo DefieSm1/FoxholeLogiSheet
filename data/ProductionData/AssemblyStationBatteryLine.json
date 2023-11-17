@@ -48,7 +48,8 @@
       "Gunner (Left), Gunner (Right)": [ "$Deals Light Kinetic damage" ]
     },
     "pcmatCost": 5,
-    "assmatCost": [ 0, 0, 0, 5, 0 ]
+    "assmatCost": [ 0, 0, 0, 5, 0 ],
+    "productionTime": 300
   },
   "FieldRocketLauncher": {
     "name": "Rycker 4/3-F Wasp Nest",
