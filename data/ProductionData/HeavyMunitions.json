@@ -2,7 +2,7 @@
   "AmmoShell150": {
     "name": "150mm",
     "description": "Payload for heavy artillery weapons.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals High Explosive damage", "Can ruin structures that have been severly damaged by artillery", "Reduced damaged against Trenches", "Increased damage against Field Structures" ] 
     },
     "crateSize": 5,
@@ -13,7 +13,7 @@
   "AmmoShell120": {
     "name": "120mm",
     "description": "Payload for light artillery weapons.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals High Explosive damage", "Can ruin structures that have been severly damaged by artillery", "Reduced damaged against Trenches", "Increased damage against Field Structures" ] 
     },
     "crateSize": 5,
@@ -24,7 +24,7 @@
   "AmmoShell250": {
     "name": "250mm",
     "description": "A shell that is launched over short distances by a spigot mortar.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals Demolition damage", "Can ruin structures that have been severly damaged by artillery" ] 
     },
     "crateSize": 5,
@@ -35,7 +35,7 @@
   "AmmoShell68": {
     "name": "68mm",
     "description": "A standard anti-tank shell.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals Armour Piercing damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ] 
     },
     "crateSize": 20,
@@ -46,7 +46,7 @@
   "AmmoShell40": {
     "name": "40mm",
     "description": "Standard payload for light tanks.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals Explosive damage", "Can penetrate armoured vehicles" ] 
     },
     "crateSize": 20,

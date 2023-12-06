@@ -11,7 +11,7 @@
   "AmmoAT20": {
     "name": "20mm",
     "description": "Standard ammunition for anti-tank rifles.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals Anti-Tank Kinetic damage", "Can penetrate armoured vehicles" ] 
     },
     "crateSize": 10,
@@ -23,7 +23,7 @@
     "category": "Mounted Anti-Tank RPG",
     "description": "This variant of the Bonesaw MK.3 is specially designed for use with tripod mounts. This affords it with increased stability and maximum potential range.",
     "ammoUsed": "ARC/RPG",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "This can be attached to certain vehicles" ] 
     },
     "crateSize": 5,
@@ -36,7 +36,7 @@
     "category": "Anti-Tank RPG",
     "description": "The pride of the Warden anti-armored arsenal, the Bonesaw Mk.3 has one job; to cut through heavy metal plating of Colonial tanks.",
     "ammoUsed": "ARC/RPG",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles", "Additional 100% chance to penetrate armoured vehicles"  ] 
     },
     "crateSize": 5,
@@ -47,7 +47,7 @@
   "AmmoATIndirect": {
     "name": "ARC/RPG",
     "description": "An anti-tank projectili fied from indirect RPG launchers.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals Armour Piercing damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles", "Additional 100% chance to penetrate armoured vehicles" ] 
     },
     "crateSize": 15,
@@ -60,7 +60,7 @@
     "category": "Flamethrower",
     "description": "Named for the unfortunate trees harmed in the development of this highly destructive weapon, the Wilow's Bane utilizes flammable chemicals and fires them into a concentrated stream through an open flame. This liquid flame ignites Colonial emplacements and garrisons to route infantry while reducing their defenses to a pile of ash.",
     "ammoUsed": "Wilow's Bane Ammo, \"Molten Wind\" v.II Ammo",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "How'd you like your collies, original, or extra crispy?" ] 
     },
     "crateSize": 10,
@@ -72,7 +72,7 @@
     "name": "Tremola Grenade GPb-1",
     "category": "HE Grenade",
     "description": "An explosive Estrllan grenade specially designed for use with handheld grenade launchers. This modern grenade boasts a large payload and is deadly to lingering infantry and structural supports.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals Explosive damage" ] 
     },
     "crateSize": 20,
@@ -85,7 +85,7 @@
     "category": "Mounted Machinegun",
     "description": "Early iterations of this machinegun were built to be emplaced in bunkers and on the decks of lightly armed warships, the Ratcatcher is Harvey Malone’s first freely mountable infantry weapon designed for field use. Just like its predecessors, this heavy weapon suppresses enemy soldiers with unmatched efficiency.",
     "ammoUsed": "12.7mm",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "This can be attached to certain vehicles" ] 
     },
     "crateSize": 5,
@@ -96,7 +96,7 @@
   "AmmoShell30": {
     "name": "30mm",
     "description": "Standard explosive shell with certain small vehicles and infantry weapons",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals Explosive damage", "Can penetrate armoured vehicles" ] 
     },
     "crateSize": 20,
@@ -117,7 +117,7 @@
   "AmmoMortarFlare": {
     "name": "Flare Mortar Shell",
     "description": "A long-burning flare that ignites midair to illuminate a large area and reveals enemy targets.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals Eye-Hurting Photon damage" ] 
     },
     "crateSize": 15,
@@ -128,7 +128,7 @@
   "AmmoMortarShrapnel": {
     "name": "Shrapnel Mortar Shell",
     "description": "A payload filled with shrapnel used with mortar tubes. Devestates nearby infantry.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals Shrapnel damage", "Always causes target to bleed" ] 
     },
     "crateSize": 15,
@@ -139,7 +139,7 @@
   "AmmoMortarHE": {
     "name": "Mortar Shell",
     "description": "An explosive payload used with mortar tubes.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals High Explosive damage", "Reduced damage against Trenches", "Increased damage against Field Structures" ] 
     },
     "crateSize": 15,
@@ -151,7 +151,7 @@
     "name": "BF5 White Ash Flask Grenade",
     "category": "Anti-Tank Grenade",
     "description": "An explosive flask used for melting enemy armor. This carefully designed liquid bomb explodes into a dazzling flash of molten debris upon impact.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals Anti-Tank Explosive damage", "High chance of disabling Track subsystem" ] 
     },
     "crateSize": 10,
@@ -163,7 +163,7 @@
     "name": "Mammon 91-b",
     "category": "HE Grenade",
     "description": "This densely packed, high-explosive grenade is designed to damage structures and vehicles.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals Explosive damage" ] 
     },
     "crateSize": 20,
@@ -174,7 +174,7 @@
   "GrenadeATSticky": {
     "name": "Anti-Tank Sticky Bomb",
     "description": "An adherable grenade designed to penetrate heavy tank armor. The sticky bomb can only be thrown a short distance and is ineffective against structures.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals Anti-Tank Explosive damage", "High chance of disabling Track subsystem" ] 
     },
     "crateSize": 10,
@@ -187,7 +187,7 @@
     "category": "Mounted RPG Launcher",
     "description": "This unique duel-barrelled RPG launcher can fire two RPG shells in relatively quick succession. This increase in firepower makes it nearly impossible for a single soldier to operate without the support of a sturdy mount.",
     "ammoUsed": "RPG",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "This can be attached to certain vehicles" ] 
     },
     "crateSize": 5,
@@ -200,7 +200,7 @@
     "category": "RPG",
     "description": "The Cutler Launcher is capable of firing and unguided, rocket-propelled grenade over short distances with startling efficiency. Its simple design allows for easy deployment and storage.",
     "ammoUsed": "RPG",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals Explosive damage", "Can penetrate armoured vehicles" ] 
     },
     "crateSize": 5,
@@ -211,7 +211,7 @@
   "AmmoRPG": {
     "name": "RPG",
     "description": "A fast-moving explosive projectile used with RPG launchers.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals Explosive damage", "Can penetrate armoured vehicles" ] 
     },
     "crateSize": 15,

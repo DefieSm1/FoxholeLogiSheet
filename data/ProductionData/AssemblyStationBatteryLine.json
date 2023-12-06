@@ -4,7 +4,8 @@
     "category": "Half-Track",
     "description": "A first of its kind, the Skycaller is a variation of the Niska Motor Carriage with a Rycker designed rocket battery fited in the rear bed. This unique armoured vehicle quickly fires rockets over long distances with ease, and can be rearmed and relocated at the drop of a hat. The Skycaller is the deadly result of combined Nevish and Caoivish engineering.",
     "ammoUsed": "4C-Fire Rocket",
-    "itemSpecifics":{
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
       "Gunner": [ "$Deals Incendiary damage", "Deals High Explosive damage on impact" ] 
     },
     "pcmatCost": 10,
@@ -18,6 +19,7 @@
     "description": "Fitted with a heavy-duty anti-tank gun, the Blinder is capable of punching through all but the most tempered of alloys.",
     "ammoUsed": "68mm",
     "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
       "Gunner (Rear)": [ "$Deals Armour Piercing damage", "Can penetrate vehicles", "High chance to penetrate armoured vehicles" ] 
     },
     "pcmatCost": 5,
@@ -30,7 +32,8 @@
     "category": "Scout Tank",
     "description": "Originally designed as a mock-up for more sophisticated rocket platforms, the Jester gets its designation from the response to reckless early prototypes that were bolted onto stripped down King Spires. This unusual vehicle can fire specialized rockets over long distances. Its light frame makes it easy to reposition, but vulnerable to sabotage.",
     "ammoUsed": "3C-High Explosive Rocket",
-    "itemSpecifics":{
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
       "Gunner": [ "$Deals Incendiary damage", "Deals High Explosive damage on impact" ] 
     },
     "pcmatCost": 20,
@@ -44,7 +47,7 @@
     "description": "The third Niska Motor Carriage variation sports twin mounted machine guns at the expense of reduced passenger shielding and overall firepower. This simple revision was originally an ad hoc alteration by field engineers, but quickly sought after by armour regiments across the Caoiva-Veli front line.",
     "ammoUsed": "7.92mm",
     "itemSpecifics": {
-      "general": [ "Can tow other vehicles" ],
+      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Can tow certain vehicles" ],
       "Gunner (Left), Gunner (Right)": [ "$Deals Light Kinetic damage" ]
     },
     "pcmatCost": 5,
@@ -56,7 +59,8 @@
     "category": "Field Launcher",
     "description": "Lyle Rycker first built a prototype of the Wasp Nest as a test for his rack mounted rocket batteries that would eventually find their way onto armoured vehicles. Capable of firing twelve compact rockets in quick succession, the Wasp Nest became a quick favourite of the Warden infantry testing it, so an official design was requisitioned.",
     "ammoUsed": "4C-Fire Rocket",
-    "itemSpecifics":{
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables", "Can be towed by certain vehicles" ],
       "Cannoneer (Right)": [ "$Deals Incendiary damage", "Deals High Explosive damage on impact" ] 
     },
     "pcmatCost": 20,

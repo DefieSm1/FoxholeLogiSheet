@@ -4,7 +4,7 @@
     "category": "Super Tank",
     "description": "This gargantuan beast is the brainchild of Gray Cullen. Once thought impossible, the Predator was Cullen's idea of how a great ship might operate on land. It boasts two sets of quad-barrelled grenade launches and a heavy-duty 94.5mm forward facing cannon. While limitations of ground-based travel posed certain restrictions on the scope of the project, Cullen wasn't deterred and made necessary adjustments to meet his vision of the ideal land ship.",
     "ammoUsed": "94.5mm, Tremola Grenade GPb-1, PT-815 Smoke Grenade, Green Ash Grenade, A3 Harpa Fragmentation Grenade",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "Uses Enriched Oil as fuel" ],
       "Gunner (Front)": [ "Equipped with a high velocity barrel that deals 25% extra damage per shot", "$Deals Armour Piercing damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles", "Higher base chance to disable vehicle subsystems" ] 
     },
@@ -17,8 +17,8 @@
     "category": "Battle Tank",
     "description": "A heavy-duty Battle Tank with thick armour plating and destructive firepower. The Flood is fitted with a 75mm turret and a front-facing 12.7mm anti-infantry machine gun. The heavy armour limits top speed, but in exchange it can take a lot of punishment.",
     "ammoUsed": "75mm, 12.7mm",
-    "itemSpecifics":{
-      "general": [ "Uses Heavy Oil as fuel" ],
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Uses Heavy Oil as fuel" ],
       "Turret (Center)": [ "$Deals Explosive damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ],
       "Turret (Front)": [ "Equipped with a low velocity barrel that deals 36% less damage per shot", "$Deals Heavy Kinetic damage" ] 
     },
@@ -31,8 +31,8 @@
     "category": "Battle Tank",
     "description": "The Juggernaut is a heavily armoured Flood variant fitted with a heavy flamethrower turret that fires an advanced adhesive propellant. Its shovel-like treads may hinder top speeds, but this beast is quite capable in extreme weather conditions.",
     "ammoUsed": "75mm, Flame Ammo",
-    "itemSpecifics":{
-      "general": [ "Uses Heavy Oil as fuel" ],
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Uses Heavy Oil as fuel" ],
       "Turret (Center)": [ "$Deals Explosive damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ],
       "Gunner (Front)": [ "$Deals Incendiary damage" ] 
     },
@@ -46,6 +46,7 @@
     "description": "Built on an inverted Flood chassis, the Mk. IX Stain is a fully-featured mobile artillery platform. Once deployed, a 150mm cannon over long-distances to pummel enemy positions with indirect fire.",
     "ammoUsed": "150mm",
     "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Uses Heavy Oil as fuel" ],
       "Cannoneer": [ "$Deals High Explosive damage", "Can ruin structures that have been severly damaged by artillery", "Reduced damage against Trenches", "Increased damage against Field Structures" ]
     },
     "steelCost": 150,

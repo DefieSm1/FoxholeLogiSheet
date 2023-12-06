@@ -78,6 +78,14 @@
                 "outputAmounts": [ 1, 5 ],
                 "powerConsumption": 2,
                 "productionTime": 25
+            },
+            {
+                "inputNames": [ "MaterialRawSalvage" ],
+                "inputAmounts": [ 25 ],
+                "outputNames": [ "MaterialConstruction", "UtilityMetalBeam" ],
+                "outputAmounts": [ 1, 5 ],
+                "powerConsumption": 2,
+                "productionTime": 25
             }
         ]
     },
@@ -124,16 +132,16 @@
     "MetalworksFactoryRecycler": {
         "name": "Recycler",
         "description": "Advanced sorting machinery for sifting piles of scrap metal for useful materials.",
-        "cmatCost": 25,
+        "cmatCost": 150,
         "isBuilding": true,
         "buildingRecipes": [
             {
-                "inputNames": [ "MaterialConstruction", "MaterialRawComponents" ],
-                "inputAmounts": [ 3, 20 ],
-                "outputNames": [ "MaterialProcessedConstruction", "UtilityMetalBeam" ],
-                "outputAmounts": [ 1, 1 ],
-                "powerConsumption": 5,
-                "productionTime": 60
+                "inputNames": [ "MaterialConstruction", "UtilityMetalBeam", "$MaterialOilHeavy" ],
+                "inputAmounts": [ 15, 1, 10 ],
+                "outputNames": [ "MaterialProcessedConstruction" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 8,
+                "productionTime": 90
             },
             {
                 "inputNames": [ "MaterialRawComponentsDamaged" ],
@@ -330,8 +338,8 @@
             {
                 "inputNames": [ "MaterialRawCoal", "$MaterialWater" ],
                 "inputAmounts": [ 300, 50 ],
-                "outputNames": [ "MaterialConcrete", "$MaterialOilCrude" ],
-                "outputAmounts": [ 1, 50 ],
+                "outputNames": [ "MaterialConcrete", "MaterialRawSulfur", "$MaterialOilCrude" ],
+                "outputAmounts": [ 1, 10, 50 ],
                 "powerConsumption": 6,
                 "productionTime": 270
             }
@@ -340,7 +348,7 @@
     "CoalRefineryAdvancedLiquifier": {
         "name": "Advanced Coal Liquefier",
         "description": "Advanced processing vats that refine large amounts of coal into Heavy Oil.",
-        "steelCost": 65,
+        "steelCost": 40,
         "isBuilding": true,
         "buildingRecipes": [
             {
@@ -350,6 +358,14 @@
                 "outputAmounts": [ 260, 60 ],
                 "powerConsumption": 6,
                 "productionTime": 405
+            },
+            {
+                "inputNames": [ "MaterialRawCoal", "$MaterialWater" ],
+                "inputAmounts": [ 300, 100 ],
+                "outputNames": [ "MaterialConcrete", "MaterialRawSulfur", "$MaterialOilCrude" ],
+                "outputAmounts": [ 1, 15, 100 ],
+                "powerConsumption": 6,
+                "productionTime": 270
             }
         ]
     },

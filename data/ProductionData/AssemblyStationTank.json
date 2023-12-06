@@ -4,9 +4,9 @@
     "category": "Destroyer Tank",
     "description": "In response to the Legion embarking on aggressive northern offensives, the Firebrand is designed to conflagrate and eradicate their garrisons with ease. Built using the aggressive frame of the Widow, the Firebrand is a pure force of nature when paired with a secondary armoured escort.",
     "ammoUsed": "Flame Ammo",
-    "itemSpecifics":{
-      "general": [ "I LOVE THE SMELL OF BURNING GREENS IN THE MORNING", "$SMELLS OF VICTORY" ],
-      "Gunner (Front)": [ "$Deals Incendiary damage" ] 
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables"],
+      "Gunner (Front)": [ "$Deals Incendiary damage", "I LOVE THE SMELL OF BURNING GREENS IN THE MORNING", "SMELLS OF VICTORY"  ] 
     },
     "pcmatCost": 10,
     "assmatCost": [ 0, 10, 15, 0, 0 ],
@@ -18,7 +18,8 @@
     "category": "Light Tank",
     "description": "The Ironhide Light Tank is similar to the Mk. III but reinforced with plates of heavy steel at the expense of speed and maneuverability.",
     "ammoUsed": "40mm",
-    "itemSpecifics":{
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ],
       "Turret (Center)": [ "$Deals Explosive damage", "Can penetrate armoured vehicles" ] 
     },
     "pcmatCost": 8,
@@ -31,6 +32,9 @@
     "category": "Light Tank",
     "description": "A modified Devitt fitted with a specializes Cain mortar turret at the expense of top speed.",
     "ammoUsed": "Mortar Shell, Shrapnel Mortar Shell, Flare Mortar Shell",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ]
+    },
     "pcmatCost": 3,
     "assmatCost": [ 20, 0, 0, 3, 0 ],
     "baseVehicle": "LightTank",
@@ -41,7 +45,8 @@
     "category": "Assault Tank",
     "description": "The Chieftain assault tank is fitted with asymmetrical armaments, including a 250mm mortar cannon and a twin-barreled 12.7mm turret.",
     "ammoUsed": "12.7mm, 250mm",
-    "itemSpecifics":{
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
       "Turret": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "$Deals Heavy Kinetic damage" ] 
     },
     "pcmatCost": 5,
@@ -54,8 +59,8 @@
     "category": "Cruiser Tank",
     "description": "Colm Gallagher's engineers desginged a variation on the Outlaw that features an independently rotating MG turret sitting atop the main armament of twin anti-tank cannons. What it lack in raw firepower compared to its older sibling, the Highwayman more than makes up for it with versatility.",
     "ammoUsed": "20mm, 12.7mm",
-    "itemSpecifics":{
-      "general": [ "Engine can be boosted for increased top speed" ],
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Engine can be boosted for increased top speed" ],
       "Turret": [ "Equipped with a low velocity barrel that deals 50% less damage per shot", "$Deals Anti-Tank Kinetic damage", "Can penetrate armoured vehicles" ],
       "Gunner (Left)": [ "$Deals Heavy Kinetic damage" ]
     },
@@ -68,7 +73,8 @@
     "name": "Huber Starbreaker 94.5mm",
     "description": "Built to compliment other free-standing artillery pieces, the emplaced Huber Starbreaker launches 94.5mm shells over very long distances. A necessary tool for infantry to knock back armoured Colonial advances.",
     "ammoUsed": "94.5mm",
-    "itemSpecifics":{
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
       "Turret": [ "Equipped with a highg velocity barrel that deals 50% extra damage per shot", "$Deals Armour Piercing damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles", "Higher base chance to disable vehicle subsystems" ]
     },
     "pcmatCost": 135,

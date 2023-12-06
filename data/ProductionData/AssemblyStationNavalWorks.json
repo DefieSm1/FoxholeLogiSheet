@@ -2,6 +2,9 @@
   "NavalHullSegments": {
     "name": "Naval Hull Segments",
     "description": "Foundational elements required to construct the hulls of large naval vessels.",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ]
+    },
     "pcmatCost": 60,
     "shieldingCost": 4,
     "rareCost": 4,
@@ -11,6 +14,9 @@
   "NavalShellPlating": {
     "name": "Naval Shell Plating",
     "description": "Highly resistant external plating used to protect naval vessels from damage and wear.",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ]
+    },
     "cmatCost": 4,
     "shieldingCost": 1,
     "productionTime": 300
@@ -18,6 +24,9 @@
   "NavalTurbineComponents": {
     "name": "Naval Turbine Components",
     "description": "A series of intricate gears, turbines, and engines used in large naval vessels.",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ]
+    },
     "rareCost": 20,
     "assmatCost": [ 0, 0, 0, 0, 20 ],
     "productionTime": 43200

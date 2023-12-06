@@ -20,7 +20,7 @@
   "AmmoRifle792": {
     "name": "7.92mm",
     "description": "Standard ammunition for Storm Rifles and Armored Cars.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals Light Kinetic damage" ] 
     },
     "crateSize": 30,
@@ -32,7 +32,7 @@
     "category": "Machine Gun",
     "description": "This heavy machine gun is bulky enough to require a steady surface to maintain stability. The Malone series of machine guns are unmatched defenders on the battlefield.",
     "ammoUsed": "12.7mm",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "Equipped with a low velocity barrel that deals 36% less damage per shot" ] 
     },
     "crateSize": 5,
@@ -43,7 +43,7 @@
     "name": "A3 Harpa Fragmentation Grenade",
     "category": "Grenade",
     "description": "This anti-personnel fragmentation grenade is designed with pull-pin mechanics and a time fuse for user safety. Serrations in the casing allow for a better grip and increased fragmentation effectiveness.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals Light Kinetic damage" ] 
     },
     "crateSize": 20,
@@ -56,7 +56,7 @@
     "category": "Pistol",
     "description": "This unique sidearm fires in three-round bursts. The Cascadier may not have the stopping power of its cousins, but it more than makes up for it with its lightweight frame, concealability, and fire rate.",
     "ammoUsed": "8mm",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "Equipped with a low velocity barrel that deals 11% less damage per shot" ] 
     },
     "crateSize": 40,
@@ -66,7 +66,7 @@
   "AmmoPistol8": {
     "name": "8mm",
     "description": "Standard ammunition for pistols.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals Light Kinetic damage", "Gotta say, interesting idea you've got there" ] 
     },
     "crateSize": 40,
@@ -87,7 +87,7 @@
     "category": "Heavy Rifle",
     "description": "The weapon of choice for pirates and smugglers, its legend is well-earned. With incredibly high stopping power and unique revolver mechanism, the Hangman often plays judge, jury, and executioner.",
     "ammoUsed": ".44",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "Compatible ammo with attached The Ospreay (Grenade Launcher): Green Ash Grenade, A3 Harpa Fragmentation Grenade", "Allows Buckhorn CCQ-18 (Bayonet) attachement", "Equipped with a high velocity barrel that deals 29% extra damage per shot"  ] 
     },
     "crateSize": 20,
@@ -97,7 +97,7 @@
   "AmmoPistol44": {
     "name": ".44",
     "description": "Standard ammunition for revolvers.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals Light Kinetic damage" ] 
     },
     "crateSize": 40,
@@ -109,7 +109,7 @@
     "category": "Rifle",
     "description": "The precursor to the storm rifle, the Sampo Auto-Rifle, is a mastercraft of its day. With a single shot and automatic fire mode, this versatile rifle may not reach the fire rates of automatic weapons but more than makes up for it with utility.",
     "ammoUsed": "7.62mm",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "Equipped with a low velocity barrel that deals 19% less damage per shot" ] 
     },
     "crateSize": 20,
@@ -121,7 +121,7 @@
     "category": "Rifle",
     "description": "The Blakerow is a carbine with a high rate of fire compared to its bolt-action predecessor. This increased fire rate does come at the cost of innate stopping power; however, its versatility and lightweight frame more than makes up for any perceived shortcomings.",
     "ammoUsed": "7.62mm",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "Compatible ammo with attached The Ospreay (Grenade Launcher): Green Ash Grenade, A3 Harpa Fragmentation Grenade", "Allows Buckhorn CCQ-18 (Bayonet) attachement", "Equipped with a low velocity barrel that deals 11% less damage per shot" ] 
     },
     "crateSize": 20,
@@ -133,7 +133,7 @@
     "category": "Long Rifle",
     "description": "The Clancy Cinder is a classic, high-powered long rifle designed for use in mid-to-long range encounters. First deployed with the Hands during a high-risk operation in Acrithia.",
     "ammoUsed": "7.62mm",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "Compatible ammo with attached The Ospreay (Grenade Launcher): Green Ash Grenade, A3 Harpa Fragmentation Grenade", "Allows Buckhorn CCQ-18 (Bayonet) attachement" ]
     },
     "crateSize": 15,
@@ -145,7 +145,7 @@
     "category": "Rifle",
     "description": "Initially a field-modified Loughcaster, the Hawthorne sports a sawed-off barrel and a much lower profile than its ancestor. While sacrificing accuracy, its lightweight frame opens up the Hawthorne to a much higher degree of flexibility in battle and can be carried alongside a heavier primary firearm.",
     "ammoUsed": "7.62mm",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "Allows Buckhorn CCQ-18 (Bayonet) attachement", "Equipped with a low velocity barrel that deals 11% less damage per shot" ] 
     },
     "crateSize": 15,
@@ -169,7 +169,7 @@
     "category": "Sniper Rifle",
     "description": "A heavy-duty, long-range marksman rifle. The Clancy-Raca has one hell of a kick but is fitted with a powerful scope, allowing infantry to survey the battlefield and provide support from a safe location.",
     "ammoUsed": "7.62mm",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "Equipped with a high velocity barrel that deals 35% extra damage per shot" ] 
     },
     "crateSize": 3,
@@ -180,7 +180,7 @@
   "AmmoRifle762": {
     "name": "7.62mm",
     "description": "Standard ammunition for rifles.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals Light Kinetic damage" ] 
     },
     "crateSize": 40,
@@ -199,7 +199,7 @@
   "AmmoBuckshot": {
     "name": "Buckshot",
     "description": "Standard ammunition for Shotguns.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals Light Kinetic damage" ] 
     },
     "crateSize": 40,
@@ -227,7 +227,7 @@
   "AmmoSMG9": {
     "name": "9mm",
     "description": "Standard ammunition for submachine guns.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals Light Kinetic damage" ] 
     },
     "crateSize": 40,
@@ -246,17 +246,17 @@
     "name": "Green Ash Grenade",
     "category": "Gas Grenade",
     "description": "Green ash is an asphyxiating toxin. Inhaling it without protection will result in a quick death. Be sure to wear a gas mask with fresh filters when handling Green Ash.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals Poisonous Gas damage", "Causes damage over time" ] 
     },
-    "crateSize": 10,
+    "crateSize": 5,
     "bmatCost": 140,
     "productionTime": 100
   },
   "AmmoMG127": {
     "name": "12.7mm",
     "description": "Standard ammunition for machine guns.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals Heavy Kinetic damage" ] 
     },
     "crateSize": 20,

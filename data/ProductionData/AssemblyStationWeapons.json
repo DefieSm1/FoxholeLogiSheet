@@ -5,7 +5,7 @@
     "description": "Armed with a rack of Bonesaw mortar launchers, the Thornfall is designed to launch an indirect mechanized assault on enemy armour. This unique vehicle supports an allied assault and cannot withstand large amounts of punishment.",
     "ammoUsed": "7.92mm, ARC/RPG",
     "itemSpecifics": {
-      "general": [ "Engine can be boosted for increased top speed" ],
+      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Engine can be boosted for increased top speed" ],
       "Turret": [ "$Deals Light Kinetic damage" ]
     },
     "steelCost": 10,
@@ -19,6 +19,7 @@
     "description": "A cut down variation of the Silverhand Assault Tank that sacrifices armour and protection in favour of a high-powered 94.5mm cannon. This open-top weapon platfrom is uniquely designed to intercept enemy armour before they're given time to retaliate. Its moniker is a tribute to the maiming of the great king the Silverhand is named for; while his title was stripped, and his pride damage, his rage was never quelled.",
     "ammoUsed": "94.5mm",
     "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
       "Gunner": [ "Equipped with a low velocity barrel that deals 31% less damage per shot", "$Deals Armour Piercing damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles", "Higher base chance to disable vehicle " ]
     },
     "steelCost": 40,
@@ -31,7 +32,8 @@
     "category": "Large Field Gun",
     "ammoUsed": "75mm",
     "itemSpecifics": {
-      "Cannoneer": [ "$Deals Explosive damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ]
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables", "Can be towed by certain vehicles" ],
+      "Cannoneer": [ "Equipped with a high velocity barrel that deals 35% extra damage per shot", "$Deals Explosive damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ]
     },
     "steelCost": 15,
     "assmatCost": [ 0, 20, 15, 0, 0 ],

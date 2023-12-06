@@ -3,6 +3,9 @@
     "name": "BMS - Scrap Hauler",
     "category": "Harvester",
     "description": "The Scrap Hauler, designed by the Bassett Motor Society is a heavy-duty piece of machinery designed to reduce scrap metal and other materials into usable, raw resources. Scrap Haulers are often used to extract battlefield resources following skirmishes.",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables" ]
+    },
     "pcmatCost": 90,
     "assmatCost": [ 0, 0, 0, 25, 0 ],
     "productionTime": 900
@@ -11,6 +14,9 @@
     "name": "BMS - Fabricator",
     "category": "Advanced Construction Vehicle",
     "description": "An advanced variant of the Universal Assembly Rig, the BMS - Fabricator is fitted with a unique kit designed to handle advanced or specialized construction and excavation jobs.",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ]
+    },
     "pcmatCost": 10,
     "baseVehicle": "ConstructionVehicle",
     "productionTime": 900
@@ -20,7 +26,8 @@
     "category": "Scout Tank",
     "description": "A heavily armoured variant of the King Spire, the Gallant Mk. II boasts a weighty 30mm cannon at the cost of top speed.",
     "ammoUsed": "30mm",
-    "itemSpecifics":{
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ],
       "Turret (Front)": [ "$Deals Explosive damage", "Can penetrate armoured vehicles" ] 
     },
     "pcmatCost": 5,
@@ -33,7 +40,8 @@
     "category": "Heavy Field Cannon",
     "description": "The Rampart is a powerful field cannon capable of dealing devastating damage to all but the heaviest of armoured vehicles while providing its crew with comprehensive ballistic shielding.",
     "ammoUsed": "68mm",
-    "itemSpecifics":{
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables", "Can be towed by certain vehicles" ],
       "Cannoneer (Right)": [ "Equipped with a high velocity barrel that deals 25% extra damage per shot", "$Deals Armour Piercing damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ] 
     },
     "pcmatCost": 5,
@@ -45,6 +53,9 @@
     "name": "Rooster - Tumblebox",
     "category": "Trailer",
     "description": "A simple towable trailer that holds heavier building materials.",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables", "Can be towed by certain vehicles" ]
+    },
     "pcmatCost": 10,
     "assmatCost": [ 0, 5, 0, 0, 0 ],
     "baseVehicle": "TrailerResource",
@@ -54,6 +65,9 @@
     "name": "Rooster - Lamploader",
     "category": "Trailer",
     "description": "A simple towable trailer that holds various fuel sources and can be used to refuel vehicles.",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables", "Can be towed by certain vehicles" ]
+    },
     "pcmatCost": 10,
     "assmatCost": [ 0, 5, 0, 0, 0 ],
     "baseVehicle": "TrailerResource",
@@ -64,7 +78,7 @@
     "category": "Heavy-Duty Truck",
     "description": "This heavy-duty service vehicle has reinforced tires orignally designed to haul large resource caches and heavy weapons along the craggy cliffs of Sorovia.",
     "itemSpecifics": {
-      "general": [ "Can tow other vehicles" ]
+      "general": [ "Can tow certain vehicles" ]
     },
     "pcmatCost": 40,
     "productionTime": 600

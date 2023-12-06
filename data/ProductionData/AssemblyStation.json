@@ -2,7 +2,7 @@
   "MaterialPallet": {
     "name": "Material Pallet",
     "description": "A material pallet.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "I miss small containers..." ] 
     },
     "bmatCost": 25,
@@ -12,8 +12,8 @@
     "name": "Dunne Leatherback 2a",
     "category": "Truck",
     "description": "A heavy, reinforced Dunne transport. Fitted with a heavier frame, the Leatherback is capable of enduring more punishment at the cost of initial acceleration.",
-    "itemSpecifics":{
-      "general": [ "Can tow other vehicles", "I AM F%&#!G INVINCIBLE!" ] 
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Can tow certain vehicles", "I AM F%&#!G INVINCIBLE!" ] 
     },
     "cmatCost": 10,
     "baseVehicle": "Truck",
@@ -23,8 +23,8 @@
     "name": "Dunne Landrunner 12c",
     "category": "Truck",
     "description": "This standard Truck is fitted with rugged off-road treads, allowing for more efficient movement on rough terrain and conditions at the expense of maximum speed.",
-    "itemSpecifics":{
-      "general": [ "Can tow other vehicles" ] 
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Can tow certain vehicles" ] 
     },
     "cmatCost": 10,
     "baseVehicle": "Truck",
@@ -35,6 +35,9 @@
     "category": "Small Train Locomotive",
     "description": "The Mineseeker is the Bassett Motor Society's mechanized mule. This small 0-4-0 locomotive can haul tonnes of weight over short distances with little overhead. Ideal for a mining operation or short-range supply chains.",
     "ammoUsed": "Coal",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ]
+    },
     "cmatCost": 125,
     "assmatCost": [ 10, 20, 0, 0, 0 ],
     "productionTime": 900
@@ -43,6 +46,9 @@
     "name": "BMS Railtruck",
     "category": "Small Container Car",
     "description": "A small gauge container car for transporting raw materials.",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ]
+    },
     "cmatCost": 35,
     "assmatCost": [ 15, 5, 0, 0, 0 ],
     "productionTime": 300
@@ -51,6 +57,9 @@
     "name": "BMS Linerunner",
     "category": "Small Flatbed Car",
     "description": "A low profile flatbed car for transporting large resources and munitions over short distances on small gauge tracks.",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ]
+    },
     "cmatCost": 35,
     "assmatCost": [ 15, 5, 0, 0, 0 ],
     "productionTime": 300
@@ -60,6 +69,9 @@
     "category": "Fire Engine",
     "description": "A simple variant of the Dunne Responder 3e that's fitted with a high-powered hose designed to extinguish raging flames.",
     "ammoUsed": "Water",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables" ]
+    },
     "cmatCost": 15,
     "assmatCost": [ 0, 5, 0, 0, 0 ],
     "baseVehicle": "TruckAmbulance",
@@ -69,6 +81,9 @@
     "name": "BMS Tinderbox",
     "category": "Small Liquid Container Car",
     "description": "The Tinderbox is a simple car used for transporting liquids between facilities.",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ]
+    },
     "cmatCost": 35,
     "assmatCost": [ 5, 15, 0, 0, 0 ],
     "productionTime": 300
