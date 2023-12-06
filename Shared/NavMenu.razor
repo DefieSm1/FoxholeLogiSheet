@@ -26,7 +26,7 @@
                 <span class="oi oi-info" aria-hidden="true"></span><span class="nav-link-text">About</span>
             </NavLink>
         </div>
-        @*<span class="nav-item nav-link-text px-1" style="color: whitesmoke; font-size: 18px; margin-left: 8px;"><i>More to come!</i></span> Hidden, for now ;D*@
+        <span class="nav-item nav-link-text px-1" style="color: #E5BA82; font-size: 18px; margin-left: 8px;"><i>Up to date for Update @(GameVersion!)</i></span>
     </nav>
 </div>
 
@@ -34,4 +34,6 @@
 
 @code {
     public bool ShowAbout { get; set; } = false;
+
+    int? GameVersion = typeof(Program).Assembly.GetName().Version?.Build;
 }
