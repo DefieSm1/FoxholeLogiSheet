@@ -1,7 +1,7 @@
 {
   "entryAssembly": "FoxholeLogiSheet",
   "resources": {
-    "hash": "sha256-V9qVeBcsDG8S01ys7Pj2JAKcI7Jq7/YCwrzJN2Y3ZCs=",
+    "hash": "sha256-ZvR3VVqIkqr+qD2sfORtb72+667VUYeBsoiCtr/lOOg=",
     "runtime": {
       "dotnet.7.0.14.mikshhdjmu.js": "sha256-YWGUknGRzP/fgO6YjvCJKPVQNZAPEd6ll+rHfQEIW+I=",
       "dotnet.timezones.blat": "sha256-t5xviiOQTfAsF0UDhmcyalKiaehUmf/sqJl97tmPM0M=",
@@ -12,7 +12,7 @@
     },
     "assembly": {
       "Blazored.LocalStorage.dll": "sha256-eXVgTw72kEn74FZgDQbLtvAmXbiZDSj5gzUnxVmwowQ=",
-      "FoxholeLogiSheet.dll": "sha256-QUv+skMcfhn10BlRJpc55/oUeDel+RrsIk41N5chHds=",
+      "FoxholeLogiSheet.dll": "sha256-Cq3hiZnsG+Eykjnz9LKGyqtV/CePRvMIS7FqlPtTeXs=",
       "Microsoft.AspNetCore.Components.dll": "sha256-LauOH3S/rgh68PliRyk2AjZ3Omzjc2f7fwyHfuAyA7A=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-GraYeIB/0hm9uY5r3QaiP4wjGr+PUwe9PuuMpu3QGIg=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-NSM1B9Pq5744C3D4rbASpDKWSSWh3YUdxbWGpdFcOh4=",
@@ -44,7 +44,7 @@
       "System.ObjectModel.dll": "sha256-yUvIC3Sr3hnkZCBwBziLOgCIAqQUibEX1utIC3YKOT8=",
       "System.Private.CoreLib.dll": "sha256-tYNPdfQ2+Vd95xQzps+V1t7uvNvdvcS7Tx/Jrv4flqI=",
       "System.Private.Uri.dll": "sha256-eUEsDp3Be2NJ4TIqLkG6v2aXREwpWBdOD8+M7gfKgEs=",
-      "System.Runtime.dll": "sha256-tZA9BmG5pYkkipRNOmcysydCOoLBhlklmKeq4BBmK40=",
+      "System.Runtime.dll": "sha256-03RRcwC/cbcgk0r4VcSlVpx8k+r0G93GpqvGPmbj32A=",
       "System.Runtime.InteropServices.JavaScript.dll": "sha256-jF5031Knj+v9JHWfETs2gj/VQZNxKMK9KbEghjV9+n4=",
       "System.Text.Encodings.Web.dll": "sha256-ChxM2laH4hgiZAQtC4snIt9lPmf8kF2gFJMqeGJ2E7Y=",
       "System.Text.Json.dll": "sha256-Y84Qjuizhw+5bZTIr6DKJT3gCdA/QLj8tj7YQQ7GNOQ=",
