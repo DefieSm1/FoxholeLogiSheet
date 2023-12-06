@@ -75,7 +75,7 @@
     "name": "Alligator Charge",
     "category": "Explosive Charge",
     "description": "This heavy-duty explosive device is designed to deal significant damage to structures and stationary vehicles.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals Demolition damage", "Can ruin structures that have been severly damaged by artillery" ] 
     },
     "crateSize": 5,
@@ -101,7 +101,7 @@
     "name": "Absime AT-99",
     "category": "Explosive Charge",
     "description": "A simple mine that is places under terrain and fitted with a pressure-sensitive plate to detonate under the weight of heavt vehicles. Mines are visible to friendlies and enemies on foot and deactivate after 48 in-game days.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "Deactivates after 2 days", "$Deals Anti-Tank Explosive damage", "Always Disables Track subsystem", "There are no friendly mines" ] 
     },
     "crateSize": 10,
@@ -128,7 +128,7 @@
     "category": "Water Bucket",
     "description": "A bucket that holds water. You can toss water onto fires to extinguish them.",
     "ammoUsed": "Water (not included)",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "Dear God...", "$There's more.", "No!" ] 
     },
     "crateSize": 50,

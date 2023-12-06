@@ -28,6 +28,9 @@
     "name": "BMS Longrider",
     "category": "Flatbed Car",
     "description": "A flatbed car for transporting large resources and munitions by train over long-distances.",
+    "itemSpecifics": {
+      "general": [ "Carries 1 shippable" ]
+    },
     "pcmatCost": 20,
     "assmatCost": [ 0, 15, 10, 0, 0 ],
     "productionTime": 1800
@@ -37,7 +40,7 @@
     "category": "Caboose",
     "description": "A simple caboose that allows rail crews to maintain tracks more efficiently.",
     "ammoUsed": "Construction Materials, Maintenance Supplies",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Repairs Decay damage", "Uses stored materials to repair the decay and damage of tracks the train passes over." ] 
     },
     "pcmatCost": 20,

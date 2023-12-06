@@ -143,63 +143,63 @@
   "AmmoFlame": {
     "name": "Flame Ammo",
     "description": "A drum containing fuel for use with flame weapons.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals Incendiary damage" ]
     }
   },
   "AmmoRocketHE": {
     "name": "3C-High Explosive Rocket",
     "description": "Standard calibre rocket with a heavy explosive payload. Chance to ignite objects near impact.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals Incendiary damage", "Deals High Explosive damage on impact" ] 
     }
   },
   "AmmoRocketFlame": {
     "name": "4C-Fire Rocket",
     "description": "Standard calibre rocket with an incendiary explosion. Will ignite objects near impact.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals Incendiary damage", "Deals High Explosive damage on impact" ] 
     }
   },
   "AmmoShell75": {
     "name": "75mm",
     "description": "Standard payload for battle tanks.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals Explosive damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ] 
     }
   },
   "AmmoShell945": {
     "name": "94.5mm",
     "description": "A heavy anti-tank shell.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals Armour Piercing damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles", "Higher base chance to disable vehicle subsystems" ] 
     }
   },
   "AmmoShell120": {
     "name": "120mm",
     "description": "Payload for light artillery weapons.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals High Explosive damage", "Can ruin structures that have been severly damaged by artillery", "Reduced damaged against Trenches", "Increased damage against Field Structures" ] 
     }
   },
   "AmmoShell150": {
     "name": "150mm",
     "description": "Payload for heavy artillery weapons.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals High Explosive damage", "Can ruin structures that have been severly damaged by artillery", "Reduced damaged against Trenches", "Increased damage against Field Structures" ] 
     }
   },
   "AmmoShell300": {
     "name": "300mm",
     "description": "Standard payload used with Storm Cannons.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals High Explosive damage", "Can ruin structures that have been severly damaged by artillery", "Reduced damaged against Trenches", "Increased damage against Field Structures" ] 
     }
   },
   "AmmoShell250": {
     "name": "250mm",
     "description": "A shell that is launched over short distances by a spigot mortar.",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "$Deals Demolition damage", "Can ruin structures that have been severly damaged by artillery" ] 
     }
   },
@@ -220,7 +220,7 @@
     "category": "Mounted Anti-Tank RPG",
     "description": "This variant of the Bonesaw MK.3 is specially designed for use with tripod mounts. This affords it with increased stability and maximum potential range.",
     "ammoUsed": "ARC/RPG",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "This can be attached to certain vehicles" ] 
     }
   },
@@ -229,7 +229,7 @@
     "category": "Mounted RPG Launcher",
     "description": "This unique duel-barrelled RPG launcher can fire two RPG shells in relatively quick succession. This increase in firepower makes it nearly impossible for a single soldier to operate without the support of a sturdy mount.",
     "ammoUsed": "RPG",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "This can be attached to certain vehicles" ] 
     }
   },
@@ -238,7 +238,7 @@
     "category": "Mounted Machinegun",
     "description": "Early iterations of this machinegun were built to be emplaced in bunkers and on the decks of lightly armed warships, the Ratcatcher is Harvey Malone’s first freely mountable infantry weapon designed for field use. Just like its predecessors, this heavy weapon suppresses enemy soldiers with unmatched efficiency.",
     "ammoUsed": "12.7mm",
-    "itemSpecifics":{
+    "itemSpecifics": {
       "general": [ "This can be attached to certain vehicles" ] 
     }
   },
