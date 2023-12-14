@@ -1,4 +1,4 @@
-﻿<div class="about-container" style="display: @(Display ? "flex" : "none")">
+﻿<div class="about-container" hidden="@(!Display)">
 	<div class="about-background" @onclick="HideAbout"></div>
 	<div class="about-infobox">
 		<h1>Foxhole Logi Sheet</h1>

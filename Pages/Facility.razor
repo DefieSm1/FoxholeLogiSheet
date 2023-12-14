@@ -31,7 +31,7 @@
 <ProductionContainer>
 	<CalculatorContainer Width="380px" Height="515px">
 		<CalculatorHeader Text="FIND ITEM" >
-			<HeaderButton Text="Unselect" ParentMethod="() => { SelectedItem = null; HighlightBuildings(); StateHasChanged(); }" />
+			<HeaderButton Text="Unselect" ParentMethod="() => { SelectedItem = String.Empty; HighlightBuildings(); StateHasChanged(); }" />
 			<button class="item-select-info"
 					@onmouseover="() => ItemTooltipVisible = true"
 					@onmouseout="() => ItemTooltipVisible = false">
@@ -149,9 +149,9 @@
 
 		Config = AppConfig.GetSection("facility").Get<FacilityConfig>() ?? throw new InvalidOperationException("Could not find requested configuration");
 
-		FacilityBuildings = await Http.GetFromJsonAsync<Dictionary<string, ProductionItem>>("data/Facility/FacilityBuildingData.json") ?? throw new FileNotFoundException();
+		FacilityBuildings = await Http.GetFromJsonAsync<Dictionary<string, ProductionItem>>("data/BuildingData/FacilityBuildings.json") ?? throw new FileNotFoundException();
 
-		FacilityBuildingUpgrades = await Http.GetFromJsonAsync<Dictionary<string, ProductionItem>>("data/Facility/FacilityUpgradeData.json") ?? throw new FileNotFoundException();
+		FacilityBuildingUpgrades = await Http.GetFromJsonAsync<Dictionary<string, ProductionItem>>("data/BuildingData/FacilityUpgrades.json") ?? throw new FileNotFoundException();
 
 		List<string> categoriesToLoad = Config.LoadedCategories;
 

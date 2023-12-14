@@ -122,7 +122,7 @@
 		if (ProductionMode != "MPF")
 			return false;
 
-		if (SelectedItems[itemCategory].Count() == (itemCategory == "Vehicles" || itemCategory == "Shippables" ? 5 : 9))
+		if (SelectedItems[itemCategory].Count() == (itemCategory == "Vehicles" || itemCategory == "Structures" ? 5 : 9))
 			return true;
 
 		if (SelectedItems[itemCategory].Count() > 0)
@@ -151,8 +151,8 @@
 
 		if (ProductionMode == "MPF")
 		{
-			bool isVehicleOrShippable = (category == "Vehicles" || category == "Shippables");
-			SelectedItems[category] = Enumerable.Repeat(item, isVehicleOrShippable ? 5 : 9).ToList<string>();
+			bool isVehicleOrStructure = (category == "Vehicles" || category == "Structures");
+			SelectedItems[category] = Enumerable.Repeat(item, isVehicleOrStructure ? 5 : 9).ToList<string>();
 			StateHasChanged();
 			return;
 		}
@@ -204,7 +204,7 @@
 			return queuePrice;
 		}
 
-		bool isVehicleOrShippable = (itemCategory == "Vehicles" || itemCategory == "Shippables");
+		bool isVehicleOrStructure = (itemCategory == "Vehicles" || itemCategory == "Shippables");
 		double currentDiscount = 0;
 		ProductionItem itemInfo = new();
 		int itemIndex = 0;
@@ -214,11 +214,11 @@
 			currentDiscount = ProductionMode == "MPF" ? 1 - 0.1 * Math.Min(++itemIndex, 5) : 1;
 			itemInfo = ItemCategories[itemCategory][item];
 
-			double crateSize = isVehicleOrShippable ? itemInfo.CrateSize : 1;
+			double crateSize = isVehicleOrStructure ? itemInfo.CrateSize : 1;
 
 			queuePrice += materialKey switch
 			{
-				"Time" => itemInfo.ProductionTime * (ProductionMode == "MPF" ? isVehicleOrShippable ? 1 : 10 : 1),
+				"Time" => itemInfo.ProductionTime * (ProductionMode == "MPF" ? isVehicleOrStructure ? 1 : 10 : 1),
 				"MaterialBasic" => Math.Floor(itemInfo.BmatCost * currentDiscount * crateSize),
 				"MaterialExplosive" => Math.Floor(itemInfo.EmatCost * currentDiscount * crateSize),
 				"MaterialRefined" => Math.Floor(itemInfo.RmatCost * currentDiscount * crateSize),

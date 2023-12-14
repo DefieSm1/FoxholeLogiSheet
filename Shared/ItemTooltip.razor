@@ -37,7 +37,7 @@
 			{
 				<div hidden="@(GetCost(materialKey) == 0)">
 					<img src="icons/ProductionIcons/@(materialKey).png" />
-					<span>@(GetCost(materialKey) * (SelectedCategory == "Vehicles" || SelectedCategory == "Shippables" ? Item.CrateSize : 1)) - @(GetMaterialName(materialKey))</span>
+					<span>@(GetCost(materialKey) * (SelectedCategory == "Vehicles" || SelectedCategory == "Structures" ? Item.CrateSize : 1)) - @(GetMaterialName(materialKey))</span>
 				</div>
 			}
 			</div>
@@ -72,7 +72,7 @@
 
 	public string GetTimestamp(double seconds) 
 	{
-		if(CurrentBuilding == "MPF" && SelectedCategory != "Vehicles" && SelectedCategory != "Shippables") seconds *= 10;
+		if (CurrentBuilding == "MPF" && SelectedCategory != "Vehicles" && SelectedCategory != "Structures") seconds *= 10;
 
 		return TimeSpan.FromSeconds(seconds).ToString(TimeSpan.FromSeconds(seconds).Days > 0 ? @"d\:hh\:mm\:ss" : @"h\:mm\:ss");
 	}

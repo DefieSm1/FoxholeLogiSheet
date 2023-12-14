@@ -151,9 +151,9 @@
 
 		Config = AppConfig.GetSection("assembly").Get<AssemblyConfig>() ?? throw new InvalidOperationException("Could not find requested configuration");
 
-		AssemblyBuildings = await Http.GetFromJsonAsync<Dictionary<string, ProductionItem>>("data/Assembly/AssemblyBuildingData.json") ?? throw new FileNotFoundException();
+		AssemblyBuildings = await Http.GetFromJsonAsync<Dictionary<string, ProductionItem>>("data/BuildingData/AssemblyBuildings.json") ?? throw new FileNotFoundException();
 
-		AssemblyBuildingUpgrades = await Http.GetFromJsonAsync<Dictionary<string, ProductionItem>>("data/Assembly/AssemblyUpgradeData.json") ?? throw new FileNotFoundException();
+		AssemblyBuildingUpgrades = await Http.GetFromJsonAsync<Dictionary<string, ProductionItem>>("data/BuildingData/AssemblyUpgrades.json") ?? throw new FileNotFoundException();
 
 		List<string> categoriesToLoad = Config.LoadedCategories;
 
