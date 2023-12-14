@@ -49,6 +49,7 @@
 /* /Pages/Factory.razor.rz.scp.css */
 /* /Shared/About.razor.rz.scp.css */
 .about-container[b-dwg33yn5ks] {
+    display: flex;
     margin-top: auto;
     width: 100vw;
     height: 100vh;
