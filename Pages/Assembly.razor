@@ -105,7 +105,7 @@
 
 <ItemTooltip Item=@HoveredItem BaseVehicle=@(String.IsNullOrEmpty(HoveredItem.BaseVehicle) ? null : BaseVehicles[HoveredItem.BaseVehicle]) 
 			 CurrentBuilding="Assembly" SelectedCategory=@(HoveredItem.IsBuilding ? "Building" : "Assembly") 
-			 Visibility=@TooltipVisibility Simplified=@TooltipSimplified Large=@(SelectedBuilding == "DryDock")
+			 Visibility=@TooltipVisibility Simplified=@TooltipSimplified Large=@(SelectedBuilding == "DryDock" || SelectedBuilding == "AssemblyLarge")
 			 MaterialKeys=@MaterialKeys />
 
 @code {
@@ -186,7 +186,7 @@
 			return;
 		}
 
-		SelectedItems[category].AddRange(Enumerable.Repeat(item, 4));
+		SelectedItems[category].AddRange(Enumerable.Repeat(item, 3));
 		StateHasChanged();
 		return;
 	}

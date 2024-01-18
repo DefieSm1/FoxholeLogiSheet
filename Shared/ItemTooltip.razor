@@ -29,7 +29,15 @@
 			<p class="highlight" hidden="@(Item.ProductionTime == 0)">@GetTimestamp(Item.ProductionTime)</p>
 
 			<p class="item-cratesize" hidden="@(CurrentBuilding != "Factory" && CurrentBuilding != "MPF" && CurrentBuilding != "Assembly")">
-				<i>Hold SHIFT when clicking to @(CurrentBuilding == "MPF" ? "fill queue with the item" : "add 4 of the item to queue")</i>
+				<i>Hold SHIFT when clicking to 
+					@(CurrentBuilding switch
+					{
+						"Factory" => "add 4 of that item",
+						"MPF" => "fill with the item",
+						"Assembly" => "add 3 of that vehicle / structure",
+						_ => "WHAT KINDA BUILDING IS THIS?"
+					}
+				)</i>
 			</p>
 
 			<div class="item-costs">

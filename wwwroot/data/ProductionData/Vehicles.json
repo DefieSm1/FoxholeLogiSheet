@@ -288,7 +288,7 @@
     "description": "The 74b-1 Ronan Gunship specializes in roaming between larger vessel at high-speeds and boring into their hulls with ease. It's armed with multiple tripod mounts to suppor the midship high-explosive mortar cannon.",
     "ammoUsed": "Mortar Shell, Shrapnel Mortar Shell, Flare Mortar Shell",
     "crateSize": 3,
-    "rmatCost": 120,
+    "rmatCost": 140,
     "productionTime": 8000
   },
   "ConstructionVehicle": {
