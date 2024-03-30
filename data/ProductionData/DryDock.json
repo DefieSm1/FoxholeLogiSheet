@@ -50,5 +50,19 @@
     "shellPlating": 20,
     "turbineComponents": 4,
     "productionTime": 36000
+  },
+  "ShipFrigate": {
+    "name": "Blacksteele",
+    "category": "Light Frigate",
+    "description": "Named for the unpainted look of an early prototype, the Blacksteele-Class Frigate is a highly manoeuvrable, albeit small-statured vessel. Deployment of \"Trident\" Submarines by the Republic Coastal Legion saw the Caoivish Naval Command respond in kind with the Blacksteele. Designed as a sub-hunter escort, the Blacksteele excels at thwarting submersible assaults against larger, ungainly ships. The head shipwright on the project was none other than Conor O'Brien's top protégé, Rory Boyd, who, in his later years became known as a master shipwright, and largely recognised as the man behind the Caoivish Naval Command's world-class reputation.",
+    "ammoUsed": "120mm, 68mm, Model-7 \"Evie\", 12.7mm",
+    "itemSpecifics": {
+      "Cannoneer (Midships), Cannoneer (Stern)": [ "$Deals High Explosive damage", "Can ruin structures that have been severly damaged by artillery", "Reduced damage against Trenches", "Incresed damage against Field Structures" ],
+      "Turret (Starboard Bow), Turret (Port Bow)": [ "$Deals Armour Piercing damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ],
+      "Gunner (Starboard Beam), Gunner (Port Beam)": [ "$Deals Kinetic Damage" ]
+    },
+    "hullSegments": 15,
+    "shellPlating": 15,
+    "productionTime": 21600
   }
 }

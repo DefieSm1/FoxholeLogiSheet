@@ -3,7 +3,7 @@
     "name": "Material Pallet",
     "description": "A material pallet.",
     "itemSpecifics": {
-      "general": [ "I miss small containers..." ] 
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables", "I miss small containers..." ] 
     },
     "bmatCost": 25,
     "productionTime": 5
