@@ -66,25 +66,31 @@
 	</CalculatorContainer>
 	<CalculatorContainer Height="fit-content; max-height: 516px; overflow-y: auto">
 		<CalculatorHeader Text=@CurrentBuilding.Name.ToUpper() />
-		<FacilityRecipeList>
-			@foreach (FacilityRecipe recipe in CurrentBuilding.BuildingRecipes)
-			{
-				<FacilityRecipeBar Recipe=@recipe SelectedItem=@SelectedItem
-								   OnMouseOver="(item) => { HoveredItem = FacilityItems[item.Trim('$')]; TooltipVisibility = true; TooltipSimplified = false; StateHasChanged(); }"
-								   OnMouseOut="(item) => { HoveredItem = FacilityItems[item.Trim('$')]; TooltipVisibility = false; StateHasChanged(); }" />
-			}
-		</FacilityRecipeList>
-		@if (!String.IsNullOrEmpty(SelectedUpgrade))
-		{
-			<CalculatorHeader Text=@CurrentUpgrade.Name.ToUpper() />
+		@if (CurrentBuilding.BuildingRecipes.Count > 0)
+		{	
 			<FacilityRecipeList>
-				@foreach (FacilityRecipe recipe in CurrentUpgrade.BuildingRecipes)
+				@foreach (FacilityRecipe recipe in CurrentBuilding.BuildingRecipes)
 				{
 					<FacilityRecipeBar Recipe=@recipe SelectedItem=@SelectedItem
 									   OnMouseOver="(item) => { HoveredItem = FacilityItems[item.Trim('$')]; TooltipVisibility = true; TooltipSimplified = false; StateHasChanged(); }"
 									   OnMouseOut="(item) => { HoveredItem = FacilityItems[item.Trim('$')]; TooltipVisibility = false; StateHasChanged(); }" />
 				}
 			</FacilityRecipeList>
+		}
+		@if (!String.IsNullOrEmpty(SelectedUpgrade))
+		{
+			<CalculatorHeader Text=@CurrentUpgrade.Name.ToUpper() />
+			@if(CurrentUpgrade.BuildingRecipes.Count > 0)
+			{	
+				<FacilityRecipeList>
+					@foreach (FacilityRecipe recipe in CurrentUpgrade.BuildingRecipes)
+					{
+						<FacilityRecipeBar Recipe=@recipe SelectedItem=@SelectedItem
+										   OnMouseOver="(item) => { HoveredItem = FacilityItems[item.Trim('$')]; TooltipVisibility = true; TooltipSimplified = false; StateHasChanged(); }"
+										   OnMouseOut="(item) => { HoveredItem = FacilityItems[item.Trim('$')]; TooltipVisibility = false; StateHasChanged(); }" />
+					}
+				</FacilityRecipeList>
+			}
 		}
 	</CalculatorContainer>
 </ProductionContainer>
@@ -136,12 +142,6 @@
 	public ProductionItem CurrentUpgrade { get => FacilityBuildingUpgrades.Keys.Contains(SelectedUpgrade) ? FacilityBuildingUpgrades[SelectedUpgrade] : new(); }
 
 	public Dictionary<string, ProductionItem> FacilityBuildingSet { get => FacilityBuildings.Where(building => building.Value.BuildingType == BuildingSet).ToDictionary(x => x.Key, x => x.Value); }
-
-	public int FacilityItemCapacity { get => Config.FacilityItemCapacity; }
-
-	public int FacilityLiquidCapacity { get => Config.FacilityLiquidCapacity; }
-
-	public int HarvesterItemCapacity { get => Config.HarvesterItemCapacity; }
 
 	protected override async Task OnInitializedAsync()
 	{

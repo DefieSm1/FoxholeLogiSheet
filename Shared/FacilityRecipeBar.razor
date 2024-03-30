@@ -9,7 +9,7 @@
     }
 
     <div class="recipe-info" style="@(OutputAmounts.Count() == 0 ? "background-image: none;" : "")">
-        <p><span class="power-icon"></span>@(PowerConsumption > 0 ? "-" : "")@PowerConsumption MW</p>
+        <p><span class="power-icon"></span>@(PowerConsumption * -1) MW</p>
         <p>@GetTimestamp(ProductionTime * Multiplier)</p>
     </div>
 
@@ -40,11 +40,11 @@
 
     public List<string> InputNames { get => Recipe.InputNames; }
 
-    public List<int> InputAmounts { get => Recipe.InputAmounts; }
+    public List<float> InputAmounts { get => Recipe.InputAmounts; }
 
     public List<string> OutputNames { get => Recipe.OutputNames; }
 
-    public List<int> OutputAmounts { get => Recipe.OutputAmounts; }
+    public List<float> OutputAmounts { get => Recipe.OutputAmounts; }
 
     public float PowerConsumption { get => Recipe.PowerConsumption; }
 

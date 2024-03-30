@@ -2,55 +2,46 @@
     "AssemblyStationMotorPool": {
         "name": "Motor Pool",
         "description": "An assembly station for producing light-duty logistics vehicles like trucks.",
-        "cmatCost": 200,
-        "isBuilding": true
+        "cmatCost": 200
     },
     "AssemblyStationNavalWorks": {
         "name": "Naval Works",
         "description": "An assembly rigged to manufacture parts used in the construction of naval vessels at a Dry Dock.",
-        "rareCost": 10,
-        "isBuilding": true
+        "rareCost": 10
     },
     "AssemblyStationRocket": {
         "name": "Rocket Manufactory",
         "description": "A workshop platform for the assembly of multi-part long-range ballistic missiles such as the A0E-9, or AEON Rocket.",
-        "rareCost": 35,
-        "isBuilding": true
+        "rareCost": 35
     },
     "AssemblyStationBatteryLine": {
         "name": "Battery Line",
         "description": "An assembly station for producing half-tracks and rocket vehicles.",
-        "pcmatCost": 65,
-        "isBuilding": true
+        "pcmatCost": 65
     },
     "AssemblyStationField": {
         "name": "Field Station",
         "description": "An assembly station for producing field weapons and utility vehicles such as Harvesters.",
-        "pcmatCost": 25,
-        "isBuilding": true
+        "pcmatCost": 25
     },
     "AssemblyStationTank": {
         "name": "Tank Factory",
         "description": "An assembly station for producing tank class vehicles.",
-        "pcmatCost": 200,
-        "isBuilding": true
+        "pcmatCost": 200
     },
     "AssemblyStationWeapons": {
         "name": "Weapons Platform",
         "description": "An assembly station for producing emplaced weapon platforms and specialized tanks.",
-        "steelCost": 20,
-        "isBuilding": true
+        "steelCost": 20
     },
     "AssemblyLargeTrain": {
         "name": "Train Assembly",
         "description": "An assembly station for producing train cars.",
-        "steelCost": 150,
-        "isBuilding": true
+        "steelCost": 150
     },
     "AssemblyLargeHeavyTank": {
         "name": "Heavy Tank Assembly",
         "description": "An assembly station for producing heavy tank class vehicles.",
-        "steelCost": 150,
-        "isBuilding": true
+        "steelCost": 150
     }
 }

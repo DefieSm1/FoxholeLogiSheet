@@ -4,11 +4,11 @@
 	{
 		public List<string> InputNames { get; set; }
 
-		public List<int> InputAmounts { get; set; }
+		public List<float> InputAmounts { get; set; }
 
 		public List<string> OutputNames { get; set; }
 
-		public List<int> OutputAmounts { get; set; }
+		public List<float> OutputAmounts { get; set; }
 
 		public float PowerConsumption { get; set; }
 

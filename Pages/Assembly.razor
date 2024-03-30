@@ -104,7 +104,7 @@
 </ProductionContainer>
 
 <ItemTooltip Item=@HoveredItem BaseVehicle=@(String.IsNullOrEmpty(HoveredItem.BaseVehicle) ? null : BaseVehicles[HoveredItem.BaseVehicle]) 
-			 CurrentBuilding="Assembly" SelectedCategory=@(HoveredItem.IsBuilding ? "Building" : "Assembly") 
+			 CurrentBuilding="Assembly"
 			 Visibility=@TooltipVisibility Simplified=@TooltipSimplified Large=@(SelectedBuilding == "DryDock" || SelectedBuilding == "AssemblyLarge")
 			 MaterialKeys=@MaterialKeys />
 

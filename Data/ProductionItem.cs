@@ -48,8 +48,6 @@
 
 		public int ProductionTime { get; set; }
 
-        public bool IsBuilding { get; set; }
-
         public string BuildingType { get; set; }
 
 		public List<string> BuildingUpgrades { get; set; }
@@ -85,7 +83,6 @@
 
 			ProductionTime = 0;
 
-			IsBuilding = false;
 			BuildingType = "";
 			BuildingUpgrades = new();
 			BuildingRecipes = new();

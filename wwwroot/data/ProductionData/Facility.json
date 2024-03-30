@@ -203,12 +203,28 @@
       "general": [ "$Deals Demolition damage", "Can ruin structures that have been severly damaged by artillery" ] 
     }
   },
+  "SeaMine": {
+    "name": "E680-S Rudder Lock",
+    "category": "Sea Mine",
+    "description": "Desinged for underwater deployment, Sea Mines detonate upon contact with enemy vessels.",
+    "itemSpecifics": {
+      "general": [ "$Deactivates after 2 days", "$Deals High Explosive damage" ]
+    }
+  },
+  "DepthCharge": {
+    "name": "Model-7 \"Evie\"",
+    "category": "Depth Charge",
+    "description": "An explosive charge that detonates at a target depth. This anti-submarine ordnance is fired from the deck of naval vessels using specialized launchers.",
+    "itemSpecifics": {
+      "general": [ "$Deals High Explosive damage" ]
+    }
+  },
   "Torpedo": {
     "name": "Moray Torpedo",
     "category": "Torpedo",
     "description": "Fired from submersible vessels, the Moray Torpedo is a self-propelled underwater missile that functions well at a variety of ranges and depths. It's designed to bore into the hulls of large ships, leaving them vulnerable to leaks.",
     "itemSpecifics": {
-      "general": [ "$Deals High Explosive damage", "Increased chance to cause a leak" ]
+      "general": [ "Can only be carried by stockpiles", "$Deals High Explosive damage", "Increased chance to cause a leak" ]
     }
   },
   "UtilityTripod": {
