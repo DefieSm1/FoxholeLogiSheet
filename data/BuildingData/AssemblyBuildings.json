@@ -14,6 +14,6 @@
     "DryDock": {
         "name": "Dry Dock",
         "description": "A floodable basin and construction platform that facilitates the assembly and repair of the largest naval vessels.",
-        "rareCost": 35,
+        "rareCost": 35
     }
 }
