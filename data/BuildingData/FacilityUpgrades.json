@@ -139,11 +139,11 @@
             },
             {
                 "inputNames": [ "MaterialRawComponentsDamaged" ],
-                "inputAmounts": [ 30 ],
+                "inputAmounts": [ 75 ],
                 "outputNames": [ "MaterialRawComponents" ],
-                "outputAmounts": [ 20 ],
+                "outputAmounts": [ 5 ],
                 "powerConsumption": 4,
-                "productionTime": 90
+                "productionTime": 25
             }
         ]
     },
@@ -468,7 +468,7 @@
                 "inputNames": [ "$MaterialOilPetrol" ],
                 "inputAmounts": [ 6 ],
                 "outputNames": [ "MaterialRawComponentsDamaged" ],
-                "outputAmounts": [ 9 ],
+                "outputAmounts": [ 18 ],
                 "powerConsumption": 0,
                 "productionTime": 12
             }
