@@ -5,7 +5,6 @@
 @inject HttpClient Http
 @inject IJSRuntime JsRuntime
 @inject Blazored.LocalStorage.ILocalStorageService localStorage
-@inject IConfiguration AppConfig
 @using FoxholeLogiSheet.Data
 
 <PageHeader>Facility Sheet</PageHeader>
@@ -14,7 +13,7 @@
 	<CalculatorContainer Width="@((FacilityBuildingSet.Count() * 100).ToString() + "px")">
 		<CalculatorHeader Text="SELECT STRUCTURE">
 			<HeaderButton Text="@($"Switch to {(BuildingSet == "Gathering" ? "Manufacturing" : "Gathering")}")" 
-						  ParentMethod="@(() => { BuildingSet = BuildingSet == "Gathering" ? "Manufacturing" : "Gathering"; SelectedBuilding = BuildingSet == "Gathering" ? "HarvesterSalvage" : Config.DefaultBuilding; } )" />
+						  ParentMethod="@(() => { BuildingSet = BuildingSet == "Gathering" ? "Manufacturing" : "Gathering"; SelectedBuilding = BuildingSet == "Gathering" ? "HarvesterSalvage" : "MaterialsFactory"; } )" />
 		</CalculatorHeader>
 		<ItemGrid Columns=@(FacilityBuildingSet.Count()) Rows=1>
 			@foreach (KeyValuePair<string, ProductionItem> building in FacilityBuildingSet)
@@ -107,15 +106,15 @@
 </CustomTooltip>
 
 @code {
-	public FacilityConfig Config { get; set; } = new();
-
 	public Dictionary<string, ProductionItem> FacilityBuildings = new();
 
 	public Dictionary<string, ProductionItem> FacilityBuildingUpgrades = new();
 
 	public Dictionary<string, ProductionItem> FacilityItems { get; set; } = new();
 
-	public List<string> MaterialKeys { get => Config.MaterialKeys; }
+	public List<string> LoadedCategories { get; set; } = ["Facility"];
+
+	public List<string> MaterialKeys { get; set; } = ["MaterialBasic", "MaterialConstruction", "MaterialProcessedConstruction", "MaterialSteel", "MaterialRareAlloys"];
 
 	public string SelectedBuilding { get; set; } = "";
 
@@ -147,19 +146,17 @@
 	{
 		await localStorage.SetItemAsync("lastPage", "facility");
 
-		Config = AppConfig.GetSection("facility").Get<FacilityConfig>() ?? throw new InvalidOperationException("Could not find requested configuration");
-
 		FacilityBuildings = await Http.GetFromJsonAsync<Dictionary<string, ProductionItem>>("data/BuildingData/FacilityBuildings.json") ?? throw new FileNotFoundException();
 
 		FacilityBuildingUpgrades = await Http.GetFromJsonAsync<Dictionary<string, ProductionItem>>("data/BuildingData/FacilityUpgrades.json") ?? throw new FileNotFoundException();
 
-		List<string> categoriesToLoad = Config.LoadedCategories;
+		List<string> categoriesToLoad = LoadedCategories;
 
 		FacilityItems = await Http.GetFromJsonAsync<Dictionary<string, ProductionItem>>("data/ProductionData/Facility.json") ?? throw new FileNotFoundException();
 
-		SelectedBuilding = Config.DefaultBuilding;
-		SelectedUpgrade = Config.DefaultUpgrade;
-		BuildingSet = Config.DefaultBuildingSet;
+		SelectedBuilding = "MaterialsFactory";
+		SelectedUpgrade = "";
+		BuildingSet = "Manufacturing";
 	}
 
 	public void HighlightBuildings()

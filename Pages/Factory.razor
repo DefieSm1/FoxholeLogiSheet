@@ -5,7 +5,6 @@
 @inject HttpClient Http
 @inject IJSRuntime JsRuntime
 @inject Blazored.LocalStorage.ILocalStorageService localStorage
-@inject IConfiguration AppConfig
 @using FoxholeLogiSheet.Data
 
 <PageHeader>@ProductionMode Sheet</PageHeader>
@@ -64,15 +63,15 @@
 <ItemTooltip Item=@HoveredItem CurrentBuilding=@ProductionMode SelectedCategory=@SelectedCategory Visibility=@TooltipVisibility Simplified=@TooltipSimplified MaterialKeys=@MaterialKeys />
 
 @code {
-	public FactoryConfig Config { get; set; } = new();
-
 	public Dictionary<string, Dictionary<string, ProductionItem>> ItemCategories { get; set; } = new();
 
-	public List<string> FactoryCategories { get => Config.FactoryCategories; }
+	public List<string> LoadedCategories { get; set; } = ["SmallArms", "HeavyArms", "HeavyMunitions", "Utility", "Supplies", "Medical", "Uniforms", "Vehicles", "Structures"];
 
-	public List<string> MPFCategories { get => Config.MPFCategories; }
+	public List<string> FactoryCategories { get; set; } = ["SmallArms", "HeavyArms", "HeavyMunitions", "Utility", "Supplies", "Medical", "Uniforms"];
 
-	public List<string> MaterialKeys { get => Config.MaterialKeys; }
+	public List<string> MPFCategories { get; set; } = ["SmallArms", "HeavyArms", "HeavyMunitions", "Supplies", "Uniforms", "Vehicles", "Structures"];
+
+	public List<string> MaterialKeys { get; set; } = ["Time", "MaterialBasic", "MaterialExplosive", "MaterialRefined", "MaterialHeavyExplosive"];
 
 	Dictionary<string, List<string>> SelectedItems = new();
 
@@ -94,8 +93,7 @@
 	{
 		await localStorage.SetItemAsync("lastPage", "factory");
 
-		Config = AppConfig.GetSection("factory").Get<FactoryConfig>() ?? throw new InvalidOperationException("Could not find requested configuration");
-		List<string> categoriesToLoad = Config.LoadedCategories;
+		List<string> categoriesToLoad = LoadedCategories;
 
 		Dictionary<string, ProductionItem> category;
 		foreach (string categoryName in categoriesToLoad)
@@ -104,8 +102,8 @@
 			ItemCategories.Add(categoryName, category);
 		}
 
-		ProductionMode = Config.DefaultMode;
-		SelectedCategory = Config.DefaultCategory;
+		ProductionMode = "Factory";
+		SelectedCategory = "SmallArms";
 
 		ResetSelectedItems();
 	}

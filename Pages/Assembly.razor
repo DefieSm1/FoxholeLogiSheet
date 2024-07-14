@@ -5,7 +5,6 @@
 @inject HttpClient Http
 @inject IJSRuntime JsRuntime
 @inject Blazored.LocalStorage.ILocalStorageService localStorage
-@inject IConfiguration AppConfig
 @using FoxholeLogiSheet.Data
 
 <PageHeader>Assembly Sheet</PageHeader>
@@ -109,17 +108,31 @@
 			 MaterialKeys=@MaterialKeys />
 
 @code {
-	public AssemblyConfig Config { get; set; } = new();
-
 	public Dictionary<string, ProductionItem> AssemblyBuildings = new();
 
 	public Dictionary<string, ProductionItem> AssemblyBuildingUpgrades = new();
 
 	public Dictionary<string, Dictionary<string, ProductionItem>> AssemblyCategories { get; set; } = new();
 
-	public List<string> MaterialKeys { get => Config.MaterialKeys; }
+	public List<string> CategoryKeys { get; set; } = [
+		"Vehicles",
+		"AssemblyStation", "AssemblyStationMotorPool","AssemblyStationRocket", "AssemblyStationBatteryLine", "AssemblyStationNavalWorks", "AssemblyStationField", "AssemblyStationTank", "AssemblyStationWeapons",
+		"AssemblyLarge", "AssemblyLargeTrain", "AssemblyLargeHeavyTank",
+		"DryDock"
+	];
 
-	public List<List<string>> MaterialOutputRows { get => Config.MaterialOutputRows; }
+	public List<string> MaterialKeys { get; set; } = [
+		"Time",
+		"MaterialBasic", "MaterialConstruction", "MaterialProcessedConstruction", "MaterialSteel", "MaterialRareAlloys",
+		"MaterialThermalShielding",  "MaterialUnstableSubstances", "NavalHullSegments", "NavalShellPlating", "NavalTurbineComponents",
+		"AssemblyMaterialsT1", "AssemblyMaterialsT2", "AssemblyMaterialsT3", "AssemblyMaterialsT4", "AssemblyMaterialsT5"
+	];
+
+	public List<List<string>> MaterialOutputRows { get; set; } = [
+		[ "MaterialBasic", "MaterialConstruction", "MaterialProcessedConstruction", "MaterialSteel", "MaterialRareAlloys" ],
+		[ "MaterialThermalShielding", "MaterialUnstableSubstances", "NavalHullSegments", "NavalShellPlating", "NavalTurbineComponents" ],
+		[ "AssemblyMaterialsT1", "AssemblyMaterialsT2", "AssemblyMaterialsT3", "AssemblyMaterialsT4", "AssemblyMaterialsT5" ]
+	];
 
 	Dictionary<string, List<string>> SelectedItems = new();
 
@@ -149,23 +162,19 @@
 	{
 		await localStorage.SetItemAsync("lastPage", "assembly");
 
-		Config = AppConfig.GetSection("assembly").Get<AssemblyConfig>() ?? throw new InvalidOperationException("Could not find requested configuration");
-
 		AssemblyBuildings = await Http.GetFromJsonAsync<Dictionary<string, ProductionItem>>("data/BuildingData/AssemblyBuildings.json") ?? throw new FileNotFoundException();
 
 		AssemblyBuildingUpgrades = await Http.GetFromJsonAsync<Dictionary<string, ProductionItem>>("data/BuildingData/AssemblyUpgrades.json") ?? throw new FileNotFoundException();
 
-		List<string> categoriesToLoad = Config.LoadedCategories;
-
 		Dictionary<string, ProductionItem> category;
-		foreach (string categoryName in categoriesToLoad)
+		foreach (string categoryName in CategoryKeys)
 		{
 			category = await Http.GetFromJsonAsync<Dictionary<string, ProductionItem>>($"data/ProductionData/{categoryName}.json") ?? throw new FileNotFoundException();
 			AssemblyCategories.Add(categoryName, category);
 		}
 
-		SelectedBuilding = Config.DefaultBuilding;
-		SelectedUpgrade = Config.DefaultUpgrade;
+		SelectedBuilding = "AssemblyStation";
+		SelectedUpgrade = "";
 
 		ResetSelectedItems();
 	}
@@ -173,7 +182,7 @@
 	public void ResetSelectedItems()
 	{
 		SelectedItems.Clear();
-		foreach (string category in Config.LoadedCategories)
+		foreach (string category in CategoryKeys)
 			SelectedItems.Add(category, new());
 	}
 
