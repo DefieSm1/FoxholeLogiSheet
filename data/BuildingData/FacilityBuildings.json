@@ -172,7 +172,7 @@
                 "outputNames": [ "MaterialRawSalvage" ],
                 "outputAmounts": [ 50 ],
                 "powerConsumption": 0,
-                "productionTime": 12
+                "productionTime": 18
             }
         ]
     },
@@ -205,7 +205,7 @@
                 "outputNames": [ "MaterialRawCoal" ],
                 "outputAmounts": [ 50 ],
                 "powerConsumption": 0,
-                "productionTime": 12
+                "productionTime": 18
             }
         ]
     },

@@ -75,7 +75,7 @@
     "ammoUsed": "94.5mm",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
-      "Turret": [ "Equipped with a highg velocity barrel that deals 50% extra damage per shot", "$Deals Armour Piercing damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles", "Higher base chance to disable vehicle subsystems" ]
+      "Turret": [ "Equipped with a high velocity barrel that deals 50% extra damage per shot", "$Deals Armour Piercing damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles", "Higher base chance to disable vehicle subsystems" ]
     },
     "pcmatCost": 135,
     "assmatCost": [ 10, 0, 0, 15, 0 ],

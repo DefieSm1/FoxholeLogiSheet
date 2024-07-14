@@ -4,6 +4,9 @@
     "category": "Assault Rifle",
     "description": "The Booker is a high-impact three-round burst Storm Rifle for those who like to shoot first.",
     "ammoUsed": "7.92mm",
+    "itemSpecifics": {
+      "general": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot" ]
+    },
     "crateSize": 10,
     "bmatCost": 165,
     "productionTime": 80
@@ -170,12 +173,12 @@
     "description": "A heavy-duty, long-range marksman rifle. The Clancy-Raca has one hell of a kick but is fitted with a powerful scope, allowing infantry to survey the battlefield and provide support from a safe location.",
     "ammoUsed": "7.62mm",
     "itemSpecifics": {
-      "general": [ "Equipped with a high velocity barrel that deals 35% extra damage per shot" ] 
+      "general": [ "Equipped with a high velocity barrel that deals 125% extra damage per shot" ] 
     },
     "crateSize": 3,
-    "rmatCost": 15,
-    "bmatCost": 200,
-    "productionTime": 125
+    "rmatCost": 25,
+    "bmatCost": 250,
+    "productionTime": 250
   },
   "AmmoRifle762": {
     "name": "7.62mm",

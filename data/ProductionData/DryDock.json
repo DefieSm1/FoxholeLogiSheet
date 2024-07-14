@@ -11,6 +11,14 @@
     "shellPlating": 15,
     "productionTime": 14400
   },
+  "ShipResource": {
+    "name": "BMS - Bowhead",
+    "category": "Large Ship",
+    "description": "This BMS shipping vessel, the Bowhead, is specially designed to carry large quantities of resource containers and fitted with compartments for resource Harvesters. Named for a great whale, the Bassett Motor Society ensures that resources get delivered to the front lines where they're needed and when they're needed due to efficient loading bay design and a sturdy frame.",
+    "hullSegments": 8,
+    "shellPlating": 15,
+    "productionTime": 14400
+  },
   "ShipStorage": {
     "name": "BMS - Bluefin",
     "category": "Storage Ship",
