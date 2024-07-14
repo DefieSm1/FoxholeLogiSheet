@@ -8,7 +8,6 @@
 @code {
     protected override async Task OnInitializedAsync()
     {
-        Console.WriteLine("Loading page...");
         string lastPage = await localStorage.GetItemAsync<string>("lastPage") ?? "Factory";
         NavManager.NavigateTo(lastPage);
     }

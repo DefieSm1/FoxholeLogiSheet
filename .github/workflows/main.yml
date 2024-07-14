@@ -11,13 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # uses GitHub's checkout action to checkout code form the master branch
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       
-      # sets up .NET SDK 8.0.0
+      # sets up .NET SDK 8.0.303
       - name: Setup .NET SDK
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 8.0.0
+          dotnet-version: 8.0.303
           
       # publishes Blazor project to the release-folder
       - name: Publish .NET Project
