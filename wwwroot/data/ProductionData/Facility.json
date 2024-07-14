@@ -4,7 +4,7 @@
     "description": "Salvage that can be recycled into other resources at a Refinery."
   },
   "MaterialExplosive": {
-    "name": "Explosive Materials",
+    "name": "Explosive Powder",
     "description": "Resource used for producing heavy explosive weapons."
   },
   "MaterialRawComponentsDamaged": {
@@ -17,14 +17,14 @@
   },
   "MaterialRawSulfur": {
     "name": "Sulfur",
-    "description": "Sulfur that can be refined into Heavy Explosive Materials at a Refinery."
+    "description": "Sulfur that can be refined into Heavy Explosive Powder at a Refinery."
   },
   "MaterialRawRareMetals": {
     "name": "Rare Metal",
     "description": "A compound of extremely rare metals used in the production of the most advanced vehicles and weapons."
   },
   "MaterialHeavyExplosive": {
-    "name": "Heavy Explosive Materials",
+    "name": "Heavy Explosive Powder",
     "description": "Resource used for producing heavy explosive weapons."
   },
   "MaterialRawCoal": {

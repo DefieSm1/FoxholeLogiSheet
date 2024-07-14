@@ -9,7 +9,8 @@
       "Gunner (Front)": [ "Equipped with a high velocity barrel that deals 25% extra damage per shot", "$Deals Armour Piercing damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles", "Higher base chance to disable vehicle subsystems" ] 
     },
     "steelCost": 275,
-    "assmatCost": [ 0, 105, 0, 95, 175 ],
+    "assmatCost": [ 0, 105, 0, 95, 105 ],
+    "rareCost": 3,
     "productionTime": 172800
   },
   "BattleTank": {

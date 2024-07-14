@@ -185,7 +185,7 @@
         "buildingRecipes": [
             {
                 "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
-                "inputAmounts": [ 1, 2 ],
+                "inputAmounts": [ 4, 2 ],
                 "outputNames": [ "AmmoRocketHE" ],
                 "outputAmounts": [ 1 ],
                 "powerConsumption": 4,
@@ -193,7 +193,7 @@
             },
             {
                 "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
-                "inputAmounts": [ 1, 2 ],
+                "inputAmounts": [ 4, 2 ],
                 "outputNames": [ "AmmoRocketFlame" ],
                 "outputAmounts": [ 1 ],
                 "powerConsumption": 4,
@@ -201,7 +201,7 @@
             },
             {
                 "inputNames": [ "MaterialHeavyExplosive", "AmmoFlame" ],
-                "inputAmounts": [ 2, 3 ],
+                "inputAmounts": [ 8, 3 ],
                 "outputNames": [ "MaterialUnstableSubstances" ],
                 "outputAmounts": [ 1 ],
                 "powerConsumption": 5,
@@ -216,7 +216,7 @@
         "buildingRecipes": [
             {
                 "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
-                "inputAmounts": [ 2, 2 ],
+                "inputAmounts": [ 8, 2 ],
                 "outputNames": [ "AmmoShell75" ],
                 "outputAmounts": [ 1 ],
                 "powerConsumption": 4,
@@ -224,7 +224,7 @@
             },
             {
                 "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
-                "inputAmounts": [ 2, 2 ],
+                "inputAmounts": [ 8, 2 ],
                 "outputNames": [ "AmmoShell945" ],
                 "outputAmounts": [ 1 ],
                 "powerConsumption": 4,
@@ -232,15 +232,15 @@
             },
             {
                 "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
-                "inputAmounts": [ 6, 4 ],
+                "inputAmounts": [ 24, 4 ],
                 "outputNames": [ "AmmoShell300" ],
                 "outputAmounts": [ 1 ],
                 "powerConsumption": 6,
                 "productionTime": 60
             },
             {
-                "inputNames": [ "MaterialExplosive", "MaterialConstruction" ],
-                "inputAmounts": [ 3, 2 ],
+                "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
+                "inputAmounts": [ 1, 2 ],
                 "outputNames": [ "AmmoShell120" ],
                 "outputAmounts": [ 1 ],
                 "powerConsumption": 4,
@@ -248,7 +248,7 @@
             },
             {
                 "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
-                "inputAmounts": [ 2, 3 ],
+                "inputAmounts": [ 8, 3 ],
                 "outputNames": [ "AmmoShell150" ],
                 "outputAmounts": [ 1 ],
                 "powerConsumption": 4,
@@ -256,7 +256,7 @@
             },
             {
                 "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
-                "inputAmounts": [ 2, 2 ],
+                "inputAmounts": [ 8, 2 ],
                 "outputNames": [ "DepthCharge" ],
                 "outputAmounts": [ 1 ],
                 "powerConsumption": 6,
@@ -264,7 +264,7 @@
             },
             {
                 "inputNames": [ "MaterialHeavyExplosive", "MaterialProcessedConstruction" ],
-                "inputAmounts": [ 4, 2 ],
+                "inputAmounts": [ 16, 2 ],
                 "outputNames": [ "Torpedo" ],
                 "outputAmounts": [ 1 ],
                 "powerConsumption": 6,

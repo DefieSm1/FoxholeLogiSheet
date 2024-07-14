@@ -7,7 +7,7 @@
     },
     "crateSize": 5,
     "bmatCost": 120,
-    "hematCost": 10,
+    "hematCost": 40,
     "productionTime": 65
   },
   "AmmoShell120": {
@@ -17,8 +17,8 @@
       "general": [ "$Deals High Explosive damage", "Can ruin structures that have been severly damaged by artillery", "Reduced damaged against Trenches", "Increased damage against Field Structures" ] 
     },
     "crateSize": 5,
-    "bmatCost": 60,
-    "ematCost": 15,
+    "bmatCost": 120,
+    "hematCost": 5,
     "productionTime": 55
   },
   "AmmoShell250": {
@@ -29,7 +29,7 @@
     },
     "crateSize": 5,
     "bmatCost": 120,
-    "hematCost": 25,
+    "hematCost": 100,
     "productionTime": 150
   },
   "AmmoShell68": {

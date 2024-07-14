@@ -19,7 +19,7 @@
     "description": "A high-powered explosive charge that requires an accompanying detonator. The Havoc Charge is highly effective at demolishing large structures. The charge must be detonated via gunshot. The Havoc Charge's true potential is unleashed when executing strategic demolitions at safe distances.",
     "crateSize": 5,
     "bmatCost": 75,
-    "hematCost": 10,
+    "hematCost": 40,
     "productionTime": 60
   },
   "AmmoFlamethrower": {
@@ -28,7 +28,7 @@
     "description": "Ammo for Willow's Bane Model 845",
     "crateSize": 10,
     "bmatCost": 135,
-    "hematCost": 5,
+    "hematCost": 20,
     "productionTime": 100
   },
   "UtilityListeningKit": {
@@ -68,7 +68,7 @@
     "description": "Required to detonate Havoc Charges. The Havoc Charge must be placed before can be deployed.",
     "crateSize": 5,
     "bmatCost": 75,
-    "hematCost": 5,
+    "hematCost": 20,
     "productionTime": 60
   },
   "UtilitySatchel": {
@@ -80,7 +80,7 @@
     },
     "crateSize": 5,
     "bmatCost": 150,
-    "ematCost": 80,
+    "ematCost": 160,
     "productionTime": 100
   },
   "UtilityShovel": {
@@ -114,6 +114,14 @@
     "description": "A mount point for deployable infantry weapons and equipment.",
     "crateSize": 5,
     "bmatCost": 100,
+    "productionTime": 60
+  },
+  "UtilityWindSock": {
+    "name": "Wind Sock",
+    "category": "Equipment",
+    "description": "A sturdy fabric cylinder mounted on a tripod that's designed to help nearby operators determine the speed and direction of wind.",
+    "crateSize": 5,
+    "bmatCost": 150,
     "productionTime": 60
   },
   "UtilityWrench": {
