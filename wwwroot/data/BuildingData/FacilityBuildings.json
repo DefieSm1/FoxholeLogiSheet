@@ -165,6 +165,7 @@
         "buildingType": "Gathering",
         "description": "A stationary harvester that automatically gathers Salvage using Petrol as fuel..",
         "cmatCost": 150,
+        "buildingUpgrades": [ "HarvesterSalvageExcavator" ],
         "buildingRecipes": [
             {
                 "inputNames": [ "$MaterialOilPetrol" ],
@@ -184,7 +185,7 @@
         "buildingUpgrades": [ "HarvesterComponentsExcavator" ],
         "buildingRecipes": [
             {
-                "inputNames": [ "$MaterialOilPetrol" ],
+                "inputNames": [ "$MaterialOilHeavy" ],
                 "inputAmounts": [ 4 ],
                 "outputNames": [ "MaterialRawComponents" ],
                 "outputAmounts": [ 6 ],
@@ -198,6 +199,7 @@
         "buildingType": "Gathering",
         "description": "A stationary harvester that automatically gathers Coal using Petrol as fuel.",
         "pcmatCost": 25,
+        "buildingUpgrades": [ "HarvesterCoalExcavator" ],
         "buildingRecipes": [
             {
                 "inputNames": [ "$MaterialOilPetrol" ],
@@ -213,7 +215,8 @@
         "name": "Stationary Harvester (Sulfur)",
         "buildingType": "Gathering",
         "description": "A stationary harvester that automatically gathers Sulfur using Heavy Oil as fuel.",
-        "steelCost": 20,
+        "pcmatCost": 45,
+        "buildingUpgrades": [ "HarvesterSulfurExcavator" ],
         "buildingRecipes": [
             {
                 "inputNames": [ "$MaterialOilHeavy" ],
