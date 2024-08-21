@@ -458,19 +458,67 @@
             }
         ]
     },
-    "HarvesterComponentsExcavator": {
+    "HarvesterSalvageExcavator": {
         "name": "Excavator",
         "buildingType": "Gathering",
-        "description": "Improves component excavation.",
-        "pcmatCost": 75,
+        "description": "An excavator that allows for the mining of Salvage even when a Salvage Field is depleted",
+        "steelCost": 10,
         "buildingRecipes": [
             {
                 "inputNames": [ "$MaterialOilPetrol" ],
+                "inputAmounts": [ 6 ],
+                "outputNames": [ "MaterialRawSalvage" ],
+                "outputAmounts": [ 15 ],
+                "powerConsumption": 0,
+                "productionTime": 18
+            }
+        ]
+    },
+    "HarvesterComponentsExcavator": {
+        "name": "Excavator",
+        "buildingType": "Gathering",
+        "description": "An excavator that allows for the mining of Damaged Components even when a Component Field is depleted",
+        "pcmatCost": 75,
+        "buildingRecipes": [
+            {
+                "inputNames": [ "$MaterialOilHeavy" ],
                 "inputAmounts": [ 6 ],
                 "outputNames": [ "MaterialRawComponentsDamaged" ],
                 "outputAmounts": [ 18 ],
                 "powerConsumption": 0,
                 "productionTime": 12
+            }
+        ]
+    },
+    "HarvesterCoalExcavator": {
+        "name": "Excavator",
+        "buildingType": "Gathering",
+        "description": "An excavator that allows for the mining of Coal even when a Coal Field is depleted",
+        "steelCost": 10,
+        "buildingRecipes": [
+            {
+                "inputNames": [ "$MaterialOilPetrol" ],
+                "inputAmounts": [ 2 ],
+                "outputNames": [ "MaterialRawCoal" ],
+                "outputAmounts": [ 15 ],
+                "powerConsumption": 0,
+                "productionTime": 18
+            }
+        ]
+    },
+    "HarvesterSulfurExcavator": {
+        "name": "Excavator",
+        "buildingType": "Gathering",
+        "description": "An excavator that allows for the mining of Sulfur and a small amount of coal even when a Sulfur Field is depleted",
+        "steelCost": 20,
+        "buildingRecipes": [
+            {
+                "inputNames": [ "$MaterialOilPetrol" ],
+                "inputAmounts": [ 6 ],
+                "outputNames": [ "MaterialRawSulfur", "MaterialRawCoal" ],
+                "outputAmounts": [ 2, 5 ],
+                "powerConsumption": 0,
+                "productionTime": 18
             }
         ]
     },
