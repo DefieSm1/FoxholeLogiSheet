@@ -15,7 +15,7 @@
     "category": "Warden Armour Uniform",
     "description": "Repourposed from ancient wars, these armour plates are highly effective at stopping enemy small arms fire. That protection comes at the cost of weight, and the wearer will feel quite restricted and encumbered.",
     "itemSpecifics": {
-      "general": [ "$3 backpack slots" ] 
+      "general": [ "$3 backpack slots", "$High reststance to light kinetic damage", "$High resistance to melee damage", "$Low resistance to bleeding" ] 
     },
     "crateSize": 3,
     "bmatCost": 100,
@@ -70,7 +70,7 @@
     "category": "Warden Snow Uniform",
     "description": "Born and bred in the northern cold, this heavy parka protects Warden infantry from all but the worst blizzards.",
     "itemSpecifics": {
-      "general": [ "$6 backpack slots", "$Kinetic weapon light ammunition stacks", "$High resistance to Snow Storms" ] 
+      "general": [ "$6 backpack slots", "$Light kinetic weapon ammunition stacks", "$High resistance to Snow Storms" ] 
     },
     "crateSize": 15,
     "bmatCost": 100,
