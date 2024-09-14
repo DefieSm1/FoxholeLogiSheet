@@ -1,5 +1,5 @@
 {
-  "TruckAmbulance": {
+  "TruckAmbulanceResponder": {
     "name": "Dunne Responder 3e",
     "category": "Ambulance",
     "description": "The Responder Ambulance is efficient at transporting Critically Wounded Soldiers and carrying medical supplies.",
@@ -8,7 +8,8 @@
     },
     "crateSize": 3,
     "bmatCost": 150,
-    "productionTime": 7205
+    "productionTime": 7205,
+    "faction": "W"
   },
   "ACGrenade": {
     "name": "O'Brien V.190 Knave",
@@ -20,9 +21,10 @@
     },
     "crateSize": 3,
     "rmatCost": 40,
-    "productionTime": 2000
+    "productionTime": 2000,
+    "faction": "W"
   },
-  "ACMG": {
+  "ACMGW": {
     "name": "O'Brien V.110",
     "category": "Armoured Car",
     "description": "Warden Armoured Cars are quick, well-rounded urban assault platforms. These anti-infantry vehicles are equipped with twin-barrelled machineguns.",
@@ -33,15 +35,17 @@
     },
     "crateSize": 3,
     "rmatCost": 25,
-    "productionTime": 1250
+    "productionTime": 1250,
+    "faction": "W"
   },
-  "TruckBus": {
+  "TruckBusCaravaner": {
     "name": "Dunne Caravaner 2f",
     "category": "Transport Bus",
     "description": "The Caravaner is a transport vehicle used to shuttle personnel to the front line",
     "crateSize": 3,
     "bmatCost": 100,
-    "productionTime": 5000
+    "productionTime": 5000,
+    "faction": "W"
   },
   "TankDestroyerHeavy": {
     "name": "Noble Widow MK. XIV",
@@ -54,9 +58,10 @@
     },
     "crateSize": 3,
     "rmatCost": 160,
-    "productionTime": 8000
+    "productionTime": 8000,
+    "faction": "W"
   },
-  "FieldAntiTank": {
+  "FieldAntiTankCollins": {
     "name": "Collins Cannon 68mm",
     "category": "Field AT Gun",
     "description": "The Collins Cannon is a mobile Anti-Tank field gun firing 68mm armour-piercing rounds.",
@@ -67,7 +72,8 @@
     },
     "crateSize": 3,
     "rmatCost": 20,
-    "productionTime": 1000
+    "productionTime": 1000,
+    "faction": "W"
   },
   "FieldCannon": {
     "name": "Balfour Wolfhound",
@@ -80,9 +86,10 @@
     },
     "crateSize": 3,
     "rmatCost": 20,
-    "productionTime": 1500
+    "productionTime": 1500,
+    "faction": "W"
   },
-  "FieldMachinegun": {
+  "FieldMachinegunSwallowtail": {
     "name": "Swallowtail 988/127-2",
     "category": "Field Machine Gun",
     "description": "A dual barreled, high calibre anti-infantry machine gun. The Swallowtail is fitted with forward-facing armour plating and is excellent for suppression.",
@@ -93,7 +100,8 @@
     },
     "crateSize": 3,
     "rmatCost": 20,
-    "productionTime": 1000
+    "productionTime": 1000,
+    "faction": "W"
   },
   "FieldMortar": {
     "name": "Balfour Falconer 250mm",
@@ -105,7 +113,71 @@
     },
     "crateSize": 3,
     "rmatCost": 35,
-    "productionTime": 1750
+    "productionTime": 1750,
+    "faction": "W"
+  },
+  "TruckAmbulanceSalus": {
+    "name": "R-12 - \"Salus\" Ambulance",
+    "category": "Ambulance",
+    "description": "The \"Salus\" Ambulance is efficient at transporting Critically Wounded Soldiers carrying medical supplies.",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables" ] 
+    },
+    "crateSize": 3,
+    "bmatCost": 150,
+    "productionTime": 7205,
+    "faction": "C"
+  },
+  "ACMGC": {
+    "name": "T3 \"Xiphos\"",
+    "category": "Armoured Car",
+    "description": "Colonial Armoured Cars are quick, well-rounded urban assault platforms. These anti-infantry vehicles are equipped with twin-barreled machineguns.",
+    "ammoUsed": "7.92mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
+      "Turret (Center)": [ "$Deals Light Kinetic damage" ] 
+    },
+    "crateSize": 3,
+    "rmatCost": 25,
+    "productionTime": 1250,
+    "faction": "C"
+  },
+  "TruckBusChariot": {
+    "name": "R-15 - \"Chariot\"",
+    "category": "Transport Bus",
+    "description": "The \"Chariot\" is a transport vehicle used to shuttle personnel to the front line.",
+    "crateSize": 3,
+    "bmatCost": 100,
+    "productionTime": 5000,
+    "faction": "C"
+  },
+  "FieldAntiTankBatteringRam": {
+    "name": "AA-2 \"Battering Ram\"",
+    "category": "Field AT Gun",
+    "description": "The \"Battering Ram\" is a mobile Anti-Tank field gun firing 68mm armour-piercing rounds.",
+    "ammoUsed": "68mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables", "Can be towed by certain vehicles" ],
+      "Cannoneer (Right)": [ "$Deals Armoured Piercing damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ] 
+    },
+    "crateSize": 3,
+    "rmatCost": 20,
+    "productionTime": 1000,
+    "faction": "C"
+  },
+  "FieldMachinegunSagittarii": {
+    "name": "G40 \"Sagittarii\"",
+    "category": "Field Machine Gun",
+    "description": "A dual barreled, high calibre anti-infantry machine gun. The \"Sagittarri\" is fitted with forward-facing armour plating and is excellent for suppression.",
+    "ammoUsed": "12.7mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables", "Can be towed by certain vehicles" ],
+      "Gunner (Right)": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "$Deals Heavy Kinetic damage" ]
+    },
+    "crateSize": 3,
+    "rmatCost": 20,
+    "productionTime": 1000,
+    "faction": "C"
   },
   "TruckFlatbed": {
     "name": "BMS - Packmule Flatbed",
@@ -118,7 +190,7 @@
     "rmatCost": 30,
     "productionTime": 1500
   },
-  "HalfTrack": {
+  "HalfTrackNiska": {
     "name": "Niska Mk. I  Gun Motor Carriage",
     "category": "Half-Track",
     "description": "Designed for escort missions and to support infantry operations, the Niska Gun Motor Carriage Half-Track is an armoured, versatile all-terrain vehicle that can be equipped with a variety of mounted weapons.",
@@ -127,9 +199,10 @@
     },
     "crateSize": 3,
     "rmatCost": 60,
-    "productionTime": 3000
+    "productionTime": 3000,
+    "faction": "W"
   },
-  "ArmouredPersonnelCarrier": {
+  "APCMulloy": {
     "name": "Mulloy LPC",
     "category": "Landing APC",
     "description": "The Mulloy Landing Personnel Carrier is an armoured amphibious vehicle designed for carrying troops across large bodies of water to aid in coordinated beach landings and flanking assaults.",
@@ -138,9 +211,10 @@
     },
     "crateSize": 3,
     "rmatCost": 20,
-    "productionTime": 1000
+    "productionTime": 1000,
+    "faction": "W"
   },
-  "LightTank": {
+  "LightTankDevitt": {
     "name": "Devitt Mk. III",
     "category": "Light Tank",
     "description": "A highly maneuverable lightweight tank. Designed for urban enviroments, the Devitt is fitted with a 40mm cannon.",
@@ -151,7 +225,8 @@
     },
     "crateSize": 3,
     "rmatCost": 120,
-    "productionTime": 6000
+    "productionTime": 6000,
+    "faction": "W"
   },
   "CruiserTankOutlaw": {
     "name": "Gallagher Outlaw Mk. II",
@@ -165,7 +240,8 @@
     },
     "crateSize": 3,
     "rmatCost": 150,
-    "productionTime": 8250
+    "productionTime": 8250,
+    "faction": "W"
   },
   "AssaultTankSilverhand": {
     "name": "Silverhand - Mk. IV",
@@ -179,9 +255,10 @@
     },
     "crateSize": 3,
     "rmatCost": 155,
-    "productionTime": 7750
+    "productionTime": 7750,
+    "faction": "W"
   },
-  "Motorcycle": {
+  "MotorcycleKivela": {
     "name": "Kivela Power Wheel 80-1",
     "category": "Motorcycle",
     "description": "A Warden motorcycle used in patrols and fitted with a sidecar. The Kiveal Power Wheel can also gain a momentary speed boost by burning additional fuel.",
@@ -190,9 +267,10 @@
     },
     "crateSize": 3,
     "bmatCost": 85,
-    "productionTime": 4250
+    "productionTime": 4250,
+    "faction": "W"
   },
-  "TruckFuel": {
+  "TruckFuelFuelrunner": {
     "name": "Dunne Fuelrunner 2d",
     "category": "Fuel Tanker",
     "description": "The Fuelrunner is a heavy Dunne rig designed to transport and distribute large quantities of Fuel.",
@@ -201,7 +279,114 @@
     },
     "crateSize": 3,
     "bmatCost": 100,
-    "productionTime": 5000
+    "productionTime": 5000,
+    "faction": "W"
+  },
+  "HalfTrackJavelin": {
+    "name": "HH-a \"Javelin\"",
+    "category": "Half-Track",
+    "description": "Designed for escort missions and to support infantry operations, the HH-a class \"Javelin\" Half-Track is an armoured, versatile all-terrain vehicle that can be equipped with a variety of mounted weapons.",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables" ] 
+    },
+    "crateSize": 3,
+    "rmatCost": 55,
+    "productionTime": 2750,
+    "faction": "C"
+  },
+  "APCAcheron": {
+    "name": "AB-8 \"Acheron\"",
+    "category": "Landing APC",
+    "description": "The \"Acheron\" is an armoured amphibious vehicle designed for carrying troops across large bodies of water to aid in coordinated beach landings and flanking assaults.",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables" ] 
+    },
+    "crateSize": 3,
+    "rmatCost": 20,
+    "productionTime": 1000,
+    "faction": "C"
+  },
+  "ArtilleryKoronides": {
+    "name": "120-68 \"Koronides\" Field Gun",
+    "category": "Field Artillery",
+    "description": "A long range Colonial mobile artillery used to lay siege to fortified positions.",
+    "ammoUsed": "120mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables", "Can be towed by certain vehicles" ],
+      "Cannoneer (Right)": [ "$Deals High Explosive damage", "Can ruin structures that have been severly damaged by artillery", "Reduced damage against Trenches", "Increased damage against Field Structures" ] 
+    },
+    "crateSize": 3,
+    "rmatCost": 25,
+    "productionTime": 2500,
+    "faction": "C"
+  },
+  "LightTankHatchet": {
+    "name": "H-5 \"Hatchet\"",
+    "category": "Light Tank",
+    "description": "A highly maneuverable lightweight tank. Designed for urban enviroments, the \"Hatchet\" is fitted with a 40mm cannon.",
+    "ammoUsed": "40mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ],
+      "Turret (Center)": [ "$Deals Explosive damage", "Can penetrate armoured vehicles" ] 
+    },
+    "crateSize": 3,
+    "rmatCost": 115,
+    "productionTime": 5750,
+    "faction": "C"
+  },
+  "AssaultTankBardiche": {
+    "name": "86K-a \"Bardiche\"",
+    "category": "Assault Tank",
+    "description": "Unlike the 85-series, the \"Bardiche\" sports a heavier, more durable build and is fitted with a coaxial heavy machinegun along with a powerful, short-barreled 68mm turret. Modern Kraunian engineering allows for a fast reload, making it an ideal tool to combat enemy armour.",
+    "ammoUsed": "68mm, 12.7mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
+      "Cannoneer (Center)": [ "$Deals Armour Piercing damage", "Can penetrate Armoured vehicles", "High chance to penetrate armoued vehicles" ],
+      "Gunner (Right)": [ "$Deals Heavy Kinetic damage" ] 
+    },
+    "crateSize": 3,
+    "rmatCost": 165,
+    "productionTime": 8250,
+    "faction": "C"
+  },
+  "AssaultTankFalchion": {
+    "name": "85K-b \"Falchion\"",
+    "category": "Assault Tank",
+    "description": "Designed for mass production in Kraunia, this assault tank features a modular turret system for maximum versatility. The \"Falchion\" class features a powerfull if understated, 40mm cannon.",
+    "ammoUsed": "40mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
+      "Turret": [ "$Deals Explosive damage", "Can penetrate armoured vehicles" ] 
+    },
+    "crateSize": 3,
+    "rmatCost": 135,
+    "productionTime": 6750,
+    "faction": "C"
+  },
+  "SiegeTankBallista": {
+    "name": "HC-7 \"Ballista\"",
+    "category": "Siege Tank",
+    "description": "The HC-Class \"Ballista\" is a heavy tank designed to oblitarate opposition defenses with its 250mm Hades Mortar Cannon.",
+    "ammoUsed": "250mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables" ] 
+    },
+    "crateSize": 3,
+    "rmatCost": 155,
+    "productionTime": 7750,
+    "faction": "C"
+  },
+  "MotorcycleCaster": {
+    "name": "03MM \"Caster\"",
+    "category": "Motorcycle",
+    "description": "A motorcycle and sidecar used to patrol large areas. Speed can be boosted at the cost of additional fuel/",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ] 
+    },
+    "crateSize": 3,
+    "bmatCost": 85,
+    "productionTime": 4250,
+    "faction": "C"
   },
   "TrailerResource": {
     "name": "Rooster - Junkwagon",
@@ -225,9 +410,10 @@
     "ammoUsed": "12.7mm",
     "crateSize": 3,
     "rmatCost": 70,
-    "productionTime": 3500
+    "productionTime": 3500,
+    "faction": "W"
   },
-  "LightUtilityVehicle": {
+  "LightUtilityVehicleDrummond": {
     "name": "Drummond 100a",
     "category": "Light Utility Vehicle",
     "description": "A multipurpose off-road Warden vehicle that can scout nearby targets.",
@@ -236,9 +422,10 @@
     },
     "crateSize": 3,
     "rmatCost": 10,
-    "productionTime": 500
+    "productionTime": 500,
+    "faction": "W"
   },
-  "TruckDump": {
+  "TruckDumpLoadlugger": {
     "name": "Dunne Loadlugger 3c",
     "category": "Truck",
     "description": "This standard Truck is fitted with a resource hopper in place of the standard cargo hold. This allows for a much greater capacity for resources at the expense of space for cargo.",
@@ -247,9 +434,10 @@
     },
     "crateSize": 3,
     "bmatCost": 120,
-    "productionTime": 6000
+    "productionTime": 6000,
+    "faction": "W"
   },
-  "Truck": {
+  "TruckDunne": {
     "name": "Dunne Transport",
     "category": "Truck",
     "description": "A heavy-duty Warden truck used to mobilize troops and supplies.",
@@ -258,7 +446,69 @@
     },
     "crateSize": 3,
     "bmatCost": 100,
-    "productionTime": 5000
+    "productionTime": 5000,
+    "faction": "W"
+  },
+  "LightUtilityVehicleArgonaut": {
+    "name": "UV-05a \"Argonaut\"",
+    "category": "Light Utility Vehicle",
+    "description": "This stripped down Light Utility Vehicle provides extra seating for a small crew to engage in hit and run tactics.",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ] 
+    },
+    "crateSize": 3,
+    "rmatCost": 10,
+    "productionTime": 500,
+    "faction": "C"
+  },
+  "TanketteActaeon": {
+    "name": "T12 \"Actaeon\" Tankette",
+    "category": "Tankette",
+    "description": "This complete overhaul of the T3 Armoured Car is reinforced with tank armour. While these extra defenses lower the T12's overall speed and handling, the addition of treads provide increased performance in less than ideal terrain.",
+    "ammoUsed": "12.7mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ] 
+    },
+    "crateSize": 3,
+    "rmatCost": 35,
+    "productionTime": 1750,
+    "faction": "C"
+  },
+  "TruckHauler": {
+    "name": "R-1 Hauler ",
+    "category": "Truck",
+    "description": "A heavy-duty Colonial truck used to mobilize troops and supplies.",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Can tow certain vehicles" ] 
+    },
+    "crateSize": 3,
+    "bmatCost": 100,
+    "productionTime": 5000,
+    "faction": "C"
+  },
+  "TruckFuelStolon": {
+    "name": "RR-3 \"Stolon\" Tanker",
+    "category": "Fuel Tanker",
+    "description": "The \"Stolon\" Tanker is heavier R-series rig designed to transport and distribute large quantities of Fuel.",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables" ] 
+    },
+    "crateSize": 3,
+    "bmatCost": 100,
+    "productionTime": 5000,
+    "faction": "C"
+  },
+  "TruckDumpAtlas": {
+    "name": "R-5 \"Atlas\" Hauler",
+    "category": "Truck",
+    "description": "This standard Truck is fitted with a resource hopper in place of the standard cargo hold. This allows for a much greater capacity for resources at the expense of space for cargo.",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables" ] 
+    },
+    "crateSize": 3,
+    "bmatCost": 120,
+    "productionTime": 6000,
+    "faction": "C"
   },
   "ShipBarge": {
     "name": "BMS - Aquatipper",
@@ -282,14 +532,25 @@
     "bmatCost": 500,
     "productionTime": 25000
   },
-  "ShipGunboat": {
+  "ShipGunboatRonan": {
     "name": "74b-1 Ronan Gunship",
     "category": "Gunboat",
     "description": "The 74b-1 Ronan Gunship specializes in roaming between larger vessel at high-speeds and boring into their hulls with ease. It's armed with multiple tripod mounts to suppor the midship high-explosive mortar cannon.",
     "ammoUsed": "Mortar Shell, Shrapnel Mortar Shell, Flare Mortar Shell",
     "crateSize": 3,
     "rmatCost": 140,
-    "productionTime": 8000
+    "productionTime": 8000,
+    "faction": "W"
+  },
+  "ShipGunboatCharon": {
+    "name": "Type C - \"Charon\"",
+    "category": "Gunboat",
+    "description": "Designed for river patrols, the Type-C Charon is fitted with twin tripod mounts, and a midship mortar cannon designed to sunder any armoured resistance on the shore or on open waters.",
+    "ammoUsed": "Mortar Shell, Shrapnel Mortar Shell, Flare Mortar Shell",
+    "crateSize": 3,
+    "rmatCost": 125,
+    "productionTime": 6250,
+    "faction": "C"
   },
   "ConstructionVehicle": {
     "name": "BMS - Universal Assembly Rig",

@@ -388,6 +388,10 @@ p[b-whlumbkcir] {
     color: #F2804B;
 }
 
+.item-extracrates[b-whlumbkcir] {
+    color: #78A756;
+}
+
 .item-costs[b-whlumbkcir] {
     flex-direction: column;
 }
@@ -494,9 +498,33 @@ main[b-j1d26w5cpj] {
     vertical-align: text-top;
 }
 
+.W-icon[b-1w542lhpil] {
+    height: 2.5rem;
+    aspect-ratio: 1;
+    display: inline-block;
+    background-image: url("faviconW.ico");
+    background-size: 100%;
+    vertical-align: text-bottom;
+}
+
+.C-icon[b-1w542lhpil] {
+    height: 2.5rem;
+    aspect-ratio: 1;
+    display: inline-block;
+    background-image: url("faviconC.ico");
+    background-size: 100%;
+    vertical-align: text-bottom;
+}
+
 .nav-link-text[b-1w542lhpil] {
     font-size: 1.1rem;
     margin-left: 12px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .nav-item[b-1w542lhpil] {
@@ -511,6 +539,30 @@ main[b-j1d26w5cpj] {
 .nav-item[b-1w542lhpil]  a:hover {
     background-color: rgba(255,255,255,0.1);
     color: white;
+}
+
+input[type=radio][b-1w542lhpil] {
+    appearance: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #999;
+    transition: 0.2s all linear;
+    position: relative;
+    margin: auto, 0;
+    top: 3px;
+}
+
+    input[type=radio]:checked[b-1w542lhpil] {
+        background-color: white;
+    }
+
+#Warden:checked[b-1w542lhpil] {
+    background-color: #235683;
+}
+
+#Colonial:checked[b-1w542lhpil] {
+    background-color: #516c4b;
 }
 
 @media (max-width: 800px) {

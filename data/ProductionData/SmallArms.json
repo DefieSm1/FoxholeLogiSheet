@@ -9,7 +9,8 @@
     },
     "crateSize": 10,
     "bmatCost": 165,
-    "productionTime": 80
+    "productionTime": 80,
+    "faction": "W"
   },
   "ARAalto": {
     "name": "Aalto Storm Rifle 24",
@@ -18,7 +19,18 @@
     "ammoUsed": "7.92mm",
     "crateSize": 10,
     "bmatCost": 165,
-    "productionTime": 80
+    "productionTime": 80,
+    "faction": "W"
+  },
+  "ARDusk": {
+    "name": "\"Dusk\" ce.III",
+    "category": "Assault Rifle",
+    "description": "This unique assault rifle includes a high-capacity drum magazine designed for sustained rapid-fire.",
+    "ammoUsed": "7.92mm",
+    "crateSize": 10,
+    "bmatCost": 165,
+    "productionTime": 80,
+    "faction": "C"
   },
   "AmmoRifle792": {
     "name": "7.92mm",
@@ -40,7 +52,8 @@
     },
     "crateSize": 5,
     "rmatCost": 25,
-    "productionTime": 100
+    "productionTime": 100,
+    "faction": "W"
   },
   "GrenadeHarpa": {
     "name": "A3 Harpa Fragmentation Grenade",
@@ -52,7 +65,8 @@
     "crateSize": 20,
     "bmatCost": 100,
     "ematCost": 20,
-    "productionTime": 100
+    "productionTime": 100,
+    "faction": "W"
   },
   "PistolCascadier": {
     "name": "Cascadier 873",
@@ -64,7 +78,44 @@
     },
     "crateSize": 40,
     "bmatCost": 60,
-    "productionTime": 30
+    "productionTime": 30,
+    "faction": "W"
+  },
+  "MGCatara": {
+    "name": "Catara mo.II",
+    "category": "Light Machine Gun",
+    "description": "A titanic light machine gun capable of scattering infantry lines with ease, the Catara is a modern weapon for the modern Colonial.",
+    "ammoUsed": "12.7mm",
+    "itemSpecifics": {
+      "general": [ "Equipped with a low velocity barrel that deals 36% less damage per shot" ] 
+    },
+    "crateSize": 10,
+    "bmatCost": 165,
+    "productionTime": 80,
+    "faction": "C"
+  },
+  "MGGast": {
+    "name": "KRN886-127 Gast Machine Gun",
+    "category": "Machine Gun",
+    "description": "The Gast is a deadly but cumbersome Kraunian heavy machine gun. It is best suited to holding and defending established fortifications or garrisoned structures against encroaching infantry/",
+    "ammoUsed": "12.7mm",
+    "crateSize": 5,
+    "rmatCost": 25,
+    "productionTime": 100,
+    "faction": "C"
+  },
+  "GrenadeBomastone": {
+    "name": "Bomastone Grenade",
+    "category": "Grenade",
+    "description": "The Bomastone is a 'stick' style fragmentation grenade with a handle designed to aid in lobbing over moderate distances.",
+    "itemSpecifics": {
+      "general": [ "$Deals Shrapnel damage", "Always causes target to bleed" ] 
+    },
+    "crateSize": 25,
+    "bmatCost": 100,
+    "ematCost": 20,
+    "productionTime": 100,
+    "faction": "C"
   },
   "AmmoPistol8": {
     "name": "8mm",
@@ -95,7 +146,8 @@
     },
     "crateSize": 20,
     "bmatCost": 125,
-    "productionTime": 80
+    "productionTime": 80,
+    "faction": "W"
   },
   "AmmoPistol44": {
     "name": ".44",
@@ -117,7 +169,8 @@
     },
     "crateSize": 20,
     "bmatCost": 125,
-    "productionTime": 70
+    "productionTime": 70,
+    "faction": "W"
   },
   "RifleBlakerow": {
     "name": "Blakerow 871",
@@ -129,7 +182,8 @@
     },
     "crateSize": 20,
     "bmatCost": 140,
-    "productionTime": 80
+    "productionTime": 80,
+    "faction": "W"
   },
   "RifleCinder": {
     "name": "Clancy Cinder M3",
@@ -141,7 +195,8 @@
     },
     "crateSize": 15,
     "bmatCost": 130,
-    "productionTime": 90
+    "productionTime": 90,
+    "faction": "W"
   },
   "RifleHawthorne": {
     "name": "No. 2B Hawthorne",
@@ -153,9 +208,10 @@
     },
     "crateSize": 15,
     "bmatCost": 70,
-    "productionTime": 60
+    "productionTime": 60,
+    "faction": "W"
   },
-  "RifleLough": {
+  "RifleLoughcaster": {
     "name": "No.2 Loughcaster",
     "category": "Rifle",
     "description": "Standard-issue Warden rifle. This bolt-action firearm is as robust as they come and has seen over a century of use on the battlefield.",
@@ -165,20 +221,98 @@
     },
     "crateSize": 20,
     "bmatCost": 100,
-    "productionTime": 70
+    "productionTime": 70,
+    "faction": "W"
   },
-  "RifleSniper": {
+  "RifleSniperRaca": {
     "name": "Clancy-Raca M4",
     "category": "Sniper Rifle",
     "description": "A heavy-duty, long-range marksman rifle. The Clancy-Raca has one hell of a kick but is fitted with a powerful scope, allowing infantry to survey the battlefield and provide support from a safe location.",
     "ammoUsed": "7.62mm",
     "itemSpecifics": {
-      "general": [ "Equipped with a high velocity barrel that deals 125% extra damage per shot" ] 
+      "general": [ "Equipped with a high velocity barrel that deals 125% extra damage per shot", "Accuracy bonus provided by cover is reduced by 95%" ] 
     },
     "crateSize": 3,
     "rmatCost": 25,
     "bmatCost": 250,
-    "productionTime": 250
+    "productionTime": 250,
+    "faction": "W"
+  },
+  "RifleCatena": {
+    "name": "Catena rt.IV Auto-Rifle",
+    "category": "Rifle",
+    "description": "An auto-firing rifle that played a pivotal role in maintaning Mesean interests on the Katoman continent. While not quite as rapid-firing as its assault rifle brethren, many soldiers speak fondly of the Catena as a sturdy, easy-to-use, and reliable firearm. It doesn't boast high points in any particular area but performs admirably as a general-purpose rifle.",
+    "ammoUsed": "7.62mm",
+    "crateSize": 15,
+    "bmatCost": 120,
+    "productionTime": 90,
+    "faction": "C"
+  },
+  "RifleArgenti": {
+    "name": "Argenti r.II Rifle",
+    "category": "Rifle",
+    "description": "The primary infantry rifle of the Colonial Legion. Its predecessor, The Volta Repeater, was a sturdy, reliable firearm but had many limitations, namely, fire rate. The Argenti solves this limiation as well as being more compact and lightweight.",
+    "ammoUsed": "7.62mm",
+    "itemSpecifics": {
+      "general": [ "Allows Buckhorn CCQ-18 (Bayonet) attachement" ] 
+    },
+    "crateSize": 20,
+    "bmatCost": 100,
+    "productionTime": 70,
+    "faction": "C"
+  },
+  "RifleVolta": {
+    "name": "Volta r.I Repeater",
+    "category": "Heavy Rifle",
+    "description": "An old war Mesean rifle. It boasts high stopping power, but not as accurate as its modern variant. A weapon of legend, the Howling Lions wielded the Volta during their raid on the beaches of Fisherman's Row.",
+    "ammoUsed": "7.62mm",
+    "itemSpecifics": {
+      "general": [ "Allows Buckhorn CCQ-18 (Bayonet) attachement", "Equipped with a high velocity barrel that deals 75% extra damage per shot" ] 
+    },
+    "crateSize": 15,
+    "bmatCost": 100,
+    "productionTime": 90,
+    "faction": "C"
+  },
+  "RifleFuscina": {
+    "name": "Fuscina pi.I",
+    "category": "Rifle",
+    "description": "This unique rifle fires three rounds in rapid succession. The Fuscina is the first of its kind, designed for laying down suppresive fire during assaults on fortified enemy entrenchments.",
+    "ammoUsed": "7.62mm",
+    "itemSpecifics": {
+      "general": [ "Allows Buckhorn CCQ-18 (Bayonet) attachement", "Equipped with a low velocity barrel that deals 11% less damage per shot" ] 
+    },
+    "crateSize": 20,
+    "bmatCost": 140,
+    "productionTime": 80,
+    "faction": "C"
+  },
+  "RifleOmen": {
+    "name": "KKR2-790 Omen",
+    "category": "Long Rifle",
+    "description": "An older but reliable model of Kraunian long rifle. The Omen is a sturdy, simple weapon best used in long-distance skirmishes.",
+    "ammoUsed": "7.62mm",
+    "itemSpecifics": {
+      "general": [ "Allows Buckhorn CCQ-18 (Bayonet) attachement" ] 
+    },
+    "crateSize": 15,
+    "bmatCost": 155,
+    "productionTime": 90,
+    "faction": "C"
+  },
+  "RifleSniperAuger": {
+    "name": "KRR3-792 Auger",
+    "category": "Sniper Rifle",
+    "description": "A Kraunian rifle modified for long-range engagements. It doesn't have the range or stopping power of other marksman rifles but more than makes up for it with unmatched reliability in a range of environments and a superior effective rate of fire.",
+    "ammoUsed": "7.62mm",
+    "itemSpecifics": {
+      "general": [ "Equipped with a high velocity barrel that deals 55% extra damage per shot", "Accuracy bonus provided by cover is reduced by 95%" ] 
+    },
+    "crateSize": 5,
+    "bmatCost": 250,
+    "rmatCost": 30,
+    "productionTime": 250,
+    "faction": "C"
   },
   "AmmoRifle762": {
     "name": "7.62mm",
@@ -216,7 +350,8 @@
     "ammoUsed": "9mm",
     "crateSize": 20,
     "bmatCost": 120,
-    "productionTime": 80
+    "productionTime": 80,
+    "faction": "W"
   },
   "SMGFiddler": {
     "name": "Fiddler Submachine Gun Model 868",
@@ -225,7 +360,31 @@
     "ammoUsed": "9mm",
     "crateSize": 20,
     "bmatCost": 120,
-    "productionTime": 80
+    "productionTime": 80,
+    "faction": "W"
+  },
+  "SMGPitch": {
+    "name": "\"The Pitch Gun\" mc.V",
+    "category": "Submachine Gun",
+    "description": "This classic submachine gun is sturdy and irreplacable as a general tool for close-range engagements. The Pitch Gun earned its namesake from Mesean sailors who employed the weapon to successfully defend against a night raid on the Geraston docks.",
+    "ammoUsed": "9mm",
+    "itemSpecifics": {
+      "general": [ "Equipped with a low velocity barrel that deals 25% less damage per shot" ] 
+    },
+    "crateSize": 20,
+    "bmatCost": 80,
+    "productionTime": 80,
+    "faction": "C"
+  },
+  "SMGLionclaw": {
+    "name": "\"Lionclaw\" mc.VIII",
+    "category": "Submachine Gun",
+    "description": "A heavier, modern variation of the Pitch Gun, the Lionclaw performs well as a decent, all-around submachine gun designed as a primary firearm in urban and close-quarters combat operations.",
+    "ammoUsed": "9mm",
+    "crateSize": 20,
+    "bmatCost": 120,
+    "productionTime": 80,
+    "faction": "C"
   },
   "AmmoSMG9": {
     "name": "9mm",

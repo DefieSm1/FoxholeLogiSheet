@@ -31,20 +31,21 @@
     "shellPlating": 15,
     "productionTime":28800
   },
-  "ShipSubmarine": {
+  "ShipSubmarineNakki": {
     "name": "Nakki",
     "category": "Submarine",
     "description": "This Nevish vessel excels at punching holes in the hulls of the Colonial fleet. Armed with Moray Torpedos and state-of-the-art sonar technology, the Nakki is a silent killer. Famously, three Nakkis crept behind a Colonial fleet at night and picked them apart one by one, leading to Prefect Evnader to call a retreat. Their \"Legion\" was not at all prepared to be assaulted from under the waves.",
     "ammoUsed": "Moray Torpedo, 40mm",
     "itemSpecifics": {
-      "Gunner (Starboard Beam)": [ "$Deals High Explosive damage", "Increaed chance to cause a leak." ],
+      "Gunner (Starboard Beam)": [ "$Deals High Explosive damage", "Increased chance to cause a leak." ],
       "Turret (Midships)": [ "$Deals Explosive damage", "Can penetrate armoured vehicles" ]
     },
     "hullSegments": 12,
     "shellPlating": 12,
-    "productionTime": 21600
+    "productionTime": 21600,
+    "faction": "W"
   },
-  "ShipBattleship": {
+  "ShipBattleshipCallahan": {
     "name": "Callahan",
     "category": "Battleship",
     "description": "Callahan-class Battleships are massive, fully featured mobile bases. They pack enough firepower to devestate enemy naval vessels and their crew, or rain death on nearby shorelines while shrugging of punishment with its reinforced hull. Named for Caoiva's founder and first Archon, who famously held fast in conflict with rival clans who wanted his head. Several Callahans remain anchored at Whedon's Row Harbour.",
@@ -57,7 +58,8 @@
     "hullSegments": 20,
     "shellPlating": 20,
     "turbineComponents": 4,
-    "productionTime": 36000
+    "productionTime": 36000,
+    "faction": "W"
   },
   "ShipFrigate": {
     "name": "Blacksteele",
@@ -71,6 +73,52 @@
     },
     "hullSegments": 15,
     "shellPlating": 15,
-    "productionTime": 21600
+    "productionTime": 21600,
+    "faction": "W"
+  },
+  "ShipDestroyer": {
+    "name": "Conqueror",
+    "category": "Destroyer",
+    "description": "Serving as the front line of the Republic Coastal Legion, long have Conquerors lived up to the namesake. These beasts are fitted with armaments to tackle threats both above and below, including a specialized sonar station and depth charge launchers. A young upstart, Diana Geminus, was the first to command a Conqueror after quickly rising through the ranks with fresh ideas for defence against the northener's disgraceful efforts.",
+    "ammoUsed": "120mm, 40mm, 12.7mm, Model-7 \"Evie\"",
+    "itemSpecifics": {
+      "Cannoneer (Bow), Cannoneer (Stern)": [ "$Deals High Explosive damage", "Can ruin structures that have been severly damaged by artillery", "Reduced damage against Trenches", "Incresed damage against Field Structures" ],
+      "Turret (Bow)": [ "$Deals Explosive damage", "Can penetrate armoured vehicles" ],
+      "Gunner (Starboard Beam), Gunner (Port Beam)": [ "$Deals Kinetic Damage" ]
+    },
+    "hullSegments": 15,
+    "shellPlating": 15,
+    "productionTime": 21600,
+    "faction": "C"
+  },
+  "ShipBattleshipTitan": {
+    "name": "Titan",
+    "category": "Battleship",
+    "description": "Long-feared on the open seas, Titan-Class battleships are spoken of in hushed tones and with great reverence. Fitted with a wide arsenal of cannons and gun emplacements, the Titan's enemies will soon feel the crushing depths. The Republic Coastal Legion holds Titans as its Signifiers and entire fleets rally on their position. Modelled on the flagship of Ambrose Leon's storied fleet, the Titan is a beacon of victory for the Mesean people.",
+    "ammoUsed": "150mm, 120mm, 12.7mm, 40mm",
+    "itemSpecifics": {
+      "Cannoneer (Bow), Cannoneer (Midships), Cannoneer (Stern),": [ "$Deals High Explosive damage", "Can ruin structures that have been severly damaged by artillery", "Reduced damage against Trenches", "Incresed damage against Field Structures" ],
+      "Machine Gun (Starboard Beam), Machine Gun (Port Beam)": [ "$Deals Kinetic Damage" ],
+      "Turret (Starboard Beam), Turret (Port Beam)": [ "$Deals Explosive damage", "Can penetrate armoured vehicles" ]
+    },
+    "hullSegments": 20,
+    "shellPlating": 20,
+    "turbineComponents": 4,
+    "productionTime": 36000,
+    "faction": "C"
+  },
+  "ShipSubmarineTrident": {
+    "name": "AC-b \"Trident\"",
+    "category": "Submarine",
+    "description": "The AC-b or \"Trident\"-class submersible brings much-needed versatility to the Republic Coastal Legion. Featuring a quick-loading ammo bay, the \"Trident\" is capable of quickly re-arming and returning to the hunt. Combat Magister Curia comissioned the skilled engineers out of Dimourg to develop a submersible to thelp counter the rapidly progressing naval technology deployed by the Wardens and Nevish Alliance. Much of the Senate criticised Curia for this decision, as they believe it more prutend to invest resources into airborne warfare innovations. After witnessing the return and redeployment of several successful trial AC-b operations, it wasn't hard to convince the Senate.",
+    "ammoUsed": "Moray Torpedo, 120mm",
+    "itemSpecifics": {
+      "Gunner (Port Beam), Gunner (Starboard Beam)": [ "$Deals High Explosive damage", "Increased chance to cause a leak" ],
+      "Cannoneer (Midships)": [ "$Deals High Explosive damage", "Can ruin structures that have been severly damaged by artillery", "Reduced damage against Trenches", "Increased damage against Field Structures" ]
+    },
+    "hullSegments": 12,
+    "shellPlating": 12,
+    "productionTime": 21600,
+    "faction": "C"
   }
 }

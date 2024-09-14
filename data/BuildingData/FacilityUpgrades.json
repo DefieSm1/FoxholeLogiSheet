@@ -283,7 +283,8 @@
                 "outputNames": [ "UtilityTripod" ],
                 "outputAmounts": [ 1 ],
                 "powerConsumption": 4,
-                "productionTime": 25
+                "productionTime": 25,
+                "faction": "W"
             },
             {
                 "inputNames": [ "MaterialConstruction" ],
@@ -291,7 +292,8 @@
                 "outputNames": [ "ATBonesawTripod" ],
                 "outputAmounts": [ 1 ],
                 "powerConsumption": 4,
-                "productionTime": 25
+                "productionTime": 25,
+                "faction": "W"
             },
             {
                 "inputNames": [ "MaterialConstruction" ],
@@ -299,7 +301,8 @@
                 "outputNames": [ "RPGFoebreaker" ],
                 "outputAmounts": [ 1 ],
                 "powerConsumption": 4,
-                "productionTime": 25
+                "productionTime": 25,
+                "faction": "W"
             },
             {
                 "inputNames": [ "MaterialConstruction" ],
@@ -307,7 +310,44 @@
                 "outputNames": [ "MGRatcatcher" ],
                 "outputAmounts": [ 1 ],
                 "powerConsumption": 4,
-                "productionTime": 25
+                "productionTime": 25,
+                "faction": "W"
+            },
+            {
+                "inputNames": [ "MaterialConstruction" ],
+                "inputAmounts": [ 3 ],
+                "outputNames": [ "InfantrySupportGun" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 4,
+                "productionTime": 25,
+                "faction": "C"
+            },
+            {
+                "inputNames": [ "MaterialConstruction" ],
+                "inputAmounts": [ 3 ],
+                "outputNames": [ "MGLamentum" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 4,
+                "productionTime": 25,
+                "faction": "C"
+            },
+            {
+                "inputNames": [ "MaterialConstruction" ],
+                "inputAmounts": [ 3 ],
+                "outputNames": [ "ATRifleTripod" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 4,
+                "productionTime": 25,
+                "faction": "C"
+            },
+            {
+                "inputNames": [ "MaterialConstruction" ],
+                "inputAmounts": [ 3 ],
+                "outputNames": [ "GrenadeLauncherTripod" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 4,
+                "productionTime": 25,
+                "faction": "C"
             }
         ]
     },

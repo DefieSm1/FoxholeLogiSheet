@@ -10,8 +10,9 @@
     },
     "pcmatCost": 10,
     "assmatCost": [ 10, 0, 8, 0, 0 ],
-    "baseVehicle": "HalfTrack",
-    "productionTime": 300
+    "baseVehicle": "HalfTrackNiska",
+    "productionTime": 300,
+    "faction": "W"
   },
   "HalfTrackAntiTank": {
     "name": "Niska Mk. II Blinder",
@@ -24,8 +25,9 @@
     },
     "pcmatCost": 5,
     "assmatCost": [ 0, 10, 0, 3, 0 ],
-    "baseVehicle": "HalfTrack",
-    "productionTime": 300
+    "baseVehicle": "HalfTrackNiska",
+    "productionTime": 300,
+    "faction": "W"
   },
   "ScoutTankJester": {
     "name": "King Jester - Mk. I-1",
@@ -39,7 +41,8 @@
     "pcmatCost": 20,
     "assmatCost": [ 15, 0, 3, 0, 0 ],
     "baseVehicle": "ScoutTankSpire",
-    "productionTime": 600
+    "productionTime": 600,
+    "faction": "W"
   },
   "HalfTrackLMG": {
     "name": "Niska Mk. III Scar Twin",
@@ -52,7 +55,9 @@
     },
     "pcmatCost": 5,
     "assmatCost": [ 0, 0, 0, 5, 0 ],
-    "productionTime": 300
+    "baseVehicle": "HalfTrackNiska",
+    "productionTime": 300,
+    "faction": "W"
   },
   "FieldRocketLauncher": {
     "name": "Rycker 4/3-F Wasp Nest",
@@ -65,6 +70,76 @@
     },
     "pcmatCost": 20,
     "assmatCost": [ 0, 15, 0, 3, 0 ],
-    "productionTime": 600
+    "productionTime": 600,
+    "faction": "W"
+  },
+  "TruckRetiarius": {
+    "name": "R-17 \"Retiarius\" Skirmisher",
+    "category": "Truck",
+    "description": "A truck fitted with an advanced rocket propulsion rakc, thbe \"Retiarius\" webs the sky with deadly, screeching rockets shot at a high-frequency over long distances. Holds sixteen rockets.",
+    "ammoUsed": "3C-High Explosive Rocket",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
+      "Gunner": [ "$Deals Incendiary damage", "Deals High Explosive damage on impact" ] 
+    },
+    "pcmatCost": 70,
+    "assmatCost": [ 10, 0, 8, 0, 0 ],
+    "baseVehicle": "TruckHauler",
+    "productionTime": 300,
+    "faction": "C"
+  },
+  "EmplacedRocket": {
+    "name": "DAE 3b-2 \"Hades' Net\"",
+    "description": "The DAE 3b-2 fires rockets over long distances from a safe, emplaced position. This unique weapon was given its name due to the screams heard across the battlefield during its first deployment, with some referring to the barrage as a \"web of death\".",
+    "ammoUsed": "3C-High Explosive Rocket",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ],
+      "Cannoneer": [ "$Deals Incendiary damage", "Deals High Explosive damage on impact" ] 
+    },
+    "pcmatCost": 20,
+    "assmatCost": [ 0, 15, 0, 3, 0 ],
+    "productionTime": 600,
+    "faction": "C"
+  },
+  "HalfTrackHoplite": {
+    "name": "HH-b \"Hoplite\"",
+    "category": "Half-Track",
+    "description": "With reinforced armour at the expense of speed, the \"Hoplite\" is a formidable force in the heat of combat.",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Can tow certain vehicles" ] 
+    },
+    "pcmatCost": 3,
+    "assmatCost": [ 0, 0, 0, 3, 0 ],
+    "baseVehicle": "HalfTrackJavelin",
+    "productionTime": 300,
+    "faction": "C"
+  },
+  "HalfTrackPeltast": {
+    "name": "HH-d \"Peltast\"",
+    "category": "Half-Track",
+    "description": "This \"Javelin\" variant is fitted with a 360 degree mortar platform, designed to support infantry in frontline operations.",
+    "ammoUsed": "Mortar Shell, Shrapnel Mortar Shell, Flare Mortar Shell",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables" ] 
+    },
+    "pcmatCost": 5,
+    "assmatCost": [ 0, 5, 0, 5, 0 ],
+    "baseVehicle": "HalfTrackJavelin",
+    "productionTime": 300,
+    "faction": "C"
+  },
+  "TanketteDeioneus": {
+    "name": "T13 \"Deioneus\" Rocket Battery",
+    "category": "Tankette",
+    "description": "Initially intended to provide a mobile platform for cumbersome field weapons, the T13 \"Deioneus\" Rocket Battery is a lightweight tankette fitted with a nine-barreled rocket artillery. This unique battery is configured for incindiary rockets to be launched at range while maintaining high maneuverability between deployments.",
+    "ammoUsed": "4C-Fire Rocket",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ] 
+    },
+    "pcmatCost": 20,
+    "assmatCost": [ 15, 0, 3, 0, 0 ],
+    "baseVehicle": "TanketteActaeon",
+    "productionTime": 600,
+    "faction": "C"
   }
 }

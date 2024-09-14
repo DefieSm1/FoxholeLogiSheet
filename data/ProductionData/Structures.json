@@ -1,15 +1,5 @@
 {
-  "ConcreteMixer": {
-    "name": "Concrete Mixer",
-    "description": "A portable device that mixes various materials to form Concrete, which are used to build heavily fortified structures.",
-    "itemSpecifics": {
-      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ]
-    },
-    "crateSize": 3,
-    "rmatCost": 75,
-    "productionTime": 3750
-  },
-  "EmplacedAntiTank": {
+  "EmplacedAntiTank68": {
     "name": "Leary Shellbore 68mm",
     "description": "A defensive emplacement with a 68mm Anti-Tank cannon. This rudimentary weapon was once built to fit onto the hull of large naval vessels, but was eventually pahsed out and repurposed.",
     "ammoUsed": "68mm",
@@ -19,7 +9,8 @@
     },
     "crateSize": 3,
     "bmatCost": 150,
-    "productionTime": 7500
+    "productionTime": 7500,
+    "faction": "W"
   },
   "ArtilleryExalt": {
     "name": "Huber Exalt 150mm",
@@ -31,9 +22,10 @@
     },
     "crateSize": 3,
     "rmatCost": 175,
-    "productionTime": 8750
+    "productionTime": 8750,
+    "faction": "W"
   },
-  "EmplacedMachinegun": {
+  "EmplacedMachinegunSnareTrap": {
     "name": "Leary Snare Trap 127",
     "description": "The Snare Trap is a repurposed anti-aircraft flak cannon used to fortify emplaced positions with twin anti-infantry machine guns.",
     "ammoUsed": "12.7mm",
@@ -43,7 +35,8 @@
     },
     "crateSize": 3,
     "bmatCost": 75,
-    "productionTime": 3750
+    "productionTime": 3750,
+    "faction": "W"
   },
   "ArtilleryLariat": {
     "name": "Huber Lariat 120mm",
@@ -55,7 +48,22 @@
     },
     "crateSize": 3,
     "rmatCost": 35,
-    "productionTime": 1750
+    "productionTime": 1750,
+    "faction": "W"
+  },
+  
+  "ArtilleryThunderbolt": {
+    "name": "50-500 \"Thunderbolt\" Cannon",
+    "description": "This heavy artillery cannon is designed to cripple enemy fortifications from an entrenched position. Its long heavy barrel gives the \"Thunderbolt\" outstanding range.",
+    "ammoUsed": "150mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ],
+      "Cannoneer": [ "$Deals High Explosive damage", "Can ruin structures that have been severly damaged by artillery", "Reduced damaged against Trenches", "Increased damage against Field Structures" ] 
+    },
+    "crateSize": 3,
+    "rmatCost": 195,
+    "productionTime": 9750,
+    "faction": "C"
   },
   "MaterialPallet": {
     "name": "Material Pallet",
@@ -86,6 +94,41 @@
     "crateSize": 3,
     "bmatCost": 100,
     "productionTime": 5000
+  }, 
+  "EmplacedAntiTankARC": {
+    "name": "DAE 1o-3 \"Polybolos\"",
+    "description": "To combat Caoivish ingenuity, the Meseans developed their own indirect RPG propulsion system. Dual launchers are fitted on a large emplacement platform to maximize coverage in an established position, rather than being relegated to a guerilla warfare tool.",
+    "ammoUsed": "ARC/RPG",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ] 
+    },
+    "crateSize": 3,
+    "rmatCost": 125,
+    "productionTime": 6250,
+    "faction": "C"
+  },
+  "EmplacedMachinegunSerra": {
+    "name": "DAE 1b-2 \"Serra\"",
+    "description": "Built like a saw blade, the DAE 1b-2 emplacement gun is fitted with three cascading machine gun turrets. What the \"Serra\" lacks in power, it makes up for in sheer rate of fire for a weapon of its size.",
+    "ammoUsed": "12.7mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ],
+      "Machine Gun": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "$Deals Heavy Kinetic damage" ] 
+    },
+    "crateSize": 3,
+    "bmatCost": 100,
+    "productionTime": 5000,
+    "faction": "C"
+  },
+  "ConcreteMixer": {
+    "name": "Concrete Mixer",
+    "description": "A portable device that mixes various materials to form Concrete, which are used to build heavily fortified structures.",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ]
+    },
+    "crateSize": 3,
+    "rmatCost": 75,
+    "productionTime": 3750
   },
   "FuelContainer": {
     "name": "Liquid Container",
