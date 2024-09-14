@@ -5,6 +5,7 @@
 @inject HttpClient Http
 @inject IJSRuntime JsRuntime
 @inject Blazored.LocalStorage.ISyncLocalStorageService localStorage
+@inject Blazored.SessionStorage.ISyncSessionStorageService sessionStorage
 @using FoxholeLogiSheet.Data
 
 <PageHeader>Assembly Sheet</PageHeader>
@@ -160,7 +161,7 @@
 
 	public Dictionary<string, ProductionItem> BaseVehicles { get => AssemblyCategories.Keys.Contains("Vehicles") ? AssemblyCategories["Vehicles"] : new(); }
 
-	public string CurrentFaction { get => localStorage.GetItem<string>("selectedFaction") ?? "W"; }
+	public string CurrentFaction { get => sessionStorage.GetItem<string>("selectedFaction") ?? localStorage.GetItem<string>("selectedFaction") ?? "W"; }
 
 	protected override async Task OnInitializedAsync()
 	{
