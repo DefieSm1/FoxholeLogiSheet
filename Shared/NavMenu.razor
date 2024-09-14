@@ -1,4 +1,5 @@
 ﻿@inject Blazored.LocalStorage.ISyncLocalStorageService localStorage
+@inject Blazored.SessionStorage.ISyncSessionStorageService sessionStorage
 @inject NavigationManager _navigationManager
 
 <div class="top-row ps-2 navbar navbar-dark">
@@ -51,10 +52,19 @@
 @code {
     public bool ShowAbout { get; set; } = false;
 
-    public string SelectedFaction { get => localStorage.GetItem<string>("selectedFaction") ?? "W"; }
+    public string SelectedFaction { get => sessionStorage.GetItem<string>("selectedFaction") ?? localStorage.GetItem<string>("selectedFaction") ?? "W"; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (localStorage.GetItem<string>("selectedFaction") is null) { 
+            sessionStorage.SetItem<string>("selectedFaction", "W");
+            localStorage.SetItem<string>("selectedFaction", "W"); 
+        }
+    }
 
     public void switchFaction(string faction) {
         if (SelectedFaction == faction) return;
+        sessionStorage.SetItem<string>("selectedFaction", faction);
         localStorage.SetItem<string>("selectedFaction", faction);
         _navigationManager.Refresh(false);
     }
