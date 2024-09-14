@@ -17,9 +17,33 @@
     vertical-align: text-top;
 }
 
+.W-icon {
+    height: 2.5rem;
+    aspect-ratio: 1;
+    display: inline-block;
+    background-image: url("faviconW.ico");
+    background-size: 100%;
+    vertical-align: text-bottom;
+}
+
+.C-icon {
+    height: 2.5rem;
+    aspect-ratio: 1;
+    display: inline-block;
+    background-image: url("faviconC.ico");
+    background-size: 100%;
+    vertical-align: text-bottom;
+}
+
 .nav-link-text {
     font-size: 1.1rem;
     margin-left: 12px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .nav-item {
@@ -34,6 +58,30 @@
 .nav-item ::deep a:hover {
     background-color: rgba(255,255,255,0.1);
     color: white;
+}
+
+input[type=radio] {
+    appearance: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #999;
+    transition: 0.2s all linear;
+    position: relative;
+    margin: auto, 0;
+    top: 3px;
+}
+
+    input[type=radio]:checked {
+        background-color: white;
+    }
+
+#Warden:checked {
+    background-color: #235683;
+}
+
+#Colonial:checked {
+    background-color: #516c4b;
 }
 
 @media (max-width: 800px) {

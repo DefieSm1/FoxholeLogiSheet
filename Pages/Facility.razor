@@ -4,7 +4,7 @@
 
 @inject HttpClient Http
 @inject IJSRuntime JsRuntime
-@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@inject Blazored.LocalStorage.ISyncLocalStorageService localStorage
 @using FoxholeLogiSheet.Data
 
 <PageHeader>Facility Sheet</PageHeader>
@@ -40,6 +40,7 @@
 		<ItemGrid Columns="5" Rows="1" OverflowScroll=true>
 			@foreach (KeyValuePair<string, ProductionItem> item in FacilityItems)
 			{
+				@if(item.Value.Faction == (CurrentFaction == "W" ? "C" : "W")) continue;
 				<ItemButton ItemName=@item.Key Category="Facility" Disabled=@(SelectedItem == item.Key) IconSet="items"
 							OnMouseOver="() => { HoveredItem = FacilityItems[item.Key]; TooltipVisibility = true; TooltipSimplified = false; StateHasChanged(); }"
 							OnMouseOut="() => { HoveredItem = FacilityItems[item.Key]; TooltipVisibility = false; StateHasChanged(); }"
@@ -70,6 +71,7 @@
 			<FacilityRecipeList>
 				@foreach (FacilityRecipe recipe in CurrentBuilding.BuildingRecipes)
 				{
+					@if (recipe.Faction == (CurrentFaction == "W" ? "C" : "W")) continue;
 					<FacilityRecipeBar Recipe=@recipe SelectedItem=@SelectedItem
 									   OnMouseOver="(item) => { HoveredItem = FacilityItems[item.Trim('$')]; TooltipVisibility = true; TooltipSimplified = false; StateHasChanged(); }"
 									   OnMouseOut="(item) => { HoveredItem = FacilityItems[item.Trim('$')]; TooltipVisibility = false; StateHasChanged(); }" />
@@ -84,6 +86,7 @@
 				<FacilityRecipeList>
 					@foreach (FacilityRecipe recipe in CurrentUpgrade.BuildingRecipes)
 					{
+						@if (recipe.Faction == (CurrentFaction == "W" ? "C" : "W")) continue;
 						<FacilityRecipeBar Recipe=@recipe SelectedItem=@SelectedItem
 										   OnMouseOver="(item) => { HoveredItem = FacilityItems[item.Trim('$')]; TooltipVisibility = true; TooltipSimplified = false; StateHasChanged(); }"
 										   OnMouseOut="(item) => { HoveredItem = FacilityItems[item.Trim('$')]; TooltipVisibility = false; StateHasChanged(); }" />
@@ -142,9 +145,11 @@
 
 	public Dictionary<string, ProductionItem> FacilityBuildingSet { get => FacilityBuildings.Where(building => building.Value.BuildingType == BuildingSet).ToDictionary(x => x.Key, x => x.Value); }
 
+	public string CurrentFaction { get => localStorage.GetItem<string>("selectedFaction") ?? "W"; }
+
 	protected override async Task OnInitializedAsync()
 	{
-		await localStorage.SetItemAsync("lastPage", "facility");
+		localStorage.SetItem("lastPage", "facility");
 
 		FacilityBuildings = await Http.GetFromJsonAsync<Dictionary<string, ProductionItem>>("data/BuildingData/FacilityBuildings.json") ?? throw new FileNotFoundException();
 

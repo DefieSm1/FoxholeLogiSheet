@@ -14,6 +14,19 @@
     "bmatCost": 75,
     "productionTime": 50
   },
+  "UtilityHydrasWhisper": {
+    "name": "Hydra's Whisper",
+    "category": "Explosive Charge",
+    "description": "This unique demolition tool is a long, metal tube packed with explosives. The Hydra's Whisper is designed to destroy out-of-reach movement impairing structures and detonate any mines along the lenght of the tube.",
+    "itemSpecifics": {
+      "general": [ "$Deals Demolition damage", "Can ruin structures that have been severly damaged by artillery", "Destroys obstacles that can otherwise only be dismantled with Wrenches" ] 
+    },
+    "crateSize": 5,
+    "bmatCost": 100,
+    "ematCost": 40,
+    "productionTime": 100,
+    "faction": "C"
+  },
   "UtilityHavocCharge": {
     "name": "Havoc Charge",
     "description": "A high-powered explosive charge that requires an accompanying detonator. The Havoc Charge is highly effective at demolishing large structures. The charge must be detonated via gunshot. The Havoc Charge's true potential is unleashed when executing strategic demolitions at safe distances.",
@@ -22,14 +35,25 @@
     "hematCost": 40,
     "productionTime": 60
   },
-  "AmmoFlamethrower": {
+  "AmmoFlamethrowerWilowsBane": {
     "name": "Wilow's Bane Ammo",
     "category": "Flamethrower Ammo",
     "description": "Ammo for Willow's Bane Model 845",
     "crateSize": 10,
     "bmatCost": 135,
     "hematCost": 20,
-    "productionTime": 100
+    "productionTime": 100,
+    "faction": "W"
+  },
+  "AmmoFlamethrowerMoltenWind": {
+    "name": "\"Molten Wind\" v.II Ammo",
+    "category": "Flamethrower Ammo",
+    "description": "Ammo for \"Molten Wind\" v.II Flame Torch",
+    "crateSize": 10,
+    "bmatCost": 160,
+    "hematCost": 20,
+    "productionTime": 100,
+    "faction": "C"
   },
   "UtilityListeningKit": {
     "name": "Listening Kit",
@@ -81,7 +105,8 @@
     "crateSize": 5,
     "bmatCost": 150,
     "ematCost": 160,
-    "productionTime": 100
+    "productionTime": 100,
+    "faction": "W"
   },
   "UtilityShovel": {
     "name": "Shovel",
@@ -173,7 +198,8 @@
     "crateSize": 20,
     "bmatCost": 85,
     "rmatCost": 10,
-    "productionTime": 100
+    "productionTime": 100,
+    "faction": "W"
   },
   "UtilityRadio": {
     "name": "Radio",

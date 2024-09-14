@@ -1,5 +1,5 @@
 {
-  "SuperTank": {
+  "SuperTankPredator": {
     "name": "Cullen Predator Mk. III",
     "category": "Super Tank",
     "description": "This gargantuan beast is the brainchild of Gray Cullen. Once thought impossible, the Predator was Cullen's idea of how a great ship might operate on land. It boasts two sets of quad-barrelled grenade launches and a heavy-duty 94.5mm forward facing cannon. While limitations of ground-based travel posed certain restrictions on the scope of the project, Cullen wasn't deterred and made necessary adjustments to meet his vision of the ideal land ship.",
@@ -11,9 +11,10 @@
     "steelCost": 275,
     "assmatCost": [ 0, 105, 0, 95, 105 ],
     "rareCost": 3,
-    "productionTime": 172800
+    "productionTime": 172800,
+    "faction": "W"
   },
-  "BattleTank": {
+  "BattleTankFlood": {
     "name": "Flood Mk. I",
     "category": "Battle Tank",
     "description": "A heavy-duty Battle Tank with thick armour plating and destructive firepower. The Flood is fitted with a 75mm turret and a front-facing 12.7mm anti-infantry machine gun. The heavy armour limits top speed, but in exchange it can take a lot of punishment.",
@@ -25,9 +26,10 @@
     },
     "steelCost": 50,
     "assmatCost": [ 0, 0, 30, 60, 35 ],
-    "productionTime": 64800
+    "productionTime": 64800,
+    "faction": "W"
   },
-  "BattleTankFlame": {
+  "BattleTankJuggernaut": {
     "name": "Flood Juggernaut Mk. VII",
     "category": "Battle Tank",
     "description": "The Juggernaut is a heavily armoured Flood variant fitted with a heavy flamethrower turret that fires an advanced adhesive propellant. Its shovel-like treads may hinder top speeds, but this beast is quite capable in extreme weather conditions.",
@@ -39,9 +41,10 @@
     },
     "steelCost": 55,
     "assmatCost": [ 0, 0, 65, 30, 45 ],
-    "productionTime": 79200
+    "productionTime": 79200,
+    "faction": "W"
   },
-  "BattleTankSPG": {
+  "BattleTankStain": {
     "name": "Flood Mk. IX Stain",
     "category": "Battle Tank",
     "description": "Built on an inverted Flood chassis, the Mk. IX Stain is a fully-featured mobile artillery platform. Once deployed, a 150mm cannon over long-distances to pummel enemy positions with indirect fire.",
@@ -52,6 +55,65 @@
     },
     "steelCost": 150,
     "assmatCost": [ 0, 0, 65, 40, 85 ],
-    "productionTime": 86400
+    "productionTime": 86400,
+    "faction": "W"
+  },
+  "SuperTankAres": {
+    "name": "O-75b \"Ares\"",
+    "category": "Super Tank",
+    "description": "Armed with a dual 75mm turret, what the \"Ares\" lacks in speed and versatility, it more than makes up for with raw destructive power. Development of the \"Ares\" was fraught with strife, and its history is intertwined with a period of several riots erupting on the streets of Dimiourg. Rebels commandeered the first \"Ares\" Prototype, the O-75a, and turned it against Colonial forces in the region, ultimately leading to its destruction—albeit not without great effort. This event wove the great behemoth into the tapestry of Colonial legend.",
+    "ammoUsed": "75mm",
+    "itemSpecifics": {
+      "general": [ "Uses Enriched Oil as fuel" ],
+      "Turret (Center)": [ "$Deals Explosive damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ]
+    },
+    "steelCost": 275,
+    "assmatCost": [ 0, 0, 105, 95, 105 ],
+    "rareCost": 3,
+    "productionTime": 172800,
+    "faction": "C"
+  },
+  "BattleTankLance": {
+    "name": "Lance-36",
+    "category": "Battle Tank",
+    "description": "A heavy-duty Battle Tank with thick armour plating and destructive firepower. The Lance is fitted with a 75mm turret and a front-facing 12.7mm anti-infantry machine gun. The heavy armour limits top speed, but in exchange it can take a lot of punishment.",
+    "ammoUsed": "75mm, 12.7mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Uses Heavy Oil as fuel" ],
+      "Turret (Center)": [ "$Deals Explosive damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ],
+      "Turret (Front)": [ "Equipped with a low velocity barrel that deals 36% less damage per shot", "$Deals Heavy Kinetic damage" ] 
+    },
+    "steelCost": 50,
+    "assmatCost": [ 0, 0, 30, 60, 35 ],
+    "productionTime": 64800,
+    "faction": "C"
+  },
+  "BattleTankHasta": {
+    "name": "Lance-35 \"Hasta\"",
+    "category": "Battle Tank",
+    "description": "A heavy Lance variation, the 25, or \"Hasta\", was employed in the first siege on Brightwall, a city now colloquially referred to as, “The Blemish”. Bombarded by heavy, armoured resistance in northern Veli, Colonial tank regiments requested a heavy vehicle with more effective search and destroy capabilities. Fitted with a front-facing 94.5mm cannon, the “Hasta” is a more than capable tank destroyer.",
+    "ammoUsed": "94.5mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Uses Heavy Oil as fuel" ],
+      "Gunner": [ "$Deals Armour Piercing damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles", "Higher base chance to disable vehicle " ]
+    },
+    "steelCost": 60,
+    "assmatCost": [ 0, 0, 65, 45, 65 ],
+    "productionTime": 86400,
+    "faction": "C"
+  },
+  "BattleTankSarissa": {
+    "name": "Lance-46 \"Sarissa\"",
+    "category": "Battle Tank",
+    "description": "This high-powered mobile artillery platform deploys a set of sturdy, mechanical legs to brace for the power of 150mm cannon fire. The \"Sarrisa\" Lance variant is a highly custom and ingenious use of the Lance chassis that creates a versatility in armour operations, reducing much of the overhead when transporting and deploying static artillery batteries.",
+    "ammoUsed": "150mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Uses Heavy Oil as fuel" ],
+      "Cannoneer": [ "$Deals High Explosive damage", "Can ruin structures that have been severly damaged by artillery", "Reduced damage against Trenches", "Increased damage against Field Structures" ]
+    },
+    "steelCost": 150,
+    "assmatCost": [ 0, 0, 64, 40, 85 ],
+    "productionTime": 86400,
+    "faction": "C"
   }
 }

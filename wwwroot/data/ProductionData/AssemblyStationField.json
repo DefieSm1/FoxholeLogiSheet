@@ -33,7 +33,8 @@
     "pcmatCost": 5,
     "assmatCost": [ 0, 0, 5, 0, 0 ],
     "baseVehicle": "ScoutTankSpire",
-    "productionTime": 300
+    "productionTime": 300,
+    "faction": "W"
   },
   "FieldAntiTankHeavy": {
     "name": "Balfour Rampart 68mm",
@@ -46,8 +47,54 @@
     },
     "pcmatCost": 5,
     "assmatCost": [ 0, 0, 0, 5, 0 ],
-    "baseVehicle": "FieldAntiTank",
-    "productionTime": 300
+    "baseVehicle": "FieldAntiTankCollins",
+    "productionTime": 300,
+    "faction": "W"
+  },
+  "SiegeTankMG": {
+    "name": "HC-2 \"Scorpion\"",
+    "category": "Light Infantry Tank",
+    "description": "The \"Scorpion\" HC-class tank is a moderately armoured infantry support vehicle with twin, high-powered heavy machine guns and short-range radios for improved intelligence support. In addition, exterior seating is available for infantry.",
+    "ammoUsed": "12.7mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
+      "Gunner (Right), Gunner (Left)": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "$Deals Heavy Kinetic damage" ]  
+    },
+    "pcmatCost": 5,
+    "assmatCost": [ 10, 0, 0, 3, 0 ],
+    "baseVehicle": "SiegeTankBallista",
+    "productionTime": 180,
+    "faction": "C"
+  },
+  "APCDoru": {
+    "name": "AB-11 \"Doru\"",
+    "category": "Landing APC",
+    "description": "With its mounted machinegun, the \"Doru\" is the perfect addition to any shoreline assault.",
+    "ammoUsed": "12.7mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
+      "Gunner (Starboard)": [ "$Deals Heavy Kinetic damage" ] 
+    },
+    "pcmatCost": 5,
+    "assmatCost": [ 0, 0, 3, 0, 0 ],
+    "baseVehicle": "APCAcheron",
+    "productionTime": 300,
+    "faction": "C"
+  },
+  "FieldCannonHeavy": {
+    "name": "40-45 \"Smelter\"",
+    "category": "Heavy Field Gun",
+    "description": "Armed with explosive 40mm rounds, the Smelter is perfect for engaging enemy armour. The frontal blast shielding provides operators with ample cover during heated skirmishes.",
+    "ammoUsed": "40mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables", "Can be towed by certain vehicles" ],
+      "Cannoneer (Right)": [ "Equipped with a high velocity barrel that deals 35% extra damage per shot", "$Deals Explosive damage", "Can penetrate armoured vehicles" ] 
+    },
+    "pcmatCost": 5,
+    "assmatCost": [ 0, 0, 0, 5, 0 ],
+    "baseVehicle": "FieldAntiTankBatteringRam",
+    "productionTime": 300,
+    "faction": "C"
   },
   "TrailerLargeItem": {
     "name": "Rooster - Tumblebox",
@@ -73,7 +120,7 @@
     "baseVehicle": "TrailerResource",
     "productionTime": 300
   },
-  "TruckHeavy": {
+  "TruckHeavyCliffwrest": {
     "name": "Cnute Cliffwrest",
     "category": "Heavy-Duty Truck",
     "description": "This heavy-duty service vehicle has reinforced tires orignally designed to haul large resource caches and heavy weapons along the craggy cliffs of Sorovia.",
@@ -81,6 +128,18 @@
       "general": [ "Can tow certain vehicles" ]
     },
     "pcmatCost": 40,
-    "productionTime": 600
+    "productionTime": 600,
+    "faction": "W"
+  },
+  "TruckHeavyRigger": {
+    "name": "AU-A150 Taurine Rigger",
+    "category": "Heavy-Duty Truck",
+    "description": "Built to brave the hills in the western provinces of the Alliant Union, the Taurine Rigger is a Velian modified variation that specializes in towing heavy equipment and suppies over treacherous terrain. Employed by the Colonial Legion for near three centuries, the A150 has become an indispensable tool in Colonial operations. It's no surprise then that is has been often imitated, yet never replicated.",
+    "itemSpecifics": {
+      "general": [ "Can tow certain vehicles" ] 
+    },
+    "pcmatCost": 40,
+    "productionTime": 600,
+    "faction": "C"
   }
 }

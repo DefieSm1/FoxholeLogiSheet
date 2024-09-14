@@ -11,9 +11,10 @@
     "pcmatCost": 10,
     "assmatCost": [ 0, 10, 15, 0, 0 ],
     "baseVehicle": "TankDestroyerHeavy",
-    "productionTime": 420
+    "productionTime": 420,
+    "faction": "W"
   },
-  "LightTankUpgraded": {
+  "LightTankIronhide": {
     "name": "Devitt Ironhide MK. IV",
     "category": "Light Tank",
     "description": "The Ironhide Light Tank is similar to the Mk. III but reinforced with plates of heavy steel at the expense of speed and maneuverability.",
@@ -24,8 +25,9 @@
     },
     "pcmatCost": 8,
     "assmatCost": [ 0, 20, 5, 0, 0 ],
-    "baseVehicle": "LightTank",
-    "productionTime": 300
+    "baseVehicle": "LightTankDevitt",
+    "productionTime": 300,
+    "faction": "W"
   },
   "LightTankMortar": {
     "name": "Devitt-Caine Mk. IV MMR",
@@ -37,8 +39,9 @@
     },
     "pcmatCost": 3,
     "assmatCost": [ 20, 0, 0, 3, 0 ],
-    "baseVehicle": "LightTank",
-    "productionTime": 300
+    "baseVehicle": "LightTankDevitt",
+    "productionTime": 300,
+    "faction": "W"
   },
   "AssaultTankChieftain": {
     "name": "Silverhand Chieftain - Mk. VI",
@@ -52,7 +55,8 @@
     "pcmatCost": 5,
     "assmatCost": [ 10, 0, 0, 8, 0 ],
     "baseVehicle": "AssaultTankSilverhand",
-    "productionTime": 420
+    "productionTime": 420,
+    "faction": "W"
   },
   "CruiserTankHighwayman": {
     "name": "Gallagher Highwayman Mk. III",
@@ -67,7 +71,8 @@
     "pcmatCost": 5,
     "assmatCost": [ 0, 10, 5, 0, 0 ],
     "baseVehicle": "CruiserTankOutlaw",
-    "productionTime": 420
+    "productionTime": 420,
+    "faction": "W"
   },
   "EmplacedAntiTankHeavy": {
     "name": "Huber Starbreaker 94.5mm",
@@ -79,6 +84,95 @@
     },
     "pcmatCost": 135,
     "assmatCost": [ 10, 0, 0, 15, 0 ],
-    "productionTime": 600
+    "productionTime": 600,
+    "faction": "W"
+  },
+  "LightTankVulcan": {
+    "name": "H-19 \"Vulcan\"",
+    "category": "Light Tank",
+    "description": "This modified \"Hatchet\" features a reinforced fuell cell fixed to its rear alongside a flamethrower turret. This light tank can launch litres of burning fuel a fair distance while its crew remains protected behind light armour plating.",
+    "ammoUsed": "Flame Ammo",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ],
+      "Turret (Center)": [ "$Deals Incendiary damage" ] 
+    },
+    "pcmatCost": 35,
+    "assmatCost": [ 0, 20, 5, 0, 0 ],
+    "baseVehicle": "LightTankHatchet",
+    "productionTime": 300,
+    "faction": "C"
+  },
+  "LightTankAntiTank": {
+    "name": "H-10 \"Pelekys\"",
+    "category": "Light Tank",
+    "description": "The \"Pelekys\" H-class light tank is heavily modified with an open top chassis and equipped with a devestating long-range anti-tank cannon.",
+    "ammoUsed": "68mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ],
+      "Gunner (Right)": [ "$Deals Armoured Piercing damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ] 
+    },
+    "pcmatCost": 8,
+    "assmatCost": [ 0, 20, 5, 0, 0 ],
+    "baseVehicle": "LightTankHatchet",
+    "productionTime": 300,
+    "faction": "C"
+  },
+  "LightTankKranesca": {
+    "name": "H-8 \"Kranesca\"",
+    "category": "Light Tank",
+    "description": "The \"Kranesca\" Light Tank is fitted with an overpowered engine and a reinforced chassis, capable of boosting its top speed at the expense of overall acceleration and maneuverability.",
+    "ammoUsed": "40mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables", "Engine can be boosted for increased top speed" ],
+      "Turret (Center)": [ "$Deals Explosive damage", "Can penetrate armoured vehicles" ] 
+    },
+    "pcmatCost": 5,
+    "assmatCost": [ 20, 0, 0, 5, 0 ],
+    "baseVehicle": "LightTankHatchet",
+    "productionTime": 300,
+    "faction": "C"
+  },
+  "AssaultTankSpatha": {
+    "name": "85k-a \"Spatha\"",
+    "category": "Assault Tank",
+    "description": "The \"Spatha\" assault tank features a unique and destructive 40mm turret that fires high-velocity shells. This specialized turret is not as well suited to mass-production as its more refined counterpart, the \"Falchion\".",
+    "ammoUsed": "40mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
+      "Turret": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "$Deals Explosive damage", "Can penetrate armoured vehicles" ] 
+    },
+    "pcmatCost": 8,
+    "assmatCost": [ 10, 0, 0, 8, 0 ],
+    "baseVehicle": "AssaultTankFalchion",
+    "productionTime": 420,
+    "faction": "C"
+  },
+  "AssaultTankRanseur": {
+    "name": "86K-c \"Ranseur\"",
+    "category": "Assault Tank",
+    "description": "This evolution of the \"Bardiche\" is fitted with quad-mounted RPG launchers paired with a high-velocity 12.7mm cannon. The \"Ranseur\" indicates progress in Kraunian design as they continue to leverage outdated equipment to create deadly, modern armour.",
+    "ammoUsed": "12.7mm, RPG",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
+      "Turret (Front)": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "$Deals Heavy Kinetic damage" ] 
+    },
+    "pcmatCost": 10,
+    "assmatCost": [ 0, 10, 10, 0, 0 ],
+    "baseVehicle": "AssaultTankBardiche",
+    "productionTime": 420,
+    "faction": "C"
+  },
+  "EmplacedCannonHeavy": {
+    "name": "DAE 2a-1 \"Ruptura\"",
+    "description": "Not to be outdone by its counterparts, the 2a-1 \"Ruptura\" is fitted with a 75mm cannon. Designed to aid in holding ground for longer durations, the \"Ruptura\" is a strong, efficient anti-armour tool.",
+    "ammoUsed": "75mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ],
+      "Turret": [ "Equipped with a high velocity barrel that deals 35% extra damage per shot", "$Deals Explosive damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ] 
+    },
+    "pcmatCost": 135,
+    "assmatCost": [ 10, 0, 0, 15, 0 ],
+    "productionTime": 600,
+    "faction": "C"
   }
 }

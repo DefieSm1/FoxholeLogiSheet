@@ -1,12 +1,23 @@
 {
-  "WideGaugeCombat": {
+  "WideGaugeCombatWarsmith": {
     "name": "O'Brien Warsmith v.215",
     "category": "Combat Car",
     "description": "In his later years, O'Brien nearly died in an attack on a military passenger train while travelling to Whedon's Row. In response, he put his team to work designing not only an infantry car that offered powerful protection to any locomotive, but one that just the sight of it would run off all but the most committed of attackers—Namely its thick armour plating and powerful twin turrets.",
     "ammoUsed": "40mm",
     "steelCost": 30,
     "assmatCost": [ 30, 0, 0, 30, 0 ],
-    "productionTime": 1800
+    "productionTime": 1800,
+    "faction": "W"
+  },
+  "WideGaugeCombatSteelbreaker": {
+    "name": "Aegis Steelbreaker K5a",
+    "category": "Combat Car",
+    "description": "Known across the colonies as King of the Rails, this heavily armoured train car is designed to protect and exert dominance over contested rail lines, especially when transporting supplies into contested territory as well as safely transporting infantry. This armoured beast boasts a forward facing cannon, as well as heavy lateral guns.",
+    "ammoUsed": "40mm, 12.7mm",
+    "steelCost": 30,
+    "assmatCost": [ 30, 0, 0, 30, 0 ],
+    "productionTime": 1800,
+    "faction": "C"
   },
   "WideGaugeRailwayGun": {
     "name": "Tempest Cannon RA-2",

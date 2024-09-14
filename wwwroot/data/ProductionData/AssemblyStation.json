@@ -8,7 +8,7 @@
     "bmatCost": 25,
     "productionTime": 5
   },
-  "TruckArmoured": {
+  "TruckLeatherback": {
     "name": "Dunne Leatherback 2a",
     "category": "Truck",
     "description": "A heavy, reinforced Dunne transport. Fitted with a heavier frame, the Leatherback is capable of enduring more punishment at the cost of initial acceleration.",
@@ -16,10 +16,11 @@
       "general": [ "Can be carried by vehicles that support up to large sized shippables", "Can tow certain vehicles", "I AM F%&#!G INVINCIBLE!" ] 
     },
     "cmatCost": 10,
-    "baseVehicle": "Truck",
-    "productionTime": 300
+    "baseVehicle": "TruckDunne",
+    "productionTime": 300,
+    "faction": "W"
   },
-  "TruckTracked": {
+  "TruckLandrunner": {
     "name": "Dunne Landrunner 12c",
     "category": "Truck",
     "description": "This standard Truck is fitted with rugged off-road treads, allowing for more efficient movement on rough terrain and conditions at the expense of maximum speed.",
@@ -27,8 +28,49 @@
       "general": [ "Can be carried by vehicles that support up to large sized shippables", "Can tow certain vehicles" ] 
     },
     "cmatCost": 10,
-    "baseVehicle": "Truck",
-    "productionTime": 300
+    "baseVehicle": "TruckDunne",
+    "productionTime": 300,
+    "faction": "W"
+  },
+  "MotorcycleStinger": {
+    "name": "00MS \"Stinger\"",
+    "category": "Motorcycle",
+    "description": "The cab of this Motorcycle is fitted with an LMG for fast-response hit and run assaults.",
+    "ammoUsed": "7.92mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables", "Engine can be boosted for increased top speed" ],
+      "Gunner (Right)": [ "$Deals Light Kinetic damage" ] 
+    },
+    "cmatCost": 5,
+    "baseVehicle": "MotorcycleCaster",
+    "productionTime": 180,
+    "faction": "C"
+  },
+  "TruckSisyphus": {
+    "name": "R-5b \"Sisyphus\" Hauler",
+    "category": "Truck",
+    "description": "This variation of the standard R-5 Hauler is fitted with an improved suspension and axle system resulting in better overall handling. However, these improvements amy not hold up under severe conditions.",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Can tow certain vehicles", "Engine can be boosted for increased top speed" ] 
+    },
+    "cmatCost": 10,
+    "baseVehicle": "TruckHauler",
+    "productionTime": 300,
+    "faction": "C"
+  },
+  "TruckSpeartip": {
+    "name": "R-9 \"Speartip\" Escort",
+    "category": "Truck",
+    "description": "This standard Truck is fitted with a Light Machinegun in place of the passenger seat. It's well suited as an escort for convoys or lightly armoured operations.",
+    "ammoUsed": "7.92mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Can tow certain vehicles" ],
+      "Gunner (Right)": [ "$Deals Light Kinetic damage" ] 
+    },
+    "cmatCost": 10,
+    "baseVehicle": "TruckHauler",
+    "productionTime": 300,
+    "faction": "C"
   },
   "SmallGaugeEngine": {
     "name": "BMS Mineseeker",
@@ -64,7 +106,7 @@
     "assmatCost": [ 15, 5, 0, 0, 0 ],
     "productionTime": 300
   },
-  "TruckAmbulanceFlame": {
+  "TruckAmbulanceFireDunne": {
     "name": "Dunne Dousing Engine 3r",
     "category": "Fire Engine",
     "description": "A simple variant of the Dunne Responder 3e that's fitted with a high-powered hose designed to extinguish raging flames.",
@@ -74,8 +116,23 @@
     },
     "cmatCost": 15,
     "assmatCost": [ 0, 5, 0, 0, 0 ],
-    "baseVehicle": "TruckAmbulance",
-    "productionTime": 1800
+    "baseVehicle": "TruckAmbulanceResponder",
+    "productionTime": 1800,
+    "faction": "W"
+  },
+  "TruckAmbulanceSalva": {
+    "name": "R-12b - \"Salva\" Flame Truck",
+    "category": "Fire Engine",
+    "description": "This simple variant of the \"Salus\" ambulance is fitted with a high-powered hose designed to quell wildfires.",
+    "ammoUsed": "Water",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables" ] 
+    },
+    "cmatCost": 15,
+    "assmatCost": [ 0, 5, 0, 0, 0 ],
+    "baseVehicle": "TruckAmbulanceSalus",
+    "productionTime": 300,
+    "faction": "C"
   },
   "SmallGaugeFuel": {
     "name": "BMS Tinderbox",

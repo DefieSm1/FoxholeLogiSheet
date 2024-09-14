@@ -11,7 +11,8 @@
     "steelCost": 10,
     "assmatCost": [ 10, 0, 0, 15, 0 ],
     "baseVehicle": "CruiserTankOutlaw",
-    "productionTime": 600
+    "productionTime": 600,
+    "faction": "W"
   },
   "AssaultTankLordscar": {
     "name": "Silverhand Lordscar - Mk. X",
@@ -25,7 +26,8 @@
     "steelCost": 40,
     "assmatCost": [ 0, 15, 25, 0, 0 ],
     "baseVehicle": "AssaultTankSilverhand",
-    "productionTime": 600
+    "productionTime": 600,
+    "faction": "W"
   },
   "FieldCannonSuper": {
     "name": "Balfour Stockade 75mm",
@@ -38,6 +40,37 @@
     "steelCost": 15,
     "assmatCost": [ 0, 20, 15, 0, 0 ],
     "baseVehicle": "FieldCannon",
-    "productionTime": 420
+    "productionTime": 420,
+    "faction": "W"
+  },
+  "AssaultTankTalos": {
+    "name": "85V-g \"Talos\"",
+    "category": "Assault Tank",
+    "description": "The \"Talos\" is a Velian modification to the 85-series, fitted with an oversized 75mm cannon. Knowing that such a heavy cannon would likely not be suitable, the engineers built it to disperse weight in such a manner that the 85-series chassis could bear it.",
+    "ammoUsed": "75mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
+      "Turret": [ "$Deals Explosive damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ] 
+    },
+    "steelCost": 5,
+    "assmatCost": [ 10, 0, 0, 15, 0 ],
+    "baseVehicle": "AssaultTankFalchion",
+    "productionTime": 600,
+    "faction": "C"
+  },
+  "FieldAntiTankSuper": {
+    "name": "945g \"Stygian Bolt\"",
+    "category": "Large Field Gun",
+    "description": "The \"Stygian Bolt\" Large Field Gun is fitted with a monstrous 94.5mm cannon paired with heavy angled blast shielding. Inspired by the rows of narrow canyons in their homeland of the Lacrista province, Mesean engineers designed this field weapons to keep its crew as safe from ancillary fire as possible while maintaining forward momentum.",
+    "ammoUsed": "94.5mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables", "Can be towed by certain vehicles" ],
+      "Cannoneer": [ "Equipped with a high velocity barrel that deals 50% extra damage per shot", "$Deals Armour Piercing damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles", "Higheer base chance to disable vehicle subsystems" ]
+    },
+    "steelCost": 15,
+    "assmatCost": [ 0, 20, 15, 0, 0 ],
+    "baseVehicle": "FieldAntiTankBatteringRam",
+    "productionTime": 420,
+    "faction": "C"
   }
 }

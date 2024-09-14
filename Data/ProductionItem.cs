@@ -48,7 +48,9 @@
 
 		public int ProductionTime { get; set; }
 
-        public string BuildingType { get; set; }
+		public string Faction { get; set; }
+
+		public string BuildingType { get; set; }
 
 		public List<string> BuildingUpgrades { get; set; }
 
@@ -82,6 +84,8 @@
 			BaseVehicle = "";
 
 			ProductionTime = 0;
+
+			Faction = string.Empty;
 
 			BuildingType = "";
 			BuildingUpgrades = new();

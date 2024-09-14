@@ -1,6 +1,10 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
+﻿@inject Blazored.LocalStorage.ISyncLocalStorageService localStorage
+@inject NavigationManager _navigationManager
+
+<div class="top-row ps-2 navbar navbar-dark">
     <div class="container-fluid">
-        <h1 class="navbar-brand">Foxhole Logi Sheet</h1>
+        <span class="@(SelectedFaction)-icon"></span>
+        <h1 class="navbar-brand ps-3">Foxhole Logi Sheet</h1>
     </div>
 </div>
 
@@ -26,6 +30,18 @@
                 <span class="oi oi-info" aria-hidden="true"></span><span class="nav-link-text">About</span>
             </NavLink>
         </div>
+        <div class="nav-item px-1" style="cursor: pointer" @onclick="@(() => switchFaction("W"))">
+            <NavLink class="nav-link link-light" Match="NavLinkMatch.All">
+                <input id="Warden" type="radio" name="Faction" checked="@(SelectedFaction == "W")" style="margin-left: inherit; cursor: pointer" />
+                <label for="Warden" class="nav-link-text" style="margin-left: 8px; cursor: pointer">Warden</label>
+            </NavLink>
+        </div>
+        <div class="nav-item px-1 link-light" style="cursor: pointer" @onclick="@(() => switchFaction("C"))">
+            <NavLink class="nav-link link-light" Match="NavLinkMatch.All">
+                <input id="Colonial" type="radio" name="Faction" checked="@(SelectedFaction == "C")" style="margin-left: inherit; cursor: pointer" />
+                <label for="Colonial" class="nav-link-text" style="margin-left: 8px; cursor: pointer">Colonial</label>
+            </NavLink>
+        </div>
         <span class="nav-item nav-link-text px-1" style="color: #E5BA82; font-size: 18px; margin-left: 8px;"><i>Up to date for Update @(GameVersion!)</i></span>
     </nav>
 </div>
@@ -34,6 +50,14 @@
 
 @code {
     public bool ShowAbout { get; set; } = false;
+
+    public string SelectedFaction { get => localStorage.GetItem<string>("selectedFaction") ?? "W"; }
+
+    public void switchFaction(string faction) {
+        if (SelectedFaction == faction) return;
+        localStorage.SetItem<string>("selectedFaction", faction);
+        _navigationManager.Refresh(false);
+    }
 
     int? GameVersion = typeof(Program).Assembly.GetName().Version?.Build;
 }

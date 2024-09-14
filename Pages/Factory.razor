@@ -4,7 +4,7 @@
 
 @inject HttpClient Http
 @inject IJSRuntime JsRuntime
-@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@inject Blazored.LocalStorage.ISyncLocalStorageService localStorage
 @using FoxholeLogiSheet.Data
 
 <PageHeader>@ProductionMode Sheet</PageHeader>
@@ -19,6 +19,7 @@
 			{
 				@foreach (KeyValuePair<string, ProductionItem> item in CurrentCategory)
 				{
+					@if(item.Value.Faction == (CurrentFaction == "W" ? "C" : "W")) continue;
 					<ItemButton ItemName=@item.Key Category=@SelectedCategory Disabled=@(CheckIfDisabled(SelectedCategory, item.Key)) IconSet="items"
 								OnMouseOver="() => { HoveredItem = CurrentCategory[item.Key]; TooltipVisibility = true; TooltipSimplified = false; StateHasChanged(); }"
 								OnMouseOut="() => { HoveredItem = CurrentCategory[item.Key]; TooltipVisibility = false; StateHasChanged(); }"
@@ -89,9 +90,11 @@
 
 	public Dictionary<string, ProductionItem> CurrentCategory { get => ItemCategories[SelectedCategory]; }
 
+	public string CurrentFaction { get => localStorage.GetItem<string>("selectedFaction") ?? "W"; }
+
 	protected override async Task OnInitializedAsync()
 	{
-		await localStorage.SetItemAsync("lastPage", "factory");
+		localStorage.SetItem("lastPage", "factory");
 
 		List<string> categoriesToLoad = LoadedCategories;
 

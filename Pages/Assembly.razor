@@ -4,7 +4,7 @@
 
 @inject HttpClient Http
 @inject IJSRuntime JsRuntime
-@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@inject Blazored.LocalStorage.ISyncLocalStorageService localStorage
 @using FoxholeLogiSheet.Data
 
 <PageHeader>Assembly Sheet</PageHeader>
@@ -30,6 +30,7 @@
 		<ItemGrid Columns=6 Rows=1>
 			@foreach(KeyValuePair<string, ProductionItem> item in CurrentBuildingItems)
 			{
+				@if (item.Value.Faction == (CurrentFaction == "W" ? "C" : "W")) continue;
 				<ItemButton ItemName=@item.Key Category="AssemblyStation" IconSet="items" 
 							OnMouseOver="() => { HoveredItem = CurrentBuildingItems[item.Key]; TooltipVisibility = true; TooltipSimplified = false; StateHasChanged(); }"
 							OnMouseOut="() => { HoveredItem = CurrentBuildingItems[item.Key]; TooltipVisibility = false; StateHasChanged(); }"
@@ -42,6 +43,7 @@
 			<ItemGrid Columns=6 Rows=1>
 			@foreach (KeyValuePair<string, ProductionItem> item in CurrentUpgradeItems)
 			{
+				@if (item.Value.Faction == (CurrentFaction == "W" ? "C" : "W")) continue;
 				<ItemButton ItemName=@item.Key Category="AssemblyStation" IconSet="items"
 							OnMouseOver="() => { HoveredItem = CurrentUpgradeItems[item.Key]; TooltipVisibility = true; TooltipSimplified = false; StateHasChanged(); }"
 							OnMouseOut="() => { HoveredItem = CurrentUpgradeItems[item.Key]; TooltipVisibility = false; StateHasChanged(); }"
@@ -158,9 +160,11 @@
 
 	public Dictionary<string, ProductionItem> BaseVehicles { get => AssemblyCategories.Keys.Contains("Vehicles") ? AssemblyCategories["Vehicles"] : new(); }
 
+	public string CurrentFaction { get => localStorage.GetItem<string>("selectedFaction") ?? "W"; }
+
 	protected override async Task OnInitializedAsync()
 	{
-		await localStorage.SetItemAsync("lastPage", "assembly");
+		localStorage.SetItem("lastPage", "assembly");
 
 		AssemblyBuildings = await Http.GetFromJsonAsync<Dictionary<string, ProductionItem>>("data/BuildingData/AssemblyBuildings.json") ?? throw new FileNotFoundException();
 

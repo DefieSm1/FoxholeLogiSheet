@@ -227,10 +227,6 @@
       "general": [ "Can only be carried by stockpiles", "$Deals High Explosive damage", "Increased chance to cause a leak" ]
     }
   },
-  "UtilityTripod": {
-    "name": "Tripod",
-    "description": "A mount point for deployable infantry weapons and equipment."
-  },
   "ATBonesawTripod": {
     "name": "Bonesaw MK.3",
     "category": "Mounted Anti-Tank RPG",
@@ -238,7 +234,8 @@
     "ammoUsed": "ARC/RPG",
     "itemSpecifics": {
       "general": [ "This can be attached to certain vehicles" ] 
-    }
+    },
+    "faction": "W"
   },
   "RPGFoebreaker": {
     "name": "Cutler Foebreaker",
@@ -247,7 +244,8 @@
     "ammoUsed": "RPG",
     "itemSpecifics": {
       "general": [ "This can be attached to certain vehicles" ] 
-    }
+    },
+    "faction": "W"
   },
   "MGRatcatcher": {
     "name": "Malone Ratcatcher MK.1",
@@ -256,7 +254,52 @@
     "ammoUsed": "12.7mm",
     "itemSpecifics": {
       "general": [ "This can be attached to certain vehicles" ] 
-    }
+    },
+    "faction": "W"
+  },
+  "ATRifleTripod": {
+    "name": "\"Typhon\" ra.XII",
+    "category": "Mounted Anti-Tank Rifle",
+    "description": "This mounted anti-tank rifle boasts improved accuracy over its free-standing counterparts. The Typhon was specifically designed with shock absorption in mind, allowing for faster, more consistent firing patterns.",
+    "ammoUsed": "20mm",
+    "itemSpecifics": {
+      "general": [ "Gunner", "Equipped with a high velocity barrel that deals 20% extra damage per shot", "$Deals Anti-Tank Kinetic damage", "This can be attached to certain vehicles" ] 
+    },
+    "faction": "C"
+  },
+  "InfantrySupportGun": {
+    "name": "Daucus isg.III",
+    "category": "Mounted Infantry Support Gun",
+    "description": "This heavy infantry cannon requires a tripod for stability. The Daucus is designed to give infantry a foothold against enemy vehicles and light fortifications or established fortified garrisons.",
+    "ammoUsed": "30mm",
+    "itemSpecifics": {
+      "general": [ "Gunner", "$Deals Explosive damage", "Can penetrate armoured vehicles" ] 
+    },
+    "faction": "C"
+  },
+  "MGLamentum": {
+    "name": "Lamentum mm.IV",
+    "category": "Mounted Machinegun",
+    "description": "Built on the bones of the first automatic weapons introduced to the Legion, the \"Lamentum\" mm.IV is still quite an intimidating force to encounter on the battlefield. Boasting a large magazine and impressive active range, this mounted machinegun excels at laying down consistent suppressive fire.",
+    "ammoUsed": "12.7mm",
+    "itemSpecifics": {
+      "general": [ "Gunner", "Equipped with a high velocity barrel that deals 50% extra damage per shot", "$Deals Heavy Kinetic damage", "This can be attached to certain vehicles" ] 
+    },
+    "faction": "C"
+  },
+  "GrenadeLauncherTripod": {
+    "name": "Mounted Fissura gd.I",
+    "category": "Mounted Grenade Launcher",
+    "description": "Capable of firing different grenades, quickly and at long range, the Fissura gd.I is mobile enough for easy transport, while increasing the effectiveness of infantry ordinance.",
+    "ammoUsed": "Green Ash Grenade, PT-815 Smoke Grenade, Tremola Grenade GPb-1",
+    "itemSpecifics": {
+      "general": [ "This can be attached to certain vehicles" ] 
+    },
+    "faction": "C"
+  },
+  "UtilityTripod": {
+    "name": "Tripod",
+    "description": "A mount point for deployable infantry weapons and equipment."
   },
   "SuppliesMaintenance": {
     "name": "Maintenance Supplies",

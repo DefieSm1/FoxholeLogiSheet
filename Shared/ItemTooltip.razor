@@ -20,6 +20,7 @@
 			}
 
 			<p class="item-cratesize" hidden="@(Item.CrateSize == 0)">Produces a crate of @(Item.CrateSize)x @(Item.Name)(s)</p>
+			<p class="item-extracrates" hidden="@(Item.Name != "85K-b \"Falchion\"")">2 bonus vehicles produced per crate</p>
 
 			@if (BaseVehicle != null)
 			{

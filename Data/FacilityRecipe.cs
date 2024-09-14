@@ -14,6 +14,8 @@
 
 		public int ProductionTime { get; set; }
 
+		public string Faction { get; set; }
+
 		public FacilityRecipe()
 		{
 			InputNames = new();
@@ -22,6 +24,7 @@
 			OutputAmounts = new();
 			PowerConsumption = 0;
 			ProductionTime = 0;
+			Faction = string.Empty;
 		}
 	}
 }
