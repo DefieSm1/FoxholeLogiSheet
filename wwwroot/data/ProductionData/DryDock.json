@@ -2,7 +2,7 @@
   "ShipBase": {
     "name": "BMS - Longhook",
     "category": "Base Ship",
-    "description": "The Basset Motor Society's premiere base ships, the BMS - Longhook is sturdy, reliable vessel that provides an excellent centre of operations for building and maintaining smaller boats for ferrying personnel and equipment.",
+    "description": "The Basset Motor Society's premiere base ship, the BMS - Longhook is a sturdy, reliable vessel that provides an excellent centre of operations for building and maintaining smaller boats for ferrying personnel and equipment.",
     "ammoUsed": "12.7mm",
     "itemSpecifics": {
       "Gunner (Starboard Bow), Gunner (Port Bow)": [ "$Deals Heavy Kinetic damage" ]
@@ -22,7 +22,7 @@
   "ShipStorage": {
     "name": "BMS - Bluefin",
     "category": "Storage Ship",
-    "description": "The Bluefin storage ship is a massive, all-purpose mobile naval yard cabable of storing crates of resources, packed vehicles and ammunition for long-distance travel and beach-to-beach equipment ferrying. The Bassett Motor Society is proud to deliver such a cutting-edge, versatile blue water asset to various countries Raka, Katoma, and the Alliant Union.",
+    "description": "The Bluefin storage ship is a massive, all-purpose mobile naval yard cabable of storing crates of resources, packed vehicles and ammunition for long-distance travel and beach-to-beach equipment ferrying. The Bassett Motor Society is proud to deliver such a cutting-edge, versatile blue water asset to various countries across Raka, Katoma, and the Alliant Union.",
     "ammoUsed": "12.7mm",
     "itemSpecifics": {
       "Gunner (Starboard), Gunner (Port)": [ "$Deals Heavy Kinetic damage" ]

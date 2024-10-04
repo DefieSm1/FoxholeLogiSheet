@@ -29,7 +29,7 @@
     },
     "steelCost": 285,
     "rareCost": 6,
-    "assmatCost": [ 0, 95, 0, 105, 105 ],
+    "assmatCost": [ 0, 0, 95, 105, 105 ],
     "productionTime": 259200
   }
 }
