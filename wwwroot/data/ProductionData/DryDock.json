@@ -25,7 +25,7 @@
     "description": "The Bluefin storage ship is a massive, all-purpose mobile naval yard cabable of storing crates of resources, packed vehicles and ammunition for long-distance travel and beach-to-beach equipment ferrying. The Bassett Motor Society is proud to deliver such a cutting-edge, versatile blue water asset to various countries across Raka, Katoma, and the Alliant Union.",
     "ammoUsed": "12.7mm",
     "itemSpecifics": {
-      "Gunner (Starboard), Gunner (Port)": [ "$Deals Heavy Kinetic damage" ]
+      "Gunner (Starboard), Gunner (Port)": [ "Causes suppressed enemy players to lose stability", "$Deals Heavy Kinetic damage" ]
     },
     "hullSegments": 25,
     "shellPlating": 15,

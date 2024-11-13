@@ -1,18 +1,21 @@
 {
     "AssemblyStation": {
       "name": "Small Assembly Station",
+      "category": "Facility Structure",
       "description": "A standard Assembly Station for production of essential vehicles and equipment. Construction will take time and may be halted if resources are depleted. Some projects require a base vehicle to be present on the Assembly Station before production can begin.",
       "cmatCost": 75,
       "buildingUpgrades": [ "AssemblyStationMotorPool", "AssemblyStationNavalWorks", "AssemblyStationRocket", "AssemblyStationBatteryLine", "AssemblyStationField", "AssemblyStationTank", "AssemblyStationWeapons" ]
     },
     "AssemblyLarge": {
         "name": "Large Assembly Station",
+        "category": "Facility Structure",
         "description": "A large Assembly Station for production of advanced vehicles and equipment, such as tanks and trains. Construction will take time and may be halted if resources are depleted.",
         "pcmatCost": 250,
         "buildingUpgrades": [ "AssemblyLargeTrain", "AssemblyLargeHeavyTank" ]
     },
     "DryDock": {
         "name": "Dry Dock",
+        "category": "Facility Structure",
         "description": "A floodable basin and construction platform that facilitates the assembly and repair of the largest naval vessels.",
         "rareCost": 35
     }

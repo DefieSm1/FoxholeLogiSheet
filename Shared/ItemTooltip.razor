@@ -19,7 +19,15 @@
 				}
 			}
 
-			<p class="item-cratesize" hidden="@(Item.CrateSize == 0)">Produces a crate of @(Item.CrateSize)x @(Item.Name)(s)</p>
+			<p class="item-cratesize" hidden="@(Item.CrateSize == 0)">
+				@(CurrentBuilding switch
+				{
+					"Factory" => $"Produces a crate of {Item.CrateSize}x {Item.Name}(s)",
+					"Facility" => $"Comes in a crate of {Item.CrateSize}",
+					_ => ""
+				})
+			</p>
+
 			<p class="item-extracrates" hidden="@(Item.Name != "85K-b \"Falchion\"")">2 bonus vehicles produced per crate</p>
 
 			@if (BaseVehicle != null)
@@ -37,8 +45,8 @@
 						"MPF" => "fill with the item",
 						"Assembly" => "add 3 of that vehicle / structure",
 						_ => "WHAT KINDA BUILDING IS THIS?"
-					}
-				)</i>
+					})
+				</i>
 			</p>
 
 			<div class="item-costs">

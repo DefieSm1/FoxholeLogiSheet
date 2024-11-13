@@ -50,7 +50,7 @@
     "ammoUsed": "12.7mm, 250mm",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
-      "Turret": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "$Deals Heavy Kinetic damage" ] 
+      "Turret": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "Causes suppressed enemy players to lose stability", "$Deals Heavy Kinetic damage" ] 
     },
     "pcmatCost": 5,
     "assmatCost": [ 10, 0, 0, 8, 0 ],
@@ -65,17 +65,18 @@
     "ammoUsed": "20mm, 12.7mm",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to large sized shippables", "Engine can be boosted for increased top speed" ],
-      "Turret": [ "Equipped with a low velocity barrel that deals 50% less damage per shot", "$Deals Anti-Tank Kinetic damage", "Can penetrate armoured vehicles" ],
-      "Gunner (Left)": [ "$Deals Heavy Kinetic damage" ]
+      "Turret": [ "Equipped with a low velocity barrel that deals 50% less damage per shot", "Causes suppressed enemy players to lose stability", "$Deals Anti-Tank Kinetic damage" ],
+      "Gunner (Left)": [ "Causes suppressed enemy players to lose stability", "$Deals Heavy Kinetic damage" ]
     },
     "pcmatCost": 5,
     "assmatCost": [ 0, 10, 5, 0, 0 ],
-    "baseVehicle": "CruiserTankOutlaw",
+    "baseVehicle": "CruiserTankBrigand",
     "productionTime": 420,
     "faction": "W"
   },
   "EmplacedAntiTankHeavy": {
     "name": "Huber Starbreaker 94.5mm",
+    "category": "Emplaced Large Anti-Tank Cannon",
     "description": "Built to compliment other free-standing artillery pieces, the emplaced Huber Starbreaker launches 94.5mm shells over very long distances. A necessary tool for infantry to knock back armoured Colonial advances.",
     "ammoUsed": "94.5mm",
     "itemSpecifics": {
@@ -87,6 +88,22 @@
     "productionTime": 600,
     "faction": "W"
   },
+  "CruiserTankOutlaw": {
+    "name": "Gallagher Outlaw Mk. II",
+    "category": "Cruiser Tank",
+    "description": "Originally designed in response to increasing swarms of Mesean armour, the Outlaw is an exceptionally capable medium tank armed with a long-range 40mm turret and includes a built-in storm rifle support position.",
+    "ammoUsed": "40mm, 7.92mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Engine can be boosted for increased top speed" ],
+      "Turret": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "$Deals Explosive damage", "Can penetrate armoured vehicles" ],
+      "Gunner (Front)": [ "$Deals Light Kinetic damage" ] 
+    },
+    "pcmatCost": 10,
+    "assmatCost": [ 10, 0, 0, 10, 0 ],
+    "baseVehicle": "CruiserTankBrigand",
+    "productionTime": 420,
+    "faction": "W"
+  },
   "LightTankVulcan": {
     "name": "H-19 \"Vulcan\"",
     "category": "Light Tank",
@@ -96,7 +113,7 @@
       "general": [ "Can be carried by vehicles that support up to medium sized shippables" ],
       "Turret (Center)": [ "$Deals Incendiary damage" ] 
     },
-    "pcmatCost": 35,
+    "pcmatCost": 8,
     "assmatCost": [ 0, 20, 5, 0, 0 ],
     "baseVehicle": "LightTankHatchet",
     "productionTime": 300,
@@ -139,7 +156,7 @@
     "ammoUsed": "40mm",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
-      "Turret": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "$Deals Explosive damage", "Can penetrate armoured vehicles" ] 
+      "Turret": [ "Equipped with a high velocity barrel that deals 10% extra damage per shot", "$Deals Explosive damage", "Can penetrate armoured vehicles" ] 
     },
     "pcmatCost": 8,
     "assmatCost": [ 10, 0, 0, 8, 0 ],
@@ -154,7 +171,7 @@
     "ammoUsed": "12.7mm, RPG",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
-      "Turret (Front)": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "$Deals Heavy Kinetic damage" ] 
+      "Turret (Front)": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "Causes suppressed enemy players to lose stability", "$Deals Heavy Kinetic damage" ] 
     },
     "pcmatCost": 10,
     "assmatCost": [ 0, 10, 10, 0, 0 ],
@@ -164,6 +181,7 @@
   },
   "EmplacedCannonHeavy": {
     "name": "DAE 2a-1 \"Ruptura\"",
+    "category": "Emplaced Large Cannon",
     "description": "Not to be outdone by its counterparts, the 2a-1 \"Ruptura\" is fitted with a 75mm cannon. Designed to aid in holding ground for longer durations, the \"Ruptura\" is a strong, efficient anti-armour tool.",
     "ammoUsed": "75mm",
     "itemSpecifics": {

@@ -1,6 +1,7 @@
 {
   "NavalHullSegments": {
     "name": "Naval Hull Segments",
+    "category": "Shippable Material",
     "description": "Foundational elements required to construct the hulls of large naval vessels.",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to medium sized shippables" ]
@@ -13,6 +14,7 @@
   },
   "NavalShellPlating": {
     "name": "Naval Shell Plating",
+    "category": "Shippable Material",
     "description": "Highly resistant external plating used to protect naval vessels from damage and wear.",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to medium sized shippables" ]
@@ -23,6 +25,7 @@
   },
   "NavalTurbineComponents": {
     "name": "Naval Turbine Components",
+    "category": "Shippable Material",
     "description": "A series of intricate gears, turbines, and engines used in large naval vessels.",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to medium sized shippables" ]

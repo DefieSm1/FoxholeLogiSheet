@@ -9,6 +9,7 @@
   },
   "UtilityBinoculars": {
     "name": "Binoculars",
+    "category": "Field Gear",
     "description": "An optical instrument used for viewing distant object.",
     "crateSize": 5,
     "bmatCost": 75,
@@ -23,12 +24,13 @@
     },
     "crateSize": 5,
     "bmatCost": 100,
-    "ematCost": 40,
+    "ematCost": 80,
     "productionTime": 100,
     "faction": "C"
   },
   "UtilityHavocCharge": {
     "name": "Havoc Charge",
+    "category": "Explosive Charge",
     "description": "A high-powered explosive charge that requires an accompanying detonator. The Havoc Charge is highly effective at demolishing large structures. The charge must be detonated via gunshot. The Havoc Charge's true potential is unleashed when executing strategic demolitions at safe distances.",
     "crateSize": 5,
     "bmatCost": 75,
@@ -57,7 +59,7 @@
   },
   "UtilityListeningKit": {
     "name": "Listening Kit",
-    "category": "Equipment",
+    "category": "Mounted Equipment",
     "description": "A device used to intercept enemy radio broadcasts transmitted from nearby sources.",
     "crateSize": 5,
     "bmatCost": 150,
@@ -73,6 +75,7 @@
   },
   "UtilityRadioBackpack": {
     "name": "Radio Backpack",
+    "category": "Field Gear",
     "description": "Automatically gathers map intel periodically when equipped. The Radio Backpack is also used to transmit other sensitive information across long distances.",
     "crateSize": 5,
     "bmatCost": 150,
@@ -88,7 +91,7 @@
   },
   "UtilityHavocDetonator": {
     "name": "Havoc Charge Detonator",
-    "category": "Explosive Charge",
+    "category": "Mounted Explosive Charge Detonator",
     "description": "Required to detonate Havoc Charges. The Havoc Charge must be placed before can be deployed.",
     "crateSize": 5,
     "bmatCost": 75,
@@ -110,6 +113,7 @@
   },
   "UtilityShovel": {
     "name": "Shovel",
+    "category": "Field Tool",
     "description": "A tool for digging Trenches and other entrenched structures.",
     "crateSize": 10,
     "bmatCost": 200,
@@ -117,25 +121,15 @@
   },
   "UtilitySledgeHammer": {
     "name": "Sledge Hammer",
+    "category": "Field Tool",
     "description": "A tool used to salvage components from remains of old vehicles and equipment.",
     "crateSize": 10,
     "bmatCost": 200,
     "productionTime": 100
   },
-  "UtilityATMine": {
-    "name": "Absime AT-99",
-    "category": "Explosive Charge",
-    "description": "A simple mine that is places under terrain and fitted with a pressure-sensitive plate to detonate under the weight of heavt vehicles. Mines are visible to friendlies and enemies on foot and deactivate after 48 in-game days.",
-    "itemSpecifics": {
-      "general": [ "Deactivates after 2 days", "$Deals Anti-Tank Explosive damage", "Always Disables Track subsystem", "There are no friendly mines" ] 
-    },
-    "crateSize": 10,
-    "bmatCost": 100,
-    "ematCost": 10,
-    "productionTime": 100
-  },
   "UtilityTripod": {
     "name": "Tripod",
+    "category": "Tripod Mount",
     "description": "A mount point for deployable infantry weapons and equipment.",
     "crateSize": 5,
     "bmatCost": 100,
@@ -143,7 +137,7 @@
   },
   "UtilityWindSock": {
     "name": "Wind Sock",
-    "category": "Equipment",
+    "category": "Mounted Equipment",
     "description": "A sturdy fabric cylinder mounted on a tripod that's designed to help nearby operators determine the speed and direction of wind.",
     "crateSize": 5,
     "bmatCost": 150,
@@ -151,6 +145,7 @@
   },
   "UtilityWrench": {
     "name": "Wrench",
+    "category": "Field Tool",
     "description": "A multipurpose tool. Can be used to dismantle mines/barbed wire and unlock vehicles.",
     "crateSize": 5,
     "bmatCost": 75,
@@ -178,6 +173,7 @@
   },
   "UtilityGasMask": {
     "name": "Gas Mask",
+    "category": "Field Gear",
     "description": "Protects against poison gas.",
     "crateSize": 20,
     "bmatCost": 160,
@@ -185,6 +181,7 @@
   },
   "UtilityGasFilter": {
     "name": "Gas Mask Filter",
+    "category": "Field Gear",
     "description": "When attached to a Gas Mask, this filter provides fresh air to the wearer.",
     "crateSize": 20,
     "bmatCost": 100,
@@ -194,7 +191,7 @@
     "name": "The Ospreay",
     "category": "Grenade Launcher",
     "description": "A rifle attachment that fires grenades with pneumatic force. Along with specialized grenades, it can launch standard grenades.",
-    "ammoUsed": "Green Ash Grenade, A3 Harpa Fragmentation Grenade",
+    "ammoUsed": "Green Ash Grenade, A3 Harpa Fragmentation Grenade, B2 Varsi Anti-Tank Grenade",
     "crateSize": 20,
     "bmatCost": 85,
     "rmatCost": 10,
@@ -203,6 +200,7 @@
   },
   "UtilityRadio": {
     "name": "Radio",
+    "category": "Field Gear",
     "description": "Receives map intelligence updates.",
     "crateSize": 5,
     "bmatCost": 75,

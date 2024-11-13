@@ -90,6 +90,7 @@
   },
   "EmplacedRocket": {
     "name": "DAE 3b-2 \"Hades' Net\"",
+    "category": "Emplaced Rocket Artillery",
     "description": "The DAE 3b-2 fires rockets over long distances from a safe, emplaced position. This unique weapon was given its name due to the screams heard across the battlefield during its first deployment, with some referring to the barrage as a \"web of death\".",
     "ammoUsed": "3C-High Explosive Rocket",
     "itemSpecifics": {

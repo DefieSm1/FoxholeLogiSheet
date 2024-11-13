@@ -1,6 +1,7 @@
 {
   "MaterialPallet": {
     "name": "Material Pallet",
+    "category": "Shippable Container",
     "description": "A material pallet.",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to medium sized shippables", "I miss small containers..." ] 
@@ -144,5 +145,15 @@
     "cmatCost": 35,
     "assmatCost": [ 5, 15, 0, 0, 0 ],
     "productionTime": 300
+  },
+  "SmallGaugeCrate": {
+    "name": "BMS Stowheel",
+    "category": "Small Box Car",
+    "description": "A simple boxcar used for transporting common goods.",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables" ]
+    },
+    "cmatCost": 35,
+    "assmatCost": [ 5, 15, 0, 0, 0 ]
   }
 }

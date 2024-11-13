@@ -18,8 +18,8 @@
     "itemSpecifics": {
       "general": [ "$3 backpack slots", "$High reststance to light kinetic damage", "$High resistance to melee damage", "$Low resistance to bleeding" ] 
     },
-    "crateSize": 3,
-    "bmatCost": 100,
+    "crateSize": 5,
+    "bmatCost": 150,
     "productionTime": 90,
     "faction": "W"
   },
@@ -102,8 +102,8 @@
     "itemSpecifics": {
       "general": [ "$4 backpack slots", "$Low resistance to light kinetic damage", "$High resistance to bleeding" ] 
     },
-    "crateSize": 5,
-    "bmatCost": 100,
+    "crateSize": 10,
+    "bmatCost": 200,
     "productionTime": 90,
     "faction": "C"
   },

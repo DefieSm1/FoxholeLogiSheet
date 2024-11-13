@@ -1,6 +1,7 @@
 {
   "EmplacedAntiTank68": {
     "name": "Leary Shellbore 68mm",
+    "category": "Emplaced Anti-Tank Cannon",
     "description": "A defensive emplacement with a 68mm Anti-Tank cannon. This rudimentary weapon was once built to fit onto the hull of large naval vessels, but was eventually pahsed out and repurposed.",
     "ammoUsed": "68mm",
     "itemSpecifics": {
@@ -14,6 +15,7 @@
   },
   "ArtilleryExalt": {
     "name": "Huber Exalt 150mm",
+    "category": "Emplaced Heavy Artillery",
     "description": "A heavy cannon designed to shatter the garrisons and fortifications of advancing forces. The Exalt is best utilized when emplaced into a defensive position to take advantage of it's impressive range.",
     "ammoUsed": "150mm",
     "itemSpecifics": {
@@ -27,11 +29,12 @@
   },
   "EmplacedMachinegunSnareTrap": {
     "name": "Leary Snare Trap 127",
+    "category": "Emplaced Machine Gun",
     "description": "The Snare Trap is a repurposed anti-aircraft flak cannon used to fortify emplaced positions with twin anti-infantry machine guns.",
     "ammoUsed": "12.7mm",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to medium sized shippables" ],
-      "Machine Gun": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "$Deals Heavy Kinetic damage" ] 
+      "Machine Gun": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "Causes suppressed enemy players to lose stability", "$Deals Heavy Kinetic damage" ] 
     },
     "crateSize": 3,
     "bmatCost": 75,
@@ -40,6 +43,7 @@
   },
   "ArtilleryLariat": {
     "name": "Huber Lariat 120mm",
+    "category": "Emplaced Light Artillery",
     "description": "A light artillery cannon designed to be a fixture in defensive fortifications. The Lariat sports a formidibable long-range 120mm cannon designed to put immense pressure on enemy infantry.",
     "ammoUsed": "120mm",
     "itemSpecifics": {
@@ -54,6 +58,7 @@
   
   "ArtilleryThunderbolt": {
     "name": "50-500 \"Thunderbolt\" Cannon",
+    "category": "Emplaced Heavy Artillery",
     "description": "This heavy artillery cannon is designed to cripple enemy fortifications from an entrenched position. Its long heavy barrel gives the \"Thunderbolt\" outstanding range.",
     "ammoUsed": "150mm",
     "itemSpecifics": {
@@ -67,6 +72,7 @@
   },
   "MaterialPallet": {
     "name": "Material Pallet",
+    "category": "Shippable Container",
     "description": "A material pallet.",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to medium sized shippables", "I miss small containers..." ] 
@@ -77,6 +83,7 @@
   },
   "ContainerMaterial": {
     "name": "Resource Container",
+    "category": "Shippable Container",
     "description": "A container that can carry large quantities of resources and can be transpoted by certain vehicles.",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to medium sized shippables" ]
@@ -87,6 +94,7 @@
   },
   "ContainerCrate": {
     "name": "Shipping Container",
+    "category": "Shippable Container",
     "description": "A container for shipping very large quantities of Crates using Crane loaded vehicles. This typ of container can only be unloaded at Storage Depots and Seaports.",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to medium sized shippables" ]
@@ -97,6 +105,7 @@
   }, 
   "EmplacedAntiTankARC": {
     "name": "DAE 1o-3 \"Polybolos\"",
+    "category": "Emplaced ARC/RPG",
     "description": "To combat Caoivish ingenuity, the Meseans developed their own indirect RPG propulsion system. Dual launchers are fitted on a large emplacement platform to maximize coverage in an established position, rather than being relegated to a guerilla warfare tool.",
     "ammoUsed": "ARC/RPG",
     "itemSpecifics": {
@@ -109,11 +118,12 @@
   },
   "EmplacedMachinegunSerra": {
     "name": "DAE 1b-2 \"Serra\"",
+    "category": "Emplaced Machine Gun",
     "description": "Built like a saw blade, the DAE 1b-2 emplacement gun is fitted with three cascading machine gun turrets. What the \"Serra\" lacks in power, it makes up for in sheer rate of fire for a weapon of its size.",
     "ammoUsed": "12.7mm",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to medium sized shippables" ],
-      "Machine Gun": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "$Deals Heavy Kinetic damage" ] 
+      "Machine Gun": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "Causes suppressed enemy players to lose stability", "$Deals Heavy Kinetic damage" ] 
     },
     "crateSize": 3,
     "bmatCost": 100,
@@ -122,6 +132,7 @@
   },
   "ConcreteMixer": {
     "name": "Concrete Mixer",
+    "category": "Shippable Concrete Mixer",
     "description": "A portable device that mixes various materials to form Concrete, which are used to build heavily fortified structures.",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to medium sized shippables" ]
@@ -132,6 +143,7 @@
   },
   "FuelContainer": {
     "name": "Liquid Container",
+    "category": "Shippable Container",
     "description": "Stores a high volume of liquids, supporting a variety of fuel types. Nearby structures or vehicles can be refueled directly from this container.",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to medium sized shippables" ]

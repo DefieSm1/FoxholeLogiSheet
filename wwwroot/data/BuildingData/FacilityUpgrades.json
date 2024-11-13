@@ -178,6 +178,130 @@
             }
         ]
     },
+    "SmallArmsFactoryAssaultWeapons": {
+        "name": "Special-Issue Firearms Assembly",
+        "description": "A collection of stations to facilitate the assembly of special-issue infantry weapons and explosives.",
+        "pcmatCost": 35,
+        "buildingRecipes": [  
+            {
+                "inputNames": [ "ARBooker", "MaterialProcessedConstruction", "AssemblyMaterialsT2" ],
+                "inputAmounts": [ 1, 3, 5 ],
+                "outputNames": [ "ATRGreyhound" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 4,
+                "productionTime": 75,
+                "faction": "W"
+            },
+            {
+                "inputNames": [ "ATRifle", "MaterialProcessedConstruction", "AssemblyMaterialsT2" ],
+                "inputAmounts": [ 1, 3, 5 ],
+                "outputNames": [ "ATRSatterley" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 4,
+                "productionTime": 75,
+                "faction": "W"
+            },
+            {
+                "inputNames": [ "RifleSniperAuger", "MaterialProcessedConstruction", "AssemblyMaterialsT2" ],
+                "inputAmounts": [ 1, 3, 5 ],
+                "outputNames": [ "ATRQuickhatch" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 4,
+                "productionTime": 75,
+                "faction": "C"
+            },
+            {
+                "inputNames": [ "ARDusk", "MaterialProcessedConstruction", "AssemblyMaterialsT2" ],
+                "inputAmounts": [ 1, 3, 5 ],
+                "outputNames": [ "ATRDawn" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 4,
+                "productionTime": 75,
+                "faction": "C"
+            },
+            {
+                "inputNames": [ "AmmoMortarShrapnel", "MaterialConstruction", "AmmoFlame" ],
+                "inputAmounts": [ 1, 5, 1 ],
+                "outputNames": [ "AmmoMortarIncendiary" ],
+                "outputAmounts": [ 1 ],
+                "powerConsumption": 2,
+                "productionTime": 75
+            }
+        ]
+    },
+    "SmallArmsFactoryAmmunition": {
+        "name": "Small Arms Workshop",
+        "description": "This workshop addition allows for manufacturing infantry carried explosives and various small arms ammo classes.",
+        "pcmatCost": 175,
+        "buildingRecipes": [
+            {
+                "inputNames": [ "MaterialExplosive", "MaterialConstruction" ],
+                "inputAmounts": [ 110, 65 ],
+                "outputNames": [ "AmmoMortarShrapnel" ],
+                "outputAmounts": [ 10 ],
+                "powerConsumption": 12,
+                "productionTime": 9000
+            },
+            {
+                "inputNames": [ "MaterialExplosive", "MaterialConstruction" ],
+                "inputAmounts": [ 80, 65 ],
+                "outputNames": [ "AmmoMortarFlare" ],
+                "outputAmounts": [ 10 ],
+                "powerConsumption": 12,
+                "productionTime": 9000
+            },
+            {
+                "inputNames": [ "MaterialExplosive", "MaterialConstruction" ],
+                "inputAmounts": [ 385, 65 ],
+                "outputNames": [ "AmmoMortarHE" ],
+                "outputAmounts": [ 10 ],
+                "powerConsumption": 12,
+                "productionTime": 9000
+            },
+            {
+                "inputNames": [ "MaterialExplosive", "MaterialConstruction" ],
+                "inputAmounts": [ 440, 110 ],
+                "outputNames": [ "GrenadeATFlask" ],
+                "outputAmounts": [ 10 ],
+                "powerConsumption": 12,
+                "productionTime": 6900,
+                "faction": "W"
+            },
+            {
+                "inputNames": [ "MaterialExplosive", "MaterialConstruction" ],
+                "inputAmounts": [ 385, 95 ],
+                "outputNames": [ "ATIgnifist" ],
+                "outputAmounts": [ 10 ],
+                "powerConsumption": 12,
+                "productionTime": 6900,
+                "faction": "C"
+            },
+            {
+                "inputNames": [ "MaterialExplosive", "MaterialConstruction" ],
+                "inputAmounts": [ 550, 55 ],
+                "outputNames": [ "GrenadeATSticky" ],
+                "outputAmounts": [ 10 ],
+                "powerConsumption": 12,
+                "productionTime": 6900
+            },
+            {
+                "inputNames": [ "MaterialConstruction" ],
+                "inputAmounts": [ 110 ],
+                "outputNames": [ "AmmoAT20" ],
+                "outputAmounts": [ 10 ],
+                "powerConsumption": 12,
+                "productionTime": 9000
+            },
+            {
+                "inputNames": [ "MaterialConstruction" ],
+                "inputAmounts": [ 135 ],
+                "outputNames": [ "GrenadeSmoke" ],
+                "outputAmounts": [ 10 ],
+                "powerConsumption": 12,
+                "productionTime": 6900
+            }
+        ]
+    },
     "AmmoFactoryRocket": {
         "name": "Rocket Battery Workshop",
         "description": "Produces various types of Rockets.",
@@ -242,7 +366,7 @@
                 "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
                 "inputAmounts": [ 1, 2 ],
                 "outputNames": [ "AmmoShell120" ],
-                "outputAmounts": [ 1 ],
+                "outputAmounts": [ 2 ],
                 "powerConsumption": 4,
                 "productionTime": 25
             },
@@ -250,7 +374,7 @@
                 "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
                 "inputAmounts": [ 8, 3 ],
                 "outputNames": [ "AmmoShell150" ],
-                "outputAmounts": [ 1 ],
+                "outputAmounts": [ 12 ],
                 "powerConsumption": 4,
                 "productionTime": 40
             },

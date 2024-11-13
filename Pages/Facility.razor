@@ -22,7 +22,7 @@
 				<ItemButton ItemName=@building.Key Category="Facility" Disabled=@(SelectedBuilding == building.Key) IconSet="buildings" Border="@GetBuildingHighlight(building.Key)"
 							OnMouseOver="() => { HoveredItem = FacilityBuildings[building.Key]; TooltipVisibility = true; TooltipSimplified = false; StateHasChanged(); }"
 							OnMouseOut="() => { HoveredItem = FacilityBuildings[building.Key]; TooltipVisibility = false; StateHasChanged(); }"
-							OnButtonClick="(e) => { SelectedBuilding = building.Key; SelectedUpgrade = String.Empty; StateHasChanged(); }" />
+							OnButtonClick="(e) => { SelectedUpgrade = SelectedBuilding == building.Key ? SelectedUpgrade : String.Empty; SelectedBuilding = building.Key; StateHasChanged(); }" />
 			}
 		</ItemGrid>
 	</CalculatorContainer>

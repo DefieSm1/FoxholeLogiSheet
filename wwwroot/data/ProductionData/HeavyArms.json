@@ -4,6 +4,9 @@
     "category": "Anti-Tank Rifle",
     "description": "The Neville is unmatched in its versatility as a portable, magazine-based anti-armor firearm.",
     "ammoUsed": "20mm",
+    "itemSpecifics": {
+      "general": [ "Deals 200% of damage to vehicle armour", "Suppresses enemy vehicles", "Causes suppressed enemy vehicles", "Causes suppressed enemy players to lose stability" ]
+    },
     "crateSize": 3,
     "bmatCost": 150,
     "productionTime": 37,
@@ -15,7 +18,7 @@
     "description": "This mounted anti-tank rifle boasts improved accuracy over its free-standing counterparts. The Typhon was specifically designed with shock absorption in mind, allowing for faster, more consistent firing patterns.",
     "ammoUsed": "20mm",
     "itemSpecifics": {
-      "general": [ "Gunner", "Equipped with a high velocity barrel that deals 20% extra damage per shot", "$Deals Anti-Tank Kinetic damage", "This can be attached to certain vehicles" ] 
+      "general": [ "Gunner", "Equipped with a high velocity barrel that deals 20% extra damage per shot", "Causes suppressed enemy players to lose stability", "$Deals Anti-Tank Kinetic damage", "This can be attached to certain vehicles" ] 
     },
     "crateSize": 5,
     "bmatCost": 100,
@@ -25,6 +28,7 @@
   },
   "AmmoAT20": {
     "name": "20mm",
+    "category": "Anti-Tank Rifle Ammo",
     "description": "Standard ammunition for anti-tank rifles.",
     "itemSpecifics": {
       "general": [ "$Deals Anti-Tank Kinetic damage", "Can penetrate armoured vehicles" ] 
@@ -53,7 +57,7 @@
     "description": "The pride of the Warden anti-armored arsenal, the Bonesaw Mk.3 has one job; to cut through heavy metal plating of Colonial tanks.",
     "ammoUsed": "ARC/RPG",
     "itemSpecifics": {
-      "general": [ "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles", "Additional 100% chance to penetrate armoured vehicles"  ] 
+      "general": [ "$Deals Anti-Tank Explosive damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles", "Additional 100% chance to penetrate armoured vehicles"  ] 
     },
     "crateSize": 5,
     "bmatCost": 100,
@@ -91,25 +95,27 @@
   },
   "AmmoATDirect": {
     "name": "AP/RPG",
+    "category": "AP/RPG Ammo",
     "description": "An armour piercing projectile used with specialized RPG launchers.",
     "itemSpecifics": {
       "general": [ "$Deals Armour Piercing damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ] 
     },
     "crateSize": 15,
     "bmatCost": 60,
-    "ematCost": 75,
+    "ematCost": 150,
     "productionTime": 100,
     "faction": "C"
   },
   "AmmoATIndirect": {
     "name": "ARC/RPG",
+    "category": "ARC/RPG Ammo",
     "description": "An anti-tank projectili fied from indirect RPG launchers.",
     "itemSpecifics": {
       "general": [ "$Deals Armour Piercing damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles", "Additional 100% chance to penetrate armoured vehicles" ] 
     },
     "crateSize": 15,
     "bmatCost": 60,
-    "ematCost": 75,
+    "ematCost": 150,
     "productionTime": 100
   },
   "FlamethrowerWilowsBane": {
@@ -171,7 +177,7 @@
     },
     "crateSize": 20,
     "bmatCost": 75,
-    "ematCost": 50,
+    "ematCost": 100,
     "productionTime": 80
   },
   "MGRatcatcher": {
@@ -180,7 +186,7 @@
     "description": "Early iterations of this machinegun were built to be emplaced in bunkers and on the decks of lightly armed warships, the Ratcatcher is Harvey Malone's first freely mountable infantry weapon designed for field use. Just like its predecessors, this heavy weapon suppresses enemy soldiers with unmatched efficiency.",
     "ammoUsed": "12.7mm",
     "itemSpecifics": {
-      "general": [ "This can be attached to certain vehicles" ] 
+      "general": [ "Gunner", "Causes suppressed enemy players to lose stability", "$Deals Heavy Kinetic damage" ] 
     },
     "crateSize": 5,
     "bmatCost": 100,
@@ -194,7 +200,7 @@
     "description": "Built on the bones of the first automatic weapons introduced to the Legion, the \"Lamentum\" mm.IV is still quite an intimidating force to encounter on the battlefield. Boasting a large magazine and impressive active range, this mounted machinegun excels at laying down consistent suppressive fire.",
     "ammoUsed": "12.7mm",
     "itemSpecifics": {
-      "general": [ "Gunner", "Equipped with a high velocity barrel that deals 50% extra damage per shot", "$Deals Heavy Kinetic damage", "This can be attached to certain vehicles" ] 
+      "general": [ "Gunner", "Equipped with a high velocity barrel that deals 50% extra damage per shot", "Causes suppressed enemy players to lose stability", "$Deals Heavy Kinetic damage", "This can be attached to certain vehicles" ] 
     },
     "crateSize": 5,
     "bmatCost": 100,
@@ -218,13 +224,14 @@
   },
   "AmmoShell30": {
     "name": "30mm",
+    "category": "Infantry Support Gun Ammo",
     "description": "Standard explosive shell with certain small vehicles and infantry weapons",
     "itemSpecifics": {
       "general": [ "$Deals Explosive damage", "Can penetrate armoured vehicles" ] 
     },
     "crateSize": 20,
     "bmatCost": 80,
-    "ematCost": 20,
+    "ematCost": 40,
     "productionTime": 100
   },
   "Mortar": {
@@ -239,35 +246,38 @@
   },
   "AmmoMortarFlare": {
     "name": "Flare Mortar Shell",
+    "category": "Mortar Shell",
     "description": "A long-burning flare that ignites midair to illuminate a large area and reveals enemy targets.",
     "itemSpecifics": {
       "general": [ "$Deals Eye-Hurting Photon damage" ] 
     },
     "crateSize": 15,
     "bmatCost": 60,
-    "ematCost": 10,
+    "ematCost": 15,
     "productionTime": 100
   },
   "AmmoMortarShrapnel": {
     "name": "Shrapnel Mortar Shell",
+    "category": "Mortar Shell",
     "description": "A payload filled with shrapnel used with mortar tubes. Devestates nearby infantry.",
     "itemSpecifics": {
       "general": [ "$Deals Shrapnel damage", "Always causes target to bleed" ] 
     },
     "crateSize": 15,
     "bmatCost": 60,
-    "ematCost": 15,
+    "ematCost": 20,
     "productionTime": 100
   },
   "AmmoMortarHE": {
     "name": "Mortar Shell",
+    "category": "Mortar Shell",
     "description": "An explosive payload used with mortar tubes.",
     "itemSpecifics": {
       "general": [ "$Deals High Explosive damage", "Reduced damage against Trenches", "Increased damage against Field Structures" ] 
     },
     "crateSize": 15,
     "bmatCost": 60,
-    "ematCost": 35,
+    "ematCost": 70,
     "productionTime": 100
   },
   "GrenadeATFlask": {
@@ -275,11 +285,11 @@
     "category": "Anti-Tank Grenade",
     "description": "An explosive flask used for melting enemy armor. This carefully designed liquid bomb explodes into a dazzling flash of molten debris upon impact.",
     "itemSpecifics": {
-      "general": [ "$Deals Anti-Tank Explosive damage", "High chance of disabling Track subsystem" ] 
+      "general": [ "$Deals Anti-Tank Explosive damage", "High chance of disabling Track subsystem", "Deals damage to vehicle armour" ] 
     },
     "crateSize": 10,
     "bmatCost": 100,
-    "ematCost": 40,
+    "ematCost": 80,
     "productionTime": 75,
     "faction": "W"
   },
@@ -292,9 +302,22 @@
     },
     "crateSize": 10,
     "bmatCost": 85,
-    "ematCost": 35,
+    "ematCost": 70,
     "productionTime": 75,
     "faction": "C"
+  },
+  "GrenadeATVarsi": {
+    "name": "B2 Varsi Anti-Tank Grenade",
+    "category": "Anti-Tank Grenade",
+    "description": "A compact anti-tank grenade that can be fired from rifle grenade launcher attachments or grenade turrets. Its dense payload excels at crippling armoured vehicles while being versatile and easy to transport.",
+    "itemSpecifics": {
+      "general": [ "$Deals Anti-Tank Explosive damage", "High chance of disabling Track subsystem", "Deals damage to vehicle armour" ]
+    },
+    "crateSize": 20,
+    "bmatCost": 95,
+    "ematCost": 125,
+    "productionTime": 120,
+    "faction": "W"
   },
   "GrenadeHE": {
     "name": "Mammon 91-b",
@@ -305,18 +328,19 @@
     },
     "crateSize": 20,
     "bmatCost": 100,
-    "ematCost": 10,
+    "ematCost": 20,
     "productionTime": 80
   },
   "GrenadeATSticky": {
     "name": "Anti-Tank Sticky Bomb",
+    "category": "Anti-Tank Grenade",
     "description": "An adherable grenade designed to penetrate heavy tank armor. The sticky bomb can only be thrown a short distance and is ineffective against structures.",
     "itemSpecifics": {
-      "general": [ "$Deals Anti-Tank Explosive damage", "High chance of disabling Track subsystem" ] 
+      "general": [ "$Deals Anti-Tank Explosive damage", "High chance of disabling Track subsystem", "Deals damage to vehicle armour" ] 
     },
     "crateSize": 10,
     "bmatCost": 50,
-    "ematCost": 50,
+    "ematCost": 100,
     "productionTime": 75
   },
   "RPGFoebreaker": {
@@ -349,13 +373,14 @@
   },
   "AmmoRPG": {
     "name": "RPG",
+    "category": "RPG Ammo",
     "description": "A fast-moving explosive projectile used with RPG launchers.",
     "itemSpecifics": {
       "general": [ "$Deals Explosive damage", "Can penetrate armoured vehicles" ] 
     },
     "crateSize": 15,
     "bmatCost": 60,
-    "ematCost": 45,
+    "ematCost": 90,
     "productionTime": 100
   }
 }

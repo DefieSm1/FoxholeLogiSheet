@@ -1,6 +1,7 @@
 {
   "SuppliesMaintenance": {
     "name": "Maintenance Supplies",
+    "category": "Supplies",
     "description": "Supplies for maintaining structures. Store at Bases or Maintenance Tunnels to prevent decay on surrounding structures.",
     "crateSize": 100,
     "bmatCost": 250,
