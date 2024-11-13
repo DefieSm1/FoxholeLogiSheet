@@ -1,38 +1,47 @@
 {
   "MaterialRawSalvage": {
     "name": "Salvage",
+    "category": "Raw Material",
     "description": "Salvage that can be recycled into other resources at a Refinery."
   },
   "MaterialExplosive": {
     "name": "Explosive Powder",
+    "category": "Refined Material",
     "description": "Resource used for producing heavy explosive weapons."
   },
   "MaterialRawComponentsDamaged": {
     "name": "Damaged Components",
+    "category": "Raw Material",
     "description": "Damaged Components that can be salvaged into Components."
   },
   "MaterialRawComponents": {
     "name": "Components",
+    "category": "Raw Material",
     "description": "Components that can be salvaged into Refined Mateirals at a Refinery."
   },
   "MaterialRawSulfur": {
     "name": "Sulfur",
+    "category": "Raw Material",
     "description": "Sulfur that can be refined into Heavy Explosive Powder at a Refinery."
   },
   "MaterialRawRareMetals": {
     "name": "Rare Metal",
+    "category": "Raw Material",
     "description": "A compound of extremely rare metals used in the production of the most advanced vehicles and weapons."
   },
   "MaterialHeavyExplosive": {
     "name": "Heavy Explosive Powder",
+    "category": "Refined Material",
     "description": "Resource used for producing heavy explosive weapons."
   },
   "MaterialRawCoal": {
     "name": "Coal",
+    "category": "Raw Material",
     "description": "Chunks of raw Coal that can be refined into materials needed for production and power generation at Facilities."
   },
   "MaterialCoke": {
     "name": "Coke",
+    "category": "Refined Material",
     "description": "Refined Coal required for various Facility processes.",
     "itemSpecifics": {
       "general": [ "Not to be confused with the product you consume" ]
@@ -40,6 +49,7 @@
   },
   "MaterialConstruction": {
     "name": "Construction Materials",
+    "category": "Refined Material",
     "description": "Metal beams needed to produce basic structures and vehicles at Facilities."
   },
   "MaterialProcessedConstruction": {
@@ -94,26 +104,32 @@
   },
   "MaterialDiesel": {
     "name": "Diesel",
+    "category": "Refined Material",
     "description": "Common fuel used to power all vehicles and resource mines."
     },
   "MaterialOilCrude": {
     "name": "Oil",
+    "category": "Raw Material",
     "description": "A raw viscous liquid that must be refined into fuel at Facilities."
   },
   "MaterialOilPetrol": {
     "name": "Petrol",
+    "category": "Refined Material",
     "description": "A medium grade fuel that's refined from Oil. Used as higher end fuel for vehicles and in various applications at Facilities."
   },
   "MaterialOilHeavy": {
     "name": "Heavy Oil",
+    "category": "Refined Material",
     "description": "A high grade fuel that's refined from Oil. Used in a variety of applications at Facilities."
   },
   "MaterialOilEnriched": {
     "name": "Enriched Oil",
+    "category": "Refined Material",
     "description": "Oil that has been purified and enriched for advanced Facilities processes."
   },
   "MaterialWater": {
     "name": "Water",
+    "category": "Refined Material",
     "description": "Water... in a can!"
   },
   "UtilitySandbag": {
@@ -138,10 +154,197 @@
   },
   "MaterialConcrete": {
     "name": "Concrete Materials",
+    "category": "Large Material",
     "description": "A concrete compound that is used to build heavily fortified structures."
+  },
+  "MeleeMace": {
+    "name": "Falias Raiding Club",
+    "category": "Melee Weapon",
+    "description": "A heavy mace constructed from solid wood and dotted with lead rivets. Commonly used when raiding entrenched positions in close quarters where firearms are less effective and an old-fashioned bludgeoning is better suited for the job.",
+    "itemSpecifics": {
+      "general": [ "Grass grows, birds fly, sun shines, and brotha'- I hurt people" ]
+    },
+    "crateSize": 20,
+    "faction": "W"
+  },
+  "MeleeSword": {
+    "name": "Eleos Infantry Dagger",
+    "category": "Melee Weapon",
+    "description": "Standard-issue Mesean military dagger. Its long, slender blade excels in close-quarters combat as well as plethora of uses in everyday operations.",
+    "itemSpecifics": {
+      "general": [ "$DRIVE ME CLOSER, I WANT TO HIT THEM WITH MY... dagger?" ]
+    },
+    "crateSize": 20,
+    "faction": "C"
+  },
+  "ARBooker": {
+    "name": "Booker Storm Rifle Model 838",
+    "category": "Assault Rifle",
+    "description": "The Booker is a high-impact three-round burst Storm Rifle for those who like to shoot first.",
+    "ammoUsed": "7.92mm",
+    "itemSpecifics": {
+      "general": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot" ]
+    },
+    "crateSize": 20,
+    "faction": "W"
+  },
+  "ATRifle": {
+    "name": "20 Neville Anti-Tank Rifle",
+    "category": "Anti-Tank Rifle",
+    "description": "The Neville is unmatched in its versatility as a portable, magazine-based anti-armour firearm.",
+    "ammoUsed": "20mm",
+    "itemSpecifics": {
+      "general": [ "Deals 200% damage to vehicle armour", "Suppresses enemy vehicles", "Causes suppressed enemy players to lose stability" ]
+    },
+    "crateSize": 3,
+    "faction": "W"
+  },
+  "RifleSniperAuger": {
+    "name": "KRR3-792 Auger",
+    "category": "Sniper Rifle",
+    "description": "A Kraunian rifle modified for long-range engagements. It doesn't have the range or stopping power of other marksman rifles but more than makes up for it with unmatched reliability in a range of environments and a superior effective rate of fire.",
+    "ammoUsed": "7.62mm",
+    "itemSpecifics": {
+      "general": [ "Equipped with a high velocity barrel that deals 55% extra damage per shot", "Accuracy bonus provided by cover reduced by 95%" ]
+    },
+    "crateSize": 3,
+    "faction": "C"
+  },
+  "ARDusk": {
+    "name": "\"Dusk\" ce.III",
+    "category": "Assault Rifle",
+    "description": "This unique assault rifle includes a high-capacity drum magazine designed for sustained rapid fire.",
+    "ammoUsed": "7.92mm",
+    "crateSize": 20,
+    "faction": "C"
+  },
+  "ATRGreyhound": {
+    "name": "Booker Greyhound Model 910",
+    "category": "Anti-Tank Rifle",
+    "description": "A variant on the Booker Storm Rifle, the Greyhound boasts a larger overall receiver and barrel to accommodate the increased stopping power of anti-tank rounds. Its longer, bulkier barrel allows for increased range. As a heavier automatic rifle, the Greyhound remains an excellent tool for those who'd prefer to shoot before asking questions.",
+    "ammoUsed": "20mm",
+    "itemSpecifics": {
+      "general": [ "Deals 200% damage to vehicle armour", "Suppresses enemy vehicles", "Causes suppressed enemy players to lose stability", "Equipped with a low velocity barrel that deals 30% less damage per shot", "$Suffer not the collie to live" ]
+    },
+    "crateSize": 3,
+    "faction": "W"
+  },
+  "ATRSatterley": {
+    "name": "228 Satterley Heavy Storm Rifle",
+    "category": "Assault Rifle",
+    "description": "While the Satterley is designed to be operated by a single infantryman, it remains a cumbersome rifle due to its heavy kickback and burst fire configuration. This heavy burst rifle is best suited for small squads to blindside enemy armour, stripping steel with ease, but its cumbersome setup makes it less than ideal for infantry skirmishes.",
+    "ammoUsed": "20mm",
+    "itemSpecifics": {
+      "general": [ "Deals 200% damage to vehicle armour", "Suppresses enemy vehicles", "Causes suppressed enemy players to lose stability", "Equipped with a low velocity barrel that deals 25% less damage per shot" ]
+    },
+    "crateSize": 3,
+    "faction": "W"
+  },
+  "ATRQuickhatch": {
+    "name": "\"Quickhatch\" Rt.I",
+    "category": "Sniper Rifle",
+    "description": "A deadly, long-range sniper rifle with exceptional stopping power. The \"Quickhatch\" is a gluttnous firearm that hungers for enemy armour and flesh alike.",
+    "ammoUsed": "20mm",
+    "itemSpecifics": {
+      "general": [ "Deals 350% damage to vehicle armour", "Suppresses enemy vehicles", "Causes suppressed enemy players to lose stability", "Accuracy bonus provided by cover reduced by 95%" ]
+    },
+    "crateSize": 3,
+    "faction": "C"
+  },
+  "ATRDawn": {
+    "name": "\"Dawn\" Ve.II",
+    "category": "Anti-Tank Rifle",
+    "description": "A three-round burst anti-tank rifle with a high-capacity magazine. Built from a modified \"Dusk\" assault rifle, the receiver has been altered to support top-loaded drum magazines for better stability and efficient loading to account for its more cumbersome design and higher calibre rounds.",
+    "ammoUsed": "20mm",
+    "itemSpecifics": {
+      "general": [ "Deals 200% damage to vehicle armour", "Suppresses enemy vehicles", "Causes suppressed enemy players to lose stability", "Equipped with a low velocity barrel that deals 30% less damage per shot" ]
+    },
+    "crateSize": 3,
+    "faction": "C"
+  },
+  "AmmoMortarIncendiary": {
+    "name": "Incendiary Mortar Shell",
+    "category": "Mortar Ammo",
+    "description": "An incendiary payload used with mortar tubes. Will ignite objects near impact.",
+    "itemSpecifics": {
+      "general": [ "$Deals Incendiary damage", "Deals High Explosive damage on impact" ]
+    },
+    "crateSize": 15 
+  },
+  "AmmoMortarShrapnel": {
+    "name": "Shrapnel Mortar Shell",
+    "category": "Mortar Ammo",
+    "description": "An payload filled with shrapnel used with mortar tubes. Devastates nearby infantry.",
+    "itemSpecifics": {
+      "general": [ "$Deals Shrapnel damage" ]
+    },
+    "crateSize": 15
+  },
+  "AmmoMortarFlare": {
+    "name": "Flare Mortar Shell",
+    "category": "",
+    "description": "A long-burning flare that ingites midair to illuminate a large aread and reveals enemy targets.",
+    "itemSpecifics": {
+      "general": [ "$Deals Eye-Hurting Photon damage" ]
+    },
+    "crateSize": 15
+  },
+  "AmmoMortarHE": {
+    "name": "Mortar Shell",
+    "category": "Mortar Ammo",
+    "description": "An explosive payload used with mortar tubes.",
+    "itemSpecifics": {
+      "general": [ "$Deals High Explosive damage", "Reduced damaged against Trenches", "Increased damage against Field Structures" ]
+    },
+    "crateSize": 15
+  },
+  "GrenadeATFlask": {
+    "name": "BF5 White Ash Flask Grenade",
+    "category": "Anti-Tank Grenade",
+    "description": "An explosive flask used for melting enemy armour. This carefully designed liquid bomb explodes into a dazzling flash of molten debris upon impact.",
+    "itemSpecifics": {
+      "general": [ "$Deals Anti-Tank Explosive damage", "High chance of disabling Track subsystem", "Deals damage to vehicle armour" ]
+    },
+    "crateSize": 10,
+    "faction": "W"
+  },
+  "ATIgnifist": {
+    "name": "Ignifist 30",
+    "category": "Anti-Tank RPG",
+    "description": "This single-use rocket can be fired a short distance. Designed to punch holes into tanks, the Ignifist is the perfect tool for infantry anticipating armoured resistance.",
+    "itemSpecifics": {
+      "general": [ "$Deals Armour Piercing damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ]
+    },
+    "crateSize": 10,
+    "faction": "C"
+  },
+  "GrenadeATSticky": {
+    "name": "Anti-Tank Sticky Bomb",
+    "category": "Anti-Tank Grenade",
+    "description": "An adherable grenade designed to penetrate heavy tank armour. The Sticky Bomb can only be thrown a short distance and is ineffective against structures.",
+    "itemSpecifics": {
+      "general": [ "$Deals Anti-Tank Explosive damage", "High chance of disabling Track subsystem", "Deals damage to vehicle armour" ]
+    },
+    "crateSize": 10
+  },
+  "AmmoAT20": {
+    "name": "20mm",
+    "category": "Anti-Tank Rifle Ammo",
+    "description": "Standard ammunition for anti-tank rifles.",
+    "itemSpecifics": {
+      "general": [ "$Deals Anti-Tank Kinetic damage" ]
+    },
+    "crateSize": 10
+  },
+  "GrenadeSmoke": {
+    "name": "PT-815 Smoke Grenade",
+    "category": "Smoke Grenade",
+    "description": "A standard smoke grenade designed for concealing allied movement or screening the enemy's vision.",
+    "crateSize": 10
   },
   "AmmoFlame": {
     "name": "Flame Ammo",
+    "category": "Mounted Flamethrower Ammo",
     "description": "A drum containing fuel for use with flame weapons.",
     "itemSpecifics": {
       "general": [ "$Deals Incendiary damage" ]
@@ -149,6 +352,7 @@
   },
   "AmmoRocketHE": {
     "name": "3C-High Explosive Rocket",
+    "category": "HE Rocket Artillery Ammo",
     "description": "Standard calibre rocket with a heavy explosive payload. Chance to ignite objects near impact.",
     "itemSpecifics": {
       "general": [ "$Deals Incendiary damage", "Deals High Explosive damage on impact" ] 
@@ -156,6 +360,7 @@
   },
   "AmmoRocketFlame": {
     "name": "4C-Fire Rocket",
+    "category": "Incendiary Rocket Artillery Ammo",
     "description": "Standard calibre rocket with an incendiary explosion. Will ignite objects near impact.",
     "itemSpecifics": {
       "general": [ "$Deals Incendiary damage", "Deals High Explosive damage on impact" ] 
@@ -163,6 +368,7 @@
   },
   "AmmoShell75": {
     "name": "75mm",
+    "category": "Large Cannon Ammp",
     "description": "Standard payload for battle tanks.",
     "itemSpecifics": {
       "general": [ "$Deals Explosive damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ] 
@@ -170,6 +376,7 @@
   },
   "AmmoShell945": {
     "name": "94.5mm",
+    "category": "Large Anti-Tank Ammo",
     "description": "A heavy anti-tank shell.",
     "itemSpecifics": {
       "general": [ "$Deals Armour Piercing damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles", "Higher base chance to disable vehicle subsystems" ] 
@@ -177,6 +384,7 @@
   },
   "AmmoShell120": {
     "name": "120mm",
+    "category": "Light Artillery Ammo",
     "description": "Payload for light artillery weapons.",
     "itemSpecifics": {
       "general": [ "$Deals High Explosive damage", "Can ruin structures that have been severly damaged by artillery", "Reduced damaged against Trenches", "Increased damage against Field Structures" ] 
@@ -184,6 +392,7 @@
   },
   "AmmoShell150": {
     "name": "150mm",
+    "category": "Heavy Artillery Ammo",
     "description": "Payload for heavy artillery weapons.",
     "itemSpecifics": {
       "general": [ "$Deals High Explosive damage", "Can ruin structures that have been severly damaged by artillery", "Reduced damaged against Trenches", "Increased damage against Field Structures" ] 
@@ -191,6 +400,7 @@
   },
   "AmmoShell300": {
     "name": "300mm",
+    "category": "Storm Cannon Ammo",
     "description": "Standard payload used with Storm Cannons.",
     "itemSpecifics": {
       "general": [ "$Deals High Explosive damage", "Can ruin structures that have been severly damaged by artillery", "Reduced damaged against Trenches", "Increased damage against Field Structures" ] 
@@ -198,9 +408,26 @@
   },
   "AmmoShell250": {
     "name": "250mm",
+    "category": "Spigot Mortar Ammo",
     "description": "A shell that is launched over short distances by a spigot mortar.",
     "itemSpecifics": {
       "general": [ "$Deals Demolition damage", "Can ruin structures that have been severly damaged by artillery" ] 
+    }
+  },
+  "APMine": {
+    "name": "Crow's Foot Mine",
+    "category": "Explosive Charge",
+    "description": "Anti-infantry mine that delivers a fatal payload to unsuspecting soldiers.",
+    "itemSpecifics": {
+      "general": [ "$Deactivates after 02d00h when placed outside of a Prepared Mine Field", "$Deals Light Kinetic damage" ]
+    }
+  },
+  "ATMine": {
+    "name": "Absime AT-99 Mine",
+    "category": "Explosive Charge",
+    "description": "A simple mine that is placed under terrain and fitted with a pressure-sensitive plate to detonate under the weight of heavy vehicles. Mines are visible to friendlies and enemies on foot.",
+    "itemSpecifics": {
+      "general": [ "$Deactivates after 02d00h when placed outside of a Prepared Mine Field", "$Deals Anti-Tank Explosive damage", "Always disables the Track subsystem" ]
     }
   },
   "SeaMine": {
@@ -253,7 +480,7 @@
     "description": "Early iterations of this machinegun were built to be emplaced in bunkers and on the decks of lightly armed warships, the Ratcatcher is Harvey Malone’s first freely mountable infantry weapon designed for field use. Just like its predecessors, this heavy weapon suppresses enemy soldiers with unmatched efficiency.",
     "ammoUsed": "12.7mm",
     "itemSpecifics": {
-      "general": [ "This can be attached to certain vehicles" ] 
+      "general": [ "Causes suppressed enemy players to lose stability", "$Deals Heavy Kinetic damage", "This can be attached to certain vehicles" ] 
     },
     "faction": "W"
   },
@@ -283,7 +510,7 @@
     "description": "Built on the bones of the first automatic weapons introduced to the Legion, the \"Lamentum\" mm.IV is still quite an intimidating force to encounter on the battlefield. Boasting a large magazine and impressive active range, this mounted machinegun excels at laying down consistent suppressive fire.",
     "ammoUsed": "12.7mm",
     "itemSpecifics": {
-      "general": [ "Gunner", "Equipped with a high velocity barrel that deals 50% extra damage per shot", "$Deals Heavy Kinetic damage", "This can be attached to certain vehicles" ] 
+      "general": [ "Gunner", "Equipped with a high velocity barrel that deals 50% extra damage per shot", "Causes suppressed enemy players to lose stability", "$Deals Heavy Kinetic damage", "This can be attached to certain vehicles" ] 
     },
     "faction": "C"
   },
@@ -299,10 +526,12 @@
   },
   "UtilityTripod": {
     "name": "Tripod",
+    "category": "Tripod Mount",
     "description": "A mount point for deployable infantry weapons and equipment."
   },
   "SuppliesMaintenance": {
     "name": "Maintenance Supplies",
+    "category": "Supplies",
     "description": "Supplies for maintaining structures. Store at Bases or Maintenance Tunnels to prevent decay on surrounding structures."
   }
 }

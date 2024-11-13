@@ -3,7 +3,7 @@
     "name": "Cullen Predator Mk. III",
     "category": "Super Tank",
     "description": "This gargantuan beast is the brainchild of Gray Cullen. Once thought impossible, the Predator was Cullen's idea of how a great ship might operate on land. It boasts two sets of quad-barrelled grenade launches and a heavy-duty 94.5mm forward facing cannon. While limitations of ground-based travel posed certain restrictions on the scope of the project, Cullen wasn't deterred and made necessary adjustments to meet his vision of the ideal land ship.",
-    "ammoUsed": "94.5mm, Tremola Grenade GPb-1, PT-815 Smoke Grenade, Green Ash Grenade, A3 Harpa Fragmentation Grenade",
+    "ammoUsed": "94.5mm, Tremola Grenade GPb-1, PT-815 Smoke Grenade, Green Ash Grenade, A3 Harpa Fragmentation Grenade, B2 Varsi Anti-Tank Grenade",
     "itemSpecifics": {
       "general": [ "Uses Enriched Oil as fuel" ],
       "Gunner (Front)": [ "Equipped with a high velocity barrel that deals 25% extra damage per shot", "$Deals Armour Piercing damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles", "Higher base chance to disable vehicle subsystems" ] 
@@ -22,7 +22,7 @@
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to large sized shippables", "Uses Heavy Oil as fuel" ],
       "Turret (Center)": [ "$Deals Explosive damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ],
-      "Turret (Front)": [ "Equipped with a low velocity barrel that deals 36% less damage per shot", "$Deals Heavy Kinetic damage" ] 
+      "Turret (Front)": [ "Equipped with a low velocity barrel that deals 36% less damage per shot", "Causes suppressed enemy players to lose stability", "$Deals Heavy Kinetic damage" ] 
     },
     "steelCost": 50,
     "assmatCost": [ 0, 0, 30, 60, 35 ],
@@ -39,7 +39,7 @@
       "Turret (Center)": [ "$Deals Explosive damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ],
       "Gunner (Front)": [ "$Deals Incendiary damage" ] 
     },
-    "steelCost": 55,
+    "steelCost": 45,
     "assmatCost": [ 0, 0, 65, 30, 45 ],
     "productionTime": 79200,
     "faction": "W"
@@ -81,7 +81,7 @@
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to large sized shippables", "Uses Heavy Oil as fuel" ],
       "Turret (Center)": [ "$Deals Explosive damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ],
-      "Turret (Front)": [ "Equipped with a low velocity barrel that deals 36% less damage per shot", "$Deals Heavy Kinetic damage" ] 
+      "Turret (Front)": [ "Equipped with a low velocity barrel that deals 36% less damage per shot", "Causes suppressed enemy players to lose stability", "$Deals Heavy Kinetic damage" ] 
     },
     "steelCost": 50,
     "assmatCost": [ 0, 0, 30, 60, 35 ],

@@ -51,18 +51,17 @@
     "productionTime": 300,
     "faction": "W"
   },
-  "SiegeTankMG": {
-    "name": "HC-2 \"Scorpion\"",
-    "category": "Light Infantry Tank",
-    "description": "The \"Scorpion\" HC-class tank is a moderately armoured infantry support vehicle with twin, high-powered heavy machine guns and short-range radios for improved intelligence support. In addition, exterior seating is available for infantry.",
-    "ammoUsed": "12.7mm",
+  "SiegeTankBallista": {
+    "name": "HC-7 \"Ballista\"",
+    "category": "Siege Tank",
+    "description": "The HC-Class \"Ballista\" is a heavy tank designed to oblitarate opposition defenses with its 250mm Hades Mortar Cannon.",
+    "ammoUsed": "250mm",
     "itemSpecifics": {
-      "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
-      "Gunner (Right), Gunner (Left)": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "$Deals Heavy Kinetic damage" ]  
+      "general": [ "Can be carried by vehicles that support up to large sized shippables" ] 
     },
-    "pcmatCost": 5,
-    "assmatCost": [ 10, 0, 0, 3, 0 ],
-    "baseVehicle": "SiegeTankBallista",
+    "pcmatCost": 15,
+    "assmatCost": [ 0, 15, 0, 0, 0 ],
+    "baseVehicle": "SiegeTankMG",
     "productionTime": 180,
     "faction": "C"
   },
@@ -73,7 +72,7 @@
     "ammoUsed": "12.7mm",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
-      "Gunner (Starboard)": [ "$Deals Heavy Kinetic damage" ] 
+      "Gunner (Starboard)": [ "Causes suppressed enemy players to lose stability", "$Deals Heavy Kinetic damage" ] 
     },
     "pcmatCost": 5,
     "assmatCost": [ 0, 0, 3, 0, 0 ],

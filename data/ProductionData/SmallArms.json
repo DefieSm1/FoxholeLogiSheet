@@ -7,8 +7,8 @@
     "itemSpecifics": {
       "general": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot" ]
     },
-    "crateSize": 10,
-    "bmatCost": 165,
+    "crateSize": 20,
+    "rmatCost": 15,
     "productionTime": 80,
     "faction": "W"
   },
@@ -17,8 +17,8 @@
     "category": "Assault Rifle",
     "description": "Widely considered to be the first storm rifle, the Aalto is a marvel in Caoivish engineering. With its two fire modes, it can be used as a rapid-fire assault weapon or a mid-range rifle.",
     "ammoUsed": "7.92mm",
-    "crateSize": 10,
-    "bmatCost": 165,
+    "crateSize": 20,
+    "rmatCost": 15,
     "productionTime": 80,
     "faction": "W"
   },
@@ -27,13 +27,14 @@
     "category": "Assault Rifle",
     "description": "This unique assault rifle includes a high-capacity drum magazine designed for sustained rapid-fire.",
     "ammoUsed": "7.92mm",
-    "crateSize": 10,
-    "bmatCost": 165,
+    "crateSize": 20,
+    "rmatCost": 15,
     "productionTime": 80,
     "faction": "C"
   },
   "AmmoRifle792": {
     "name": "7.92mm",
+    "category": "Assault Rifle Ammo",
     "description": "Standard ammunition for Storm Rifles and Armored Cars.",
     "itemSpecifics": {
       "general": [ "$Deals Light Kinetic damage" ] 
@@ -48,7 +49,7 @@
     "description": "This heavy machine gun is bulky enough to require a steady surface to maintain stability. The Malone series of machine guns are unmatched defenders on the battlefield.",
     "ammoUsed": "12.7mm",
     "itemSpecifics": {
-      "general": [ "Equipped with a low velocity barrel that deals 36% less damage per shot" ] 
+      "general": [ "Causes suppressed enemy players to lose stability", "Equipped with a low velocity barrel that deals 36% less damage per shot" ] 
     },
     "crateSize": 5,
     "rmatCost": 25,
@@ -64,7 +65,7 @@
     },
     "crateSize": 20,
     "bmatCost": 100,
-    "ematCost": 20,
+    "ematCost": 40,
     "productionTime": 100,
     "faction": "W"
   },
@@ -87,10 +88,10 @@
     "description": "A titanic light machine gun capable of scattering infantry lines with ease, the Catara is a modern weapon for the modern Colonial.",
     "ammoUsed": "12.7mm",
     "itemSpecifics": {
-      "general": [ "Equipped with a low velocity barrel that deals 36% less damage per shot" ] 
+      "general": [ "Causes suppressed enemy players to lose stability", "Equipped with a low velocity barrel that deals 36% less damage per shot" ] 
     },
-    "crateSize": 10,
-    "bmatCost": 165,
+    "crateSize": 20,
+    "rmatCost": 15,
     "productionTime": 80,
     "faction": "C"
   },
@@ -99,6 +100,9 @@
     "category": "Machine Gun",
     "description": "The Gast is a deadly but cumbersome Kraunian heavy machine gun. It is best suited to holding and defending established fortifications or garrisoned structures against encroaching infantry/",
     "ammoUsed": "12.7mm",
+    "itemSpecifics": {
+      "general": [ "Causes suppressed enemy players to lose stability" ]
+    },
     "crateSize": 5,
     "rmatCost": 25,
     "productionTime": 100,
@@ -113,12 +117,13 @@
     },
     "crateSize": 25,
     "bmatCost": 100,
-    "ematCost": 20,
+    "ematCost": 40,
     "productionTime": 100,
     "faction": "C"
   },
   "AmmoPistol8": {
     "name": "8mm",
+    "category": "Pistol Ammo",
     "description": "Standard ammunition for pistols.",
     "itemSpecifics": {
       "general": [ "$Deals Light Kinetic damage", "Gotta say, interesting idea you've got there" ] 
@@ -142,7 +147,7 @@
     "description": "The weapon of choice for pirates and smugglers, its legend is well-earned. With incredibly high stopping power and unique revolver mechanism, the Hangman often plays judge, jury, and executioner.",
     "ammoUsed": ".44",
     "itemSpecifics": {
-      "general": [ "Compatible ammo with attached The Ospreay (Grenade Launcher): Green Ash Grenade, A3 Harpa Fragmentation Grenade", "Allows Buckhorn CCQ-18 (Bayonet) attachement", "Equipped with a high velocity barrel that deals 29% extra damage per shot"  ] 
+      "general": [ "Compatible ammo with attached The Ospreay (Grenade Launcher): Green Ash Grenade, A3 Harpa Fragmentation Grenade, B2 Varsi Anti-Tank Grenade", "Allows Buckhorn CCQ-18 (Bayonet) attachement", "Equipped with a high velocity barrel that deals 29% extra damage per shot"  ] 
     },
     "crateSize": 20,
     "bmatCost": 125,
@@ -151,6 +156,7 @@
   },
   "AmmoPistol44": {
     "name": ".44",
+    "category": "Revolver Ammo",
     "description": "Standard ammunition for revolvers.",
     "itemSpecifics": {
       "general": [ "$Deals Light Kinetic damage" ] 
@@ -178,7 +184,7 @@
     "description": "The Blakerow is a carbine with a high rate of fire compared to its bolt-action predecessor. This increased fire rate does come at the cost of innate stopping power; however, its versatility and lightweight frame more than makes up for any perceived shortcomings.",
     "ammoUsed": "7.62mm",
     "itemSpecifics": {
-      "general": [ "Compatible ammo with attached The Ospreay (Grenade Launcher): Green Ash Grenade, A3 Harpa Fragmentation Grenade", "Allows Buckhorn CCQ-18 (Bayonet) attachement", "Equipped with a low velocity barrel that deals 11% less damage per shot" ] 
+      "general": [ "Compatible ammo with attached The Ospreay (Grenade Launcher): Green Ash Grenade, A3 Harpa Fragmentation Grenade, B2 Varsi Anti-Tank Grenade", "Allows Buckhorn CCQ-18 (Bayonet) attachement", "Equipped with a low velocity barrel that deals 11% less damage per shot" ] 
     },
     "crateSize": 20,
     "bmatCost": 140,
@@ -191,7 +197,7 @@
     "description": "The Clancy Cinder is a classic, high-powered long rifle designed for use in mid-to-long range encounters. First deployed with the Hands during a high-risk operation in Acrithia.",
     "ammoUsed": "7.62mm",
     "itemSpecifics": {
-      "general": [ "Compatible ammo with attached The Ospreay (Grenade Launcher): Green Ash Grenade, A3 Harpa Fragmentation Grenade", "Allows Buckhorn CCQ-18 (Bayonet) attachement" ]
+      "general": [ "Compatible ammo with attached The Ospreay (Grenade Launcher): Green Ash Grenade, A3 Harpa Fragmentation Grenade, B2 Varsi Anti-Tank Grenade", "Allows Buckhorn CCQ-18 (Bayonet) attachement" ]
     },
     "crateSize": 15,
     "bmatCost": 130,
@@ -217,7 +223,7 @@
     "description": "Standard-issue Warden rifle. This bolt-action firearm is as robust as they come and has seen over a century of use on the battlefield.",
     "ammoUsed": "7.62mm",
     "itemSpecifics": {
-      "general": [ "Compatible ammo with attached The Ospreay (Grenade Launcher): Green Ash Grenade, A3 Harpa Fragmentation Grenade", "Allows Buckhorn CCQ-18 (Bayonet) attachement" ]
+      "general": [ "Compatible ammo with attached The Ospreay (Grenade Launcher): Green Ash Grenade, A3 Harpa Fragmentation Grenade, B2 Varsi Anti-Tank Grenade", "Allows Buckhorn CCQ-18 (Bayonet) attachement" ]
     },
     "crateSize": 20,
     "bmatCost": 100,
@@ -316,6 +322,7 @@
   },
   "AmmoRifle762": {
     "name": "7.62mm",
+    "category": "Rifle Ammo",
     "description": "Standard ammunition for rifles.",
     "itemSpecifics": {
       "general": [ "$Deals Light Kinetic damage" ] 
@@ -324,17 +331,30 @@
     "bmatCost": 80,
     "productionTime": 50
   },
-  "Shotgun": {
-    "name": "Brasa Shotgun",
+  "ShotgunScattergun": {
+    "name": "No. 4 Pillory Scattergun",
     "category": "Shotgun",
-    "description": "This close-range firearm is an Estrellan import originally designed for hunting wild game. The Brasa is primarily used in urban operations.",
+    "description": "A hunting shotgun with a sawn-off barrel for higher stopping power and mobility at the expense of accuracy. This traditional civilian firearm can fire two shots in rapid succession before needing to be reloaded. It became a favourite sidearm among Caoivish Watchers and has since earned an ominous reputation as a result.",
     "ammoUsed": "Buckshot",
+    "itemSpecifics": {
+      "general": [ "Equipped with a high velocity barrel that deals 150% extra damage per shot", "$Rip and Tear, until it is done" ]
+    },
     "crateSize": 20,
     "bmatCost": 80,
-    "productionTime": 80
+    "productionTime": 80,
+    "faction": "W"
+  },
+  "ShotgunDragonfly": {
+    "name": "KRF1-750 Dragonfly",
+    "category": "Shotgun",
+    "description": "A short-range firearm that has origins in both sport shooting and bird hunting. Its long stock and sturdy undercarriage give the Dragonfly stability and control that make it a worthy companion to many Kraunian soldiers deployed in urban centres. Dismantling haphazard barricades and clearing tight rooms are paltry tasks for the KRF1-750 Dragonfly.",
+    "crateSize": 20,
+    "productionTime": 80,
+    "faction": "C"
   },
   "AmmoBuckshot": {
     "name": "Buckshot",
+    "category": "Shotgun Ammo",
     "description": "Standard ammunition for Shotguns.",
     "itemSpecifics": {
       "general": [ "$Deals Light Kinetic damage" ] 
@@ -388,6 +408,7 @@
   },
   "AmmoSMG9": {
     "name": "9mm",
+    "category": "Submachine Gun Ammo",
     "description": "Standard ammunition for submachine guns.",
     "itemSpecifics": {
       "general": [ "$Deals Light Kinetic damage" ] 
@@ -417,6 +438,7 @@
   },
   "AmmoMG127": {
     "name": "12.7mm",
+    "category": "Machine Gun Ammo",
     "description": "Standard ammunition for machine guns.",
     "itemSpecifics": {
       "general": [ "$Deals Heavy Kinetic damage" ] 

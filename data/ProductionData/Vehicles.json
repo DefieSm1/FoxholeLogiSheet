@@ -15,7 +15,7 @@
     "name": "O'Brien V.190 Knave",
     "category": "Armoured Car",
     "description": "One of Conor O'Brien's best traits was his ability to modernize and make use of older technology in his designs. The v.190 Knave is the perfect example of this philosophy. Fitted with a modified, outdated twin-grenade launcher turret, the Knave is a surprising combination of speed and subterfuge that quickly routs the enemy, leaving them befuddled.",
-    "ammoUsed": "Tremola Grenade GPb-1, PT-815 Smoke Grenade, Green Ash Grenade, A3 Harpa Fragmentation Grenade",
+    "ammoUsed": "Tremola Grenade GPb-1, PT-815 Smoke Grenade, Green Ash Grenade, A3 Harpa Fragmentation Grenade, B2 Varsi Anti-Tank Grenade",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to medium sized shippables" ]
     },
@@ -96,7 +96,7 @@
     "ammoUsed": "12.7mm",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to medium sized shippables", "Can be towed by certain vehicles" ],
-      "Gunner (Right)": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "$Deals Heavy Kinetic damage" ] 
+      "Gunner (Right)": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "Causes suppressed enemy players to lose stability", "$Deals Heavy Kinetic damage" ] 
     },
     "crateSize": 3,
     "rmatCost": 20,
@@ -172,7 +172,7 @@
     "ammoUsed": "12.7mm",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to medium sized shippables", "Can be towed by certain vehicles" ],
-      "Gunner (Right)": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "$Deals Heavy Kinetic damage" ]
+      "Gunner (Right)": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "Causes suppressed enemy players to lose stability", "$Deals Heavy Kinetic damage" ]
     },
     "crateSize": 3,
     "rmatCost": 20,
@@ -228,19 +228,19 @@
     "productionTime": 6000,
     "faction": "W"
   },
-  "CruiserTankOutlaw": {
-    "name": "Gallagher Outlaw Mk. II",
+  "CruiserTankBrigand": {
+    "name": "Gallagher Brigand Mk. I",
     "category": "Cruiser Tank",
-    "description": "Originally designed in response to increasing swarms of Mesean armour, the Outlaw is an exceptionally capable medium tank armed with a long-range 40mm turred and includes a built-in storm rifle support position.",
-    "ammoUsed": "40mm, 7.92mm",
+    "description": "The first of Colm Gallagher's mid-sized tanks, the Brigand is a true brute on the battlefield. Not quite as sturdy as its younger siblings, the Brigand compensates with higher mobility, which, when paired with a mounted machine gun and 30mm repeater cannon, is a deadly force in any armour division. Seeing his hometown sundered at the hands of the Swords in a border skirmish before the onset of the Boreal Wars, Gallagher grew fixated on engineering a versatile yet sturdy tank. The Brigand was the result of his fixation.",
+    "ammoUsed": "30mm, 7.92mm",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to large sized shippables", "Engine can be boosted for increased top speed" ],
-      "Turret": [ "$Deals Explosive damage", "Can penetrate armoured vehicles" ],
-      "Gunner (Front)": [ "$Deals Light Kinetic damage" ]
+      "Turret (Center)": [ "$Deals Explosive damage" ],
+      "Gunner (Left)": [ "$Deals Light Kinetic damage" ]
     },
     "crateSize": 3,
     "rmatCost": 150,
-    "productionTime": 8250,
+    "productionTime": 7205,
     "faction": "W"
   },
   "AssaultTankSilverhand": {
@@ -342,7 +342,7 @@
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
       "Cannoneer (Center)": [ "$Deals Armour Piercing damage", "Can penetrate Armoured vehicles", "High chance to penetrate armoued vehicles" ],
-      "Gunner (Right)": [ "$Deals Heavy Kinetic damage" ] 
+      "Gunner (Right)": [ "Causes suppressed enemy players to lose stability", "$Deals Heavy Kinetic damage" ] 
     },
     "crateSize": 3,
     "rmatCost": 165,
@@ -363,17 +363,32 @@
     "productionTime": 6750,
     "faction": "C"
   },
-  "SiegeTankBallista": {
-    "name": "HC-7 \"Ballista\"",
-    "category": "Siege Tank",
-    "description": "The HC-Class \"Ballista\" is a heavy tank designed to oblitarate opposition defenses with its 250mm Hades Mortar Cannon.",
-    "ammoUsed": "250mm",
+  "AssaultTankNemesis": {
+    "name": "90T-v \"Nemesis\"",
+    "category": "Assault Tank",
+    "description": "With immense off-road capabilities, the 90T-v \"Nemesis\" is a highly versatile armoured vehicle. While it may not boast the defensive capabilities of its more heavily armoured cousins, the \"Nemesis\" shatters enemy formations with its deadly 68mm cannon and auxillary grenade launcher. This unique vehicle earned its namesake on its first deployment during an expediton to the Alliant Union. A Nevish Alliance armed convoy was crossing through wetlands when a wave of 90T-v tanks intercepted the convoy from between reeds and murky terrain.",
+    "ammoUsed": "68mm, Tremola Grenade GPb-1",
     "itemSpecifics": {
-      "general": [ "Can be carried by vehicles that support up to large sized shippables" ] 
+      "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
+      "Gunner (Center)": [ "$Deals Armour Piercing damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ]
     },
     "crateSize": 3,
-    "rmatCost": 155,
-    "productionTime": 7750,
+    "rmatCost": 120,
+    "productionTime": 7500,
+    "faction": "C"
+  },
+  "SiegeTankMG": {
+    "name": "HC-2 \"Scorpion\"",
+    "category": "Light Infantry Tank",
+    "description": "The \"Scorpion\" HC-class tank is a moderately armoured infantry support vehicle with twin, high-powered heavy machine guns and short-range radios for improved intelligence support. In addition, exterior seating is available for infantry.",
+    "ammoUsed": "12.7mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
+      "Gunner (Right), Gunner (Left)": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "Causes suppressed enemy players to lose stability", "$Deals Heavy Kinetic damage" ]  
+    },
+    "crateSize": 3,
+    "rmatCost": 100,
+    "productionTime": 5000,
     "faction": "C"
   },
   "MotorcycleCaster": {
@@ -405,7 +420,7 @@
     "description": "This small tank has been recently recommissioned to the Warden arsenal. It boasts a high maneuverability and an antenna that allows for long-range communications during high-stakes recon operations.",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to medium sized shippables" ],
-      "Turret (Front)": [ "Equipped with a low velocity barrel that deals 36% less damage per shot" ] 
+      "Turret (Front)": [ "Equipped with a low velocity barrel that deals 36% less damage per shot", "Causes suppressed enemy players to lose stability", "$Deals Heavy Kinetic damage" ] 
     },
     "ammoUsed": "12.7mm",
     "crateSize": 3,
