@@ -31,5 +31,18 @@
     "rareCost": 6,
     "assmatCost": [ 0, 0, 95, 105, 105 ],
     "productionTime": 259200
+  },
+  "WideGaugeHospital": {
+    "name": "BMS Bloodtender",
+    "category": "First Aid Car",
+    "description": "This unique train car has been specially fitted with medical equipment and a mounted machine gun, making it ideal for transporting injured soldiers away from active battlefields to the safety of hospitals. When stationary, the BMS Bloodtender may also be used as a mobile first aid centre to treat wounded soldiers so long as supplies remain plentiful.",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to extra large sized shippables" ],
+      "Machine Gun (Rear)": [ "Causes suppressed enemy players to lose stability", "$Deals Heavy Kinetic damage" ]
+    },
+    "steelCost": 275,
+    "rareCost": 6,
+    "assmatCost": [ 0, 0, 125, 80, 95 ],
+    "productionTime": 129600
   }
 }
