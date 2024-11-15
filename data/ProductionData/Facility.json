@@ -237,7 +237,7 @@
     "itemSpecifics": {
       "general": [ "Deals 200% damage to vehicle armour", "Suppresses enemy vehicles", "Causes suppressed enemy players to lose stability", "Equipped with a low velocity barrel that deals 25% less damage per shot" ]
     },
-    "crateSize": 3,
+    "crateSize": 5,
     "faction": "W"
   },
   "ATRQuickhatch": {
