@@ -17,11 +17,11 @@
             },
             {
                 "inputNames": [ "MaterialRawSalvage" ],
-                "inputAmounts": [ 100 ],
+                "inputAmounts": [ 150 ],
                 "outputNames": [ "SuppliesMaintenance" ],
                 "outputAmounts": [ 20 ],
                 "powerConsumption": 3,
-                "productionTime": 25
+                "productionTime": 40
             }
         ]
     },
