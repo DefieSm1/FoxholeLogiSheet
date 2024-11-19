@@ -93,7 +93,7 @@
     "ammoUsed": "20mm",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to medium sized shippables", "Can be towed by certain vehicles" ],
-      "Gunner (Right)": [ "Equipped with a low velocity barrel that deals 25% less damage per shot", "$Deals Anti-Tank Kinetic damage", "Can penetrate armoured vehicles" ] 
+      "Gunner (Right)": [ "Equipped with a high velocity barrel that deals 25% extra damage per shot", "$Deals Anti-Tank Kinetic damage", "Can penetrate armoured vehicles" ] 
     },
     "cmatCost": 30,
     "assmatCost": [ 0, 20, 0, 0, 0 ],
@@ -192,7 +192,7 @@
     "ammoUsed": "20mm",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to medium sized shippables", "Can be towed by certain vehicles" ],
-      "Gunner (Right)": [ "Equipped with a low velocity barrel that deals 50% less damage per shot", "$Deals Anti-Tank Kinetic damage", "Can penetrate armoured vehicles" ] 
+      "Gunner (Right)": [ "$Deals Anti-Tank Kinetic damage", "Can penetrate armoured vehicles" ] 
     },
     "cmatCost": 30,
     "assmatCost": [ 0, 20, 0, 0, 0 ],

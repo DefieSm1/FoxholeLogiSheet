@@ -337,7 +337,7 @@
     "description": "A hunting shotgun with a sawn-off barrel for higher stopping power and mobility at the expense of accuracy. This traditional civilian firearm can fire two shots in rapid succession before needing to be reloaded. It became a favourite sidearm among Caoivish Watchers and has since earned an ominous reputation as a result.",
     "ammoUsed": "Buckshot",
     "itemSpecifics": {
-      "general": [ "Equipped with a high velocity barrel that deals 150% extra damage per shot", "$Rip and Tear, until it is done" ]
+      "general": [ "Equipped with a high velocity barrel that deals 150% extra damage per shot", "Rip and Tear, until it is done" ]
     },
     "crateSize": 20,
     "bmatCost": 80,

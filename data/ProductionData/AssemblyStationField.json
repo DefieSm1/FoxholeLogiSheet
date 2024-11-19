@@ -51,20 +51,6 @@
     "productionTime": 300,
     "faction": "W"
   },
-  "SiegeTankBallista": {
-    "name": "HC-7 \"Ballista\"",
-    "category": "Siege Tank",
-    "description": "The HC-Class \"Ballista\" is a heavy tank designed to oblitarate opposition defenses with its 250mm Hades Mortar Cannon.",
-    "ammoUsed": "250mm",
-    "itemSpecifics": {
-      "general": [ "Can be carried by vehicles that support up to large sized shippables" ] 
-    },
-    "pcmatCost": 15,
-    "assmatCost": [ 0, 15, 0, 0, 0 ],
-    "baseVehicle": "SiegeTankMG",
-    "productionTime": 180,
-    "faction": "C"
-  },
   "APCDoru": {
     "name": "AB-11 \"Doru\"",
     "category": "Landing APC",

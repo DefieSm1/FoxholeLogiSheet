@@ -4,7 +4,7 @@
     "category": "Shippable Material",
     "description": "The control fins, fuel lines, and propulsion engines engines required for launch are all housed within the A0E-9 Booster system.",
     "itemSpecifics": {
-      "general": [ "Can be carried by vehicles that support up to medium sized shippables", "$I AM THE GOD OF HELLFIRE" ]
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables", "I AM THE GOD OF HELLFIRE" ]
     },
     "steelCost": 20,
     "shieldingCost": 75,
@@ -17,7 +17,7 @@
     "category": "Shippable Material",
     "description": "The body of an A0E-9 stores the fuel and instrumentation required to deliver the warhead over large distances.",
     "itemSpecifics": {
-      "general": [ "Can be carried by vehicles that support up to medium sized shippables", "$AND I BRING YOU" ]
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables", "AND I BRING YOU" ]
     },
     "steelCost": 20,
     "shieldingCost": 75,
@@ -30,7 +30,7 @@
     "category": "Shippable Material",
     "description": "The body of an A0E-9 Warhead is a devestating explosive, capable of taking out city districts or even entire small towns. It scorches the landscape, making it hard for the enemy to rebuild in the short-term.",
     "itemSpecifics": {
-      "general": [ "Can be carried by vehicles that support up to medium sized shippables", "$FIRE" ]
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables", "FIRE" ]
     },
     "rareCost": 75,
     "substanceCost": 165,
