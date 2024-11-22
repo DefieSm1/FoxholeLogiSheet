@@ -7,6 +7,14 @@
     "bmatCost": 15,
     "productionTime": 15
   },
+  "UtilityBayonet": {
+    "name": "Buckhorn CCQ-18",
+    "category": "Bayonet",
+    "description": "Attached to the barrel of a rifle, this short blade can spear enemies in close quarters encounters.",
+    "crateSize": 20,
+    "bmatCost": 40,
+    "productionTime": 30
+  },
   "UtilityBinoculars": {
     "name": "Binoculars",
     "category": "Field Gear",
@@ -162,14 +170,6 @@
     "crateSize": 50,
     "bmatCost": 80,
     "productionTime": 40
-  },
-  "UtilityBayonet": {
-    "name": "Buckhorn CCQ-18",
-    "category": "Bayonet",
-    "description": "Attached to the barrel of a rifle, this short blade can spear enemies in close quarters encounters.",
-    "crateSize": 20,
-    "bmatCost": 40,
-    "productionTime": 30
   },
   "UtilityGasMask": {
     "name": "Gas Mask",

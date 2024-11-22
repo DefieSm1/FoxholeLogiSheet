@@ -364,17 +364,17 @@
             },
             {
                 "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
-                "inputAmounts": [ 1, 2 ],
+                "inputAmounts": [ 2, 2 ],
                 "outputNames": [ "AmmoShell120" ],
-                "outputAmounts": [ 2 ],
+                "outputAmounts": [ 1 ],
                 "powerConsumption": 4,
                 "productionTime": 25
             },
             {
                 "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
-                "inputAmounts": [ 8, 3 ],
+                "inputAmounts": [ 12, 3 ],
                 "outputNames": [ "AmmoShell150" ],
-                "outputAmounts": [ 12 ],
+                "outputAmounts": [ 1 ],
                 "powerConsumption": 4,
                 "productionTime": 40
             },
