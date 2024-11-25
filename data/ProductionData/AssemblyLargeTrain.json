@@ -40,9 +40,9 @@
       "general": [ "Can be carried by vehicles that support up to extra large sized shippables" ],
       "Machine Gun (Rear)": [ "Causes suppressed enemy players to lose stability", "$Deals Heavy Kinetic damage" ]
     },
-    "steelCost": 275,
-    "rareCost": 6,
-    "assmatCost": [ 0, 0, 125, 80, 95 ],
+    "steelCost": 60,
+    "rareCost": 2,
+    "assmatCost": [ 0, 0, 45, 55, 40 ],
     "productionTime": 129600
   }
 }
