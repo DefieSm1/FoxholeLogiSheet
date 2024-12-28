@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "FoxholeLogiSheet",
   "resources": {
-    "hash": "sha256-HtcAsJDmdJuyqeUlu8/f+jQX8Nxn8thfKwWBJJvVlD0=",
+    "hash": "sha256-fIqbAKAdw0gxnTWmk2uKqMindAPFN4yt+/93Fq4TTR0=",
     "jsModuleNative": {
       "dotnet.native.8.0.11.n1sf6xr5tz.js": "sha256-VdKq87/z5NIxZKmuM+fv38XF+RcEb/bg3jVBwQSfwP4="
     },
@@ -19,7 +19,7 @@
     "assembly": {
       "Blazored.LocalStorage.wasm": "sha256-OaMAAd5n7ORfyur5e3QIyEVKJ76MKIvwbg7/icnnYcU=",
       "Blazored.SessionStorage.wasm": "sha256-nQXuCGHos7iwp2WxRUgarKmWgJYChaVQp2NajgNU3V8=",
-      "FoxholeLogiSheet.wasm": "sha256-tlG9bmCl+QxCiXdwKxmGr/SElVW4RNCPNIdtUwXJLcg=",
+      "FoxholeLogiSheet.wasm": "sha256-+u+mYIanBzRUKwtwfURDRX8ySbSxvLqxiF2kotQtGnY=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-MFwIdqMqVzUOXJrVPhspnhu/9mGdxz/TCCECQ+8oBSQ=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-Pu3M0ygYw352oUPhpNSzeWupLFIIBBY2HMpF4gi0vS4=",
       "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-5gFqmrKwYu0z6ILsiXVRgDZwFL8D1r4/EDrcAgOyfhk=",

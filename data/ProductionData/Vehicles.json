@@ -316,7 +316,7 @@
       "Cannoneer (Right)": [ "$Deals High Explosive damage", "Can ruin structures that have been severly damaged by artillery", "Reduced damage against Trenches", "Increased damage against Field Structures" ] 
     },
     "crateSize": 3,
-    "rmatCost": 25,
+    "rmatCost": 50,
     "productionTime": 2500,
     "faction": "C"
   },
