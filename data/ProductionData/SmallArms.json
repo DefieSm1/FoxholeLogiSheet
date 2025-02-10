@@ -349,6 +349,7 @@
     "category": "Shotgun",
     "description": "A short-range firearm that has origins in both sport shooting and bird hunting. Its long stock and sturdy undercarriage give the Dragonfly stability and control that make it a worthy companion to many Kraunian soldiers deployed in urban centres. Dismantling haphazard barricades and clearing tight rooms are paltry tasks for the KRF1-750 Dragonfly.",
     "crateSize": 20,
+    "bmatCost": 110,
     "productionTime": 80,
     "faction": "C"
   },
