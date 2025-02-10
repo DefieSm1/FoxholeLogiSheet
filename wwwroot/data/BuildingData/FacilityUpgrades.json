@@ -2,7 +2,7 @@
     "MaterialsFactoryForge": {
         "name": "Forge",
         "buildingType": "Manufacturing",
-        "description": "A unique factroy for forging specialized machinery parts needed to construct vehicles. Requires Coke or Petrol.",
+        "description": "A unique factory for forging specialized machinery parts needed to construct vehicles. Requires Coke or Petrol.",
         "cmatCost": 200,
         "buildingRecipes": [
             {
