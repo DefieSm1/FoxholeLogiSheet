@@ -103,7 +103,7 @@
     "productionTime": 1000,
     "faction": "W"
   },
-  "FieldMortar": {
+  "FieldMortarFalconer": {
     "name": "Balfour Falconer 250mm",
     "category": "Field Mortar",
     "description": "A heavy mobile mortar platform fitted with a thick frontal shield for assaulting fortified locations.",
@@ -177,6 +177,19 @@
     "crateSize": 3,
     "rmatCost": 20,
     "productionTime": 1000,
+    "faction": "C"
+  },
+  "FieldMortarTisiphone": {
+    "name": "30-250 \"Tisiphone\" Field Cannon",
+    "category": "Field Mortar",
+    "description": "The 30-250 \"Tisiphone\" Field Cannon is mobilized destruction incarnate. An infantry unit armed with these mortar cannons signals imminent devastation to enemy structures and emplacements.",
+    "ammoUsed": "250mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables", "Can be towed by certain vehicles" ]
+    },
+    "crateSize": 3,
+    "rmatCost": 50,
+    "productionTime": 2500,
     "faction": "C"
   },
   "TruckFlatbed": {
@@ -268,18 +281,6 @@
     "crateSize": 3,
     "bmatCost": 85,
     "productionTime": 4250,
-    "faction": "W"
-  },
-  "TruckFuelFuelrunner": {
-    "name": "Dunne Fuelrunner 2d",
-    "category": "Fuel Tanker",
-    "description": "The Fuelrunner is a heavy Dunne rig designed to transport and distribute large quantities of Fuel.",
-    "itemSpecifics": {
-      "general": [ "Can be carried by vehicles that support up to large sized shippables" ]
-    },
-    "crateSize": 3,
-    "bmatCost": 100,
-    "productionTime": 5000,
     "faction": "W"
   },
   "HalfTrackJavelin": {
@@ -438,6 +439,18 @@
     "crateSize": 3,
     "rmatCost": 10,
     "productionTime": 500,
+    "faction": "W"
+  },
+  "TruckFuelFuelrunner": {
+    "name": "Dunne Fuelrunner 2d",
+    "category": "Fuel Tanker",
+    "description": "The Fuelrunner is a heavy Dunne rig designed to transport and distribute large quantities of Fuel.",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables" ]
+    },
+    "crateSize": 3,
+    "bmatCost": 100,
+    "productionTime": 5000,
     "faction": "W"
   },
   "TruckDumpLoadlugger": {

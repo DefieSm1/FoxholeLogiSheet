@@ -433,7 +433,7 @@
     "itemSpecifics": {
       "general": [ "$Deals Poisonous Gas damage", "Causes damage over time" ] 
     },
-    "crateSize": 5,
+    "crateSize": 10,
     "bmatCost": 140,
     "productionTime": 100
   },

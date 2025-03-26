@@ -37,32 +37,18 @@
     "bmatCost": 100,
     "productionTime": 100
   },
-  "ATBonesawTripod": {
-    "name": "Bonesaw MK.3",
-    "category": "Mounted Anti-Tank RPG",
-    "description": "This variant of the Bonesaw MK.3 is specially designed for use with tripod mounts. This affords it with increased stability and maximum potential range.",
-    "ammoUsed": "ARC/RPG",
-    "itemSpecifics": {
-      "general": [ "This can be attached to certain vehicles" ] 
-    },
-    "crateSize": 5,
-    "bmatCost": 100,
-    "rmatCost": 5,
-    "productionTime": 250,
-    "faction": "W"
-  },
-  "ATBonesawHand": {
-    "name": "Bonesaw MK.3",
+  "ATCarnyx": {
+    "name": "Carnyx Anti-Tank Rocket Launcher",
     "category": "Anti-Tank RPG",
-    "description": "The pride of the Warden anti-armored arsenal, the Bonesaw Mk.3 has one job; to cut through heavy metal plating of Colonial tanks.",
-    "ammoUsed": "ARC/RPG",
+    "description": "Allows infantry to bombard armoured vehicles from safe distances. This anti-tank rocket launcher is surprisingly light when compared to its contemporaries. Its weight is a double-edged sword, as firing heavy anti-tank ordinance requires a Carnyx operator to prepare for heavy recoil.",
+    "ammoUsed": "AP/RPG",
     "itemSpecifics": {
-      "general": [ "$Deals Anti-Tank Explosive damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles", "Additional 100% chance to penetrate armoured vehicles"  ] 
+      "general": [ "$Deals Armour Piercing damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ]
     },
     "crateSize": 5,
-    "bmatCost": 100,
-    "rmatCost": 25,
-    "productionTime": 50,
+    "bmatCost": 115,
+    "rmatCost": 15,
+    "productionTime": 75,
     "faction": "W"
   },
   "ATVenom": {
@@ -103,8 +89,35 @@
     "crateSize": 15,
     "bmatCost": 60,
     "ematCost": 150,
-    "productionTime": 100,
-    "faction": "C"
+    "productionTime": 100
+  },
+  "ATBonesawTripod": {
+    "name": "Bonesaw MK.3",
+    "category": "Mounted Anti-Tank RPG",
+    "description": "This variant of the Bonesaw MK.3 is specially designed for use with tripod mounts. This affords it with increased stability and maximum potential range.",
+    "ammoUsed": "ARC/RPG",
+    "itemSpecifics": {
+      "general": [ "This can be attached to certain vehicles" ] 
+    },
+    "crateSize": 5,
+    "bmatCost": 100,
+    "rmatCost": 5,
+    "productionTime": 250,
+    "faction": "W"
+  },
+  "ATBonesawHand": {
+    "name": "Bonesaw MK.3",
+    "category": "Anti-Tank RPG",
+    "description": "The pride of the Warden anti-armored arsenal, the Bonesaw Mk.3 has one job; to cut through heavy metal plating of Colonial tanks.",
+    "ammoUsed": "ARC/RPG",
+    "itemSpecifics": {
+      "general": [ "$Deals Anti-Tank Explosive damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles", "Additional 100% chance to penetrate armoured vehicles"  ] 
+    },
+    "crateSize": 5,
+    "bmatCost": 100,
+    "rmatCost": 25,
+    "productionTime": 50,
+    "faction": "W"
   },
   "AmmoATIndirect": {
     "name": "ARC/RPG",
