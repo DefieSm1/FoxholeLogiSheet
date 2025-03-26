@@ -50,6 +50,8 @@
 
 		public string Faction { get; set; }
 
+		public string ImportCategory { get; set; }
+
 		public string BuildingType { get; set; }
 
 		public List<string> BuildingUpgrades { get; set; }
@@ -86,6 +88,8 @@
 			ProductionTime = 0;
 
 			Faction = string.Empty;
+
+			ImportCategory = string.Empty;
 
 			BuildingType = "";
 			BuildingUpgrades = new();

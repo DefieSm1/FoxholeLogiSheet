@@ -35,7 +35,7 @@
 				<p class="highlight">Requires base vehicle: @BaseVehicle.Name (@BaseVehicle.Category)</p>
 			}
 
-			<p class="highlight" hidden="@(Item.ProductionTime == 0)">@GetTimestamp(Item.ProductionTime)</p>
+			<p class="highlight" hidden="@(Item.ProductionTime == 0 || HideCosts)">@GetTimestamp(Item.ProductionTime)</p>
 
 			<p class="item-cratesize" hidden="@(CurrentBuilding != "Factory" && CurrentBuilding != "MPF" && CurrentBuilding != "Assembly")">
 				<i>Hold SHIFT when clicking to 
@@ -49,7 +49,7 @@
 				</i>
 			</p>
 
-			<div class="item-costs">
+			<div class="item-costs" hidden="@HideCosts">
 			@foreach (string materialKey in MaterialKeys)
 			{
 				<div hidden="@(GetCost(materialKey) == 0)">
@@ -71,6 +71,9 @@
 
 	[Parameter]
 	public bool Simplified { get; set; } = false;
+
+	[Parameter]
+	public bool HideCosts { get; set; } = false;
 
 	[Parameter]
 	public bool Large { get; set; } = false;

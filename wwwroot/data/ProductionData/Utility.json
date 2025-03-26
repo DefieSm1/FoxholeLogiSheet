@@ -73,6 +73,30 @@
     "bmatCost": 150,
     "productionTime": 60
   },
+  "MeleeMace": {
+    "name": "Falias Raiding Club",
+    "category": "Melee Weapon",
+    "description": "A heavy mace constructed from solid wood and dotted with lead rivets. Commonly used when raiding entrenched positions in close quarters where firearms are less effective and an old-fashioned bludgeoning is better suited for the job.",
+    "itemSpecifics": {
+      "general": [ "Grass grows, birds fly, sun shines, and brotha'- I hurt people!" ]
+    },
+    "crateSize": 20,
+    "bmatCost": 200,
+    "productionTime": 100,
+    "faction": "W"
+  },
+  "MeleeSword": {
+    "name": "Eleos Infantry Dagger",
+    "category": "Melee Weapon",
+    "description": "Standard-issue Mesean military dagger. Its long, slender blade excels in close-quarters combat as well as plethora of uses in everyday operations.",
+    "itemSpecifics": {
+      "general": [ "DRIVE ME CLOSER, I WANT TO HIT THEM WITH MY... dagger?" ]
+    },
+    "crateSize": 20,
+    "bmatCost": 200,
+    "productionTime": 100,
+    "faction": "C"
+  },
   "UtilityMetalBeam": {
     "name": "Metal Beam",
     "category": "Large Material",

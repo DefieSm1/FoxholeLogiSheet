@@ -22,8 +22,8 @@
 				{
 					@if(item.Value.Faction == (CurrentFaction == "W" ? "C" : "W")) continue;
 					<ItemButton ItemName=@item.Key Category=@SelectedCategory Disabled=@(CheckIfDisabled(SelectedCategory, item.Key)) IconSet="items"
-								OnMouseOver="() => { HoveredItem = CurrentCategory[item.Key]; TooltipVisibility = true; TooltipSimplified = false; StateHasChanged(); }"
-								OnMouseOut="() => { HoveredItem = CurrentCategory[item.Key]; TooltipVisibility = false; StateHasChanged(); }"
+								OnMouseOver="() => { HoveredItem = item.Value; TooltipVisibility = true; TooltipSimplified = false; StateHasChanged(); }"
+								OnMouseOut="() => { HoveredItem = item.Value; TooltipVisibility = false; StateHasChanged(); }"
 								OnButtonClick="(e) => AddItem(e, SelectedCategory, item.Key)" />
 				}
 			}

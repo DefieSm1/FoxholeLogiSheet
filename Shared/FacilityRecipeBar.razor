@@ -1,10 +1,10 @@
 ﻿<div class="container">
     @foreach (var inputItem in InputNames.Select((value, index) => new { value, index }))
     {
-        <div class="item-box" style="background-image: url(icons/ProductionIcons/Facility/@(inputItem.value.Trim('$')).png); border: @GetItemHighlight(inputItem.value)"
+        <div class="item-box" style="background-image: url(icons/ProductionIcons/@(GetItemCategory("input", inputItem.index))/@(inputItem.value.Trim('$')).png); border: @GetItemHighlight(inputItem.value)"
              @onmouseover="() => OnMouseOver!(inputItem.value)"
              @onmouseout="() => OnMouseOut!(inputItem.value)">
-             @(InputAmounts[inputItem.index] * Multiplier)@(inputItem.value.Contains('$') ? "L" : "")
+             @(InputAmounts[inputItem.index] * Multiplier)@(inputItem.value.Contains('$') ? SpecialSymbol : "")
         </div>    
     }
 
@@ -15,10 +15,10 @@
 
     @foreach (var outputItem in OutputNames.Select((value, index) => new { value, index }))
     {
-        <div class="item-box" style="background-image: url(icons/ProductionIcons/Facility/@(outputItem.value.Trim('$')).png); border: @GetItemHighlight(outputItem.value)"
+        <div class="item-box" style="background-image: url(icons/ProductionIcons/@(GetItemCategory("output", outputItem.index))/@(outputItem.value.Trim('$')).png); border: @GetItemHighlight(outputItem.value)"
              @onmouseover="() => OnMouseOver!(outputItem.value)"
              @onmouseout="() => OnMouseOut!(outputItem.value)">
-            @(OutputAmounts[outputItem.index] * Multiplier)@(outputItem.value.Contains('$') ? "L" : "")
+             @(OutputAmounts[outputItem.index] * Multiplier)@(outputItem.value.Contains('$') ? SpecialSymbol : "")
         </div>
     }
 
@@ -31,6 +31,9 @@
 
     [Parameter]
     public string? SelectedItem { get; set; } = null;
+
+    [Parameter]
+    public string SpecialSymbol { get; set; } = "";
 
     [Parameter, EditorRequired]
     public Action<string>? OnMouseOver { get; set; }
@@ -52,7 +55,19 @@
 
     public int Multiplier { get; set; } = 1;
 
-    public string GetItemHighlight(string item) => SelectedItem == item ? "2px dashed #6098E6" : "inherit";
+    public string GetItemHighlight(string item) => (SelectedItem == item || "$" + SelectedItem == item) ? "2px dashed #6098E6" : "inherit";
 
     public string GetTimestamp(int seconds) => TimeSpan.FromSeconds(seconds).ToString(TimeSpan.FromSeconds(seconds).Days > 0 ? @"d\:hh\:mm\:ss" : @"h\:mm\:ss");
+
+    public string GetItemCategory(string place, int index)
+    {
+        Data.ProductionItem item = new();
+
+        if (place == "input") item = Recipe.InputItemData[index];
+        else if (place == "output") item = Recipe.OutputItemData[index];
+
+        if (item.ImportCategory == string.Empty) return "Facility";
+
+        return item.ImportCategory;
+    }
 }

@@ -20,8 +20,8 @@
 			@foreach (KeyValuePair<string, ProductionItem> building in FacilityBuildingSet)
 			{
 				<ItemButton ItemName=@building.Key Category="Facility" Disabled=@(SelectedBuilding == building.Key) IconSet="buildings" Border="@GetBuildingHighlight(building.Key)"
-							OnMouseOver="() => { HoveredItem = FacilityBuildings[building.Key]; TooltipVisibility = true; TooltipSimplified = false; StateHasChanged(); }"
-							OnMouseOut="() => { HoveredItem = FacilityBuildings[building.Key]; TooltipVisibility = false; StateHasChanged(); }"
+							OnMouseOver="() => { HoveredItem = building.Value; TooltipVisibility = true; TooltipHideCosts = false; StateHasChanged(); }"
+							OnMouseOut="() => { HoveredItem = building.Value; TooltipVisibility = false; StateHasChanged(); }"
 							OnButtonClick="(e) => { SelectedUpgrade = SelectedBuilding == building.Key ? SelectedUpgrade : String.Empty; SelectedBuilding = building.Key; StateHasChanged(); }" />
 			}
 		</ItemGrid>
@@ -41,10 +41,10 @@
 		<ItemGrid Columns="5" Rows="1" OverflowScroll=true>
 			@foreach (KeyValuePair<string, ProductionItem> item in FacilityItems)
 			{
-				@if(item.Value.Faction == (CurrentFaction == "W" ? "C" : "W")) continue;
-				<ItemButton ItemName=@item.Key Category="Facility" Disabled=@(SelectedItem == item.Key) IconSet="items"
-							OnMouseOver="() => { HoveredItem = FacilityItems[item.Key]; TooltipVisibility = true; TooltipSimplified = false; StateHasChanged(); }"
-							OnMouseOut="() => { HoveredItem = FacilityItems[item.Key]; TooltipVisibility = false; StateHasChanged(); }"
+				@if(ImportItem(item).Faction == (CurrentFaction == "W" ? "C" : "W")) continue;
+				<ItemButton ItemName=@item.Key Category="@(GetItemCategory(item))" Disabled=@(SelectedItem == item.Key) IconSet="items"
+							OnMouseOver="() => { HoveredItem = ImportItem(item); TooltipVisibility = true; TooltipHideCosts = true; StateHasChanged(); }"
+							OnMouseOut="() => { HoveredItem = ImportItem(item); TooltipVisibility = false; StateHasChanged(); }"
 							OnButtonClick="(e) => { SelectedItem = item.Key; SelectedItem = item.Key; HighlightBuildings(); StateHasChanged(); }" />
 			}
 		</ItemGrid>
@@ -55,7 +55,7 @@
 			@foreach (string upgrade in CurrentBuilding.BuildingUpgrades)
 			{
 				<ItemButton ItemName=@upgrade Category="Facility" Disabled=@(SelectedUpgrade == upgrade) IconSet="buildings" Border="@GetBuildingHighlight(upgrade)"
-							OnMouseOver="() => { HoveredItem = FacilityBuildingUpgrades[upgrade]; TooltipVisibility = true; TooltipSimplified = false; StateHasChanged(); }"
+							OnMouseOver="() => { HoveredItem = FacilityBuildingUpgrades[upgrade]; TooltipVisibility = true; TooltipHideCosts = true; StateHasChanged(); }"
 							OnMouseOut="() => { HoveredItem = FacilityBuildingUpgrades[upgrade]; TooltipVisibility = false; StateHasChanged(); }"
 							OnButtonClick="(e) => { SelectedUpgrade = upgrade; StateHasChanged(); }" />
 			}
@@ -73,9 +73,9 @@
 				@foreach (FacilityRecipe recipe in CurrentBuilding.BuildingRecipes)
 				{
 					@if (recipe.Faction == (CurrentFaction == "W" ? "C" : "W")) continue;
-					<FacilityRecipeBar Recipe=@recipe SelectedItem=@SelectedItem
-									   OnMouseOver="(item) => { HoveredItem = FacilityItems[item.Trim('$')]; TooltipVisibility = true; TooltipSimplified = false; StateHasChanged(); }"
-									   OnMouseOut="(item) => { HoveredItem = FacilityItems[item.Trim('$')]; TooltipVisibility = false; StateHasChanged(); }" />
+					<FacilityRecipeBar Recipe=@GetFullRecipe(recipe) SelectedItem=@SelectedItem SpecialSymbol=@(SelectedBuilding == "SmallArmsFactory" ? "c" : "L")
+									   OnMouseOver="(item) => { HoveredItem = ImportItem(item.Trim('$')); TooltipVisibility = true; TooltipHideCosts = true; StateHasChanged(); }"
+									   OnMouseOut="(item) => { HoveredItem = ImportItem(item.Trim('$')); TooltipVisibility = false; StateHasChanged(); }" />
 				}
 			</FacilityRecipeList>
 		}
@@ -88,9 +88,9 @@
 					@foreach (FacilityRecipe recipe in CurrentUpgrade.BuildingRecipes)
 					{
 						@if (recipe.Faction == (CurrentFaction == "W" ? "C" : "W")) continue;
-						<FacilityRecipeBar Recipe=@recipe SelectedItem=@SelectedItem
-										   OnMouseOver="(item) => { HoveredItem = FacilityItems[item.Trim('$')]; TooltipVisibility = true; TooltipSimplified = false; StateHasChanged(); }"
-										   OnMouseOut="(item) => { HoveredItem = FacilityItems[item.Trim('$')]; TooltipVisibility = false; StateHasChanged(); }" />
+						<FacilityRecipeBar Recipe=@GetFullRecipe(recipe) SelectedItem=@SelectedItem SpecialSymbol=@(SelectedBuilding == "SmallArmsFactory" ? "c" : "L")
+										   OnMouseOver="(item) => { HoveredItem = ImportItem(item.Trim('$')); TooltipVisibility = true; TooltipHideCosts = true; StateHasChanged(); }"
+										   OnMouseOut="(item) => { HoveredItem = ImportItem(item.Trim('$')); TooltipVisibility = false; StateHasChanged(); }" />
 					}
 				</FacilityRecipeList>
 			}
@@ -98,7 +98,7 @@
 	</CalculatorContainer>
 </ProductionContainer>
 
-<ItemTooltip Item=@HoveredItem CurrentBuilding="Facility" SelectedCategory="Building" Visibility=@TooltipVisibility Simplified=@TooltipSimplified MaterialKeys=@MaterialKeys />
+<ItemTooltip Item=@HoveredItem CurrentBuilding="Facility" SelectedCategory="Building" Visibility=@TooltipVisibility HideCosts=@TooltipHideCosts MaterialKeys=@MaterialKeys />
 
 <CustomTooltip Visibility=@ItemTooltipVisible Header="Find facility items!">
 	<p>Click an item to find out in what building and/or upgrade it is made and/or used.</p>
@@ -116,7 +116,9 @@
 
 	public Dictionary<string, ProductionItem> FacilityItems { get; set; } = new();
 
-	public List<string> LoadedCategories { get; set; } = ["Facility"];
+	public Dictionary<string, Dictionary<string, ProductionItem>> OtherCategoryItems { get; set; } = new();
+
+	public List<string> OtherCategories { get; set; } = ["SmallArms", "HeavyArms", "HeavyMunitions", "Supplies", "Utility", "Uniforms"];
 
 	public List<string> MaterialKeys { get; set; } = ["MaterialBasic", "MaterialConstruction", "MaterialProcessedConstruction", "MaterialSteel", "MaterialRareAlloys"];
 
@@ -138,7 +140,7 @@
 
 	public bool TooltipVisibility { get; set; } = false;
 
-	public bool TooltipSimplified { get; set; } = false;
+	public bool TooltipHideCosts { get; set; } = true;
 
 	public ProductionItem CurrentBuilding { get => FacilityBuildings.Keys.Contains(SelectedBuilding) ? FacilityBuildings[SelectedBuilding] : new(); }
 
@@ -156,13 +158,56 @@
 
 		FacilityBuildingUpgrades = await Http.GetFromJsonAsync<Dictionary<string, ProductionItem>>("data/BuildingData/FacilityUpgrades.json") ?? throw new FileNotFoundException();
 
-		List<string> categoriesToLoad = LoadedCategories;
+		List<string> categoriesToLoad = OtherCategories;
+
+		Dictionary<string, ProductionItem> category;
+		foreach (string categoryName in categoriesToLoad)
+		{
+			category = await Http.GetFromJsonAsync<Dictionary<string, ProductionItem>>($"data/ProductionData/{categoryName}.json") ?? throw new FileNotFoundException(); ;
+			OtherCategoryItems.Add(categoryName, category);
+		}
 
 		FacilityItems = await Http.GetFromJsonAsync<Dictionary<string, ProductionItem>>("data/ProductionData/Facility.json") ?? throw new FileNotFoundException();
 
 		SelectedBuilding = "MaterialsFactory";
 		SelectedUpgrade = "";
 		BuildingSet = "Manufacturing";
+	}
+
+	public ProductionItem ImportItem(KeyValuePair<string, ProductionItem> item)
+	{
+		if (item.Value.ImportCategory == string.Empty) return item.Value;
+
+		return OtherCategoryItems[item.Value.ImportCategory][item.Key];
+	}
+
+	public ProductionItem ImportItem(string itemKey)
+	{
+		ProductionItem item = FacilityItems[itemKey];
+
+		return ImportItem(new KeyValuePair<string, ProductionItem>(itemKey, item));
+	}
+
+	public string GetItemCategory(KeyValuePair<string, ProductionItem> item)
+	{
+		if (item.Value.ImportCategory == string.Empty) return "Facility";
+
+		return item.Value.ImportCategory;
+	}
+
+	public FacilityRecipe GetFullRecipe(FacilityRecipe recipe)
+	{
+		foreach(string itemKey in recipe.InputNames)
+		{
+			recipe.InputItemData.Add(FacilityItems[itemKey.Trim('$')]);
+		}
+
+		foreach(string itemKey in recipe.OutputNames)
+		{
+			recipe.OutputItemData.Add(FacilityItems[itemKey.Trim('$')]);
+		}
+
+		return recipe;
 	}
 
 	public void HighlightBuildings()
@@ -175,9 +220,9 @@
 
 		foreach (string building in FacilityBuildings.Keys)
 		{
-			if (FacilityBuildings[building].BuildingRecipes.Any(e => e.InputNames.Contains(SelectedItem)))
+			if (FacilityBuildings[building].BuildingRecipes.Any(e => e.InputNames.Contains(SelectedItem) || e.InputNames.Contains("$" + SelectedItem)))
 				InputHighlight.Add(building);
-			if (FacilityBuildings[building].BuildingRecipes.Any(e => e.OutputNames.Contains(SelectedItem)))
+			if (FacilityBuildings[building].BuildingRecipes.Any(e => e.OutputNames.Contains(SelectedItem) || e.OutputNames.Contains("$" + SelectedItem)))
 				OutputHighlight.Add(building);
 
 			bool upgradeHasInput = false;
@@ -188,12 +233,12 @@
 
 			foreach (string upgrade in FacilityBuildings[building].BuildingUpgrades)
 			{
-				if (FacilityBuildingUpgrades[upgrade].BuildingRecipes.Any(e => e.InputNames.Contains(SelectedItem)))
+				if (FacilityBuildingUpgrades[upgrade].BuildingRecipes.Any(e => e.InputNames.Contains(SelectedItem) || e.InputNames.Contains("$" + SelectedItem)))
 				{
 					upgradeHasInput = true;
 					InputHighlight.Add(upgrade);
 				}
-				if (FacilityBuildingUpgrades[upgrade].BuildingRecipes.Any(e => e.OutputNames.Contains(SelectedItem)))
+				if (FacilityBuildingUpgrades[upgrade].BuildingRecipes.Any(e => e.OutputNames.Contains(SelectedItem) || e.OutputNames.Contains("$" + SelectedItem)))
 				{
 					upgradeHasOutput = true;
 					OutputHighlight.Add(upgrade);

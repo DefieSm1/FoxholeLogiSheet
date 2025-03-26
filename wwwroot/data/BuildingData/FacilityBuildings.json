@@ -52,30 +52,165 @@
         ]
     },
     "SmallArmsFactory": {
-        "name": "Infantry Arms Factory",
+        "name": "Infantry Kit Factory",
         "category": "Facility Structure",
         "buildingType": "Manufacturing",
-        "description": "A factory that specializes in manufacturing weapons and small arms used primarily by infantry.",
+        "description": "A factory that specializes in manufacturing infantry uniforms. Modifications may be constructed to manufacture infantry arms and heavy ammunition.",
         "cmatCost": 250,
-        "buildingUpgrades": [ "SmallArmsFactoryAssaultWeapons", "SmallArmsFactoryAmmunition" ],
+        "buildingUpgrades": [ "SmallArmsFactoryAssaultWeapons", "SmallArmsFactoryAmmunition", "SmallArmsMunitonsFoundry" ],
         "buildingRecipes": [
             {
-                "inputNames": [ "MaterialConstruction", "AssemblyMaterialsT1" ],
-                "inputAmounts": [ 5, 2 ],
-                "outputNames": [ "MeleeMace" ],
-                "outputAmounts": [ 1 ],
-                "powerConsumption": 2,
-                "productionTime": 100,
-                "faction": "W"
+                "inputNames": [ "MaterialConstruction" ],
+                "inputAmounts": [ 110 ],
+                "outputNames": [ "$UniformArmourBreastplate" ],
+                "outputAmounts": [ 10 ],
+                "powerConsumption": 12,
+                "productionTime": 8100,
+                "faction": "W"  
             },
             {
-                "inputNames": [ "MaterialConstruction", "AssemblyMaterialsT1" ],
-                "inputAmounts": [ 5, 2 ],
-                "outputNames": [ "MeleeSword" ],
-                "outputAmounts": [ 1 ],
-                "powerConsumption": 2,
-                "productionTime": 100,
-                "faction": "C"
+                "inputNames": [ "MaterialConstruction" ],
+                "inputAmounts": [ 110 ],
+                "outputNames": [ "$UniformEngineerGear" ],
+                "outputAmounts": [ 10 ],
+                "powerConsumption": 12,
+                "productionTime": 8100,
+                "faction": "W"  
+            },
+            {
+                "inputNames": [ "MaterialConstruction" ],
+                "inputAmounts": [ 110 ],
+                "outputNames": [ "$UniformAmmoOvercoat" ],
+                "outputAmounts": [ 10 ],
+                "powerConsumption": 12,
+                "productionTime": 8100,
+                "faction": "W"  
+            },
+            {
+                "inputNames": [ "MaterialConstruction" ],
+                "inputAmounts": [ 110 ],
+                "outputNames": [ "$UniformMedicJacket" ],
+                "outputAmounts": [ 10 ],
+                "powerConsumption": 12,
+                "productionTime": 8100,
+                "faction": "W"  
+            },
+            {
+                "inputNames": [ "MaterialConstruction" ],
+                "inputAmounts": [ 110 ],
+                "outputNames": [ "$UniformOfficerRegalia" ],
+                "outputAmounts": [ 10 ],
+                "powerConsumption": 12,
+                "productionTime": 8100,
+                "faction": "W"  
+            },
+            {
+                "inputNames": [ "MaterialConstruction" ],
+                "inputAmounts": [ 110 ],
+                "outputNames": [ "$UniformScoutMantle" ],
+                "outputAmounts": [ 10 ],
+                "powerConsumption": 12,
+                "productionTime": 8100,
+                "faction": "W"  
+            },
+            {
+                "inputNames": [ "MaterialConstruction" ],
+                "inputAmounts": [ 110 ],
+                "outputNames": [ "$UniformSnowParka" ],
+                "outputAmounts": [ 10 ],
+                "powerConsumption": 12,
+                "productionTime": 8100,
+                "faction": "W"  
+            },
+            {
+                "inputNames": [ "MaterialConstruction" ],
+                "inputAmounts": [ 110 ],
+                "outputNames": [ "$UniformTankSuit" ],
+                "outputAmounts": [ 10 ],
+                "powerConsumption": 12,
+                "productionTime": 8100,
+                "faction": "W"  
+            },
+            {
+                "inputNames": [ "MaterialConstruction" ],
+                "inputAmounts": [ 110 ],
+                "outputNames": [ "$UniformArmourVest" ],
+                "outputAmounts": [ 10 ],
+                "powerConsumption": 12,
+                "productionTime": 8100,
+                "faction": "C"  
+            },
+            {
+                "inputNames": [ "MaterialConstruction" ],
+                "inputAmounts": [ 110 ],
+                "outputNames": [ "$UniformEngineerRucksack" ],
+                "outputAmounts": [ 10 ],
+                "powerConsumption": 12,
+                "productionTime": 8100,
+                "faction": "C"  
+            },
+            {
+                "inputNames": [ "MaterialConstruction" ],
+                "inputAmounts": [ 110 ],
+                "outputNames": [ "$UniformGrenadeBaldric" ],
+                "outputAmounts": [ 10 ],
+                "powerConsumption": 12,
+                "productionTime": 8100,
+                "faction": "C"  
+            },
+            {
+                "inputNames": [ "MaterialConstruction" ],
+                "inputAmounts": [ 110 ],
+                "outputNames": [ "$UniformMedicFatigues" ],
+                "outputAmounts": [ 10 ],
+                "powerConsumption": 12,
+                "productionTime": 8100,
+                "faction": "C"  
+            },
+            {
+                "inputNames": [ "MaterialConstruction" ],
+                "inputAmounts": [ 110 ],
+                "outputNames": [ "$UniformOfficerAttire" ],
+                "outputAmounts": [ 10 ],
+                "powerConsumption": 12,
+                "productionTime": 8100,
+                "faction": "C"  
+            },
+            {
+                "inputNames": [ "MaterialConstruction" ],
+                "inputAmounts": [ 110 ],
+                "outputNames": [ "$UniformRainOilcoat" ],
+                "outputAmounts": [ 10 ],
+                "powerConsumption": 12,
+                "productionTime": 8100,
+                "faction": "C"  
+            },
+            {
+                "inputNames": [ "MaterialConstruction" ],
+                "inputAmounts": [ 110 ],
+                "outputNames": [ "$UniformScoutCamo" ],
+                "outputAmounts": [ 10 ],
+                "powerConsumption": 12,
+                "productionTime": 8100,
+                "faction": "C"  
+            },
+            {
+                "inputNames": [ "MaterialConstruction" ],
+                "inputAmounts": [ 110 ],
+                "outputNames": [ "$UniformSnowTopcoat" ],
+                "outputAmounts": [ 10 ],
+                "powerConsumption": 12,
+                "productionTime": 8100,
+                "faction": "C"  
+            },
+            {
+                "inputNames": [ "MaterialConstruction" ],
+                "inputAmounts": [ 110 ],
+                "outputNames": [ "$UniformTankCoveralls" ],
+                "outputAmounts": [ 10 ],
+                "powerConsumption": 12,
+                "productionTime": 8100,
+                "faction": "C"  
             }
         ]
     },
