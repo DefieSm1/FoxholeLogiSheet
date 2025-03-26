@@ -55,7 +55,7 @@
 			@foreach (string upgrade in CurrentBuilding.BuildingUpgrades)
 			{
 				<ItemButton ItemName=@upgrade Category="Facility" Disabled=@(SelectedUpgrade == upgrade) IconSet="buildings" Border="@GetBuildingHighlight(upgrade)"
-							OnMouseOver="() => { HoveredItem = FacilityBuildingUpgrades[upgrade]; TooltipVisibility = true; TooltipHideCosts = true; StateHasChanged(); }"
+							OnMouseOver="() => { HoveredItem = FacilityBuildingUpgrades[upgrade]; TooltipVisibility = true; StateHasChanged(); }"
 							OnMouseOut="() => { HoveredItem = FacilityBuildingUpgrades[upgrade]; TooltipVisibility = false; StateHasChanged(); }"
 							OnButtonClick="(e) => { SelectedUpgrade = upgrade; StateHasChanged(); }" />
 			}
