@@ -220,25 +220,29 @@
 
 		foreach (string building in FacilityBuildings.Keys)
 		{
-			if (FacilityBuildings[building].BuildingRecipes.Any(e => e.InputNames.Contains(SelectedItem) || e.InputNames.Contains("$" + SelectedItem)))
+			List<FacilityRecipe> buildingRecipes = FacilityBuildings[building].BuildingRecipes;
+
+			if (buildingRecipes.Any(e => e.InputNames.Contains(SelectedItem) || e.InputNames.Contains("$" + SelectedItem)))
 				InputHighlight.Add(building);
-			if (FacilityBuildings[building].BuildingRecipes.Any(e => e.OutputNames.Contains(SelectedItem) || e.OutputNames.Contains("$" + SelectedItem)))
+
+			if (buildingRecipes.Any(e => e.OutputNames.Contains(SelectedItem) || e.OutputNames.Contains("$" + SelectedItem)))
 				OutputHighlight.Add(building);
 
 			bool upgradeHasInput = false;
 			bool upgradeHasOutput = false;
-
+			
 			if (FacilityBuildings[building].BuildingUpgrades == new List<string>())
 				continue;
 
 			foreach (string upgrade in FacilityBuildings[building].BuildingUpgrades)
 			{
-				if (FacilityBuildingUpgrades[upgrade].BuildingRecipes.Any(e => e.InputNames.Contains(SelectedItem) || e.InputNames.Contains("$" + SelectedItem)))
+				List<FacilityRecipe> upgradeRecipes = FacilityBuildingUpgrades[upgrade].BuildingRecipes;
+				if (upgradeRecipes.Any(e => e.InputNames.Contains(SelectedItem) || e.InputNames.Contains("$" + SelectedItem)))
 				{
 					upgradeHasInput = true;
 					InputHighlight.Add(upgrade);
 				}
-				if (FacilityBuildingUpgrades[upgrade].BuildingRecipes.Any(e => e.OutputNames.Contains(SelectedItem) || e.OutputNames.Contains("$" + SelectedItem)))
+				if (upgradeRecipes.Any(e => e.OutputNames.Contains(SelectedItem) || e.OutputNames.Contains("$" + SelectedItem)))
 				{
 					upgradeHasOutput = true;
 					OutputHighlight.Add(upgrade);

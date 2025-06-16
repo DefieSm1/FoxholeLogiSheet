@@ -28,7 +28,7 @@
     "category": "Explosive Charge",
     "description": "This unique demolition tool is a long, metal tube packed with explosives. The Hydra's Whisper is designed to destroy out-of-reach movement impairing structures and detonate any mines along the lenght of the tube.",
     "itemSpecifics": {
-      "general": [ "$Deals Demolition damage", "Can ruin structures that have been severly damaged by artillery", "Destroys obstacles that can otherwise only be dismantled with Wrenches" ] 
+      "general": [ "$Deals Demolition damage", "Can ruin structures that have been severely damaged by artillery", "Increased chance to breach a bunker", "Destroys obstacles that can otherwise only be dismantled with Wrenches" ] 
     },
     "crateSize": 5,
     "bmatCost": 100,
@@ -125,6 +125,9 @@
     "name": "Havoc Charge Detonator",
     "category": "Mounted Explosive Charge Detonator",
     "description": "Required to detonate Havoc Charges. The Havoc Charge must be placed before can be deployed.",
+    "itemSpecifics": {
+      "general": [ "$Deals Demolition damage", "Can ruin structures that have been severely damaged by artillery", "$Always has a chnace to breach bunkers", "Significantly increased chance to breach a bunker" ]
+    },
     "crateSize": 5,
     "bmatCost": 75,
     "hematCost": 20,
@@ -135,7 +138,7 @@
     "category": "Explosive Charge",
     "description": "This heavy-duty explosive device is designed to deal significant damage to structures and stationary vehicles.",
     "itemSpecifics": {
-      "general": [ "$Deals Demolition damage", "Can ruin structures that have been severly damaged by artillery" ] 
+      "general": [ "$Deals Demolition damage", "Can ruin structures that have been severely damaged by artillery", "Significantly increased chance to breach a bunker" ] 
     },
     "crateSize": 5,
     "bmatCost": 150,

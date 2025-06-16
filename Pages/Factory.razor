@@ -140,24 +140,18 @@
 		if (!e.ShiftKey)
 		{
 			SelectedItems[category].Add(item);
-			StateHasChanged();
-			return;
 		}
-
-		if (ProductionMode == "Factory")
+		else if (ProductionMode == "Factory")
 		{
 			SelectedItems[category].AddRange(Enumerable.Repeat(item, 4));
-			StateHasChanged();
-			return;
 		}
-
-		if (ProductionMode == "MPF")
+		else if (ProductionMode == "MPF")
 		{
 			bool isVehicleOrStructure = (category == "Vehicles" || category == "Structures");
 			SelectedItems[category] = Enumerable.Repeat(item, isVehicleOrStructure ? 5 : 9).ToList<string>();
-			StateHasChanged();
-			return;
 		}
+
+		StateHasChanged();
 	}
 
 	public void FlipProductionMode()
@@ -216,11 +210,11 @@
 			currentDiscount = ProductionMode == "MPF" ? 1 - 0.1 * Math.Min(++itemIndex, 5) : 1;
 			itemInfo = ItemCategories[itemCategory][item];
 
-			double crateSize = isVehicleOrStructure ? itemInfo.CrateSize : 1;
+			double crateSize = isVehicleOrStructure ? 3 : 1;
 
 			queuePrice += materialKey switch
 			{
-				"Time" => itemInfo.ProductionTime * (ProductionMode == "MPF" ? isVehicleOrStructure ? 1 : 10 : 1),
+				"Time" => itemInfo.ProductionTime * (ProductionMode == "MPF" && !isVehicleOrStructure ? 10 : 1),
 				"MaterialBasic" => Math.Floor(itemInfo.BmatCost * currentDiscount * crateSize),
 				"MaterialExplosive" => Math.Floor(itemInfo.EmatCost * currentDiscount * crateSize),
 				"MaterialRefined" => Math.Floor(itemInfo.RmatCost * currentDiscount * crateSize),

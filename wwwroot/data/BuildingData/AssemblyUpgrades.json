@@ -9,9 +9,9 @@
         "description": "An assembly rigged to manufacture parts used in the construction of naval vessels at a Dry Dock.",
         "rareCost": 10
     },
-    "AssemblyStationRocket": {
-        "name": "Rocket Manufactory",
-        "description": "A workshop platform for the assembly of multi-part long-range ballistic missiles such as the A0E-9, or AEON Rocket.",
+    "AssemblyStationStructures": {
+        "name": "Advanced Structure Manufactory",
+        "description": "A workshop platform for the assembly of large, multi-part constructs such as the A0E-9 Rocket and Storm Cannon.",
         "rareCost": 35
     },
     "AssemblyStationBatteryLine": {

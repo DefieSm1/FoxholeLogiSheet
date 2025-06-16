@@ -1,0 +1,110 @@
+{
+  "RocketBooster": {
+    "name": "A0E-9 Rocket Booster",
+    "category": "Shippable Material",
+    "description": "The control fins, fuel lines, and propulsion engines engines required for launch are all housed within the A0E-9 Booster system.",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables", "I AM THE GOD OF HELLFIRE" ]
+    },
+    "steelCost": 20,
+    "shieldingCost": 75,
+    "rareCost": 150,
+    "assmatCost": [ 0, 55, 0, 0, 25 ],
+    "productionTime": 86400
+  },
+  "RocketBody": {
+    "name": "A0E-9 Rocket Body",
+    "category": "Shippable Material",
+    "description": "The body of an A0E-9 stores the fuel and instrumentation required to deliver the warhead over large distances.",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables", "AND I BRING YOU" ]
+    },
+    "steelCost": 20,
+    "shieldingCost": 75,
+    "rareCost": 125,
+    "assmatCost": [ 65, 0, 0, 0, 25 ],
+    "productionTime": 86400
+  },
+  "RocketWarhead": {
+    "name": "A0E-9 Rocket Warhead",
+    "category": "Shippable Material",
+    "description": "The body of an A0E-9 Warhead is a devestating explosive, capable of taking out city districts or even entire small towns. It scorches the landscape, making it hard for the enemy to rebuild in the short-term.",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables", "FIRE" ]
+    },
+    "rareCost": 75,
+    "substanceCost": 165,
+    "assmatCost": [ 0, 0, 45, 0, 0 ],
+    "productionTime": 86400
+  },
+  "PartsConstruction": {
+    "name": "Construction Parts",
+    "category": "Shippable Material",
+    "description": "The first piece of a Large Structure. Must be placed onto a Large Structure Foundation",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ]
+    },
+    "pcmatCost": 250,
+    "assmatCost": [ 225, 225, 0, 0, 0 ],
+    "productionTime": 300
+  },
+  "PartsStructure": {
+    "name": "Structure Parts",
+    "category": "Shippable Material",
+    "description": "The second piece of a Large Structure. Must be placed onto a Large Structure Foundation",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ]
+    },
+    "pcmatCost": 50,
+    "shieldingCost": 15,
+    "assmatCost": [ 0, 0, 0, 40, 0 ],
+    "productionTime": 300
+  },
+  "PartsStormCannon": {
+    "name": "Storm Cannon Parts",
+    "category": "Shippable Material",
+    "description": "The final critical components necessary to construct a powerful Storm Cannon. Must be placed onto a Large Structure Foundation",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ]
+    },
+    "pcmatCost": 300,
+    "rareCost": 40,
+    "shieldingCost": 45,
+    "productionTime": 1500
+  },
+  "PartsIntelCenter": {
+    "name": "Intelligence Center Parts",
+    "category": "Shippable Material",
+    "description": "The final critical components necessary to construct a strategic Intelligence Center. Must be placed onto a Large Structure Foundation",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ]
+    },
+    "pcmatCost": 50,
+    "rareCost": 3,
+    "shieldingCost": 15,  
+    "productionTime": 1500
+  },
+  "PartsWeatherStation": {
+    "name": "Weather Station Parts",
+    "category": "Shippable Material",
+    "description": "The final critical components necessary to construct a towering Weather Station. Must be placed onto a Large Structure Foundation",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ]
+    },
+    "pcmatCost": 150,
+    "assmatCost": [ 150, 150, 0, 0, 0 ],
+    "productionTime": 1500
+  },
+  "PartsFortress": {
+    "name": "Underground Fortress Parts",
+    "category": "Shippable Material",
+    "description": "The necessary components to reinforce the basement of an Underground Fortress Large Structure. Must be placed onto a Large Structure Foundation.",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ]
+    },
+    "pcmatCost": 200,
+    "rareCost": 5,
+    "shieldingCost": 35,
+    "productionTime": 1500
+  }
+}

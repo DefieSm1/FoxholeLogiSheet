@@ -30,15 +30,15 @@
     "faction": "W"
   },
   "ScoutTankJester": {
-    "name": "King Jester - Mk. I-1",
+    "name": "King Jester Mk. I-1",
     "category": "Scout Tank",
-    "description": "Originally designed as a mock-up for more sophisticated rocket platforms, the Jester gets its designation from the response to reckless early prototypes that were bolted onto stripped down King Spires. This unusual vehicle can fire specialized rockets over long distances. Its light frame makes it easy to reposition, but vulnerable to sabotage.",
-    "ammoUsed": "3C-High Explosive Rocket",
+    "description": "Originally designed as a mock-up for more sophisticated rocket platforms, the Jester gets its designation from the response to reckless early prototypes that were bolted onto stripped down King Spires. This unusual vehicle fires powerful short-range breaching rockets. Its light frame makes it easy to reposition but vulnerable to sabotage.",
+    "ammoUsed": "Shatter Missile",
     "itemSpecifics": {
-      "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
-      "Gunner": [ "$Deals Incendiary damage", "Deals High Explosive damage on impact" ] 
+      "general": [ "Can be carried by vehicles that support up to large sized shippables" ]
     },
-    "pcmatCost": 20,
+    "rareCost": 1,
+    "steelCost": 5,
     "assmatCost": [ 15, 0, 3, 0, 0 ],
     "baseVehicle": "ScoutTankSpire",
     "productionTime": 600,
@@ -73,6 +73,21 @@
     "productionTime": 600,
     "faction": "W"
   },
+  "ACRocket": {
+    "name": "O'Brien V.200 Squire",
+    "category": "Armoured Rocket Platform",
+    "description": "The second full iteration of Conor O'Brien's storied Armoured Car designs, the Squire serves as a reinforced rocket platform. The Squire—designed to play a support role for larger assault operations with its rocket battery platform—is easy to reposition and provides operators and nearby infantry with more protection than might be afforded by a standard utility vehicle.",
+    "ammoUsed": "3C-High Explosive Rocket",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ],
+      "Gunner": [ "$Deals High Explosive damage", "Reduced damage against Trenches", "Reduced damage against Field Structures" ]
+    },
+    "pcmatCost": 35,
+    "assmatCost": [ 10, 0, 8, 0, 0 ],
+    "baseVehicle": "ACGrenade",
+    "productionTime": 300,
+    "faction": "W"
+  },
   "TruckRetiarius": {
     "name": "R-17 \"Retiarius\" Skirmisher",
     "category": "Truck",
@@ -80,7 +95,7 @@
     "ammoUsed": "3C-High Explosive Rocket",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
-      "Gunner": [ "$Deals Incendiary damage", "Deals High Explosive damage on impact" ] 
+      "Gunner": [ "$Deals High Explosive damage", "Reduced damage against Trenches", "Reduced damage against Field Structures" ] 
     },
     "pcmatCost": 70,
     "assmatCost": [ 10, 0, 8, 0, 0 ],
@@ -95,7 +110,7 @@
     "ammoUsed": "3C-High Explosive Rocket",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to medium sized shippables" ],
-      "Cannoneer": [ "$Deals Incendiary damage", "Deals High Explosive damage on impact" ] 
+      "Cannoneer": [ "$Deals High Explosive damage", "Reduced damage against Trenches", "Reduced damage against Field Structures" ] 
     },
     "pcmatCost": 20,
     "assmatCost": [ 0, 15, 0, 3, 0 ],

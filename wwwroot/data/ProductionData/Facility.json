@@ -163,6 +163,9 @@
   "UniformMedicJacket": {
     "importCategory": "Uniforms"
   },
+  "UniformNavalPeacoat": {
+    "importCategory": "Uniforms"
+  },
   "UniformOfficerRegalia": {
     "importCategory": "Uniforms"
   },
@@ -185,6 +188,9 @@
     "importCategory": "Uniforms"
   },
   "UniformMedicFatigues": {
+    "importCategory": "Uniforms"
+  },
+  "UniformNavalGarb": {
     "importCategory": "Uniforms"
   },
   "UniformOfficerAttire": {
@@ -328,7 +334,7 @@
     "category": "HE Rocket Artillery Ammo",
     "description": "Standard calibre rocket with a heavy explosive payload. Chance to ignite objects near impact.",
     "itemSpecifics": {
-      "general": [ "$Deals Incendiary damage", "Deals High Explosive damage on impact" ] 
+      "general": [ "$Deals High Explosive damage", "Reduced damage against Trenches", "Increased damage against Field Structures" ] 
     }
   },
   "AmmoRocketFlame": {
@@ -366,11 +372,29 @@
     "category": "Storm Cannon Ammo",
     "description": "Standard payload used with Storm Cannons.",
     "itemSpecifics": {
-      "general": [ "$Deals High Explosive damage", "Can ruin structures that have been severly damaged by artillery", "Reduced damaged against Trenches", "Increased damage against Field Structures" ] 
+      "general": [ "$Deals High Explosive damage", "Can ruin structures that have been severly damaged by artillery", "$Always has a chance to breach bunkers", "Causes Large Leaks against Large Ships" ] 
     }
   },
   "AmmoShell250": {
     "importCategory": "HeavyMunitions"
+  },
+  "AmmoMissileShatter": {
+    "name": "Shatter Missile",
+    "category": "Demolition Rocket",
+    "description": "Short-range rockets that specialize in breaching bunkers and devestating enemy structures.",
+    "itemSpecifics": {
+      "general": [ "$Deals Demolition damage", "Can ruin structures that have been severly damaged by artillery", "$Always has a chance to breach bunkers", "Decreased chance to breach a bunker" ] 
+    },
+    "faction": "W"
+  },
+  "AmmoShell250Fury": {
+    "name": "250mm \"Fury\" Shell",
+    "category": "Spigot Mortar Ammo",
+    "description": "A breaching shell that's launched by a spigot mortar.",
+    "itemSpecifics": {
+      "general": [ "$Deals Demolition damage", "Can ruin structures that have been severly damaged by artillery", "$Always has a chance to breach bunkers", "Increased chance to breach a bunker" ]
+    },
+    "faction": "C"
   },
   "APMine": {
     "name": "Crow's Foot Mine",

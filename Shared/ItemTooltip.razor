@@ -28,7 +28,7 @@
 				})
 			</p>
 
-			<p class="item-extracrates" hidden="@(Item.Name != "85K-b \"Falchion\"")">2 bonus vehicles produced per crate</p>
+			<p class="item-extracrates" hidden="@(SelectedCategory != "Vehicles" || Item.CrateSize <= 3)">@(Item.CrateSize - 3)x bonus vehicles produced per crate</p>
 
 			@if (BaseVehicle != null)
 			{

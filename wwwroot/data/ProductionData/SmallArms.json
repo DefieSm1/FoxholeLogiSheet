@@ -337,20 +337,20 @@
     "description": "A hunting shotgun with a sawn-off barrel for higher stopping power and mobility at the expense of accuracy. This traditional civilian firearm can fire two shots in rapid succession before needing to be reloaded. It became a favourite sidearm among Caoivish Watchers and has since earned an ominous reputation as a result.",
     "ammoUsed": "Buckshot",
     "itemSpecifics": {
-      "general": [ "Equipped with a high velocity barrel that deals 150% extra damage per shot", "Rip and Tear, until it is done" ]
+      "general": [ "Equipped with a high velocity barrel that deals 60% extra damage per shot", "Rip and Tear, until it is done" ]
     },
-    "crateSize": 20,
+    "crateSize": 15,
     "bmatCost": 80,
-    "productionTime": 80,
+    "productionTime": 100,
     "faction": "W"
   },
   "ShotgunDragonfly": {
     "name": "KRF1-750 Dragonfly",
     "category": "Shotgun",
     "description": "A short-range firearm that has origins in both sport shooting and bird hunting. Its long stock and sturdy undercarriage give the Dragonfly stability and control that make it a worthy companion to many Kraunian soldiers deployed in urban centres. Dismantling haphazard barricades and clearing tight rooms are paltry tasks for the KRF1-750 Dragonfly.",
-    "crateSize": 20,
-    "bmatCost": 110,
-    "productionTime": 80,
+    "crateSize": 15,
+    "bmatCost": 130,
+    "productionTime": 150,
     "faction": "C"
   },
   "AmmoBuckshot": {

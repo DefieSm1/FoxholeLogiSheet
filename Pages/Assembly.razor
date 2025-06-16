@@ -119,7 +119,7 @@
 
 	public List<string> CategoryKeys { get; set; } = [
 		"Vehicles",
-		"AssemblyStation", "AssemblyStationMotorPool","AssemblyStationRocket", "AssemblyStationBatteryLine", "AssemblyStationNavalWorks", "AssemblyStationField", "AssemblyStationTank", "AssemblyStationWeapons",
+		"AssemblyStation", "AssemblyStationMotorPool","AssemblyStationStructures", "AssemblyStationBatteryLine", "AssemblyStationNavalWorks", "AssemblyStationField", "AssemblyStationTank", "AssemblyStationWeapons",
 		"AssemblyLarge", "AssemblyLargeTrain", "AssemblyLargeHeavyTank",
 		"DryDock"
 	];
@@ -193,14 +193,9 @@
 
 	public void AddItem(MouseEventArgs e, string category, string item)
 	{
-		if (!e.ShiftKey)
-		{
-			SelectedItems[category].Add(item);
-			StateHasChanged();
-			return;
-		}
+		if (!e.ShiftKey) SelectedItems[category].Add(item);
+		else SelectedItems[category].AddRange(Enumerable.Repeat(item, 3));
 
-		SelectedItems[category].AddRange(Enumerable.Repeat(item, 3));
 		StateHasChanged();
 		return;
 	}

@@ -1,476 +1,503 @@
 {
-    "MaterialsFactory": {
-        "name": "Materials Factory",
-        "category": "Facility Structure",
-        "buildingType": "Manufacturing",
-        "description": "A factory that refines raw resources into Construction Materials for advanced facilities. Additional modifications allow for the development of a variety of different materials.",
-        "bmatCost": 200,
-        "buildingUpgrades": [ "MaterialsFactoryForge", "MaterialsFactoryMetalPress", "MaterialsFactorySmelter", "MaterialsFactoryAssembly" ],
-        "buildingRecipes": [
-            {
-                "inputNames": [ "MaterialRawSalvage" ],
-                "inputAmounts": [ 10 ],
-                "outputNames": [ "MaterialConstruction" ],
-                "outputAmounts": [ 1 ],
-                "powerConsumption": 2,
-                "productionTime": 25
-            },
-            {
-                "inputNames": [ "MaterialRawSalvage" ],
-                "inputAmounts": [ 150 ],
-                "outputNames": [ "SuppliesMaintenance" ],
-                "outputAmounts": [ 20 ],
-                "powerConsumption": 3,
-                "productionTime": 40
-            }
-        ]
-    },
-    "MetalworksFactory": {
-        "name": "Metalworks Factory",
-        "category": "Facility Structure",
-        "buildingType": "Manufacturing",
-        "description": "A factory for refining raw resources into Processed Construction Materials. Additional modifications can allow for addtitional refined materials needed for advanced facility operations.",
-        "cmatCost": 125,
-        "buildingUpgrades": [ "MetalworksFactoryBlastFurnace", "MetalworksFactoryRecycler", "MetalworksFactoryEngineering" ],
-        "buildingRecipes": [
-            {
-                "inputNames": [ "MaterialConstruction", "MaterialRawComponents" ],
-                "inputAmounts": [ 3, 20 ],
-                "outputNames": [ "MaterialProcessedConstruction" ],
-                "outputAmounts": [ 1 ],
-                "powerConsumption": 5,
-                "productionTime": 60
-            },
-            {
-                "inputNames": [ "MaterialProcessedConstruction" ],
-                "inputAmounts": [ 3 ],
-                "outputNames": [ "Pipe" ],
-                "outputAmounts": [ 1 ],
-                "powerConsumption": 5,
-                "productionTime": 120
-            }
-        ]
-    },
-    "SmallArmsFactory": {
-        "name": "Infantry Kit Factory",
-        "category": "Facility Structure",
-        "buildingType": "Manufacturing",
-        "description": "A factory that specializes in manufacturing infantry uniforms. Modifications may be constructed to manufacture infantry arms and heavy ammunition.",
-        "cmatCost": 250,
-        "buildingUpgrades": [ "SmallArmsFactoryAssaultWeapons", "SmallArmsFactoryAmmunition", "SmallArmsMunitonsFoundry" ],
-        "buildingRecipes": [
-            {
-                "inputNames": [ "MaterialConstruction" ],
-                "inputAmounts": [ 110 ],
-                "outputNames": [ "$UniformArmourBreastplate" ],
-                "outputAmounts": [ 10 ],
-                "powerConsumption": 12,
-                "productionTime": 8100,
-                "faction": "W"  
-            },
-            {
-                "inputNames": [ "MaterialConstruction" ],
-                "inputAmounts": [ 110 ],
-                "outputNames": [ "$UniformEngineerGear" ],
-                "outputAmounts": [ 10 ],
-                "powerConsumption": 12,
-                "productionTime": 8100,
-                "faction": "W"  
-            },
-            {
-                "inputNames": [ "MaterialConstruction" ],
-                "inputAmounts": [ 110 ],
-                "outputNames": [ "$UniformAmmoOvercoat" ],
-                "outputAmounts": [ 10 ],
-                "powerConsumption": 12,
-                "productionTime": 8100,
-                "faction": "W"  
-            },
-            {
-                "inputNames": [ "MaterialConstruction" ],
-                "inputAmounts": [ 110 ],
-                "outputNames": [ "$UniformMedicJacket" ],
-                "outputAmounts": [ 10 ],
-                "powerConsumption": 12,
-                "productionTime": 8100,
-                "faction": "W"  
-            },
-            {
-                "inputNames": [ "MaterialConstruction" ],
-                "inputAmounts": [ 110 ],
-                "outputNames": [ "$UniformOfficerRegalia" ],
-                "outputAmounts": [ 10 ],
-                "powerConsumption": 12,
-                "productionTime": 8100,
-                "faction": "W"  
-            },
-            {
-                "inputNames": [ "MaterialConstruction" ],
-                "inputAmounts": [ 110 ],
-                "outputNames": [ "$UniformScoutMantle" ],
-                "outputAmounts": [ 10 ],
-                "powerConsumption": 12,
-                "productionTime": 8100,
-                "faction": "W"  
-            },
-            {
-                "inputNames": [ "MaterialConstruction" ],
-                "inputAmounts": [ 110 ],
-                "outputNames": [ "$UniformSnowParka" ],
-                "outputAmounts": [ 10 ],
-                "powerConsumption": 12,
-                "productionTime": 8100,
-                "faction": "W"  
-            },
-            {
-                "inputNames": [ "MaterialConstruction" ],
-                "inputAmounts": [ 110 ],
-                "outputNames": [ "$UniformTankSuit" ],
-                "outputAmounts": [ 10 ],
-                "powerConsumption": 12,
-                "productionTime": 8100,
-                "faction": "W"  
-            },
-            {
-                "inputNames": [ "MaterialConstruction" ],
-                "inputAmounts": [ 110 ],
-                "outputNames": [ "$UniformArmourVest" ],
-                "outputAmounts": [ 10 ],
-                "powerConsumption": 12,
-                "productionTime": 8100,
-                "faction": "C"  
-            },
-            {
-                "inputNames": [ "MaterialConstruction" ],
-                "inputAmounts": [ 110 ],
-                "outputNames": [ "$UniformEngineerRucksack" ],
-                "outputAmounts": [ 10 ],
-                "powerConsumption": 12,
-                "productionTime": 8100,
-                "faction": "C"  
-            },
-            {
-                "inputNames": [ "MaterialConstruction" ],
-                "inputAmounts": [ 110 ],
-                "outputNames": [ "$UniformGrenadeBaldric" ],
-                "outputAmounts": [ 10 ],
-                "powerConsumption": 12,
-                "productionTime": 8100,
-                "faction": "C"  
-            },
-            {
-                "inputNames": [ "MaterialConstruction" ],
-                "inputAmounts": [ 110 ],
-                "outputNames": [ "$UniformMedicFatigues" ],
-                "outputAmounts": [ 10 ],
-                "powerConsumption": 12,
-                "productionTime": 8100,
-                "faction": "C"  
-            },
-            {
-                "inputNames": [ "MaterialConstruction" ],
-                "inputAmounts": [ 110 ],
-                "outputNames": [ "$UniformOfficerAttire" ],
-                "outputAmounts": [ 10 ],
-                "powerConsumption": 12,
-                "productionTime": 8100,
-                "faction": "C"  
-            },
-            {
-                "inputNames": [ "MaterialConstruction" ],
-                "inputAmounts": [ 110 ],
-                "outputNames": [ "$UniformRainOilcoat" ],
-                "outputAmounts": [ 10 ],
-                "powerConsumption": 12,
-                "productionTime": 8100,
-                "faction": "C"  
-            },
-            {
-                "inputNames": [ "MaterialConstruction" ],
-                "inputAmounts": [ 110 ],
-                "outputNames": [ "$UniformScoutCamo" ],
-                "outputAmounts": [ 10 ],
-                "powerConsumption": 12,
-                "productionTime": 8100,
-                "faction": "C"  
-            },
-            {
-                "inputNames": [ "MaterialConstruction" ],
-                "inputAmounts": [ 110 ],
-                "outputNames": [ "$UniformSnowTopcoat" ],
-                "outputAmounts": [ 10 ],
-                "powerConsumption": 12,
-                "productionTime": 8100,
-                "faction": "C"  
-            },
-            {
-                "inputNames": [ "MaterialConstruction" ],
-                "inputAmounts": [ 110 ],
-                "outputNames": [ "$UniformTankCoveralls" ],
-                "outputAmounts": [ 10 ],
-                "powerConsumption": 12,
-                "productionTime": 8100,
-                "faction": "C"  
-            }
-        ]
-    },
-    "AmmoFactory": {
-        "name": "Ammunition Factory",
-        "category": "Facility Structure",
-        "buildingType": "Manufacturing",
-        "description": "A factory for producing advanced ammo types such as large calibre shells, rockets, and flame ammo.",
-        "pcmatCost": 25,
-        "buildingUpgrades": [ "AmmoFactoryRocket", "AmmoFactoryLargeShell", "AmmoFactoryTripod" ],
-        "buildingRecipes": [
-            {
-                "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
-                "inputAmounts": [ 4, 1 ],
-                "outputNames": [ "AmmoFlame" ],
-                "outputAmounts": [ 1 ],
-                "powerConsumption": 4,
-                "productionTime": 25
-            },
-            {
-                "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
-                "inputAmounts": [ 24, 5 ],
-                "outputNames": [ "AmmoShell250" ],
-                "outputAmounts": [ 1 ],
-                "powerConsumption": 4,
-                "productionTime": 30
-            },
-            {
-                "inputNames": [ "MaterialExplosive", "MaterialConstruction" ],
-                "inputAmounts": [ 2, 2 ],
-                "outputNames": [ "APMine" ],
-                "outputAmounts": [ 1 ],
-                "powerConsumption": 4,
-                "productionTime": 25
-            },
-            {
-                "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
-                "inputAmounts": [ 2, 2 ],
-                "outputNames": [ "ATMine" ],
-                "outputAmounts": [ 1 ],
-                "powerConsumption": 4,
-                "productionTime": 25
-            },
-            {
-                "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
-                "inputAmounts": [ 8, 1 ],
-                "outputNames": [ "SeaMine" ],
-                "outputAmounts": [ 1 ],
-                "powerConsumption": 4,
-                "productionTime": 90
-            },
-            {
-                "inputNames": [ "MaterialConstruction", "AssemblyMaterialsT4" ],
-                "inputAmounts": [ 8, 5 ],
-                "outputNames": [ "MaterialThermalShielding" ],
-                "outputAmounts": [ 1 ],
-                "powerConsumption": 4,
-                "productionTime": 1500
-            }
-        ]
-    },
-    "CoalRefinery": {
-        "name": "Coal Refinery",
-        "category": "Facility Structure",
-        "buildingType": "Manufacturing",
-        "description": "A processing plant that refines Coal into useful materials used in facility production and power.",
-        "cmatCost": 50,
-        "buildingUpgrades": [ "CoalRefineryCokeFurnace", "CoalRefineryLiquifier", "CoalRefineryAdvancedLiquifier" ],
-        "buildingRecipes": [
-            {
-                "inputNames": [ "MaterialRawCoal" ],
-                "inputAmounts": [ 200 ],
-                "outputNames": [ "MaterialCoke" ],
-                "outputAmounts": [ 180 ],
-                "powerConsumption": 3,
-                "productionTime": 270
-            }
-        ]
-    },
-    "OilRefinery": {
-        "name": "Oil Refinery",
-        "category": "Facility Structure",
-        "buildingType": "Manufacturing",
-        "description": "A refinery that processes Oil into other useful materials for purposes of production and power generation.",
-        "cmatCost": 50,
-        "buildingUpgrades": [ "OilRefineryReformer", "OilRefineryCrackSchack", "OilRefineryPetrochemical" ],
-        "buildingRecipes": [
-            {
-                "inputNames": [ "$MaterialOilCrude" ],
-                "inputAmounts": [ 150 ],
-                "outputNames": [ "$MaterialOilPetrol" ],
-                "outputAmounts": [ 150 ],
-                "powerConsumption": 1,
-                "productionTime": 150
-            }
-        ]
-    },
-    "DieselPowerPlant": {
-        "name": "Diesel Power Plant",
-        "category": "Facility Structure",
-        "buildingType": "Manufacturing",
-        "description": "A structure that generates power by burning Diesel.",
-        "bmatCost": 150,
-        "buildingUpgrades": [ "DieselPowerPlantPetrol", "DieselPowerPlantCoal" ],
-        "buildingRecipes": [
-            {
-                "inputNames": [ "$MaterialDiesel" ],
-                "inputAmounts": [ 25 ],
-                "powerConsumption": -5,
-                "productionTime": 45
-            }
-        ]
-    },
-    "PowerStation": {
-        "name": "Power Station",
-        "category": "Facility Structure",
-        "buildingType": "Manufacturing",
-        "description": "A power plant that generates a large amount of electricity using Oil or Coal.",
-        "pcmatCost": 25,
-        "buildingUpgrades": [ "PowerStationSulfuricReactor" ],
-        "buildingRecipes": [
-            {
-                "inputNames": [ "$MaterialOilCrude" ],
-                "inputAmounts": [ 50 ],
-                "powerConsumption": -10,
-                "productionTime": 90
-            },
-            {
-                "inputNames": [ "MaterialRawCoal", "$MaterialWater" ],
-                "inputAmounts": [ 30, 0.1 ],
-                "powerConsumption": -10,
-                "productionTime": 90
-            }
-        ]
-    },
-    "OilWell": {
-        "name": "Oil Well",
-        "category": "Resource Harvester",
-        "buildingType": "Gathering",
-        "description": "Extracts fuel from Crude Oil Fields. Must be constructed nearby.",
-        "cmatCost": 35,
-        "buildingUpgrades": [ "OilWellElectric", "OilWellFracker" ],
-        "buildingRecipes": [
-            {
-                "outputNames": [ "MaterialOilCrude" ],
-                "outputAmounts": [ 50 ],
-                "powerConsumption": 0,
-                "productionTime": 50
-            }
-        ]
-    },
-    "WaterPump": {
-        "category": "Resource Harvester",
-        "name": "Water Pump",
-        "buildingType": "Gathering",
-        "description": "Pumps water through pipes. Must be built on bodies of water.",
-        "cmatCost": 35,
-        "buildingUpgrades": [ "WaterPumpPiped" ],
-        "buildingRecipes": [
-            {
-                "outputNames": [ "$MaterialWater" ],
-                "outputAmounts": [ 50 ],
-                "powerConsumption": 0,
-                "productionTime": 50
-            }
-        ]
-    },
-    "OilRig": {
-        "name": "Offshore Platform",
-        "category": "Resource Harvester",
-        "buildingType": "Gathering",
-        "description": "Offshore Platforms are open-water extraction facilities used to extract various oils. A steady supply of processed Coal is required for certain operations, as extracting materials from the ocean floor is a complex process.",
-        "cmatCost": 100,
-        "buildingRecipes": [
-            {
-                "outputNames": [ "$MaterialOilHeavy" ],
-                "outputAmounts": [ 30 ],
-                "powerConsumption": 0,
-                "productionTime": 50
-            },
-            {
-                "inputNames": [ "MaterialRawCoal" ],
-                "inputAmounts": [ 100 ],
-                "outputNames": [ "$MaterialOilEnriched" ],
-                "outputAmounts": [ 30 ],
-                "powerConsumption": 0,
-                "productionTime": 90
-            }
-        ]
-    },
-    "HarvesterSalvage": {
-        "name": "Stationary Harvester (Scrap)",
-        "category": "Resource Harvester",
-        "buildingType": "Gathering",
-        "description": "A stationary harvester that automatically gathers Salvage using Petrol as fuel..",
-        "cmatCost": 150,
-        "buildingUpgrades": [ "HarvesterSalvageExcavator" ],
-        "buildingRecipes": [
-            {
-                "inputNames": [ "$MaterialOilPetrol" ],
-                "inputAmounts": [ 4 ],
-                "outputNames": [ "MaterialRawSalvage" ],
-                "outputAmounts": [ 50 ],
-                "powerConsumption": 0,
-                "productionTime": 18
-            }
-        ]
-    },
-    "HarvesterComponents": {
-        "name": "Stationary Harvester (Components)",
-        "category": "Resource Harvester",
-        "buildingType": "Gathering",
-        "description": "A stationary harvester that automatically gathers Components using Petrol as fuel.",
-        "pcmatCost": 45,
-        "buildingUpgrades": [ "HarvesterComponentsExcavator" ],
-        "buildingRecipes": [
-            {
-                "inputNames": [ "$MaterialOilHeavy" ],
-                "inputAmounts": [ 4 ],
-                "outputNames": [ "MaterialRawComponents" ],
-                "outputAmounts": [ 6 ],
-                "powerConsumption": 0,
-                "productionTime": 12
-            }
-        ]
-    },
-    "HarvesterCoal": {
-        "name": "Stationary Harvester (Coal)",
-        "category": "Resource Harvester",
-        "buildingType": "Gathering",
-        "description": "A stationary harvester that automatically gathers Coal using Petrol as fuel.",
-        "pcmatCost": 25,
-        "buildingUpgrades": [ "HarvesterCoalExcavator" ],
-        "buildingRecipes": [
-            {
-                "inputNames": [ "$MaterialOilPetrol" ],
-                "inputAmounts": [ 1 ],
-                "outputNames": [ "MaterialRawCoal" ],
-                "outputAmounts": [ 50 ],
-                "powerConsumption": 0,
-                "productionTime": 18
-            }
-        ]
-    },
-    "HarvesterSulfur": {
-        "name": "Stationary Harvester (Sulfur)",
-        "category": "Resource Harvester",
-        "buildingType": "Gathering",
-        "description": "A stationary harvester that automatically gathers Sulfur using Heavy Oil as fuel.",
-        "pcmatCost": 45,
-        "buildingUpgrades": [ "HarvesterSulfurExcavator" ],
-        "buildingRecipes": [
-            {
-                "inputNames": [ "$MaterialOilHeavy" ],
-                "inputAmounts": [ 4 ],
-                "outputNames": [ "MaterialRawSulfur" ],
-                "outputAmounts": [ 6 ],
-                "powerConsumption": 0,
-                "productionTime": 12
-            }
-        ]
-    }
+  "MaterialsFactory": {
+    "name": "Materials Factory",
+    "category": "Facility Structure",
+    "buildingType": "Manufacturing",
+    "description": "A factory that refines raw resources into Construction Materials for advanced facilities. Additional modifications allow for the development of a variety of different materials.",
+    "bmatCost": 200,
+    "buildingUpgrades": [ "MaterialsFactoryForge", "MaterialsFactoryMetalPress", "MaterialsFactorySmelter", "MaterialsFactoryAssembly" ],
+    "buildingRecipes": [
+      {
+        "inputNames": [ "MaterialRawSalvage" ],
+        "inputAmounts": [ 10 ],
+        "outputNames": [ "MaterialConstruction" ],
+        "outputAmounts": [ 1 ],
+        "powerConsumption": 2,
+        "productionTime": 25
+      },
+      {
+        "inputNames": [ "MaterialRawSalvage" ],
+        "inputAmounts": [ 150 ],
+        "outputNames": [ "SuppliesMaintenance" ],
+        "outputAmounts": [ 20 ],
+        "powerConsumption": 3,
+        "productionTime": 40
+      }
+    ]
+  },
+  "MetalworksFactory": {
+    "name": "Metalworks Factory",
+    "category": "Facility Structure",
+    "buildingType": "Manufacturing",
+    "description": "A factory for refining raw resources into Processed Construction Materials. Additional modifications can allow for addtitional refined materials needed for advanced facility operations.",
+    "cmatCost": 125,
+    "buildingUpgrades": [ "MetalworksFactoryBlastFurnace", "MetalworksFactoryRecycler", "MetalworksFactoryEngineering" ],
+    "buildingRecipes": [
+      {
+        "inputNames": [ "MaterialConstruction", "MaterialRawComponents" ],
+        "inputAmounts": [ 3, 20 ],
+        "outputNames": [ "MaterialProcessedConstruction" ],
+        "outputAmounts": [ 1 ],
+        "powerConsumption": 5,
+        "productionTime": 60
+      },
+      {
+        "inputNames": [ "MaterialProcessedConstruction" ],
+        "inputAmounts": [ 3 ],
+        "outputNames": [ "Pipe" ],
+        "outputAmounts": [ 1 ],
+        "powerConsumption": 5,
+        "productionTime": 120
+      }
+    ]
+  },
+  "SmallArmsFactory": {
+    "name": "Infantry Kit Factory",
+    "category": "Facility Structure",
+    "buildingType": "Manufacturing",
+    "description": "A factory that specializes in manufacturing infantry uniforms. Modifications may be constructed to manufacture infantry arms and heavy ammunition.",
+    "cmatCost": 250,
+    "buildingUpgrades": [ "SmallArmsFactoryAssaultWeapons", "SmallArmsFactoryAmmunition", "SmallArmsMunitonsFoundry" ],
+    "buildingRecipes": [
+      {
+        "inputNames": [ "MaterialConstruction" ],
+        "inputAmounts": [ 110 ],
+        "outputNames": [ "$UniformArmourBreastplate" ],
+        "outputAmounts": [ 10 ],
+        "powerConsumption": 12,
+        "productionTime": 8100,
+        "faction": "W"  
+      },
+      {
+        "inputNames": [ "MaterialConstruction" ],
+        "inputAmounts": [ 110 ],
+        "outputNames": [ "$UniformEngineerGear" ],
+        "outputAmounts": [ 10 ],
+        "powerConsumption": 12,
+        "productionTime": 8100,
+        "faction": "W"  
+      },
+      {
+        "inputNames": [ "MaterialConstruction" ],
+        "inputAmounts": [ 110 ],
+        "outputNames": [ "$UniformAmmoOvercoat" ],
+        "outputAmounts": [ 10 ],
+        "powerConsumption": 12,
+        "productionTime": 8100,
+        "faction": "W"  
+      },
+      {
+        "inputNames": [ "MaterialConstruction" ],
+        "inputAmounts": [ 110 ],
+        "outputNames": [ "$UniformMedicJacket" ],
+        "outputAmounts": [ 10 ],
+        "powerConsumption": 12,
+        "productionTime": 8100,
+        "faction": "W"  
+      },
+      {
+        "inputNames": [ "MaterialConstruction" ],
+        "inputAmounts": [ 110 ],
+        "outputNames": [ "$UniformOfficerRegalia" ],
+        "outputAmounts": [ 10 ],
+        "powerConsumption": 12,
+        "productionTime": 8100,
+        "faction": "W"  
+      },
+      {
+        "inputNames": [ "MaterialConstruction" ],
+        "inputAmounts": [ 110 ],
+        "outputNames": [ "$UniformScoutMantle" ],
+        "outputAmounts": [ 10 ],
+        "powerConsumption": 12,
+        "productionTime": 8100,
+        "faction": "W"  
+      },
+      {
+        "inputNames": [ "MaterialConstruction" ],
+        "inputAmounts": [ 110 ],
+        "outputNames": [ "$UniformSnowParka" ],
+        "outputAmounts": [ 10 ],
+        "powerConsumption": 12,
+        "productionTime": 8100,
+        "faction": "W"  
+      },
+      {
+        "inputNames": [ "MaterialConstruction" ],
+        "inputAmounts": [ 110 ],
+        "outputNames": [ "$UniformTankSuit" ],
+        "outputAmounts": [ 10 ],
+        "powerConsumption": 12,
+        "productionTime": 8100,
+        "faction": "W"  
+      },
+      {
+        "inputNames": [ "MaterialConstruction" ],
+        "inputAmounts": [ 110 ],
+        "outputNames": [ "$UniformNavalPeacoat" ],
+        "outputAmounts": [ 10 ],
+        "powerConsumption": 12,
+        "productionTime": 8100,
+        "faction": "W"  
+      },
+      {
+        "inputNames": [ "MaterialConstruction" ],
+        "inputAmounts": [ 110 ],
+        "outputNames": [ "$UniformArmourVest" ],
+        "outputAmounts": [ 10 ],
+        "powerConsumption": 12,
+        "productionTime": 8100,
+        "faction": "C"  
+      },
+      {
+        "inputNames": [ "MaterialConstruction" ],
+        "inputAmounts": [ 110 ],
+        "outputNames": [ "$UniformEngineerRucksack" ],
+        "outputAmounts": [ 10 ],
+        "powerConsumption": 12,
+        "productionTime": 8100,
+        "faction": "C"  
+      },
+      {
+        "inputNames": [ "MaterialConstruction" ],
+        "inputAmounts": [ 110 ],
+        "outputNames": [ "$UniformGrenadeBaldric" ],
+        "outputAmounts": [ 10 ],
+        "powerConsumption": 12,
+        "productionTime": 8100,
+        "faction": "C"  
+      },
+      {
+        "inputNames": [ "MaterialConstruction" ],
+        "inputAmounts": [ 110 ],
+        "outputNames": [ "$UniformMedicFatigues" ],
+        "outputAmounts": [ 10 ],
+        "powerConsumption": 12,
+        "productionTime": 8100,
+        "faction": "C"  
+      },
+      {
+        "inputNames": [ "MaterialConstruction" ],
+        "inputAmounts": [ 110 ],
+        "outputNames": [ "$UniformOfficerAttire" ],
+        "outputAmounts": [ 10 ],
+        "powerConsumption": 12,
+        "productionTime": 8100,
+        "faction": "C"  
+      },
+      {
+        "inputNames": [ "MaterialConstruction" ],
+        "inputAmounts": [ 110 ],
+        "outputNames": [ "$UniformRainOilcoat" ],
+        "outputAmounts": [ 10 ],
+        "powerConsumption": 12,
+        "productionTime": 8100,
+        "faction": "C"  
+      },
+      {
+        "inputNames": [ "MaterialConstruction" ],
+        "inputAmounts": [ 110 ],
+        "outputNames": [ "$UniformScoutCamo" ],
+        "outputAmounts": [ 10 ],
+        "powerConsumption": 12,
+        "productionTime": 8100,
+        "faction": "C"  
+      },
+      {
+        "inputNames": [ "MaterialConstruction" ],
+        "inputAmounts": [ 110 ],
+        "outputNames": [ "$UniformSnowTopcoat" ],
+        "outputAmounts": [ 10 ],
+        "powerConsumption": 12,
+        "productionTime": 8100,
+        "faction": "C"  
+      },
+      {
+        "inputNames": [ "MaterialConstruction" ],
+        "inputAmounts": [ 110 ],
+        "outputNames": [ "$UniformTankCoveralls" ],
+        "outputAmounts": [ 10 ],
+        "powerConsumption": 12,
+        "productionTime": 8100,
+        "faction": "C"  
+      },
+      {
+        "inputNames": [ "MaterialConstruction" ],
+        "inputAmounts": [ 110 ],
+        "outputNames": [ "$UniformNavalGarb" ],
+        "outputAmounts": [ 10 ],
+        "powerConsumption": 12,
+        "productionTime": 8100,
+        "faction": "C"  
+      }
+    ]
+  },
+  "AmmoFactory": {
+    "name": "Ammunition Factory",
+    "category": "Facility Structure",
+    "buildingType": "Manufacturing",
+    "description": "A factory for producing advanced ammo types such as large calibre shells, rockets, and flame ammo.",
+    "pcmatCost": 25,
+    "buildingUpgrades": [ "AmmoFactoryRocket", "AmmoFactoryLargeShell", "AmmoFactoryTripod" ],
+    "buildingRecipes": [
+      {
+        "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
+        "inputAmounts": [ 4, 1 ],
+        "outputNames": [ "AmmoFlame" ],
+        "outputAmounts": [ 1 ],
+        "powerConsumption": 4,
+        "productionTime": 25
+      },
+      {
+        "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
+        "inputAmounts": [ 24, 5 ],
+        "outputNames": [ "AmmoShell250" ],
+        "outputAmounts": [ 1 ],
+        "powerConsumption": 4,
+        "productionTime": 30
+      },
+      {
+        "inputNames": [ "MaterialExplosive", "MaterialConstruction" ],
+        "inputAmounts": [ 2, 2 ],
+        "outputNames": [ "APMine" ],
+        "outputAmounts": [ 1 ],
+        "powerConsumption": 4,
+        "productionTime": 25
+      },
+      {
+        "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
+        "inputAmounts": [ 2, 2 ],
+        "outputNames": [ "ATMine" ],
+        "outputAmounts": [ 1 ],
+        "powerConsumption": 4,
+        "productionTime": 25
+      },
+      {
+        "inputNames": [ "MaterialHeavyExplosive", "MaterialConstruction" ],
+        "inputAmounts": [ 8, 1 ],
+        "outputNames": [ "SeaMine" ],
+        "outputAmounts": [ 1 ],
+        "powerConsumption": 4,
+        "productionTime": 90
+      },
+      {
+        "inputNames": [ "MaterialConstruction", "AssemblyMaterialsT4" ],
+        "inputAmounts": [ 2, 5 ],
+        "outputNames": [ "MaterialThermalShielding" ],
+        "outputAmounts": [ 1 ],
+        "powerConsumption": 4,
+        "productionTime": 1500
+      },
+      {
+        "inputNames": [ "MaterialConstruction", "MaterialHeavyExplosive", "AmmoShell250" ],
+        "inputAmounts": [ 15, 24, 1 ],
+        "outputNames": [ "AmmoShell250Fury" ],
+        "outputAmounts": [ 1 ],
+        "powerConsumption": 4,
+        "productionTime": 30,
+        "faction": "C"
+      }
+    ]
+  },
+  "CoalRefinery": {
+    "name": "Coal Refinery",
+    "category": "Facility Structure",
+    "buildingType": "Manufacturing",
+    "description": "A processing plant that refines Coal into useful materials used in facility production and power.",
+    "cmatCost": 50,
+    "buildingUpgrades": [ "CoalRefineryCokeFurnace", "CoalRefineryLiquifier", "CoalRefineryAdvancedLiquifier" ],
+    "buildingRecipes": [
+      {
+        "inputNames": [ "MaterialRawCoal" ],
+        "inputAmounts": [ 200 ],
+        "outputNames": [ "MaterialCoke" ],
+        "outputAmounts": [ 180 ],
+        "powerConsumption": 3,
+        "productionTime": 270
+      }
+    ]
+  },
+  "OilRefinery": {
+    "name": "Oil Refinery",
+    "category": "Facility Structure",
+    "buildingType": "Manufacturing",
+    "description": "A refinery that processes Oil into other useful materials for purposes of production and power generation.",
+    "cmatCost": 50,
+    "buildingUpgrades": [ "OilRefineryReformer", "OilRefineryCrackSchack", "OilRefineryPetrochemical" ],
+    "buildingRecipes": [
+      {
+        "inputNames": [ "$MaterialOilCrude" ],
+        "inputAmounts": [ 50 ],
+        "outputNames": [ "$MaterialOilPetrol" ],
+        "outputAmounts": [ 50 ],
+        "powerConsumption": 1,
+        "productionTime": 50
+      }
+    ]
+  },
+  "DieselPowerPlant": {
+    "name": "Diesel Power Plant",
+    "category": "Facility Structure",
+    "buildingType": "Manufacturing",
+    "description": "A structure that generates power by burning Diesel.",
+    "bmatCost": 150,
+    "buildingUpgrades": [ "DieselPowerPlantPetrol", "DieselPowerPlantCoal" ],
+    "buildingRecipes": [
+      {
+        "inputNames": [ "$MaterialDiesel" ],
+        "inputAmounts": [ 25 ],
+        "powerConsumption": -5,
+        "productionTime": 45
+      }
+    ]
+  },
+  "PowerStation": {
+    "name": "Power Station",
+    "category": "Facility Structure",
+    "buildingType": "Manufacturing",
+    "description": "A power plant that generates a large amount of electricity using Oil or Coal.",
+    "pcmatCost": 25,
+    "buildingUpgrades": [ "PowerStationSulfuricReactor" ],
+    "buildingRecipes": [
+      {
+        "inputNames": [ "$MaterialOilCrude" ],
+        "inputAmounts": [ 50 ],
+        "powerConsumption": -10,
+        "productionTime": 90
+      },
+      {
+        "inputNames": [ "MaterialRawCoal", "$MaterialWater" ],
+        "inputAmounts": [ 30, 0.1 ],
+        "powerConsumption": -10,
+        "productionTime": 90
+      }
+    ]
+  },
+  "OilWell": {
+    "name": "Oil Well",
+    "category": "Resource Harvester",
+    "buildingType": "Gathering",
+    "description": "Extracts fuel from Crude Oil Fields. Must be constructed nearby.",
+    "cmatCost": 35,
+    "buildingUpgrades": [ "OilWellElectric", "OilWellFracker" ],
+    "buildingRecipes": [
+      {
+        "outputNames": [ "MaterialOilCrude" ],
+        "outputAmounts": [ 50 ],
+        "powerConsumption": 0,
+        "productionTime": 50
+      }
+    ]
+  },
+  "WaterPump": {
+    "category": "Resource Harvester",
+    "name": "Water Pump",
+    "buildingType": "Gathering",
+    "description": "Pumps water through pipes. Must be built on bodies of water.",
+    "cmatCost": 35,
+    "buildingUpgrades": [ "WaterPumpPiped" ],
+    "buildingRecipes": [
+      {
+        "outputNames": [ "$MaterialWater" ],
+        "outputAmounts": [ 50 ],
+        "powerConsumption": 0,
+        "productionTime": 50
+      }
+    ]
+  },
+  "OilRig": {
+    "name": "Offshore Platform",
+    "category": "Resource Harvester",
+    "buildingType": "Gathering",
+    "description": "Offshore Platforms are open-water extraction facilities used to extract various oils. A steady supply of processed Coal is required for certain operations, as extracting materials from the ocean floor is a complex process.",
+    "cmatCost": 100,
+    "buildingRecipes": [
+      {
+        "outputNames": [ "$MaterialOilHeavy" ],
+        "outputAmounts": [ 30 ],
+        "powerConsumption": 0,
+        "productionTime": 50
+      },
+      {
+        "inputNames": [ "MaterialRawCoal" ],
+        "inputAmounts": [ 100 ],
+        "outputNames": [ "$MaterialOilEnriched" ],
+        "outputAmounts": [ 30 ],
+        "powerConsumption": 0,
+        "productionTime": 90
+      }
+    ]
+  },
+  "HarvesterSalvage": {
+    "name": "Stationary Harvester (Scrap)",
+    "category": "Resource Harvester",
+    "buildingType": "Gathering",
+    "description": "A stationary harvester that automatically gathers Salvage using Petrol as fuel..",
+    "cmatCost": 150,
+    "buildingUpgrades": [ "HarvesterSalvageExcavator" ],
+    "buildingRecipes": [
+      {
+        "inputNames": [ "$MaterialOilPetrol" ],
+        "inputAmounts": [ 4 ],
+        "outputNames": [ "MaterialRawSalvage" ],
+        "outputAmounts": [ 50 ],
+        "powerConsumption": 0,
+        "productionTime": 18
+      }
+    ]
+  },
+  "HarvesterComponents": {
+    "name": "Stationary Harvester (Components)",
+    "category": "Resource Harvester",
+    "buildingType": "Gathering",
+    "description": "A stationary harvester that automatically gathers Components using Petrol as fuel.",
+    "pcmatCost": 45,
+    "buildingUpgrades": [ "HarvesterComponentsExcavator" ],
+    "buildingRecipes": [
+      {
+        "inputNames": [ "$MaterialOilHeavy" ],
+        "inputAmounts": [ 4 ],
+        "outputNames": [ "MaterialRawComponents" ],
+        "outputAmounts": [ 6 ],
+        "powerConsumption": 0,
+        "productionTime": 12
+      }
+    ]
+  },
+  "HarvesterCoal": {
+    "name": "Stationary Harvester (Coal)",
+    "category": "Resource Harvester",
+    "buildingType": "Gathering",
+    "description": "A stationary harvester that automatically gathers Coal using Petrol as fuel.",
+    "pcmatCost": 25,
+    "buildingUpgrades": [ "HarvesterCoalExcavator" ],
+    "buildingRecipes": [
+      {
+        "inputNames": [ "$MaterialOilPetrol" ],
+        "inputAmounts": [ 1 ],
+        "outputNames": [ "MaterialRawCoal" ],
+        "outputAmounts": [ 50 ],
+        "powerConsumption": 0,
+        "productionTime": 18
+      }
+    ]
+  },
+  "HarvesterSulfur": {
+    "name": "Stationary Harvester (Sulfur)",
+    "category": "Resource Harvester",
+    "buildingType": "Gathering",
+    "description": "A stationary harvester that automatically gathers Sulfur using Heavy Oil as fuel.",
+    "pcmatCost": 45,
+    "buildingUpgrades": [ "HarvesterSulfurExcavator" ],
+    "buildingRecipes": [
+      {
+        "inputNames": [ "$MaterialOilHeavy" ],
+        "inputAmounts": [ 4 ],
+        "outputNames": [ "MaterialRawSulfur" ],
+        "outputAmounts": [ 6 ],
+        "powerConsumption": 0,
+        "productionTime": 12
+      }
+    ]
+  }
 }
