@@ -8,7 +8,7 @@
       "general": [ "Can be carried by vehicles that support up to large sized shippables", "Engine can be boosted for increased top speed" ],
       "Turret": [ "$Deals Light Kinetic damage" ]
     },
-    "pcmatCost": 45,
+    "pcmatCost": 60,
     "assmatCost": [ 10, 0, 15, 15, 0 ],
     "baseVehicle": "CruiserTankBrigand",
     "productionTime": 600,
@@ -71,6 +71,20 @@
     "steelCost": 15,
     "assmatCost": [ 0, 20, 15, 0, 0 ],
     "baseVehicle": "FieldAntiTankBatteringRam",
+    "productionTime": 420,
+    "faction": "C"
+  },
+  "FieldMortarAlekto": {
+    "name": "40-250 \"Alekto\" Heavy Cannon",
+    "category": "Large Field Mortar",
+    "description": "Fitted with a larger, more advanced cannon and a sturdier chassis, this modification of the \"Tisiphone\" Field Cannon specializes in breaching assaults. What it lacks in overall versatility, it makes up for with a high firing arc, making it ideal for circumventing walled encampments.",
+    "ammoUsed": "250mm \"Purity\" Shell",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables", "Can be towed by certain vehicles" ]
+    },
+    "steelCost": 10,
+    "assmatCost": [ 0, 20, 15, 0, 0 ],
+    "baseVehicle": "FieldMortarTisiphone",
     "productionTime": 420,
     "faction": "C"
   }

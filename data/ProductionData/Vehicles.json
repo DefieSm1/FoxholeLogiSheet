@@ -47,6 +47,63 @@
     "productionTime": 5000,
     "faction": "W"
   },
+  "TruckAmbulanceSalus": {
+    "name": "R-12 - \"Salus\" Ambulance",
+    "category": "Ambulance",
+    "description": "The \"Salus\" Ambulance is efficient at transporting Critically Wounded Soldiers carrying medical supplies.",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables" ] 
+    },
+    "crateSize": 3,
+    "bmatCost": 150,
+    "productionTime": 7205,
+    "faction": "C"
+  },
+  "ACMGC": {
+    "name": "T3 \"Xiphos\"",
+    "category": "Armoured Car",
+    "description": "Colonial Armoured Cars are quick, well-rounded urban assault platforms. These anti-infantry vehicles are equipped with twin-barreled machineguns.",
+    "ammoUsed": "7.92mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
+      "Turret (Center)": [ "$Deals Light Kinetic damage" ] 
+    },
+    "crateSize": 3,
+    "rmatCost": 25,
+    "productionTime": 1250,
+    "faction": "C"
+  },
+  "TruckBusChariot": {
+    "name": "R-15 - \"Chariot\"",
+    "category": "Transport Bus",
+    "description": "The \"Chariot\" is a transport vehicle used to shuttle personnel to the front line.",
+    "crateSize": 3,
+    "bmatCost": 100,
+    "productionTime": 5000,
+    "faction": "C"
+  },
+  "ConstructionVehicle": {
+    "name": "BMS - Universal Assembly Rig",
+    "category": "Construction Vehicle",
+    "description": "A specialized vehicle designed by the Basset Motor Society used in the construction of large structures.",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ]
+    },
+    "crateSize": 3,
+    "bmatCost": 100,
+    "productionTime": 5000
+  },
+  "Crane": {
+    "name": "BMS - Class 2 Mobile Auto-Crane",
+    "category": "Crane",
+    "description": "The Basset Motor Society's Class 2 Mobile Auto-Crane is used to lift and reposition vehicles and very heavy equipment.",
+    "itemSpecifics": {
+      "general": [ "Carries 1 shippable" ]
+    },
+    "crateSize": 3,
+    "bmatCost": 125,
+    "productionTime": 6250
+  },
   "TankDestroyerHeavy": {
     "name": "Noble Widow MK. XIV",
     "category": "Destroyer Tank",
@@ -107,7 +164,7 @@
     "name": "Balfour Falconer 250mm",
     "category": "Field Mortar",
     "description": "A heavy mobile mortar platform fitted with a thick frontal shield for assaulting fortified locations.",
-    "ammoUsed": "250mm",
+    "ammoUsed": "250mm \"Purity\" Shell",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to medium sized shippables", "Can be towed by certain vehicles" ]
     },
@@ -115,41 +172,6 @@
     "rmatCost": 35,
     "productionTime": 1750,
     "faction": "W"
-  },
-  "TruckAmbulanceSalus": {
-    "name": "R-12 - \"Salus\" Ambulance",
-    "category": "Ambulance",
-    "description": "The \"Salus\" Ambulance is efficient at transporting Critically Wounded Soldiers carrying medical supplies.",
-    "itemSpecifics": {
-      "general": [ "Can be carried by vehicles that support up to large sized shippables" ] 
-    },
-    "crateSize": 3,
-    "bmatCost": 150,
-    "productionTime": 7205,
-    "faction": "C"
-  },
-  "ACMGC": {
-    "name": "T3 \"Xiphos\"",
-    "category": "Armoured Car",
-    "description": "Colonial Armoured Cars are quick, well-rounded urban assault platforms. These anti-infantry vehicles are equipped with twin-barreled machineguns.",
-    "ammoUsed": "7.92mm",
-    "itemSpecifics": {
-      "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
-      "Turret (Center)": [ "$Deals Light Kinetic damage" ] 
-    },
-    "crateSize": 3,
-    "rmatCost": 25,
-    "productionTime": 1250,
-    "faction": "C"
-  },
-  "TruckBusChariot": {
-    "name": "R-15 - \"Chariot\"",
-    "category": "Transport Bus",
-    "description": "The \"Chariot\" is a transport vehicle used to shuttle personnel to the front line.",
-    "crateSize": 3,
-    "bmatCost": 100,
-    "productionTime": 5000,
-    "faction": "C"
   },
   "FieldAntiTankBatteringRam": {
     "name": "AA-2 \"Battering Ram\"",
@@ -183,7 +205,7 @@
     "name": "30-250 \"Tisiphone\" Field Cannon",
     "category": "Field Mortar",
     "description": "The 30-250 \"Tisiphone\" Field Cannon is mobilized destruction incarnate. An infantry unit armed with these mortar cannons signals imminent devastation to enemy structures and emplacements.",
-    "ammoUsed": "250mm",
+    "ammoUsed": "250mm \"Purity\" Shell",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to medium sized shippables", "Can be towed by certain vehicles" ]
     },
@@ -359,7 +381,7 @@
       "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
       "Turret": [ "$Deals Explosive damage", "Can penetrate armoured vehicles" ] 
     },
-    "crateSize": 3,
+    "crateSize": 5,
     "rmatCost": 135,
     "productionTime": 6750,
     "faction": "C"
@@ -579,27 +601,5 @@
     "rmatCost": 125,
     "productionTime": 6250,
     "faction": "C"
-  },
-  "ConstructionVehicle": {
-    "name": "BMS - Universal Assembly Rig",
-    "category": "Construction Vehicle",
-    "description": "A specialized vehicle designed by the Basset Motor Society used in the construction of large structures.",
-    "itemSpecifics": {
-      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ]
-    },
-    "crateSize": 3,
-    "bmatCost": 100,
-    "productionTime": 5000
-  },
-  "Crane": {
-    "name": "BMS - Class 2 Mobile Auto-Crane",
-    "category": "Crane",
-    "description": "The Basset Motor Society's Class 2 Mobile Auto-Crane is used to lift and reposition vehicles and very heavy equipment.",
-    "itemSpecifics": {
-      "general": [ "Carries 1 shippable" ]
-    },
-    "crateSize": 3,
-    "bmatCost": 125,
-    "productionTime": 6250
   }
 }

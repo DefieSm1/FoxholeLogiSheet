@@ -140,6 +140,16 @@
     "rmatCost": 75,
     "productionTime": 3750
   },
+  "ConstructionEquipment": {
+    "name": "Construction Equipment",
+    "category": "Shippable Construction Equipment",
+    "description": "An automated excavator that can be fuelled with Gravel to assist with construction projects.",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ]
+    },
+    "rmatCost": 75,
+    "productionTime": 3750
+  },
   "FuelContainer": {
     "name": "Liquid Container",
     "category": "Shippable Container",

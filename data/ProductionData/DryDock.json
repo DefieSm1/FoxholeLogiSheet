@@ -40,8 +40,8 @@
       "Gunner (Starboard Beam)": [ "$Deals High Explosive damage", "Increased chance to cause a leak." ],
       "Turret (Midships)": [ "$Deals Explosive damage", "Can penetrate armoured vehicles" ]
     },
-    "hullSegments": 12,
-    "shellPlating": 12,
+    "hullSegments": 15,
+    "shellPlating": 15,
     "productionTime": 21600,
     "faction": "W"
   },
@@ -71,8 +71,8 @@
       "Turret (Starboard Bow), Turret (Port Bow)": [ "$Deals Armour Piercing damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ],
       "Gunner (Starboard Beam), Gunner (Port Beam)": [ "$Deals Kinetic Damage" ]
     },
-    "hullSegments": 15,
-    "shellPlating": 15,
+    "hullSegments": 12,
+    "shellPlating": 12,
     "productionTime": 21600,
     "faction": "W"
   },
@@ -86,8 +86,8 @@
       "Turret (Bow)": [ "$Deals Explosive damage", "Can penetrate armoured vehicles" ],
       "Gunner (Starboard Beam), Gunner (Port Beam)": [ "$Deals Kinetic Damage" ]
     },
-    "hullSegments": 15,
-    "shellPlating": 15,
+    "hullSegments": 12,
+    "shellPlating": 12,
     "productionTime": 21600,
     "faction": "C"
   },
@@ -116,8 +116,8 @@
       "Gunner (Port Beam), Gunner (Starboard Beam)": [ "$Deals High Explosive damage", "Increased chance to cause a leak" ],
       "Cannoneer (Midships)": [ "$Deals High Explosive damage", "Can ruin structures that have been severly damaged by artillery", "Reduced damage against Trenches", "Increased damage against Field Structures" ]
     },
-    "hullSegments": 12,
-    "shellPlating": 12,
+    "hullSegments": 15,
+    "shellPlating": 15,
     "productionTime": 21600,
     "faction": "C"
   }

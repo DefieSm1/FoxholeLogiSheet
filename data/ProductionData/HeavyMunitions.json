@@ -24,11 +24,11 @@
     "productionTime": 55
   },
   "AmmoShell250": {
-    "name": "250mm",
+    "name": "250mm \"Purity\" Shell",
     "category": "Spigot Mortar Ammo",
     "description": "A shell that is launched over short distances by a spigot mortar.",
     "itemSpecifics": {
-      "general": [ "$Deals Demolition damage", "Can ruin structures that have been severly damaged by artillery" ] 
+      "general": [ "$Deals Demolition damage", "Can ruin structures that have been severly damaged by artillery", "Significantly increased chance to breach a bunker" ] 
     },
     "crateSize": 5,
     "bmatCost": 120,

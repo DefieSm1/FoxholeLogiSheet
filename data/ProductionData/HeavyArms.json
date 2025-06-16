@@ -161,9 +161,9 @@
     "category": "Grenade Launcher",
     "description": "A weapon designed to launch specialty grenades over long-distances. This modern Kraunian firearm uses advanced propulsion designed for increased efficiency due to overall weight of the weapon and projectiles.",
     "ammoUsed": "Green Ash Grenade, PT-815 Smoke Grenade, Tremola Grenade GPb-1",
-    "crateSize": 10,
+    "crateSize": 5,
     "bmatCost": 50,
-    "rmatCost": 30,
+    "rmatCost": 15,
     "productionTime": 100,
     "faction": "C"
   },

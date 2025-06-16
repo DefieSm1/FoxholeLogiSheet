@@ -47,6 +47,18 @@
     "productionTime": 90,
     "faction": "W"
   },
+  "UniformNavalPeacoat": {
+    "name": "Gentleman's Peacoat",
+    "category": "Warden Naval Uniform",
+    "description": "Seamen of the Caoivish Naval Command are always prepared to operate at the highest levels, even in frigid, northern waters. Every Warden sailor's readiness paints a portrait of life or death; thus, cold-weather outerwear is an essential part of every CNC gentleman's kit.",
+    "itemSpecifics": {
+      "general": [ "$6 backpack slots", "$Materials have reduced encumbrance", "$Water has reduced encumbrance", "$Increased movement in heavily flooded compartments" ] 
+    },
+    "crateSize": 15,
+    "bmatCost": 100,
+    "productionTime": 90,
+    "faction": "W"
+  },
   "UniformOfficerRegalia": {
     "name": "Officer's Regalia",
     "category": "Warden Officer Uniform",
@@ -137,6 +149,18 @@
     "description": "For medics of the Legion, this uniform has a plethora of pockets and bags designed to carry and deploy first aid gear easily.",
     "itemSpecifics": {
       "general": [ "$6 backpack slots", "$Bandages and Blood Plasma stack", "$First Aid Kits and Trauma Kits have reduced encumbrance" ] 
+    },
+    "crateSize": 15,
+    "bmatCost": 100,
+    "productionTime": 90,
+    "faction": "C"
+  },
+  "UniformNavalGarb": {
+    "name": "Remex Garb",
+    "category": "Colonial Naval Uniform",
+    "description": "Standard-issue uniform for sailors in the Velian branch of the Republic Coastal Legion. Dressed for practicality, Velian Remiges are second to none at keeping ships in tip-top condition while wading through water levels that would see most men praying for swift death.",
+    "itemSpecifics": {
+      "general": [ "$6 backpack slots", "$Materials have reduced encumbrance", "$Water has reduced encumbrance", "$Increased movement in heavily flooded compartments" ] 
     },
     "crateSize": 15,
     "bmatCost": 100,
