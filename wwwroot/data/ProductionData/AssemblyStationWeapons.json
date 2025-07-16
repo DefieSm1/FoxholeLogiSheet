@@ -21,7 +21,7 @@
     "ammoUsed": "94.5mm",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
-      "Gunner": [ "Equipped with a low velocity barrel that deals 31% less damage per shot", "$Deals Armour Piercing damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles", "Higher base chance to disable vehicle " ]
+      "Gunner": [ "Equipped with a low velocity barrel that deals 31% less damage per shot", "$Deals Armour Piercing damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles", "Higher base chance to disable vehicle subsystems" ]
     },
     "steelCost": 40,
     "assmatCost": [ 0, 15, 25, 0, 0 ],

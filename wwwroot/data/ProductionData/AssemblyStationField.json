@@ -4,7 +4,7 @@
     "category": "Harvester",
     "description": "The Scrap Hauler, designed by the Bassett Motor Society is a heavy-duty piece of machinery designed to reduce scrap metal and other materials into usable, raw resources. Scrap Haulers are often used to extract battlefield resources following skirmishes.",
     "itemSpecifics": {
-      "general": [ "Can be carried by vehicles that support up to large sized shippables" ]
+      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Can deactivate enemy mines (yes, really)" ]
     },
     "pcmatCost": 90,
     "assmatCost": [ 0, 0, 0, 25, 0 ],
