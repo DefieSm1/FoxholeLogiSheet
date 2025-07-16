@@ -79,7 +79,7 @@
       "inputNames": [ "MaterialRawSalvage" ],
       "inputAmounts": [ 25 ],
       "outputNames": [ "MaterialConstruction", "UtilityMetalBeam" ],
-      "outputAmounts": [ 1, 5 ],
+      "outputAmounts": [ 1, 1 ],
       "powerConsumption": 2,
       "productionTime": 25
     }
