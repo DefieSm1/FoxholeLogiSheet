@@ -422,8 +422,8 @@
     "name": "PT-815 Smoke Grenade",
     "category": "Smoke Grenade",
     "description": "A standard smoke grenade designed for concealing allied movement or screening the enemy's vision.",
-    "crateSize": 10,
-    "bmatCost": 120,
+    "crateSize": 15,
+    "bmatCost": 80,
     "productionTime": 75
   },
   "GrenadeGas": {
