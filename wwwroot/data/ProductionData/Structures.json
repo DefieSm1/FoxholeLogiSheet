@@ -148,7 +148,7 @@
       "general": [ "Can be carried by vehicles that support up to medium sized shippables" ]
     },
     "crateSize": 3,
-    "rmatCost": 75,
+    "rmatCost": 50,
     "productionTime": 3750
   },
   "FuelContainer": {
