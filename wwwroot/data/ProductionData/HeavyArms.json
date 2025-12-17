@@ -46,7 +46,7 @@
       "general": [ "$Deals Armour Piercing damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ]
     },
     "crateSize": 5,
-    "bmatCost": 115,
+    "bmatCost": 125,
     "rmatCost": 15,
     "productionTime": 75,
     "faction": "W"
