@@ -367,7 +367,7 @@
       },
       {
         "inputNames": [ "MaterialRawCoal", "$MaterialWater" ],
-        "inputAmounts": [ 30, 0.1 ],
+        "inputAmounts": [ 30, 1 ],
         "powerConsumption": -10,
         "productionTime": 90
       }
