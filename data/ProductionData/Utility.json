@@ -126,7 +126,7 @@
     "category": "Mounted Explosive Charge Detonator",
     "description": "Required to detonate Havoc Charges. The Havoc Charge must be placed before can be deployed.",
     "itemSpecifics": {
-      "general": [ "$Deals Demolition damage", "Can ruin structures that have been severely damaged by artillery", "$Always has a chnace to breach bunkers", "Significantly increased chance to breach a bunker" ]
+      "general": [ "$Deals Demolition damage", "Can ruin structures that have been severely damaged by artillery", "$Always has a chance to breach bunkers", "Significantly increased chance to breach a bunker" ]
     },
     "crateSize": 5,
     "bmatCost": 75,

@@ -39,8 +39,8 @@
       "Turret (Center)": [ "$Deals Explosive damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ],
       "Gunner (Front)": [ "$Deals Incendiary damage" ] 
     },
-    "steelCost": 45,
-    "assmatCost": [ 0, 0, 65, 30, 40 ],
+    "steelCost": 40,
+    "assmatCost": [ 0, 0, 65, 30, 45 ],
     "productionTime": 79200,
     "faction": "W"
   },
