@@ -9,7 +9,7 @@
       "Gunner (Front)": [ "Equipped with a high velocity barrel that deals 25% extra damage per shot", "$Deals Armour Piercing damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles", "Higher base chance to disable vehicle subsystems" ] 
     },
     "steelCost": 275,
-    "assmatCost": [ 0, 105, 0, 95, 105 ],
+    "assmatCost": [ 0, 0, 105, 95, 105 ],
     "rareCost": 3,
     "productionTime": 172800,
     "faction": "W"
@@ -39,7 +39,7 @@
       "Turret (Center)": [ "$Deals Explosive damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ],
       "Gunner (Front)": [ "$Deals Incendiary damage" ] 
     },
-    "steelCost": 45,
+    "steelCost": 40,
     "assmatCost": [ 0, 0, 65, 30, 45 ],
     "productionTime": 79200,
     "faction": "W"
