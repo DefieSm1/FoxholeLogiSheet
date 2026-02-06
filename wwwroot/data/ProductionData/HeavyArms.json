@@ -1,11 +1,11 @@
 {
   "ATRifle": {
-    "name": "20 Neville Anti-Tank Rifle",
+    "name": "Neville Anti-Tank Rifle",
     "category": "Anti-Tank Rifle",
     "description": "The Neville is unmatched in its versatility as a portable, magazine-based anti-armor firearm.",
-    "ammoUsed": "20mm",
+    "ammoUsed": "14.5mm",
     "itemSpecifics": {
-      "general": [ "Deals 200% of damage to vehicle armour", "Suppresses enemy vehicles", "Causes suppressed enemy vehicles", "Causes suppressed enemy players to lose stability" ]
+      "general": [ "Deals 200% of damage to vehicle armour", "Suppresses enemy vehicles", "Causes suppressed enemy vehicles", "Suppression causes enemies to lose stability" ]
     },
     "crateSize": 3,
     "bmatCost": 150,
@@ -16,9 +16,9 @@
     "name": "\"Typhon\" ra.XII",
     "category": "Mounted Anti-Tank Rifle",
     "description": "This mounted anti-tank rifle boasts improved accuracy over its free-standing counterparts. The Typhon was specifically designed with shock absorption in mind, allowing for faster, more consistent firing patterns.",
-    "ammoUsed": "20mm",
+    "ammoUsed": "14.5mm",
     "itemSpecifics": {
-      "general": [ "Gunner", "Equipped with a high velocity barrel that deals 20% extra damage per shot", "Causes suppressed enemy players to lose stability", "$Deals Anti-Tank Kinetic damage", "This can be attached to certain vehicles" ] 
+      "general": [ "Gunner", "Equipped with a high velocity barrel that deals 20% extra damage per shot", "Suppression causes enemies to lose stability", "$Deals Anti-Tank Kinetic damage", "This can be attached to certain vehicles" ] 
     },
     "crateSize": 5,
     "bmatCost": 100,
@@ -26,8 +26,8 @@
     "productionTime": 125,
     "faction": "C"
   },
-  "AmmoAT20": {
-    "name": "20mm",
+  "AmmoAT145": {
+    "name": "14.5mm",
     "category": "Anti-Tank Rifle Ammo",
     "description": "Standard ammunition for anti-tank rifles.",
     "itemSpecifics": {
@@ -199,7 +199,7 @@
     "description": "Early iterations of this machinegun were built to be emplaced in bunkers and on the decks of lightly armed warships, the Ratcatcher is Harvey Malone's first freely mountable infantry weapon designed for field use. Just like its predecessors, this heavy weapon suppresses enemy soldiers with unmatched efficiency.",
     "ammoUsed": "12.7mm",
     "itemSpecifics": {
-      "general": [ "Gunner", "Causes suppressed enemy players to lose stability", "$Deals Heavy Kinetic damage" ] 
+      "general": [ "Gunner", "Suppression causes enemies to lose stability", "$Deals Heavy Kinetic damage" ] 
     },
     "crateSize": 5,
     "bmatCost": 100,
@@ -213,7 +213,7 @@
     "description": "Built on the bones of the first automatic weapons introduced to the Legion, the \"Lamentum\" mm.IV is still quite an intimidating force to encounter on the battlefield. Boasting a large magazine and impressive active range, this mounted machinegun excels at laying down consistent suppressive fire.",
     "ammoUsed": "12.7mm",
     "itemSpecifics": {
-      "general": [ "Gunner", "Equipped with a high velocity barrel that deals 50% extra damage per shot", "Causes suppressed enemy players to lose stability", "$Deals Heavy Kinetic damage", "This can be attached to certain vehicles" ] 
+      "general": [ "Gunner", "Equipped with a high velocity barrel that deals 50% extra damage per shot", "Suppression causes enemies to lose stability", "$Deals Heavy Kinetic damage", "This can be attached to certain vehicles" ] 
     },
     "crateSize": 5,
     "bmatCost": 100,

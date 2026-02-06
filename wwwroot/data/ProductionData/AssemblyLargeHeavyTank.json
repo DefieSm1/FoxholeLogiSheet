@@ -22,7 +22,7 @@
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to large sized shippables", "Uses Heavy Oil as fuel" ],
       "Turret (Center)": [ "$Deals Explosive damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ],
-      "Turret (Front)": [ "Equipped with a low velocity barrel that deals 36% less damage per shot", "Causes suppressed enemy players to lose stability", "$Deals Heavy Kinetic damage" ] 
+      "Turret (Front)": [ "Equipped with a low velocity barrel that deals 36% less damage per shot", "Suppression causes enemies to lose stability", "$Deals Heavy Kinetic damage" ] 
     },
     "steelCost": 50,
     "assmatCost": [ 0, 0, 30, 60, 35 ],
@@ -81,7 +81,7 @@
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to large sized shippables", "Uses Heavy Oil as fuel" ],
       "Turret (Center)": [ "$Deals Explosive damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ],
-      "Turret (Front)": [ "Equipped with a low velocity barrel that deals 36% less damage per shot", "Causes suppressed enemy players to lose stability", "$Deals Heavy Kinetic damage" ] 
+      "Turret (Front)": [ "Equipped with a low velocity barrel that deals 36% less damage per shot", "Suppression causes enemies to lose stability", "$Deals Heavy Kinetic damage" ] 
     },
     "steelCost": 50,
     "assmatCost": [ 0, 0, 30, 60, 35 ],

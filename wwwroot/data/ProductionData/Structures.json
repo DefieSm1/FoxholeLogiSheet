@@ -1,74 +1,4 @@
 {
-  "EmplacedAntiTank68": {
-    "name": "Leary Shellbore 68mm",
-    "category": "Emplaced Anti-Tank Cannon",
-    "description": "A defensive emplacement with a 68mm Anti-Tank cannon. This rudimentary weapon was once built to fit onto the hull of large naval vessels, but was eventually pahsed out and repurposed.",
-    "ammoUsed": "68mm",
-    "itemSpecifics": {
-      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ],
-      "Gunner": [ "$Deals Armour Piercing damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ] 
-    },
-    "crateSize": 3,
-    "bmatCost": 150,
-    "productionTime": 7500,
-    "faction": "W"
-  },
-  "ArtilleryExalt": {
-    "name": "Huber Exalt 150mm",
-    "category": "Emplaced Heavy Artillery",
-    "description": "A heavy cannon designed to shatter the garrisons and fortifications of advancing forces. The Exalt is best utilized when emplaced into a defensive position to take advantage of it's impressive range.",
-    "ammoUsed": "150mm",
-    "itemSpecifics": {
-      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ],
-      "Cannoneer": [ "$Deals High Explosive damage", "Can ruin structures that have been severly damaged by artillery", "Reduced damaged against Trenches", "Increased damage against Field Structures" ] 
-    },
-    "crateSize": 3,
-    "rmatCost": 175,
-    "productionTime": 8750,
-    "faction": "W"
-  },
-  "EmplacedMachinegunSnareTrap": {
-    "name": "Leary Snare Trap 127",
-    "category": "Emplaced Machine Gun",
-    "description": "The Snare Trap is a repurposed anti-aircraft flak cannon used to fortify emplaced positions with twin anti-infantry machine guns.",
-    "ammoUsed": "12.7mm",
-    "itemSpecifics": {
-      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ],
-      "Machine Gun": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "Causes suppressed enemy players to lose stability", "$Deals Heavy Kinetic damage" ] 
-    },
-    "crateSize": 3,
-    "bmatCost": 75,
-    "productionTime": 3750,
-    "faction": "W"
-  },
-  "ArtilleryLariat": {
-    "name": "Huber Lariat 120mm",
-    "category": "Emplaced Light Artillery",
-    "description": "A light artillery cannon designed to be a fixture in defensive fortifications. The Lariat sports a formidibable long-range 120mm cannon designed to put immense pressure on enemy infantry.",
-    "ammoUsed": "120mm",
-    "itemSpecifics": {
-      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ],
-      "Cannoneer": [ "$Deals High Explosive damage", "Can ruin structures that have been severly damaged by artillery", "Reduced damaged against Trenches", "Increased damage against Field Structures" ] 
-    },
-    "crateSize": 3,
-    "rmatCost": 35,
-    "productionTime": 1750,
-    "faction": "W"
-  },
-  "ArtilleryThunderbolt": {
-    "name": "50-500 \"Thunderbolt\" Cannon",
-    "category": "Emplaced Heavy Artillery",
-    "description": "This heavy artillery cannon is designed to cripple enemy fortifications from an entrenched position. Its long heavy barrel gives the \"Thunderbolt\" outstanding range.",
-    "ammoUsed": "150mm",
-    "itemSpecifics": {
-      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ],
-      "Cannoneer": [ "$Deals High Explosive damage", "Can ruin structures that have been severly damaged by artillery", "Reduced damaged against Trenches", "Increased damage against Field Structures" ] 
-    },
-    "crateSize": 3,
-    "rmatCost": 195,
-    "productionTime": 9750,
-    "faction": "C"
-  },
   "MaterialPallet": {
     "name": "Material Pallet",
     "category": "Shippable Container",
@@ -101,7 +31,105 @@
     "crateSize": 3,
     "bmatCost": 100,
     "productionTime": 5000
-  }, 
+  },
+  "EmplacedFlakBolas": {
+    "name": "Leary AA-70 Bolas",
+    "category": "Emplaced Anti-Aircraft Cannon",
+    "description": "A late entry to the Leary arsenal, the AA-70 Bolas was a direct response to the sudden uptick in Colonial aerial aggression. This emplaced cannon excels equally at both slowing and bringing down enemy aircraft.",
+    "ammoUsed": "950-70b Anti-Aircraft Shell",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ],
+      "Cannoneer": [ "Suppression causes enemies to lose stability", "$Deals Shrapnel damage", "Always causes target to bleed" ]
+    },
+    "crateSize": 3,
+    "rmatCost": 175,
+    "productionTime": 8750,
+    "faction": "W"
+  },
+  "EmplacedAntiTank68": {
+    "name": "Leary Shellbore 68mm",
+    "category": "Emplaced Anti-Tank Cannon",
+    "description": "A defensive emplacement with a 68mm Anti-Tank cannon. This rudimentary weapon was once built to fit onto the hull of large naval vessels, but was eventually pahsed out and repurposed.",
+    "ammoUsed": "68mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ],
+      "Gunner": [ "$Deals Armour Piercing damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ] 
+    },
+    "crateSize": 3,
+    "bmatCost": 150,
+    "productionTime": 7500,
+    "faction": "W"
+  },
+  "ArtilleryExalt": {
+    "name": "Huber Exalt 150mm",
+    "category": "Emplaced Heavy Artillery",
+    "description": "A heavy cannon designed to shatter the garrisons and fortifications of advancing forces. The Exalt is best utilized when emplaced into a defensive position to take advantage of it's impressive range.",
+    "ammoUsed": "150mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ],
+      "Cannoneer": [ "$Deals High Explosive damage", "Can ruin structures that have been severly damaged by artillery", "Reduced damaged against Trenches", "Increased damage against Field Structures" ] 
+    },
+    "crateSize": 3,
+    "rmatCost": 175,
+    "productionTime": 8750,
+    "faction": "W"
+  },
+  "EmplacedMachinegunSnareTrap": {
+    "name": "Leary Snare Trap 20",
+    "category": "Emplaced Machine Gun",
+    "description": "The Snare Trap is a repurposed anti-aircraft flak cannon used to fortify emplaced positions with twin anti-infantry machine guns.",
+    "ammoUsed": "20mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ],
+      "Machine Gun": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "Suppression causes enemies to lose stability", "$Deals Shrapnel damage", "Always causes target to bleed" ] 
+    },
+    "crateSize": 3,
+    "bmatCost": 75,
+    "productionTime": 3750,
+    "faction": "W"
+  },
+  "ArtilleryLariat": {
+    "name": "Huber Lariat 120mm",
+    "category": "Emplaced Light Artillery",
+    "description": "A light artillery cannon designed to be a fixture in defensive fortifications. The Lariat sports a formidibable long-range 120mm cannon designed to put immense pressure on enemy infantry.",
+    "ammoUsed": "120mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ],
+      "Cannoneer": [ "$Deals High Explosive damage", "Can ruin structures that have been severly damaged by artillery", "Reduced damaged against Trenches", "Increased damage against Field Structures" ] 
+    },
+    "crateSize": 3,
+    "rmatCost": 35,
+    "productionTime": 1750,
+    "faction": "W"
+  },
+  "EmplacedFlakZeal": {
+    "name": "DAE 5b \"Zeal\"",
+    "category": "Emplaced Anti-Aircraft Cannon",
+    "description": "A sturdy, stationary cannon for bombarding high-flying enemy aircraft with explosive shrapnel shells. The DAE 5b anti-aricraft emplacement has become infamous for walls of black smoke its payload leaves behind.",
+    "ammoUsed": "950-70b Anti-Aircraft Shell",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ],
+      "Cannoneer": [ "Suppression causes enemies to lose stability", "$Deals Shrapnel damage", "Always causes target to bleed" ]
+    },
+    "crateSize": 3,
+    "rmatCost": 175,
+    "productionTime": 8750,
+    "faction": "C"
+  },
+  "ArtilleryThunderbolt": {
+    "name": "50-500 \"Thunderbolt\" Cannon",
+    "category": "Emplaced Heavy Artillery",
+    "description": "This heavy artillery cannon is designed to cripple enemy fortifications from an entrenched position. Its long heavy barrel gives the \"Thunderbolt\" outstanding range.",
+    "ammoUsed": "150mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ],
+      "Cannoneer": [ "$Deals High Explosive damage", "Can ruin structures that have been severly damaged by artillery", "Reduced damaged against Trenches", "Increased damage against Field Structures" ] 
+    },
+    "crateSize": 3,
+    "rmatCost": 195,
+    "productionTime": 9750,
+    "faction": "C"
+  },
   "EmplacedAntiTankARC": {
     "name": "DAE 1o-3 \"Polybolos\"",
     "category": "Emplaced ARC/RPG",
@@ -119,10 +147,10 @@
     "name": "DAE 1b-2 \"Serra\"",
     "category": "Emplaced Machine Gun",
     "description": "Built like a saw blade, the DAE 1b-2 emplacement gun is fitted with three cascading machine gun turrets. What the \"Serra\" lacks in power, it makes up for in sheer rate of fire for a weapon of its size.",
-    "ammoUsed": "12.7mm",
+    "ammoUsed": "20mm",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to medium sized shippables" ],
-      "Machine Gun": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "Causes suppressed enemy players to lose stability", "$Deals Heavy Kinetic damage" ] 
+      "Machine Gun": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "Suppression causes enemies to lose stability", "$Deals Shrapnel damage", "Always causes target to bleed" ] 
     },
     "crateSize": 3,
     "bmatCost": 100,

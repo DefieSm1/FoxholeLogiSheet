@@ -88,6 +88,20 @@
     "productionTime": 300,
     "faction": "W"
   },
+  "EmplacedFlakBolas": {
+    "name": "Leary AA-70 Bolas",
+    "category": "Emplaced Anti-Aircraft Cannon",
+    "description": "A late entry to the Leary arsenal, the AA-70 Bolas was a direct response to the sudden uptick in Colonial aerial aggression. This emplaced cannon excels equally at both slowing and bringing down enemy aircraft.",
+    "ammoUsed": "950-70b Anti-Aircraft Shell",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ],
+      "Cannoneer": [ "Suppression causes enemies to lose stability", "$Deals Shrapnel damage", "Always causes target to bleed" ]
+    },
+    "pcmatCost": 30,
+    "assmatCost": [ 10, 20, 0, 0, 0 ],
+    "productionTime": 600,
+    "faction": "W"
+  },
   "TruckRetiarius": {
     "name": "R-17 \"Retiarius\" Skirmisher",
     "category": "Truck",
@@ -155,6 +169,20 @@
     "pcmatCost": 20,
     "assmatCost": [ 15, 0, 3, 0, 0 ],
     "baseVehicle": "TanketteActaeon",
+    "productionTime": 600,
+    "faction": "C"
+  },
+  "EmplacedFlakZeal": {
+    "name": "DAE 5b \"Zeal\"",
+    "category": "Emplaced Anti-Aircraft Cannon",
+    "description": "A sturdy, stationary cannon for bombarding high-flying enemy aircraft with explosive shrapnel shells. The DAE 5b anti-aricraft emplacement has become infamous for walls of black smoke its payload leaves behind.",
+    "ammoUsed": "950-70b Anti-Aircraft Shell",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ],
+      "Cannoneer": [ "Suppression causes enemies to lose stability", "$Deals Shrapnel damage", "Always causes target to bleed" ]
+    },
+    "pcmatCost": 30,
+    "assmatCost": [ 10, 20, 0, 0, 0 ],
     "productionTime": 600,
     "faction": "C"
   }
