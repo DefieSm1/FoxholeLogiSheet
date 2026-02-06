@@ -108,7 +108,7 @@
   "UtilityRadioBackpack": {
     "name": "Radio Backpack",
     "category": "Field Gear",
-    "description": "Automatically gathers map intel periodically when equipped. The Radio Backpack is also used to transmit other sensitive information across long distances.",
+    "description": "Automatically gathers map intel periodically when equipped.",
     "crateSize": 5,
     "bmatCost": 150,
     "productionTime": 75
@@ -116,7 +116,7 @@
   "UtilitySandbag": {
     "name": "Sandbag",
     "category": "Large Material",
-    "description": "Large Material",
+    "description": "Used to construct Sandbag defenses.",
     "crateSize": 5,
     "bmatCost": 15,
     "productionTime": 15
@@ -140,7 +140,7 @@
     "itemSpecifics": {
       "general": [ "$Deals Demolition damage", "Can ruin structures that have been severely damaged by artillery", "Significantly increased chance to breach a bunker" ] 
     },
-    "crateSize": 5,
+    "crateSize": 10,
     "bmatCost": 150,
     "ematCost": 160,
     "productionTime": 100,
@@ -228,7 +228,15 @@
   "UtilityRadio": {
     "name": "Radio",
     "category": "Field Gear",
-    "description": "Receives map intelligence updates.",
+    "description": "Allows receiving map intelligence reports on detected ground and naval targets.",
+    "crateSize": 5,
+    "bmatCost": 75,
+    "productionTime": 50
+  },
+  "UtilityRadioAir": {
+    "name": "Liason Transmitter",
+    "category": "Field Gear",
+    "description": "Allows receiving map intelligence reports on detected airborne targets.",
     "crateSize": 5,
     "bmatCost": 75,
     "productionTime": 50

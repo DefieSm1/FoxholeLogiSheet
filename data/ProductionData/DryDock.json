@@ -25,7 +25,7 @@
     "description": "The Bluefin storage ship is a massive, all-purpose mobile naval yard cabable of storing crates of resources, packed vehicles and ammunition for long-distance travel and beach-to-beach equipment ferrying. The Bassett Motor Society is proud to deliver such a cutting-edge, versatile blue water asset to various countries across Raka, Katoma, and the Alliant Union.",
     "ammoUsed": "12.7mm",
     "itemSpecifics": {
-      "Gunner (Starboard), Gunner (Port)": [ "Causes suppressed enemy players to lose stability", "$Deals Heavy Kinetic damage" ]
+      "Gunner (Starboard), Gunner (Port)": [ "Suppression causes enemies to lose stability", "$Deals Heavy Kinetic damage" ]
     },
     "hullSegments": 25,
     "shellPlating": 15,
@@ -58,6 +58,19 @@
     "hullSegments": 20,
     "shellPlating": 20,
     "turbineComponents": 4,
+    "productionTime": 36000,
+    "faction": "W"
+  },
+  "ShipCarrierMercy": {
+    "name": "Mercy",
+    "category": "Aircraft Carrier",
+    "description": "The Mercy-class carrier, commissioned to aid the Alliance Sky Brigade in combating the rapid deployment of Colonial aircraft, is fitted with several launchpads to rapidly deploy aircraft from any oceanic location. Mercys were designed to be self-sufficient in defending against aerial bombardments and ship-to-ship defence. Originally, this class of ship had a different designation, but Bright Mercy, great-grandfather of Archon Fionn Mercy, had it changed once he'd seen it in person. To this day, the story goes that he fell to his knees and sobbed at the sight of it. \"It was akin to witnessing a god\".",
+    "ammoUsed": "20mm, 12.7mm",
+    "itemSpecifics": {
+      "Gunner (Port Beam), Gunner (Starboard Beam)": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "Suppression causes enemies to lose stability", "$Deals Shrapnel damage", "Always causes target to bleed" ]
+    },
+    "hullSegments": 16,
+    "shellPlating": 16,
     "productionTime": 36000,
     "faction": "W"
   },
@@ -104,6 +117,19 @@
     "hullSegments": 20,
     "shellPlating": 20,
     "turbineComponents": 4,
+    "productionTime": 36000,
+    "faction": "C"
+  },
+  "ShipCarrierPoseidon": {
+    "name": "Poseidon",
+    "category": "Aircraft Carrier",
+    "description": "The Poseidon-class Aircraft Carrier represents a masterwork of military might for both the Republic Coastal Legion and the Colonial Aeronautics Corps This massive vessel rivals even Titan-class battleships in scale. Upon launching the first ever aerial assault in the north, it became clear to the Mesean Senate that the sky was the future of warfare. Republic Command was quick to put concerted effort into further developing the Aeronautics Corps capabilities. Before a single plane marked by a Caoivish flag passed through clouds, the Poseidon had been launched. Following the success of the Poseidon, Combat Magister Curia was stripped of his position, having wasted resources investing in submersibles.",
+    "ammoUsed": "20mm",
+    "itemSpecifics": {
+      "Gunner (Port Beam), Gunner (Starboard Beam)": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "Suppression causes enemies to lose stability", "$Deals Shrapnel damage", "Always causes target to bleed" ]
+    },
+    "hullSegments": 20,
+    "shellPlating": 20,
     "productionTime": 36000,
     "faction": "C"
   },

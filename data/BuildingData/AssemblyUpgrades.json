@@ -34,6 +34,11 @@
         "description": "An assembly station for producing emplaced weapon platforms and specialized tanks.",
         "steelCost": 20
     },
+    "AssemblyLargeAircraft": {
+        "name": "Aircraft Assembly",
+        "description": "An assembly station for producing advanced aircraft frames.",
+        "rareCost": 5
+    },
     "AssemblyLargeTrain": {
         "name": "Train Assembly",
         "description": "An assembly station for producing train cars.",

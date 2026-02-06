@@ -1,4 +1,39 @@
 {
+  "AmmoAAFlak": {
+    "name": "950-70b Anti-Aircraft Shell",
+    "category": "Anti-Aircraft Ammo",
+    "description": "Specially designed rounds for use with anti-aircraft batteries.",
+    "itemSpecifics": {
+      "general": [ "$Deals Shrapnel damage", "Always causes target to bleed" ]
+    },
+    "crateSize": 5,
+    "bmatCost": 100,
+    "hematCost": 15,
+    "productionTime": 65
+  },
+  "AmmoMG20": {
+    "name": "20mm",
+    "category": "Anti-Air Machine Gun Ammo",
+    "description": "Standard ammunition for anti-aircraft machine guns.",
+    "itemSpecifics": {
+      "general": [ "$Deals Shrapnel damage", "Always causes target to bleed" ]
+    },
+    "crateSize": 5,
+    "bmatCost": 120,
+    "productionTime": 55
+  },
+  "AmmoMissileShatter": {
+    "name": "Shatter Missile",
+    "category": "Demolition Rocket",
+    "description": "Short-range rockets that specialize in breaching bunkers and devestating enemy structures.",
+    "itemSpecifics": {
+      "general": [ "$Deals Demolition damage", "Can ruin structures that have been severly damaged by artillery", "$Always has a chance to breach bunkers", "Decreased chance to breach a bunker" ] 
+    },
+    "crateSize": 5,
+    "bmatCost": 250,
+    "hematCost": 250,
+    "productionTime": 250
+  },
   "AmmoShell150": {
     "name": "150mm",
     "category": "Heavy Artillery Ammo",
@@ -23,17 +58,51 @@
     "hematCost": 10,
     "productionTime": 55
   },
+  "TorpedoMini": {
+    "name": "Quillback Torpedo",
+    "category": "Torpedo",
+    "description": "Designed as a lightweight version of the Moray Torpedo for mounting on light aircraft.",
+    "itemSpecifics": {
+      "general": [ "$Deals Armour Piercing damage", "High chance to penetrate armoured vehicles", "Additional 100% chance to penetrate armoured vehicles." ]
+    },
+    "crateSize": 5,
+    "bmatCost": 125,
+    "ematCost": 75,
+    "productionTime": 125,
+    "faction": "W"
+  },
   "AmmoShell250": {
     "name": "250mm \"Purity\" Shell",
     "category": "Spigot Mortar Ammo",
     "description": "A shell that is launched over short distances by a spigot mortar.",
     "itemSpecifics": {
-      "general": [ "$Deals Demolition damage", "Can ruin structures that have been severly damaged by artillery", "Significantly increased chance to breach a bunker" ] 
+      "general": [ "$Deals Demolition damage", "Can ruin structures that have been severly damaged by artillery" ] 
     },
     "crateSize": 5,
     "bmatCost": 120,
     "hematCost": 100,
     "productionTime": 150
+  },
+  "AmmoShell250Fury": {
+    "name": "250mm \"Fury\" Shell",
+    "category": "Spigot Mortar Ammo",
+    "description": "A breaching shell that's launched by a spigot mortar.",
+    "itemSpecifics": {
+      "general": [ "$Deals Demolition damage", "Can ruin structures that have been severly damaged by artillery", "$Always has a chance to breach bunkers" ]
+    },
+    "crateSize": 5,
+    "bmatCost": 250,
+    "hematCost": 200,
+    "productionTime": 250
+  },
+  "SeaMineSurface": {
+    "name": "E681-B Hullbreaker Mine",
+    "category": "Sea Mine",
+    "description": "A specialized sea mine that floats near the surface, causing destructive damage to ship hulls.",
+    "crateSize": 5,
+    "bmatCost": 125,
+    "ematCost": 35,
+    "productionTime": 125
   },
   "AmmoShell68": {
     "name": "68mm",

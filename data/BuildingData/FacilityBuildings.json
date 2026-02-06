@@ -51,6 +51,88 @@
       }
     ]
   },
+  "AicraftMaintenanceFactory": {
+    "name": "Aircraft Maintenance Factory",
+    "category": "Facility Structure",
+    "buildingType": "Manufacturing",
+    "description": "A factory for producing and repairing advanced aircraft parts.",
+    "pcmatCost": 250,
+    "buildingUpgrades": [ "AircraftMaintenanceFactoryStrategic" ],
+    "buildingRecipes": [
+      {
+        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3" ],
+        "inputAmounts": [ 35, 25 ],
+        "outputNames": [ "AircraftPartSmallWarden" ],
+        "outputAmounts": [ 1 ],
+        "powerConsumption": 10,
+        "productionTime": 1200,
+        "faction": "W"
+      },
+      {
+        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3" ],
+        "inputAmounts": [ 95, 25 ],
+        "outputNames": [ "AircraftEngineSmallWarden" ],
+        "outputAmounts": [ 1 ],
+        "powerConsumption": 10,
+        "productionTime": 1200,
+        "faction": "W"
+      },
+      {
+        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3", "AircraftPartSmallBrokenWarden" ],
+        "inputAmounts": [ 5, 5, 1 ],
+        "outputNames": [ "AircraftEngineSmallWarden" ],
+        "outputAmounts": [ 1 ],
+        "powerConsumption": 4,
+        "productionTime": 360,
+        "faction": "W"
+      },
+      {
+        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3", "AircraftEngineSmallBrokenWarden" ],
+        "inputAmounts": [ 5, 5, 1 ],
+        "outputNames": [ "AircraftEngineSmallWarden" ],
+        "outputAmounts": [ 1 ],
+        "powerConsumption": 4,
+        "productionTime": 360,
+        "faction": "W"
+      },
+      {
+        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3" ],
+        "inputAmounts": [ 35, 25 ],
+        "outputNames": [ "AircraftPartSmallColonial" ],
+        "outputAmounts": [ 1 ],
+        "powerConsumption": 10,
+        "productionTime": 1200,
+        "faction": "C"
+      },
+      {
+        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3" ],
+        "inputAmounts": [ 95, 25 ],
+        "outputNames": [ "AircraftEngineSmallColonial" ],
+        "outputAmounts": [ 1 ],
+        "powerConsumption": 10,
+        "productionTime": 1200,
+        "faction": "C"
+      },
+      {
+        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3", "AircraftPartSmallBrokenColonial" ],
+        "inputAmounts": [ 5, 5, 1 ],
+        "outputNames": [ "AircraftEngineSmallColonial" ],
+        "outputAmounts": [ 1 ],
+        "powerConsumption": 4,
+        "productionTime": 360,
+        "faction": "C"
+      },
+      {
+        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3", "AircraftEngineSmallBrokenColonial" ],
+        "inputAmounts": [ 5, 5, 1 ],
+        "outputNames": [ "AircraftEngineSmallColonial" ],
+        "outputAmounts": [ 1 ],
+        "powerConsumption": 4,
+        "productionTime": 360,
+        "faction": "C"
+      }
+    ]
+  },
   "SmallArmsFactory": {
     "name": "Infantry Kit Factory",
     "category": "Facility Structure",
@@ -294,8 +376,31 @@
         "outputNames": [ "AmmoShell250Fury" ],
         "outputAmounts": [ 1 ],
         "powerConsumption": 4,
-        "productionTime": 30,
-        "faction": "C"
+        "productionTime": 30
+      },
+      {
+        "inputNames": [ "MaterialConstruction" ],
+        "inputAmounts": [ 8 ],
+        "outputNames": [ "SeaMineSurface" ],
+        "outputAmounts": [ 1 ],
+        "powerConsumption": 4,
+        "productionTime": 25
+      },
+      {
+        "inputNames": [ "MaterialConstruction" ],
+        "inputAmounts": [ 4 ],
+        "outputNames": [ "AmmoMG20" ],
+        "outputAmounts": [ 1 ],
+        "powerConsumption": 4,
+        "productionTime": 10
+      },
+      {
+        "inputNames": [ "MaterialConstruction" ],
+        "inputAmounts": [ 12 ],
+        "outputNames": [ "TorpedoMini" ],
+        "outputAmounts": [ 1 ],
+        "powerConsumption": 4,
+        "productionTime": 25
       }
     ]
   },

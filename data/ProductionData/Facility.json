@@ -67,6 +67,11 @@
     "category":"Large Material",
     "description": "Bars of incredibly rare materials used in some of the most advanced and complex constructions, such as large naval vessels and AEON Rockets."
   },
+  "MaterialRareMaterials": {
+    "name": "Rare Materials",
+    "category":"Large Material",
+    "description": "Incredibly rare small components used in some specialized equipment."
+  },
   "MaterialThermalShielding": {
     "name": "Thermal Shielding",
     "category": "Large Material",
@@ -208,6 +213,52 @@
   "UniformTankCoveralls": {
     "importCategory": "Uniforms"
   },
+  "UniformParatrooperVesture": {
+    "name": "Cloudrunner's Vesture",
+    "category": "Warden Paratrooper Uniform",
+    "description": "Typical Alliance Sky Brigade paratrooper's kit. Cloudrunners were once an elite group of deserting mercenaries with a death wish that, due to their consistent bravery and valour, were integrated into the larger ASB fold.",
+    "itemSpecifics": {
+      "general": [ "$5 backpack slots", "$Kinetic weapon ammunition stacks", "$Light kinetic weapon ammunition stacks", "$Kinetic weapons have reduced encumbrance", "$High chance of not being detected by enemy intelligence" ]
+    },
+    "crateSize": 15,
+    "faction": "W"    
+  },
+  "UniformPilotRaiment": {
+    "name": "Aviator's Raiment",
+    "category": "Warden Pilot Uniform",
+    "description": "A pilot's overcoat and goggles specially designed for cold-weather flying. Alliance Sky Brigade pilots are amongst the most talented aviators in the world, training from as young as eight years of age to hone their reflexes and strengthen their bones against atmospheric forces. Many won't make it to adulthood.",
+    "itemSpecifics": {
+      "general": [ "$5 backpack slots", "$Gas Mask Filters stack", "$Bandages and Blood Plasma stack", "$High chance of not being detected by enemy intelligence" ]
+    },
+    "crateSize": 1,
+    "faction": "W"
+  },
+  "UniformParatrooperHarness": {
+    "name": "Auster's Harness",
+    "category": "Colonial Paratrooper Uniform",
+    "description": "CAC paratrooper's gear consisting of a sturdy harness clasped over a jumpsuit. Infamous for ruthless aggression, few sights drive true fear into Warden hearts than Colonial austers dotting the night sky.",
+    "itemSpecifics": {
+      "general": [ "$5 backpack slots", "$Kinetic weapon ammunition stacks", "$Light kinetic weapon ammunition stacks", "$Kinetic weapons have reduced encumbrance", "$High chance of not being detected by enemy intelligence" ]
+    },
+    "crateSize": 15,
+    "faction": "C"  
+  },
+  "UniformPilotLorica": {
+    "name": "Lodesman's Lorica",
+    "category": "Colonial Pilot Uniform",
+    "description": "Standard-issue Colonial Aeronautics Corps lodesman's uniform. Fashioned for function over form, CAC pilots are protected from external elements while free to execute their duties with efficiency.",
+        "itemSpecifics": {
+      "general": [ "$5 backpack slots", "$Gas Mask Filters stack", "$Bandages and Blood Plasma stack", "$High chance of not being detected by enemy intelligence" ]
+    },
+    "crateSize": 1,
+    "faction": "C"
+  },
+  "Parachute": {
+    "name": "Paratrooper's Ruck",
+    "category": "Backpack",
+    "description": "A paratrooper's basic kit. Includes minimal survival gear to improve weight distribution and account for parachutes.",
+    "crateSize": 10
+  },
   "ARBooker": {
     "importCategory": "SmallArms"
   },
@@ -224,9 +275,9 @@
     "name": "Booker Greyhound Model 910",
     "category": "Anti-Tank Rifle",
     "description": "A variant on the Booker Storm Rifle, the Greyhound boasts a larger overall receiver and barrel to accommodate the increased stopping power of anti-tank rounds. Its longer, bulkier barrel allows for increased range. As a heavier automatic rifle, the Greyhound remains an excellent tool for those who'd prefer to shoot before asking questions.",
-    "ammoUsed": "20mm",
+    "ammoUsed": "14.5mm",
     "itemSpecifics": {
-      "general": [ "Deals 200% damage to vehicle armour", "Suppresses enemy vehicles", "Causes suppressed enemy players to lose stability", "Equipped with a low velocity barrel that deals 30% less damage per shot", "$Suffer not the collie to live" ]
+      "general": [ "Deals 200% damage to vehicle armour", "Suppresses enemy vehicles", "Suppression causes enemies to lose stability", "Equipped with a low velocity barrel that deals 30% less damage per shot", "$Suffer not the collie to live" ]
     },
     "crateSize": 3,
     "faction": "W"
@@ -235,9 +286,9 @@
     "name": "228 Satterley Heavy Storm Rifle",
     "category": "Assault Rifle",
     "description": "While the Satterley is designed to be operated by a single infantryman, it remains a cumbersome rifle due to its heavy kickback and burst fire configuration. This heavy burst rifle is best suited for small squads to blindside enemy armour, stripping steel with ease, but its cumbersome setup makes it less than ideal for infantry skirmishes.",
-    "ammoUsed": "20mm",
+    "ammoUsed": "14.5mm",
     "itemSpecifics": {
-      "general": [ "Deals 200% damage to vehicle armour", "Suppresses enemy vehicles", "Causes suppressed enemy players to lose stability", "Equipped with a low velocity barrel that deals 25% less damage per shot" ]
+      "general": [ "Deals 200% damage to vehicle armour", "Suppresses enemy vehicles", "Suppression causes enemies to lose stability", "Equipped with a low velocity barrel that deals 25% less damage per shot" ]
     },
     "crateSize": 5,
     "faction": "W"
@@ -246,9 +297,9 @@
     "name": "\"Quickhatch\" Rt.I",
     "category": "Sniper Rifle",
     "description": "A deadly, long-range sniper rifle with exceptional stopping power. The \"Quickhatch\" is a gluttnous firearm that hungers for enemy armour and flesh alike.",
-    "ammoUsed": "20mm",
+    "ammoUsed": "14.5mm",
     "itemSpecifics": {
-      "general": [ "Deals 350% damage to vehicle armour", "Suppresses enemy vehicles", "Causes suppressed enemy players to lose stability", "Accuracy bonus provided by cover reduced by 95%", "Turns enemy heads into fine red mists" ]
+      "general": [ "Deals 350% damage to vehicle armour", "Suppresses enemy vehicles", "Suppression causes enemies to lose stability", "Accuracy bonus provided by cover reduced by 95%", "Turns enemy heads into fine red mists" ]
     },
     "crateSize": 3,
     "faction": "C"
@@ -257,9 +308,9 @@
     "name": "\"Dawn\" Ve.II",
     "category": "Anti-Tank Rifle",
     "description": "A three-round burst anti-tank rifle with a high-capacity magazine. Built from a modified \"Dusk\" assault rifle, the receiver has been altered to support top-loaded drum magazines for better stability and efficient loading to account for its more cumbersome design and higher calibre rounds.",
-    "ammoUsed": "20mm",
+    "ammoUsed": "14.5mm",
     "itemSpecifics": {
-      "general": [ "Deals 200% damage to vehicle armour", "Suppresses enemy vehicles", "Causes suppressed enemy players to lose stability", "Equipped with a low velocity barrel that deals 30% less damage per shot" ]
+      "general": [ "Deals 200% damage to vehicle armour", "Suppresses enemy vehicles", "Suppression causes enemies to lose stability", "Equipped with a low velocity barrel that deals 30% less damage per shot" ]
     },
     "crateSize": 3,
     "faction": "C"
@@ -291,7 +342,7 @@
   "GrenadeATSticky": {
     "importCategory": "HeavyArms"
   },
-  "AmmoAT20": {
+  "AmmoAT145": {
     "importCategory": "HeavyArms"
   },
   "GrenadeSmoke": {
@@ -345,6 +396,12 @@
       "general": [ "$Deals Incendiary damage", "Deals High Explosive damage on impact" ] 
     }
   },
+  "AmmoMG20": {
+    "importCategory": "HeavyMunitions"
+  },
+  "AmmoAAFlak": {
+    "importCategory": "HeavyMunitions"
+  },
   "AmmoShell75": {
     "name": "75mm",
     "category": "Large Cannon Ammp",
@@ -378,21 +435,26 @@
   "AmmoShell250": {
     "importCategory": "HeavyMunitions"
   },
-  "AmmoMissileShatter": {
-    "name": "Shatter Missile",
-    "category": "Demolition Rocket",
-    "description": "Short-range rockets that specialize in breaching bunkers and devestating enemy structures.",
-    "itemSpecifics": {
-      "general": [ "$Deals Demolition damage", "Can ruin structures that have been severly damaged by artillery", "$Always has a chance to breach bunkers", "Decreased chance to breach a bunker" ] 
-    },
-    "faction": "W"
-  },
   "AmmoShell250Fury": {
-    "name": "250mm \"Fury\" Shell",
-    "category": "Spigot Mortar Ammo",
-    "description": "A breaching shell that's launched by a spigot mortar.",
+    "importCategory": "HeavyMunitions"
+  },
+  "AmmoMissileShatter": {
+    "importCategory": "HeavyMunitions"
+  },
+  "AmmoBombRaidbreaker": {
+    "name": "Mark II Raidbreaker",
+    "category": "Bomber Ammo",
+    "description": "Highly explosive payloads for use with bomber aircraft.",
     "itemSpecifics": {
-      "general": [ "$Deals Demolition damage", "Can ruin structures that have been severly damaged by artillery", "$Always has a chance to breach bunkers", "Increased chance to breach a bunker" ]
+      "general": [ "$Deals High Explosive damage", "Reduced damage against Trenches", "Increased damage against Field Structures" ]
+    }
+  },
+  "AmmoBombShrike": {
+    "name": "912 Shrike Rounds",
+    "category": "Dive Bomber Ammo",
+    "description": "Specialized payloads for use with dive bomber aircraft.",
+    "itemSpecifics": {
+      "general": [ "$Deals Armour Piercing damage", "High chance of disabling all vehicle subsystems" ]
     },
     "faction": "C"
   },
@@ -415,10 +477,10 @@
   "SeaMine": {
     "name": "E680-S Rudder Lock",
     "category": "Sea Mine",
-    "description": "Desinged for underwater deployment, Sea Mines detonate upon contact with enemy vessels.",
-    "itemSpecifics": {
-      "general": [ "$Deactivates after 2 days", "$Deals High Explosive damage" ]
-    }
+    "description": "Desinged for underwater deployment, Sea Mines detonate upon contact with enemy vessels."
+  },
+  "SeaMineSurface": {
+    "importCategory": "HeavyMunitions"
   },
   "DepthCharge": {
     "name": "Model-7 \"Evie\"",
@@ -435,6 +497,9 @@
     "itemSpecifics": {
       "general": [ "Can only be carried by stockpiles", "$Deals High Explosive damage", "Increased chance to cause a leak" ]
     }
+  },
+  "TorpedoMini": {
+    "importCategory": "HeavyMunitions"
   },
   "UtilityTripod": {
     "importCategory": "Utility"
@@ -473,6 +538,150 @@
     "name": "Legion Vexillum",
     "category": "Mounted Equipment",
     "description": "To plant a Vexillum of the Colonial Legion is to claim victory for the Mesean Republic. For the End is Our Glory.",
+    "faction": "C"
+  },
+  "AircraftPartSmallWarden": {
+    "name": "Warden Aircraft Mechanical Parts (Small)",
+    "category": "Aircraft Part",
+    "description": "Mechanical parts that can be installed in small Warden aircraft.",
+    "itemSpecifics": {
+      "general": [ "Can only be carried by stockpiles" ]
+    },
+    "faction": "W"
+  },
+  "AircraftEngineSmallWarden": {
+    "name": "Warden Aircraft Engine (Small)",
+    "category": "Aircraft Part",
+    "description": "An engine that can be installed in small Warden aircraft.",
+    "itemSpecifics": {
+      "general": [ "Can only be carried by stockpiles" ]
+    },
+    "faction": "W"
+  },
+  "AircraftPartLargeWarden": {
+    "name": "Warden Aircraft Mechanical Parts (Large)",
+    "category": "Aircraft Part",
+    "description": "Mechanical parts that can be installed in large Warden aircraft.",
+    "itemSpecifics": {
+      "general": [ "Can only be carried by stockpiles" ]
+    },
+    "faction": "W"
+  },
+  "AircraftEngineLargeWarden": {
+    "name": "Warden Aircraft Engine (Large)",
+    "category": "Aircraft Part",
+    "description": "An engine that can be installed in large Warden aircraft.",
+    "itemSpecifics": {
+      "general": [ "Can only be carried by stockpiles" ]
+    },
+    "faction": "W"
+  },
+  "AircraftPartLargeBrokenWarden": {
+    "name": "Damaged Warden Aircraft Mechanical Parts (Large)",
+    "category": "Damaged Aircraft Part",
+    "description": "Damaged parts from large Warden aircraft that can be repaired at aircraft facilities.",
+    "itemSpecifics": {
+      "general": [ "Can only be carried by stockpiles" ]
+    },
+    "faction": "W"
+  },
+  "AircraftPartSmallBrokenWarden": {
+    "name": "Damaged Warden Aircraft Mechanical Parts (Small)",
+    "category": "Damaged Aircraft Part",
+    "description": "Damaged parts from small Warden aircraft that can be repaired at aircraft facilities.",
+    "itemSpecifics": {
+      "general": [ "Can only be carried by stockpiles" ]
+    },
+    "faction": "W"
+  },
+  "AircraftEngineSmallBrokenWarden": {
+    "name": "Damaged Warden Aircraft Engine (Small)",
+    "category": "Damaged Aircraft Part",
+    "description": "A damaged engine from a small Warden aircraft that can be repaired at aircraft facilities.",
+    "itemSpecifics": {
+      "general": [ "Can only be carried by stockpiles" ]
+    },
+    "faction": "W"
+  },
+  "AircraftEngineLargeBrokenWarden": {
+    "name": "Damaged Warden Aircraft Engine (Large)",
+    "category": "Damaged Aircraft Part",
+    "description": "A damaged engine from a large Warden aircraft that can be repaired at aircraft facilities.",
+    "itemSpecifics": {
+      "general": [ "Can only be carried by stockpiles" ]
+    },
+    "faction": "W"
+  },
+  "AircraftPartSmallColonial": {
+    "name": "Colonial Aircraft Mechanical Parts (Small)",
+    "category": "Aircraft Part",
+    "description": "Mechanical parts that can be installed in small Colonial aircraft.",
+    "itemSpecifics": {
+      "general": [ "Can only be carried by stockpiles" ]
+    },
+    "faction": "C"
+  },
+  "AircraftEngineSmallColonial": {
+    "name": "Colonial Aircraft Engine (Small)",
+    "category": "Aircraft Part",
+    "description": "An engine that can be installed in small Colonial aircraft.",
+    "itemSpecifics": {
+      "general": [ "Can only be carried by stockpiles" ]
+    },
+    "faction": "C"
+  },
+  "AircraftPartLargeColonial": {
+    "name": "Colonial Aircraft Mechanical Parts (Large)",
+    "category": "Aircraft Part",
+    "description": "Mechanical parts that can be installed in large Colonial aircraft.",
+    "itemSpecifics": {
+      "general": [ "Can only be carried by stockpiles" ]
+    },
+    "faction": "C"
+  },
+  "AircraftEngineLargeColonial": {
+    "name": "Colonial Aircraft Engine (Large)",
+    "category": "Aircraft Part",
+    "description": "An engine that can be installed in large Colonial aircraft.",
+    "itemSpecifics": {
+      "general": [ "Can only be carried by stockpiles" ]
+    },
+    "faction": "C"
+  },
+  "AircraftPartSmallBrokenColonial": {
+    "name": "Damaged Colonial Aircraft Mechanical Parts (Small)",
+    "category": "Damaged Aircraft Part",
+    "description": "Damaged parts from small Colonial aircraft that can be repaired at aircraft facilities.",
+    "itemSpecifics": {
+      "general": [ "Can only be carried by stockpiles" ]
+    },
+    "faction": "C"
+  },
+  "AircraftEngineSmallBrokenColonial": {
+    "name": "Damaged Colonial Aircraft Engine (Small)",
+    "category": "Damaged Aircraft Part",
+    "description": "A damaged engine from a small Colonial aircraft that can be repaired at aircraft facilities.",
+    "itemSpecifics": {
+      "general": [ "Can only be carried by stockpiles" ]
+    },
+    "faction": "C"
+  },
+  "AircraftPartLargeBrokenColonial": {
+    "name": "Damaged Colonial Aircraft Mechanical Parts (Large)",
+    "category": "Damaged Aircraft Part",
+    "description": "Damaged parts from large Colonial aircraft that can be repaired at aircraft facilities.",
+    "itemSpecifics": {
+      "general": [ "Can only be carried by stockpiles" ]
+    },
+    "faction": "C"
+  },
+  "AircraftEngineLargeBrokenColonial": {
+    "name": "Damaged Colonial Aircraft Engine (Large)",
+    "category": "Damaged Aircraft Part",
+    "description": "A damaged engine from a large Colonial aircraft that can be repaired at aircraft facilities.",
+    "itemSpecifics": {
+      "general": [ "Can only be carried by stockpiles" ]
+    },
     "faction": "C"
   }
 }

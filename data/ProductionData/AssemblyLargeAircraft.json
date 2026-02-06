@@ -1,0 +1,135 @@
+{
+  "AircraftFighterHarbinger": {
+    "name": "Luminary Mk. II Harbinger",
+    "category": "Aircraft",
+    "description": "The backbone of the Alliance Sky Brigade, the Harbinger excels at both strafing ground targets and dogfighting with its twin, front-facting machine guns. Not willing to be outclassed by crude Mesean engineering, Luminary-formerly a northern Caoivish industrial engineering firms-set to work on designing its Mk. I prototype. Sleek, aerodynamic, and so fast it screams, the Harbinger's design is intended to give the Nevish Alliance a psychological edge on the battlefield as much as it provides air support.",
+    "ammoUsed": "20mm, 14.5mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Requires aircraft parts for final assembly: Engine (Small) x1, Mechanical Parts (Small) x5" ],
+      "Driver": [ "Equipped with a high velocity barrel that deals 50% extra damage per shot" ] 
+    },
+    "pcmatCost": 40,
+    "assmatCost": [ 200, 0, 0, 100, 0 ],
+    "rareCost": 2,
+    "productionTime": 14400,
+    "faction": "W"
+  },
+  "AircraftTorpedoManOWar": {
+    "name": "M925 Austringer Man-O-war",
+    "category": "Aircraft",
+    "description": "The M925 Edellian bomber is the Alliance Sky Brigade's ace at air-to-sea combat. Featuring twin torpedo bays and a rear mounted machine gun, the Man-O-War is a veritable threat to any ship's hull or would-be assailants. The M925's unique capabilities overdelivered, as it was originally conveived as nothing more than a short-range coastal defence bomber. During the M925's first operation off of the Katoman coast, a small squadron single-handedly sank a Titan. Her crew had no idea how their ship filled with seawater as torpedo after torpedo bored into the underside of her hull.",
+    "ammoUsed": "Moray Torpedo, 12.7mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Requires aircraft parts for final assembly: Engine (Small) x3, Mechanical Parts (Small) x5" ],
+      "Driver": [ "Equipped with a low velocity barrel that deals 30% extra damage per shot", "$That's right folks, LV Torpedoes!", "$Deals High Explosive damage", "Increased chances to cause a leak" ]
+    },
+    "pcmatCost": 25,
+    "assmatCost": [ 85, 100, 20, 20, 0 ],
+    "rareCost": 5,
+    "productionTime": 14400,
+    "faction": "W"
+  },
+  "AircaftFighterRaven": {
+    "name": "Tulka I1.9 White Raven",
+    "category": "Aircraft",
+    "description": "This unique Nevish fighter was specially designed to be launched from Mercy-class aircraft carriers, with the flexibility to operate in different environments. Fitted with several front-facing armaments, the White Raven is known to swarm enemy armadas out of nowhere. They soon find themselves careening out of the clours.",
+    "ammoUsed": "20mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Requires aircraft parts for final assembly: Engine (Small) x1, Mechanical Parts (Small) x5" ]
+    },
+    "pcmatCost": 40,
+    "assmatCost": [ 0, 145, 40, 0, 0 ],
+    "rareCost": 2,
+    "productionTime": 14400,
+    "faction": "W"
+  },
+  "AircrafBomberWelkinrive": {
+    "name": "Tulka P4 Welkinrive",
+    "category": "Aircraft",
+    "description": "A Nevish bomber that was developed in direct response to a lack of aerial heavy explosive support during Alliance operations. Having been repeatedly waylaid by Tzykalia bombers along the Sorovian coast, it became clear that the Sky Brigade needed to improve their armada. The Brigade commissioned a light and fuel-efficient bomber still capable of deploying catastrophic payloads.",
+    "ammoUsed": "12.7mm, Mark II Raidbreaker",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Requires aircraft parts for final assembly: Engine (Large) x2, Mechanical Parts (Large) x9"  ],
+      "Bombardier": [ "$Deals High Explosive damage", "Can ruin structures that have been severely damaged by artillery", "Reduced damage against Trenches", "Increased damage against Field Structures" ]
+    },
+    "steelCost": 60,
+    "assmatCost": [ 0, 0, 25, 40, 65 ],
+    "rareCost": 12,
+    "productionTime": 28800,
+    "faction": "W"
+  },
+  "AircraftTransportZealot": {
+    "name": "Rinnspeir Mk. I Zealot",
+    "category": "Aircraft",
+    "description": "A recent addition to the Alliance Sky Brigade, the Zealot is a first-of-its-kind dropship out of Sorovia. Its large fuselage and cargo bay facilitate transporting entire paratrooper units and dropping them into the fray with ease. The Zealot is best paired with escorts, as it doesn't boast much in the way of firepower, but once it deploys a retinue of Cloudrunners, it circles back to base to load up the next squad.",
+    "ammoUsed": "12.7mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Requires aircraft parts for final assembly: Engine (Large) x2, Mechanical Parts (Large) x5" ]
+    },
+    "steelCost": 5,
+    "assmatCost": [ 0, 0, 20, 20, 0 ],
+    "rareCost": 4,
+    "productionTime": 21600,
+    "faction": "W"
+  },
+  "AircraftBomberTzykalia": {
+    "name": "V-1 Tzykalia",
+    "category": "Aircraft",
+    "description": "A large, deadly bomber capable of delivering high volumes of explosive payloads. While the V-1 Tzykalia requires a proficient bombardier crew, this Velian-made aircraft has an infamous reputation overseas on the Katoma front. Facing minimal air-to-air resistance, a full squadron of Tzykalias led by seasoned captain and ace lodesman Calliope Bibas erased a large Estrellan fortress in the desert region of Sorra Blava off the map. This operation left Alliance presence in the west reeling, furthering Republic ambitions in the region.",
+    "ammoUsed": "12.7mm, Mark II Raidbreaker",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Requires aircraft parts for final assembly: Engine (Large) x2, Mechanical Parts (Large) x9" ],
+      "Bombardier": [ "$Deals High Explosive damage", "Can ruin structures that have been severely damaged by artillery", "Reduced damage against Trenches", "Increased damage against Field Structures" ]
+    },
+    "steelCost": 60,
+    "assmatCost": [ 0, 0, 25, 40, 65 ],
+    "rareCost": 12,
+    "productionTime": 28800,
+    "faction": "C"
+  },
+  "AircraftFighterToxot": {
+    "name": "Toxot-902 \"Blind Silver\"",
+    "category": "Aircraft",
+    "description": "The Toxot-902 is a modern variant of the first warplane to ever see combat; it tears across battlefields laying down strafing machine gun support but excels in air-to-air dogfights. Easy to manufacture and field in large numbers, \"Blind Silvers\" often give the impression of a volley of arrows soaring overhead.",
+    "ammoUsed": "20mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Requires aircraft parts for final assembly: Engine (Small) x1, Mechanical Parts (Small) x5" ],
+      "Driver": [ "Equipped with a high velocity barrel that deals 50% extra damage per shot" ] 
+    },
+    "pcmatCost": 40,
+    "assmatCost": [ 200, 0, 0, 100, 0 ],
+    "rareCost": 2,
+    "productionTime": 14400,
+    "faction": "C"
+  },
+  "AircraftTransportPegasus": {
+    "name": "V-5b Pegasus",
+    "category": "Aircraft",
+    "description": "A handful of these Velian-made aircraft are capable of depositing entire platoons of Colonial paratroopers deep behind Warden lines. In fact, these selfsame paratroopers are feared throughout the north for their commitment to night diving and opening their chute late enough that even an observant enemy might blink and miss their descent. While most paratroopers have a short lifespan, one trio that called themselves \"The Furies\" successfully completed over one hundred combat jumps into Caoivish territory. It's believed that The Furies are responsible for sabotaging countless Warden operations in the north and played a pivotal role in Legate Thea Maro's \"Operation Sunfall\".",
+    "ammoUsed": "12.7mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Requires aircraft parts for final assembly: Engine (Large) x2, Mechanical Parts (Large) x5" ],
+      "Gunner": [ "Suppression causes enemies to lose stability", "$Deals Heavy Kinetic damage" ]
+    },
+    "steelCost": 5,
+    "assmatCost": [ 0, 0, 20, 20, 0 ],
+    "rareCost": 4,
+    "productionTime": 21600,
+    "faction": "C"
+  },
+  "AircraftBomberMyrmidon": {
+    "name": "Mergo-4 \"Myrmidon\"",
+    "category": "Aircraft",
+    "description": "This unique dive bomber quickly deposits small payloads with more precision than its larger, less mobile counterparts. Bombing first and asking questions later, \"Myrmidons\" often lead larger bombing operations. Its effective hit-and-run tactics soften larger targets or clear out emplacements that may pose a threat to less manouvrable aircraft or incoming convoys.",
+    "ammoUsed": "912 Shrike Rounds, 12.7mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Requires aircraft parts for final assembly: Engine (Small) x1, Mechanical Parts (Small) x5" ],
+      "Driver": [ "$Deals Armour Piercing damage", "High chance of disabling all vehicle subsystems" ]
+    },
+    "pcmatCost": 40,
+    "assmatCost": [ 85, 175, 100, 0, 0 ],
+    "rareCost": 5,
+    "productionTime": 14400,
+    "faction": "C"
+  }
+}

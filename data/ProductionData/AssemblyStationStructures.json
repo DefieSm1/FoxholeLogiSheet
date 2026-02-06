@@ -106,5 +106,17 @@
     "rareCost": 5,
     "shieldingCost": 35,
     "productionTime": 1500
+  },
+  "PartsRadar": {
+    "name": "Aircraft Radar Parts",
+    "category": "Shippable Material",
+    "description": "The final critical components necessary to construct an Aircraft Radar. Must be placed onto a Large Structure Foundation",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ]
+    },
+    "pcmatCost": 50,
+    "rareCost": 3,
+    "shieldingCost": 15,
+    "productionTime": 1500
   }
 }

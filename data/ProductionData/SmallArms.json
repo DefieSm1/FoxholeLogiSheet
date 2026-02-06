@@ -49,7 +49,7 @@
     "description": "This heavy machine gun is bulky enough to require a steady surface to maintain stability. The Malone series of machine guns are unmatched defenders on the battlefield.",
     "ammoUsed": "12.7mm",
     "itemSpecifics": {
-      "general": [ "Causes suppressed enemy players to lose stability", "Equipped with a low velocity barrel that deals 36% less damage per shot" ] 
+      "general": [ "Suppression causes enemies to lose stability", "Equipped with a low velocity barrel that deals 36% less damage per shot" ] 
     },
     "crateSize": 5,
     "rmatCost": 25,
@@ -88,7 +88,7 @@
     "description": "A titanic light machine gun capable of scattering infantry lines with ease, the Catara is a modern weapon for the modern Colonial.",
     "ammoUsed": "12.7mm",
     "itemSpecifics": {
-      "general": [ "Causes suppressed enemy players to lose stability", "Equipped with a low velocity barrel that deals 36% less damage per shot" ] 
+      "general": [ "Suppression causes enemies to lose stability", "Equipped with a low velocity barrel that deals 36% less damage per shot" ] 
     },
     "crateSize": 20,
     "rmatCost": 15,
@@ -101,7 +101,7 @@
     "description": "The Gast is a deadly but cumbersome Kraunian heavy machine gun. It is best suited to holding and defending established fortifications or garrisoned structures against encroaching infantry/",
     "ammoUsed": "12.7mm",
     "itemSpecifics": {
-      "general": [ "Causes suppressed enemy players to lose stability" ]
+      "general": [ "Suppression causes enemies to lose stability" ]
     },
     "crateSize": 5,
     "rmatCost": 25,
@@ -147,7 +147,7 @@
     "description": "The weapon of choice for pirates and smugglers, its legend is well-earned. With incredibly high stopping power and unique revolver mechanism, the Hangman often plays judge, jury, and executioner.",
     "ammoUsed": ".44",
     "itemSpecifics": {
-      "general": [ "Compatible ammo with attached The Ospreay (Grenade Launcher): Green Ash Grenade, A3 Harpa Fragmentation Grenade, B2 Varsi Anti-Tank Grenade", "Allows Buckhorn CCQ-18 (Bayonet) attachement", "Equipped with a high velocity barrel that deals 29% extra damage per shot"  ] 
+      "general": [ "Compatible ammo with attached The Ospreay (Grenade Launcher): Green Ash Grenade, A3 Harpa Fragmentation Grenade, B2 Varsi Anti-Tank Grenade", "Allows Buckhorn CCQ-18 (Bayonet) attachement", "Equipped with a high velocity barrel that deals 30% extra damage per shot"  ] 
     },
     "crateSize": 20,
     "bmatCost": 125,
@@ -171,7 +171,7 @@
     "description": "The precursor to the storm rifle, the Sampo Auto-Rifle, is a mastercraft of its day. With a single shot and automatic fire mode, this versatile rifle may not reach the fire rates of automatic weapons but more than makes up for it with utility.",
     "ammoUsed": "7.62mm",
     "itemSpecifics": {
-      "general": [ "Equipped with a low velocity barrel that deals 19% less damage per shot" ] 
+      "general": [ "Equipped with a low velocity barrel that deals 20% less damage per shot" ] 
     },
     "crateSize": 20,
     "bmatCost": 125,
@@ -184,7 +184,7 @@
     "description": "The Blakerow is a carbine with a high rate of fire compared to its bolt-action predecessor. This increased fire rate does come at the cost of innate stopping power; however, its versatility and lightweight frame more than makes up for any perceived shortcomings.",
     "ammoUsed": "7.62mm",
     "itemSpecifics": {
-      "general": [ "Compatible ammo with attached The Ospreay (Grenade Launcher): Green Ash Grenade, A3 Harpa Fragmentation Grenade, B2 Varsi Anti-Tank Grenade", "Allows Buckhorn CCQ-18 (Bayonet) attachement", "Equipped with a low velocity barrel that deals 11% less damage per shot" ] 
+      "general": [ "Compatible ammo with attached The Ospreay (Grenade Launcher): Green Ash Grenade, A3 Harpa Fragmentation Grenade, B2 Varsi Anti-Tank Grenade", "Allows Buckhorn CCQ-18 (Bayonet) attachement", "Equipped with a low velocity barrel that deals 10% less damage per shot" ] 
     },
     "crateSize": 20,
     "bmatCost": 140,

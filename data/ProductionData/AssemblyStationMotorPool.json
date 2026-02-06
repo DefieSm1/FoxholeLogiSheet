@@ -87,10 +87,10 @@
     "faction": "W"
   },
   "FieldATRCoin": {
-    "name": "Duncan's Coin 20mm",
+    "name": "Duncan's Coin 14.5mm",
     "category": "Field AT Rifle",
-    "description": "This field gun is a capable, if somewhat flimsy, anti-tank weapon derived from cheap materials, crude processing, and utilizes dated technology. The affixed 20mm cannon may feel ancient by modern standards, but rest assured, it has no problems piercing modern armour.",
-    "ammoUsed": "20mm",
+    "description": "This field gun is a capable, if somewhat flimsy, anti-tank weapon derived from cheap materials, crude processing, and utilizes dated technology. The affixed 14.5mm cannon may feel ancient by modern standards, but rest assured, it has no problems piercing modern armour.",
+    "ammoUsed": "14.5mm",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to medium sized shippables", "Can be towed by certain vehicles" ],
       "Gunner (Right)": [ "Equipped with a high velocity barrel that deals 25% extra damage per shot", "$Deals Anti-Tank Kinetic damage", "Can penetrate armoured vehicles" ] 
@@ -105,7 +105,7 @@
     "name": "T5 \"Percutio\"",
     "category": "Armoured Car",
     "description": "This \"Xiphos\" variant is fitted with a high-powered anti-tank turret in place of the twin machine gun platform.",
-    "ammoUsed": "20mm",
+    "ammoUsed": "14.5mm",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to medium sized shippables" ],
       "Gunner (Center)": [ "$Deals Anti-Tank Kinetic damage", "Can penetrate armoured vehicles" ] 
@@ -189,7 +189,7 @@
     "name": "GA6 \"Cestus\"",
     "category": "Field AT Rifle",
     "description": "This simple, dual-barreled short-range field gun packs a punch. Its economic construction makes for fairly basic assembly at the cost of longevity. Meant for Anti-Tank support, the Cestus is best utilized in ambushed tactics or woven between the lines of heavier armour.",
-    "ammoUsed": "20mm",
+    "ammoUsed": "14.5mm",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to medium sized shippables", "Can be towed by certain vehicles" ],
       "Gunner (Right)": [ "$Deals Anti-Tank Kinetic damage", "Can penetrate armoured vehicles" ] 

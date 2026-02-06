@@ -11,7 +11,7 @@
     "category": "Facility Structure",
     "description": "A large Assembly Station for production of advanced vehicles and equipment, such as tanks and trains. Construction will take time and may be halted if resources are depleted.",
     "pcmatCost": 250,
-    "buildingUpgrades": [ "AssemblyLargeTrain", "AssemblyLargeHeavyTank" ]
+    "buildingUpgrades": [ "AssemblyLargeAircraft", "AssemblyLargeTrain", "AssemblyLargeHeavyTank" ]
   },
   "DryDock": {
     "name": "Dry Dock",

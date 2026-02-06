@@ -50,7 +50,7 @@
     "ammoUsed": "250mm \"Purity\" Shell, 12.7mm",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
-      "Turret": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "Causes suppressed enemy players to lose stability", "$Deals Heavy Kinetic damage" ] 
+      "Turret": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "Suppression causes enemies to lose stability", "$Deals Heavy Kinetic damage" ] 
     },
     "pcmatCost": 5,
     "assmatCost": [ 10, 0, 0, 8, 0 ],
@@ -62,11 +62,11 @@
     "name": "Gallagher Highwayman Mk. III",
     "category": "Cruiser Tank",
     "description": "Colm Gallagher's engineers desginged a variation on the Outlaw that features an independently rotating MG turret sitting atop the main armament of twin anti-tank cannons. What it lack in raw firepower compared to its older sibling, the Highwayman more than makes up for it with versatility.",
-    "ammoUsed": "20mm, 12.7mm",
+    "ammoUsed": "14.5mm, 12.7mm",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to large sized shippables", "Engine can be boosted for increased top speed" ],
-      "Turret": [ "Causes suppressed enemy players to lose stability", "$Deals Anti-Tank Kinetic damage" ],
-      "Gunner (Left)": [ "Causes suppressed enemy players to lose stability", "$Deals Heavy Kinetic damage" ]
+      "Turret": [ "Suppression causes enemies to lose stability", "$Deals Anti-Tank Kinetic damage" ],
+      "Gunner (Left)": [ "Suppression causes enemies to lose stability", "$Deals Heavy Kinetic damage" ]
     },
     "pcmatCost": 5,
     "assmatCost": [ 0, 10, 5, 0, 0 ],
@@ -171,7 +171,7 @@
     "ammoUsed": "12.7mm, RPG",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
-      "Turret (Front)": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "Causes suppressed enemy players to lose stability", "$Deals Heavy Kinetic damage" ] 
+      "Turret (Front)": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "Suppression causes enemies to lose stability", "$Deals Heavy Kinetic damage" ] 
     },
     "pcmatCost": 10,
     "assmatCost": [ 0, 10, 10, 0, 0 ],

@@ -58,7 +58,7 @@
     "ammoUsed": "12.7mm",
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
-      "Gunner (Starboard)": [ "Causes suppressed enemy players to lose stability", "$Deals Heavy Kinetic damage" ] 
+      "Gunner (Starboard)": [ "Suppression causes enemies to lose stability", "$Deals Heavy Kinetic damage" ] 
     },
     "pcmatCost": 5,
     "assmatCost": [ 0, 0, 3, 0, 0 ],
