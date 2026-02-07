@@ -140,9 +140,9 @@
     "itemSpecifics": {
       "general": [ "$Deals Demolition damage", "Can ruin structures that have been severely damaged by artillery", "Significantly increased chance to breach a bunker" ] 
     },
-    "crateSize": 10,
-    "bmatCost": 150,
-    "ematCost": 160,
+    "crateSize": 5,
+    "bmatCost": 100,
+    "ematCost": 80,
     "productionTime": 100,
     "faction": "W"
   },
