@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "FoxholeLogiSheet",
   "resources": {
-    "hash": "sha256-FmAWZ5iDk2Xfbc5Q3IMfZpl46giBG3PPJbGYRqJ0ZbY=",
+    "hash": "sha256-PZUKQAa1lVc/oga6PhPc16BoNfYOzbAJDRNU0I4xxto=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-NljIbpK/1KCj0+knpX8U77Rbl5kTtfFIuFjK7AuczEw="
     },
@@ -53,7 +53,7 @@
       "System.Text.RegularExpressions.wasm": "sha256-2G8fIR17drT36mMeAETpY6tkOGKApPo0SazAp+v4m5w=",
       "System.Threading.wasm": "sha256-nmepV77ZAMV4rtWKj97dQetLJPZg+Rk73df3E6cmfe8=",
       "System.Private.CoreLib.wasm": "sha256-FMHAuDMv1hSAPAGrXJmnzT62QpOCgXAolZyWvZWfBJ8=",
-      "FoxholeLogiSheet.wasm": "sha256-0g7n+5bDXohZ92O12aFXCQywAxN89cIev4U4vaAcAsw="
+      "FoxholeLogiSheet.wasm": "sha256-G4JqLykne6zGm3dwSOohHxHVCXivs4Bdmn10Z5L1Vec="
     }
   },
   "cacheBootResources": true,

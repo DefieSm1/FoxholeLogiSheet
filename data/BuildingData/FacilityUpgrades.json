@@ -307,7 +307,7 @@
       {
         "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3", "AircraftPartLargeBrokenWarden" ],
         "inputAmounts": [ 5, 5, 1 ],
-        "outputNames": [ "AircraftEngineLargeWarden" ],
+        "outputNames": [ "AircraftPartLargeWarden" ],
         "outputAmounts": [ 1 ],
         "powerConsumption": 4,
         "productionTime": 360,
@@ -343,7 +343,7 @@
       {
         "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3", "AircraftPartLargeBrokenColonial" ],
         "inputAmounts": [ 5, 5, 1 ],
-        "outputNames": [ "AircraftEngineLargeColonial" ],
+        "outputNames": [ "AircraftPartLargeColonial" ],
         "outputAmounts": [ 1 ],
         "powerConsumption": 4,
         "productionTime": 360,
