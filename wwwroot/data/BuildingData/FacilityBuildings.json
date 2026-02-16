@@ -69,15 +69,6 @@
         "faction": "W"
       },
       {
-        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3" ],
-        "inputAmounts": [ 95, 25 ],
-        "outputNames": [ "AircraftEngineSmallWarden" ],
-        "outputAmounts": [ 1 ],
-        "powerConsumption": 10,
-        "productionTime": 1200,
-        "faction": "W"
-      },
-      {
         "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3", "AircraftPartSmallBrokenWarden" ],
         "inputAmounts": [ 5, 5, 1 ],
         "outputNames": [ "AircraftPartSmallWarden" ],
@@ -87,7 +78,16 @@
         "faction": "W"
       },
       {
-        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3", "AircraftEngineSmallBrokenWarden" ],
+        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT4" ],
+        "inputAmounts": [ 95, 25 ],
+        "outputNames": [ "AircraftEngineSmallWarden" ],
+        "outputAmounts": [ 1 ],
+        "powerConsumption": 10,
+        "productionTime": 1200,
+        "faction": "W"
+      },
+      {
+        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT4", "AircraftEngineSmallBrokenWarden" ],
         "inputAmounts": [ 5, 5, 1 ],
         "outputNames": [ "AircraftEngineSmallWarden" ],
         "outputAmounts": [ 1 ],
@@ -105,15 +105,6 @@
         "faction": "C"
       },
       {
-        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3" ],
-        "inputAmounts": [ 95, 25 ],
-        "outputNames": [ "AircraftEngineSmallColonial" ],
-        "outputAmounts": [ 1 ],
-        "powerConsumption": 10,
-        "productionTime": 1200,
-        "faction": "C"
-      },
-      {
         "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3", "AircraftPartSmallBrokenColonial" ],
         "inputAmounts": [ 5, 5, 1 ],
         "outputNames": [ "AircraftPartSmallColonial" ],
@@ -123,7 +114,16 @@
         "faction": "C"
       },
       {
-        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3", "AircraftEngineSmallBrokenColonial" ],
+        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT4" ],
+        "inputAmounts": [ 95, 25 ],
+        "outputNames": [ "AircraftEngineSmallColonial" ],
+        "outputAmounts": [ 1 ],
+        "powerConsumption": 10,
+        "productionTime": 1200,
+        "faction": "C"
+      },
+      {
+        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT4", "AircraftEngineSmallBrokenColonial" ],
         "inputAmounts": [ 5, 5, 1 ],
         "outputNames": [ "AircraftEngineSmallColonial" ],
         "outputAmounts": [ 1 ],
