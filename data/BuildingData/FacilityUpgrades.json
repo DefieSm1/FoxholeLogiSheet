@@ -296,15 +296,6 @@
         "faction": "W"
       },
       {
-        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3" ],
-        "inputAmounts": [ 95, 25 ],
-        "outputNames": [ "AircraftEngineLargeWarden" ],
-        "outputAmounts": [ 1 ],
-        "powerConsumption": 10,
-        "productionTime": 1200,
-        "faction": "W"
-      },
-      {
         "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3", "AircraftPartLargeBrokenWarden" ],
         "inputAmounts": [ 5, 5, 1 ],
         "outputNames": [ "AircraftPartLargeWarden" ],
@@ -314,7 +305,16 @@
         "faction": "W"
       },
       {
-        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3", "AircraftEngineLargeBrokenWarden" ],
+        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT4" ],
+        "inputAmounts": [ 95, 25 ],
+        "outputNames": [ "AircraftEngineLargeWarden" ],
+        "outputAmounts": [ 1 ],
+        "powerConsumption": 10,
+        "productionTime": 1200,
+        "faction": "W"
+      },
+      {
+        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT4", "AircraftEngineLargeBrokenWarden" ],
         "inputAmounts": [ 5, 5, 1 ],
         "outputNames": [ "AircraftEngineLargeWarden" ],
         "outputAmounts": [ 1 ],
@@ -332,15 +332,6 @@
         "faction": "C"
       },
       {
-        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3" ],
-        "inputAmounts": [ 95, 25 ],
-        "outputNames": [ "AircraftEngineLargeColonial" ],
-        "outputAmounts": [ 1 ],
-        "powerConsumption": 10,
-        "productionTime": 1200,
-        "faction": "C"
-      },
-      {
         "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3", "AircraftPartLargeBrokenColonial" ],
         "inputAmounts": [ 5, 5, 1 ],
         "outputNames": [ "AircraftPartLargeColonial" ],
@@ -350,7 +341,16 @@
         "faction": "C"
       },
       {
-        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3", "AircraftEngineLargeBrokenColonial" ],
+        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT4" ],
+        "inputAmounts": [ 95, 25 ],
+        "outputNames": [ "AircraftEngineLargeColonial" ],
+        "outputAmounts": [ 1 ],
+        "powerConsumption": 10,
+        "productionTime": 1200,
+        "faction": "C"
+      },
+      {
+        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT4", "AircraftEngineLargeBrokenColonial" ],
         "inputAmounts": [ 5, 5, 1 ],
         "outputNames": [ "AircraftEngineLargeColonial" ],
         "outputAmounts": [ 1 ],
