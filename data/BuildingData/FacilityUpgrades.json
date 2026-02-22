@@ -245,7 +245,7 @@
         "faction": "W"  
       },
       {
-        "inputNames": [ "$UniformScoutMantle", "MaterialRareMaterials" ],
+        "inputNames": [ "$UniformOfficerRegalia", "MaterialRareMaterials" ],
         "inputAmounts": [ 1, 1 ],
         "outputNames": [ "$UniformPilotRaiment" ],
         "outputAmounts": [ 1 ],
@@ -254,7 +254,7 @@
         "faction": "W"  
       },
       {
-        "inputNames": [ "$UniformScoutMantle", "MaterialProcessedConstruction" ],
+        "inputNames": [ "$UniformScoutCamo", "MaterialProcessedConstruction" ],
         "inputAmounts": [ 1, 10 ],
         "outputNames": [ "$UniformParatrooperHarness" ],
         "outputAmounts": [ 1 ],
@@ -263,7 +263,7 @@
         "faction": "C"  
       },
       {
-        "inputNames": [ "$UniformScoutMantle", "MaterialRareMaterials" ],
+        "inputNames": [ "$UniformOfficerAttire", "MaterialRareMaterials" ],
         "inputAmounts": [ 1, 1 ],
         "outputNames": [ "$UniformPilotLorica" ],
         "outputAmounts": [ 1 ],
