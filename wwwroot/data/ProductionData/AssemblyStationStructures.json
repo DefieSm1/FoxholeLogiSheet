@@ -68,7 +68,7 @@
       "general": [ "Can be carried by vehicles that support up to medium sized shippables" ]
     },
     "pcmatCost": 300,
-    "rareCost": 40,
+    "rareCost": 20,
     "shieldingCost": 45,
     "productionTime": 1500
   },
