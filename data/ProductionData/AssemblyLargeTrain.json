@@ -28,7 +28,7 @@
       "general": [ "Uses Enriched Oil to fire" ]
     },
     "steelCost": 285,
-    "rareCost": 100,
+    "rareCost": 35,
     "shieldingCost": 45,
     "assmatCost": [ 0, 0, 95, 105, 105 ],
     "productionTime": 259200

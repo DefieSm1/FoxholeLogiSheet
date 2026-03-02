@@ -697,7 +697,7 @@
       "Gunner (Stern)": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "Suppression causes enemies to lose stability", "$Deals Heavy Kinetic damage" ]
     },
     "crateSize": 3,
-    "bmatCost": 450,
+    "bmatCost": 150,
     "productionTime": 7500
   }
 }
