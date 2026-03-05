@@ -37,7 +37,6 @@
     "itemSpecifics": {
       "general": [ "Can be carried by vehicles that support up to large sized shippables" ]
     },
-    "rareCost": 1,
     "steelCost": 5,
     "assmatCost": [ 15, 0, 3, 0, 0 ],
     "baseVehicle": "ScoutTankSpire",
