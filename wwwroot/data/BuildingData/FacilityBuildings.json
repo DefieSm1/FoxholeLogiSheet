@@ -70,7 +70,7 @@
       },
       {
         "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3", "AircraftPartSmallBrokenWarden" ],
-        "inputAmounts": [ 5, 5, 1 ],
+        "inputAmounts": [ 1, 1, 1 ],
         "outputNames": [ "AircraftPartSmallWarden" ],
         "outputAmounts": [ 1 ],
         "powerConsumption": 4,
@@ -88,7 +88,7 @@
       },
       {
         "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT4", "AircraftEngineSmallBrokenWarden" ],
-        "inputAmounts": [ 5, 5, 1 ],
+        "inputAmounts": [ 1, 1, 1 ],
         "outputNames": [ "AircraftEngineSmallWarden" ],
         "outputAmounts": [ 1 ],
         "powerConsumption": 4,
@@ -106,7 +106,7 @@
       },
       {
         "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3", "AircraftPartSmallBrokenColonial" ],
-        "inputAmounts": [ 5, 5, 1 ],
+        "inputAmounts": [ 1, 1, 1 ],
         "outputNames": [ "AircraftPartSmallColonial" ],
         "outputAmounts": [ 1 ],
         "powerConsumption": 4,
@@ -124,7 +124,7 @@
       },
       {
         "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT4", "AircraftEngineSmallBrokenColonial" ],
-        "inputAmounts": [ 5, 5, 1 ],
+        "inputAmounts": [ 1, 1, 1 ],
         "outputNames": [ "AircraftEngineSmallColonial" ],
         "outputAmounts": [ 1 ],
         "powerConsumption": 4,
