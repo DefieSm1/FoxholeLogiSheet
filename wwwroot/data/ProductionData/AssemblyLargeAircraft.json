@@ -9,7 +9,7 @@
       "Driver": [ "Equipped with a high velocity barrel that deals 50% extra damage per shot" ] 
     },
     "pcmatCost": 40,
-    "assmatCost": [ 200, 0, 0, 100, 0 ],
+    "assmatCost": [ 100, 0, 0, 100, 0 ],
     "rareCost": 2,
     "productionTime": 14400,
     "faction": "W"
@@ -97,7 +97,7 @@
       "Driver": [ "Equipped with a high velocity barrel that deals 50% extra damage per shot" ] 
     },
     "pcmatCost": 40,
-    "assmatCost": [ 200, 0, 0, 100, 0 ],
+    "assmatCost": [ 100, 0, 0, 100, 0 ],
     "rareCost": 2,
     "productionTime": 14400,
     "faction": "C"
