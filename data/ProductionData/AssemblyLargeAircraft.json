@@ -29,7 +29,7 @@
     "productionTime": 14400,
     "faction": "W"
   },
-  "AircaftFighterRaven": {
+  "AircraftFighterRaven": {
     "name": "Tulka I1.9 White Raven",
     "category": "Amphibious Fighter Aircraft",
     "description": "This unique Nevish fighter was specially designed to be launched from Mercy-class aircraft carriers, with the flexibility to operate in different environments. Fitted with several front-facing armaments, the White Raven is known to swarm enemy armadas out of nowhere. They soon find themselves careening out of the clours.",
@@ -43,7 +43,7 @@
     "productionTime": 14400,
     "faction": "W"
   },
-  "AircrafBomberWelkinrive": {
+  "AircraftBomberWelkinrive": {
     "name": "Tulka P4 Welkinrive",
     "category": "Heavy Bomber Aircraft",
     "description": "A Nevish bomber that was developed in direct response to a lack of aerial heavy explosive support during Alliance operations. Having been repeatedly waylaid by Tzykalia bombers along the Sorovian coast, it became clear that the Sky Brigade needed to improve their armada. The Brigade commissioned a light and fuel-efficient bomber still capable of deploying catastrophic payloads.",
