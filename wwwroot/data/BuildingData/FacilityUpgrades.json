@@ -192,7 +192,15 @@
     "pcmatCost": 35,
     "buildingRecipes": [  
       {
-        "inputNames": [ "$ARBooker", "MaterialProcessedConstruction", "AssemblyMaterialsT2" ],
+        "inputNames": [ "$RifleLoughcaster", "MaterialConstruction", "MaterialProcessedConstruction" ],
+        "inputAmounts": [ 1, 50, 40 ],
+        "outputNames": [ "$RifleSniperRaca" ],
+        "outputAmounts": [ 1 ],
+        "productionTime": 100,
+        "faction": "W"
+      },
+      {
+        "inputNames": [ "$ARBooker", "MaterialProcessedConstruction", "AssemblyMaterialsT1" ],
         "inputAmounts": [ 1, 3, 5 ],
         "outputNames": [ "$ATRGreyhound" ],
         "outputAmounts": [ 1 ],
@@ -210,7 +218,15 @@
         "faction": "W"
       },
       {
-        "inputNames": [ "$RifleSniperAuger", "MaterialProcessedConstruction", "AssemblyMaterialsT2" ],
+        "inputNames": [ "$RifleArgenti", "MaterialConstruction", "MaterialProcessedConstruction" ],
+        "inputAmounts": [ 1, 50, 40 ],
+        "outputNames": [ "$RifleSniperAuger" ],
+        "outputAmounts": [ 1 ],
+        "productionTime": 100,
+        "faction": "C"
+      },
+      {
+        "inputNames": [ "$MGCatara", "MaterialProcessedConstruction", "AssemblyMaterialsT2" ],
         "inputAmounts": [ 1, 3, 5 ],
         "outputNames": [ "$ATRQuickhatch" ],
         "outputAmounts": [ 1 ],
@@ -246,7 +262,7 @@
       },
       {
         "inputNames": [ "$UniformOfficerRegalia", "MaterialRareMaterials" ],
-        "inputAmounts": [ 1, 1 ],
+        "inputAmounts": [ 1, 2 ],
         "outputNames": [ "$UniformPilotRaiment" ],
         "outputAmounts": [ 1 ],
         "powerConsumption": 4,
@@ -264,7 +280,7 @@
       },
       {
         "inputNames": [ "$UniformOfficerAttire", "MaterialRareMaterials" ],
-        "inputAmounts": [ 1, 1 ],
+        "inputAmounts": [ 1, 2 ],
         "outputNames": [ "$UniformPilotLorica" ],
         "outputAmounts": [ 1 ],
         "powerConsumption": 4,
@@ -286,9 +302,9 @@
     "description": "A factory for producing and repairing heavy-lift strategic aircraft parts.",
     "rareCost": 15,
     "buildingRecipes": [
-            {
-        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3" ],
-        "inputAmounts": [ 35, 25 ],
+      {
+        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3", "MaterialThermalShielding" ],
+        "inputAmounts": [ 35, 25, 1 ],
         "outputNames": [ "AircraftPartLargeWarden" ],
         "outputAmounts": [ 1 ],
         "powerConsumption": 10,
@@ -305,8 +321,8 @@
         "faction": "W"
       },
       {
-        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT4" ],
-        "inputAmounts": [ 95, 25 ],
+        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT4", "MaterialThermalShielding" ],
+        "inputAmounts": [ 95, 25, 1 ],
         "outputNames": [ "AircraftEngineLargeWarden" ],
         "outputAmounts": [ 1 ],
         "powerConsumption": 10,
@@ -323,8 +339,8 @@
         "faction": "W"
       },
       {
-        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3" ],
-        "inputAmounts": [ 35, 25 ],
+        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3", "MaterialThermalShielding" ],
+        "inputAmounts": [ 35, 25, 1 ],
         "outputNames": [ "AircraftPartLargeColonial" ],
         "outputAmounts": [ 1 ],
         "powerConsumption": 10,
@@ -341,8 +357,8 @@
         "faction": "C"
       },
       {
-        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT4" ],
-        "inputAmounts": [ 95, 25 ],
+        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT4", "MaterialThermalShielding" ],
+        "inputAmounts": [ 95, 25, 1 ],
         "outputNames": [ "AircraftEngineLargeColonial" ],
         "outputAmounts": [ 1 ],
         "powerConsumption": 10,

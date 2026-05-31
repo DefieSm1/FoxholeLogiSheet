@@ -81,30 +81,6 @@
     "productionTime": 300,
     "faction": "C"
   },
-  "TrailerLargeItem": {
-    "name": "Rooster - Tumblebox",
-    "category": "Trailer",
-    "description": "A simple towable trailer that holds heavier building materials.",
-    "itemSpecifics": {
-      "general": [ "Can be carried by vehicles that support up to medium sized shippables", "Can be towed by certain vehicles" ]
-    },
-    "pcmatCost": 10,
-    "assmatCost": [ 0, 5, 0, 0, 0 ],
-    "baseVehicle": "TrailerResource",
-    "productionTime": 300
-  },
-  "TrailerFuel": {
-    "name": "Rooster - Lamploader",
-    "category": "Trailer",
-    "description": "A simple towable trailer that holds various fuel sources and can be used to refuel vehicles.",
-    "itemSpecifics": {
-      "general": [ "Can be carried by vehicles that support up to medium sized shippables", "Can be towed by certain vehicles" ]
-    },
-    "pcmatCost": 10,
-    "assmatCost": [ 0, 5, 0, 0, 0 ],
-    "baseVehicle": "TrailerResource",
-    "productionTime": 300
-  },
   "TruckHeavyCliffwrest": {
     "name": "Cnute Cliffwrest",
     "category": "Heavy-Duty Truck",

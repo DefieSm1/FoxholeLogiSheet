@@ -259,13 +259,19 @@
     "description": "A paratrooper's basic kit. Includes minimal survival gear to improve weight distribution and account for parachutes.",
     "crateSize": 10
   },
+  "RifleLoughcaster": {
+    "importCategory": "SmallArms"
+  },
+  "RifleArgenti": {
+    "importCategory": "SmallArms"
+  },
   "ARBooker": {
     "importCategory": "SmallArms"
   },
   "ATRifle": {
     "importCategory": "HeavyArms"
   },
-  "RifleSniperAuger": {
+  "MGCatara": {
     "importCategory": "SmallArms"
   },
   "ARDusk": {
@@ -293,6 +299,17 @@
     "crateSize": 5,
     "faction": "W"
   },
+  "RifleSniperRaca": {
+    "name": "Clancy-Raca M4",
+    "category": "Sniper Rifle",
+    "description": "A heavy-duty, long-range marksman rifle. The Clancy-Raca has one hell of a kick but is fitted with a powerful scope, allowing infantry to survey the battlefield and provide support from a safe location.",
+    "ammoUsed": "7.62mm",
+    "itemSpecifics": {
+      "general": [ "Equipped with a high velocity barrel that deals 55% extra damage per shot", "Accuracy bonus provided by cover is reduced by 95%" ] 
+    },
+    "crateSize": 3,
+    "faction": "W"
+  },
   "ATRQuickhatch": {
     "name": "\"Quickhatch\" Rt.I",
     "category": "Sniper Rifle",
@@ -313,6 +330,18 @@
       "general": [ "Deals 200% damage to vehicle armour", "Suppresses enemy vehicles", "Suppression causes enemies to lose stability", "Equipped with a low velocity barrel that deals 30% less damage per shot" ]
     },
     "crateSize": 3,
+    "faction": "C"
+  },
+  "RifleSniperAuger": {
+    "name": "KRR3-792 Auger",
+    "category": "Sniper Rifle",
+    "description": "A Kraunian rifle modified for long-range engagements. It doesn't have the range or stopping power of other marksman rifles but more than makes up for it with unmatched reliability in a range of environments and a superior effective rate of fire.",
+    "ammoUsed": "7.62mm",
+    "itemSpecifics": {
+      "general": [ "Equipped with a high velocity barrel that deals 55% extra damage per shot", "Accuracy bonus provided by cover is reduced by 95%" ] 
+    },
+    "crateSize": 5,
+    "productionTime": 250,
     "faction": "C"
   },
   "AmmoMortarIncendiary": {
@@ -490,6 +519,18 @@
       "general": [ "$Deals High Explosive damage" ]
     }
   },
+  "TorpedoMini": {
+    "importCategory": "HeavyMunitions"
+  },
+  "TorpedoMedium": {
+    "name": "Tenta Torpedo",
+    "category": "Torpedo",
+    "description": "A surface torpedo for use by specialized aircraft.",
+    "itemSpecifics": {
+      "general": [ "Can only be carried by stockpiles", "$Deals High Explosive damage", "Increased chance to cause a leak" ]
+    },
+    "faction": "W"
+  },
   "Torpedo": {
     "name": "Moray Torpedo",
     "category": "Torpedo",
@@ -497,9 +538,6 @@
     "itemSpecifics": {
       "general": [ "Can only be carried by stockpiles", "$Deals High Explosive damage", "Increased chance to cause a leak" ]
     }
-  },
-  "TorpedoMini": {
-    "importCategory": "HeavyMunitions"
   },
   "UtilityTripod": {
     "importCategory": "Utility"

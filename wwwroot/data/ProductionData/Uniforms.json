@@ -16,7 +16,7 @@
     "category": "Warden Armour Uniform",
     "description": "Repourposed from ancient wars, these armour plates are highly effective at stopping enemy small arms fire. That protection comes at the cost of weight, and the wearer will feel quite restricted and encumbered.",
     "itemSpecifics": {
-      "general": [ "$3 backpack slots", "$High reststance to light kinetic damage", "$High resistance to melee damage", "$Low resistance to bleeding" ] 
+      "general": [ "$3 backpack slots", "$Light kinetic weapon ammunition stacks", "$Very high reststance to light kinetic damage", "$High resistance to melee damage", "$Low resistance to bleeding" ] 
     },
     "crateSize": 5,
     "bmatCost": 150,
@@ -112,7 +112,7 @@
     "category": "Colonial Armour Uniform",
     "description": "A heavily reinforced vest designed to protect grenadiers from back blasts. As such, the Flak Vest reduces cuts and scrapes on top of dampening bullet impacts.",
     "itemSpecifics": {
-      "general": [ "$4 backpack slots", "$Low resistance to light kinetic damage", "$High resistance to bleeding" ] 
+      "general": [ "$4 backpack slots", "$Light kinetic weapon ammunition stacks", "$High resistance to light kinetic damage", "$Very high resistance to bleeding" ] 
     },
     "crateSize": 10,
     "bmatCost": 200,

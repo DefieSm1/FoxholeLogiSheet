@@ -46,6 +46,18 @@
     "hematCost": 60,
     "productionTime": 65
   },
+  "AmmoAAAbsol": {
+    "name": "Absol Anti-Aircraft Rounds",
+    "category": "Anti-Air Ammo",
+    "description": "Anti-aircraft shells designed for use with mobile AA vehicles.",
+    "itemSpecifics": {
+      "general": [ "$Deals Shrapnel damage", "Always causes target to bleed" ]
+    },
+    "crateSize": 5,
+    "bmatCost": 150,
+    "ematCost": 160,
+    "productionTime": 55
+  },
   "AmmoShell120": {
     "name": "120mm",
     "category": "Light Artillery Ammo",
@@ -68,8 +80,7 @@
     "crateSize": 5,
     "bmatCost": 125,
     "ematCost": 75,
-    "productionTime": 125,
-    "faction": "W"
+    "productionTime": 125
   },
   "AmmoShell250": {
     "name": "250mm \"Purity\" Shell",

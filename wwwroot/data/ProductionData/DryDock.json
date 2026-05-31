@@ -70,7 +70,7 @@
       "Gunner (Port Beam), Gunner (Starboard Beam)": [ "Equipped with a high velocity barrel that deals 20% extra damage per shot", "Suppression causes enemies to lose stability", "$Deals Shrapnel damage", "Always causes target to bleed" ]
     },
     "hullSegments": 16,
-    "shellPlating": 16,
+    "shellPlating": 20,
     "productionTime": 36000,
     "faction": "W"
   },

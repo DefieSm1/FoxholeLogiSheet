@@ -9,23 +9,9 @@
       "Driver": [ "Equipped with a high velocity barrel that deals 50% extra damage per shot" ] 
     },
     "pcmatCost": 40,
-    "assmatCost": [ 100, 0, 0, 100, 0 ],
+    "shieldingCost": 10,
+    "assmatCost": [ 0, 0, 50, 50, 0 ],
     "rareCost": 2,
-    "productionTime": 14400,
-    "faction": "W"
-  },
-  "AircraftTorpedoManOWar": {
-    "name": "M925 Austringer Man-O-war",
-    "category": "Torpedo Bomber Aircraft",
-    "description": "The M925 Edellian bomber is the Alliance Sky Brigade's ace at air-to-sea combat. Featuring twin torpedo bays and a rear mounted machine gun, the Man-O-War is a veritable threat to any ship's hull or would-be assailants. The M925's unique capabilities overdelivered, as it was originally conveived as nothing more than a short-range coastal defence bomber. During the M925's first operation off of the Katoman coast, a small squadron single-handedly sank a Titan. Her crew had no idea how their ship filled with seawater as torpedo after torpedo bored into the underside of her hull.",
-    "ammoUsed": "Moray Torpedo, 12.7mm",
-    "itemSpecifics": {
-      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Requires aircraft parts for final assembly: Engine (Small) x3, Mechanical Parts (Small) x5" ],
-      "Driver": [ "Equipped with a low velocity barrel that deals 30% extra damage per shot", "$That's right folks, LV Torpedoes!", "$Deals High Explosive damage", "Increased chances to cause a leak" ]
-    },
-    "pcmatCost": 25,
-    "assmatCost": [ 85, 100, 20, 20, 0 ],
-    "rareCost": 5,
     "productionTime": 14400,
     "faction": "W"
   },
@@ -38,24 +24,26 @@
       "general": [ "Can be carried by vehicles that support up to large sized shippables", "Requires aircraft parts for final assembly: Engine (Small) x1, Mechanical Parts (Small) x5" ]
     },
     "pcmatCost": 40,
-    "assmatCost": [ 0, 145, 40, 0, 0 ],
+    "shieldingCost": 10,
+    "assmatCost": [ 0, 200, 50, 0, 0 ],
     "rareCost": 2,
     "productionTime": 14400,
     "faction": "W"
   },
-  "AircraftBomberWelkinrive": {
-    "name": "Tulka P4 Welkinrive",
-    "category": "Heavy Bomber Aircraft",
-    "description": "A Nevish bomber that was developed in direct response to a lack of aerial heavy explosive support during Alliance operations. Having been repeatedly waylaid by Tzykalia bombers along the Sorovian coast, it became clear that the Sky Brigade needed to improve their armada. The Brigade commissioned a light and fuel-efficient bomber still capable of deploying catastrophic payloads.",
-    "ammoUsed": "12.7mm, Mark II Raidbreaker",
+  "AircraftTorpedoManOWar": {
+    "name": "M925 Austringer Man-O-war",
+    "category": "Torpedo Bomber Aircraft",
+    "description": "The M925 Edellian bomber is the Alliance Sky Brigade's ace at air-to-sea combat. Featuring twin torpedo bays and a rear mounted machine gun, the Man-O-War is a veritable threat to any ship's hull or would-be assailants. The M925's unique capabilities overdelivered, as it was originally conveived as nothing more than a short-range coastal defence bomber. During the M925's first operation off of the Katoman coast, a small squadron single-handedly sank a Titan. Her crew had no idea how their ship filled with seawater as torpedo after torpedo bored into the underside of her hull.",
+    "ammoUsed": "Tenta Torpedo, 12.7mm",
     "itemSpecifics": {
-      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Requires aircraft parts for final assembly: Engine (Large) x2, Mechanical Parts (Large) x9"  ],
-      "Bombardier": [ "$Deals High Explosive damage", "Can ruin structures that have been severely damaged by artillery", "Reduced damage against Trenches", "Increased damage against Field Structures" ]
+      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Requires aircraft parts for final assembly: Engine (Small) x3, Mechanical Parts (Small) x5" ],
+      "Driver": [ "Equipped with a low velocity barrel that deals 30% extra damage per shot", "$That's right folks, LV Torpedoes!", "$Deals High Explosive damage", "Increased chances to cause a leak" ]
     },
-    "steelCost": 60,
-    "assmatCost": [ 0, 0, 25, 40, 65 ],
-    "rareCost": 12,
-    "productionTime": 28800,
+    "pcmatCost": 25,
+    "shieldingCost": 10,
+    "assmatCost": [ 85, 100, 20, 0, 0 ],
+    "rareCost": 6,
+    "productionTime": 14400,
     "faction": "W"
   },
   "AircraftTransportZealot": {
@@ -72,20 +60,21 @@
     "productionTime": 21600,
     "faction": "W"
   },
-  "AircraftBomberTzykalia": {
-    "name": "V-1 Tzykalia",
+  "AircraftBomberWelkinrive": {
+    "name": "Tulka P4 Welkinrive",
     "category": "Heavy Bomber Aircraft",
-    "description": "A large, deadly bomber capable of delivering high volumes of explosive payloads. While the V-1 Tzykalia requires a proficient bombardier crew, this Velian-made aircraft has an infamous reputation overseas on the Katoma front. Facing minimal air-to-air resistance, a full squadron of Tzykalias led by seasoned captain and ace lodesman Calliope Bibas erased a large Estrellan fortress in the desert region of Sorra Blava off the map. This operation left Alliance presence in the west reeling, furthering Republic ambitions in the region.",
+    "description": "A Nevish bomber that was developed in direct response to a lack of aerial heavy explosive support during Alliance operations. Having been repeatedly waylaid by Tzykalia bombers along the Sorovian coast, it became clear that the Sky Brigade needed to improve their armada. The Brigade commissioned a light and fuel-efficient bomber still capable of deploying catastrophic payloads.",
     "ammoUsed": "12.7mm, Mark II Raidbreaker",
     "itemSpecifics": {
-      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Requires aircraft parts for final assembly: Engine (Large) x2, Mechanical Parts (Large) x9" ],
+      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Requires aircraft parts for final assembly: Engine (Large) x2, Mechanical Parts (Large) x9"  ],
       "Bombardier": [ "$Deals High Explosive damage", "Can ruin structures that have been severely damaged by artillery", "Reduced damage against Trenches", "Increased damage against Field Structures" ]
     },
     "steelCost": 60,
+    "shieldingCost": 10,
     "assmatCost": [ 0, 0, 25, 40, 65 ],
     "rareCost": 12,
     "productionTime": 28800,
-    "faction": "C"
+    "faction": "W"
   },
   "AircraftFighterToxot": {
     "name": "Toxot-902 \"Blind Silver\"",
@@ -97,8 +86,25 @@
       "Driver": [ "Equipped with a high velocity barrel that deals 50% extra damage per shot" ] 
     },
     "pcmatCost": 40,
-    "assmatCost": [ 100, 0, 0, 100, 0 ],
+    "shieldingCost": 10,
+    "assmatCost": [ 0, 0, 50, 50, 0 ],
     "rareCost": 2,
+    "productionTime": 14400,
+    "faction": "C"
+  },
+  "AircraftBomberMyrmidon": {
+    "name": "Mergo-4 \"Myrmidon\"",
+    "category": "Dive Bomber Aircraft",
+    "description": "This unique dive bomber quickly deposits small payloads with more precision than its larger, less mobile counterparts. Bombing first and asking questions later, \"Myrmidons\" often lead larger bombing operations. Its effective hit-and-run tactics soften larger targets or clear out emplacements that may pose a threat to less manouvrable aircraft or incoming convoys.",
+    "ammoUsed": "912 Shrike Rounds, 12.7mm",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Requires aircraft parts for final assembly: Engine (Small) x1, Mechanical Parts (Small) x5" ],
+      "Driver": [ "$Deals Armour Piercing damage", "High chance of disabling all vehicle subsystems" ]
+    },
+    "pcmatCost": 40,
+    "shieldingCost": 10,
+    "assmatCost": [ 85, 175, 50, 0, 0 ],
+    "rareCost": 4,
     "productionTime": 14400,
     "faction": "C"
   },
@@ -117,19 +123,20 @@
     "productionTime": 21600,
     "faction": "C"
   },
-  "AircraftBomberMyrmidon": {
-    "name": "Mergo-4 \"Myrmidon\"",
-    "category": "Dive Bomber Aircraft",
-    "description": "This unique dive bomber quickly deposits small payloads with more precision than its larger, less mobile counterparts. Bombing first and asking questions later, \"Myrmidons\" often lead larger bombing operations. Its effective hit-and-run tactics soften larger targets or clear out emplacements that may pose a threat to less manouvrable aircraft or incoming convoys.",
-    "ammoUsed": "912 Shrike Rounds, 12.7mm",
+  "AircraftBomberTzykalia": {
+    "name": "V-1 Tzykalia",
+    "category": "Heavy Bomber Aircraft",
+    "description": "A large, deadly bomber capable of delivering high volumes of explosive payloads. While the V-1 Tzykalia requires a proficient bombardier crew, this Velian-made aircraft has an infamous reputation overseas on the Katoma front. Facing minimal air-to-air resistance, a full squadron of Tzykalias led by seasoned captain and ace lodesman Calliope Bibas erased a large Estrellan fortress in the desert region of Sorra Blava off the map. This operation left Alliance presence in the west reeling, furthering Republic ambitions in the region.",
+    "ammoUsed": "12.7mm, Mark II Raidbreaker",
     "itemSpecifics": {
-      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Requires aircraft parts for final assembly: Engine (Small) x1, Mechanical Parts (Small) x5" ],
-      "Driver": [ "$Deals Armour Piercing damage", "High chance of disabling all vehicle subsystems" ]
+      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Requires aircraft parts for final assembly: Engine (Large) x2, Mechanical Parts (Large) x9" ],
+      "Bombardier": [ "$Deals High Explosive damage", "Can ruin structures that have been severely damaged by artillery", "Reduced damage against Trenches", "Increased damage against Field Structures" ]
     },
-    "pcmatCost": 40,
-    "assmatCost": [ 85, 175, 100, 0, 0 ],
-    "rareCost": 5,
-    "productionTime": 14400,
+    "steelCost": 60,
+    "shieldingCost": 10,
+    "assmatCost": [ 0, 0, 25, 40, 65 ],
+    "rareCost": 12,
+    "productionTime": 28800,
     "faction": "C"
   }
 }

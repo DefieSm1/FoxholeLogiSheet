@@ -230,20 +230,6 @@
     "productionTime": 70,
     "faction": "W"
   },
-  "RifleSniperRaca": {
-    "name": "Clancy-Raca M4",
-    "category": "Sniper Rifle",
-    "description": "A heavy-duty, long-range marksman rifle. The Clancy-Raca has one hell of a kick but is fitted with a powerful scope, allowing infantry to survey the battlefield and provide support from a safe location.",
-    "ammoUsed": "7.62mm",
-    "itemSpecifics": {
-      "general": [ "Equipped with a high velocity barrel that deals 125% extra damage per shot", "Accuracy bonus provided by cover is reduced by 95%" ] 
-    },
-    "crateSize": 3,
-    "rmatCost": 25,
-    "bmatCost": 250,
-    "productionTime": 250,
-    "faction": "W"
-  },
   "RifleCatena": {
     "name": "Catena rt.IV Auto-Rifle",
     "category": "Rifle",
@@ -306,20 +292,6 @@
     "productionTime": 90,
     "faction": "C"
   },
-  "RifleSniperAuger": {
-    "name": "KRR3-792 Auger",
-    "category": "Sniper Rifle",
-    "description": "A Kraunian rifle modified for long-range engagements. It doesn't have the range or stopping power of other marksman rifles but more than makes up for it with unmatched reliability in a range of environments and a superior effective rate of fire.",
-    "ammoUsed": "7.62mm",
-    "itemSpecifics": {
-      "general": [ "Equipped with a high velocity barrel that deals 55% extra damage per shot", "Accuracy bonus provided by cover is reduced by 95%" ] 
-    },
-    "crateSize": 5,
-    "bmatCost": 250,
-    "rmatCost": 30,
-    "productionTime": 250,
-    "faction": "C"
-  },
   "AmmoRifle762": {
     "name": "7.62mm",
     "category": "Rifle Ammo",
@@ -337,7 +309,7 @@
     "description": "A hunting shotgun with a sawn-off barrel for higher stopping power and mobility at the expense of accuracy. This traditional civilian firearm can fire two shots in rapid succession before needing to be reloaded. It became a favourite sidearm among Caoivish Watchers and has since earned an ominous reputation as a result.",
     "ammoUsed": "Buckshot",
     "itemSpecifics": {
-      "general": [ "Equipped with a high velocity barrel that deals 60% extra damage per shot", "Rip and Tear, until it is done" ]
+      "general": [ "Equipped with a low velocity barrel that deals 10% less damage per shot", "Rip and Tear, until it is done" ]
     },
     "crateSize": 15,
     "bmatCost": 80,
