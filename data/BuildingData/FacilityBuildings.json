@@ -401,6 +401,15 @@
         "outputAmounts": [ 1 ],
         "powerConsumption": 4,
         "productionTime": 25
+      },
+      {
+        "inputNames": [ "MaterialHeavyExplosive", "MaterialProcessedConstruction" ],
+        "inputAmounts": [ 14, 2 ],
+        "outputNames": [ "TorpedoMedium" ],
+        "outputAmounts": [ 1 ],
+        "powerConsumption": 6,
+        "productionTime": 240,
+        "faction": "W"
       }
     ]
   },

@@ -119,6 +119,20 @@
     "productionTime": 1000,
     "faction": "W"
   },
+  "LightTankBirdeater": {
+    "name": "Sharkey-Devitt Birdeater Mk. I",
+    "category": "Light Tank",
+    "description": "This modern refitting of the stock Devitt model features an updates turret sporting a twin-barreled anti-ari cannon. While it may resemble older models, the Birdeater Mk. I is an effective mobile anti-air platform. Its innards have been shifted around to accommodate specialized shells.",
+    "ammoUsed": "Absol Anti-Aircraft Rounds",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ],
+      "Cannoneer (Center)": [ "Supression causes enemies to lose stability", "$Deals Shrapnel damage", "Always causes target to bleed" ]
+    },
+    "crateSize": 3,
+    "rmatCost": 125,
+    "productionTime": 6250,
+    "faction": "W"
+  },
   "LightTankDevitt": {
     "name": "Devitt Mk. III",
     "category": "Light Tank",
@@ -247,6 +261,20 @@
     "productionTime": 1000,
     "faction": "C"
   },
+  "LightTankSagaris": {
+    "name": "HA-1 \"Sagaris\"",
+    "category": "Light Tank",
+    "description": "The \"Sagaris\" light tank specializes in anti-air operations. Fitted with a unique twin-barreled AA cannon, enemy aircraft never last long when a HA-1 is deployed.",
+    "ammoUsed": "Absol Anti-Aircraft Rounds",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables" ],
+      "Cannoneer (Center)": [ "Supression causes enemies to lose stability", "$Deals Shrapnel damage", "Always causes target to bleed" ]
+    },
+    "crateSize": 3,
+    "rmatCost": 125,
+    "productionTime": 6250,
+    "faction": "C"
+  },
   "LightTankHatchet": {
     "name": "H-5 \"Hatchet\"",
     "category": "Light Tank",
@@ -353,7 +381,7 @@
       "Turret": [ "$Deals Explosive damage", "Can penetrate armoured vehicles" ] 
     },
     "crateSize": 3,
-    "rmatCost": 155,
+    "rmatCost": 160,
     "productionTime": 7750,
     "faction": "W"
   },
@@ -509,7 +537,29 @@
       "general": [ "Can be carried by vehicles that support up to medium sized shippables", "Can be towed by certain vehicles" ]
     },
     "crateSize": 3,
-    "rmatCost": 10,
+    "bmatCost": 100,
+    "productionTime": 600
+  },
+    "TrailerLargeItem": {
+    "name": "Rooster - Tumblebox",
+    "category": "Trailer",
+    "description": "A simple towable trailer that holds heavier building materials.",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables", "Can be towed by certain vehicles" ]
+    },
+    "crateSize": 3,
+    "bmatCost": 100,
+    "productionTime": 600
+  },
+  "TrailerFuel": {
+    "name": "Rooster - Lamploader",
+    "category": "Trailer",
+    "description": "A simple towable trailer that holds various fuel sources and can be used to refuel vehicles.",
+    "itemSpecifics": {
+      "general": [ "Can be carried by vehicles that support up to medium sized shippables", "Can be towed by certain vehicles" ]
+    },
+    "crateSize": 3,
+    "bmatCost": 100,
     "productionTime": 600
   },
   "TruckDumpLoadlugger": {
