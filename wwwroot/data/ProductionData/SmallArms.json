@@ -63,7 +63,7 @@
     "itemSpecifics": {
       "general": [ "$Deals Light Kinetic damage" ] 
     },
-    "crateSize": 20,
+    "crateSize": 10,
     "bmatCost": 100,
     "ematCost": 40,
     "productionTime": 100,
@@ -115,7 +115,7 @@
     "itemSpecifics": {
       "general": [ "$Deals Shrapnel damage", "Always causes target to bleed" ] 
     },
-    "crateSize": 25,
+    "crateSize": 10,
     "bmatCost": 100,
     "ematCost": 40,
     "productionTime": 100,
@@ -155,7 +155,7 @@
     "faction": "W"
   },
   "AmmoPistol44": {
-    "name": ".44",
+    "name": ".44 Mag",
     "category": "Revolver Ammo",
     "description": "Standard ammunition for revolvers.",
     "itemSpecifics": {
@@ -405,7 +405,7 @@
     "itemSpecifics": {
       "general": [ "$Deals Poisonous Gas damage", "Causes damage over time" ] 
     },
-    "crateSize": 10,
+    "crateSize": 5,
     "bmatCost": 140,
     "productionTime": 100
   },

@@ -5,14 +5,12 @@
     "description": "The backbone of the Alliance Sky Brigade, the Harbinger excels at both strafing ground targets and dogfighting with its twin, front-facting machine guns. Not willing to be outclassed by crude Mesean engineering, Luminary-formerly a northern Caoivish industrial engineering firms-set to work on designing its Mk. I prototype. Sleek, aerodynamic, and so fast it screams, the Harbinger's design is intended to give the Nevish Alliance a psychological edge on the battlefield as much as it provides air support.",
     "ammoUsed": "20mm, 14.5mm",
     "itemSpecifics": {
-      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Requires aircraft parts for final assembly: Engine (Small) x1, Mechanical Parts (Small) x5" ],
-      "Driver": [ "Equipped with a high velocity barrel that deals 50% extra damage per shot" ] 
+      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Requires aircraft parts for final assembly: Engine (Small) x1, Mechanical Parts (Small) x5" ]
     },
     "pcmatCost": 40,
-    "shieldingCost": 10,
     "assmatCost": [ 0, 0, 50, 50, 0 ],
     "rareCost": 2,
-    "productionTime": 14400,
+    "productionTime": 3600,
     "faction": "W"
   },
   "AircraftFighterRaven": {
@@ -24,10 +22,9 @@
       "general": [ "Can be carried by vehicles that support up to large sized shippables", "Requires aircraft parts for final assembly: Engine (Small) x1, Mechanical Parts (Small) x5" ]
     },
     "pcmatCost": 40,
-    "shieldingCost": 10,
     "assmatCost": [ 0, 200, 50, 0, 0 ],
     "rareCost": 2,
-    "productionTime": 14400,
+    "productionTime": 3600,
     "faction": "W"
   },
   "AircraftTorpedoManOWar": {
@@ -40,10 +37,9 @@
       "Driver": [ "Equipped with a low velocity barrel that deals 30% extra damage per shot", "$That's right folks, LV Torpedoes!", "$Deals High Explosive damage", "Increased chances to cause a leak" ]
     },
     "pcmatCost": 25,
-    "shieldingCost": 10,
     "assmatCost": [ 85, 100, 20, 0, 0 ],
-    "rareCost": 6,
-    "productionTime": 14400,
+    "rareCost": 4,
+    "productionTime": 3600,
     "faction": "W"
   },
   "AircraftTransportZealot": {
@@ -56,8 +52,8 @@
     },
     "steelCost": 5,
     "assmatCost": [ 0, 0, 20, 20, 0 ],
-    "rareCost": 4,
-    "productionTime": 21600,
+    "rareCost": 6,
+    "productionTime": 7200,
     "faction": "W"
   },
   "AircraftBomberWelkinrive": {
@@ -70,10 +66,9 @@
       "Bombardier": [ "$Deals High Explosive damage", "Can ruin structures that have been severely damaged by artillery", "Reduced damage against Trenches", "Increased damage against Field Structures" ]
     },
     "steelCost": 60,
-    "shieldingCost": 10,
     "assmatCost": [ 0, 0, 25, 40, 65 ],
     "rareCost": 12,
-    "productionTime": 28800,
+    "productionTime": 14400,
     "faction": "W"
   },
   "AircraftFighterToxot": {
@@ -82,14 +77,12 @@
     "description": "The Toxot-902 is a modern variant of the first warplane to ever see combat; it tears across battlefields laying down strafing machine gun support but excels in air-to-air dogfights. Easy to manufacture and field in large numbers, \"Blind Silvers\" often give the impression of a volley of arrows soaring overhead.",
     "ammoUsed": "20mm",
     "itemSpecifics": {
-      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Requires aircraft parts for final assembly: Engine (Small) x1, Mechanical Parts (Small) x5" ],
-      "Driver": [ "Equipped with a high velocity barrel that deals 50% extra damage per shot" ] 
+      "general": [ "Can be carried by vehicles that support up to large sized shippables", "Requires aircraft parts for final assembly: Engine (Small) x1, Mechanical Parts (Small) x5" ]
     },
     "pcmatCost": 40,
-    "shieldingCost": 10,
     "assmatCost": [ 0, 0, 50, 50, 0 ],
     "rareCost": 2,
-    "productionTime": 14400,
+    "productionTime": 3600,
     "faction": "C"
   },
   "AircraftBomberMyrmidon": {
@@ -102,10 +95,9 @@
       "Driver": [ "$Deals Armour Piercing damage", "High chance of disabling all vehicle subsystems" ]
     },
     "pcmatCost": 40,
-    "shieldingCost": 10,
     "assmatCost": [ 85, 175, 50, 0, 0 ],
     "rareCost": 4,
-    "productionTime": 14400,
+    "productionTime": 3600,
     "faction": "C"
   },
   "AircraftTransportPegasus": {
@@ -119,8 +111,8 @@
     },
     "steelCost": 5,
     "assmatCost": [ 0, 0, 20, 20, 0 ],
-    "rareCost": 4,
-    "productionTime": 21600,
+    "rareCost": 6,
+    "productionTime": 7200,
     "faction": "C"
   },
   "AircraftBomberTzykalia": {
@@ -133,10 +125,9 @@
       "Bombardier": [ "$Deals High Explosive damage", "Can ruin structures that have been severely damaged by artillery", "Reduced damage against Trenches", "Increased damage against Field Structures" ]
     },
     "steelCost": 60,
-    "shieldingCost": 10,
     "assmatCost": [ 0, 0, 25, 40, 65 ],
     "rareCost": 12,
-    "productionTime": 28800,
+    "productionTime": 14400,
     "faction": "C"
   }
 }

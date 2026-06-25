@@ -303,8 +303,8 @@
     "rareCost": 15,
     "buildingRecipes": [
       {
-        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3", "MaterialThermalShielding" ],
-        "inputAmounts": [ 35, 25, 1 ],
+        "inputNames": [ "MaterialSteel" ],
+        "inputAmounts": [ 5 ],
         "outputNames": [ "AircraftPartLargeWarden" ],
         "outputAmounts": [ 1 ],
         "powerConsumption": 10,
@@ -312,8 +312,8 @@
         "faction": "W"
       },
       {
-        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3", "AircraftPartLargeBrokenWarden" ],
-        "inputAmounts": [ 5, 5, 1 ],
+        "inputNames": [ "MaterialThermalShielding", "AircraftPartLargeBrokenWarden" ],
+        "inputAmounts": [ 2, 1 ],
         "outputNames": [ "AircraftPartLargeWarden" ],
         "outputAmounts": [ 1 ],
         "powerConsumption": 4,
@@ -321,8 +321,8 @@
         "faction": "W"
       },
       {
-        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT4", "MaterialThermalShielding" ],
-        "inputAmounts": [ 95, 25, 1 ],
+        "inputNames": [ "MaterialSteel" ],
+        "inputAmounts": [ 15 ],
         "outputNames": [ "AircraftEngineLargeWarden" ],
         "outputAmounts": [ 1 ],
         "powerConsumption": 10,
@@ -330,8 +330,8 @@
         "faction": "W"
       },
       {
-        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT4", "AircraftEngineLargeBrokenWarden" ],
-        "inputAmounts": [ 5, 5, 1 ],
+        "inputNames": [ "MaterialThermalShielding", "AircraftEngineLargeBrokenWarden" ],
+        "inputAmounts": [ 3, 1 ],
         "outputNames": [ "AircraftEngineLargeWarden" ],
         "outputAmounts": [ 1 ],
         "powerConsumption": 4,
@@ -339,8 +339,8 @@
         "faction": "W"
       },
       {
-        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3", "MaterialThermalShielding" ],
-        "inputAmounts": [ 35, 25, 1 ],
+        "inputNames": [ "MaterialSteel" ],
+        "inputAmounts": [ 5 ],
         "outputNames": [ "AircraftPartLargeColonial" ],
         "outputAmounts": [ 1 ],
         "powerConsumption": 10,
@@ -348,8 +348,8 @@
         "faction": "C"
       },
       {
-        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3", "AircraftPartLargeBrokenColonial" ],
-        "inputAmounts": [ 5, 5, 1 ],
+        "inputNames": [ "MaterialThermalShielding", "AircraftPartLargeBrokenColonial" ],
+        "inputAmounts": [ 2, 1 ],
         "outputNames": [ "AircraftPartLargeColonial" ],
         "outputAmounts": [ 1 ],
         "powerConsumption": 4,
@@ -357,8 +357,8 @@
         "faction": "C"
       },
       {
-        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT4", "MaterialThermalShielding" ],
-        "inputAmounts": [ 95, 25, 1 ],
+        "inputNames": [ "MaterialSteel" ],
+        "inputAmounts": [ 15 ],
         "outputNames": [ "AircraftEngineLargeColonial" ],
         "outputAmounts": [ 1 ],
         "powerConsumption": 10,
@@ -366,8 +366,8 @@
         "faction": "C"
       },
       {
-        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT4", "AircraftEngineLargeBrokenColonial" ],
-        "inputAmounts": [ 5, 5, 1 ],
+        "inputNames": [ "MaterialThermalShielding", "AircraftEngineLargeBrokenColonial" ],
+        "inputAmounts": [ 3, 1 ],
         "outputNames": [ "AircraftEngineLargeColonial" ],
         "outputAmounts": [ 1 ],
         "powerConsumption": 4,

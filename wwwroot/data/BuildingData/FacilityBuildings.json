@@ -69,8 +69,8 @@
         "faction": "W"
       },
       {
-        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3", "AircraftPartSmallBrokenWarden" ],
-        "inputAmounts": [ 1, 1, 1 ],
+        "inputNames": [ "MaterialThermalShielding", "AircraftPartSmallBrokenWarden" ],
+        "inputAmounts": [ 1, 1 ],
         "outputNames": [ "AircraftPartSmallWarden" ],
         "outputAmounts": [ 1 ],
         "powerConsumption": 4,
@@ -87,8 +87,8 @@
         "faction": "W"
       },
       {
-        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT4", "AircraftEngineSmallBrokenWarden" ],
-        "inputAmounts": [ 1, 1, 1 ],
+        "inputNames": [ "MaterialThermalShielding", "AircraftEngineSmallBrokenWarden" ],
+        "inputAmounts": [ 2, 1 ],
         "outputNames": [ "AircraftEngineSmallWarden" ],
         "outputAmounts": [ 1 ],
         "powerConsumption": 4,
@@ -105,8 +105,8 @@
         "faction": "C"
       },
       {
-        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT3", "AircraftPartSmallBrokenColonial" ],
-        "inputAmounts": [ 1, 1, 1 ],
+        "inputNames": [ "MaterialThermalShielding", "AircraftPartSmallBrokenColonial" ],
+        "inputAmounts": [ 1, 1 ],
         "outputNames": [ "AircraftPartSmallColonial" ],
         "outputAmounts": [ 1 ],
         "powerConsumption": 4,
@@ -123,8 +123,8 @@
         "faction": "C"
       },
       {
-        "inputNames": [ "MaterialProcessedConstruction", "AssemblyMaterialsT4", "AircraftEngineSmallBrokenColonial" ],
-        "inputAmounts": [ 1, 1, 1 ],
+        "inputNames": [ "MaterialThermalShielding", "AircraftEngineSmallBrokenColonial" ],
+        "inputAmounts": [ 2, 1 ],
         "outputNames": [ "AircraftEngineSmallColonial" ],
         "outputAmounts": [ 1 ],
         "powerConsumption": 4,
@@ -393,6 +393,14 @@
         "outputAmounts": [ 1 ],
         "powerConsumption": 4,
         "productionTime": 10
+      },
+      {
+        "inputNames": [ "MaterialConstruction" ],
+        "inputAmounts": [ 2 ],
+        "outputNames": [ "UtilityNavalBuoy" ],
+        "outputAmounts": [ 1 ],
+        "powerConsumption": 4,
+        "productionTime": 25 
       },
       {
         "inputNames": [ "MaterialConstruction" ],
