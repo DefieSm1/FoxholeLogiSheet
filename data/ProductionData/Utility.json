@@ -1,4 +1,12 @@
 {
+  "UtilityNavalBuoy": {
+    "name": "Naval Buoy",
+    "category": "Buoy",
+    "description": "Material required to build Crespine Netting.",
+    "crateSize": 5,
+    "bmatCost": 150,
+    "productionTime": 125
+  },
   "UtilityBarbedWire": {
     "name": "Barbed Wire",
     "category": "Large Material",
@@ -225,6 +233,14 @@
     "productionTime": 100,
     "faction": "W"
   },
+  "UtilityFlightMask": {
+    "name": "Flight Mask",
+    "category": "Field Gear",
+    "description": "A pilot's mask that wraps around the head and includes a headset which helps facilitate communications at high altitudes. This allows pilots to receoive critical intelligence updates while flying.",
+    "crateSize": 5,
+    "bmatCost": 150,
+    "productionTime": 75
+  },
   "UtilityRadio": {
     "name": "Radio",
     "category": "Field Gear",
@@ -233,12 +249,12 @@
     "bmatCost": 75,
     "productionTime": 50
   },
-  "UtilityRadioAir": {
-    "name": "Liason Transmitter",
-    "category": "Field Gear",
-    "description": "Allows receiving map intelligence reports on detected airborne targets.",
+  "UtilitySiren": {
+    "name": "Air Raid Siren",
+    "category": "Siren",
+    "description": "A blaring siren with a distinctive tone that signifies a warning about impending airborne operations.",
     "crateSize": 5,
-    "bmatCost": 75,
-    "productionTime": 50
+    "bmatCost": 150,
+    "productionTime": 75
   }
 }

@@ -48,7 +48,7 @@
   },
   "AmmoAAAbsol": {
     "name": "Absol Anti-Aircraft Rounds",
-    "category": "Anti-Air Ammo",
+    "category": "Anti-Aircraft Ammo",
     "description": "Anti-aircraft shells designed for use with mobile AA vehicles.",
     "itemSpecifics": {
       "general": [ "$Deals Shrapnel damage", "Always causes target to bleed" ]
