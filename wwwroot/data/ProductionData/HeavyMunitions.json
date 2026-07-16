@@ -138,5 +138,13 @@
     "bmatCost": 160,
     "ematCost": 240,
     "productionTime": 200
+  },
+  "NavalBuoy": {
+    "name": "Naval Buoy",
+    "category": "Buoy",
+    "description": "Material required to build Crespine Netting.",
+    "crateSize": 5,
+    "bmatCost": 150,
+    "productionTime": 125
   }
 }

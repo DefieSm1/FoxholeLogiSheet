@@ -1,12 +1,4 @@
 {
-  "UtilityNavalBuoy": {
-    "name": "Naval Buoy",
-    "category": "Buoy",
-    "description": "Material required to build Crespine Netting.",
-    "crateSize": 5,
-    "bmatCost": 150,
-    "productionTime": 125
-  },
   "UtilityBarbedWire": {
     "name": "Barbed Wire",
     "category": "Large Material",

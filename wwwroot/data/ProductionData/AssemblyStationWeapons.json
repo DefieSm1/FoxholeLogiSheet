@@ -53,7 +53,7 @@
       "general": [ "Can be carried by vehicles that support up to large sized shippables" ],
       "Turret": [ "$Deals Explosive damage", "Can penetrate armoured vehicles", "High chance to penetrate armoured vehicles" ] 
     },
-    "steelCost": 3,
+    "steelCost": 10,
     "assmatCost": [ 10, 0, 15, 15, 0 ],
     "baseVehicle": "AssaultTankFalchion",
     "productionTime": 600,

@@ -511,8 +511,8 @@
   "SeaMineSurface": {
     "importCategory": "HeavyMunitions"
   },
-  "UtilityNavalBuoy": {
-    "importCategory": "Utility"
+  "NavalBuoy": {
+    "importCategory": "HeavyMunitions"
   },
   "DepthCharge": {
     "name": "Model-7 \"Evie\"",
