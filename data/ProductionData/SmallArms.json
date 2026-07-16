@@ -63,7 +63,7 @@
     "itemSpecifics": {
       "general": [ "$Deals Light Kinetic damage" ] 
     },
-    "crateSize": 10,
+    "crateSize": 20,
     "bmatCost": 100,
     "ematCost": 40,
     "productionTime": 100,
@@ -115,7 +115,7 @@
     "itemSpecifics": {
       "general": [ "$Deals Shrapnel damage", "Always causes target to bleed" ] 
     },
-    "crateSize": 10,
+    "crateSize": 25,
     "bmatCost": 100,
     "ematCost": 40,
     "productionTime": 100,
