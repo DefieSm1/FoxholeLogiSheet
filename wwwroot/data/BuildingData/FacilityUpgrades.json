@@ -303,8 +303,8 @@
     "rareCost": 15,
     "buildingRecipes": [
       {
-        "inputNames": [ "MaterialSteel" ],
-        "inputAmounts": [ 5 ],
+        "inputNames": [ "MaterialSteel", "AssemblyMaterialsT3" ],
+        "inputAmounts": [ 5, 25 ],
         "outputNames": [ "AircraftPartLargeWarden" ],
         "outputAmounts": [ 1 ],
         "powerConsumption": 10,
@@ -321,8 +321,8 @@
         "faction": "W"
       },
       {
-        "inputNames": [ "MaterialSteel" ],
-        "inputAmounts": [ 15 ],
+        "inputNames": [ "MaterialSteel", "AssemblyMaterialsT4" ],
+        "inputAmounts": [ 15, 25 ],
         "outputNames": [ "AircraftEngineLargeWarden" ],
         "outputAmounts": [ 1 ],
         "powerConsumption": 10,
@@ -339,8 +339,8 @@
         "faction": "W"
       },
       {
-        "inputNames": [ "MaterialSteel" ],
-        "inputAmounts": [ 5 ],
+        "inputNames": [ "MaterialSteel", "AssemblyMaterialsT3" ],
+        "inputAmounts": [ 5, 25 ],
         "outputNames": [ "AircraftPartLargeColonial" ],
         "outputAmounts": [ 1 ],
         "powerConsumption": 10,
@@ -357,8 +357,8 @@
         "faction": "C"
       },
       {
-        "inputNames": [ "MaterialSteel" ],
-        "inputAmounts": [ 15 ],
+        "inputNames": [ "MaterialSteel", "AssemblyMaterialsT4" ],
+        "inputAmounts": [ 15, 25 ],
         "outputNames": [ "AircraftEngineLargeColonial" ],
         "outputAmounts": [ 1 ],
         "powerConsumption": 10,
