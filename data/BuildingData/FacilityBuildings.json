@@ -397,7 +397,7 @@
       {
         "inputNames": [ "MaterialConstruction" ],
         "inputAmounts": [ 2 ],
-        "outputNames": [ "UtilityNavalBuoy" ],
+        "outputNames": [ "NavalBuoy" ],
         "outputAmounts": [ 1 ],
         "powerConsumption": 4,
         "productionTime": 25 
